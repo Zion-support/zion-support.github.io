@@ -2,6 +2,43 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  title: 'Real‑World Eval Gates — Case Studies (2026)',
+  description: 'Practical case studies of evaluation-gated agent systems in production with scorecards and automated rollbacks.',
+};
+
+export default function RealWorldEvalGatesCaseStudiesPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-indigo-600 to-violet-600 text-white">
+        <div className="max-w-4xl mx-auto px-6 py-12">
+          <h1 className="text-4xl md:text-5xl font-bold">Real‑World Eval Gates — Case Studies</h1>
+          <p className="mt-3 text-indigo-100/90">Production patterns: scorecards, rollback contracts, and evidence hubs.</p>
+        </div>
+      </header>
+      <main className="max-w-4xl mx-auto px-6 py-10 prose prose-lg">
+        <p>
+          These case studies showcase teams shipping autonomous agents behind evaluation gates. You will find examples
+          of release scorecards, rollback contracts, and policy-as-code that make change safer and faster.
+        </p>
+        <h2>Highlights</h2>
+        <ul>
+          <li>Canary releases with automated rollback based on score thresholds.</li>
+          <li>Route-aware eval suites tied to business KPIs.</li>
+          <li>Evidence hubs aggregating traces, evals, and approvals.</li>
+        </ul>
+        <div className="not-prose mt-8 flex gap-3">
+          <Link href="/blog/ai-2026-release-scorecards" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Release Scorecards</Link>
+          <Link href="/resources/ai-2026-release-scorecards-starter-kit" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Starter Kit</Link>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
 	title: 'AI 2026: Real‑World Eval Gates — Case Studies',
 	description: 'Practitioner case studies of evaluation‑gated releases, scorecards, and rollback contracts in production agent systems.',
 };

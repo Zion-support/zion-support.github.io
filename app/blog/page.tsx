@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 const posts = [
   { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-release-scorecards', title: 'Release Scorecards for Reliable Agent Upgrades (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-eval-gated-ci-cd-blueprint', title: 'Eval‑Gated CI/CD Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-reliable-autonomy-operations', title: 'Reliable Autonomy Operations (2026)', tag: 'New' },
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'Trending' },
   { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'Guide' },

@@ -1,3 +1,36 @@
+import React from 'react';
+
+export const metadata = {
+  title: 'AI 2026: Eval‑Gated CI/CD Blueprint',
+  description: 'A practical blueprint to integrate evaluation gates into CI/CD for autonomous agent systems.',
+};
+
+export default function EvalGatedCICDPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-pink-600 to-fuchsia-600 text-white">
+        <div className="max-w-4xl mx-auto px-6 py-12">
+          <h1 className="text-4xl md:text-5xl font-bold">Eval‑Gated CI/CD Blueprint</h1>
+          <p className="mt-3 text-pink-100/90">Ship faster with evaluation gates, scorecards, and rollback contracts.</p>
+        </div>
+      </header>
+      <main className="max-w-4xl mx-auto px-6 py-10 prose prose-lg">
+        <p>
+          This guide shows how to insert evaluation gates into each step of your CI/CD pipeline. Use scenario suites
+          to guard routes, tie scorecards to business KPIs, and automatically block, proceed, or rollback based on
+          policy thresholds.
+        </p>
+        <h2>Checklist</h2>
+        <ul>
+          <li>Pre-merge regression scenarios with policy gates</li>
+          <li>Canary scorecards with automated rollback</li>
+          <li>Evidence hub for audit-ready releases</li>
+        </ul>
+      </main>
+    </div>
+  );
+}
+
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
