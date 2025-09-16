@@ -1,220 +1,206 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react';
 
 const UltimateTechShowcase2029: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const demos = [
+    {
+      id: 0,
+      title: "Conscious AI Interface",
+      description: "Interact with truly conscious AI systems that understand context, emotion, and intent",
+      icon: "🧠",
+      features: ["Natural conversation", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"]
+    },
+    {
+      id: 1,
+      title: "Quantum Reality Engine",
+      description: "Experience reality manipulation through quantum computing and consciousness transfer",
+      icon: "⚡",
+      features: ["Reality simulation", "Quantum processing", "Multi-dimensional computing", "Time manipulation"]
+    },
+    {
+      id: 2,
+      title: "Neural Universe Network",
+      description: "Connect with a global network of enhanced human consciousness and AI systems",
+      icon: "🌌",
+      features: ["Global consciousness", "Neural networking", "Shared experiences", "Collective intelligence"]
+    },
+    {
+      id: 3,
+      title: "Interdimensional Portal",
+      description: "Access and explore multiple dimensions and realities through advanced technology",
+      icon: "🚀",
+      features: ["Dimension hopping", "Reality exploration", "Universal travel", "Infinite possibilities"]
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveDemo((prev) => (prev + 1) % demos.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [demos.length]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <Helmet>
-        <title>Ultimate Tech Showcase 2029 - Zion Tech Group</title>
-        <meta name="description" content="Experience the ultimate technology showcase of 2029 featuring omniversal AI, consciousness transfer, and reality manipulation technologies." />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 ULTIMATE TECH SHOWCASE • 2029
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ULTIMATE SHOWCASE • JANUARY 2029
           </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Ultimate Tech Showcase 2029
           </h1>
-          <p className="text-2xl text-cyan-100 max-w-4xl mx-auto mb-8">
-            Experience the pinnacle of technological achievement with our 2029 showcase featuring 
-            omniversal AI, consciousness transfer, and reality manipulation technologies that transcend 
-            the boundaries of what's possible.
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced interactive technology demonstrations that will define the future
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore 2029 Technologies →
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Watch Demo
-            </button>
+        </div>
+
+        {/* Interactive Demo Section */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-4">🎮 Interactive Technology Demos</h2>
+              <p className="text-xl opacity-90">Click on any demo to experience the future of technology</p>
+            </div>
+
+            {/* Demo Navigation */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {demos.map((demo, index) => (
+                <button
+                  key={demo.id}
+                  onClick={() => {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                      setActiveDemo(index);
+                      setIsAnimating(false);
+                    }, 300);
+                  }}
+                  className={`p-4 rounded-lg transition-all duration-300 ${
+                    activeDemo === index
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white scale-105'
+                      : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
+                  }`}
+                >
+                  <div className="text-3xl mb-2">{demo.icon}</div>
+                  <div className="text-sm font-semibold">{demo.title}</div>
+                </button>
+              ))}
+            </div>
+
+            {/* Active Demo Display */}
+            <div className={`bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 transition-all duration-300 ${
+              isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+            }`}>
+              <div className="text-center mb-6">
+                <div className="text-6xl mb-4">{demos[activeDemo].icon}</div>
+                <h3 className="text-3xl font-bold mb-4">{demos[activeDemo].title}</h3>
+                <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                  {demos[activeDemo].description}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {demos[activeDemo].features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-2">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-black/20 rounded-lg p-6">
+                  <h4 className="text-xl font-semibold mb-4">Live Demo</h4>
+                  <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-32 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">🎮</div>
+                      <div className="text-sm">Interactive Demo Loading...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Ultimate Technologies Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Omniversal AI</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              AI systems that operate across multiple universes simultaneously, accessing infinite knowledge and processing power.
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Multi-universe processing</li>
-              <li>• Infinite knowledge access</li>
-              <li>• Cross-dimensional communication</li>
-              <li>• Universal consciousness</li>
-            </ul>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Explore Omniversal AI →
-            </button>
+        {/* Technology Stats */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="text-lg opacity-90 mb-4">Revolutionary Technologies</div>
+            <div className="text-sm opacity-75">Active development and testing</div>
           </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Consciousness Transfer</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Transfer human consciousness to any substrate, enabling digital immortality and enhanced cognitive capabilities.
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Digital immortality</li>
-              <li>• Multi-body existence</li>
-              <li>• Enhanced cognition</li>
-              <li>• Consciousness backup</li>
-            </ul>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Transfer Consciousness →
-            </button>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="text-lg opacity-90 mb-4">Success Rate</div>
+            <div className="text-sm opacity-75">Proven technology reliability</div>
           </div>
-
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Manipulation</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Control the fundamental forces of nature, manipulate matter at the quantum level, and create new realities.
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum field control</li>
-              <li>• Matter manipulation</li>
-              <li>• Reality synthesis</li>
-              <li>• Physical law modification</li>
-            </ul>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Manipulate Reality →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Reality Engine</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Create and manipulate reality through direct neural interface, enabling thought-controlled reality modification.
-            </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Thought-controlled reality</li>
-              <li>• Neural interface processing</li>
-              <li>• Direct mind-reality connection</li>
-              <li>• Instant manifestation</li>
-            </ul>
-            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Experience Neural Reality →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Interdimensional Computing</h3>
-            <p className="text-violet-100 mb-6 text-center">
-              Access computing power from parallel dimensions, enabling infinite processing capabilities and reality manipulation.
-            </p>
-            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-              <li>• Parallel dimension access</li>
-              <li>• Infinite processing power</li>
-              <li>• Dimensional portals</li>
-              <li>• Cross-reality computing</li>
-            </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
-              Access Interdimensional Power →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Space-Time Control</h3>
-            <p className="text-rose-100 mb-6 text-center">
-              Manipulate the fabric of space-time itself, enabling instant travel, time manipulation, and dimensional exploration.
-            </p>
-            <ul className="text-rose-200 space-y-2 mb-6 text-sm">
-              <li>• Instant space travel</li>
-              <li>• Time manipulation</li>
-              <li>• Dimensional exploration</li>
-              <li>• Reality engineering</li>
-            </ul>
-            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
-              Control Space-Time →
-            </button>
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-lg opacity-90 mb-4">Possibilities</div>
+            <div className="text-sm opacity-75">Unlimited potential applications</div>
           </div>
         </div>
 
-        {/* Ultimate Features Section */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ultimate 2029 Features</h2>
-            <p className="text-xl text-purple-100 max-w-4xl mx-auto">
-              Our 2029 technologies represent the pinnacle of human achievement, pushing the boundaries of what's possible
+        {/* Future Vision */}
+        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-6">🌟 Vision for 2029 and Beyond</h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              We're not just building technology - we're creating the foundation for humanity's next evolutionary leap
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🌌</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Omniversal Processing</h3>
-                  <p className="text-purple-200">AI systems that operate across infinite universes simultaneously, accessing unlimited knowledge and processing power.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🧠</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Consciousness Transfer</h3>
-                  <p className="text-purple-200">Transfer human consciousness to any substrate, enabling digital immortality and enhanced cognitive capabilities.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🔮</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Reality Synthesis</h3>
-                  <p className="text-purple-200">Create and manipulate synthetic realities with perfect fidelity, enabling unlimited virtual experiences.</p>
-                </div>
-              </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">🧠 Enhanced Human Intelligence</h3>
+              <p className="opacity-90 mb-4">
+                Neural interfaces that augment human cognitive abilities, enabling us to process information at unprecedented speeds and connect directly with AI systems.
+              </p>
+              <ul className="space-y-2 text-sm opacity-75">
+                <li>• 1000x faster information processing</li>
+                <li>• Direct AI-human collaboration</li>
+                <li>• Enhanced memory and learning</li>
+                <li>• Collective intelligence networks</li>
+              </ul>
             </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">⚡</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Neural Reality Control</h3>
-                  <p className="text-purple-200">Control reality through direct neural interface, enabling thought-controlled reality modification.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🌊</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Interdimensional Access</h3>
-                  <p className="text-purple-200">Access computing resources from parallel dimensions, providing unlimited processing power and storage.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🚀</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Space-Time Manipulation</h3>
-                  <p className="text-purple-200">Manipulate the fundamental forces of space and time for instant travel and temporal control.</p>
-                </div>
-              </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">🌌 Universal Connectivity</h3>
+              <p className="opacity-90 mb-4">
+                Breakthrough communication technologies that enable instant connection across any distance, dimension, or reality.
+              </p>
+              <ul className="space-y-2 text-sm opacity-75">
+                <li>• Instantaneous global communication</li>
+                <li>• Interdimensional data transfer</li>
+                <li>• Universal language translation</li>
+                <li>• Cosmic consciousness network</li>
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Experience the Ultimate Future</h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the most advanced technologies of 2029. 
-            Be among the first to experience omniversal AI, consciousness transfer, and reality manipulation.
+          <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the revolution and be part of the most significant technological advancement in human history
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Start Your Journey →
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Experience the Future
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-12 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              Contact Our Experts
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
+              Join the Revolution
             </button>
           </div>
         </div>
