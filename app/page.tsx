@@ -123,6 +123,24 @@ export default function HomePage() {
       <QuantumAI2026RevolutionBanner />
       <NeuralInterfaceRevolutionBanner2026 />
 
+      {/* New Promo: Guardrail Scorecards (Sept 2025) */}
+      <section className="py-6 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-guardrail-scorecards-executive-brief" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Guardrail Scorecards — Executive Brief</h3>
+              <p className="text-gray-600">Measurable policies and scorecards to gate releases and prevent incidents.</p>
+            </Link>
+            <Link href="/content/ai-2026-guardrail-scorecards-starter-kit" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Starter Kit</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Guardrail Scorecards — Starter Kit</h3>
+              <p className="text-gray-600">Copy‑paste templates, thresholds, and CI wiring to ship governed autonomy.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Quick spotlight for newly added articles */}
       <section className="py-6 bg-white">
