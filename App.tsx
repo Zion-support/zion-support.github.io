@@ -1,29 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './src/pages/Home';
+import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
+import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
+import RevolutionaryTechAdvertisingBanner from './src/components/RevolutionaryTechAdvertisingBanner';
+import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <h1>Zion Tech Group</h1>
-          <p>Revolutionary technology solutions for the future</p>
-        </header>
-        
         <Routes>
-          <Route path="/" element={
-            <main>
-              <section>
-                <h2>Welcome to Zion Tech Group</h2>
-                <p>We are building the future with cutting-edge technology solutions.</p>
-              </section>
-            </main>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/ComprehensiveServicesShowcase2027" element={<ComprehensiveServicesShowcase2027 />} />
         </Routes>
-        
-        <footer>
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-        </footer>
       </div>
     </Router>
   );

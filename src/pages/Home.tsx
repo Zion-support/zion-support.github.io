@@ -6,6 +6,8 @@ import RevolutionaryContentShowcase from '../components/RevolutionaryContentShow
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
 import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
+import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
+import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 
 const Home: React.FC = () => {
   return (
@@ -72,11 +74,11 @@ const Home: React.FC = () => {
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
               </a>
-              <a href="/pages/AdvancedBiotechAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🧬 Advanced Biotech AI →
+              <a href="/pages/ComprehensiveServicesShowcase2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🚀 Comprehensive Services →
               </a>
-              <a href="/pages/NextGenSpaceTech2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🛸 Next-Gen Space Tech →
+              <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                📚 Tech Blog 2026 →
               </a>
             </div>
           </div>
@@ -223,6 +225,12 @@ const Home: React.FC = () => {
 
         {/* Enhanced Content Advertising */}
         <EnhancedContentAdvertising />
+
+        {/* Revolutionary Tech Advertising Banner */}
+        <RevolutionaryTechAdvertisingBanner />
+
+        {/* Interactive Tech Showcase */}
+        <InteractiveTechShowcase />
 
         {/* Call to Action */}
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">

@@ -19,26 +19,30 @@
   "dependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.14.2",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "@vitejs/plugin-react": "^4.0.3",
     "tailwindcss": "^3.3.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24"
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
-    "eslint": "^8.45.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "cypress": "^12.17.2",
+    "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "jest": "^29.6.1",
-    "@types/jest": "^29.5.3",
-    "cypress": "^12.17.2",
+    "rollup-plugin-visualizer": "^6.0.3",
     "vitest": "^0.34.1"
   }
 }
