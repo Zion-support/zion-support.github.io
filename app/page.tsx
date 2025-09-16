@@ -336,6 +336,21 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Autonomous Systems Safety Blueprint (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-green-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-green-100">
+            <div>
+              <p className="text-sm font-semibold text-green-700">New blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Autonomous Systems Safety Blueprint (2026)</h2>
+              <p className="text-gray-600 mt-2">Practical gates, guardrails, and ops patterns to ship safe autonomy.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-autonomous-systems-safety-blueprint" className="inline-block bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Eval Gates Metrics + Agent Runbooks (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-teal-50 to-emerald-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

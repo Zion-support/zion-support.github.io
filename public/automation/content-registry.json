@@ -294,6 +294,13 @@
     }
     ,
     {
+      "title": "Autonomous Systems Safety Blueprint (2026)",
+      "href": "/blog/ai-2026-autonomous-systems-safety-blueprint",
+      "desc": "Practical gates, guardrails, and ops patterns to ship safe autonomy",
+      "createdAt": "2025-09-16T16:00:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Guide — Edge AI Compliance 2026",
       "href": "/pages/EdgeAICompliance2026",
       "desc": "Device attestation, data residency, and auditability patterns at the edge",
