@@ -154,7 +154,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -373,24 +372,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <p className="text-indigo-200 text-sm">Consciousness-based diagnostics and treatment</p>
             </div>
             
-            </div>
-          </div>
-        </div>
-
-        {/* Applications */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Applications</h2>
-            <p className="text-xl text-indigo-200">Transform every aspect of human experience</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 text-center">
-              <div className="text-4xl mb-4">🏥</div>
-              <h4 className="text-xl font-semibold text-white mb-2">Medical Revolution</h4>
-              <p className="text-indigo-200 text-sm">Consciousness-based diagnostics and treatment</p>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
               <div className="text-4xl mb-4">🎓</div>
               <h4 className="text-xl font-semibold text-white mb-2">Education Evolution</h4>
@@ -469,7 +450,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}

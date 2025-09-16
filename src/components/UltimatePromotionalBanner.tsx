@@ -137,7 +137,6 @@ const UltimatePromotionalBanner: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-orange-200 text-lg">Availability</div>
-=======
 >>>>>>> cursor/create-and-deploy-new-content-84c4
             </div>
           </div>
