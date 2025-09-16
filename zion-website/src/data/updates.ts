@@ -32,6 +32,13 @@ export const updates: UpdateItem[] = [
 		tag: 'Launch',
 	},
 	{
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
 		title: 'Report: State of Real-Time RAG (2026 Preview)',
 		summary: 'Streaming retrieval benchmarks for latency, hit rate, and answer quality.',
 		href: '/updates/state-of-real-time-rag-2026',
@@ -72,13 +79,6 @@ export const updates: UpdateItem[] = [
 		href: '/updates/agent-reliability-report-2026',
 		date: '2025-09-16',
 		tag: 'Report',
-	},
-	{
-		title: 'Launch: Real‑Time Agent Observability Console v1.1',
-		summary: 'Live traces, tool metrics, and eval overlays for production agents.',
-		href: '/updates/agent-observability-console-1-1',
-		date: '2025-09-16',
-		tag: 'Launch',
 	},
 	{
 		title: 'Launch: Autonomous Support Copilot v1.2',
