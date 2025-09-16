@@ -56,6 +56,8 @@ import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanne
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import FeaturedContentShowcase from './components/FeaturedContentShowcase';
+import ContentPromotionBanner from './components/ContentPromotionBanner';
+import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
@@ -198,6 +200,12 @@ const App: React.FC = () => {
               <FeaturedContentSection />
 
               {/* Blog Showcase from data/blog-posts */}
+              <div className="mb-12">
+                <ContentPromotionBanner />
+              </div>
+              <div className="mb-12">
+                <NewContentPromoBannerClean />
+              </div>
               <div className="mb-12">
                 <FeaturedContentShowcase />
               </div>

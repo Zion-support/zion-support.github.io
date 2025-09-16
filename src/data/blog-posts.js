@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9001,
+    title: "AI 2026: Agent Platform SLOs — Best Practices",
+    excerpt: "A concise SLO set for safety, quality, reliability, and cost—ready to adopt.",
+    content: "Define and operationalize SLOs tailored for autonomous agent platforms. This guide provides a minimal, pragmatic SLO set across safety, groundedness, override rate, reliability, and cost. Learn how to wire SLOs to release scorecards, alerts, and rollback policies so changes remain safe and auditable.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["SLOs", "Reliability", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/agent-platform-slos-2026.jpg",
+    slug: "ai-2026-agent-slo-blueprint"
+  },
+  {
+    id: 9002,
+    title: "AI 2026: Agents‑On‑Call Automation",
+    excerpt: "Eval‑gated triage, mitigation, and escalation with autonomous agents in prod.",
+    content: "Design agents that assist on‑call responders safely. We cover gated triage flows, mitigation playbooks, escalation paths, and the telemetry you need for audit‑ready post‑incident learning. Includes a reference SOP and guardrail adapters you can adopt today.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Reliability",
+    tags: ["Incidents", "Runbooks", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/agents-oncall-automation-2026.jpg",
+    slug: "ai-2026-agents-oncall-automation"
+  },
+  {
     id: 8001,
     title: "AI 2026: Agent Posture Management — Executive Guide",
     excerpt: "Continuously assess and harden agent systems with evidence-led posture metrics.",
@@ -980,7 +1010,7 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;
+// Note: unified export declared at the bottom after merging with newContent2026
 
 // New content added for enhanced engagement
 export const newContent2026 = [
