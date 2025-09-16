@@ -89,6 +89,48 @@
   ],
   "items": [
     {
+      "title": "Agent Runbooks with Guardrails (2026)",
+      "href": "/reports/ai-lab/articles/agent-runbooks-guardrails-1758092400000.md",
+      "desc": "Scorecard-driven incident response with policy events and containment",
+      "createdAt": "2025-09-16T23:40:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Evaluation Gates and Scorecards (2026)",
+      "href": "/reports/ai-lab/articles/eval-gates-scorecards-1758096000000.md",
+      "desc": "Wire preflight, canary, and post-release gates to outcomes",
+      "createdAt": "2025-09-16T23:50:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Cost Controls Blueprint (2026)",
+      "href": "/reports/ai-lab/articles/cost-controls-blueprint-1758099600000.md",
+      "desc": "Budgets, quotas, and routing bands for predictable spend",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Observability Traces Schema (2026)",
+      "href": "/reports/ai-lab/articles/observability-traces-schema-1758103200000.md",
+      "desc": "Minimal, privacy-aware traces for auditable AI",
+      "createdAt": "2025-09-17T01:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Incident Postmortems — Evidence-First Templates (2026)",
+      "href": "/reports/ai-lab/articles/incident-postmortems-templates-1758106800000.md",
+      "desc": "Repeatable templates that turn incidents into improvements",
+      "createdAt": "2025-09-17T02:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Zero‑Downtime Releases — Advanced Guide (2026)",
+      "href": "/reports/ai-lab/articles/zero-downtime-releases-advanced-1758110400000.md",
+      "desc": "Blue/green, canary, rollback with eval gates in prod",
+      "createdAt": "2025-09-17T03:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
       "title": "Guide — Operational Evaluation Maturity Model",
       "href": "/reports/guides/guide-2025-09-operational-eval-maturity-model.md",
       "desc": "A ladder from ad-hoc checks to evidence-first gates",
