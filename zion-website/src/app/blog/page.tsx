@@ -339,6 +339,19 @@ const posts = [
   }
   ,
   {
+    slug: 'ai-2026-autonomous-change-approvals-blueprint',
+    title: 'AI 2026: Autonomous Change Approvals — Blueprint',
+    summary:
+      'Policy‑as‑code approvals with eval gates, evidence bundles, and rollback safety nets.'
+  },
+  {
+    slug: 'ai-2026-real-time-agent-benchmark-suite-1-0',
+    title: 'AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch',
+    summary:
+      'Scenario‑driven benchmarks for quality, safety, latency, and cost with CI/CD gates.'
+  }
+  ,
+  {
     slug: 'ai-2026-enterprise-retrieval-observability',
     title: 'AI 2026: Enterprise Retrieval Observability',
     summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
