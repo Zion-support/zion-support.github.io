@@ -1,14 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
+    <divsection
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       className="relative py-16 px-4 overflow-hidden"
     >
       {/* Background Effects */}
@@ -21,10 +18,8 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
@@ -43,29 +38,23 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/UltimateTechRevolution2032">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
                 >
                   Explore Revolution <ArrowRight className="w-5 h-5" />
-                </motion.button>
+                </button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Learn More
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Feature Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 gap-6"
           >
             {[
@@ -90,12 +79,9 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
                 description: "Dimensional protection systems"
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-400/40 transition-all group"
               >
                 <div className="text-purple-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">
@@ -107,9 +93,9 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                   {feature.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -117,7 +103,7 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
       <div className="absolute top-1/4 left-8 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
-    </motion.section>
+    </divsection>
   );
 };
 

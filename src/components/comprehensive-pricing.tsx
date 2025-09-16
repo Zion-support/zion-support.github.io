@@ -6,7 +6,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -210,34 +209,25 @@ export default function ComprehensivePricingPage() {
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
-              <motion.h1 
+              <divh1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
-              </motion.h1>
-              <motion.p 
+              </divh1>
+              <divp 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
-              </motion.p>
+              </divp>
               
               {/* Market Stats */}
-              <motion.div 
+              <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
                   <div key={index} className="text-center">
@@ -246,14 +236,11 @@ export default function ComprehensivePricingPage() {
                     <div className="text-gray-500 text-xs">{stat.description}</div>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
                   variant="primary" 
@@ -271,7 +258,7 @@ export default function ComprehensivePricingPage() {
                   Browse All Services
                   <Search className="ml-2 w-5 h-5" />
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -299,12 +286,10 @@ export default function ComprehensivePricingPage() {
         {/* Pricing Tiers */}
         <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div 
+            <div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -316,20 +301,16 @@ export default function ComprehensivePricingPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div 
+            <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-              variants={containerVariants}
-              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {pricingTiers.map((tier, index) => (
-                <motion.div
+                <div
                   key={tier.name}
-                  variants={itemVariants}
-                  whileHover={{ y: -10 }}
                 >
                   <UltraFuturisticCard
                     variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
@@ -375,9 +356,9 @@ export default function ComprehensivePricingPage() {
                       </Button>
                     </div>
                   </UltraFuturisticCard>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -385,12 +366,10 @@ export default function ComprehensivePricingPage() {
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
-            <motion.div 
+            <div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
@@ -454,24 +433,20 @@ export default function ComprehensivePricingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Services Display */}
-            <motion.div 
+            <div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
-              variants={containerVariants}
-              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any || 'quantum-advanced'}
@@ -577,16 +552,13 @@ export default function ComprehensivePricingPage() {
                       </div>
                     )}
                   </UltraFuturisticCard>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
 
             {filteredServices.length === 0 && (
-              <motion.div 
+              <div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
@@ -601,7 +573,7 @@ export default function ComprehensivePricingPage() {
                  >
                    Clear Filters
                  </Button>
-              </motion.div>
+              </div>
             )}
           </div>
         </section>
@@ -609,12 +581,10 @@ export default function ComprehensivePricingPage() {
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-            <motion.div 
+            <div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -659,7 +629,7 @@ export default function ComprehensivePricingPage() {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AdvancedCybersecuritySolutions2026: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -31,7 +27,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 Security Assessment
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,10 +39,8 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-red-500/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🤖</div>
@@ -68,12 +62,10 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Autonomous bot networks</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-orange-500/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">⚡</div>
@@ -95,12 +87,10 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Supply chain infiltration</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-yellow-500/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🌐</div>
@@ -122,7 +112,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Data exfiltration</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -134,10 +124,8 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30"
           >
             <h3 className="text-3xl font-bold mb-6 text-green-400">🧠 AI-Powered Threat Detection</h3>
@@ -159,12 +147,10 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Machine learning models that adapt to new threats</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30"
           >
             <h3 className="text-3xl font-bold mb-6 text-purple-400">🔐 Quantum-Safe Encryption</h3>
@@ -186,7 +172,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Homomorphic encryption for secure computation</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 

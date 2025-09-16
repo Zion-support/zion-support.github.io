@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Rocket
   ArrowRight
@@ -62,28 +61,19 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0x: -50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8 }}
+            <div
               className="space-y-8"
             >
               {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.2 }}
+              <div
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Sparkles className="w-4 h-4" />
                 NEW: FUTURE TECHNOLOGY SHOWCASE 2026
-              </motion.div>
+              </div>
 
               {/* Main Heading */}
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.3 }}
+              <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
                 Next-Generation
@@ -92,24 +82,18 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 </span>
                 <br />
                 Shaping Tomorrow
-              </motion.h2>
+              </divh2>
 
               {/* Description */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.4 }}
+              <divp
                 className="text-xl text-gray-300 leading-relaxed"
               >
                 Explore cutting-edge technologies that will define the future of humanity
                 from quantum computing to neural interfaces and space technology.
-              </motion.p>
+              </divp>
 
               {/* Technologies Grid */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.5 }}
+              <div
                 className="grid grid-cols-2 gap-4"
               >
                 {technologies.map((techindex) => (
@@ -120,13 +104,10 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{tech.title}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Benefits */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.6 }}
+              <div
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -135,13 +116,10 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.7 }}
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center gap-2">
@@ -155,37 +133,28 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   View Research
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right Content - Stats & Visual */}
-            <motion.div
-              initial={{ opacity: 0x: 50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <div
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Visual Element */}
-              <motion.div
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.8delay: 0.7 }}
+              <div
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -217,8 +186,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 <div className="absolute top-1/4 -left-6 w-5 h-5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
                   <Globe className="w-2 h-2 text-white" />
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const EnterpriseSolutions2025: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const EnterpriseSolutions2025: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🏢 ENTERPRISE SOLUTIONS • 2025
@@ -30,7 +26,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Request Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -87,11 +83,8 @@ const EnterpriseSolutions2025: React.FC = () => {
                 roi: "200% productivity increase"
               }
             ].map((solution, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{solution.icon}</div>
@@ -108,7 +101,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-3">
                   <p className="text-white font-semibold text-sm">ROI: {solution.roi}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -191,11 +184,8 @@ const EnterpriseSolutions2025: React.FC = () => {
                 benefits: "70% service efficiency, 95% citizen satisfaction"
               }
             ].map((industry, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
               >
                 <div className="flex items-center mb-6">
@@ -213,7 +203,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-4">
                   <p className="text-white font-semibold">Benefits: {industry.benefits}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -254,11 +244,8 @@ const EnterpriseSolutions2025: React.FC = () => {
                 duration: "Ongoing"
               }
             ].map((phase, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -269,7 +256,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-2">
                   <p className="text-blue-300 font-semibold text-sm">Duration: {phase.duration}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -306,17 +293,14 @@ const EnterpriseSolutions2025: React.FC = () => {
                 description: "Round-the-clock enterprise support and monitoring"
               }
             ].map((metric, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center border border-white/20"
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
                 <div className="text-xl font-semibold text-white mb-2">{metric.label}</div>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -325,10 +309,7 @@ const EnterpriseSolutions2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -345,7 +326,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

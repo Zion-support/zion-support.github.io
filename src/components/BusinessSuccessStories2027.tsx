@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -162,9 +161,8 @@ const BusinessSuccessStories2027 = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-        <motion.div
+        <div
           className="absolute top-0 left-0 w-full h-full"
-          animate={{
             background: [
               'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
               'radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)',
@@ -172,16 +170,12 @@ const BusinessSuccessStories2027 = () => {
               'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
             ]
           }}
-          transition={{ duration: 20repeat: Infinity }}
         />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 mb-6">
@@ -203,13 +197,10 @@ const BusinessSuccessStories2027 = () => {
             Discover how leading companies achieved extraordinary results using our 
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="flex justify-center mb-8"
         >
           <div className="flex items-center gap-4">
@@ -248,16 +239,11 @@ const BusinessSuccessStories2027 = () => {
               <Play className={`w-6 h-6 text-white ${isPlaying ? 'animate-pulse' : ''}`} />
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Story Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={currentStory}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8"
           >
             {/* Company Header */}
@@ -367,14 +353,11 @@ const BusinessSuccessStories2027 = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">
@@ -394,7 +377,7 @@ const BusinessSuccessStories2027 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

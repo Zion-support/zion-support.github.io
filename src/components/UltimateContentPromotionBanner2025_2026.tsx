@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
   Zap
@@ -73,19 +72,17 @@ const UltimateContentPromotionBanner2025_2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10" />
         <div className="absolute inset-0">
           {[...Array(30)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 opacity: [010],
                 scale: [010],
                 y: [0-20],
               }}
-              transition={{
                 duration: 4,
                 repeat: Infinity,
                 delay: Math.random() * 4,
@@ -99,30 +96,19 @@ const UltimateContentPromotionBanner2025_2026 = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <motion.div
-              initial={{ opacity: 0x: -50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-white"
             >
-              <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={currentSlide}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
                 >
                   {/* Badge */}
-                  <motion.div
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.6delay: 0.2 }}
+                  <div
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20"
                   >
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold">New Content Available</span>
-                  </motion.div>
+                  </div>
 
                   {/* Title */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -144,68 +130,53 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                   {/* Features */}
                   <div className="space-y-3 mb-8">
                     {currentSlideData.features.map((featureindex) => (
-                      <motion.div
+                      <div
                         key={feature}
-                        initial={{ opacity: 0x: -20 }}
-                        animate={isVisible ? { opacity: 1x: 0 } : {}}
-                        transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                         className="flex items-center gap-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-200">{feature}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <button
                       className={`bg-gradient-to-r ${currentSlideData.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300`}
                     >
                       <Rocket className="w-5 h-5" />
                       {currentSlideData.cta}
                       <ArrowRight className="w-5 h-5" />
-                    </motion.button>
+                    </button>
                     
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <button
                       className="border-2 border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:bg-white/10 transition-all duration-300"
                     >
                       <Play className="w-5 h-5" />
                       Watch Demo
-                    </motion.button>
+                    </button>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
+                </div>
+              </div>
+            </div>
 
             {/* Visual */}
-            <motion.div
-              initial={{ opacity: 0x: 50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <div
               className="relative"
             >
               <div className="relative w-full h-96">
                 {/* Main Visual */}
-                <motion.div
+                <div
                   key={currentSlide}
-                  initial={{ opacity: 0scale: 0.8rotateY: 90 }}
-                  animate={{ opacity: 1scale: 1rotateY: 0 }}
-                  transition={{ duration: 0.8 }}
                   className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center"
                 >
                   <div className="text-center">
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20repeat: Infinityease: "linear" }}
+                    <div
                       className="w-32 h-32 mx-auto mb-6"
                     >
                       <currentSlideData.icon className="w-full h-full text-white/80" />
-                    </motion.div>
+                    </div>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h3>
@@ -213,22 +184,20 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       Interactive Preview
                     </p>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Floating Elements */}
                 {[...Array(6)].map((_i) => (
-                  <motion.div
+                  <div
                     key={i}
                     className="absolute w-4 h-4 bg-white/20 rounded-full"
                     style={{
                       left: `${20 + (i * 15)}%`,
                       top: `${30 + (i * 10)}%`,
                     }}
-                    animate={{
                       y: [0-20],
                       opacity: [0.310.3],
                     }}
-                    transition={{
                       duration: 3,
                       repeat: Infinity,
                       delay: i * 0.5,
@@ -236,7 +205,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -258,11 +227,8 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10">
-        <motion.div
+        <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
-          initial={{ width: '0%' }}
-          animate={{ width: '100%' }}
-          transition={{ duration: 5repeat: Infinityease: "linear" }}
         />
       </div>
     </div>

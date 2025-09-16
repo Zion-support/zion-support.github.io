@@ -1,15 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -23,14 +19,11 @@ const AIInnovationHub2026: React.FC = () => {
             technologies, autonomous systems, and revolutionary AI applications that are transforming 
             industries and reshaping the future.
           </p>
-        </motion.div>
+        </div>
 
         {/* AI Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <div
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -44,12 +37,9 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Self-healing architecture</li>
               <li>• Continuous evolution</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -63,12 +53,9 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Transfer learning</li>
               <li>• Meta-learning capabilities</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <div
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
             <div className="text-6xl mb-4 text-center">🎯</div>
@@ -82,12 +69,9 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Optimization algorithms</li>
               <li>• Real-time predictions</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30"
           >
             <div className="text-6xl mb-4 text-center">🎨</div>
@@ -101,12 +85,9 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Artistic expression</li>
               <li>• Innovation assistance</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+          <div
             className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30"
           >
             <div className="text-6xl mb-4 text-center">🔬</div>
@@ -120,12 +101,9 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Climate modeling</li>
               <li>• Space exploration</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <div
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30"
           >
             <div className="text-6xl mb-4 text-center">🌐</div>
@@ -139,14 +117,11 @@ const AIInnovationHub2026: React.FC = () => {
               <li>• Data harmonization</li>
               <li>• Workflow optimization</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* AI Innovation Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+        <div
           className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">AI Innovation Roadmap 2026</h2>
@@ -172,13 +147,10 @@ const AIInnovationHub2026: React.FC = () => {
               <div className="text-sm opacity-75">Worldwide AI integration and collaboration</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* AI Impact Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <div
           className="bg-gradient-to-br from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">AI Impact Statistics</h2>
@@ -204,13 +176,10 @@ const AIInnovationHub2026: React.FC = () => {
               <div className="text-sm opacity-75">System reliability and availability</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* AI Applications */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
+        <div
           className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">AI Applications Across Industries</h2>
@@ -258,13 +227,10 @@ const AIInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+        <div
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Join the AI Revolution</h2>
@@ -286,7 +252,7 @@ const AIInnovationHub2026: React.FC = () => {
               Explore AI Technologies
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

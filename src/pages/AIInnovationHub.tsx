@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   ArrowRight, 
@@ -190,10 +189,7 @@ export default function AIInnovationHub() {
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30px_30px,rgba(255,255,255,0.03)_2px,transparent_2px)] bg-[length:60px_60px]"></div>
           
           <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4" />
@@ -229,17 +225,14 @@ export default function AIInnovationHub() {
                   Request Demo
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Metrics Strip */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <div
               className="relative"
             >
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
@@ -273,7 +266,7 @@ export default function AIInnovationHub() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -291,12 +284,10 @@ export default function AIInnovationHub() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index) => (
-                <motion.div
+                <div
                   key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300"
                 >
                   <div className="flex items-center mb-6">
@@ -330,7 +321,7 @@ export default function AIInnovationHub() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -350,12 +341,10 @@ export default function AIInnovationHub() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {innovationAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={area.title}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-6">
@@ -387,7 +376,7 @@ export default function AIInnovationHub() {
                       <span className="ml-2 text-sm font-semibold text-white">{area.timeline}</span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -407,12 +396,10 @@ export default function AIInnovationHub() {
 
             <div className="space-y-12">
               {caseStudies.map((study, index) => (
-                <motion.div
+                <div
                   key={study.title}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -452,7 +439,7 @@ export default function AIInnovationHub() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -472,12 +459,10 @@ export default function AIInnovationHub() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
-                <motion.div
+                <div
                   key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -497,7 +482,7 @@ export default function AIInnovationHub() {
                       <Download className="w-4 h-4" />
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -506,11 +491,9 @@ export default function AIInnovationHub() {
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Harness AI Innovation?
@@ -534,7 +517,7 @@ export default function AIInnovationHub() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

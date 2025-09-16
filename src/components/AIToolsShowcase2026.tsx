@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -172,19 +171,17 @@ const AIToolsShowcase2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
         <div className="absolute inset-0">
           {[...Array(15)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-50],
                 opacity: [010],
                 scale: [0.510.5],
               }}
-              transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -196,10 +193,7 @@ const AIToolsShowcase2026 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
@@ -213,13 +207,10 @@ const AIToolsShowcase2026 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => {
@@ -242,24 +233,18 @@ const AIToolsShowcase2026 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Tools Grid */}
-        <motion.div
-          layout
+        <div
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          <AnimatePresence>
+          <div>
             {filteredTools.map((toolindex) => {
               const Icon = tool.icon;
               return (
-                <motion.div
+                <div
                   key={tool.id}
-                  layout
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.8 }}
-                  transition={{ duration: 0.3delay: index * 0.05 }}
                   onHoverStart={() => setHoveredTool(tool.id)}
                   onHoverEnd={() => setHoveredTool(null)}
                   className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
@@ -325,31 +310,25 @@ const AIToolsShowcase2026 = () => {
                   </div>
 
                   {/* Hover Overlay */}
-                  <AnimatePresence>
+                  <div>
                     {hoveredTool === tool.id && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <div
                         className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                       >
                         <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
                           Get Started
                         </button>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
+                  </div>
+                </div>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -368,7 +347,7 @@ const AIToolsShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

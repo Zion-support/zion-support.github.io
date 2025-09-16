@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -149,10 +148,7 @@ const RevolutionarySuccessStories2026 = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
@@ -174,13 +170,10 @@ const RevolutionarySuccessStories2026 = () => {
             See how industry leaders are achieving unprecedented success with our AI and automation solutions. 
             These 'aren', 't just promises—'they', 're proven results.
           </p>
-        </motion.div>
+        </div>
 
         {/* Overall Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -192,13 +185,10 @@ const RevolutionarySuccessStories2026 = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Success Stories Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -221,13 +211,8 @@ const RevolutionarySuccessStories2026 = () => {
           </div>
 
           {/* Story Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeStory}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="grid lg:grid-cols-2 gap-8">
@@ -320,15 +305,12 @@ const RevolutionarySuccessStories2026 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
@@ -356,7 +338,7 @@ const RevolutionarySuccessStories2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

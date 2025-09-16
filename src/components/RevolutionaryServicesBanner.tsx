@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryServicesBanner: React.FC = () => {
   const services = [
@@ -56,10 +55,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -72,17 +68,13 @@ const RevolutionaryServicesBanner: React.FC = () => {
             Transform your business with our comprehensive range of cutting-edge technology services. 
             From AI and quantum computing to space technology and neural interfaces.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <div className="text-center">
@@ -95,15 +87,12 @@ const RevolutionaryServicesBanner: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -123,7 +112,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

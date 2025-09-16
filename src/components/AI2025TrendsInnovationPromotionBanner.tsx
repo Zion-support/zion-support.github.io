@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -52,10 +51,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -82,46 +78,36 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             {/* Features List */}
             <div className="space-y-4">
               {features.map((featureindex) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0x: -20 }}
-                  animate={isVisible ? { opacity: 1x: 0 } : {}}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
                   <span className="text-gray-300 text-lg">{feature}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 Explore AI Trends
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
+              </button>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Clock className="w-5 h-5 mr-2" />
                 Limited Time
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Stats Display */}
-          <motion.div
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <div
             className="relative"
           >
             {/* Main Stats Card */}
@@ -133,11 +119,8 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
               {/* Animated Stat Display */}
               <div className="text-center mb-8">
-                <motion.div
+                <div
                   key={currentStat}
-                  initial={{ scale: 0.8opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
@@ -149,7 +132,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                   <div className="text-gray-300 text-lg">
                     {stats[currentStat].label}
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Progress Indicators */}
@@ -166,29 +149,22 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <motion.div
-              animate={{ y: [0-10] }}
-              transition={{ duration: 3repeat: Infinity }}
+            <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
-            </motion.div>
+            </div>
 
-            <motion.div
-              animate={{ y: [010] }}
-              transition={{ duration: 4repeat: Infinitydelay: 1 }}
+            <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
               <Zap className="w-6 h-6 text-white" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
@@ -202,7 +178,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               <span>✓ ROI Guarantee</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

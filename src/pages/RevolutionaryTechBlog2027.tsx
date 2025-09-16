@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryTechBlog2027: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -104,10 +103,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center mb-16"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -119,31 +115,26 @@ const RevolutionaryTechBlog2027: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Deep insights into the technologies that are reshaping our world
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Category Navigation */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-6">📖 Blog Categories</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore articles across different technology domains
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(categories).map(([key, category]) => (
-            <motion.button
+            <button
               key={key}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(key)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeCategory === key
@@ -153,27 +144,20 @@ const RevolutionaryTechBlog2027: React.FC = () => {
             >
               <span className="text-2xl mr-2">{category.icon}</span>
               {category.name}
-            </motion.button>
+            </button>
           ))}
         </div>
 
         {/* Featured Posts */}
         {activeCategory === 'all' && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          <div
             className="mb-16"
           >
             <h3 className="text-3xl font-bold mb-8 text-center">⭐ Featured Articles</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.filter(post => post.featured).map((post, index) => (
-                <motion.article
+                <article
                   key={post.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -209,17 +193,14 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                   <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
                     Read Full Article →
                   </button>
-                </motion.article>
+                </article>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* All Posts */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
         >
           <h3 className="text-3xl font-bold mb-8 text-center">
             {activeCategory === 'all' ? '📚 All Articles' : `${categories[activeCategory as keyof typeof categories].name} Articles`}
@@ -227,12 +208,8 @@ const RevolutionaryTechBlog2027: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
-              <motion.article
+              <article
                 key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -270,19 +247,16 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
                   Read Full Article →
                 </button>
-              </motion.article>
+              </article>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Newsletter Signup */}
       <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+          <div
             className="text-center"
           >
             <h2 className="text-4xl font-bold mb-6">📧 Stay Updated</h2>
@@ -299,16 +273,13 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">🚀 Ready to Explore More?</h2>
@@ -323,7 +294,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
               Contact Us
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

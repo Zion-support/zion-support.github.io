@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const QuantumReality2027: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const QuantumReality2027: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -31,29 +27,25 @@ const QuantumReality2027: React.FC = () => {
                 Watch Quantum Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Quantum Breakthroughs */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">⚡ Quantum Breakthroughs</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Experience the most advanced quantum technologies that are reshaping our understanding of reality
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🌌</div>
@@ -70,12 +62,10 @@ const QuantumReality2027: React.FC = () => {
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Experience Supremacy →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🔮</div>
@@ -92,12 +82,10 @@ const QuantumReality2027: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Start Simulation →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🔐</div>
@@ -114,30 +102,26 @@ const QuantumReality2027: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Secure Your Data →
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Quantum Applications */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">🚀 Quantum Applications</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               Discover how quantum computing is revolutionizing industries and solving impossible problems
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
+            <div
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
             >
               <h3 className="text-2xl font-bold mb-4">🧬 Drug Discovery</h3>
@@ -150,12 +134,10 @@ const QuantumReality2027: React.FC = () => {
                 <li>• Drug interaction modeling</li>
                 <li>• Personalized medicine</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
+            <div
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
             >
               <h3 className="text-2xl font-bold mb-4">🌍 Climate Modeling</h3>
@@ -168,30 +150,26 @@ const QuantumReality2027: React.FC = () => {
                 <li>• Environmental optimization</li>
                 <li>• Disaster prevention</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Quantum Future Vision */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🔮 The Quantum Future</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Imagine a world where quantum computing has unlocked the secrets of the universe and created technologies beyond our wildest dreams
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🌌</div>
@@ -199,12 +177,10 @@ const QuantumReality2027: React.FC = () => {
             <p className="text-indigo-100">
               A global quantum network enabling instant, secure communication across the planet
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🧠</div>
@@ -212,12 +188,10 @@ const QuantumReality2027: React.FC = () => {
             <p className="text-purple-100">
               AI systems powered by quantum computing with superhuman intelligence and creativity
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🚀</div>
@@ -225,16 +199,14 @@ const QuantumReality2027: React.FC = () => {
             <p className="text-cyan-100">
               Quantum-powered spacecraft and exploration systems reaching the farthest corners of the universe
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Enter the Quantum Era?</h2>
@@ -249,7 +221,7 @@ const QuantumReality2027: React.FC = () => {
               Learn Quantum Computing
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

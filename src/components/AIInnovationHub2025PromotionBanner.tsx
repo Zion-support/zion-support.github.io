@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -106,13 +105,9 @@ const AIInnovationHub2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <div
           className="relative overflow-hidden"
         >
           {/* Main Banner */}
@@ -129,10 +124,7 @@ const AIInnovationHub2025PromotionBanner = () => {
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                 {/* Left Content */}
                 <div className="flex-1 text-center lg:text-left">
-                  <motion.div
-                    initial={{ opacity: 0x: -50 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.8delay: 0.2 }}
+                  <div
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white text-sm font-semibold mb-6">
@@ -149,14 +141,11 @@ const AIInnovationHub2025PromotionBanner = () => {
                       Explore 400+ AI innovationstoolsand technologies. From neural networks to quantum AI
                       find everything you need to build the future.
                     </p>
-                  </motion.div>
+                  </div>
 
                   {/* Rotating Innovation Showcase */}
-                  <motion.div
+                  <div
                     key={currentInnovation}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
                     className="mb-8"
                   >
                     <div className={`inline-flex items-center px-6 py-4 bg-gradient-to-r ${innovations[currentInnovation].color} rounded-2xl text-white max-w-md`}>
@@ -176,13 +165,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Categories */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8delay: 0.4 }}
+                  <div
                     className="mb-8"
                   >
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -196,13 +182,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Stats */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8delay: 0.6 }}
+                  <div
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
                   >
                     {stats.map((statindex) => (
@@ -211,13 +194,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         <div className="text-sm text-gray-300">{stat.label}</div>
                       </div>
                     ))}
-                  </motion.div>
+                  </div>
 
                   {/* Action Buttons */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8delay: 0.8 }}
+                  <div
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                   >
                     <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
@@ -229,14 +209,11 @@ const AIInnovationHub2025PromotionBanner = () => {
                       <Play className="w-5 h-5 mr-2" />
                       Watch Demo
                     </button>
-                  </motion.div>
+                  </div>
                 </div>
 
                 {/* Right Content - Visual */}
-                <motion.div
-                  initial={{ opacity: 0x: 50 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.8delay: 0.4 }}
+                <div
                   className="flex-1 max-w-lg"
                 >
                   <div className="relative">
@@ -286,23 +263,19 @@ const AIInnovationHub2025PromotionBanner = () => {
                     </div>
 
                     {/* Floating Elements */}
-                    <motion.div
-                      animate={{ y: [0-10] }}
-                      transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
+                    <div
                       className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                     >
                       <Award className="w-8 h-8 text-white" />
-                    </motion.div>
+                    </div>
                     
-                    <motion.div
-                      animate={{ y: [010] }}
-                      transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 }}
+                    <div
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >
                       <Sparkles className="w-6 h-6 text-white" />
-                    </motion.div>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
 
@@ -317,9 +290,9 @@ const AIInnovationHub2025PromotionBanner = () => {
 
           {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

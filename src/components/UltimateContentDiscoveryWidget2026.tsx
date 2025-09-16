@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap
 import { 
   Search
@@ -202,10 +201,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -214,22 +210,17 @@ const UltimateContentDiscoveryWidget2026 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2duration: 0.6 }}
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -252,10 +243,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
       {/* Header */}
@@ -358,24 +346,17 @@ const UltimateContentDiscoveryWidget2026 = () => {
         </div>
 
         {/* Content Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
         >
-          <AnimatePresence>
+          <div>
             {sortedContent.map((itemindex) => (
-              <motion.div
+              <div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -458,16 +439,14 @@ const UltimateContentDiscoveryWidget2026 = () => {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
 
         {/* No Results */}
         {sortedContent.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <div
             className="text-center py-12"
           >
             <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
@@ -475,7 +454,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-          </motion.div>
+          </div>
         )}
       </div>
   );

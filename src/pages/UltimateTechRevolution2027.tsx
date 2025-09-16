@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const UltimateTechRevolution2027: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🚀 ULTIMATE BREAKTHROUGH • 2027
@@ -32,7 +28,7 @@ const UltimateTechRevolution2027: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -46,10 +42,8 @@ const UltimateTechRevolution2027: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Consciousness */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🧠</div>
@@ -66,13 +60,11 @@ const UltimateTechRevolution2027: React.FC = () => {
               <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
                 Explore AI Consciousness →
               </button>
-            </motion.div>
+            </div>
 
             {/* Quantum Supremacy */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">⚡</div>
@@ -89,13 +81,11 @@ const UltimateTechRevolution2027: React.FC = () => {
               <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
                 Go Quantum →
               </button>
-            </motion.div>
+            </div>
 
             {/* Neural Reality */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🧬</div>
@@ -112,7 +102,7 @@ const UltimateTechRevolution2027: React.FC = () => {
               <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
                 Enter Neural Reality →
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,10 +116,8 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+            <div
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
             >
               <h3 className="text-3xl font-bold mb-6">Consciousness Transfer Technology</h3>
               <p className="text-lg opacity-90 mb-6">
@@ -150,12 +138,10 @@ const UltimateTechRevolution2027: React.FC = () => {
                   <span>Multi-dimensional existence</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
+            <div
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-8 border border-purple-400/30"
             >
               <div className="text-6xl mb-4 text-center">🌟</div>
@@ -164,7 +150,7 @@ const UltimateTechRevolution2027: React.FC = () => {
                 The fusion of quantum computing and artificial consciousness creates 
                 unprecedented possibilities for problem-solving and creativity.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -172,10 +158,8 @@ const UltimateTechRevolution2027: React.FC = () => {
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">🔮 The Future is Now</h2>
             <p className="text-xl opacity-80 mb-8 max-w-4xl mx-auto">
@@ -190,7 +174,7 @@ const UltimateTechRevolution2027: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,22 +88,7 @@ const DynamicContentCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
-<<<<<<< HEAD
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-=======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-0dce
-=======
-              currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-36f9
             }`}
           />
         ))}

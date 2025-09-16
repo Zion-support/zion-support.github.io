@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   SparklesIcon, 
   RocketLaunchIcon, 
@@ -80,13 +79,10 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
   };
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.section
+        <divsection
           className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
         >
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
@@ -96,7 +92,6 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <motion.div className="text-center mb-16" variants={itemVariants}>
               <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
                 <StarIcon className="w-5 h-5 mr-2" />
                 🚀 NEWEST BREAKTHROUGH - AI 2025 ULTIMATE CONTENT SHOWCASE
@@ -113,10 +108,9 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 Experience <span className="text-yellow-400 font-bold">50000% ROI</span> with revolutionary 
                 neural architectures and quantum-enhanced processing.
               </p>
-            </motion.div>
+            </div>
 
             {/* Interactive Feature Showcase */}
-            <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16" variants={itemVariants}>
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">
                   Revolutionary Features
@@ -124,7 +118,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 
                 <div className="space-y-6">
                   {features.map((feature, index) => (
-                    <motion.div
+                    <div
                       key={index}
                       className={`p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${
                         currentFeature === index
@@ -132,8 +126,6 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                           : 'border-white/20 bg-white/5 hover:border-white/40'
                       }`}
                       onClick={() => setCurrentFeature(index)}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
                     >
                       <div className="flex items-start space-x-4">
                         <div className={`p-3 rounded-xl ${
@@ -150,18 +142,15 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
 
               <div className="relative">
-                <motion.div
+                <div
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
                   key={currentFeature}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
                 >
                   <div className="text-center">
                     <div className="text-6xl font-bold text-yellow-400 mb-4">
@@ -179,11 +168,8 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                     
                     {/* Animated Progress Bar */}
                     <div className="w-full bg-white/20 rounded-full h-3 mb-6">
-                      <motion.div
+                      <div
                         className="bg-gradient-to-r from-yellow-400 to-orange-500 h-3 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{ width: "85%" }}
-                        transition={{ duration: 2, ease: "easeOut" }}
                       />
                     </div>
                     
@@ -191,12 +177,11 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                       Performance Score: 98.7%
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Success Metrics */}
-            <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16" variants={itemVariants}>
               <div className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">50000%</div>
                 <div className="text-gray-300">Average ROI</div>
@@ -213,10 +198,9 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-2">340%</div>
                 <div className="text-gray-300">Efficiency Gain</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Call to Action */}
-            <motion.div className="text-center" variants={itemVariants}>
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -248,16 +232,16 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping" />
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce" />
-        </motion.section>
+        </divsection>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

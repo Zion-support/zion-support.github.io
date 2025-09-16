@@ -2,8 +2,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon
@@ -181,16 +179,14 @@ const Homepage2044: React.FC = () => {
               {/* Animated particles with neon trails */}
               <div className="absolute inset-0">
                 {[...Array(20)].map((_, i) => (
-                  <motion.div
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]"
-                    animate={{
                       x: [0, 150, 0],
                       y: [0, -150, 0],
                       opacity: [0, 1, 0],
                       scale: [0, 1.5, 0],
                     }}
-                    transition={{
                       duration: 8 + i * 0.3,
                       repeat: Infinity as any,
                       delay: i * 0.2,
@@ -213,26 +209,22 @@ const Homepage2044: React.FC = () => {
               </div>
 
               {/* Floating geometric shapes */}
-              <motion.div
+              <div
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
-                animate={{
                   rotate: [45, 405],
                   scale: [1, 1.2, 1],
                   opacity: [0.3, 0.8, 0.3],
                 }}
-                transition={{
                   duration: 10,
                   repeat: Infinity as any,
                   ease: "linear"
                 }}
               />
-              <motion.div
+              <div
                 className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
-                animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.3, 0.8, 0.3],
                 }}
-                transition={{
                   duration: 8,
                   repeat: Infinity as any,
                   ease: "easeInOut"
@@ -242,43 +234,31 @@ const Homepage2044: React.FC = () => {
 
             {/* Hero Content */}
             <div className="text-center max-w-7xl mx-auto relative z-10">
-              <motion.div
+              <div
                 className="mb-8"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-                transition={{ duration: 1, ease: "easeOut" }}
               >
                 <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 rounded-full text-purple-300 text-lg font-medium mb-8 shadow-[0_0_30px_rgba(168,85,247,0.3)] backdrop-blur-sm">
                   🚀 Revolutionary 2044 Technology
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1
+              <divh1
                 id="hero-heading"
                 className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                   Zion Tech Group
                 </span>
-              </motion.h1>
+              </divh1>
               
-              <motion.p
+              <divp
                 className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               >
                 Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
-              </motion.p>
+              </divp>
 
-              <motion.div
+              <div
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
                 <button 
                   className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden"
@@ -301,14 +281,11 @@ const Homepage2044: React.FC = () => {
                     <Play className="w-7 h-7 ml-4" />
                   </span>
                 </button>
-              </motion.div>
+              </div>
 
               {/* Featured Service Showcase */}
-              <motion.div
+              <div
                 className="max-w-6xl mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
               >
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold text-white mb-4">
@@ -321,14 +298,12 @@ const Homepage2044: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service, index) => (
-                    <motion.div
+                    <div
                       key={service.id}
                       className={`relative group cursor-pointer ${
                         index === currentServiceIndex ? 'scale-105' : 'scale-100'
                       } transition-transform duration-500`}
                       onClick={() => handleServiceClick(service)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
@@ -367,21 +342,19 @@ const Homepage2044: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
 
           {/* Features Section */}
           <section className="py-24 px-4 relative">
             <div className="max-w-7xl mx-auto">
-              <motion.div
+              <div
                 className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <h2 className="text-5xl font-bold text-white mb-6">
@@ -390,7 +363,7 @@ const Homepage2044: React.FC = () => {
                 <p className="text-xl text-gray-400 max-w-4xl mx-auto">
                   Experience the future of technology with our cutting-edge solutions that transform businesses and drive innovation
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
@@ -401,14 +374,11 @@ const Homepage2044: React.FC = () => {
                   { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-500 to-teal-500" },
                   { icon: Database, title: "Quantum Cloud Infrastructure", description: "Quantum-powered cloud with consciousness", color: "from-yellow-500 to-orange-500" }
                 ].map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     className="group cursor-pointer"
-                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -10 }}
                   >
                     <div className="relative p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-xl hover:border-cyan-500/50 transition-all duration-300">
                       <div className="flex items-center justify-between mb-4">
@@ -434,7 +404,7 @@ const Homepage2044: React.FC = () => {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -450,12 +420,10 @@ const Homepage2044: React.FC = () => {
                   { number: "24/7", label: "AI Support Available", icon: Brain },
                   { number: "200+", label: "Countries Served", icon: Globe }
                 ].map((stat, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     className="text-center"
-                    initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mx-auto mb-4">
@@ -463,7 +431,7 @@ const Homepage2044: React.FC = () => {
                     </div>
                     <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
                     <div className="text-gray-400">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>

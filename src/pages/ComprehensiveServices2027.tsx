@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2027: React.FC = () => {
@@ -181,10 +180,7 @@ const ComprehensiveServices2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -196,18 +192,16 @@ const ComprehensiveServices2027: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Complete technology solutions for the future. From AI and quantum computing to space technology and neural interfaces.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Services by Category */}
         <div className="container mx-auto px-4 py-20">
           {services.map((category, categoryIndex) => (
-            <motion.div
+            <div
               key={category.category}
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               className="mb-20"
             >
               <div className="text-center mb-12">
@@ -217,11 +211,9 @@ const ComprehensiveServices2027: React.FC = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <motion.div
+                  <div
                     key={service.name}
-                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
                   >
                     <h3 className="text-2xl font-bold mb-4">{service.name}</h3>
@@ -245,10 +237,10 @@ const ComprehensiveServices2027: React.FC = () => {
                         Get Quote
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -264,11 +256,9 @@ const ComprehensiveServices2027: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
                 >
                   <div className="flex mb-4">
@@ -281,7 +271,7 @@ const ComprehensiveServices2027: React.FC = () => {
                     <div className="font-bold">{testimonial.name}</div>
                     <div className="text-blue-300">{testimonial.role}, {testimonial.company}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

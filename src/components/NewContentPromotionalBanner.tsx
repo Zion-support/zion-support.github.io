@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -83,12 +82,8 @@ const NewContentPromotionalBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
+    <div>
+      <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-sm border-b border-gray-700/50"
       >
         <div className="max-w-7xl mx-auto px-4 py-3">
@@ -104,13 +99,8 @@ const NewContentPromotionalBanner: React.FC = () => {
               </button>
 
               {/* Slide Content */}
-              <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={currentSlide}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
                   className="flex items-center space-x-4 flex-1"
                 >
                   {/* Icon */}
@@ -136,8 +126,8 @@ const NewContentPromotionalBanner: React.FC = () => {
                     <span>{promotionalContent[currentSlide].linkText}</span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
 
               {/* Navigation Arrow */}
               <button
@@ -175,12 +165,10 @@ const NewContentPromotionalBanner: React.FC = () => {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            animate={{
+          <div
               y: [0, -10, 0],
               rotate: [0, 5, 0],
             }}
-            transition={{
               duration: 3,
               repeat: Infinity,
               ease: "easeInOut"
@@ -188,13 +176,11 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-2 left-10"
           >
             <Star className="w-4 h-4 text-yellow-400 opacity-60" />
-          </motion.div>
-          <motion.div
-            animate={{
+          </div>
+          <div
               y: [0, 10, 0],
               rotate: [0, -5, 0],
             }}
-            transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
@@ -203,13 +189,11 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-3 right-20"
           >
             <Zap className="w-3 h-3 text-purple-400 opacity-60" />
-          </motion.div>
-          <motion.div
-            animate={{
+          </div>
+          <div
               y: [0, -8, 0],
               x: [0, 5, 0],
             }}
-            transition={{
               duration: 5,
               repeat: Infinity,
               ease: "easeInOut",
@@ -218,10 +202,10 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-1 right-32"
           >
             <TrendingUp className="w-3 h-3 text-green-400 opacity-60" />
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 

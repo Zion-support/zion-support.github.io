@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -203,10 +202,7 @@ const CaseStudyShowcase2026 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
@@ -224,13 +220,10 @@ const CaseStudyShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Industry Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.1 }}
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(industries).map(([keyindustry]) => {
@@ -250,24 +243,16 @@ const CaseStudyShowcase2026 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Case Studies Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeIndustry}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
-              <motion.div
+              <div
                 key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
                 className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -378,9 +363,7 @@ const CaseStudyShowcase2026 = () => {
                 </div>
 
                 {/* Hover Overlay */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ 
+                <div
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
                   }}
                   className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center"
@@ -392,17 +375,14 @@ const CaseStudyShowcase2026 = () => {
                       View Details
                     </button>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.5 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -420,7 +400,7 @@ const CaseStudyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

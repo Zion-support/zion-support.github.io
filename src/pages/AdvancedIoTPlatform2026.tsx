@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedIoTPlatform2026: React.FC = () => {
@@ -143,10 +142,7 @@ const AdvancedIoTPlatform2026: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm"></div>
           <div className="container mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center mb-16"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 rounded-full text-white text-sm font-bold mb-6">
@@ -167,38 +163,34 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                   View Platform Demo
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Real-time Metrics */}
         <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-green-300">📊 Real-time Platform Metrics</h2>
               <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Live data from our global IoT network
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
               {industryMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 text-center"
                 >
                   <div className="text-3xl font-bold text-green-400 mb-2">{metric.value}</div>
                   <div className="text-sm text-green-200 mb-2">{metric.metric}</div>
                   <div className="text-xs text-green-300">{metric.trend}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -207,25 +199,21 @@ const AdvancedIoTPlatform2026: React.FC = () => {
         {/* Device Types */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-green-300">🔌 Device Types</h2>
               <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Support for all types of connected devices and applications
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {Object.entries(deviceTypes).map(([key, device], index) => (
-                <motion.div
+                <div
                   key={key}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
                     activeDevice === key ? 'ring-2 ring-green-400' : ''
                   }`}
@@ -239,18 +227,13 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                     <div className="text-lg font-bold text-green-400">{device.devices}</div>
                     <div className="text-sm text-green-300 mt-2">Efficiency: +{device.efficiency}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Device Details */}
-            <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={activeDevice}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
                 className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30"
               >
                 <div className="flex items-center mb-6">
@@ -289,33 +272,29 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Platform Features */}
         <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-teal-300">⚡ Platform Features</h2>
               <p className="text-xl text-teal-100 max-w-3xl mx-auto">
                 Comprehensive IoT platform capabilities for any use case
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {platformFeatures.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-teal-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30"
                 >
                   <div className="text-5xl mb-6 text-center">{feature.icon}</div>
@@ -331,7 +310,7 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                     <div className="text-sm text-teal-200 mb-2">Capability:</div>
                     <div className="text-sm font-bold text-teal-300">{feature.capability}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -340,17 +319,15 @@ const AdvancedIoTPlatform2026: React.FC = () => {
         {/* Data Flow Visualization */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-green-300">📈 Real-time Data Flow</h2>
               <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Visualize data flowing through our IoT network in real-time
               </p>
-            </motion.div>
+            </div>
 
             <div className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
               <div className="grid md:grid-cols-4 gap-8">
@@ -389,10 +366,8 @@ const AdvancedIoTPlatform2026: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600">
           <div className="container mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">Connect Your World Today</h2>
               <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -406,7 +381,7 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -92,18 +91,16 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0">
           {[...Array(50)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 opacity: [010],
                 scale: [010],
               }}
-              transition={{
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -115,10 +112,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -135,30 +129,23 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </button>
+            <button
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
               Explore Solutions
-            </motion.button>
+            </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="flex justify-center mb-12"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-full p-2 border border-white/20">
@@ -183,16 +170,11 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               AI 2026
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Technology Features */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="mb-16"
           >
             <div className="text-center mb-12">
@@ -206,11 +188,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.2 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center mb-6">
@@ -232,17 +211,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
           <div className="text-center mb-12">
@@ -257,27 +233,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               { number: '300%'label: 'ROI Increase' },
               { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -289,25 +259,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
               >
                 <Rocket className="w-6 h-6" />
                 Start Your AI Journey
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </button>
+              <button
                 className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 <Users className="w-6 h-6" />
                 Schedule Demo
-              </motion.button>
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

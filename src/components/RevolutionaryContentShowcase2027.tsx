@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryContentShowcase2027: React.FC = () => {
   return (
@@ -17,10 +16,8 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -37,12 +34,10 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             <a href="/pages/NextGenAIRevolution2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore AI Future →
             </a>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -59,12 +54,10 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             <a href="/pages/QuantumReality2027" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Enter Quantum World →
             </a>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -81,20 +74,18 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
               Connect Your Mind →
             </a>
-          </motion.div>
+          </div>
         </div>
         
         <div className="text-center mt-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
             className="inline-block"
           >
             <a href="/pages/NextGenAIRevolution2027" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
               🌟 Experience the Ultimate Revolution →
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

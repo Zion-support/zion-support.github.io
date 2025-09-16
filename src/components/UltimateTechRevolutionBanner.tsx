@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateTechRevolutionBanner: React.FC = () => {
   return (
@@ -16,10 +15,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="flex items-center justify-center space-x-3 mb-6">
@@ -35,66 +31,50 @@ const UltimateTechRevolutionBanner: React.FC = () => {
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">🧠</div>
               <h3 className="font-bold text-lg mb-2">Quantum Consciousness</h3>
               <p className="text-sm opacity-90">Revolutionary quantum processors with consciousness integration</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">🌌</div>
               <h3 className="font-bold text-lg mb-2">Interdimensional AI</h3>
               <p className="text-sm opacity-90">AI systems operating across multiple dimensions</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">✨</div>
               <h3 className="font-bold text-lg mb-2">Holographic Reality</h3>
               <p className="text-sm opacity-90">Indistinguishable virtual reality experiences</p>
-            </motion.div>
+            </div>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
+            <a
               href="/pages/AdvancedTechShowcase2027"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="inline-block bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-all duration-300 font-bold text-lg shadow-lg"
             >
               🌟 Explore Advanced Tech Showcase →
-            </motion.a>
+            </a>
             
-            <motion.a
+            <a
               href="/pages/ComprehensiveServices2027"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-bold text-lg border border-white/30"
             >
               🚀 View All Services →
-            </motion.a>
+            </a>
           </div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+          <div
             className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -113,8 +93,8 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl font-bold text-yellow-300">24/7</div>
               <div className="text-sm opacity-90">Support Available</div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const AITransformationMastery2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -198,10 +197,7 @@ const AITransformationMastery2026: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6">
@@ -222,7 +218,7 @@ const AITransformationMastery2026: React.FC = () => {
                 Download Framework
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -255,10 +251,7 @@ const AITransformationMastery2026: React.FC = () => {
       {/* Content Sections */}
       <div className="container mx-auto px-4 py-20">
         {activeTab === 'overview' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="grid md:grid-cols-2 gap-12"
           >
             <div>
@@ -313,24 +306,18 @@ const AITransformationMastery2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'stages' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="space-y-8"
           >
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">4-Stage Transformation Framework</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationStages.map((stage, index) => (
-                <motion.div
+                <div
                   key={stage.stage}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="text-center mb-6">
@@ -367,17 +354,14 @@ const AITransformationMastery2026: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'solutions' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="space-y-12"
           >
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">AI Solutions Portfolio</h2>
@@ -398,24 +382,18 @@ const AITransformationMastery2026: React.FC = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'cases' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="space-y-8"
           >
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Success Stories</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="mb-6">
@@ -441,20 +419,18 @@ const AITransformationMastery2026: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-white"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organization?</h2>
@@ -470,7 +446,7 @@ const AITransformationMastery2026: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,52 +55,44 @@ const RevolutionaryContentBanner2027: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className={`bg-gradient-to-r ${bannerContent[currentSlide].bgColor} backdrop-blur-sm`}
-        >
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <div className="text-2xl animate-pulse">
-                  {bannerContent[currentSlide].title.split(' ')[0]}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white">
-                    {bannerContent[currentSlide].title}
-                  </h3>
-                  <p className="text-sm text-white/90">
-                    {bannerContent[currentSlide].subtitle}
-                  </p>
-                </div>
+      <div
+        key={currentSlide}
+        className={`bg-gradient-to-r ${bannerContent[currentSlide].bgColor} backdrop-blur-sm`}
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl animate-pulse">
+                {bannerContent[currentSlide].title.split(' ')[0]}
               </div>
-              
-              <div className="flex items-center space-x-4">
-                <motion.a
-                  href={bannerContent[currentSlide].link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`bg-gradient-to-r ${bannerContent[currentSlide].color} text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                >
-                  {bannerContent[currentSlide].cta} →
-                </motion.a>
-                
-                <button
-                  onClick={handleClose}
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  ✕
-                </button>
+              <div>
+                <h3 className="text-lg font-bold text-white">
+                  {bannerContent[currentSlide].title}
+                </h3>
+                <p className="text-sm text-white/90">
+                  {bannerContent[currentSlide].subtitle}
+                </p>
               </div>
             </div>
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href={bannerContent[currentSlide].link}
+                className={`bg-gradient-to-r ${bannerContent[currentSlide].color} text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+              >
+                {bannerContent[currentSlide].cta} →
+              </a>
+              
+              <button
+                onClick={handleClose}
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                ✕
+              </button>
+            </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      </div>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">

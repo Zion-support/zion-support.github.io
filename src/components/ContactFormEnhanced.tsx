@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
 
 const ContactFormEnhanced: React.FC = () => {
@@ -39,10 +38,7 @@ const ContactFormEnhanced: React.FC = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
       className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg"
     >
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
@@ -113,11 +109,9 @@ const ContactFormEnhanced: React.FC = () => {
           />
         </div>
 
-        <motion.button
+        <button
           type="submit"
           disabled={isSubmitting}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
           className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isSubmitting ? (
@@ -131,31 +125,27 @@ const ContactFormEnhanced: React.FC = () => {
               Send Message
             </>
           )}
-        </motion.button>
+        </button>
 
         {submitStatus === 'success' && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="flex items-center text-green-600 bg-green-50 p-3 rounded-md"
           >
             <CheckCircle className="w-5 h-5 mr-2" />
             Message sent successfully!
-          </motion.div>
+          </div>
         )}
 
         {submitStatus === 'error' && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="flex items-center text-red-600 bg-red-50 p-3 rounded-md"
           >
             <AlertCircle className="w-5 h-5 mr-2" />
             Failed to send message. Please try again.
-          </motion.div>
+          </div>
         )}
       </form>
-    </motion.div>
+    </div>
   );
 };
 

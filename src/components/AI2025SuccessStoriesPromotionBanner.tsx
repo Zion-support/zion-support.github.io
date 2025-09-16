@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Award
   TrendingUp
@@ -67,10 +66,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -114,31 +110,24 @@ const AI2025SuccessStoriesPromotionBanner = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
+              </button>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Target className="w-5 h-5 mr-2" />
                 Start Your Story
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Testimonial & Stats */}
-          <motion.div
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <div
             className="space-y-8"
           >
             {/* Testimonial Card */}
@@ -150,15 +139,12 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <motion.p
+                  <divp
                     key={currentTestimonial}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
                     className="text-gray-300 text-lg italic mb-4"
                   >
                     "{testimonials[currentTestimonial].quote}"
-                  </motion.p>
+                  </divp>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white font-semibold">{testimonials[currentTestimonial].company}</p>
@@ -187,11 +173,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 mb-3">
@@ -199,17 +182,14 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
@@ -223,7 +203,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
               <span>✓ Ongoing Support</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

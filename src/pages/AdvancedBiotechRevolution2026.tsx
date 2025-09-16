@@ -194,7 +194,6 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               Explore Applications
 <<<<<<< HEAD
 =======
-import { motion } from 'framer-motion';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -203,10 +202,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -226,7 +222,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Research Overview
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -238,10 +234,8 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -254,12 +248,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Real-time gene monitoring</li>
               <li>• Personalized treatments</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🦠</div>
@@ -272,12 +264,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Artificial organs</li>
               <li>• Bio-manufacturing</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -290,7 +280,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Cognitive enhancement</li>
               <li>• Neural prosthetics</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 

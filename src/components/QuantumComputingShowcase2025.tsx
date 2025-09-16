@@ -1,6 +1,5 @@
 "use client";
 import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -122,10 +121,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm mb-6">
@@ -139,7 +135,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of computing with our revolutionary quantum solutions that transcend classical limitations and unlock infinite possibilities.
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Tabs */}
         <div className="mb-16">
@@ -164,13 +160,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -211,22 +202,18 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   </div>
 
                   <a href="/contact">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <button
                       className={`bg-gradient-to-r ${quantumSolutions[activeTab].gradient} hover:opacity-90 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2`}
                     >
                       Get Started
                       <ArrowRight className="w-5 h-5" />
-                    </motion.button>
+                    </button>
                   </a>
                 </div>
 
                 {/* Visual */}
                 <div className="relative">
-                  <motion.div
-                    animate={isAnimating ? { rotate: 360 } : { rotate: 0 }}
-                    transition={{ duration: 2ease: "linear" }}
+                  <div
                     className={`p-16 rounded-3xl bg-gradient-to-br ${quantumSolutions[activeTab].gradient} shadow-2xl text-center`}
                   >
                     <quantumSolutions[activeTab].icon className="w-32 h-32 text-white mx-auto mb-6" />
@@ -234,7 +221,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                     {/* Quantum Animation */}
                     <div className="relative">
                       {[...Array(8)].map((_i) => (
-                        <motion.div
+                        <div
                           key={i}
                           className="absolute w-4 h-4 bg-white/30 rounded-full"
                           style={{
@@ -242,11 +229,9 @@ const QuantumComputingShowcase2025: React.FC = () => {
                             top: '50%',
                             transformOrigin: '0 0',
                           }}
-                          animate={{
                             rotate: [0360],
                             scale: [1.51],
                           }}
-                          transition={{
                             duration: 3,
                             repeat: Infinity,
                             delay: i * 0.2,
@@ -254,23 +239,21 @@ const QuantumComputingShowcase2025: React.FC = () => {
                         />
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                   
                   {/* Floating Particles */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {[...Array(15)].map((_i) => (
-                      <motion.div
+                      <div
                         key={i}
                         className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
                         style={{
                           left: `${Math.random() * 100}%`,
                           top: `${Math.random() * 100}%`,
                         }}
-                        animate={{
                           y: [0-30],
                           opacity: [010],
                         }}
-                        transition={{
                           duration: 2,
                           repeat: Infinity,
                           delay: Math.random() * 2,
@@ -280,15 +263,12 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          </div>
         </div>
 
         {/* Use Cases Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -297,27 +277,21 @@ const QuantumComputingShowcase2025: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCaseindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group hover:transform hover:scale-105"
               >
                 <useCase.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300 transition-colors duration-300" />
                 <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{useCase.description}</p>
                 <div className="text-cyan-400 font-semibold text-sm">{useCase.impact}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-lg rounded-3xl p-16 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -329,26 +303,22 @@ const QuantumComputingShowcase2025: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a href="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Quantum Consultation
                 <ArrowRight className="w-6 h-6" />
-              </motion.button>
+              </button>
             </a>
             <a href="/quantum-computing-2025">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="border border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-lg"
               >
                 Learn More About Quantum
-              </motion.button>
+              </button>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

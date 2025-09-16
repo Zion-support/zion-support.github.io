@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Mail
   CheckCircle
@@ -85,11 +84,7 @@ const NewsletterSignup2026 = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.6ease: "easeOut" }}
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
       {/* Background Effects */}
@@ -99,15 +94,13 @@ const NewsletterSignup2026 = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
-            animate={{
               x: [0Math.random() * 200 - 100],
               y: [0Math.random() * 200 - 100],
               scale: [010],
             }}
-            transition={{
               duration: Math.random() * 8 + 6,
               repeat: Infinity,
               delay: Math.random() * 3,
@@ -131,10 +124,7 @@ const NewsletterSignup2026 = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0x: -30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
           >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
@@ -159,11 +149,8 @@ const NewsletterSignup2026 = () => {
               {benefits.map((benefitindex) => {
                 const Icon = benefit.icon;
                 return (
-                  <motion.div
+                  <div
                     key={benefit.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6delay: 0.2 + index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
                     <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
@@ -173,7 +160,7 @@ const NewsletterSignup2026 = () => {
                       <h3 className="text-white font-medium mb-1">{benefit.title}</h3>
                       <p className="text-gray-400 text-sm">{benefit.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -181,35 +168,24 @@ const NewsletterSignup2026 = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Newsletter Form */}
-          <motion.div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
           >
-            <AnimatePresence mode="wait">
               {!isSubscribed ? (
-                <motion.div
+                <div
                   key="form"
-                  initial={{ opacity: 0scale: 0.9 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -240,13 +216,11 @@ const NewsletterSignup2026 = () => {
                     </div>
 
                     {error && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
+                      <div
                         className="text-red-400 text-sm"
                       >
                         {error}
-                      </motion.div>
+                      </div>
                     )}
 
                     <button
@@ -273,14 +247,10 @@ const NewsletterSignup2026 = () => {
                       <span>We respect your privacy. Unsubscribe at any time.</span>
                     </div>
                   </form>
-                </motion.div>
+                </div>
               ) : (
-                <motion.div
+                <div
                   key="success"
-                  initial={{ opacity: 0scale: 0.9 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -312,17 +282,14 @@ const NewsletterSignup2026 = () => {
                   >
                     Subscribe another email
                   </button>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </motion.div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -348,9 +315,9 @@ const NewsletterSignup2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

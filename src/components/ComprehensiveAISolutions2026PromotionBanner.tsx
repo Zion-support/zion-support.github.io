@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Brain
   ArrowRight
@@ -60,28 +59,19 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0x: -50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8 }}
+            <div
               className="space-y-8"
             >
               {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.2 }}
+              <div
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
-              </motion.div>
+              </div>
 
               {/* Main Heading */}
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.3 }}
+              <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
                 Complete AI
@@ -90,24 +80,18 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 </span>
                 <br />
                 for Modern Business
-              </motion.h2>
+              </divh2>
 
               {/* Description */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.4 }}
+              <divp
                 className="text-xl text-gray-300 leading-relaxed"
               >
                 Transform your business with our comprehensive suite of AI solutions
                 from enterprise platforms to quantum computing integration.
-              </motion.p>
+              </divp>
 
               {/* Solutions Grid */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.5 }}
+              <div
                 className="grid grid-cols-2 gap-4"
               >
                 {solutions.map((solutionindex) => (
@@ -118,13 +102,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{solution.title}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Benefits */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.6 }}
+              <div
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -133,13 +114,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.7 }}
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
@@ -153,37 +131,28 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   View Case Studies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right Content - Stats & Visual */}
-            <motion.div
-              initial={{ opacity: 0x: 50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <div
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Visual Element */}
-              <motion.div
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.8delay: 0.7 }}
+              <div
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -212,8 +181,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <div className="absolute top-1/2 -right-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
                   <Rocket className="w-2 h-2 text-white" />
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

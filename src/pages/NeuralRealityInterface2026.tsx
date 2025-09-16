@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const NeuralRealityInterface2026: React.FC = () => {
@@ -18,10 +17,7 @@ const NeuralRealityInterface2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -34,16 +30,14 @@ const NeuralRealityInterface2026: React.FC = () => {
                 Revolutionary neural interface technology that enables direct brain-computer interaction 
                 for reality manipulation, consciousness expansion, and infinite computational access.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Neural Interface Core */}
         <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-emerald-400/30"
           >
             <div className="text-center mb-8">
@@ -93,13 +87,11 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Consciousness Expansion Matrix */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-teal-400/30"
           >
             <div className="text-center mb-8">
@@ -161,13 +153,11 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Infinite Computational Access */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+          <div
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-cyan-400/30"
           >
             <div className="text-center mb-8">
@@ -208,13 +198,11 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Neural Network Integration */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-emerald-400/30"
           >
             <div className="text-center mb-8">
@@ -274,13 +262,11 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
             className="text-center bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Expand Your Consciousness?</h2>
@@ -296,7 +282,7 @@ const NeuralRealityInterface2026: React.FC = () => {
                 Explore Capabilities
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

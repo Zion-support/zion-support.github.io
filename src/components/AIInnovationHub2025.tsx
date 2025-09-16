@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -293,10 +292,7 @@ const AIInnovationHub2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8 }}
+      <div
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-purple-600/20" />
@@ -313,14 +309,11 @@ const AIInnovationHub2025 = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between mb-6">
@@ -374,13 +367,10 @@ const AIInnovationHub2025 = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5delay: 0.4 }}
+        <div
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -388,11 +378,8 @@ const AIInnovationHub2025 = () => {
           }`}
         >
           {filteredInnovations.map((itemindex) => (
-            <motion.div
+            <div
               key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5delay: index * 0.1 }}
               onHoverStart={() => setHoveredItem(item.id)}
               onHoverEnd={() => setHoveredItem(null)}
               className={`group cursor-pointer ${
@@ -457,9 +444,7 @@ const AIInnovationHub2025 = () => {
 
                 {/* Hover Overlay */}
                 {hoveredItem === item.id && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                  <div
                     className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center"
                   >
                     <div className="flex gap-4">
@@ -472,25 +457,22 @@ const AIInnovationHub2025 = () => {
                         Download
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Load More */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center mt-12"
         >
           <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto">
             <RefreshCw className="w-5 h-5 mr-2" />
             Load More Innovations
           </button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

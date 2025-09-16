@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -153,22 +152,17 @@ const BusinessSolutionsShowcase2025 = () => {
   const currentCategory = categories[activeCategory];
 
   return (
-    <motion.section
+    <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.div
+          <div
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
-            whileHover={{ scale: 1.05 }}
           >
             <Building2 className="w-4 h-4 mr-2" />
             Business Solutions 2025
-          </motion.div>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Transform Your Business Operations
           </h2>
@@ -176,10 +170,9 @@ const BusinessSolutionsShowcase2025 = () => {
             Discover comprehensive business solutions that drive growthefficiencyand innovation 
             across every aspect of your organization.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
               const Icon = category.icon;
@@ -199,24 +192,17 @@ const BusinessSolutionsShowcase2025 = () => {
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Solutions Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCategory}
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {currentCategory.solutions.map((solutionindex) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5scale: 1.02 }}
-                variants={itemVariants}
               >
                 {/* Header */}
                 <div className="mb-6">
@@ -261,13 +247,12 @@ const BusinessSolutionsShowcase2025 = () => {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Success Stories */}
-        <motion.div className="mt-20" variants={itemVariants}>
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
@@ -291,10 +276,9 @@ const BusinessSolutionsShowcase2025 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
@@ -313,9 +297,9 @@ const BusinessSolutionsShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 

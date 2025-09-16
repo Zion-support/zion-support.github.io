@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -39,10 +38,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
@@ -53,7 +50,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Experience the most groundbreaking technologies that will define the future of humanity
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Interactive Tech Selector */}
@@ -77,13 +74,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
         </div>
 
         {/* Active Tech Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTech}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20"
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -153,20 +145,16 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                 </div>
                 
                 {/* Floating Elements */}
-                <motion.div
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
+                <div
                   className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-60"
-                ></motion.div>
-                <motion.div
-                  animate={{ y: [0, 20, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                ></div>
+                <div
                   className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-60"
-                ></motion.div>
+                ></div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Technology Grid */}
         <div className="mt-20">
@@ -177,11 +165,9 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {revolutionaryTechs.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`bg-gradient-to-br ${tech.gradient} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => setActiveTech(index)}
               >
@@ -193,7 +179,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     Explore →
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

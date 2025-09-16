@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const LatestInnovationShowcase: React.FC = () => {
   const [currentInnovation, setCurrentInnovation] = useState(0);
@@ -65,13 +64,8 @@ const LatestInnovationShowcase: React.FC = () => {
 
         {/* Innovation Carousel */}
         <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={currentInnovation}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 gap-8 items-center"
             >
               <div>
@@ -102,8 +96,8 @@ const LatestInnovationShowcase: React.FC = () => {
                   Try Demo →
                 </button>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          </div>
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
@@ -135,16 +129,14 @@ const LatestInnovationShowcase: React.FC = () => {
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {innovations.map((innovation, index) => (
-            <motion.a
+            <a
               key={index}
               href={innovation.link}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className={`bg-gradient-to-r ${innovation.color} text-white p-4 rounded-lg text-center hover:shadow-lg transition-all duration-300`}
             >
               <div className="text-2xl mb-2">{innovation.icon}</div>
               <div className="text-sm font-semibold">{innovation.title}</div>
-            </motion.a>
+            </a>
           ))}
         </div>
       </div>

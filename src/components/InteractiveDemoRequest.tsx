@@ -1,6 +1,5 @@
 "use client";
 import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 CalendarClockUsersZapCheckCircleArrowRightX
 
 interface DemoFormData {
@@ -83,31 +82,22 @@ export default function InteractiveDemoRequest() {
   return (
     <>
       {/* Floating Demo Button */}
-      <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 2type: "spring"stiffness: 200 }}
+      <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center z-50"
       >
         <Calendar className="w-5 h-5 mr-2" />
         Request Demo
-      </motion.button>
+      </button>
 
       {/* Modal */}
-      <AnimatePresence>
+      <div>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <motion.div
-              initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8opacity: 0 }}
+            <div
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
@@ -149,9 +139,7 @@ export default function InteractiveDemoRequest() {
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[60vh]">
                 {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: 1scale: 1 }}
+                  <div
                     className="text-center py-12"
                   >
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -167,17 +155,13 @@ export default function InteractiveDemoRequest() {
                     >
                       Close
                     </button>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit}>
-                    <AnimatePresence mode="wait">
                       {/* Step 1: Personal Information */}
                       {currentStep === 1 && (
-                        <motion.div
+                        <div
                           key="step1"
-                          initial={{ opacity: 0x: 50 }}
-                          animate={{ opacity: 1x: 0 }}
-                          exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
                           <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
@@ -230,16 +214,13 @@ export default function InteractiveDemoRequest() {
                               />
                             </div>
                           </div>
-                        </motion.div>
+                        </div>
                       )}
 
                       {/* Step 2: Business Details */}
                       {currentStep === 2 && (
-                        <motion.div
+                        <div
                           key="step2"
-                          initial={{ opacity: 0x: 50 }}
-                          animate={{ opacity: 1x: 0 }}
-                          exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
                           <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Details</h3>
@@ -306,16 +287,13 @@ export default function InteractiveDemoRequest() {
                               ))}
                             </div>
                           </div>
-                        </motion.div>
+                        </div>
                       )}
 
                       {/* Step 3: Schedule */}
                       {currentStep === 3 && (
-                        <motion.div
+                        <div
                           key="step3"
-                          initial={{ opacity: 0x: 50 }}
-                          animate={{ opacity: 1x: 0 }}
-                          exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
                           <h3 className="text-xl font-semibold text-gray-900 mb-4">Schedule Your Demo</h3>
@@ -358,9 +336,9 @@ export default function InteractiveDemoRequest() {
                               placeholder="Tell us about your specific needs or questions..."
                             />
                           </div>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
+                    </div>
                   </form>
                 )}
               </div>
@@ -398,10 +376,10 @@ export default function InteractiveDemoRequest() {
                   )}
                 </div>
               )}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </>
   );
 }

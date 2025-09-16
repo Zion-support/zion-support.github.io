@@ -1,4 +1,3 @@
-import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -27,7 +26,6 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
@@ -35,8 +33,6 @@ import {
   Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
 // Import all the new 2025 service data
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
@@ -344,23 +340,17 @@ export default function ServicesPage() {
           {/* Main Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center mb-20"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+              <div
                 className="mb-6"
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                   {allServices.length}+ Revolutionary Services Available
                 </div>
-              </motion.div>
+              </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -373,10 +363,7 @@ export default function ServicesPage() {
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+              <div
                 className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
               >
                 <div className="flex items-center">
@@ -395,14 +382,11 @@ export default function ServicesPage() {
                   <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
                   Micro SAAS
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Enhanced Search and Filters */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <div
               className="mb-12"
             >
               <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
@@ -519,10 +503,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Enhanced Category Overview */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            <div
               className="mb-20"
             >
               <div className="text-center mb-16">
@@ -540,11 +521,8 @@ export default function ServicesPage() {
                 {categories.map((category, index) => {
                   const stats = getCategoryStats(category.id);
                   return (
-                    <motion.div
+                    <div
                       key={category.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
                       onClick={() => setSelectedCategory(category.id)}
                     >
@@ -577,10 +555,7 @@ export default function ServicesPage() {
                       </div>
 
             {/* Services Grid/List */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+            <div
             >
               <h2 className="text-3xl font-bold text-center mb-12">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -591,11 +566,8 @@ export default function ServicesPage() {
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {sortedServices.map((service, index) => (
-                    <motion.div
+                    <div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
                     >
                       {/* Animated Background */}
@@ -621,13 +593,11 @@ export default function ServicesPage() {
                         <div className="text-4xl mb-4">{service.icon}</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <div
                 className="text-center py-20"
               >
                 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -642,7 +612,7 @@ export default function ServicesPage() {
                 >
                   Clear Filters
                 </button>
-              </motion.div>
+              </div>
             )}
           </div>
         </section>
@@ -695,17 +665,14 @@ export default function ServicesPage() {
                           <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </a>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               ) : (
                 <div className="space-y-4">
                   {sortedServices.map((service, index) => (
-                    <motion.div
+                    <div
                       key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
                       className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -759,17 +726,14 @@ export default function ServicesPage() {
                           </a>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
 
             {/* Enhanced CTA Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+            <div
               className="text-center mt-24"
             >
               <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
@@ -778,17 +742,14 @@ export default function ServicesPage() {
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
                 
                 <div className="relative z-10">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, delay: 1.4 }}
+                  <div
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                       Transform Your Business Today
                     </div>
-                  </motion.div>
+                  </div>
                   
                   <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
                     <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -801,22 +762,18 @@ export default function ServicesPage() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <motion.a
+                    <a
                       href="/contact"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
                     >
                       🚀 Get Started Today
-                    </motion.a>
-                    <motion.a
+                    </a>
+                    <a
                       href="/pricing"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
                       💰 View Pricing
-                    </motion.a>
+                    </a>
                   </div>
                   
                   <div className="mt-10 text-sm text-gray-400">
@@ -824,7 +781,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

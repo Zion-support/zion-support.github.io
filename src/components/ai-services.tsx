@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -86,17 +85,14 @@ export default function AIServices() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <div
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -105,15 +101,12 @@ export default function AIServices() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business and accelerate innovation
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
                 >
                   <div className="mb-6">
@@ -133,14 +126,13 @@ export default function AIServices() {
                       </li>
                     ))}
                   </ul>
-                  <motion.a
+                  <a
                     href={service.href}
-                    whileHover={{ x: 5 }}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </motion.a>
-                </motion.div>
+                  </a>
+                </div>
               ))}
             </div>
           </div>
@@ -149,10 +141,7 @@ export default function AIServices() {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            <div
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?
@@ -161,22 +150,18 @@ export default function AIServices() {
                 Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
                 >
                   Schedule Consultation
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </button>
+                <button
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Case Studies
-                </motion.button>
+                </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

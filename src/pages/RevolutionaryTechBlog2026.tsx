@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 import React from 'react';
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -238,10 +237,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -253,7 +249,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -268,11 +264,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.filter(post => post.featured).map((post) => (
-              <motion.div
+              <div
                 key={post.id}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -291,7 +285,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                   <span className="text-sm text-gray-400">By {post.author}</span>
                   <span className="text-sm text-gray-400">{post.date}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -305,11 +299,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <motion.div
+              <div
                 key={post.id}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -335,17 +327,15 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Newsletter Signup */}
         <div className="container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
@@ -363,7 +353,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
               </button>
             </div>
-          </motion.div>
+          </div>
 <<<<<<< HEAD
         </div>
       </div>

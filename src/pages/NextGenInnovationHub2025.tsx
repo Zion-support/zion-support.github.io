@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -67,10 +66,7 @@ const NextGenInnovationHub2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -91,16 +87,14 @@ const NextGenInnovationHub2025: React.FC = () => {
                 Join Community
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Innovation Tabs */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -109,7 +103,7 @@ const NextGenInnovationHub2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our cutting-edge innovation categories and discover the technologies shaping tomorrow
           </p>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -130,11 +124,8 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
 
         {/* Active Tab Content */}
-        <motion.div
+        <div
           key={activeTab}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -148,16 +139,13 @@ const NextGenInnovationHub2025: React.FC = () => {
               </p>
               <div className="space-y-4">
                 {innovations[activeTab as keyof typeof innovations].features.map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
                     <span className="text-gray-300">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -178,16 +166,14 @@ const NextGenInnovationHub2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Innovation Stats */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -196,59 +182,49 @@ const NextGenInnovationHub2025: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how our innovations are transforming industries and creating new possibilities
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+            <div
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="text-5xl font-bold text-blue-400 mb-2">150+</div>
               <div className="text-xl text-gray-300 mb-2">Active Projects</div>
               <div className="text-sm text-gray-400">In development</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+            </div>
+            <div
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="text-5xl font-bold text-purple-400 mb-2">50K+</div>
               <div className="text-xl text-gray-300 mb-2">Innovators</div>
               <div className="text-sm text-gray-400">Global community</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+            </div>
+            <div
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="text-5xl font-bold text-green-400 mb-2">$500M+</div>
               <div className="text-xl text-gray-300 mb-2">Investment</div>
               <div className="text-sm text-gray-400">In R&D</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+            </div>
+            <div
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="text-5xl font-bold text-pink-400 mb-2">95%</div>
               <div className="text-xl text-gray-300 mb-2">Success Rate</div>
               <div className="text-sm text-gray-400">Project completion</div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Innovation Showcase */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -257,15 +233,13 @@ const NextGenInnovationHub2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our most groundbreaking innovations that are reshaping the future
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(innovations).map(([key, innovation], index) => (
-            <motion.div
+            <div
               key={key}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -288,17 +262,15 @@ const NextGenInnovationHub2025: React.FC = () => {
               <button className={`w-full bg-gradient-to-r ${innovation.color} px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
                 Explore Innovation
               </button>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -319,7 +291,7 @@ const NextGenInnovationHub2025: React.FC = () => {
               Start Project
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

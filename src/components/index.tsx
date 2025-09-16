@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
@@ -135,10 +134,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -147,12 +143,9 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Leading-edge technology solutions and autonomous innovation platform
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -174,24 +167,18 @@ export default function HomePage() {
                 Schedule Consultation
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          <div
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />
-          <motion.div
-            animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          <div
             className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60"
           />
-          <motion.div
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          <div
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
           />
         </div>
@@ -200,10 +187,8 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -213,15 +198,13 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Discover our cutting-edge services that are transforming industries and driving the future of technology
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
@@ -237,7 +220,7 @@ export default function HomePage() {
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -248,11 +231,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -261,7 +242,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -278,10 +259,8 @@ export default function HomePage() {
       {/* Latest Updates Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -291,7 +270,7 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Stay updated with our latest innovations and autonomous system developments
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
@@ -325,10 +304,8 @@ export default function HomePage() {
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -338,7 +315,7 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Let's discuss your project and explore how our cutting-edge technology solutions can transform your business
             </p>
-          </motion.div>
+          </div>
 
           <EnhancedContactForm />
         </div>

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   TrendingUp
@@ -141,10 +140,7 @@ const EnterpriseSuccessStories = () => {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -160,13 +156,10 @@ const EnterpriseSuccessStories = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how leading enterprises have transformed their operations and achieved unprecedented growth with our AI solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Key Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="grid md:grid-cols-4 gap-6 mb-16"
         >
           {keyMetrics.map((metricindex) => (
@@ -182,13 +175,10 @@ const EnterpriseSuccessStories = () => {
               <div className="text-sm text-gray-400">{metric.description}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {successStories.map((storyindex) => (
@@ -204,14 +194,11 @@ const EnterpriseSuccessStories = () => {
               {story.company}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Active Story Display */}
-        <motion.div
+        <div
           key={activeStory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
         >
           {/* Story Header */}
@@ -277,13 +264,10 @@ const EnterpriseSuccessStories = () => {
               <p className="font-semibold text-gray-900">— {successStories[activeStory].author}</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Benefits Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -297,13 +281,10 @@ const EnterpriseSuccessStories = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -323,7 +304,7 @@ const EnterpriseSuccessStories = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

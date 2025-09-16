@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 CheckStarZapCrownInfinity
 
 interface PricingTier {
@@ -90,11 +89,9 @@ export default function AdvancedPricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tierindex) => (
-            <motion.div
+            <div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative rounded-xl p-8 ${
                 tier.popular
                   ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-2 border-purple-500/50'
@@ -141,19 +138,17 @@ export default function AdvancedPricing() {
                 ))}
               </ul>
 
-              <motion.a
+              <a
                 href={tier.ctaLink}
                 className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   tier.popular
                     ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
                     : 'bg-white/10 text-white border border-white/30 hover:bg-white/20'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {tier.ctaText}
-              </motion.a>
-            </motion.div>
+              </a>
+            </div>
           ))}
         </div>
 

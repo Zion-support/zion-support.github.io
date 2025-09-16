@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -140,14 +139,10 @@ const AI2026UltimateServicesShowcase = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <motion.div
+      <div
         className="max-w-7xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
       >
         {/* Header */}
-        <motion.div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Star className="w-4 h-4" />
             AI 2026 Ultimate Services
@@ -161,19 +156,16 @@ const AI2026UltimateServicesShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of artificial intelligence with our cutting-edge services that are transforming industries and revolutionizing human potential.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
-        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
-            <motion.div
+            <div
               key={service.id}
               className={`relative group cursor-pointer ${
                 activeService === index ? 'scale-105' : 'hover:scale-102'
               } transition-all duration-300`}
               onClick={() => setActiveService(index)}
-              whileHover={{ y: -10 }}
-              whileTap={{ scale: 0.95 }}
             >
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full">
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -205,27 +197,18 @@ const AI2026UltimateServicesShowcase = () => {
                 </div>
 
                 {activeService === index && (
-                  <motion.div
+                  <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
-                    layoutId="activeService"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
                   />
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Active Service Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeService}
-            variants={itemVariants}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
             className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -260,24 +243,20 @@ const AI2026UltimateServicesShowcase = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
                 {services[activeService].features.map((featureindex) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0x: 50 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
                   >
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300 text-lg">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div variants={itemVariants} className="text-center mt-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -292,8 +271,8 @@ const AI2026UltimateServicesShowcase = () => {
               Schedule Demo
             </button>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

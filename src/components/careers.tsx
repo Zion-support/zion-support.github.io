@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
@@ -147,10 +145,7 @@ export default function Careers() {
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -160,13 +155,10 @@ export default function Careers() {
             Be part of a team that's revolutionizing technology through AI, quantum computing, 
             and space technology. Help us build the future.
           </p>
-        </motion.div>
+        </div>
 
         {/* Company Culture */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div 
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
@@ -181,13 +173,10 @@ export default function Careers() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Benefits */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div 
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
@@ -201,13 +190,10 @@ export default function Careers() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Job Openings */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+        <div 
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
@@ -232,10 +218,8 @@ export default function Careers() {
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
-              <motion.div
+              <div
                 key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -278,7 +262,7 @@ export default function Careers() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -292,13 +276,10 @@ export default function Careers() {
               </p>
             </div>
           )}
-        </motion.div>
+        </div>
 
         {/* General Application */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+        <div 
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
@@ -323,7 +304,7 @@ export default function Careers() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </Layout>
   );

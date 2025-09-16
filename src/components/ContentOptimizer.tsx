@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 interface ContentOptimizerProps {
   children: React.ReactNode;
@@ -41,13 +40,10 @@ const ContentOptimizer: React.FC<ContentOptimizerProps> = ({
   return (
     <div id="content-optimizer">
       {isVisible ? (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
         >
           {children}
-        </motion.div>
+        </div>
       ) : (
         <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
       )}

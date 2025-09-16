@@ -1,15 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AdvancedAnalyticsInsights2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-lg font-bold mb-6 animate-pulse">
@@ -22,14 +18,11 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             Unlock the power of advanced analytics with AI-driven insights, predictive modeling, 
             and real-time intelligence that drives strategic business decisions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Analytics Capabilities */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-200"
           >
             <div className="text-6xl mb-4 text-center">🔮</div>
@@ -44,12 +37,9 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Risk assessment models</li>
               <li>• Demand planning optimization</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -64,12 +54,9 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Instant performance metrics</li>
               <li>• Dynamic alert systems</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -84,12 +71,9 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Natural language queries</li>
               <li>• Intelligent data exploration</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
             <div className="text-6xl mb-4 text-center">📈</div>
@@ -104,12 +88,9 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Augmented reality analytics</li>
               <li>• Immersive data experiences</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
             <div className="text-6xl mb-4 text-center">🔍</div>
@@ -124,12 +105,9 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Cross-platform correlation</li>
               <li>• Historical trend analysis</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+          <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
             <div className="text-6xl mb-4 text-center">🎯</div>
@@ -144,14 +122,11 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Strategic action planning</li>
               <li>• Risk mitigation strategies</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Industry Applications */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+        <div
           className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-3xl p-12 mb-16 text-white"
         >
           <div className="text-center mb-12">
@@ -192,13 +167,10 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+        <div
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
@@ -225,13 +197,10 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               in return on investment within the first year.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Technology Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
+        <div
           className="bg-white rounded-3xl p-12 mb-16 shadow-xl"
         >
           <div className="text-center mb-12">
@@ -272,13 +241,10 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.0 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12 text-white">
@@ -296,7 +262,7 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -73,13 +72,9 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <div
           className="relative overflow-hidden"
         >
           {/* Background with gradient */}
@@ -93,19 +88,17 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(8)].map((_i) => (
-              <motion.div
+              <div
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                animate={{
                   y: [0-30],
                   opacity: [0.30.80.3],
                   scale: [1.21],
                 }}
-                transition={{
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
                   delay: Math.random() * 2,
@@ -118,11 +111,8 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left side - Content */}
               <div className="flex-1 pr-8">
-                <motion.div
+                <div
                   key={currentSlide}
-                  initial={{ opacity: 0x: -20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.5 }}
                   className="flex items-start space-x-4"
                 >
                   {/* Icon */}
@@ -184,56 +174,46 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       </a>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Right side - Visual elements */}
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative w-64 h-64">
                   {/* Rotating elements */}
-                  <motion.div
+                  <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20repeat: Infinityease: "linear" }}
                   />
                   
-                  <motion.div
+                  <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 15repeat: Infinityease: "linear" }}
                   />
                   
-                  <motion.div
+                  <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 10repeat: Infinityease: "linear" }}
                   />
 
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
+                    <div
                       className={`w-20 h-20 rounded-full bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center shadow-2xl`}
-                      animate={{ scale: [1.1] }}
-                      transition={{ duration: 2repeat: Infinity }}
                     >
                       <currentSlideData.icon className="w-10 h-10 text-white" />
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Floating dots */}
                   {[...Array(6)].map((_i) => (
-                    <motion.div
+                    <div
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full"
                       style={{
                         left: `${20 + (i * 15)}%`,
                         top: `${20 + (i * 10)}%`,
                       }}
-                      animate={{
                         y: [0-10],
                         opacity: [0.610.6],
                       }}
-                      transition={{
                         duration: 2 + i * 0.5,
                         repeat: Infinity,
                         delay: i * 0.3,
@@ -267,9 +247,9 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

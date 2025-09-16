@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const FutureTechInnovations2026: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const FutureTechInnovations2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -23,16 +19,13 @@ const FutureTechInnovations2026: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Explore the cutting-edge technologies that are reshaping our world and creating unprecedented opportunities for innovation and growth.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {/* AI-Powered Autonomous Systems */}
@@ -154,13 +147,10 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Innovation Impact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
           className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
         >
           <div className="text-center mb-12">
@@ -188,13 +178,10 @@ const FutureTechInnovations2026: React.FC = () => {
               <div className="text-gray-300">Accuracy Rate</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Future Applications */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="text-center"
         >
           <h2 className="text-4xl font-bold text-white mb-8">🌟 Future Applications</h2>
@@ -224,13 +211,10 @@ const FutureTechInnovations2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Quantum cryptography, AI trading, and decentralized finance</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <div
           className="text-center mt-16"
         >
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Embrace the Future?</h2>
@@ -246,7 +230,7 @@ const FutureTechInnovations2026: React.FC = () => {
               Explore Our Solutions
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

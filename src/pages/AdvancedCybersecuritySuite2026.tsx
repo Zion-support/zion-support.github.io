@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedCybersecuritySuite2026: React.FC = () => {
@@ -143,10 +142,7 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-gray-600/20 backdrop-blur-sm"></div>
           <div className="container mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center mb-16"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full text-white text-sm font-bold mb-6">
@@ -167,24 +163,22 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                   View Demo
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Real-time Security Dashboard */}
         <section className="py-20 px-4 bg-gradient-to-br from-gray-900/50 to-black/50">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-red-300">🛡️ Real-time Security Dashboard</h2>
               <p className="text-xl text-red-100 max-w-3xl mx-auto">
                 Monitor and protect your digital infrastructure with live threat detection
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-4 gap-8 mb-16">
               <div className="bg-gradient-to-br from-red-600/30 to-orange-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30">
@@ -233,25 +227,21 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
         {/* Threat Protection */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-red-300">🎯 Threat Protection</h2>
               <p className="text-xl text-red-100 max-w-3xl mx-auto">
                 Advanced protection against the most sophisticated cyber threats
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {Object.entries(threatTypes).map(([key, threat], index) => (
-                <motion.div
+                <div
                   key={key}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-red-600/30 to-gray-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
                     activeThreat === key ? 'ring-2 ring-red-400' : ''
                   }`}
@@ -271,18 +261,13 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                       {threat.severity}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Threat Details */}
-            <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={activeThreat}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
                 className="bg-gradient-to-r from-red-600/20 to-gray-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30"
               >
                 <div className="flex items-center mb-6">
@@ -321,33 +306,29 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Security Features */}
         <section className="py-20 px-4 bg-gradient-to-br from-gray-900/50 to-black/50">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-gray-300">🔧 Security Features</h2>
               <p className="text-xl text-gray-100 max-w-3xl mx-auto">
                 Comprehensive security solutions for complete protection
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {securityFeatures.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30"
                 >
                   <div className="text-5xl mb-6 text-center">{feature.icon}</div>
@@ -363,7 +344,7 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                     <div className="text-sm text-gray-200 mb-2">Effectiveness:</div>
                     <div className="text-sm font-bold text-gray-300">{feature.effectiveness}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -372,25 +353,21 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
         {/* Compliance Standards */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-red-300">📋 Compliance Standards</h2>
               <p className="text-xl text-red-100 max-w-3xl mx-auto">
                 Meeting the highest industry standards and regulatory requirements
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceStandards.map((standard, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-red-600/30 to-gray-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30"
                 >
                   <div className="text-center">
@@ -402,7 +379,7 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                       {standard.status}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -411,10 +388,8 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600">
           <div className="container mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">Secure Your Digital Future Today</h2>
               <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -428,7 +403,7 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
                   Schedule Security Audit
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

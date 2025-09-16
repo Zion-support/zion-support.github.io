@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -232,10 +231,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -249,13 +246,11 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             Discover how leading companies across industries achieved unprecedented success 
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
-        </motion.div>
+        </div>
 
         {/* Featured Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Featured Success Stories</h3>
@@ -265,12 +260,9 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <motion.div
+                <div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -5scale: 1.02 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -367,17 +359,15 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* All Stories Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">All Success Stories</h3>
@@ -387,12 +377,9 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <motion.div
+                <div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -3scale: 1.01 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -450,17 +437,15 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       Read Story
                     </button>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
@@ -482,7 +467,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

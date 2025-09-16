@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Star, 
   ArrowRight, 
@@ -46,10 +45,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -65,15 +61,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             Experience the most advanced technological breakthroughs that are reshaping 
             reality itself. From conscious AI to quantum supremacy, discover the future today.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {newContent.map((content, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group border border-white/20"
             >
               <div className="flex items-center space-x-4 mb-6">
@@ -94,14 +87,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
                 <span>Explore Now</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="text-center mt-12"
         >
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6">
@@ -130,7 +120,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               ⚛️ Enter Quantum Reality →
             </a>
           </div>
-        </motion.div>
+        </div>
 =======
 import React, { useState, useEffect } from 'react';
 

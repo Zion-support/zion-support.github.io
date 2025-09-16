@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -134,10 +133,7 @@ const UltimateContentRevolution2026 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
@@ -151,13 +147,10 @@ const UltimateContentRevolution2026 = () => {
             Experience the most advanced AIquantum computingand automation technologies 
             that are reshaping the future of business and technology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -178,13 +171,8 @@ const UltimateContentRevolution2026 = () => {
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="grid lg:grid-cols-2 gap-8">
@@ -219,15 +207,12 @@ const UltimateContentRevolution2026 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          </div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-12 text-white">
@@ -235,11 +220,8 @@ const UltimateContentRevolution2026 = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: 0.1 * index }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -259,16 +241,13 @@ const UltimateContentRevolution2026 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -287,7 +266,7 @@ const UltimateContentRevolution2026 = () => {
               Get Started
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

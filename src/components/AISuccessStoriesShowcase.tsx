@@ -3,7 +3,6 @@
 
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -111,41 +110,33 @@ const AISuccessStoriesShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-4"
           >
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
-          </motion.div>
+          </div>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+          <divh2
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
           >
             Real Results from
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> AI Implementation</span>
-          </motion.h2>
+          </divh2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          <divp
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Discover how leading companies achieved remarkable results with our AI solutions. Real storiesreal impactreal success.
-          </motion.p>
+          </divp>
         </div>
 
         {/* Metrics Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {metrics.map((metricindex) => {
@@ -160,7 +151,7 @@ const AISuccessStoriesShowcase = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -184,13 +175,8 @@ const AISuccessStoriesShowcase = () => {
         </div>
 
         {/* Active Story Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeStory}
-            initial={{ opacity: 0x: 20 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -20 }}
-            transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl p-8 md:p-12 shadow-xl"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -253,14 +239,12 @@ const AISuccessStoriesShowcase = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-12 text-white">
@@ -287,7 +271,7 @@ const AISuccessStoriesShowcase = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

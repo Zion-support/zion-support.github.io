@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -107,13 +106,8 @@ const EnhancedContentBanner: React.FC = () => {
 
           {/* Carousel */}
           <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30"
               >
                 <div className="flex items-center justify-between">
@@ -134,8 +128,8 @@ const EnhancedContentBanner: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            </div>
 
             {/* Navigation Controls */}
             <button
@@ -170,11 +164,9 @@ const EnhancedContentBanner: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {featuredContent.map((content, index) => (
-          <motion.a
+          <a
             key={content.id}
             href={content.link}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center relative overflow-hidden group`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -186,7 +178,7 @@ const EnhancedContentBanner: React.FC = () => {
                 {content.badge}
               </span>
             </div>
-          </motion.a>
+          </a>
         ))}
       </div>
 

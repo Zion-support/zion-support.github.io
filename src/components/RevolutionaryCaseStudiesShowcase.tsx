@@ -1,6 +1,5 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 ArrowRightTrendingUpUsersDollarSignZapAwardTarget
 
 const caseStudies = [
@@ -71,10 +70,8 @@ export default function RevolutionaryCaseStudiesShowcase() {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -91,16 +88,14 @@ export default function RevolutionaryCaseStudiesShowcase() {
             Discover how leading companies are achieving extraordinary results with our AI solutions. 
             These 'aren', 't just numbers—'they', 're transformations that matter.
           </p>
-        </motion.div>
+        </div>
 
         {/* Featured Case Studies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {caseStudies.filter(study => study.featured).map((studyindex) => (
-            <motion.div
+            <div
               key={study.id}
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
             >
@@ -138,24 +133,20 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Additional Case Studies */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-6 mb-12"
         >
           {caseStudies.filter(study => !study.featured).map((studyindex) => (
-            <motion.div
+            <div
               key={study.id}
-              initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
             >
@@ -192,15 +183,13 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   <ArrowRight className="w-3 h-3 ml-1" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
         >
@@ -229,7 +218,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
               View All Case Studies
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

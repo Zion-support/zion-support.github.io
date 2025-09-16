@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryTechBanner2034: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,12 +48,8 @@ const RevolutionaryTechBanner2034: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Main Banner */}
-        <motion.div
+        <div
           key={currentSlide}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center space-x-4 mb-6">
@@ -97,7 +92,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               Learn More
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mb-8">
@@ -113,16 +108,13 @@ const RevolutionaryTechBanner2034: React.FC = () => {
         </div>
 
         {/* Quick Access Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="grid md:grid-cols-3 gap-6"
         >
           {bannerContent.map((content, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{ scale: 1.05 }}
               className={`bg-gradient-to-r ${content.color} rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 cursor-pointer`}
               onClick={() => setCurrentSlide(index)}
             >
@@ -130,15 +122,13 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">{content.title}</h3>
               <p className="text-sm opacity-90 mb-4">{content.subtitle}</p>
               <div className="text-xs opacity-75">Click to explore</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 text-center"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -159,7 +149,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               <div className="text-sm text-gray-300">Revolutionary</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
