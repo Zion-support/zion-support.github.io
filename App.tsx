@@ -164,12 +164,17 @@ import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
-import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import UltimateTechBanner2039 from './src/components/UltimateTechBanner2039';
 import RevolutionaryTechBanner2040 from './src/components/RevolutionaryTechBanner2040';
 import NextGenInnovationBanner2041 from './src/components/NextGenInnovationBanner2041';
 import EnhancedContentCarousel2039 from './src/components/EnhancedContentCarousel2039';
 import InteractiveTechDemo2039 from './src/components/InteractiveTechDemo2039';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -196,6 +201,9 @@ export default function App(): JSX.Element {
                 <RevolutionaryContentBanner />
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 - Enhanced */}
                 <RevolutionaryContentBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
@@ -989,6 +997,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />
           <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
