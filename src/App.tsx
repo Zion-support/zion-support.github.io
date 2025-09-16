@@ -48,6 +48,8 @@ import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryConte
 import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
+import RevolutionaryContentPromotionBanner2040 from './components/RevolutionaryContentPromotionBanner2040';
+import NewContentShowcaseBanner2025 from './components/NewContentShowcaseBanner2025';
 import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
 import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
@@ -106,6 +108,8 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import QuantumNeuralRevolution2037 from './pages/QuantumNeuralRevolution2037';
+import ConsciousnessTranscendence2040 from './pages/ConsciousnessTranscendence2040';
 
 const App: React.FC = () => {
   return (
@@ -117,8 +121,16 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={
             <div className="space-y-0">
+              {/* Fixed Top Promotion Banner */}
+              <RevolutionaryContentPromotionBanner2040 />
+              
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* New Revolutionary Content Showcase Banner 2025 */}
+              <div className="mb-12">
+                <NewContentShowcaseBanner2025 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -434,6 +446,10 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2037-2040 */}
+          <Route path="/quantum-neural-revolution-2037" element={<QuantumNeuralRevolution2037 />} />
+          <Route path="/consciousness-transcendence-2040" element={<ConsciousnessTranscendence2040 />} />
         </Routes>
         
         <Footer />
