@@ -1,10 +1,8 @@
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
-<<<<<<< HEAD
       name: "James Thompson",
       title: "CTO",
       company: "Global Manufacturing Co",
@@ -86,7 +84,6 @@
       number: "15+",
       label: "Years Experience",
       icon: "🎯"
-<<<<<<< HEAD
       title: "Fortune 500 AI Transformation",
       company: "GlobalTech Corp",
       challenge: "Transform legacy systems and achieve 400% efficiency improvement",
@@ -131,7 +128,6 @@
   ];
 
   if (!isVisible) return null;
-<<<<<<< HEAD
               </motion.div>
             </AnimatePresence>
             
@@ -148,7 +144,6 @@
                   }`}
                 />
               ))}
-<<<<<<< HEAD
         {/* Case Studies */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Success Stories</h3>

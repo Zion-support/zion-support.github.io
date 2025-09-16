@@ -1,9 +1,22 @@
-export default function MarketplaceEnrichmentPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const marketplace-enrichment: React.FC = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold text-white">Marketplace Enrichment</h1>
-      <p className="text-white/80 mt-2">AI-generated summaries, tags, and tiers are stored in <code className="text-white/90">data/services/enriched.json</code>.</p>
-      <p className="text-white/70 mt-2">This runs on a 6-hour schedule and auto-PRs updates.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>marketplace-enrichment | Zion Tech Group</title>
+        <meta name="description" content="marketplace-enrichment - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">marketplace-enrichment</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default marketplace-enrichment;

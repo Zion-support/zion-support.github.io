@@ -1,4 +1,3 @@
-<<<<<<< HEAD
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Revolutionary AI Consciousness 2037
           </h2>

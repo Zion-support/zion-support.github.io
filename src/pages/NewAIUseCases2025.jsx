@@ -1,7 +1,3 @@
-import React from "react";
-
-const NewAIUseCases2025 = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -49,10 +45,3 @@ const NewAIUseCases2025 = () => {
               <li>• Supply chain optimization</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default NewAIUseCases2025;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 
 const posts = [
@@ -28,7 +24,6 @@ const posts = [
     title: 'New research on quantum neural search',
     date: '2025-09-02',
     summary: 'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.',
-<<<<<<< HEAD
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">News & Updates</h1>
@@ -44,6 +39,3 @@ const posts = [
                 <p className="mt-2 text-sm text-gray-300 line-clamp-3">{post.summary}</p>
                 <span className="mt-4 inline-block text-sm font-semibold text-blue-400 group-hover:text-blue-300">Read more →</span>
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -7,8 +6,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, 2025, revolutionary tech, Zion Tech Group",
   canonical,
   ogImage = "/og-image.jpg"
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
@@ -27,7 +24,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",

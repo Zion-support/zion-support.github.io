@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <Helmet>
-        <title>Space Tech Innovation 2026 | Zion Tech Group</title>
-        <meta name="description" content="Discover revolutionary space technology innovations that will enable human colonization of Mars and beyond" />
-        <meta name="keywords" content="space technology, Mars colonization, space innovation, space exploration 2026" />
-      </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -20,7 +10,6 @@ import { Helmet } from 'react-helmet-async';
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Revolutionary space technology that will make human colonization of Mars and deep space exploration a reality.
-<<<<<<< HEAD
         {/* Technology Specifications */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8">

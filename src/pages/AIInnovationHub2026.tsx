@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -22,7 +21,6 @@
                 🧠 AI Research
               </button>
             </div>
-<<<<<<< HEAD
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -142,7 +140,6 @@
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
               <div className="text-lg opacity-80">AI Models Deployed</div>
-<<<<<<< HEAD
         </div>
 
         {/* Call to Action */}
@@ -150,5 +147,4 @@
           <h2 className="text-4xl font-bold mb-6">Join the AI Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Be part of the future of AI innovation. Access cutting-edge research, tools, and community.
-<<<<<<< HEAD
         </div>

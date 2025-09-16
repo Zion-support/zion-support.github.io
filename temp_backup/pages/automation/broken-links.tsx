@@ -1,9 +1,22 @@
-export default function BrokenLinksPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const broken-links: React.FC = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>
-      <p className="text-white/80 mt-2">External link status report is written to <code className="text-white/90">data/reports/broken-links.json</code>.</p>
-      <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>broken-links | Zion Tech Group</title>
+        <meta name="description" content="broken-links - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">broken-links</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default broken-links;

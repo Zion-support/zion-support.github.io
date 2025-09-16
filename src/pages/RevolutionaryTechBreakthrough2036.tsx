@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -19,7 +18,6 @@
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Watch Demo
-<<<<<<< HEAD
         {/* Revolutionary Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2036
           </h1>
@@ -74,7 +69,6 @@
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -176,4 +170,3 @@
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Visit Innovation Hub
-<<<<<<< HEAD

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { NextPage } from 'next';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-
 const BlogIndex: NextPage = () => {
   const blogPosts = [
     {
@@ -59,11 +50,6 @@ const BlogIndex: NextPage = () => {
       tags: ["Machine Learning", "Enterprise", "Software Development"]
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Featured Post */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8">Featured Article</h2>
@@ -103,10 +89,5 @@ const BlogIndex: NextPage = () => {
                   </Link>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };

@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // @ts-nocheck
-<<<<<<< HEAD
       "Cross-chain bridges",
     ],
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getColorClasses = (color: Feature["color"]) => {
     const colorMap = {
       blue: "from-blue-500 to-blue-600",
@@ -24,7 +14,6 @@
     return colorMap[color] || "from-blue-500 to-blue-600";
   };
 
-<<<<<<< HEAD
               >
                 <div className="flex items-start space-x-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
@@ -56,5 +45,3 @@
             ))}
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD

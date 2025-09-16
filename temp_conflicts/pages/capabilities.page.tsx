@@ -1,20 +1,22 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const CAPABILITIES = [
-  'Full‑stack Web','Mobile (iOS/Android)','AI/ML','Cloud & DevOps','Data Engineering','Blockchain','IoT','Security'
-];
-
-export default function CapabilitiesPage() {
+const capabilities.page: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Capabilities</h1>
-      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        {CAPABILITIES.map((c) => (
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
-            {c}
-          </div>
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>capabilities.page | Zion Tech Group</title>
+        <meta name="description" content="capabilities.page - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">capabilities.page</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </EnhancedLayout>
+    </div>
   );
-}
+};
+
+export default capabilities.page;

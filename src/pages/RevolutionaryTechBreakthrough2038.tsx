@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -28,7 +27,6 @@
               </button>
             </div>
           </motion.div>
-<<<<<<< HEAD
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">

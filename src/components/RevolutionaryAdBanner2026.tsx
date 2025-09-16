@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="relative mb-8">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${adContent[currentAd].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden animate-pulse`}>
@@ -13,8 +8,5 @@ import { motion } from 'framer-motion';
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
             <h3 className="text-3xl font-bold">{adContent[currentAd].title}</h3>
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
-<<<<<<< HEAD
         </div>
-<<<<<<< HEAD
     </motion.div>
-<<<<<<< HEAD

@@ -2,15 +2,9 @@ import React from 'react';
 
 const EnhancedHeroSection: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Welcome to Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Leading the future of technology with AI, blockchain, and innovative solutions
-        </p>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedHeroSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

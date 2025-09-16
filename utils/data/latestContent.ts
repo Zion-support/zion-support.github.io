@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -8,7 +6,6 @@
     date: "2025-09-15",
   },
   {
-<<<<<<< HEAD
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
@@ -21,10 +18,6 @@
     title: "AI 2026: Enterprise RAG Observability",
     summary: "Traces, evals, latency SLOs, and safety telemetry for production RAG.",
     href: "/blog/ai-2026-enterprise-rag-observability",
-    tag: "Observability",
-    date: "2025-09-15",
-  },
-  {
     id: "realtime-evals-at-scale-2026",
     title: "AI 2026: Real-Time Evals at Scale",
     summary: "From offline suites to live gates powering progressive delivery.",
@@ -101,4 +94,3 @@
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
-<<<<<<< HEAD

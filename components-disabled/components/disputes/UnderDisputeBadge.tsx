@@ -1,16 +1,12 @@
-import useSWR from 'swr';
+import React from 'react';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
-export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean; isLoading: boolean } {
-}
-
-export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
-  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
-  if (!hasActiveDispute) return null;
+const UnderDisputeBadge: React.FC = () => {
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
-      Under Dispute
-    </span>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UnderDisputeBadge</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default UnderDisputeBadge;

@@ -1,18 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ProductsListPage() {
+const ProductsList: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Products - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of technology products and services" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Our Products & Services</h1>
-        <p className="text-lg mb-4">Discover our cutting-edge technology solutions designed to transform your business.</p>
-        <div className="mt-4">
-            ← Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ProductsList | Zion Tech Group</title>
+        <meta name="description" content="ProductsList - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ProductsList</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
-}
+    </div>
+  );
+};
+
+export default ProductsList;

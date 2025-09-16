@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const NextGenInnovationHub2039: React.FC = () => {
   return (
@@ -74,7 +73,6 @@ const NextGenInnovationHub2039: React.FC = () => {
 
         {/* Featured Innovations */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-<<<<<<< HEAD
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -111,7 +109,6 @@ const NextGenInnovationHub2039: React.FC = () => {
                   <div className="w-32 bg-white/20 rounded-full h-2">
                     <div className="bg-teal-400 h-2 rounded-full" style={{width: '72%'}}></div>
                   </div>
-<<<<<<< HEAD
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -149,7 +146,6 @@ const NextGenInnovationHub2039: React.FC = () => {
                     <div className="bg-blue-400 h-2 rounded-full" style={{width: '45%'}}></div>
                   </div>
                 </div>
-<<<<<<< HEAD
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
@@ -170,20 +166,3 @@ const NextGenInnovationHub2039: React.FC = () => {
             <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>
             <div className="text-lg font-semibold mb-1">Researchers</div>
             <div className="text-sm opacity-75">Global innovation team</div>
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation hub in human history and help shape the future of consciousness and technology
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Join Innovation Hub →
-            </button>
-            <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-xl">
-              View All Innovations
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>

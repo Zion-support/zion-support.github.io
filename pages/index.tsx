@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -260,4 +256,3 @@ export default function Index() {
 		</>
 	)
 }
-<<<<<<< HEAD

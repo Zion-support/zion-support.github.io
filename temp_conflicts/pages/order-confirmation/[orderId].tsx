@@ -1,20 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const [orderId]: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Order Confirmation - Zion Tech Group</title>
-        <meta name="description" content="Order confirmation details" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Order Confirmation</h1>
-        {orderId && (
-          <p className="text-lg mb-4">Order ID: {orderId}</p>
-        )}
-        <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>
-        <div className="mt-4">
-            ← Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>[orderId] | Zion Tech Group</title>
+        <meta name="description" content="[orderId] - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">[orderId]</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
-}
+    </div>
+  );
+};
+
+export default [orderId];

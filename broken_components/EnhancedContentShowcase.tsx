@@ -1,4 +1,3 @@
-<<<<<<< HEAD:broken_components/EnhancedContentShowcase.tsx
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -30,4 +29,3 @@
             <a
               href={slide.link}
               className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
-<<<<<<< HEAD:broken_components/EnhancedContentShowcase.tsx

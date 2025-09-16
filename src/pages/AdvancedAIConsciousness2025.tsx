@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { 
   Brain, 
@@ -157,7 +156,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
                 Meet Our AI
               </button>
-<<<<<<< HEAD
       {/* Consciousness Features */}
       <div className="py-24">
         <div className="container mx-auto px-4">
@@ -197,7 +195,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                       <span className="text-lg">{capability}</span>
                     </div>
                   ))}
-<<<<<<< HEAD
       </div>
 
       {/* Consciousness Levels */}

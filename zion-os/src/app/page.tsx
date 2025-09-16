@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-nocheck
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
-<<<<<<< HEAD
   ],
-<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-<<<<<<< HEAD
-<<<<<<< HEAD
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -32,24 +17,11 @@ import Link from 'next/link';
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
               </Link>
-<<<<<<< HEAD
               <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
                 ✅ New: AI Safety & Governance 2025
               </a>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -58,40 +30,16 @@ import Link from 'next/link';
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
-<<<<<<< HEAD
               </a>
-<<<<<<< HEAD
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -176,9 +124,6 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <FeatureCard
                 key={index}
                 icon={feature.icon}
@@ -187,9 +132,3 @@ export default function HomePage() {
                 features={feature.features}
                 gradient={feature.gradient}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD

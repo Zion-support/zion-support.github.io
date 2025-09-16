@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -20,7 +17,6 @@
               Watch Demo
             </button>
           </div>
-<<<<<<< HEAD
         {/* Revolutionary Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -68,9 +64,6 @@
             </ul>
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Manipulate Reality →
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Advanced Features Section */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -98,7 +91,6 @@
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-lg font-semibold mb-2">Energy Manipulation</h3>
               <p className="text-sm opacity-80">Control and harness cosmic energy sources</p>
-<<<<<<< HEAD
             <div className="text-center">
               <div className="text-5xl mb-4">🧬</div>
               <h3 className="text-xl font-bold mb-4">DNA Computing</h3>
@@ -107,11 +99,6 @@
               </p>
               <div className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full mb-2">
                 <div className="bg-white h-full w-4/5 rounded-full animate-pulse"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Success Stories */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -155,9 +142,6 @@
                 View Results →
               </button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join millions of beings across the multiverse who have already embraced the revolutionary technology of 2035.
@@ -168,4 +152,3 @@
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
               Contact Our AI →
-<<<<<<< HEAD

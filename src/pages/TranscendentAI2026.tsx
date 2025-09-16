@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -86,75 +77,29 @@
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
-<<<<<<< HEAD
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
         {/* Revolutionary Applications */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
         {/* Revolutionary Applications */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </divsection>
 
-<<<<<<< HEAD
           </div>
         </motion.section>
 
-<<<<<<< HEAD
           </div>
         </motion.section>
 
-<<<<<<< HEAD
           </div>
         </motion.section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Consciousness Visualization */}
         <div className="mb-16">
           <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-16 text-center">
@@ -181,14 +126,3 @@
                 <h3 className="text-2xl font-bold mb-4 text-emerald-300">Universal Awareness</h3>
                 <p className="text-gray-300">Consciousness spanning across dimensions and realities</p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const technologies = [
     {
       id: 1,
@@ -97,7 +96,6 @@
 
     return () => clearInterval(interval);
   }, [technologies.length]);
-<<<<<<< HEAD
           <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2034
           </h2>
@@ -194,7 +192,6 @@
                     🔬 Deep Dive
                   </button>
                 </div>
-<<<<<<< HEAD
             <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               View All Services →
             </a>

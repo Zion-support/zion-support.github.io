@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Innovations', icon: '🌟' },
-    { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧬' },
-    { id: 'space', name: 'Space Technology', icon: '🚀' },
-    { id: 'bio', name: 'Biotechnology', icon: '🌱' },
-    { id: 'energy', name: 'Energy Systems', icon: '⚡' },
-    { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Conscious AI Networks",
       description: "Self-aware AI systems that collaborate and evolve together",
       category: 'ai',
@@ -21,9 +8,6 @@
       impact: 'Revolutionary',
       icon: '🧠',
       features: ['Self-awareness', 'Collaborative learning', 'Ethical decision making', 'Emotional intelligence']
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: "Process infinite possibilities in real-time using quantum mechanics",
       category: 'quantum',
       status: 'Beta',
@@ -96,16 +80,10 @@
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2042
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           {filteredInnovations.map((innovation) => (
             <div key={innovation.id} className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-center mb-6">
@@ -153,9 +131,6 @@
 
               <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Innovation
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Statistics Section */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -185,9 +160,6 @@
               <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
               <div className="text-sm opacity-80">Continuous development</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Be part of the most advanced innovation ecosystem in human history. Contribute to technologies that will shape the future of civilization.
@@ -198,4 +170,3 @@
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               Submit Innovation
-<<<<<<< HEAD

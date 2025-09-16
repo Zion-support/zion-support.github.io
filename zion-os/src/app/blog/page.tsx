@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const featuredPosts: PostListItem[] = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'ai-governance-2025',
       title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
       excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
@@ -14,9 +8,6 @@
       date: '2025-09-15',
       readTime: '8 min read',
       image: '/blog/ai-governance.jpg',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
       excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
@@ -24,8 +15,6 @@
       author: 'Dr. Emily Watson',
       date: '2025-09-14',
       readTime: '11 min read',
-<<<<<<< HEAD
-<<<<<<< HEAD
       author: 'Michael Rodriguez',
       date: '2025-09-05',
       readTime: '7 min read',
@@ -43,19 +32,10 @@
       image: '/blog/secure-agent-marketplaces.jpg',
     },
     {
-<<<<<<< HEAD
       id: 'ai-ops-cost-optimization-2025',
       title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
       excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
-<<<<<<< HEAD
       image: '/blog/ai-ops-cost.jpg',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'ai-ops-cost-optimization-2025',
       title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
       excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
@@ -76,37 +56,14 @@
       image: '/blog/agentic-sales.jpg'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'agent-safety-tooling',
       title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
       excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
       category: 'Cybersecurity',
       author: 'Dr. James Wilson',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: 'AI Solutions', count: 4, active: false },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
@@ -114,22 +71,12 @@
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 AO
-<<<<<<< HEAD
                 AG
-<<<<<<< HEAD
-<<<<<<< HEAD
                 AG
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
-<<<<<<< HEAD
-<<<<<<< HEAD
                   AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">

@@ -1,9 +1,3 @@
-import React from "react";
-
-const BlogPost2025 = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
             Technology Blog 2025
@@ -49,10 +43,3 @@ const BlogPost2025 = () => {
               <li>• NFT innovations</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default BlogPost2025;

@@ -1,39 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+import React from 'react';
 
-type Outdated = { name: string; current: string; latest: string; type: 'dependency' | 'devDependency' };
-
-export async function getServerSideProps() {
+const dep-radar: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      {outdated.length === 0 ? (
-        <div className="text-sm text-gray-600">All dependencies up to date.</div>
-      ) : (
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="text-left p-2">Package</th>
-                <th className="text-left p-2">Current</th>
-                <th className="text-left p-2">Latest</th>
-                <th className="text-left p-2">Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              {outdated.map(o => (
-                <tr key={o.name} className="border-t">
-                  <td className="p-2">{o.name}</td>
-                  <td className="p-2">{o.current}</td>
-                  <td className="p-2">{o.latest}</td>
-                  <td className="p-2">{o.type}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">dep-radar</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default dep-radar;

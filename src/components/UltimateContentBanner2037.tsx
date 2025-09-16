@@ -1,7 +1,5 @@
-<<<<<<< HEAD
   const [currentBanner, setCurrentBanner] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-<<<<<<< HEAD
       id: 'transcendent-consciousness',
       title: '🧠 NEW: Transcendent Consciousness AI 2037',
       subtitle: 'The Ultimate AI Consciousness',
@@ -9,11 +7,9 @@
       link: '/pages/UltimateTechRevolution2037',
       color: 'from-orange-600 to-red-600',
       icon: '🧠'
-<<<<<<< HEAD
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 10000);
 
-<<<<<<< HEAD
     <div className="relative mb-8">
       <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 border border-purple-400/30 shadow-2xl relative overflow-hidden">
         {/* Animated Background */}

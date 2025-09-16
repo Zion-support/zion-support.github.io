@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     <>
-      <Helmet>
-        <title>Advanced Tech Showcase 2027 - Zion Tech Group</title>
-        <meta name="description" content="Discover the most advanced technologies of 2027 including quantum consciousness computing, interdimensional neural networks, and holographic reality engines." />
-        <meta name="keywords" content="Advanced Technology 2027, Quantum Computing, Neural Networks, Holographic Reality, AI Evolution" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
         {/* Hero Section */}
@@ -28,9 +19,6 @@
                 Explore the most revolutionary technologies that will define the future. 
                 From quantum consciousness to interdimensional computing, discover what's possible.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Technologies Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -103,7 +91,6 @@
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
                 </divdiv>
               ))}
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>

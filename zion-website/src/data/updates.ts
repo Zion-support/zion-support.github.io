@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type SiteUpdate = {
-  title: string
-  summary: string
-  href: string
-  date?: string
-  tag?: string
-}
-
-export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
   // Newly added 2025-09-15 (to advertise on homepage)
   {
@@ -49,25 +8,8 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/enterprise-retrieval-observability-2026',
     date: '2025-09-15',
     tag: 'Report'
-<<<<<<< HEAD
-<<<<<<< HEAD
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -75,12 +17,7 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .slice(0, limit)
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: 'advanced-blockchain-course',
-<<<<<<< HEAD
     date: '2025-09-08',
     href: '/updates/dapp-challenge',
   },
@@ -100,4 +37,3 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   },
 ]
 
-<<<<<<< HEAD

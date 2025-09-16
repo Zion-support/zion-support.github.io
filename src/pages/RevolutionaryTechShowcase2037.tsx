@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
           {/* Interactive Demo Grid */}
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -34,11 +31,7 @@ import React, { useState, useEffect } from 'react';
                         >
                           {isLoading ? 'Starting...' : 'Start Demo'}
                         </button>
-<<<<<<< HEAD
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl mb-8 opacity-90">Join us in exploring the most advanced technologies ever created</p>
           <div className="flex justify-center space-x-4">
@@ -47,5 +40,3 @@ import React, { useState, useEffect } from 'react';
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Learn More
-<<<<<<< HEAD
-<<<<<<< HEAD

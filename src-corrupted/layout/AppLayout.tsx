@@ -1,51 +1,12 @@
-import React from 'react'';
-import { Outlet } from 'react-router-dom'';
-import { Footer } from '@/components/Footer';
+import React from 'react';
 
-
-interface AppLayoutProps {
-	children?: React.ReactNode
-	hideFooter?: boolean
-}
-
-
-
-interface AppLayoutProps {
-	children?: React.ReactNode
-	hideFooter?: boolean
-}
-
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-	return (
-		<div className="flex flex-col min-h-screen bg-background">
-			<main className="flex-grow">
-				{children ?? <Outlet />}
-			</main>
-			{!hideFooter && <Footer />}
-ursor/integrate-build-improve-and-re-verify-8f7d
-		</div>
-	)
-}
-import React from "react";
-
-interface AppLayoutProps {
-  children?: React.ReactNode;
-  hideFooter?: boolean;
-}
-
-export function AppLayout({ children }: AppLayoutProps) {
+const AppLayout: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main id="main-content" className="flex-grow">
-        {children}
-      </main>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AppLayout</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
 
-
-		</div>;
-	);
-
-}'"
-
+export default AppLayout;

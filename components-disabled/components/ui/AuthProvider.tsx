@@ -1,31 +1,12 @@
+import React from 'react';
 
-type UserRole = 'talent' | 'client';
-
-type AuthContextType = {
-  role: UserRole;
-  setRole: (role: UserRole) => void;
+const AuthProvider: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AuthProvider</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
-
-  useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);
-      }
-    } catch {}
-
-  const setRole = (r: UserRole) => {
-    setRoleState(r);
-    try { 
-      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
-    } catch {}
-  };
-
-  return (
-  );
-}
-
-export function useAuth() {
-  return useContext(AuthContext);
-}
+export default AuthProvider;

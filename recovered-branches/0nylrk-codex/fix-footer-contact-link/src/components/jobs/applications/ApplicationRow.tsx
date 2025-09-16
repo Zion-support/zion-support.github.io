@@ -1,86 +1,12 @@
+import React from 'react';
 
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { StatusBadge } from "./StatusBadge";
-import { ScoreBadge } from "./ScoreBadge";
-import { ApplicationActions } from "./ApplicationActions";
-
-interface ApplicationRowProps {
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-}
-
-export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore
-}: ApplicationRowProps) {
+const ApplicationRow: React.FC = () => {
   return (
-    <TableRow key={application.id}>
-      <TableCell>
-        <div className="flex items-center gap-3">
-          <Avatar className="h-9 w-9">
-            {application.talent_profile?.profile_picture_url ? (
-              <img 
-                src={application.talent_profile.profile_picture_url} 
-                alt={application.talent_profile.full_name} 
-              />
-            ) : (
-              <User className="h-5 w-5 text-gray-400" />
-            )}
-          </Avatar>
-          <div>
-            <div className="font-medium">
-              {application.talent_profile?.full_name || "Unknown"}
-            </div>
-            <div className="text-xs text-muted-foreground">
-              {application.talent_profile?.professional_title || "Talent"}
-            </div>
-          </div>
-        </div>
-      </TableCell>
-      <TableCell>
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-        </div>
-      </TableCell>
-      <TableCell>
-        <StatusBadge status={application.status} />
-      </TableCell>
-      <TableCell>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          onClick={() => onViewScore(application)}
-          className="flex items-center gap-1"
-        >
-          <BarChart className="h-4 w-4 mr-1" />
-          <ScoreBadge application={application} />
-        </Button>
-      </TableCell>
-      <TableCell>
-        {application.resume ? (
-          <Button variant="ghost" size="sm" asChild>
-            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
-              <FileText className="h-4 w-4 mr-1" /> View
-            </a>
-          </Button>
-        ) : (
-          <span className="text-muted-foreground text-sm">No resume</span>
-        )}
-      </TableCell>
-      <TableCell className="text-right">
-        <ApplicationActions
-          application={application}
-          processingId={processingId}
-          onViewApplication={onViewApplication}
-          onStatusChange={onStatusChange}
-        />
-      </TableCell>
-    </TableRow>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ApplicationRow</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default ApplicationRow;

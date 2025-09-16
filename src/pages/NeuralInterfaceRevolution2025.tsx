@@ -1,10 +1,8 @@
-<<<<<<< HEAD
           </div>
         </div>
 
         {/* Call to Action */}
         <div
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
           <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">

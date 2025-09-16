@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -27,9 +26,7 @@
                 Try AI Demo
               </button>
             </div>
-<<<<<<< HEAD
           </div>
-<<<<<<< HEAD
       {/* Revolutionary AI Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
