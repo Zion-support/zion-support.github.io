@@ -10,6 +10,7 @@ const BlogPage = () => {
   const featuredPosts = [
     {
 <<<<<<< HEAD:app/blog/page.jsx
+<<<<<<< HEAD:app/blog/page.jsx
       title: "AI 2026: Agent Risk Maturity Matrix",
       description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
       slug: "ai-2026-agent-risk-maturity-matrix",
@@ -19,6 +20,30 @@ const BlogPage = () => {
       description: "Policy-as-code, model risk tiers, and runtime monitoring to scale AI safely across the enterprise.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
       category: "Governance",
+=======
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-ai-governance-2026.jpg"
+    },
+    {
+      title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
+      description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
+      slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
+      category: "AI Revolution",
+      date: "2025-01-15",
+      featured: true,
+      image: "/images/generative-ai-enterprise-2025.jpg"
+    },
+    {
+      title: "Enterprise Foundation Models: A Practical Guide (2025)",
+      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
+      slug: "ai-2025-enterprise-foundation-models-practical-guide",
+      category: "Enterprise AI",
+>>>>>>> origin/feature/content-sep-2025:app/blog/page.tsx
       date: "2025-09-15",
       featured: true,
       image: "/images/ai-governance-blueprint-2026.jpg"
