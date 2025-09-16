@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "evidence-driven-agent-lifecycle-2026",
+    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
+    description:
+      "Gate every lifecycle phase with evals: design, test, deploy, operate. Audit‑ready evidence.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "realtime-agent-routing-2026",
     title: "AI 2026: Real‑Time Agent Routing — Best Practices",
     description:
