@@ -55,6 +55,8 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
+=======
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
@@ -63,6 +65,7 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+>>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',

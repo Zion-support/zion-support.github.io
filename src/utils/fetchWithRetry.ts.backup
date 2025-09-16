@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -29,6 +31,7 @@ const defaultOptions: Required<FetchWithRetryOptions> = {
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 // Fetch with retry utility for better error handling
 interface FetchWithRetryOptions {
   retries?: number;
@@ -36,6 +39,11 @@ interface FetchWithRetryOptions {
   timeout?: number;
 }
 
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -52,10 +60,13 @@ interface FetchWithRetryOptions {
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -92,6 +103,7 @@ export const fetchWithRetry = async (
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
   
 /**
@@ -164,6 +176,10 @@ export async function fetchWithRetry(
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -181,10 +197,16 @@ export async function fetchWithRetry(
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       return response;
     } catch (error) {
       lastError = error as Error;
       
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -329,6 +351,7 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 };
 
 export default fetchWithRetry;

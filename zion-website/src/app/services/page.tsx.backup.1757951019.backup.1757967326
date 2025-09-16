@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +10,8 @@
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
 =======
 // Conflict resolved
 // Conflict resolved
@@ -89,6 +94,7 @@
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
@@ -96,6 +102,10 @@ const services = [
   { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
   { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
+=======
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 =======
@@ -141,6 +151,7 @@ const services = [
 // Conflict resolved:zion-website/src/app/services/page.tsx.backup.1757951019
 // Conflict resolved
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 import { 
   UserGroupIcon, 
   LightBulbIcon, 
@@ -281,8 +292,8 @@ const reasonsToChoose = [
     description: '24/7 support and maintenance services across multiple time zones.',
     icon: GlobeAltIcon,
   },
-// Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
-// Conflict resolved
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+=======
 import React from 'react'
 import { Cog6ToothIcon, BoltIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
@@ -291,11 +302,16 @@ const services = [
   { title: 'Platform Engineering', desc: 'Reliable infrastructure and DevOps at scale.', icon: Cog6ToothIcon },
   { title: 'Security & Compliance', desc: 'Protect data and meet regulatory standards.', icon: ShieldCheckIcon },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> origin/backup-main-20250915-074228
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
 =======
 // Conflict resolvedorigin/backup-main-20250915-074228
 // Conflict resolved
@@ -338,6 +354,7 @@ const services = [
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 ]
 
 export default function ServicesPage() {
@@ -354,6 +371,9 @@ export default function ServicesPage() {
               <div key={service.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 =======
@@ -403,12 +423,13 @@ export default function ServicesPage() {
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 // Conflict resolved:zion-website/src/app/services/page.tsx.backup.1757951019
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
                   <s.icon className="h-5 w-5 text-blue-400" />
                   {s.name}
-// Conflict resolved
+=======
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
-// Conflict resolved
+<<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -520,16 +541,21 @@ export default function ServicesPage() {
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {reason.name}
-// Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
-// Conflict resolved
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+=======
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 =======
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
 =======
 // Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 // Conflict resolved
@@ -593,6 +619,7 @@ export default function ServicesPage() {
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{service.description}</p>
@@ -603,6 +630,11 @@ export default function ServicesPage() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 <<<<<<< HEAD
@@ -673,6 +705,7 @@ export default function ServicesPage() {
 // Conflict resolved
 // Conflict resolved
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -695,7 +728,7 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
-// Conflict resolved
+=======
         <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-44 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Services</h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">End-to-end services to accelerate your AI transformation.</p>
@@ -711,27 +744,32 @@ export default function ServicesPage() {
             <p className="mt-2 text-gray-300">{s.desc}</p>
           </div>
         ))}
-// Conflict resolvedorigin/backup-main-20250915-074228
+>>>>>>> origin/backup-main-20250915-074228
       </div>
-// Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
     </div>
   )
-// Conflict resolved
+<<<<<<< HEAD
 }
-// Conflict resolved
+=======
 }
-// Conflict resolvedorigin/backup-main-20250915-074228
-// Conflict resolved
+>>>>>>> origin/backup-main-20250915-074228
+=======
     </div>
   )
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 =======
     </div>
   )
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
 =======
 // Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 // Conflict resolved
@@ -796,3 +834,4 @@ export default function ServicesPage() {
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f

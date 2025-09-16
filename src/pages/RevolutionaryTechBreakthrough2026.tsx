@@ -2,9 +2,6 @@ import React from 'react';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
-        </div>
-      </div>
-
             </div>
           </div>
         </div>

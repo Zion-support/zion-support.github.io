@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/revolutionary-2026-content
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -224,11 +220,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
->>>>>>> origin/feature/revolutionary-2026-content
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -290,10 +281,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/revolutionary-2026-content
               Explore Insights
             </button>
           </div>
@@ -313,12 +300,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-<<<<<<< HEAD
-=======
-            <div className="mb-8">
->>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
->>>>>>> origin/feature/revolutionary-2026-content
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -424,10 +405,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   </ul>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/revolutionary-2026-content
             </div>
           </div>
         </section>
@@ -608,10 +585,4 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
-export default RevolutionaryTechInsights2026;
->>>>>>> origin/feature/revolutionary-2026-content

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -44,6 +46,7 @@ export const safeStorage = {
 // Conflict resolved
 // Conflict resolvedcursor/create-and-deploy-new-content-7857
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -156,6 +159,9 @@ export const safeStorage = {
 <<<<<<< HEAD
     }
 =======
+<<<<<<< HEAD
+    }
+=======
 // Conflict resolved
     }
   },
@@ -180,6 +186,7 @@ export const safeStorage = {
     }
 // Conflict resolvedcursor/create-and-deploy-new-content-7857
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   }
 };
 
