@@ -22,6 +22,21 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
+	// Fresh content added 2025-09-16 (new)
+	{
+		title: 'Playbook: Production RAG Latency Budgets (2026)',
+		summary: 'Define SLOs, budgets, and guardrails for low‑latency, high‑quality retrieval pipelines.',
+		href: '/updates/production-rag-latency-budgets-2026',
+		date: '2025-09-16',
+		tag: 'Playbook'
+	},
+	{
+		title: 'Case Study: 40% Cost Reduction with Agent Routing',
+		summary: 'How dynamic model routing and caching cut costs while improving response quality.',
+		href: '/updates/rag-agents-case-study',
+		date: '2025-09-16',
+		tag: 'Case Study'
+	},
 
   // Existing highlights
   {
