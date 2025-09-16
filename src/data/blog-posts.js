@@ -284,51 +284,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/biotech-ai-revolution-healing.jpg",
     slug: "biotech-ai-revolution-healing-humanity"
-  },
-  {
-    id: 41,
-    title: "Ultimate Tech Showcase 2025: The Future is Here",
-    excerpt: "Explore the most revolutionary technologies that are reshaping reality itself in 2025.",
-    content: "The Ultimate Tech Showcase 2025 represents the pinnacle of human technological achievement. From neural reality interfaces to quantum consciousness engines, we're witnessing technologies that were once confined to science fiction becoming reality. These innovations are not just changing how we work and live—they're redefining what it means to be human in a digital age.",
-    author: "Dr. Elena Rodriguez",
-    authorRole: "Chief Technology Visionary",
-    publishDate: "2025-01-20",
-    readTime: "15 min read",
-    category: "Technology Trends",
-    tags: ["Tech Showcase", "Neural Interface", "Quantum Computing", "Future Tech"],
-    featured: true,
-    imageUrl: "/images/blog/ultimate-tech-showcase-2025.jpg",
-    slug: "ultimate-tech-showcase-2025-future-here"
-  },
-  {
-    id: 42,
-    title: "Revolutionary Tech Breakthrough: Changing Everything",
-    excerpt: "Discover the most significant technological breakthroughs that are fundamentally changing our world.",
-    content: "We're witnessing the most significant technological breakthroughs in human history. From conscious AI systems that exhibit genuine awareness to quantum neural networks that process information exponentially faster, these innovations are reshaping every aspect of human civilization. The implications are profound and far-reaching.",
-    author: "Dr. Marcus Chen",
-    authorRole: "Revolutionary Tech Research Director",
-    publishDate: "2025-01-18",
-    readTime: "12 min read",
-    category: "Technology Trends",
-    tags: ["Breakthrough", "Conscious AI", "Quantum Neural", "Revolutionary"],
-    featured: true,
-    imageUrl: "/images/blog/revolutionary-tech-breakthrough-2025.jpg",
-    slug: "revolutionary-tech-breakthrough-changing-everything"
-  },
-  {
-    id: 43,
-    title: "Next-Gen Innovation Hub: Where the Future is Born",
-    excerpt: "Explore the most advanced innovation ecosystem that's creating the technologies of tomorrow.",
-    content: "The Next-Gen Innovation Hub represents the cutting edge of human creativity and technological advancement. Here, brilliant minds from around the world collaborate to create solutions that address humanity's greatest challenges. From autonomous AI agents to interdimensional computing, this hub is where the impossible becomes possible.",
-    author: "Dr. Sarah Kim",
-    authorRole: "Innovation Hub Director",
-    publishDate: "2025-01-16",
-    readTime: "14 min read",
-    category: "Innovation",
-    tags: ["Innovation Hub", "Collaboration", "Future Tech", "Research"],
-    featured: true,
-    imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
-    slug: "next-gen-innovation-hub-future-born"
   }
 ];
 
