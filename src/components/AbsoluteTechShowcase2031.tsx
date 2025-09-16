@@ -231,6 +231,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   />
                 ))}
               </div>
+            </div>
           </div>
 
           {/* Navigation Dots */}

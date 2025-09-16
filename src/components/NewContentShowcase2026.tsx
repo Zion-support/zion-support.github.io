@@ -105,7 +105,6 @@ const NewContentShowcase2026: React.FC = () => {
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-=======
     <div className="py-16 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -269,12 +268,10 @@ const NewContentShowcase2026: React.FC = () => {
               className="inline-block bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300"
             >
               View Guide
->>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
             </Link>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Featured Blog Posts */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Latest Blog Posts</h3>
@@ -327,7 +324,6 @@ const NewContentShowcase2026: React.FC = () => {
               Get Custom Solutions
             </Link>
           </div>
-=======
         <div className="text-center mt-12">
           <Link 
             to="/blog" 
@@ -335,7 +331,6 @@ const NewContentShowcase2026: React.FC = () => {
           >
             View All Content
           </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
         </div>
       </div>
     </div>
