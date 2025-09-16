@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Secure Tooling Permissions (2026)',
+    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.',
+    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Risk: Operational Metrics for Agents (2026)',
+    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
+    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+    date: '2025-09-16',
+    tag: 'Risk'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',
@@ -16,39 +30,11 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
-    title: 'Blueprint: Agentic SLO Dashboards (2026)',
-    summary: 'Define and operate SLOs across latency, quality, safety, and cost with drill‑downs to traces and incidents.',
-    href: '/blog/ai-2026-agentic-slo-dashboards-blueprint',
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary: 'Design patterns and reference topologies for low-latency, high-recall real-time retrieval.',
+    href: '/blog/ai-2026-real-time-retrieval-architectures',
     date: '2025-09-16',
     tag: 'Blueprint'
-  },
-  {
-    title: 'Field Guide: AI Incidents & Postmortems (2026)',
-    summary: 'Templates and checklists for incident response, evidence capture, and corrective actions in AI systems.',
-    href: '/updates/ai-incidents-postmortems-2026',
-    date: '2025-09-16',
-    tag: 'Guide'
-  },
-  {
-    title: 'Blueprint: Production Evidence Hub (2026)',
-    summary: 'Centralize evals, traces, policy events, and incidents for audits and incident response.',
-    href: '/blog/ai-2026-production-evidence-hub-blueprint',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Blueprint: Secure Tooling Permissions (2026)',
-    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions in production.',
-    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
-    date: '2025-09-16',
-    tag: 'Security'
-  },
-  {
-    title: 'Guide: Operational Risk Metrics for Agents (2026)',
-    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
-    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
-    date: '2025-09-16',
-    tag: 'Guide'
   },
   {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
@@ -85,34 +71,12 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
-  // Additional fresh content 2025-09-16
   {
-    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
-    summary: 'Reference designs and trade-offs for building low-latency retrieval in production.',
-    href: '/updates/real-time-retrieval-architectures-2026',
+    title: 'Field Guide: Trustworthy Model Routing (2026)',
+    summary: 'Objective routing with evals, risk signals, and cost-latency tradeoffs backed by evidence.',
+    href: '/blog/ai-2026-trustworthy-model-routing',
     date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Launch: Autonomous Support Copilot 1.1',
-    summary: 'Improved handoffs, escalation policies, and grounded responses for enterprise support.',
-    href: '/updates/autonomous-support-copilot-1-1',
-    date: '2025-09-16',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Operational Evals for FinOps',
-    summary: 'Use evals to enforce cost, latency, and quality budgets across AI pipelines.',
-    href: '/updates/evaluation-driven-finops',
-    date: '2025-09-16',
-    tag: 'Guide'
-  },
-  {
-    title: 'Case Study: Hybrid Retrieval Latency',
-    summary: 'Empirical results comparing hybrid search latency patterns across real workloads.',
-    href: '/updates/hybrid-retrieval-latency-case-study',
-    date: '2025-09-16',
-    tag: 'Case Study'
+    tag: 'Field Guide'
   },
 
   // Existing content

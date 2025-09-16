@@ -11,46 +11,13 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "operational-risk-metrics-for-agents-2026",
-    title: "AI 2026: Operational Risk Metrics for Agents",
+    id: "realtime-agent-routing-2026",
+    title: "AI 2026: Real‑Time Agent Routing — Best Practices",
     description:
-      "Standardize override rates, violations, groundedness, and MTTR across teams.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-operational-risk-metrics-for-agents",
-    emoji: "📏",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "production-evidence-hub-blueprint-2026",
-    title: "AI 2026: Production Evidence Hub — Blueprint",
-    description:
-      "Centralize evals, traces, incidents, approvals, and KPIs for audit‑ready ops.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-production-evidence-hub-blueprint",
-    emoji: "🧾",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "operational-evals-blueprint-2026",
-    title: "AI 2026: Operational Evals — Blueprint",
-    description:
-      "Eval gates, canary scorecards, and automated rollback with an audit‑ready evidence hub.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-operational-evals-blueprint",
-    emoji: "🧩",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "agent-benchmarking-best-practices-2026",
-    title: "AI 2026: Agent Benchmarking Best Practices",
-    description:
-      "From toy tasks to production: suites, policy gates, and observability for reliable agents.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-agent-benchmarking-best-practices",
-    emoji: "🧪",
+      "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+    ctaLabel: "Read Best Practices",
+    href: "/blog/ai-2026-realtime-agent-routing-best-practices",
+    emoji: "🧭",
     highlight: true,
     date: "2025-09-16",
   },
@@ -164,4 +131,5 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     highlight: true,
     date: "2025-09-16",
   },
-  {
+];
+

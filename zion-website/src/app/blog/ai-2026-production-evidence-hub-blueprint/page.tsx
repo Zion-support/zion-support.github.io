@@ -1,11 +1,9 @@
-import React from 'react'
-
 export const metadata = {
 	title: 'AI 2026: Production Evidence Hub — Blueprint',
 	description: 'Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven AI operations.',
 }
 
-export default function Page() {
+function Page() {
 	return (
 		<main className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
 			<header className="mb-8">
