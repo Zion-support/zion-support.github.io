@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9103,
+    title: "AI 2026: Evidence-Driven Release Engineering",
+    excerpt: "Tie merges and rollouts to evals, incidents, and cost with one scorecard.",
+    content: "Make every change auditable and reversible. This guide shows how to wire online evaluations, incident signals, and budget telemetry into a single release scorecard that gates merges and progressive delivery. Copy the minimal schema and CI steps to get real protections in under a day.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Scorecards", "Progressive Delivery", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-driven-release-engineering-2026.jpg",
+    slug: "ai-2026-evidence-driven-release-engineering"
+  },
+  {
+    id: 9104,
+    title: "AI 2026: Cost-Aware Model Routing in Production",
+    excerpt: "Balance quality, latency, and spend with dynamic, policy-guarded routing.",
+    content: "A practical recipe to route traffic between models using objective signals: groundedness evals, latency SLOs, and per-tenant budgets. Includes route policy examples, trace-enriched dashboards, and a guardrail adapter you can drop into your platform.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Quality"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-model-routing-2026.jpg",
+    slug: "ai-2026-cost-aware-model-routing"
+  },
+  {
     id: 9101,
     title: "AI 2026: Policy‑as‑Code Blueprint",
     excerpt: "Encode approvals, risk tiers, and eval gates as versioned policy.",
