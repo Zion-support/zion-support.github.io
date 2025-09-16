@@ -9,6 +9,9 @@ export default defineConfig({
       '@': '/workspace/src'
     }
   },
+  define: {
+    global: 'globalThis',
+  },
   plugins: [
     react({
       babel: {
@@ -69,6 +72,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
+      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],

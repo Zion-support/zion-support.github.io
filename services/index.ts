@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-<<<<<<< HEAD
-// Export service types and interfaces
-export type {;
-  ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;

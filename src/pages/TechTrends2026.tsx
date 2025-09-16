@@ -1,317 +1,306 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const TechTrends2026: React.FC = () => {
-  const trends = [
+  const [selectedTrend, setSelectedTrend] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const techTrends = [
     {
-      id: 1,
-      title: "Artificial General Intelligence (AGI) Breakthrough",
-      category: "AI & Machine Learning",
-      description: "The emergence of AGI systems that can perform any intellectual task that a human can do, marking a paradigm shift in AI capabilities.",
-      impact: "Transformative",
-      timeline: "2026-2027",
-      icon: "🧠",
-      details: [
-        "Multi-modal reasoning across different domains",
-        "Autonomous problem-solving without human intervention",
-        "Creative and artistic capabilities surpassing human levels",
-        "Ethical decision-making in complex scenarios"
-      ]
-    },
-    {
-      id: 2,
-      title: "Quantum Computing Commercialization",
-      category: "Quantum Technology",
-      description: "Quantum computers becoming commercially viable for solving real-world problems in cryptography, optimization, and drug discovery.",
-      impact: "Revolutionary",
+      title: "Quantum Computing Revolution",
+      description: "Quantum computers achieving practical applications in cryptography, optimization, and drug discovery",
+      impact: "Exponential",
       timeline: "2026-2028",
-      icon: "⚡",
+      icon: "⚛️",
+      gradient: "from-cyan-500 to-blue-600",
       details: [
-        "1000+ qubit quantum processors",
-        "Quantum advantage in practical applications",
-        "Quantum internet infrastructure",
-        "Quantum machine learning algorithms"
-      ]
+        "Quantum supremacy in real-world applications",
+        "Breakthrough in quantum cryptography",
+        "Quantum machine learning algorithms",
+        "Commercial quantum cloud services"
+      ],
+      marketSize: "$50B by 2030"
     },
     {
-      id: 3,
       title: "Neural Interface Technology",
-      category: "Biotechnology",
-      description: "Direct brain-computer interfaces enabling thought-controlled devices and enhanced cognitive capabilities.",
-      impact: "Transformative",
-      timeline: "2026-2029",
+      description: "Direct brain-computer interfaces enabling thought-controlled devices and enhanced cognition",
+      impact: "Revolutionary",
+      timeline: "2026-2027",
       icon: "🧬",
+      gradient: "from-emerald-500 to-teal-600",
       details: [
         "Non-invasive neural interfaces",
         "Thought-to-text communication",
-        "Memory enhancement and storage",
-        "Direct neural control of prosthetics"
-      ]
+        "Enhanced memory and learning",
+        "Medical applications for paralysis"
+      ],
+      marketSize: "$20B by 2030"
     },
     {
-      id: 4,
-      title: "Space Economy Expansion",
-      category: "Space Technology",
-      description: "The emergence of a trillion-dollar space economy with asteroid mining, space manufacturing, and interplanetary travel.",
-      impact: "Revolutionary",
-      timeline: "2026-2030",
-      icon: "🚀",
-      details: [
-        "Asteroid mining operations",
-        "Space-based manufacturing",
-        "Lunar and Mars colonies",
-        "Space tourism industry"
-      ]
-    },
-    {
-      id: 5,
-      title: "Advanced Robotics Revolution",
-      category: "Robotics",
-      description: "Autonomous robots with human-like capabilities becoming ubiquitous in manufacturing, healthcare, and service industries.",
+      title: "Synthetic Intelligence",
+      description: "AI systems that go beyond artificial intelligence to achieve synthetic consciousness and reasoning",
       impact: "Transformative",
+      timeline: "2026-2029",
+      icon: "🧠",
+      gradient: "from-purple-500 to-pink-600",
+      details: [
+        "Self-aware AI systems",
+        "Synthetic consciousness emergence",
+        "AI creativity and innovation",
+        "Human-AI consciousness merging"
+      ],
+      marketSize: "$100B by 2030"
+    },
+    {
+      title: "Edge AI Computing",
+      description: "Distributed AI processing at the edge for real-time decision making and reduced latency",
+      impact: "Critical",
+      timeline: "2026-2027",
+      icon: "⚡",
+      gradient: "from-orange-500 to-red-600",
+      details: [
+        "Real-time AI processing",
+        "Autonomous vehicle intelligence",
+        "IoT device AI capabilities",
+        "Privacy-preserving AI"
+      ],
+      marketSize: "$30B by 2030"
+    },
+    {
+      title: "AI-Human Collaboration",
+      description: "Seamless integration of AI capabilities with human creativity and intuition",
+      impact: "Productive",
+      timeline: "2026-2028",
+      icon: "🤝",
+      gradient: "from-indigo-500 to-purple-600",
+      details: [
+        "AI-powered creative tools",
+        "Human-AI team collaboration",
+        "Augmented human capabilities",
+        "AI-assisted decision making"
+      ],
+      marketSize: "$75B by 2030"
+    },
+    {
+      title: "Autonomous AI Systems",
+      description: "Self-managing AI systems that operate independently and continuously evolve",
+      impact: "Disruptive",
       timeline: "2026-2028",
       icon: "🤖",
+      gradient: "from-blue-500 to-cyan-600",
       details: [
-        "Humanoid service robots",
-        "Autonomous manufacturing systems",
-        "Medical surgery robots",
-        "Swarm robotics coordination"
-      ]
-    },
-    {
-      id: 6,
-      title: "Synthetic Biology Breakthrough",
-      category: "Biotechnology",
-      description: "Engineering biological systems to create new materials, medicines, and sustainable solutions for global challenges.",
-      impact: "Revolutionary",
-      timeline: "2026-2029",
-      icon: "🔬",
-      details: [
-        "Lab-grown organs and tissues",
-        "Synthetic food production",
-        "Bio-manufacturing materials",
-        "Environmental remediation"
-      ]
+        "Self-healing AI systems",
+        "Autonomous problem solving",
+        "Continuous learning and adaptation",
+        "Independent decision making"
+      ],
+      marketSize: "$40B by 2030"
     }
   ];
 
-  const categories = [
-    "All Trends",
-    "AI & Machine Learning",
-    "Quantum Technology", 
-    "Biotechnology",
-    "Space Technology",
-    "Robotics"
+  const industryImpacts = [
+    {
+      industry: "Healthcare",
+      impact: "95%",
+      description: "AI-powered diagnostics and treatment",
+      icon: "🏥",
+      color: "text-red-600"
+    },
+    {
+      industry: "Transportation",
+      impact: "90%",
+      description: "Autonomous vehicles and smart cities",
+      icon: "🚗",
+      color: "text-blue-600"
+    },
+    {
+      industry: "Manufacturing",
+      impact: "85%",
+      description: "Smart factories and automation",
+      icon: "🏭",
+      color: "text-green-600"
+    },
+    {
+      industry: "Education",
+      impact: "80%",
+      description: "Personalized learning and AI tutors",
+      icon: "🎓",
+      color: "text-purple-600"
+    },
+    {
+      industry: "Finance",
+      impact: "75%",
+      description: "AI-powered trading and risk management",
+      icon: "💰",
+      color: "text-yellow-600"
+    },
+    {
+      industry: "Entertainment",
+      impact: "70%",
+      description: "AI-generated content and experiences",
+      icon: "🎬",
+      color: "text-pink-600"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📈 TECH TRENDS 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Technology Trends 2026
-            </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover the revolutionary technologies that will reshape our world in 2026 and beyond. 
-              From AI breakthroughs to space exploration, explore the trends driving the future.
-            </p>
-          </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🔮 TECH TRENDS 2026
+          </div>
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+            The Future is Now
+          </h1>
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
+            Discover the revolutionary technology trends that will reshape industries, 
+            transform societies, and redefine human potential in 2026 and beyond.
+          </p>
         </div>
-      </div>
 
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                index === 0 
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' 
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
+        {/* Interactive Trend Selector */}
+        <div className="mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            {techTrends.map((trend, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedTrend(index)}
+                className={`p-4 rounded-xl transition-all duration-300 ${
+                  selectedTrend === index
+                    ? `bg-gradient-to-br ${trend.gradient} text-white shadow-2xl transform scale-105`
+                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-lg hover:shadow-xl'
+                }`}
+              >
+                <div className="text-3xl mb-2">{trend.icon}</div>
+                <div className="text-sm font-semibold">{trend.title.split(' ')[0]}</div>
+              </button>
+            ))}
+          </div>
 
-      {/* Trends Grid */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {trends.map((trend, index) => (
-            <motion.div
-              key={trend.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="text-5xl">{trend.icon}</div>
-                <div>
-                  <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-semibold">
-                    {trend.category}
-                  </span>
+          {/* Selected Trend Details */}
+          <div className={`bg-white rounded-2xl shadow-2xl p-8 transition-all duration-500 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <div className="flex items-center mb-4">
+                  <span className="text-5xl mr-4">{techTrends[selectedTrend].icon}</span>
+                  <div>
+                    <h2 className="text-3xl font-bold text-gray-900">{techTrends[selectedTrend].title}</h2>
+                    <div className="flex items-center space-x-4 mt-2">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+                        {techTrends[selectedTrend].timeline}
+                      </span>
+                      <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+                        {techTrends[selectedTrend].impact} Impact
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xl text-gray-600 mb-6">{techTrends[selectedTrend].description}</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600 mb-1">Market Size</div>
+                  <div className="text-2xl font-bold text-gray-900">{techTrends[selectedTrend].marketSize}</div>
                 </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-4">{trend.title}</h3>
-              <p className="text-gray-300 mb-6">{trend.description}</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">Impact:</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    trend.impact === 'Revolutionary' 
-                      ? 'bg-red-500/30 text-red-300' 
-                      : 'bg-blue-500/30 text-blue-300'
-                  }`}>
-                    {trend.impact}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">Timeline:</span>
-                  <span className="text-sm text-purple-300">{trend.timeline}</span>
-                </div>
-              </div>
-              
-              <div className="space-y-2 mb-6">
-                <h4 className="font-semibold text-purple-300">Key Features:</h4>
-                <ul className="space-y-1 text-sm text-gray-300">
-                  {trend.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-center space-x-2">
-                      <span className="text-purple-400">•</span>
-                      <span>{detail}</span>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Key Developments</h3>
+                <ul className="space-y-3">
+                  {techTrends[selectedTrend].details.map((detail, index) => (
+                    <li key={index} className="flex items-center">
+                      <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                      <span className="text-gray-700">{detail}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Learn More →
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Industry Impact Section */}
-      <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 py-20 mt-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Industry Impact</h2>
-            <p className="text-xl opacity-90">How these trends will transform major industries</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold mb-2">Healthcare</h3>
-              <p className="text-sm opacity-90">AI diagnostics, personalized medicine, and neural interfaces revolutionizing patient care</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold mb-2">Manufacturing</h3>
-              <p className="text-sm opacity-90">Autonomous robots and quantum optimization transforming production processes</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-bold mb-2">Finance</h3>
-              <p className="text-sm opacity-90">Quantum cryptography and AI trading systems securing and optimizing financial markets</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold mb-2">Environment</h3>
-              <p className="text-sm opacity-90">Synthetic biology and space-based solutions addressing climate change</p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Future Predictions */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Future Predictions</h2>
-          <p className="text-xl opacity-90">What to expect in the next decade</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-3xl font-bold mb-6">The Convergence Era</h3>
-            <p className="text-lg opacity-90 mb-6">
-              By 2030, we'll see the convergence of multiple breakthrough technologies creating 
-              unprecedented possibilities. AI will work alongside quantum computers, neural 
-              interfaces will connect human minds to digital systems, and space technology 
-              will enable off-world manufacturing and resource extraction.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <span className="text-purple-400">✓</span>
-                <span>Human-AI collaboration at scale</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-purple-400">✓</span>
-                <span>Quantum-enhanced AI systems</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-purple-400">✓</span>
-                <span>Space-based manufacturing</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-purple-400">✓</span>
-                <span>Biological-digital integration</span>
-              </li>
-            </ul>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
-          >
-            <div className="text-6xl mb-4 text-center">🔮</div>
-            <h4 className="text-xl font-bold mb-4 text-center">2030 Vision</h4>
-            <p className="text-center opacity-90">
-              A world where technology seamlessly integrates with human capabilities, 
-              creating a new era of possibilities and opportunities for all of humanity.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+        {/* Industry Impact Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry Impact Analysis</h2>
+            <p className="text-xl text-gray-600">How these trends will transform major industries</p>
+          </div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industryImpacts.map((impact, index) => (
+              <div 
+                key={index}
+                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">{impact.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{impact.industry}</h3>
+                    <div className={`text-3xl font-bold ${impact.color}`}>{impact.impact}</div>
+                  </div>
+                </div>
+                <p className="text-gray-600">{impact.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Future Predictions Timeline */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technology Evolution Timeline</h2>
+            <p className="text-xl text-gray-600">A roadmap of technological advancement through 2030</p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+            
+            <div className="space-y-12">
+              {[
+                { year: "2026", title: "Quantum Breakthrough", description: "Practical quantum computing applications", color: "bg-cyan-500" },
+                { year: "2027", title: "Neural Integration", description: "Commercial neural interface devices", color: "bg-emerald-500" },
+                { year: "2028", title: "AI Singularity", description: "AI achieves human-level intelligence", color: "bg-purple-500" },
+                { year: "2029", title: "Synthetic Consciousness", description: "First synthetic intelligence emergence", color: "bg-pink-500" },
+                { year: "2030", title: "Transcendence", description: "Human-AI consciousness merging", color: "bg-indigo-500" }
+              ].map((milestone, index) => (
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                  <div className="w-1/2 px-8">
+                    <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                      <div className="text-2xl font-bold text-gray-900 mb-2">{milestone.year}</div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">{milestone.title}</h3>
+                      <p className="text-gray-600">{milestone.description}</p>
+                    </div>
+                  </div>
+                  <div className={`w-8 h-8 ${milestone.color} rounded-full border-4 border-white shadow-lg z-10`}></div>
+                  <div className="w-1/2 px-8"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't just observe the future – be part of creating it. Join us in developing 
-            and deploying these revolutionary technologies that will transform our world.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Innovation Journey
-            </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12 text-white">
+            <h2 className="text-4xl font-bold mb-4">Ready to Embrace the Future?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Stay ahead of the curve with our cutting-edge technology solutions and innovation insights.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                Explore Solutions
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
+                Get Insights
+              </button>
+            </div>
           </div>
         </div>
       </div>

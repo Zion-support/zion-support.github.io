@@ -1,11 +1,6 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { CalendarArrowRight } from "lucide-react";
-=======
-import { Calendar, ArrowRight } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterpriseCTA() {
   return (

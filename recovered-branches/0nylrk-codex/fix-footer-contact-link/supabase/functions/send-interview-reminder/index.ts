@@ -5,12 +5,6 @@ import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -68,12 +62,6 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
                 ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<< HEAD
-              `});
-=======
-              `,
-            });
->>>>>>> origin/auto/autonomy-17186719616
             
             results.push(`Reminder sent to client: ${clientEmail}`);
           } catch (emailError) {
@@ -98,12 +86,6 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
                 ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<< HEAD
-              `});
-=======
-              `,
-            });
->>>>>>> origin/auto/autonomy-17186719616
             
             results.push(`Reminder sent to talent: ${talentEmail}`);
           } catch (emailError) {
@@ -121,21 +103,9 @@ serve(async (req) => {
     
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 200});
-=======
-      status: 200,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 500});
-=======
-      status: 500,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

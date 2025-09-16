@@ -1,34 +1,8 @@
 
-<<<<<<< HEAD
-import { ChevronDownChevronUp } from "lucide-react";
-=======
-import { ChevronDown, ChevronUp } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 
 const REGION_OPTIONS = [
-<<<<<<< HEAD
-  { id: "North America"label: "North America" },
-  { id: "Europe"label: "Europe" },
-  { id: "Asia"label: "Asia" },
-  { id: "South America"label: "South America" },
-  { id: "Australia"label: "Australia" },
-  { id: "Africa"label: "Africa" }
-];
-
-export function RegionFilter({ selectedRegionstoggleRegionexpandedtoggleSectionisMobileFilterOpen }: RegionFilterProps) {
-=======
-  { id: "North America", label: "North America" },
-  { id: "Europe", label: "Europe" },
-  { id: "Asia", label: "Asia" },
-  { id: "South America", label: "South America" },
-  { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" }
-];
-
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
