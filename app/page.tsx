@@ -165,6 +165,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Promos: Operational Reliability (Sept 16, 2025) */}
+      <section className="py-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-operational-reliability-blueprint" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Operational Reliability Blueprint (2026)</h3>
+              <p className="text-gray-600">Eval‑gated releases, rollback contracts, error budgets, and observability.</p>
+            </Link>
+            <Link href="/content/ai-2026-reliability-operations-guide" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">Guide</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Reliability Operations Guide</h3>
+              <p className="text-gray-600">Scorecards, runbooks, rollback patterns, and evidence‑driven SLOs.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Quick spotlight for newly added articles */}
       <section className="py-6 bg-white">
