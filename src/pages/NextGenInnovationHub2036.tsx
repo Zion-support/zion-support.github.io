@@ -2,11 +2,14 @@ import React from 'react';
 
 const NextGenInnovationHub2036: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -103,7 +106,6 @@ const NextGenInnovationHub2036: React.FC = () => {
                   View Details →
                 </button>
               </div>
-=======
   const [selectedInnovation, setSelectedInnovation] = useState(0);
 
   const innovations = [
@@ -153,6 +155,7 @@ const NextGenInnovationHub2036: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2036
           </div>
+<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2036
           </h1>
@@ -186,6 +189,8 @@ const NextGenInnovationHub2036: React.FC = () => {
                 Explore Innovation
               </button>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             </div>
             
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -224,6 +229,7 @@ const NextGenInnovationHub2036: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -496,6 +502,8 @@ const NextGenInnovationHub2036: React.FC = () => {
             </div>
             <button className="w-full bg-pink-500 text-white py-3 rounded-lg hover:bg-pink-600 transition-colors font-semibold">
               Explore Category
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             </button>
           </div>
         </div>
@@ -620,10 +628,6 @@ const NextGenInnovationHub2036: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Submit Your Innovation
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
@@ -637,7 +641,6 @@ const NextGenInnovationHub2036: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Learn More
->>>>>>> cursor/create-and-deploy-new-content-9c82
             </button>
           </div>
         </div>

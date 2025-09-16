@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Rocket, Brain, Globe } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-e058
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   const features = [
@@ -23,6 +27,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       color: "from-green-500 to-emerald-500"
     },
     {
+<<<<<<< HEAD
       icon: Rocket,
       title: "Biotech AI",
       description: "Personalized medicine at scale",
@@ -81,6 +86,40 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </motion.button>
           </div>
         </motion.div>
+=======
+      id: 4,
+    }
+  ];
+
+  const items = contentItems.length > 0 ? contentItems : defaultContent;
+
+  useEffect(() => {
+
+  return (
+    <div className="relative w-full max-w-7xl mx-auto">
+      {/* Main Banner */}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+                      {getCategoryIcon(currentItem.category)}
+                    </div>
+                    <p className="text-sm opacity-80">Featured Content</p>
+                  </div>
+                </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-e058
 
         {/* Feature Grid */}
         <motion.div
@@ -117,6 +156,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -139,6 +179,20 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             <div className="text-gray-300">Client Satisfaction</div>
           </div>
         </motion.div>
+=======
+      {/* Content Preview Grid */}
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {items.slice(0, 4).map((item, index) => (
+          <div
+            key={item.id}
+            className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
+              index === currentIndex
+                ? 'border-blue-500 bg-blue-50'
+                : 'border-gray-200 hover:border-gray-300 bg-white hover:shadow-md'
+            }`}
+            onClick={() => goToSlide(index)}
+          >
+>>>>>>> cursor/create-and-deploy-new-content-e058
       </div>
     </div>
   );

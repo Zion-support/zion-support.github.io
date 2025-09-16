@@ -21,27 +21,6 @@ type PostListItem = {
 };
 
 export default function BlogPage() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const featuredPosts: PostListItem[] = [
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      id: 'ai-agent-safety-playbook-2025',
-      title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
-      excerpt: 'Engineering-first guardrails, audits, and human-in-the-loop patterns for safe autonomy.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/ai-agent-safety.jpg',
-      featured: true
-    },
-    {
->>>>>>> origin/feature/add-ai-agent-safety-post
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -53,25 +32,6 @@ export default function BlogPage() {
       featured: true
     },
     {
-<<<<<<< HEAD
-      id: 'ai-governance-2025',
-      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
-      excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
-      category: 'AI Solutions',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '8 min read',
-      image: '/blog/ai-governance.jpg',
-=======
-      id: 'edge-ai-marketplaces',
-      title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
-      excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
-      category: 'AI Solutions',
-      author: 'Michael Rodriguez',
-      date: '2025-09-14',
-      readTime: '7 min read',
-      image: '/blog/edge-ai-marketplaces.jpg',
->>>>>>> origin/feat/blog-content-ads
       featured: true
     },
     {
@@ -110,26 +70,6 @@ export default function BlogPage() {
       featured: true,
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'ai-governance-blueprint-2025',
-      title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
-      excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
-      category: 'AI Solutions',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-14',
-      readTime: '11 min read',
-=======
-      id: 'ai-governance-operating-systems',
-      title: 'AI Governance Operating Systems: From Policy to Runtime Controls',
-      excerpt: 'How to translate AI policies into executable, auditable runtime controls across your stack.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2025-09-14',
-      readTime: '8 min read',
->>>>>>> origin/feature/new-content-promotion
       image: '/blog/ai-governance.jpg',
       featured: true
     },
@@ -202,48 +142,10 @@ export default function BlogPage() {
       excerpt:
         'AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
       category: 'AI Solutions',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      author: 'Michael Rodriguez',
-      date: '2025-09-05',
-      readTime: '7 min read',
-      image: '/blog/autonomous-it.jpg',
-    },
-    {
-      id: 'secure-agent-marketplaces',
-      title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
-      excerpt:
-        'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
-      category: 'Cybersecurity',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-02',
-      readTime: '8 min read',
-      image: '/blog/secure-agent-marketplaces.jpg',
-    },
-    {
-<<<<<<< HEAD
-      id: 'ai-ops-cost-optimization-2025',
-      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
-      excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
-=======
-      id: 'agentic-supply-chains-2025',
-      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
-      excerpt:
-        'How autonomous agents coordinate forecasting, procurement, and fulfillment with measurable SLAs.',
->>>>>>> origin/feature/new-blog-content-and-promo
       category: 'AI Solutions',
       author: 'Michael Rodriguez',
       date: '2025-09-15',
       readTime: '9 min read',
-<<<<<<< HEAD
-      image: '/blog/ai-ops-cost.jpg',
-=======
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-05',
-      readTime: '10 min read',
-      image: '/blog/autonomous-ai.jpg',
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       featured: true
     }
@@ -251,36 +153,6 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'ai-ops-cost-optimization-2025',
-      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
-      excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
-      category: 'AI Solutions',
-      author: 'Michael Rodriguez',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/ai-ops-cost.jpg'
-    },
-    {
-      id: 'agentic-sales-playbooks',
-      title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
-      excerpt: 'Build autonomous sales loops with RAG, orchestration, and CRM integration with human-in-the-loop.',
-      category: 'AI Solutions',
-      author: 'Dr. David Kim',
-      date: '2025-09-12',
-      readTime: '8 min read',
-      image: '/blog/agentic-sales.jpg'
-    },
-    {
-=======
->>>>>>> origin/feature/new-content-2025-09-15
 =======
       id: 'ai-agent-safety-playbook-2025',
       title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
@@ -303,10 +175,6 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '7 min read',
       image: '/blog/edge-ai-marketplaces.jpg'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       id: 'edge-ai-compliance-2025',
       title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
@@ -326,10 +194,6 @@ export default function BlogPage() {
       date: '2025-09-12',
       readTime: '7 min read',
       image: '/blog/ai-accessibility-2025.jpg'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/feature/content-sept15-2025
 =======
       id: 'ai-governance-2025',
       title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
@@ -367,23 +231,6 @@ export default function BlogPage() {
       image: '/blog/autonomous-it.jpg'
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'agent-safety-tooling',
-      title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
-      excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
-      category: 'Cybersecurity',
-      author: 'Dr. James Wilson',
-=======
-      id: 'agent-safety-tooling-2025',
-      title: 'Agent Safety Tooling 2025: Sandboxes, Guards, and Runtime Observability',
-      excerpt: 'Practical safety layers for autonomous agents: capability sandboxes, action guards, live monitoring.',
-      category: 'Cybersecurity',
-      author: 'Dr. Emily Watson',
->>>>>>> origin/feature/new-content-promotion
       date: '2025-09-12',
       readTime: '9 min read',
       image: '/blog/agent-safety.jpg'
@@ -488,16 +335,6 @@ export default function BlogPage() {
   const categories = [
     { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { name: 'AI Solutions', count: 4, active: false },
-=======
-    { name: 'AI Solutions', count: 3, active: false },
->>>>>>> origin/feature/content-sept15-2025
 =======
     { name: 'AI Solutions', count: 3, active: false },
 >>>>>>> origin/feature/blog-content-2025
@@ -509,15 +346,6 @@ export default function BlogPage() {
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { name: 'Accessibility', count: 1, active: false },
-    { name: 'Infrastructure', count: 1, active: false },
-=======
-    { name: 'Infrastructure', count: 2, active: false },
->>>>>>> origin/feature/blog-content-2025
 =======
     { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
@@ -568,35 +396,11 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            href="/blog/ai-ops-cost-optimization-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AO
-=======
-            href="/blog/ai-governance-blueprint-2025"
-=======
-            href="/blog/ai-agent-safety-playbook-2025"
->>>>>>> origin/feature/add-ai-agent-safety-post
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-<<<<<<< HEAD
-                AG
->>>>>>> origin/feature/new-content-2025-09-15
 =======
                 AS
 >>>>>>> origin/feature/add-ai-agent-safety-post
@@ -611,11 +415,6 @@ export default function BlogPage() {
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                AG
->>>>>>> origin/feature/blog-content-2025
 =======
             href="/blog/ai-governance-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
@@ -641,21 +440,6 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
-=======
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
->>>>>>> origin/feature/new-content-2025-09-15
 =======
                   AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises
                 </h3>
@@ -693,14 +477,6 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
->>>>>>> origin/feat/content-promo
                 </p>
 =======
                   AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems
