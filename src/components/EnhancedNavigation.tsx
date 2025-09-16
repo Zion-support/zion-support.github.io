@@ -46,6 +46,18 @@ const EnhancedNavigation: React.FC = () => {
       ]
     },
     {
+      title: 'Emerging Tech',
+      path: '/emerging-tech',
+      icon: '🌟',
+      description: 'Cutting-edge emerging technologies',
+      subItems: [
+        { title: 'Holographic Reality', path: '/pages/AdvancedHolographicReality2026' },
+        { title: 'Metaverse Solutions', path: '/pages/AdvancedMetaverseSolutions2026' },
+        { title: 'Green Tech Revolution', path: '/pages/AdvancedGreenTechRevolution2026' },
+        { title: 'Cybersecurity Fortress', path: '/pages/AdvancedCybersecurityFortress2026' }
+      ]
+    },
+    {
       title: 'Biotech & Space',
       path: '/biotech-space',
       icon: '🚀',
