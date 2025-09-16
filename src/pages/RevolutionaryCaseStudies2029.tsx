@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const RevolutionaryCaseStudies2029: React.FC = () => {
@@ -127,7 +126,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryCaseStudies2029: React.FC = () => {
@@ -223,12 +221,10 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-<<<<<<< HEAD
             🏆 REVOLUTIONARY CASE STUDIES • JANUARY 2029
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -388,7 +384,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
               <div className="text-4xl font-bold mb-2">1M+</div>
               <div className="text-lg font-semibold mb-2">Lives Impacted</div>
               <div className="text-sm opacity-80">Worldwide</div>
-=======
             📊 REVOLUTIONARY CASE STUDIES • JANUARY 2029
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -534,14 +529,12 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">24/7</div>
               <div className="text-lg opacity-90">Support Available</div>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Create Your Success Story?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Join hundreds of organizations that have already transformed their operations with our revolutionary technologies. Let's create your success story together.
@@ -552,7 +545,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             </button>
             <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
               Contact Our Experts
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the companies that are already using our revolutionary technologies to achieve unprecedented success.
@@ -563,7 +555,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               View All Case Studies
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </button>
           </div>
         </div>
