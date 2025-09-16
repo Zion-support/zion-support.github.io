@@ -35,10 +35,14 @@ import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
 import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
 import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
 import AIRevolution2025 from './src/pages/AIRevolution2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
@@ -905,6 +909,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
           <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
