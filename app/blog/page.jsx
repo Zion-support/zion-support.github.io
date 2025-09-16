@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Operational Evidence‑Led Decisions",
+      description: "Centralize evals, incidents, approvals, and KPIs for audit‑ready, safe decisions.",
+      slug: "ai-2026-operational-evidence-led-decisions",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/operational-evidence-2026.jpg"
+    },
+    {
       title: "AI 2026: Safe Rollouts in Production",
       description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
       slug: "ai-2026-safe-rollouts-in-production",
