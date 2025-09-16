@@ -97,6 +97,12 @@ export default function HomePage() {
             Cost Optimizer v2.0 —
             <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Guardrail Metrics Widgets —
+            <a href="/updates/real-time-agent-metrics-widgets-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Incident Simulation Toolkit v1.1 —
+            <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
         </div>
@@ -182,6 +188,12 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Grounded Generation Guardrails —
             <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guardrail Metrics Widgets —
+            <a href="/updates/real-time-agent-metrics-widgets-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Incident Simulation Toolkit v1.1 —
+            <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
