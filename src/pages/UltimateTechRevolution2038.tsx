@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const UltimateTechRevolution2038: React.FC = () => {
