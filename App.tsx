@@ -145,6 +145,7 @@ import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
 import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
 import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
 import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
 import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
@@ -237,6 +238,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: New Content Promotion Banner 2025 */}
                 <NewContentPromotionBanner2025 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
@@ -395,6 +399,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryCaseStudies2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📊 NEW: Revolutionary Case Studies 2026 →
+                    </a>
+                    <a href="/pages/RevolutionaryCaseStudies2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🏆 NEW: Case Studies 2025 →
                     </a>
                     <a href="/pages/UltimateTechBlog2026" className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📝 NEW: Ultimate Tech Blog 2026 →
@@ -1070,6 +1077,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/pages/NextGenInnovationHub2029" element={<NextGenInnovationHub2029 />} />
           <Route path="/pages/RevolutionaryCaseStudies2029" element={<RevolutionaryCaseStudies2029 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
