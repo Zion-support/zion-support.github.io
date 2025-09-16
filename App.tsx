@@ -12,6 +12,11 @@ import SEOOptimizer from './src/components/SEOOptimizer';
 import MobileOptimizer from './src/components/MobileOptimizer';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import LoadingSpinner from './src/components/LoadingSpinner';
+import AnalyticsTracker from './src/components/AnalyticsTracker';
+import SecurityEnhancer from './src/components/SecurityEnhancer';
+import TestingSuite from './src/components/TestingSuite';
+import MonitoringDashboard from './src/components/MonitoringDashboard';
+import DocumentationGenerator from './src/components/DocumentationGenerator';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
@@ -84,10 +89,15 @@ export default function App(): JSX.Element {
         <ScrollToTop />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
-        <SEOOptimizer />
-        <MobileOptimizer />
-        <PerformanceDashboard />
-        <Header />
+                <SEOOptimizer />
+                <MobileOptimizer />
+                <AnalyticsTracker />
+                <SecurityEnhancer />
+                <TestingSuite enableTesting={process.env.NODE_ENV === 'development'} />
+                <MonitoringDashboard showDashboard={process.env.NODE_ENV === 'development'} />
+                <DocumentationGenerator generateDocs={process.env.NODE_ENV === 'development'} />
+                <PerformanceDashboard />
+                <Header />
         
         <Routes>
           <Route path="/" element={
