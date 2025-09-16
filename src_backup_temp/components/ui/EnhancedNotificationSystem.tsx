@@ -22,7 +22,6 @@ interface NotificationContextType {;
   clearAll: ()  => void}
 ;
   notifications: Notificatio n[];
-=======
   "notifications": Notificatio n[];';';
   addNotification: notificatio n: Omit<Notification,id'> void;
   "removeNotification": i d: string void;
@@ -33,7 +32,6 @@ interface NotificationContextType {;
 export;
   const context = useContext(NotificationContext);  if (!context) {;
 ';
-=======
 export ';
   const context = useContext(NotificationContext);  if (!context) {
 '
@@ -62,7 +60,6 @@ const "NotificationContainer": React.FC = props {;  const { notifications, remov
   return ();
     <div className = "fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">";
       <AnimatePresence mode="popLayout">;
-=======
             key={notification.id"}
             initial={{ "opacity": "0", "x": "30 0", "scale": "0.8 "}}
             animate={{ "opacity": "1", "x": "0", "scale": "1 "}}
@@ -75,7 +72,6 @@ const "NotificationContainer": React.FC = props {;  const { notifications, remov
 "}}";
             className="relative";
             <NotificationItem notification={notification} onRemove={removeNotification}    />;
-=======
         {notifications.map(("notification": unknow n, "index": unknow n (;
           <motion.div;
             key={notification.id}
@@ -94,7 +90,6 @@ const "NotificationContainer": React.FC = props {;  const { notifications, remov
         ))}
       </AnimatePresence>;
       {notifications.length > 1 && (;
-=======
         <motion.button;
           initial = {;
   { "opacity": "0",;
@@ -168,8 +163,6 @@ const "NotificationItem": Reac t.FC<NotificationItemProps> = ({ notification, on
           <X className="w-4 h-4"   />;        </button>;
       </div>;
     </motion.div>;
-=======
-=======
   )};
 // Utility functions for easy notification creation;';
 export ';';

@@ -131,7 +131,6 @@
     </div>
   );
 }
-=======
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -281,19 +280,15 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-=======
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Footer } from '@/components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -402,7 +397,6 @@ export default function FAQ() {
   const filteredFAQs = selectedCategory === "All" 
     ? faqData 
     : faqData.filter(faq => faq.category === selectedCategory);
-=======
       category: "General",
       questions: [
         {
@@ -416,7 +410,6 @@ export default function FAQ() {
         {
           question: "How do I get started on Zion?",
           answer: "Getting started is easy! Simply create an account, choose whether you're looking for services or offering them, and start exploring our marketplace. You can browse talent, post jobs, or list your services immediately."
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -586,7 +579,6 @@ export default function FAQ() {
         canonical="https://ziontechgroup.com/faq"
       />
       <Header />
-=======
         description="Find answers to common questions about Zion's AI and technology marketplace platform."
         keywords="FAQ, frequently asked questions, Zion marketplace, AI platform, tech services"
         canonical="https://ziontechgroup.com/faq"
@@ -609,7 +601,6 @@ export default function FAQ() {
                   selectedCategory === "All"
                     ? "bg-zion-purple text-white"
                     : "bg-zion-blue-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-zion-cyan"
-=======
         description="Find answers to common questions about Zion Tech Group, the world's first free AI and tech marketplace. Learn how to use our platform, find talent, and get started."
         keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services, questions, answers"
         canonical="https://ziontechgroup.com/faq"
@@ -729,7 +720,6 @@ export default function FAQ() {
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
                   <AccordionTrigger className="text-left text-white hover:text-zion-cyan transition-colors">
-=======
               Find answers to the most common questions about Zion's AI and technology marketplace
             </p>
           </div>
@@ -854,7 +844,6 @@ export default function FAQ() {
               >
                 Contact Support
               </a>
-=======
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still have questions?</h2>
@@ -868,7 +857,6 @@ export default function FAQ() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white" asChild>
                 <Link to="/help">Help Center</Link>
               </Button>
-=======
                   Contact Us
                 </a>
               </div>
@@ -880,7 +868,6 @@ export default function FAQ() {
     </>
   );
 }
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { FaqSection } from "@/components/FaqSection";
@@ -913,7 +900,6 @@ export default function FAQ() {
     </div>
   );
 }
-=======
               {faqs.map((category) => (
                 <button
                   key={category.category}
@@ -963,7 +949,6 @@ export default function FAQ() {
               </h3>
               <p className="text-zion-slate-light mb-6">
                 Can't find what you're looking for? Our support team is here to help.
-=======
           <div className="mt-12 text-center">
             <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-4">
@@ -995,11 +980,9 @@ export default function FAQ() {
     </div>
   );
 }
-=======
     </>
   );
 }
-=======
     </>
   );
 }

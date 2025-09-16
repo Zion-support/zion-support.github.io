@@ -109,7 +109,6 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-=======
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -246,7 +245,6 @@ const talentsData = [
     </div>);
 }
 
-=======
       
       <BrowseFilters type={browseType} />
       

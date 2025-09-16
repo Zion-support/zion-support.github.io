@@ -40,7 +40,6 @@
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
-=======
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
   const filterOptions = generateFilterOptions();
@@ -102,7 +101,6 @@
 
 
 
-=======
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}

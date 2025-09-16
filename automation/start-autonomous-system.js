@@ -365,7 +365,6 @@ const timeoutId = setTimeout(resolve,                                           
     const status = this.orchestrator.getStatus();
     
     logger.info('\n📊 System Status:');
-    logger.info('================');
     logger.info(`Status: ${status.isRunning ? 🟢 Running' : 🔴 Stopped'}`);
     logger.info(`Uptime: ${Math.floor(status.uptime / 1000)} seconds`);
     logger.info(`Total Tasks: ${status.tasks.total}`);
@@ -379,7 +378,6 @@ const timeoutId = setTimeout(resolve,                                           
     
     if (status.tasks.status) {
       logger.info('\n📋 Task Status:');
-      logger.info('==============');
       for (const [taskName, taskStatus] of Object.entries(status.tasks.status)) {
         const statusIcon = taskStatus.enabled ? 🟢' : 🔴';
         const runningIcon = taskStatus.isRunning ? ⚡' : ⏸️';
@@ -388,7 +386,6 @@ const timeoutId = setTimeout(resolve,                                           
     }
     
     logger.info('\n🎯 System Features:');
-    logger.info('==================');
     logger.info('🤖 Autonomous Operation: Enabled');
     logger.info('🔧 Self-Healing: Active');
     logger.info('📈 Performance Optimization: Active');
@@ -498,7 +495,6 @@ async function main()  {
         
       default:
         logger.info('🤖 Autonomous Automation System');
-        logger.info('==============================');
         logger.info('');
         logger.info('Usage: node start-autonomous-system.js [command]);
         logger.info('');

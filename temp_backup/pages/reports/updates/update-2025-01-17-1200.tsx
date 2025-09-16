@@ -10,7 +10,6 @@ export default function UpdateReport() {
         <meta property="og:title" content="Autonomous Update — 2025: 08: 15: 0406" />
         <meta property="og:description" content="Latest autonomous system update from Zion Tech Group's intelligent automation infrastructure." />
         <meta name="twitter:card" content="summary_large_image" />
-=======
         <meta name="description" content="Latest autonomous system update and performance metrics from Zion Tech Group." />
         <meta property="og:title" content="Autonomous Update — 2025: 08: 15: 0406" />
         <meta property="og:description" content="Latest autonomous system update and performance metrics from Zion Tech Group." />

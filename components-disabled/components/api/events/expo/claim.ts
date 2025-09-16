@@ -6,7 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-=======
   // In production: verify signature, mint or issue POAP
   console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…');
   return res.status(200).json({ ok: true });

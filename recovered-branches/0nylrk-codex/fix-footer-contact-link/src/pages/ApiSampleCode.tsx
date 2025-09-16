@@ -19,7 +19,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
-=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -45,7 +44,6 @@ async function createJob(jobData) {
 
 
 
-=======
 // Search for talent
 async function searchTalent(filters = {}) {
   try {
@@ -70,7 +68,6 @@ async function main() {
 
 
 
-=======
         currency: 'USD'
       },
       skills: ['React', 'TypeScript', 'Tailwind CSS']
@@ -155,7 +152,6 @@ async function createJob(jobData) {
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
 
 
-=======
   Object.entries(filters).forEach(([key, value]) => {
     params.append(key, value);
   });
@@ -182,7 +178,6 @@ async function searchTalent(filters = {}) {
 
 
 
-=======
     params.append(key, value);
   });
   
@@ -247,7 +242,6 @@ async function main() {
 
 export default ApiSampleCode;
 
-=======
   );
 }
 
