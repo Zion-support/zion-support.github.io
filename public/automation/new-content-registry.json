@@ -1,6 +1,41 @@
 {
   "items": [
     {
+      "title": "Executive Guide — Agent Safety Evidence Bundles (2026)",
+      "href": "/reports/guides/guide-2026-agent-safety-evidence-bundles",
+      "desc": "Package traces, policy events, evals, and metrics into verifiable bundles.",
+      "createdAt": "2025-09-16T23:59:59.990Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Governed Real-Time Tool Use (2026)",
+      "href": "/reports/blueprints/blueprint-2026-governed-real-time-tool-use",
+      "desc": "Risk-tiered adapters and runtime checks for production tool execution.",
+      "createdAt": "2025-09-16T23:59:59.985Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 40% Incident Reduction via Agent SLOs (2026)",
+      "href": "/reports/cases/case-2026-agent-slos-incident-reduction",
+      "desc": "Scorecard-driven ops reduced incidents and improved MTTR.",
+      "createdAt": "2025-09-16T23:59:59.980Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Evidence-First AI Governance (2026)",
+      "href": "/reports/briefs/brief-2026-evidence-first-governance",
+      "desc": "Operationalize governance with measurable evidence and policy events.",
+      "createdAt": "2025-09-16T23:59:59.975Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blog — Production-Ready Agent Runbooks (Deep Dive)",
+      "href": "/blog/ai-2026-agent-runbooks-production",
+      "desc": "Runbooks integrating live evals, incidents, and rollback workflows.",
+      "createdAt": "2025-09-16T23:59:59.970Z",
+      "source": "blog"
+    },
+    {
       "title": "Governed Real‑Time Model Routing (2026)",
       "href": "/blog/ai-2026-governed-realtime-model-routing",
       "desc": "Latency, cost, and quality‑aware routing with live evals and guardrails.",
