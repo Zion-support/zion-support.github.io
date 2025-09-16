@@ -10,6 +10,9 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
+  optimizeDeps: {
+    include: ['framer-motion']
+  },
   plugins: [
     react()
   ],
@@ -23,6 +26,9 @@ export default defineConfig({
           router: ['react-router-dom']
         }
       }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
     }
   },
   server: {

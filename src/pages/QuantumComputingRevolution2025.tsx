@@ -3,6 +3,9 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -297,6 +300,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -459,12 +463,21 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
->>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -696,9 +709,24 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
       </div>
     </div>
   );
