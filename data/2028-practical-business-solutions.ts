@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface PracticalBusinessSolution2028 {
+=======
+
+;
+  id: string;
+export interface PracticalBusinessSolution2028  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

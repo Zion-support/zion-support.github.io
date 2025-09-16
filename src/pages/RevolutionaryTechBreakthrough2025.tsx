@@ -8,7 +8,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY BREAKTHROUGH 2025 • EXCLUSIVE LAUNCH
->>>>>>> cursor/create-and-deploy-new-content-a12c
           </div>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Revolutionary Technology Breakthrough 2025
@@ -107,7 +106,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-a12c
         </div>
       </div>
     </div>

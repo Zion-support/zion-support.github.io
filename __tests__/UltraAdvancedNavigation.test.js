@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UltraAdvancedNavigation from '../components/UltraAdvancedNavigation';
 
+<<<<<<< HEAD
 describe('UltraAdvancedNavigation', () => {
   test('renders without crashing', () => {
     render(<UltraAdvancedNavigation />);
@@ -21,3 +22,15 @@ describe('UltraAdvancedNavigation', () => {
     render(<UltraAdvancedNavigation />);
   });
 });
+=======
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import UltraAdvancedNavigation from "./components/UltraAdvancedNavigation" describe("UltraAdvancedNavigation",() => {" test("renders without crashing",() => {" render(<UltraAdvancedNavigation / />) expect(screen.getByTestId("ultraadvancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<UltraAdvancedNavigation / />) }) test("handles user interactions",() => {" render(<UltraAdvancedNavigation / />) }) test("applies correct styling",() => {" render(<UltraAdvancedNavigation / />) }) })'"'"
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import UltraAdvancedNavigation from "./components/UltraAdvancedNavigation" describe("UltraAdvancedNavigation",() => {" test("renders without crashing",() => {" render(<UltraAdvancedNavigation / />) expect(screen.getByTestId("ultraadvancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<UltraAdvancedNavigation / />) }) test("handles user interactions",() => {" render(<UltraAdvancedNavigation / />) }) test("applies correct styling",() => {" render(<UltraAdvancedNavigation / />) }) })'"'"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> origin/merge-pr-12271

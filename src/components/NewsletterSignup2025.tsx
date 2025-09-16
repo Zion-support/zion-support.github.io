@@ -1,226 +1,236 @@
-"use client";
-'use client';
-
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Send, 
+  CheckCircle, 
+  Star,
+  Sparkles,
+  ArrowRight,
+  Bell,
+  Zap
+} from 'lucide-react';
 
 const NewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError(', ');
-
+    setIsLoading(true);
+    
     // Simulate API call
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      if (email.includes('@')) {
-        setIsSubscribed(true);
-        setEmail(', ');
-      } else {
-        setError('Please enter a valid email address');
-      }
-    } catch (err) {
-      setError('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubscribed(true);
+    setIsLoading(false);
+    setEmail('');
   };
+
+  const benefits = [
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      title: "Exclusive Tech Updates",
+      description: "Get first access to revolutionary technology announcements"
+    },
+    {
+      icon: <Star className="w-6 h-6 text-purple-400" />,
+      title: "Early Access Demos",
+      description: "Be among the first to experience new AI and quantum technologies"
+    },
+    {
+      icon: <Bell className="w-6 h-6 text-blue-400" />,
+      title: "Weekly Insights",
+      description: "Deep dives into the latest breakthroughs in consciousness and quantum computing"
+    }
+  ];
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-6xl mb-4">🎉</div>
-          <h2 className="text-3xl font-bold mb-4">Welcome to the AI Revolution!</h2>
-          <p className="text-xl opacity-90 mb-6">
-            'You', 're now subscribed to our exclusive AI insights newsletter. 
-            Get ready for cutting-edge content delivered to your inbox.
-          </p>
-          <div className="bg-white bg-opacity-20 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold mb-2">'What', 's Next?</h3>
-            <ul className="text-left space-y-2">
-              <li>• Weekly AI trend reports and insights</li>
-              <li>• Exclusive case studies and success stories</li>
-              <li>• Early access to new tools and calculators</li>
-              <li>• Invitations to webinars and events</li>
-            </ul>
-          </div>
+      <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
+        
+        <div className="relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-full mb-6">
+              <CheckCircle className="w-10 h-10 text-white" />
+            </div>
+            
+            <h2 className="text-4xl font-bold mb-4">
+              🎉 Welcome to the Future!
+            </h2>
+            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+              You're now part of our exclusive community. Get ready for mind-blowing 
+              updates on the latest revolutionary technologies!
+            </p>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto">
+              <h3 className="text-lg font-bold mb-4">What's Next?</h3>
+              <div className="space-y-2 text-left">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Confirmation email sent</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Weekly tech insights</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Exclusive demo access</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium">📧 EXCLUSIVE INSIGHTS</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Stay Ahead of the AI Revolution
-            </h2>
-            <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Get exclusive access to cutting-edge AI insights, success stories, 
-              and industry trends that will transform your business. Join 10,000+ 
-              forward-thinking professionals.
-            </p>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Weekly AI trend reports and insights</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Exclusive case studies and success stories</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Early access to new tools and calculators</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Invitations to exclusive webinars and events</span>
-              </div>
-            </div>
+    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
+      <div className="relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
+            <Sparkles className="w-6 h-6" />
+            <span>JOIN THE REVOLUTION</span>
+            <Star className="w-6 h-6" />
           </div>
+          
+          <h2 className="text-6xl font-bold mb-6">
+            🚀 Stay Ahead of the Future
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Get exclusive access to the latest revolutionary technologies, 
+            early demos, and insider insights from the cutting edge of AI consciousness 
+            and quantum computing.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Benefits */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-3xl font-bold mb-8">Why Join Our Community?</h3>
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="flex-shrink-0 p-3 bg-white/10 rounded-xl">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
+                    <p className="text-gray-300">{benefit.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Signup Form */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">
-              Join the AI Revolution
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              Get Started Today
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
                   Email Address
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none"
-                  required
-                />
-                {error && (
-                  <p className="mt-2 text-sm text-red-200">{error}</p>
-                )}
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                    First Name
-                  </label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
-                    type="text"
-                    id="firstName"
-                    placeholder="John"
-                    className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    placeholder="Doe"
-                    className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none"
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    required
                   />
                 </div>
               </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company (Optional)
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  placeholder="Your Company"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="industry" className="block text-sm font-medium mb-2">
-                  Industry
-                </label>
-                <select
-                  id="industry"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none"
-                >
-                  <option value="" className="text-gray-800">Select your industry</option>
-                  <option value="manufacturing" className="text-gray-800">Manufacturing</option>
-                  <option value="healthcare" className="text-gray-800">Healthcare</option>
-                  <option value="finance" className="text-gray-800">Finance</option>
-                  <option value="retail" className="text-gray-800">Retail</option>
-                  <option value="technology" className="text-gray-800">Technology</option>
-                  <option value="other" className="text-gray-800">Other</option>
-                </select>
-              </div>
-
+              
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Subscribing...
-                  </div>
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    <span>Joining...</span>
+                  </>
                 ) : (
-                  'Get Free AI Insights'
+                  <>
+                    <Send className="w-5 h-5" />
+                    <span>Join the Revolution</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </>
                 )}
               </button>
             </form>
-
-            <p className="text-sm text-center mt-4 opacity-80">
-              No spam, unsubscribe at any time. We respect your privacy.
+            
+            <p className="text-sm text-gray-400 mt-4 text-center">
+              By subscribing, you agree to receive updates about our revolutionary technologies. 
+              Unsubscribe at any time.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-12 text-center">
-          <p className="text-sm opacity-80 mb-4">Trusted by industry leaders</p>
-          <div className="flex flex-wrap justify-center items-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold">Fortune 500</div>
-            <div className="text-2xl font-bold">Startups</div>
-            <div className="text-2xl font-bold">Enterprises</div>
-            <div className="text-2xl font-bold">Agencies</div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 inline-block">
+            🌟 10,000+ Innovators Already Joined
           </div>
-        </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/pages/UltimateTechRevolution2025"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg transform hover:scale-105"
+            >
+              🚀 Explore Ultimate Revolution →
+            </a>
+            <a 
+              href="/pages/AdvancedAIConsciousness2025"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg transform hover:scale-105"
+            >
+              🧠 Meet Conscious AI →
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

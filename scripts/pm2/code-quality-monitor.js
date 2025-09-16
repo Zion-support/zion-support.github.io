@@ -81,7 +81,11 @@ monitor.run().catch(error = > {process.exit(1)});
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 
+<<<<<<< HEAD
 monitor.run().catch(error = > {; process.exit(1)});
+=======
+
+>>>>>>> origin/merge-pr-12271
 };
 };
 ;
@@ -112,6 +116,40 @@ monitor.run().catch(error = > {; process.exit(1)});
             severity: 'low';
           });
 
+<<<<<<< HEAD
+=======
+}};
+monitor && monitor.run().catch(error = > {; process && process.exit(1)});
+    };
+  };
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync(filePath, 'utf8'),
+      const stats = fs.statSync(filePath),
+,
+      const analysis = {,
+        file: filePath,
+        size: stats.size,
+        lines: content.split('\n').length,
+        issues: []
+      };
+,
+      // Check for common code quality issues,
+      const lines = content.split('\n'),
+,
+      lines.forEach((line, index) => {,
+        const lineNum = index + 1,
+,
+        // Trailing spaces,
+        if (line.match(/[ \t]+$/)) {,
+          analysis.issues.push({,
+            line: lineNum,
+            type: 'trailing-spaces',
+            message: 'Trailing spaces found',
+            severity: 'low'
+          })
+>>>>>>> origin/merge-pr-12271
         };
 ,
         // Long lines (over 120 characters),
@@ -219,8 +257,13 @@ monitor.run().catch(error = > {; process.exit(1)});
         issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
 ,
         // Count by severity,
+<<<<<<< HEAD
         issuesBySeverity[issue.severity]++,
       }),
+=======
+        issuesBySeverity[issue.severity]++
+      })
+>>>>>>> origin/merge-pr-12271
     }),
 ,
     const report = {,
@@ -229,13 +272,21 @@ monitor.run().catch(error = > {; process.exit(1)});
         totalFiles,
         totalIssues,
         issuesByType,
+<<<<<<< HEAD
         issuesBySeverity,
+=======
+        issuesBySeverity
+>>>>>>> origin/merge-pr-12271
       },
       files: analyses.filter(analysis => analysis.issues.length > 0),
       recommendations: this.generateRecommendations(issuesByType, totalIssues),
     };
 ,
+<<<<<<< HEAD
     return report,
+=======
+    return report
+>>>>>>> origin/merge-pr-12271
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -246,8 +297,13 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
+<<<<<<< HEAD
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
+=======
+        action: 'Run the lint-fixer to automatically remove trailing spaces'
+      })
+>>>>>>> origin/merge-pr-12271
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -255,8 +311,13 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
         action: 'Replace console statements with proper logging or remove them',
       }),
+=======
+        action: 'Replace console statements with proper logging or remove them'
+      })
+>>>>>>> origin/merge-pr-12271
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -264,8 +325,13 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
+<<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
       }),
+=======
+        action: 'Clean up unused imports to reduce bundle size'
+      })
+>>>>>>> origin/merge-pr-12271
     };
 ,
     if (totalIssues > 100) {,
@@ -273,24 +339,40 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
+<<<<<<< HEAD
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
 ,
     return recommendations,
+=======
+        action: 'Run comprehensive code cleanup and establish coding standards'
+      })
+    };
+,
+    return recommendations
+>>>>>>> origin/merge-pr-12271
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursive: true }),
+=======
+        fs.mkdirSync(reportDir, { recursive: true })
+>>>>>>> origin/merge-pr-12271
       };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved to: ${this.reportFile}`),
     } catch (error) {,
+<<<<<<< HEAD
       this.log(`Error saving report: ${error.message}`),
+=======
+      this.log(`Error saving report: ${error.message}`)
+>>>>>>> origin/merge-pr-12271
     };
   };
 ,
@@ -298,7 +380,11 @@ monitor.run().catch(error = > {; process.exit(1)});
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
+<<<<<<< HEAD
         encoding: 'utf8',
+=======
+        encoding: 'utf8'
+>>>>>>> origin/merge-pr-12271
       }),
 ,
       if (status.trim()) {,
@@ -321,7 +407,11 @@ monitor.run().catch(error = > {; process.exit(1)});
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursive: true }),
+=======
+        fs.mkdirSync(logsDir, { recursive: true })
+>>>>>>> origin/merge-pr-12271
       };
 ,
       // Check git status,
@@ -347,9 +437,15 @@ monitor.run().catch(error = > {; process.exit(1)});
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
+<<<<<<< HEAD
         this.log('\n Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`),
+=======
+        this.log('\n🚨 Issues by type: '),
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+          this.log(`  ${type}: ${count}`)
+>>>>>>> origin/merge-pr-12271
         }),
 ,
         this.log('\n Recommendations: '),
@@ -360,15 +456,24 @@ monitor.run().catch(error = > {; process.exit(1)});
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
+<<<<<<< HEAD
           this.log('\n Suggesting to run lint-fixer to auto-fix issues'),
+=======
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')
+>>>>>>> origin/merge-pr-12271
         };
       } else {,
         this.log(' Excellent! No code quality issues found!'),
       };
 ,
     } catch (error) {,
+<<<<<<< HEAD
       this.log(` Error running code quality monitor: ${error.message}`),
       process.exit(1),
+=======
+      this.log(`❌ Error running code quality monitor: ${error.message}`),
+      process.exit(1)
+>>>>>>> origin/merge-pr-12271
     };
   };
 };
@@ -377,8 +482,13 @@ monitor.run().catch(error = > {; process.exit(1)});
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
+<<<<<<< HEAD
   process.exit(1),
 }),
+=======
+  process.exit(1)
+})
+>>>>>>> origin/merge-pr-12271
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -1087,6 +1197,11 @@ monitor.run().catch(error => {,;
   process.exit(1);
 });
 
+<<<<<<< HEAD
 
 
 
+=======
+  process.exit(1)
+}),
+>>>>>>> origin/merge-pr-12271

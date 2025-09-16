@@ -143,6 +143,31 @@ export default function ContentIndexPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="hover:underline">
+              Autonomous Cost Optimization 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce cloud and AI spend with agentic automation and policy-as-code guardrails.
+          </p>
+          <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="hover:underline">
+              Agentic Sales Acceleration 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Deploy revenue agents for enrichment, outreach, and scheduling with compliance.
+          </p>
+          <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="text-blue-600 font-semibold">Read Playbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
               AI Governance Blueprint 2026
             </Link>
@@ -274,6 +299,7 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
+<<<<<<< HEAD
           <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/genai-governance-2026" className="hover:underline">
@@ -283,6 +309,30 @@ export default function ContentIndexPage() {
           <p className="text-gray-600 mb-4">
             Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
           </p>
+=======
+          <div className="text-sm font-semibold text-teal-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-evals-blueprint" className="hover:underline">
+              AI 2026: Operational Evals Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems.
+          </p>
+          <Link href="/content/ai-2026-operational-evals-blueprint" className="text-teal-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/genai-governance-2026" className="hover:underline">
+              GenAI Governance 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
+          </p>
+>>>>>>> cursor/create-and-deploy-new-content-376e
           <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
         </article>
 

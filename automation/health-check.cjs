@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-ceec
@@ -8,6 +9,31 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🏥 Starting Health Check...');
+=======
+<<<<<<< HEAD
+
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+});
+=======
+#!/usr/bin/env node
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+>>>>>>> origin/chore/fix-automation-and-build
+>>>>>>> origin/merge-pr-12271
 
 class HealthChecker {
   constructor() {
@@ -39,6 +65,7 @@ class HealthChecker {
     }
   }
 
+<<<<<<< HEAD
   async checkTests() {
     console.log('🧪 Checking test health...');
     try {
@@ -56,6 +83,15 @@ class HealthChecker {
         error: error.message
       });
     }
+=======
+    } else {
+      this.log('❌ Application health issues detected', 'ERROR');
+    }
+
+=======
+    this.issues = [];
+    this.fixes = [];
+>>>>>>> origin/merge-pr-12271
   }
 
   async checkDependencies() {
@@ -108,6 +144,7 @@ class HealthChecker {
     
     const missingFiles = criticalFiles.filter(file => !fs.existsSync(file));
     
+<<<<<<< HEAD
     if (missingFiles.length === 0) {
       this.results.checks.push({
         name: 'file_structure',
@@ -235,3 +272,19 @@ checks.forEach(check => {
 });
 >>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+=======
+    if (this.fixes.length > 0) {
+      console.log("\n🔧 Suggested fixes:");
+      this.fixes.forEach((fix, index) => console.log(`${index + 1}. ${fix}`));
+    }
+    
+    if (this.issues.length === 0) {
+      console.log("\n🎉 All checks passed! Your app is healthy.");
+    }
+  }
+}
+
+const checker = new HealthChecker();
+checker.runAllChecks().catch(console.error);
+>>>>>>> origin/chore/fix-automation-and-build
+>>>>>>> origin/merge-pr-12271
