@@ -53,7 +53,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE DEMO • JANUARY 2026
           </div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🌟 Interactive Technology Showcase 2026</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most advanced technologies through interactive demonstrations
@@ -148,41 +147,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 📞 Contact Us
               </button>
             </div>
-=======
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {showcaseItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Quick Access Grid */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-center mb-8">Quick Access to All Innovations</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {showcaseItems.map((item, index) => (
-              <motion.a
-                key={item.id}
-                href={item.link}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`bg-gradient-to-r ${item.gradient} rounded-lg p-4 text-center hover:shadow-lg transition-all duration-300 ${
-                  index === currentSlide ? 'ring-2 ring-white' : ''
-                }`}
-              >
-                <div className="text-3xl mb-2">{item.icon}</div>
-                <div className="text-sm font-semibold">{item.title}</div>
-              </motion.a>
-            ))}
->>>>>>> cursor/create-and-deploy-new-content-079e
           </div>
         </div>
       </div>
