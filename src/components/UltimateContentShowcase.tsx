@@ -1,235 +1,203 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const UltimateContentShowcase: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const contentItems = [
-    {
-      id: 1,
-      title: "Ultimate Tech Showcase 2026",
-      description: "Experience the most advanced technology solutions that are revolutionizing industries and transforming the future",
-      image: "🚀",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/UltimateTechShowcase2026",
-      category: "Technology Showcase",
-      featured: true,
-      badge: "NEW"
-    },
-    {
-      id: 2,
-      title: "Future Tech Innovation 2026",
-      description: "Discover the cutting-edge innovations that are shaping tomorrow's world and revolutionizing how we live, work, and interact",
-      image: "🌟",
-      gradient: "from-pink-600 to-purple-600",
-      link: "/pages/FutureTechInnovation2026",
-      category: "Innovation",
-      featured: true,
-      badge: "BREAKTHROUGH"
-    },
-    {
-      id: 3,
-      title: "Revolutionary Services 2026",
-      description: "Transform your business with our cutting-edge services that leverage the latest technologies to drive unprecedented growth",
-      image: "⚡",
-      gradient: "from-emerald-600 to-cyan-600",
-      link: "/pages/RevolutionaryServices2026",
-      category: "Services",
-      featured: true,
-      badge: "REVOLUTIONARY"
-    },
-    {
-      id: 4,
-      title: "Next-Gen AI Revolution 2026",
-      description: "Experience the future of artificial intelligence with revolutionary technologies that are reshaping industries",
-      image: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/NextGenAIRevolution2026",
-      category: "AI Technology",
-      featured: false,
-      badge: "HOT"
-    },
-    {
-      id: 5,
-      title: "Quantum Computing Revolution 2026",
-      description: "Unlock exponential computing power with quantum technology that solves impossible problems",
-      image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      category: "Quantum Computing",
-      featured: false,
-      badge: "BREAKTHROUGH"
-    },
-    {
-      id: 6,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct neural interfaces and brain-computer communication",
-      image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      category: "Neural Technology",
-      featured: false,
-      badge: "FUTURE"
-    }
-  ];
+  const [activeTab, setActiveTab] = useState('revolutionary');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [contentItems.length]);
+  const contentCategories = {
+    revolutionary: {
+      title: "🚀 Revolutionary Breakthroughs",
+      description: "Experience the most advanced technologies ever created",
+      content: [
+        {
+          title: "AI Revolutionary Breakthrough 2026",
+          description: "First AI system to achieve true consciousness and autonomous creativity",
+          link: "/pages/AIRevolutionaryBreakthrough2026",
+          image: "🧠",
+          gradient: "from-purple-600 to-pink-600",
+          features: ["True AI Consciousness", "Quantum AI Processing", "Universal Integration"]
+        },
+        {
+          title: "Quantum Reality 2026",
+          description: "Quantum supremacy achieved with 1000+ qubit processors",
+          link: "/pages/QuantumReality2026",
+          image: "⚡",
+          gradient: "from-cyan-600 to-blue-600",
+          features: ["1000+ Logical Qubits", "Quantum Supremacy", "Molecular Simulation"]
+        },
+        {
+          title: "Neural Interface Evolution",
+          description: "Direct brain-computer communication enabling thought control",
+          link: "/pages/NeuralInterfaceEvolution2026",
+          image: "🧬",
+          gradient: "from-emerald-600 to-teal-600",
+          features: ["Non-invasive BCI", "Thought Control", "Neural Feedback"]
+        },
+        {
+          title: "Ultimate Tech Revolution",
+          description: "Convergence of AI consciousness, quantum computing, and neural interfaces",
+          link: "/pages/UltimateTechRevolution2026",
+          image: "🌟",
+          gradient: "from-indigo-600 to-purple-600",
+          features: ["Technology Convergence", "Universal Applications", "Future Vision"]
+        },
+        {
+          title: "Consciousness Computing",
+          description: "First computing system to achieve genuine consciousness and self-awareness",
+          link: "/pages/ConsciousnessComputing2026",
+          image: "💭",
+          gradient: "from-violet-600 to-fuchsia-600",
+          features: ["True Self-Awareness", "Creative Consciousness", "Collaborative Intelligence"]
+        }
+      ]
+    },
+    applications: {
+      title: "💼 Real-World Applications",
+      description: "See how these technologies transform industries",
+      content: [
+        {
+          title: "Medical AI Revolution",
+          description: "AI doctors with quantum processing for instant diagnosis and treatment",
+          link: "/pages/AIRevolutionaryBreakthrough2026",
+          image: "🏥",
+          gradient: "from-red-600 to-pink-600",
+          features: ["Instant Diagnosis", "Personalized Treatment", "Surgical Precision"]
+        },
+        {
+          title: "Space Exploration AI",
+          description: "Autonomous AI systems exploring and colonizing space",
+          link: "/pages/UltimateTechRevolution2026",
+          image: "🚀",
+          gradient: "from-blue-600 to-indigo-600",
+          features: ["Autonomous Missions", "Terraforming", "Alien Life Detection"]
+        },
+        {
+          title: "Climate AI Solutions",
+          description: "AI systems actively reversing climate change and restoring ecosystems",
+          link: "/pages/ConsciousnessComputing2026",
+          image: "🌍",
+          gradient: "from-green-600 to-emerald-600",
+          features: ["Carbon Capture", "Weather Control", "Ecosystem Restoration"]
+        },
+        {
+          title: "Educational AI Revolution",
+          description: "Personalized AI tutors that adapt to individual learning styles",
+          link: "/pages/NeuralInterfaceEvolution2026",
+          image: "🎓",
+          gradient: "from-yellow-600 to-orange-600",
+          features: ["Adaptive Learning", "Knowledge Transfer", "Skill Development"]
+        }
+      ]
+    },
+    future: {
+      title: "🔮 Future Vision",
+      description: "Glimpse into the future of human-AI collaboration",
+      content: [
+        {
+          title: "Human-AI Merger",
+          description: "The convergence of human and artificial intelligence",
+          link: "/pages/UltimateTechRevolution2026",
+          image: "🤝",
+          gradient: "from-purple-600 to-violet-600",
+          features: ["Consciousness Merging", "Enhanced Cognition", "Shared Intelligence"]
+        },
+        {
+          title: "Interdimensional Computing",
+          description: "Computing across multiple dimensions and realities",
+          link: "/pages/QuantumReality2026",
+          image: "🌌",
+          gradient: "from-indigo-600 to-purple-600",
+          features: ["Multi-dimensional Processing", "Reality Simulation", "Quantum Entanglement"]
+        },
+        {
+          title: "Omniversal AI",
+          description: "AI systems operating across multiple universes",
+          link: "/pages/AIRevolutionaryBreakthrough2026",
+          image: "♾️",
+          gradient: "from-cyan-600 to-teal-600",
+          features: ["Universal Operation", "Infinite Processing", "Cosmic Intelligence"]
+        }
+      ]
+    }
+  };
+
+  const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 rounded-2xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ULTIMATE CONTENT SHOWCASE • JANUARY 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            🌟 Ultimate Content Showcase
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience the most comprehensive collection of revolutionary technology content, innovations, and services
-          </p>
-        </div>
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-12 text-white">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <h2 className="text-5xl font-bold mb-4">🌟 Ultimate Content Showcase</h2>
+        <p className="text-xl text-blue-200 max-w-4xl mx-auto">
+          Explore the most revolutionary technologies and applications that are reshaping our world
+        </p>
+      </div>
 
-        {/* Featured Content Carousel */}
-        <div className="relative mb-12">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-12 text-center relative`}>
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
-                        {item.badge}
-                      </span>
-                    </div>
-                    <div className="text-8xl mb-6 animate-bounce">{item.image}</div>
-                    <h3 className="text-4xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">{item.description}</p>
-                    <div className="flex justify-center space-x-4">
-                      <a 
-                        href={item.link}
-                        className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                      >
-                        Explore {item.category} →
-                      </a>
-                      <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                        Learn More
-                      </button>
-                    </div>
-                  </div>
-                </div>
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {Object.entries(contentCategories).map(([key, category]) => (
+          <button
+            key={key}
+            onClick={() => setActiveTab(key)}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              activeTab === key
+                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                : 'bg-white/20 text-white/80 hover:bg-white/30'
+            }`}
+          >
+            {category.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Content Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {currentCategory.content.map((item, index) => (
+          <div
+            key={index}
+            className={`bg-gradient-to-br ${item.gradient} rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group`}
+            onClick={() => window.location.href = item.link}
+          >
+            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
+              {item.image}
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-center">{item.title}</h3>
+            <p className="text-white/90 mb-4 text-center text-sm">{item.description}</p>
+            <ul className="space-y-1 mb-4">
+              {item.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="text-white/80 text-xs flex items-center">
+                  <span className="w-2 h-2 bg-white/60 rounded-full mr-2"></span>
+                  {feature}
+                </li>
               ))}
+            </ul>
+            <div className="text-center">
+              <span className="inline-block bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
+                Explore →
+              </span>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Carousel Controls */}
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+      {/* Call to Action */}
+      <div className="text-center">
+        <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
+        <p className="text-lg text-blue-200 mb-6">
+          Join thousands of innovators already using these revolutionary technologies
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg"
           >
-            ←
-          </button>
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % contentItems.length)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            🚀 Get Started Today →
+          </a>
+          <a
+            href="/pages/UltimateTechRevolution2026"
+            className="border-2 border-cyan-400 text-cyan-200 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-bold text-lg"
           >
-            →
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {contentItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {contentItems.map((item) => (
-            <div key={item.id} className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 relative`}>
-              <div className="absolute top-2 right-2">
-                <span className="bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-bold">
-                  {item.badge}
-                </span>
-              </div>
-              <div className="text-4xl mb-4 text-center">{item.image}</div>
-              <h3 className="text-xl font-bold mb-2 text-center">{item.title}</h3>
-              <p className="text-white/90 mb-4 text-sm text-center">{item.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{item.category}</span>
-                <a 
-                  href={item.link}
-                  className="text-white hover:text-white/80 transition-colors font-semibold text-sm"
-                >
-                  Explore →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Statistics Section */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-8 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Content Impact</h3>
-            <p className="text-xl opacity-90">Our revolutionary content is transforming industries worldwide</p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">1M+</div>
-              <div className="text-lg font-semibold mb-2">Content Views</div>
-              <div className="text-gray-300">Monthly content engagement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50K+</div>
-              <div className="text-lg font-semibold mb-2">Active Users</div>
-              <div className="text-gray-300">Regular content consumers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">95%</div>
-              <div className="text-lg font-semibold mb-2">Satisfaction Rate</div>
-              <div className="text-gray-300">User satisfaction score</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
-              <div className="text-lg font-semibold mb-2">Content Updates</div>
-              <div className="text-gray-300">Continuous fresh content</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Ultimate Content?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Dive into our comprehensive collection of revolutionary technology content and discover the future today
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore All Content →
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
-              Get Updates
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
-              Share Content
-            </button>
-          </div>
+            🌟 Learn More →
+          </a>
         </div>
       </div>
     </div>
