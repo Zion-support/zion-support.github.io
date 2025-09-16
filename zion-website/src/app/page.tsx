@@ -40,17 +40,20 @@ export default function HomePage() {
             Enterprise Retrieval Guardrails —
             <a href="/updates/enterprise-retrieval-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Evals‑in‑Prod Control Plane (2026) —
+            <a href="/updates/evals-in-prod-control-plane-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Enterprise Agent Risk Scorecards —
             <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Production Evals Control Plane —
-            <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            Failure Analysis Toolkit (2026) —
+            <a href="/updates/autonomous-failure-analysis-toolkit-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">report</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Multimodal Guardrails —
-            <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">patterns</a>
+            Real‑Time Agent FinOps Dashboard —
+            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Cost Optimizer v2.0 —
             <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
@@ -84,11 +87,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Autonomous Incident Response Copilot —
-            <a href="/updates/autonomous-incident-response-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            Fresh: Agent Observability Blueprint (2026) —
+            <a href="/updates/agent-observability-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Enterprise Retrieval Guardrails —
-            <a href="/updates/enterprise-retrieval-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            Evals‑in‑Prod Control Plane (2026) —
+            <a href="/updates/evals-in-prod-control-plane-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>

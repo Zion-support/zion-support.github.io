@@ -1,35 +1,41 @@
-// @ts-nocheck
-export const metadata = {
-    title: 'Agent Observability Blueprint (2026) — Guide',
-    description: 'Traces, metrics, logs, eval overlays, and evidence bundling patterns for reliable agent systems.',
-}
+import React from 'react'
 
-export default function Page() {
-    return (
-        <main className="bg-black min-h-screen">
-            <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 text-gray-200">
-                <p className="text-sm text-blue-300">Guide • 2025-09-16</p>
-                <h1 className="mt-2 text-3xl sm:text-4xl font-bold text-white">Agent Observability Blueprint (2026)</h1>
-                <p className="mt-6 text-lg text-gray-300">
-                    A practical blueprint for end-to-end observability in production agent systems. Covering traces,
-                    metrics, structured logs, eval overlays, and evidence bundling to speed incident analysis and
-                    reduce mean time to resolution.
-                </p>
-                <section className="mt-10 space-y-6">
-                    <h2 className="text-2xl font-semibold text-white">What you will learn</h2>
-                    <ul className="list-disc pl-6 space-y-2">
-                        <li>Designing agent traces with tool/action spans and error taxonomies</li>
-                        <li>Critical SLIs and SLOs for agent latency, quality, and stability</li>
-                        <li>Live eval overlays for faster debugging and safe rollouts</li>
-                        <li>Evidence bundles for reproducible incident investigations</li>
-                        <li>Dashboards and alerts that matter for real-time agents</li>
-                    </ul>
-                </section>
-                <div className="mt-10">
-                    <a href="/updates" className="text-blue-400 hover:text-blue-300">Back to updates →</a>
-                </div>
-            </div>
-        </main>
-    )
+export default function AgentObservabilityBlueprint2026Page() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
+        <p className="text-xs text-blue-300">Guide • 2025-09-16</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Agent Observability Blueprint (2026)
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300">
+          End-to-end traces, SLIs/SLOs, eval overlays, and evidence bundles purpose-built for
+          autonomous agents in production. This blueprint outlines a practical reference
+          architecture and the key metrics to monitor reliability and safety.
+        </p>
+        <div className="mt-10 grid gap-6">
+          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
+            <h2 className="text-xl font-semibold text-white">What’s inside</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
+              <li>Trace model: actions, tools, memory, and external effects</li>
+              <li>Key SLIs/SLOs: latency, cost, quality, incident rate</li>
+              <li>Eval overlays and rollout gates with policy-as-code</li>
+              <li>Evidence bundles and audit-ready lineage</li>
+              <li>Dashboards for engineering and executive stakeholders</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
+            <h2 className="text-xl font-semibold text-white">Outcomes</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
+              <li>Faster incident triage with trace diffs and eval context</li>
+              <li>Higher reliability via SLOs and safe rollbacks</li>
+              <li>Provable compliance through signed evidence</li>
+            </ul>
+          </div>
+          <a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">Back to updates →</a>
+        </div>
+      </div>
+    </div>
+  )
 }
 

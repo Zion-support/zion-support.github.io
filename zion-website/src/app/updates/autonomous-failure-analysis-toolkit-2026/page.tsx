@@ -1,30 +1,39 @@
-// @ts-nocheck
-export default function Page() {
+import React from 'react'
+
+export default function AutonomousFailureAnalysisToolkit2026Page() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <section className="mx-auto max-w-3xl px-6 py-24">
-        <p className="text-blue-400 font-semibold">Report • 2025-09-16</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight">Autonomous Failure Analysis Toolkit (2026)</h1>
-        <p className="mt-4 text-gray-300">
-          Trace diffs, lineage captures, and reproducible post‑mortems purpose‑built for autonomous agent incidents.
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
+        <p className="text-xs text-blue-300">Report • 2025-09-16</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Autonomous Failure Analysis Toolkit (2026)
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300">
+          Methods and tools for reproducible post‑mortems in agent systems. Learn how to capture
+          lineage, compare traces, and compile evidence bundles that accelerate root‑cause analysis.
         </p>
-        <div className="mt-8 space-y-4 text-gray-200 leading-7">
-          <p>
-            The toolkit combines request‑level traces, retrieval metrics, and policy gate outcomes to accelerate root‑cause analysis.
-            It emphasizes reproducibility with snapshot bundles and deterministic replays.
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Unified incident timeline with tool‑use and eval overlays</li>
-            <li>Lineage and provenance capture across prompts, data, and tools</li>
-            <li>Reproducible replays using signed evidence bundles</li>
-          </ul>
-          <p>
-            Pair with your observability stack for faster MTTR and safer rollouts.
-          </p>
+        <div className="mt-10 grid gap-6">
+          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
+            <h2 className="text-xl font-semibold text-white">Topics</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
+              <li>Trace diffing and execution replay</li>
+              <li>Data lineage and artifact provenance</li>
+              <li>Failure taxonomies and incident templating</li>
+              <li>Audit‑ready evidence and sign‑off workflows</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
+            <h2 className="text-xl font-semibold text-white">Who is this for</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
+              <li>Platform and SRE teams</li>
+              <li>Safety, compliance, and governance stakeholders</li>
+              <li>Product and data leaders accountable for reliability</li>
+            </ul>
+          </div>
+          <a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">Back to updates →</a>
         </div>
-        <a href="/updates" className="inline-block mt-10 rounded-md bg-blue-600 px-4 py-2 font-semibold hover:bg-blue-500">Back to updates →</a>
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
 
