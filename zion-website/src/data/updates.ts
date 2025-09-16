@@ -11,7 +11,26 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Newly added updates (2025-09-16 - batch 2)
+=======
+    // AI Lab fresh articles (2025-09-17) — newly added
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/reports/ai-lab/articles/new-agent-runtime-policy-enforcement-1758138000000.md',
+        date: '2025-09-17',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Field Guide: Eval Gates and Scorecards',
+        summary: 'Operationalize quality, latency, and cost with enforceable gates and live scorecards.',
+        href: '/reports/ai-lab/articles/new-eval-gates-scorecards-1758136200000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
+    // AI Lab fresh articles (2025-09-17)
+>>>>>>> feat/new-content-2025-09-17
     {
         title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
         summary: 'Drop-in UI widgets for live safety, latency and quality guardrails with alerts.',
