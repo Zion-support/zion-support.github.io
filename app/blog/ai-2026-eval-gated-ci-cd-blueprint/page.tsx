@@ -1,3 +1,28 @@
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+	title: 'AI 2026: Eval‑Gated CI/CD — Blueprint',
+	description:
+		'Evaluation-gated continuous delivery with canaries, rollback contracts, and evidence hubs.',
+};
+
+export default function Page() {
+	return (
+		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<h1 className="text-3xl font-bold text-gray-900">AI 2026: Eval‑Gated CI/CD — Blueprint</h1>
+			<p className="mt-4 text-gray-700">
+				Ship faster and safer with evaluation gates at preflight, canary, and post‑release stages.
+				Adopt scorecards, rollback contracts, and an audit‑ready evidence hub.
+			</p>
+			<div className="mt-8 flex gap-3">
+				<Link href="/resources/ai-2026-release-scorecards-starter-kit" className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-700">Scorecards Kit</Link>
+				<Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50">Eval Harness</Link>
+			</div>
+		</main>
+	);
+}
+
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
