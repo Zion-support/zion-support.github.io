@@ -170,6 +170,24 @@ export default function HomePage() {
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
 
+      {/* New: Sept 2025 fresh posts promo */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New on the blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Evidence‑Led Ops, Risk Metrics, Fresh RAG</h2>
+              <p className="text-gray-600 mt-2">Three practical guides you can ship this week.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-evidence-led-operations-starter-kit" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evidence‑Led Ops</Link>
+              <Link href="/blog/ai-2026-agent-risk-metrics" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Risk Metrics</Link>
+              <Link href="/blog/rag-2026-freshness-aware-retrieval-patterns" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Fresh RAG</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Promo: Frontier Research Agents (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-pink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

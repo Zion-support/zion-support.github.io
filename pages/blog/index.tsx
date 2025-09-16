@@ -17,6 +17,12 @@ const posts = [
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' }
 ]
 
+const featuredNew = [
+  { slug: 'ai-2026-evidence-led-operations-starter-kit', title: 'Evidence‑Led Operations — Starter Kit', cta: 'Read Guide' },
+  { slug: 'ai-2026-agent-risk-metrics', title: 'Agent Risk Metrics — What to Track', cta: 'See Metrics' },
+  { slug: 'rag-2026-freshness-aware-retrieval-patterns', title: 'RAG: Freshness‑Aware Retrieval', cta: 'View Patterns' }
+]
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
@@ -27,6 +33,22 @@ export default function BlogIndexPage() {
       </Head>
 
       <div className="container mx-auto px-4 py-16">
+        <div className="mb-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white/5 border border-purple-400/20 p-6 rounded-xl">
+            <div>
+              <div className="text-sm font-semibold text-purple-300">New on the blog</div>
+              <h2 className="text-2xl font-bold text-white mt-1">Evidence‑Led Ops, Risk Metrics, Fresh RAG</h2>
+              <p className="text-gray-300 mt-2">Three practical guides you can ship this week.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {featuredNew.map((f) => (
+                <Link key={f.slug} href={`/blog/${f.slug}`} className="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">
+                  {f.cta}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             Insights & Guides
