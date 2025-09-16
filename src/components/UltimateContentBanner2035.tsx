@@ -5,9 +5,19 @@ const UltimateContentBanner2035: React.FC = () => {
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
       <div className="absolute inset-0 opacity-40">
         <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
       </div>
+=======
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.15%22%3E%3Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+>>>>>>> cursor/create-and-deploy-new-content-fc0d
+=======
+      <div className="absolute inset-0 opacity-40">
+        <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
+      </div>
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
