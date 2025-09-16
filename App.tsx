@@ -239,6 +239,7 @@ import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnolo
 import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
+import NewContentBanner2025 from './src/components/NewContentBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -268,6 +269,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: New Content Banner 2025 - Latest Revolutionary Content */}
+                <NewContentBanner2025 />
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
@@ -602,6 +606,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧬 ULTIMATE: Neural Interface 2025 →
+                    </a>
+                    <a href="/pages/AIInnovationHub2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🤖 NEW: AI Innovation Hub 2025 →
+                    </a>
+                    <a href="/pages/QuantumComputingSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚛️ NEW: Quantum Solutions 2025 →
                     </a>
                   </div>
                 </div>
@@ -1186,6 +1196,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
