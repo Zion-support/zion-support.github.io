@@ -1197,6 +1197,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
+          <Route path="/pages/RevolutionaryTech2025" element={<RevolutionaryTech2025 />} />
+          <Route path="/pages/AIRevolutionaryBreakthrough2025" element={<AIRevolutionaryBreakthrough2025 />} />
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
