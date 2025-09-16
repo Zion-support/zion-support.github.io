@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+
+;
+const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true })return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+exports.config = {schedule: '*/10 * * * *'}exports.handler = async () => {const logs = [];
+  function logStep() {logs.push(`\n=== ${name} ===`)const { status, stdout, stderr } = fn()if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return status;
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+    return status
+  }
+  // Generate sitemap for crawling
+>>>>>>> origin/merge-pr-12271
 const path = require('path');
 const { spawnSync } = require('child_process');
 

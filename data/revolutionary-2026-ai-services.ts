@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface Revolutionary2026AiService {
+=======
+
+;
+  id: string;
+export interface Revolutionary2026AiService  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

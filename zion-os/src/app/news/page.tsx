@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // @ts-nocheck
+=======
+>>>>>>> origin/feat/news-content
 import Link from "next/link";
 import React from "react";
 
@@ -45,6 +48,7 @@ const latest2025 = [
     color: "blue",
   },
   {
+<<<<<<< HEAD
     date: "September 13, 2025",
     category: "SAFETY",
     title: "Agent Safety Scorecards now available across Zion OS deployments",
@@ -57,6 +61,27 @@ const latest2025 = [
     title: "Governed Autonomy Runbooks shipped for change management & approvals",
     slug: "/news/governed-autonomy-runbooks",
     color: "orange",
+=======
+    date: "September 14, 2025",
+    category: "SECURITY",
+    title: "Zero-trust orchestration added across all Zion OS deployments",
+    slug: "/news/zero-trust-orchestration-release",
+    color: "emerald",
+  },
+  {
+    date: "September 10, 2025",
+    category: "CLOUD",
+    title: "Multi-region failover achieves 99.995% uptime in production tests",
+    slug: "/news/multi-region-failover-uptime",
+    color: "cyan",
+  },
+  {
+    date: "September 06, 2025",
+    category: "ACADEMY",
+    title: "Zion Academy releases AI Governance Blueprint course (Level II)",
+    slug: "/news/academy-ai-governance-blueprint-l2",
+    color: "rose",
+>>>>>>> origin/feat/news-updates-home-teaser
   },
 ];
 
@@ -125,4 +150,7 @@ export default function NewsPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/feat/news-content

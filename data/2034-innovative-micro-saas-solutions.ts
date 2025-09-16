@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+export type InnovativeMicroSaas = {'Multi-speaker diarization',launch_date?: string;export type InnovativeMicroSaas = {export type InnovativeMicroSaas = {id: string;
+export type InnovativeMicroSaas = any;name: string;
+  description: string;
+  tagline?: string;
+  category:;
+    | 'Content Marketing';
+    | 'Business Operations';
+    | 'Marketing Automation';
+    | 'Customer Success';
+    | 'Sales Automation';
+    | 'Financial Technology';
+    | 'Human Resources';
+    | 'Supply Chain Management';
+>>>>>>> origin/merge-pr-12271
 export type InnovativeMicroSaas = {
 	id: string;
 	name: string;

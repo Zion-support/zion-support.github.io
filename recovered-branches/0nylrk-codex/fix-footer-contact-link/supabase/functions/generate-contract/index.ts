@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
@@ -11,6 +12,22 @@ interface Milestone {
   dueDate: string;
   estimatedHours: number;
 }
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,,
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+>>>>>>> origin/merge-pr-12271
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -19,6 +36,7 @@ serve(async (req) => {
   }
 
   try {
+<<<<<<< HEAD
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
@@ -67,6 +85,51 @@ serve(async (req) => {
       ${additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
       ${additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
       ${additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
+=======
+
+;
+  try {;
+    // Get the OpenAI API key from environment variables;
+    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    if (!apiKey) {;
+      throw new Error('OPENAI_API_KEY is not set');
+    }
+;
+    // Parse request body;
+    const {;
+      talentName,;
+      clientName,;
+      projectName,;
+      scopeSummary,;
+      startDate,;
+      endDate,;
+      paymentTerms,;
+      paymentAmount,;
+      additionalClauses,;
+      milestones;
+    } = await req.json(),;
+    // Create the contract prompt for OpenAI;
+    let prompt = `;
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;        `
+      });
+      prompt += `
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
+      `
+    }
+    prompt += `
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
+    `;
+    // Call OpenAI API
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST'
+      headers: {
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
+      body: JSON.stringify({
+        messages: [
+          {
+            role: 'system'      prompt += `;
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
+>>>>>>> origin/merge-pr-12271
       `;
     }
 
@@ -94,7 +157,15 @@ serve(async (req) => {
 
     prompt += `
     
+<<<<<<< HEAD
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
+=======
+    return new Response(JSON && JSON.stringify({ 
+      success: true, 
+      contract 
+    prompt += `;
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
+>>>>>>> origin/merge-pr-12271
     `;
 
     // Call OpenAI API
@@ -107,6 +178,7 @@ serve(async (req) => {
         messages: [
           {
             role: 'system',
+<<<<<<< HEAD
 
     const data = await response.json();
     
@@ -132,3 +204,26 @@ serve(async (req) => {
     );
   }
 });
+=======
+            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
+          {
+            role: 'user'
+            content: prompt}];        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    )
+  }
+});
+
+    console.error ('Error generating contract:', error);
+    return new Response (
+      JSON.stringify ({
+        success: false,
+        error: error.message || 'Failed to generate contract';
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+    );
+  }
+});
+;
+>>>>>>> origin/merge-pr-12271

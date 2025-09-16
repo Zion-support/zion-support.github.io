@@ -11,8 +11,123 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    id: "zero-trust-agent-architecture-2026",
+    title: "AI 2026: Zero-Trust Agent Architecture",
+=======
+    id: "autonomous-support-agents-2026",
+=======
+    id: "ai-2026-eval-cookbook",
+    title: "AI 2026: Evaluations Cookbook",
+    description:
+      "Practical, ready-to-run eval recipes for reliability, safety, and regression testing.",
+    ctaLabel: "Use Recipes",
+    href: "/content/ai-2026-eval-cookbook",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-reliability-checklists",
+    title: "AI 2026: Reliability Release Checklists",
+    description:
+      "Ship confidently with preflight, rollout, and incident playbooks for autonomous agents.",
+    ctaLabel: "Get Checklists",
+    href: "/content/ai-2026-reliability-checklists",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "llm-evals-maturity-model-2026-content",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-evals-maturity-model",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-certification-2026-content",
+    title: "AI 2026: Agent Safety Certification",
+    description:
+      "Structured certification to validate agent safety with scenario test suites and governance.",
+    ctaLabel: "Read Certification",
+    href: "/content/ai-2026-agent-safety-certification",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-evals-blueprint-2026",
+    title: "AI 2026: Autonomous Evals Blueprint",
+    description:
+      "Eval-first, guardrail-driven blueprint to ship reliable autonomous agents at scale.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-autonomous-evals-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-risk-and-safety-playbook-2026",
+    title: "AI 2026: Agentic Risk and Safety Playbook",
+    description:
+      "Safeguards, monitoring, and governance patterns for production agent systems.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-customer-support-agents-2026",
+>>>>>>> origin/feat/new-content-sept-15-2025
+    title: "AI 2026: Autonomous Customer Support Agents",
+    description:
+      "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    emoji: "🤖",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-blueprint-2026-new",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    description:
+      "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+    emoji: "🧪",
+=======
+    id: "agent-runbooks-blueprint-2026",
+    title: "AI 2026: Agent Runbooks Blueprint",
+    description:
+      "Eval‑gated, auditable runbooks with safety envelopes and deterministic rollback.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-agent-runbooks-blueprint",
+    emoji: "🛠️",
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+<<<<<<< HEAD
+    id: "autonomous-evals-blueprint-2026",
+    title: "AI 2026: Autonomous Evals Blueprint",
+>>>>>>> origin/feat/new-content-2025-09-15
+>>>>>>> cursor/create-and-deploy-new-content-376e
     description:
       "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
     ctaLabel: "Read Architecture",
@@ -50,11 +165,20 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
       "Pre‑wired SLOs, evals, incident, and cost views with example queries and JSON dashboards.",
     ctaLabel: "Get Starter Kit",
     href: "/resources/ai-2026-agent-platform-health-dashboard-starter",
+=======
+    id: "agent-platform-operations-2026-blog",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "SLOs, incidents, change management, and eval‑gated releases for agent platforms.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-platform-operations",
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
     emoji: "📊",
     highlight: true,
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
     id: "agent-slos-implementation-guide-2026",
     title: "AI 2026: Implementing Agent SLOs — Practical Guide",
     description:
@@ -164,6 +288,8 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/feature/new-slos-content-and-promo
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
     description:
@@ -330,6 +456,12 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     title: "AI 2026: Safe Tool Use Blueprint",
     description:
       "Permissioned tool use with risk tiers, sandboxes, policy‑as‑code, and runtime checks.",
+=======
+    id: "safe-tool-use-blueprint-2026",
+    title: "AI 2026: Safe Tool Use Blueprint",
+    description:
+      "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
+>>>>>>> origin/feat/new-content-sept15-2025
     ctaLabel: "Read Article",
     href: "/blog/ai-2026-safe-tool-use-blueprint",
     emoji: "🧰",
@@ -337,6 +469,22 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
+=======
+    id: "agents-oncall-automation-2026-new",
+    title: "AI 2026: Agents‑On‑Call Automation",
+    description:
+      "Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agents-oncall-automation",
+    emoji: "📟",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+>>>>>>> origin/feat/new-content-sept15-2025
     id: "agent-fleet-management-handbook-2026",
     title: "AI 2026: Agent Fleet Management Handbook",
     description:

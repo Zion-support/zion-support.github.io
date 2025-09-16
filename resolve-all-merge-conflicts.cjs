@@ -2,6 +2,92 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
+
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+// Function to resolve conflicts in a file
+function resolveConflicts(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('')) {
+      return true; // No conflicts
+    }
+    
+    console.log(`Resolving conflicts in ${filePath}...`);
+    
+    // Replace merge conflict markers with incoming changes (choose the incoming version)
+    content = content.replace(/[\s\S]*?([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Clean up any remaining markers
+    content = content.replace(//g, '');
+    content = content.replace(//g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    
+    // Write the resolved content back
+    fs.writeFileSync(filePath, content);
+    
+    console.log(`✅ Resolved conflicts in ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Get all files with merge conflicts
+console.log('🔍 Finding files with merge conflicts...');
+const findConflicts = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.css" | xargs grep -l "" 2>/dev/null || true', { encoding: 'utf8' });
+const conflictFiles = findConflicts.split('\n').filter(file => file && file !== '');
+
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+// Process all conflict files
+let resolvedCount = 0;
+let errorCount = 0;
+
+for (const file of conflictFiles) {
+  if (resolveConflicts(file)) {
+    resolvedCount++;
+  } else {
+    errorCount++;
+  }
+}
+
+console.log(`\n📊 Conflict Resolution Summary:`);
+console.log(`✅ Successfully resolved: ${resolvedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Add all files to git
+try {
+  execSync('git add .', { stdio: 'inherit' });
+  console.log('✅ Added all files to git');
+} catch (error) {
+  console.error('❌ Error adding files to git:', error.message);
+}
+
+// Commit the changes
+try {
+  execSync('git commit -m "Resolve all merge conflicts automatically - choose incoming changes"', { stdio: 'inherit' });
+  console.log('✅ Committed merge resolution');
+} catch (error) {
+  console.error('❌ Error committing merge:', error.message);
+}
+
+console.log('🎉 Merge conflict resolution completed!');
+>>>>>>> origin/merge-pr-12271
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -244,9 +330,20 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
+<<<<<<< HEAD
 
         content = content.replace(/[\s\S]*?
         content = content.replace(/[\s\S]*?
+=======
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> main/g, '');
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+        
+        // Clean up any remaining conflict markers
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+
+        content = content.replace(/
+>>>>>>> origin/merge-pr-12271
         
         // Clean up any remaining conflict markers
         content = content.replace(/[\s\S]*?
@@ -287,10 +384,15 @@ function resolveAddAddConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep both versions
+<<<<<<< HEAD
 
         content = content.replace(/[\s\S]*?
           const parts = match.split('=======');
  (Resolve merge conflicts: clean up all conflict markers)
+=======
+        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [a-f0-9]+/g, (match) => {
+          const parts = match.split('');
+>>>>>>> origin/merge-pr-12271
           if (parts.length === 2) {
             const headPart = parts[0].replace(/\s*/, '');
             const mainPart = parts[1].replace(/\s*            return headPart + mainPart;
@@ -369,3 +471,9 @@ async function main() {
 }
 
 main();
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-7ffc
+        content = content.replace(/
+          const parts = match.split('
+>>>>>>> origin/merge-pr-12271

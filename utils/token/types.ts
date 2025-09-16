@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+;
+export type TokenSymbol = "ZION$",export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",export type TokenSymbol = "ZION$";export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",
+
+>>>>>>> origin/merge-pr-12271
 
 
 
@@ -7,12 +18,22 @@ export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
+<<<<<<< HEAD
   | "revoke";
 
   | "redeem";
 export interface TokenTransaction {id: string;
   userId: string;
   type: TokenTransactionType;
+=======
+  | "revoke";| "redeem";
+export interface TokenTransaction {id: string;
+  userId: string;
+  type: TokenTransactionType;
+  | "redeem",export interface TokenTransaction  {id: string,userId: string,type: TokenTransactionType,amount: number, // positive integer tokens;
+  | "revoke";
+
+>>>>>>> origin/merge-pr-12271
   | "redeem",;
 export interface TokenTransaction {;
   id: string,;

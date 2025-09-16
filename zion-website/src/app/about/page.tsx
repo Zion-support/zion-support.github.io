@@ -1,5 +1,501 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+=======
+=======
+>>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
+=======
+import React from 'react'
+>>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+import { 
+	UserGroupIcon, 
+	LightBulbIcon, 
+	GlobeAltIcon, 
+	ShieldCheckIcon,
+	AcademicCapIcon,
+	RocketLaunchIcon
+} from '@heroicons/react/24/outline'
+
+const values = [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+    name: 'Innovation First',
+<<<<<<< HEAD
+    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
+=======
+    description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.",
+>>>>>>> origin/feat/updates-and-home-whats-new
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Global Impact',
+    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Trust & Security',
+    description: 'We maintain the highest standards of security and ethical AI development.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Research Excellence',
+    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
+    icon: AcademicCapIcon,
+  },
+]
+
+const team = [
+  {
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Executive Officer',
+    bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
+    image: '/images/team/sarah-chen.jpg',
+  },
+  {
+    name: 'Dr. Marcus Rodriguez',
+    role: 'Chief Technology Officer',
+    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
+    image: '/images/team/marcus-rodriguez.jpg',
+  },
+  {
+    name: 'Dr. Elena Petrov',
+    role: 'Head of Research',
+    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
+    image: '/images/team/elena-petrov.jpg',
+  },
+  {
+    name: 'James Kim',
+    role: 'Chief Operations Officer',
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+    image: '/images/team/james-kim.jpg',
+  },
+=======
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions transform industries and improve lives worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Our researchers drive breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+<<<<<<< HEAD
+=======
+import React from 'react'
+>>>>>>> origin/feat/research-article-promo
+=======
+import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+
+const values = [
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+
+const team = [
+  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.", image: '/images/team/sarah-chen.jpg' },
+  { name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg' },
+  { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg' },
+  { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+]
+>>>>>>> origin/feat/updates-and-fixes
+
+const team = [
+  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision.', image: '/images/team/sarah-chen.jpg' },
+  { name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems.', image: '/images/team/marcus-rodriguez.jpg' },
+  { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics.', image: '/images/team/elena-petrov.jpg' },
+  { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Specialist in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+>>>>>>> origin/feat/case-studies-content
+=======
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+
+const team = [
+  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.", image: '/images/team/sarah-chen.jpg' },
+  { name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg' },
+  { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg' },
+  { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+>>>>>>> origin/feat/content-promo
+]
+
+=======
+import React from 'react'
+import { LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
+
+const values = [
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions transform industries worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We uphold the highest standards of security and ethics.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Breakthrough discoveries from a world-class team.', icon: AcademicCapIcon },
+]
+
+>>>>>>> origin/feat/news-and-fixes
+export default function AboutPage() {
+  return (
+    <div className="bg-black">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+<<<<<<< HEAD
+        <div className="mx-auto max-w-2xl py-24 sm:py-40">
+          <div className="text-center">
+<<<<<<< HEAD
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+<<<<<<< HEAD
+<<<<<<< HEAD
+              About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
+<<<<<<< HEAD
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+=======
+              About{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems,
+>>>>>>> origin/feat/updates-and-fixes
+=======
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+>>>>>>> origin/feat/updates-and-home-whats-new
+              dedicated to transforming industries and advancing human potential through technology.
+=======
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential.
+>>>>>>> origin/feat/case-studies-content
+=======
+              About{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
+>>>>>>> origin/feat/content-promo
+=======
+        <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Zion Tech Group</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are a research-driven technology company advancing AI, automation, and quantum solutions.
+>>>>>>> origin/feat/research-article-promo
+            </p>
+=======
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About Zion Tech Group</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">We build AI and autonomous systems that advance human potential.</p>
+>>>>>>> origin/feat/news-and-fixes
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/updates-and-fixes
+=======
+
+>>>>>>> origin/feat/updates-and-home-whats-new
+      {/* Mission & Vision */}
+=======
+>>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Mission & Vision</p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+              <div className="flex items-center gap-x-3 mb-4">
+                <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
+                <h3 className="text-xl font-semibold text-white">Our Mission</h3>
+              </div>
+<<<<<<< HEAD
+              <p className="text-gray-300">To accelerate human progress through cutting-edge AI and technology solutions that solve the world's most complex challenges while maintaining the highest ethical standards.</p>
+=======
+              <p className="text-gray-300">
+                To accelerate human progress through cutting-edge AI and technology solutions that solve the world's
+                most complex challenges while maintaining the highest ethical standards.
+              </p>
+>>>>>>> origin/feat/updates-and-fixes
+            </div>
+            <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+              <div className="flex items-center gap-x-3 mb-4">
+                <LightBulbIcon className="h-8 w-8 text-purple-400" />
+                <h3 className="text-xl font-semibold text-white">Our Vision</h3>
+              </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <p className="text-gray-300">
+                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                intelligent, efficient, and sustainable world for generations to come.
+=======
+              <p className="text-gray-300">
+                A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent,
+                efficient, and sustainable world for generations to come.
+>>>>>>> origin/feat/updates-and-fixes
+=======
+              <p className="text-gray-300">
+                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                intelligent, efficient, and sustainable world for generations to come.
+>>>>>>> origin/feat/updates-and-home-whats-new
+              </p>
+=======
+              <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world.</p>
+>>>>>>> origin/feat/case-studies-content
+=======
+              <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world for generations to come.</p>
+>>>>>>> origin/feat/content-promo
+            </div>
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
+      {/* Company Story */}
+=======
+>>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">From Research to Revolution</p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="text-lg text-gray-300 mb-6">
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
+              research and real-world applications.
+            </p>
+            <p className="text-lg text-gray-300 mb-6">
+              What started as a small research lab has grown into a global technology powerhouse, 
+              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
+              researchers, engineers, and business professionals work tirelessly to push the 
+              boundaries of what's possible.
+            </p>
+            <p className="text-lg text-gray-300">
+              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
+              startups, helping them harness the power of AI to transform their operations and 
+              accelerate their growth.
+=======
+            <p className="text-lg text-gray-300 mb-6">
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, Zion Tech Group
+              emerged from a shared vision: to bridge the gap between cutting-edge research and real-world applications.
+            </p>
+            <p className="text-lg text-gray-300 mb-6">
+              What started as a small research lab has grown into a global technology powerhouse, with offices in
+              Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ researchers, engineers, and business
+              professionals work tirelessly to push the boundaries of what's possible.
+            </p>
+            <p className="text-lg text-gray-300">
+              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative startups, helping
+              them harness the power of AI to transform their operations and accelerate their growth.
+>>>>>>> origin/feat/updates-and-fixes
+            </p>
+=======
+            <p className="text-lg text-gray-300 mb-6">Founded in 2020 by AI researchers and technology entrepreneurs, Zion Tech Group emerged from a vision to bridge the gap between cutting-edge research and real-world applications.</p>
+            <p className="text-lg text-gray-300 mb-6">What began as a research lab has grown into a global technology powerhouse with teams across the world, pushing the boundaries of what's possible.</p>
+            <p className="text-lg text-gray-300">Today, we serve organizations worldwide, helping them harness the power of AI to transform operations and accelerate growth.</p>
+>>>>>>> origin/feat/case-studies-content
+=======
+            <p className="text-lg text-gray-300 mb-6">Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge research and real-world applications.</p>
+            <p className="text-lg text-gray-300 mb-6">What started as a small research lab has grown into a global technology powerhouse, with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ researchers, engineers, and business professionals work tirelessly to push the boundaries of what's possible.</p>
+            <p className="text-lg text-gray-300">Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative startups, helping them harness the power of AI to transform their operations and accelerate their growth.</p>
+>>>>>>> origin/feat/content-promo
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+      {/* Values */}
+=======
+>>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Core Values</p>
+<<<<<<< HEAD
+=======
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Core Values</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">What drives us</p>
+>>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-fixes
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            {values.map((v) => (
+              <div key={v.name} className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <v.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {v.name}
+                </dt>
+                <dd className="mt-4 text-base leading-7 text-gray-300">{v.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Leadership Team */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+          </p>
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">Researchers, engineers, and business leaders driving innovation.</p>
+>>>>>>> origin/feat/case-studies-content
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.</p>
+>>>>>>> origin/feat/content-promo
+        </div>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {team.map((person) => (
+            <article key={person.name} className="flex flex-col items-start group">
+              <div className="relative w-full">
+                <div className="aspect-[16/9] w-full rounded-2xl bg-gray-900 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />
+              </div>
+              <div className="max-w-xl">
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">{person.name}</h3>
+                  <p className="mt-2 text-sm text-blue-400">{person.role}</p>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{person.bio}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+      {/* CTA section */}
+=======
+>>>>>>> origin/feat/case-studies-content
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
+<<<<<<< HEAD
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Ready to be part of the AI revolution? Let's discuss how we can work together.</p>
+=======
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Ready to be part of the AI revolution? Let's discuss how we can work together to transform your
+            organization.
+          </p>
+>>>>>>> origin/feat/updates-and-fixes
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+<<<<<<< HEAD
+            <a
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              Get in Touch
+            </a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Careers <span aria-hidden="true">→</span>
+            </a>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
+>>>>>>> origin/feat/case-studies-content
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Ready to be part of the AI revolution? Let's discuss how we can work together to transform your organization.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
+>>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+import React from 'react';
+
+
+>>>>>>> origin/feature/updates-content
 
 const values = [
 	{ name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
@@ -71,10 +567,228 @@ export default function AboutPage() {
 				</div>
 			</div>
 
+=======
+	{ name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+	{ name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon },
+	{ name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+	{ name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+
+const team = [
+	{ name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.", image: '/images/team/sarah-chen.jpg' },
+	{ name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg' },
+	{ name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg' },
+	{ name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+]
+
+export default function AboutPage() {
+	return (
+		<div className="bg-black">
+			{/* Hero section */}
+			<div className="relative isolate px-6 pt-14 lg:px-8">
+				<div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+					<div className="text-center">
+						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+							About{' '}
+							<span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-300">
+							We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Mission & Vision */}
+			<div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Mission & Vision</p>
+				</div>
+				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+					<div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+						<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+							<div className="flex items-center gap-x-3 mb-4">
+								<RocketLaunchIcon className="h-8 w-8 text-blue-400" />
+								<h3 className="text-xl font-semibold text-white">Our Mission</h3>
+							</div>
+							<p className="text-gray-300">To accelerate human progress through cutting-edge AI and technology solutions that solve the world's most complex challenges while maintaining the highest ethical standards.</p>
+						</div>
+						<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+							<div className="flex items-center gap-x-3 mb-4">
+								<LightBulbIcon className="h-8 w-8 text-purple-400" />
+								<h3 className="text-xl font-semibold text-white">Our Vision</h3>
+							</div>
+							<p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world for generations to come.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Company Story */}
+			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">From Research to Revolution</p>
+				</div>
+				<div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+					<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+						<p className="text-lg text-gray-300 mb-6">Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge research and real-world applications.</p>
+						<p className="text-lg text-gray-300 mb-6">What started as a small research lab has grown into a global technology powerhouse, with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ researchers, engineers, and business professionals work tirelessly to push the boundaries of what's possible.</p>
+						<p className="text-lg text-gray-300">Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative startups, helping them harness the power of AI to transform their operations and accelerate their growth.</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Values */}
+>>>>>>> origin/feat/new-content-home-20250915
 			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
 					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Core Values</p>
+=======
+	{
+		name: 'Innovation First',
+		description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.",
+		icon: LightBulbIcon,
+	},
+	{
+		name: 'Global Impact',
+		description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
+		icon: GlobeAltIcon,
+	},
+	{
+		name: 'Trust & Security',
+		description: 'We maintain the highest standards of security and ethical AI development.',
+		icon: ShieldCheckIcon,
+	},
+	{
+		name: 'Research Excellence',
+		description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
+		icon: AcademicCapIcon,
+	},
+]
+
+const team = [
+	{
+		name: 'Dr. Sarah Chen',
+		role: 'Chief Executive Officer',
+		bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
+		image: '/images/team/sarah-chen.jpg',
+	},
+	{
+		name: 'Dr. Marcus Rodriguez',
+		role: 'Chief Technology Officer',
+		bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
+		image: '/images/team/marcus-rodriguez.jpg',
+	},
+	{
+		name: 'Dr. Elena Petrov',
+		role: 'Head of Research',
+		bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
+		image: '/images/team/elena-petrov.jpg',
+	},
+	{
+		name: 'James Kim',
+		role: 'Chief Operations Officer',
+		bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+		image: '/images/team/james-kim.jpg',
+	},
+]
+
+export default function AboutPage() {
+	return (
+		<div className="bg-black">
+			{/* Hero section */}
+			<div className="relative isolate px-6 pt-14 lg:px-8">
+				<div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+					<div className="text-center">
+						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+							About{' '}
+							<span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+								Zion Tech Group
+							</span>
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-300">
+							We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+							dedicated to transforming industries and advancing human potential through technology.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Mission & Vision */}
+			<div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						Mission & Vision
+					</p>
+				</div>
+				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+					<div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+						<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+							<div className="flex items-center gap-x-3 mb-4">
+								<RocketLaunchIcon className="h-8 w-8 text-blue-400" />
+								<h3 className="text-xl font-semibold text-white">Our Mission</h3>
+							</div>
+							<p className="text-gray-300">
+								To accelerate human progress through cutting-edge AI and technology solutions that solve 
+								the world's most complex challenges while maintaining the highest ethical standards.
+							</p>
+						</div>
+						<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+							<div className="flex items-center gap-x-3 mb-4">
+								<LightBulbIcon className="h-8 w-8 text-purple-400" />
+								<h3 className="text-xl font-semibold text-white">Our Vision</h3>
+							</div>
+							<p className="text-gray-300">
+								A future where AI and technology seamlessly enhance human capabilities, creating a more 
+								intelligent, efficient, and sustainable world for generations to come.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Company Story */}
+			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						From Research to Revolution
+					</p>
+				</div>
+				<div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+					<div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+						<p className="text-lg text-gray-300 mb-6">
+							Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+							Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
+							research and real-world applications.
+						</p>
+						<p className="text-lg text-gray-300 mb-6">
+							What started as a small research lab has grown into a global technology powerhouse, 
+							with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
+							researchers, engineers, and business professionals work tirelessly to push the 
+							boundaries of what's possible.
+						</p>
+						<p className="text-lg text-gray-300">
+							Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
+							startups, helping them harness the power of AI to transform their operations and 
+							accelerate their growth.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Values */}
+			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						Our Core Values
+					</p>
+>>>>>>> origin/feat/new-updates-ads
 				</div>
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
 					<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -93,11 +807,28 @@ export default function AboutPage() {
 				</div>
 			</div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+			{/* Leadership Team */}
+>>>>>>> origin/feat/new-content-home-20250915
 			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
 					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
 					<p className="mt-6 text-lg leading-8 text-gray-300">World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.</p>
+=======
+			{/* Leadership Team */}
+			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+					<p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						Meet Our Team
+					</p>
+					<p className="mt-6 text-lg leading-8 text-gray-300">
+						World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+					</p>
+>>>>>>> origin/feat/new-updates-ads
 				</div>
 				<div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 					{team.map((person) => (
@@ -116,7 +847,13 @@ export default function AboutPage() {
 							</div>
 							<div className="max-w-xl">
 								<div className="group relative">
+<<<<<<< HEAD
 									<h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">{person.name}</h3>
+=======
+									<h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+										{person.name}
+									</h3>
+>>>>>>> origin/feat/new-updates-ads
 									<p className="mt-2 text-sm text-blue-400">{person.role}</p>
 									<p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{person.bio}</p>
 								</div>
@@ -126,6 +863,11 @@ export default function AboutPage() {
 				</div>
 			</div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+			{/* CTA section */}
+>>>>>>> origin/feat/new-content-home-20250915
 			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 				<div className="mx-auto max-w-2xl text-center">
 					<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
@@ -133,9 +875,80 @@ export default function AboutPage() {
 					<div className="mt-10 flex items-center justify-center gap-x-6">
 						<a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
 						<a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
+=======
+			{/* CTA section */}
+			<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+				<div className="mx-auto max-w-2xl text-center">
+					<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						Join us in shaping the future
+					</h2>
+					<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+						Ready to be part of the AI revolution? Let's discuss how we can work together to 
+						transform your organization.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<a
+							href="/contact"
+							className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+						>
+							Get in Touch
+						</a>
+						<a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+							View Careers <span aria-hidden="true">→</span>
+						</a>
+>>>>>>> origin/feat/new-updates-ads
 					</div>
 				</div>
 			</div>
 		</div>
 	)
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
+=======
+    </div>
+  )
+}
+>>>>>>> origin/feat/news-and-fixes
+=======
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Mission</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Innovation with Purpose</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We build trustworthy, impactful technology that empowers organizations and society.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+>>>>>>> origin/feat/research-article-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
+=======
+export default function AboutPage() {
+  return (
+    <div className="bg-black">
+      <div className="mx-auto max-w-7xl px-6 pt-28 lg:px-8">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Zion Tech Group</h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl">
+          We are a research-driven technology company focused on AI, automation, and advanced computing.
+          Our mission is to accelerate innovation responsibly and make intelligent systems accessible.
+        </p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/feat/updates-front

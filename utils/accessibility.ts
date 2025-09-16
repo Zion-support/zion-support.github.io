@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+ursor/automate-test-improve-and-merge-code-646c;
+export const generateId = (prefix: string = "id"): string => {export const generateId = (prefix: string = "id"): string => {export const generateId = (prefix: string = "id"): string => {export const generateId = (prefix: string = "id"): string => {export const generateId = (prefix: string = 'id'): string => {return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+}
+export const announceToScreenReader = (message: string): void => {export const generateId  = (prefix: string = 'id'): string => {return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+}export const announceToScreenReader = (message: string): void => {if (typeof window === "undefined") return;export const announceToScreenReader = (message: string): void => {export const announceToScreenReader = (message: string): void => {if (typeof window === "undefined") return;const announcement = document.createElement("div")announcement.setAttribute("aria-live", "polite")announcement.setAttribute("aria-atomic", "true")announcement.className = "sr-only";if (typeof window === 'undefined') return;
+  const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';announcement.textContent = message;
+  document.body.appendChild(announcement)announcement.textContent = message;
+  document.body.appendChild(announcement)// Remove after announcement;
+  setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
+export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll(ursor/automate-test-improve-and-merge-code-646c;
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])','button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])','button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])','button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])','button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  )const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[;
+    focusableElements.length - 1;
+  ] as HTMLElement;const handleTabKey = (e: KeyboardEvent) => {if (e.key !== "Tab") return;if (e.shiftKey) {if (document.activeElement === firstElement) {lastElement.focus()e.preventDefault()export const generate_id = (prefix: string = 'id'): string => {return `${prefix}-${Math.random ().to_string (36).substr (2, 9)}`;
+}export const announceToScreenReader = (message: string): void => {// Check condition;
+if (return) {$2;
+export const generateId = (prefix: string = "id"): string => {
+export const generateId = (prefix: string = "id"): string => {
+>>>>>>> origin/merge-pr-12271
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
