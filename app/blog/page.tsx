@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 const posts = [
-  { href: '/blog/ai-2025-enterprise-ai-agents-breakthrough', title: 'Enterprise AI Agents in 2025', tag: 'New' },
+  { href: '/blog/ai-2026-release-scorecards', title: 'Release Scorecards for Reliable Agent Upgrades (2026)', tag: 'New' },
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'New' },
-  { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'Trending' },
+  { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'Guide' },
   { href: '/blog/ai-2026-trustworthy-autonomous-agents-blueprint', title: 'Trustworthy Autonomous Agents Blueprint (2026)', tag: 'Featured' },
 ];
 
