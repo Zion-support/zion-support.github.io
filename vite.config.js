@@ -26,6 +26,9 @@ export default defineConfig({
           router: ['react-router-dom']
         }
       }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
     }
   },
   server: {
