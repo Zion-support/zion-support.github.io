@@ -98,6 +98,8 @@ import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
 import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
 import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from './src/components/ComprehensiveContentShowcase2026';
 import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
 import RevolutionaryTechInsights2027 from './src/pages/RevolutionaryTechInsights2027';
@@ -296,6 +298,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
                 
+                {/* NEW: Content Promotion Banner 2026 - Latest Revolutionary Content */}
+                <NewContentPromotionBanner2026 />
+                
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
                 
@@ -468,6 +473,10 @@ export default function App(): JSX.Element {
                   <p className="text-xl text-gray-600 mb-8">
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
+                </div>
+
+                {/* NEW: Comprehensive Content Showcase 2026 */}
+                <ComprehensiveContentShowcase2026 />
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
                     <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌟 NEW: Revolutionary Tech Showcase 2025 →
