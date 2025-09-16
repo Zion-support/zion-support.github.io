@@ -57,10 +57,9 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Trustworthy AI Evidence Vault —
             <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
-=======
+            <span className="mx-2 text-blue-300/60">|</span>
             New: Production Evidence Bundles (2026) —
             <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
->>>>>>> origin/cursor/create-and-deploy-new-content-d190
             <span className="mx-2 text-blue-300/60">|</span>
             Canary + Shadow Testing for Agents —
             <a href="/updates/canary-and-shadow-testing-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">field guide</a>
@@ -129,10 +128,9 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Trustworthy AI Evidence Vault —
             <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
-=======
+            <span className="mx-2 text-blue-300/60">|</span>
             Fresh: Canary + Shadow Testing —
             <a href="/updates/canary-and-shadow-testing-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
->>>>>>> origin/cursor/create-and-deploy-new-content-d190
             <span className="mx-2 text-blue-300/60">|</span>
             Evidence Bundles —
             <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
