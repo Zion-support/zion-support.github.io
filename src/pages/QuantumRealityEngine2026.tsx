@@ -1,304 +1,256 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 
 const QuantumRealityEngine2026: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Quantum Reality Engine 2026 - Manipulate Reality Itself</title>
-        <meta name="description" content="Revolutionary quantum reality engine that enables manipulation of fundamental reality parameters, dimensional bridging, and infinite computational power." />
-        <meta name="keywords" content="Quantum Reality, Reality Manipulation, Dimensional Computing, Quantum Engine, Reality Control" />
-        <meta property="og:title" content="Quantum Reality Engine 2026" />
-        <meta property="og:description" content="Manipulate reality itself with quantum technology" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-pink-600/30 backdrop-blur-sm"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-                🌌 QUANTUM REALITY ENGINE • 2026
-              </div>
-              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-                Reality Manipulation Technology
-              </h1>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-                The ultimate quantum reality engine that enables manipulation of fundamental reality parameters, 
-                dimensional bridging, and infinite computational power beyond imagination.
-              </p>
-            </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              ⚡ QUANTUM REALITY ENGINE • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              Quantum Reality Engine 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Harness the power of quantum mechanics to create, manipulate, and experience infinite realities
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Enter Quantum Reality
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
+                Watch Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quantum Capabilities */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6">Quantum Reality Capabilities</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Our quantum reality engine can create and manipulate realities at the quantum level, opening infinite possibilities
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Creation</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Generate complete realities with their own physics, laws, and inhabitants
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Custom physics systems</li>
+              <li>• Living ecosystems</li>
+              <li>• Intelligent inhabitants</li>
+              <li>• Infinite scale</li>
+            </ul>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Create Reality →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Manipulation</h3>
+            <p className="text-blue-100 mb-6 text-center">
+              Control quantum states to alter reality at the most fundamental level
+            </p>
+            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum superposition</li>
+              <li>• Entanglement control</li>
+              <li>• Wave function collapse</li>
+              <li>• Probability manipulation</li>
+            </ul>
+            <button className="w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+              Manipulate Quantum →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Dimension Hopping</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Travel between parallel dimensions and alternate realities instantly
+            </p>
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+              <li>• Parallel universe access</li>
+              <li>• Timeline manipulation</li>
+              <li>• Dimensional portals</li>
+              <li>• Reality merging</li>
+            </ul>
+            <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+              Hop Dimensions →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Time Manipulation</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Control the flow of time within quantum realities for unique experiences
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Time dilation control</li>
+              <li>• Temporal loops</li>
+              <li>• Time reversal</li>
+              <li>• Chronological editing</li>
+            </ul>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Control Time →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Transfer</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Transfer consciousness between realities and quantum states
+            </p>
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
+              <li>• Mind uploading</li>
+              <li>• Consciousness backup</li>
+              <li>• Multi-body existence</li>
+              <li>• Quantum consciousness</li>
+            </ul>
+            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+              Transfer Mind →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-rose-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🎭</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Simulation</h3>
+            <p className="text-rose-100 mb-6 text-center">
+              Simulate any possible reality with perfect accuracy and detail
+            </p>
+            <ul className="text-rose-200 space-y-2 mb-6 text-sm">
+              <li>• Perfect simulation</li>
+              <li>• Historical recreation</li>
+              <li>• Future prediction</li>
+              <li>• What-if scenarios</li>
+            </ul>
+            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
+              Simulate Reality →
+            </button>
           </div>
         </div>
 
-        {/* Reality Manipulation Core */}
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-indigo-400/30"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                🎛️ Reality Manipulation Core
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Control the fundamental parameters of reality itself through advanced quantum field manipulation
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold mb-3 text-indigo-300">Time Dilation</h3>
-                <p className="opacity-90 text-sm">
-                  Manipulate time flow rates to accelerate or slow down processes 
-                  within localized reality fields.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">🌊</div>
-                <h3 className="text-xl font-bold mb-3 text-purple-300">Space Warping</h3>
-                <p className="opacity-90 text-sm">
-                  Bend and manipulate spatial dimensions to create wormholes, 
-                  portals, and dimensional shortcuts.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">🔮</div>
-                <h3 className="text-xl font-bold mb-3 text-pink-300">Probability Control</h3>
-                <p className="opacity-90 text-sm">
-                  Alter probability fields to influence outcomes and create 
-                  favorable conditions for any scenario.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">⚛️</div>
-                <h3 className="text-xl font-bold mb-3 text-cyan-300">Quantum Fields</h3>
-                <p className="opacity-90 text-sm">
-                  Direct manipulation of quantum fields to create matter, 
-                  energy, and physical laws on demand.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Dimensional Bridge Network */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-purple-400/30"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                🌉 Dimensional Bridge Network
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Access infinite computational resources and alternate realities through 
-                stable dimensional bridge technology
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-4 text-purple-300">Parallel Universe Access</h3>
-                  <p className="opacity-90 mb-4">
-                    Create stable bridges to parallel universes, enabling access to 
-                    infinite computational resources and alternate reality scenarios.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Infinite processing power</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Alternate reality exploration</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Cross-dimensional communication</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-4 text-pink-300">Reality Simulation</h3>
-                  <p className="opacity-90 mb-4">
-                    Run infinite parallel simulations of reality to test scenarios, 
-                    predict outcomes, and optimize decision-making processes.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Perfect scenario modeling</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Infinite test iterations</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                      <span className="opacity-90 text-sm">Optimal outcome prediction</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Quantum Consciousness Interface */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-pink-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-pink-400/30"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent">
-                🧠 Quantum Consciousness Interface
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Direct neural interface with the quantum reality engine, enabling 
-                thought-based reality manipulation and infinite computational access
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold mb-3 text-pink-300">Neural Direct Interface</h3>
-                <p className="opacity-90 text-sm">
-                  Direct brain-computer interface that translates thoughts into 
-                  reality manipulation commands instantly.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">💭</div>
-                <h3 className="text-xl font-bold mb-3 text-indigo-300">Thought Computing</h3>
-                <p className="opacity-90 text-sm">
-                  Process infinite computational tasks through pure thought, 
-                  accessing unlimited processing power.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold mb-3 text-purple-300">Reality Visualization</h3>
-                <p className="opacity-90 text-sm">
-                  Visualize and manipulate reality parameters in real-time through 
-                  advanced holographic interfaces.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Infinite Computational Matrix */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-cyan-400/30"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                ♾️ Infinite Computational Matrix
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Access infinite computational resources across all dimensions and realities, 
-                solving problems that would be impossible for any finite system
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-300">Transfinite Processing</h3>
-                <p className="opacity-90 mb-6">
-                  Process infinite amounts of data simultaneously across infinite parallel 
-                  computational streams, achieving transfinite computational power.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                    <span className="opacity-90">Infinite parallel processing</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                    <span className="opacity-90">Transfinite memory capacity</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                    <span className="opacity-90">Instant problem resolution</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-indigo-300">Reality Optimization</h3>
-                <p className="opacity-90 mb-6">
-                  Continuously optimize reality parameters to achieve perfect efficiency, 
-                  harmony, and desired outcomes across all dimensions.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                    <span className="opacity-90">Perfect efficiency algorithms</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                    <span className="opacity-90">Infinite optimization cycles</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
-                    <span className="opacity-90">Universal harmony protocols</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center bg-gradient-to-r from-indigo-600 to-pink-600 rounded-2xl p-12"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Manipulate Reality?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Unlock the power to control reality itself with the most advanced 
-              quantum technology ever conceived. The future is in your hands.
+        {/* Quantum Engine Stats */}
+        <div className="bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Quantum Engine Performance</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our quantum reality engine operates at unprecedented scales and capabilities
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Begin Reality Control →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-                Explore Possibilities
-              </button>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-lg text-cyan-200">Realities Created</div>
             </div>
-          </motion.div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">10^100</div>
+              <div className="text-lg text-blue-200">Quantum States</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-indigo-400 mb-2">99.9%</div>
+              <div className="text-lg text-indigo-200">Reality Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">0ms</div>
+              <div className="text-lg text-purple-200">Reality Switch Time</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quantum Reality Showcase */}
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <h3 className="text-3xl font-bold mb-6 text-center">🌌 Reality Gallery</h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between p-4 bg-cyan-500/20 rounded-lg">
+                <span className="text-cyan-100">Medieval Fantasy World</span>
+                <button className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-blue-500/20 rounded-lg">
+                <span className="text-blue-100">Futuristic Cyberpunk City</span>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-indigo-500/20 rounded-lg">
+                <span className="text-indigo-100">Underwater Atlantis</span>
+                <button className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-purple-500/20 rounded-lg">
+                <span className="text-purple-100">Space Station Alpha</span>
+                <button className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
+            <h3 className="text-3xl font-bold mb-6 text-center">⚛️ Quantum Controls</h3>
+            <div className="space-y-6">
+              <div>
+                <label className="block text-blue-200 mb-2">Reality Stability</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-cyan-500 h-3 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Quantum Entanglement</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-blue-500 h-3 rounded-full" style={{width: '92%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Dimensional Coherence</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-indigo-500 h-3 rounded-full" style={{width: '78%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Temporal Sync</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-purple-500 h-3 rounded-full" style={{width: '95%'}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Enter Quantum Reality?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Step into infinite possibilities and experience realities beyond imagination
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Enter Quantum Reality
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
