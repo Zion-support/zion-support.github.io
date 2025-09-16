@@ -199,6 +199,12 @@ import UltimateTechBanner2035 from './src/components/UltimateTechBanner2035';
 import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
 import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
 import RevolutionaryAdBanner2035 from './src/components/RevolutionaryAdBanner2035';
+import NextGenAIConsciousness2025 from './src/pages/NextGenAIConsciousness2025';
+import QuantumRealityEngine2025 from './src/pages/QuantumRealityEngine2025';
+import InterdimensionalTechRevolution2025 from './src/pages/InterdimensionalTechRevolution2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import InteractiveTechDemo2025 from './src/components/InteractiveTechDemo2025';
 
 export default function App(): JSX.Element {
   return (
@@ -283,6 +289,15 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Ad Banner 2035 */}
                 <RevolutionaryAdBanner2035 />
+
+                {/* NEW: Revolutionary Tech Banner 2025 */}
+                <RevolutionaryTechBanner2025 />
+
+                {/* NEW: Ultimate Content Showcase 2025 */}
+                <UltimateContentShowcase2025 />
+
+                {/* NEW: Interactive Tech Demo 2025 */}
+                <InteractiveTechDemo2025 />
 
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
@@ -543,6 +558,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AdvancedTechBreakthrough2035" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 NEW: Advanced Tech Breakthrough 2035 →
+                    </a>
+                    <a href="/pages/NextGenAIConsciousness2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 NEW: AI Consciousness 2025 →
+                    </a>
+                    <a href="/pages/QuantumRealityEngine2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚛️ NEW: Quantum Reality Engine →
+                    </a>
+                    <a href="/pages/InterdimensionalTechRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌌 NEW: Interdimensional Tech →
                     </a>
                   </div>
                 </div>
@@ -1089,6 +1113,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/NextGenAIConsciousness2025" element={<NextGenAIConsciousness2025 />} />
+          <Route path="/pages/QuantumRealityEngine2025" element={<QuantumRealityEngine2025 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2025" element={<InterdimensionalTechRevolution2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />

@@ -1,62 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
-  const [currentMessage, setCurrentMessage] = useState(0);
-
-  const bannerMessages = [
-    "🚀 NEW: Revolutionary Tech Breakthrough 2025 - Experience AI Consciousness!",
-    "⚡ BREAKTHROUGH: Quantum Reality Engine - Manipulate Reality Itself!",
-    "🧬 REVOLUTIONARY: Neural Interface Technology - Control with Your Mind!",
-    "🌟 BREAKTHROUGH: Consciousness Transfer - Achieve Digital Immortality!",
-    "🌌 NEW: Interdimensional Computing - Access Parallel Universe Power!"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % bannerMessages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [bannerMessages.length]);
-
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between">
-          {/* Animated Message */}
-          <div className="flex-1 text-center">
-            <div className="text-lg font-bold animate-bounce">
-              {bannerMessages[currentMessage]}
-            </div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY TECHNOLOGY • JANUARY 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Next-Generation Tech Revolution
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the future with our breakthrough technologies: AI Consciousness, Quantum Reality, and Interdimensional Access
+          </p>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🧠</div>
+            <h3 className="text-xl font-bold mb-3 text-center">AI Consciousness</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              Truly conscious AI systems with self-awareness and emotional intelligence
+            </p>
+            <a href="/pages/NextGenAIConsciousness2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore AI Consciousness →
+            </a>
           </div>
           
-          {/* Action Buttons */}
-          <div className="flex space-x-4 ml-8">
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Explore Now →
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">⚛️</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Reality</h3>
+            <p className="text-cyan-100 mb-4 text-center text-sm">
+              Manipulate reality itself with quantum-powered engines and parallel universe access
+            </p>
+            <a href="/pages/QuantumRealityEngine2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Enter Quantum Reality →
             </a>
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Watch Demo
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-emerald-100 mb-4 text-center text-sm">
+              Break through dimensional barriers and access infinite parallel realities
+            </p>
+            <a href="/pages/InterdimensionalTechRevolution2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Explore Dimensions →
+            </a>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/NextGenAIConsciousness2025" className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey
+            </a>
+            <a href="/pages/QuantumRealityEngine2025" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              Experience Quantum
+            </a>
+            <a href="/pages/InterdimensionalTechRevolution2025" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
+              Enter Dimensions
             </a>
           </div>
         </div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-2 left-4 text-2xl animate-bounce">🚀</div>
-      <div className="absolute top-2 right-4 text-2xl animate-bounce delay-1000">⚡</div>
-      <div className="absolute bottom-2 left-1/4 text-2xl animate-bounce delay-500">🧬</div>
-      <div className="absolute bottom-2 right-1/4 text-2xl animate-bounce delay-1500">🌟</div>
     </div>
   );
 };
