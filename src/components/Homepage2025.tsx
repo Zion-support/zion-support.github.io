@@ -75,6 +75,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
+    { title: 'Evidence‑Led Operations — Blueprint (2026)', href: '/blog/ai-2026-evidence-led-operations-blueprint', tag: 'New', gradient: 'from-amber-500 to-pink-500' },
     { title: 'Real-Time RAG Architectures (2026)', href: '/blog/ai-2026-real-time-rag-architectures', tag: 'RAG', gradient: 'from-purple-500 to-blue-500' },
     { title: 'Guardrailed Tooling: Risk Tiers (2026)', href: '/blog/ai-2026-guardrailed-tooling-risk-tiers', tag: 'Security', gradient: 'from-fuchsia-500 to-indigo-500' },
     { title: 'Production Evidence Hub — Blueprint (2026)', href: '/blog/ai-2026-production-evidence-hub-blueprint', tag: 'Blueprint', gradient: 'from-cyan-500 to-blue-600' },
