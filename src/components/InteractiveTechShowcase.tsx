@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,13 +15,19 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AIInnovationHub2026"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
     },
     {
       id: 2,
@@ -32,8 +41,11 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     {
       id: 3,
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
       name: "Analytics Dashboard 2026",
       description: "AI-powered analytics with real-time insights and predictive modeling",
       icon: "📊",
@@ -44,6 +56,7 @@ const InteractiveTechShowcase: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -276,6 +289,8 @@ const InteractiveTechShowcase: React.FC = () => {
   }, [technologies.length]);
 
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
   const currentTech = technologies[activeTech];
 
   return (
@@ -356,6 +371,9 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
@@ -394,6 +412,7 @@ const InteractiveTechShowcase: React.FC = () => {
                     }}
                   />
                 ))}
+<<<<<<< HEAD
 =======
           {/* Interactive Demo */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
@@ -455,12 +474,17 @@ const InteractiveTechShowcase: React.FC = () => {
                   </div>
                 </div>
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
               </div>
             </div>
           </div>
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
         {/* Technology Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -485,6 +509,7 @@ const InteractiveTechShowcase: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default InteractiveTechShowcase;
 =======
         {/* Technology Comparison */}
@@ -620,3 +645,6 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+export default InteractiveTechShowcase;
+>>>>>>> origin/feature/revolutionary-2026-content

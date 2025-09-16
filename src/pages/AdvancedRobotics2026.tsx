@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const AdvancedRobotics2026: React.FC = () => {
@@ -249,6 +250,8 @@ const AdvancedRobotics2026: React.FC = () => {
 
 export default AdvancedRobotics2026;
 =======
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -705,4 +708,7 @@ export default AdvancedRobotics2026;
             View All Solutions
           </a>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content

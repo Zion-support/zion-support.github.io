@@ -3,6 +3,9 @@ import React from 'react';
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -19,80 +22,62 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-8">
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-16 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl transform hover:scale-105">
-              🧬 Explore Bio Revolution →
+              🧬 Start Bio Revolution
             </button>
             <button className="border-2 border-green-400 text-green-400 px-16 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
-              Watch Demo
+              📞 Bio Consultation
             </button>
           </div>
         </div>
 
-        {/* Revolutionary Applications */}
+        {/* Revolutionary Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Programmable Living Systems</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Engineered biological systems that can be programmed like computers, performing complex tasks with living cells
+          <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-6">🧬</div>
+            <h3 className="text-2xl font-bold text-green-300 mb-4">Programmable Life</h3>
+            <p className="text-gray-200 mb-6">
+              Design and program living organisms with precision, creating custom biological systems for specific functions.
             </p>
-            <ul className="text-green-200 space-y-2 mb-6 text-sm">
-              <li>• Bio-computers with living cells</li>
-              <li>• Programmable DNA circuits</li>
-              <li>• Living sensors and actuators</li>
-              <li>• Self-repairing materials</li>
+            <ul className="space-y-2 mb-6 text-sm text-gray-300">
+              <li>• DNA programming</li>
+              <li>• Custom organisms</li>
+              <li>• Biological circuits</li>
+              <li>• Living materials</li>
             </ul>
-            <a href="/pages/ProgrammableLivingSystems2027" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
-              Explore Living Systems →
+            <a href="#contact" className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Learn More →
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🏥</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Synthetic Medicine</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Revolutionary medical treatments using synthetic biology for personalized medicine and disease eradication
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-6">🧠</div>
+            <h3 className="text-2xl font-bold text-emerald-300 mb-4">Bio-Computers</h3>
+            <p className="text-gray-200 mb-6">
+              Living computers that use biological processes for computation, offering unprecedented efficiency and capabilities.
             </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Synthetic organs and tissues</li>
-              <li>• Programmable drug delivery</li>
-              <li>• Gene therapy 2.0</li>
-              <li>• Cancer elimination systems</li>
+            <ul className="space-y-2 mb-6 text-sm text-gray-300">
+              <li>• Biological processing</li>
+              <li>• DNA storage</li>
+              <li>• Protein computing</li>
+              <li>• Self-repairing systems</li>
             </ul>
-            <a href="/pages/SyntheticMedicine2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Explore Medicine →
+            <a href="#contact" className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Explore Bio-Tech →
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌱</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Bio-Agriculture</h3>
-            <p className="text-teal-100 mb-6 text-center">
-              Revolutionary agriculture using synthetic biology for sustainable food production and environmental restoration
+          <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-6">🏥</div>
+            <h3 className="text-2xl font-bold text-teal-300 mb-4">Medical Breakthroughs</h3>
+            <p className="text-gray-200 mb-6">
+              Revolutionary medical treatments using synthetic biology to cure diseases and enhance human capabilities.
             </p>
-            <ul className="text-teal-200 space-y-2 mb-6 text-sm">
-              <li>• Engineered crops for climate resilience</li>
-              <li>• Nitrogen-fixing plants</li>
-              <li>• Bio-pesticides and fertilizers</li>
-              <li>• Carbon capture plants</li>
+            <ul className="space-y-2 mb-6 text-sm text-gray-300">
+              <li>• Gene therapy</li>
+              <li>• Synthetic organs</li>
+              <li>• Disease eradication</li>
+              <li>• Longevity enhancement</li>
             </ul>
-            <a href="/pages/BioAgriculture2027" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
-              Explore Agriculture →
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Bio-Energy</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Living energy systems that produce clean, renewable power through biological processes
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Living batteries and fuel cells</li>
-              <li>• Photosynthetic energy systems</li>
-              <li>• Bio-hydrogen production</li>
-              <li>• Self-repairing energy infrastructure</li>
-            </ul>
-=======
             <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Explore Bio-Energy →
             </a>
@@ -161,19 +146,20 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">Ready to Join the Bio Revolution?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto text-gray-300">
-            Experience the future where synthetic biology transforms life itself and creates infinite possibilities
+        <div className="text-center py-20">
+          <h2 className="text-5xl font-bold mb-8 text-white">Ready to Transform Biology?</h2>
+          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto">
+            Join the synthetic biology revolution and unlock the potential of engineered life
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Bio Journey →
+          <div className="flex justify-center space-x-8">
+            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
+              🧬 Begin Bio Journey
             </button>
-            <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-              Contact Our Team
+            <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
+              📞 Bio Consultation
             </button>
           </div>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -199,6 +185,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             Join the transformation that's redefining life itself through synthetic biology
           </p>
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
         </div>
       </div>
     </div>
