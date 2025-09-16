@@ -89,54 +89,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
               >
                 {technologies[activeTech].demo}
-      {/* Technology Comparison */}
-      <div className="mt-16">
-        <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Technology</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Performance</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Innovation Level</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Market Ready</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {technologies.map((tech, index) => (
-                  <tr key={tech.id} className={activeTech === index ? 'bg-blue-50' : 'hover:bg-gray-50'}>
-                    <td className="px-6 py-4">
-                      <div className="flex items-center">
-                        <span className="text-2xl mr-3">{tech.icon}</span>
-                        <span className="font-medium text-gray-800">{tech.name}</span>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="flex items-center">
-                        <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
-                          <div 
-                            className={`bg-gradient-to-r ${tech.color} h-2 rounded-full`}
-                            style={{ width: `${80 + index * 5}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-sm text-gray-600">{80 + index * 5}%</span>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
-                        Revolutionary
-                      </span>
-                    </td>
-                    <td className="px-6 py-4">
-                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-semibold">
-                        Available Now
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
 import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -196,78 +148,6 @@ const InteractiveTechShowcase: React.FC = () => {
 
   const currentTech = technologies[activeTech];
 
-  const currentTech = technologies[activeTech];
-
-
-  const currentTech = technologies[activeTech];
-
-    quantum: {
-      title: "Quantum Computing",
-      subtitle: "Exponential Computational Power",
-      icon: "⚡",
-      color: "from-cyan-500 to-blue-500",
-      description: "Unlock the power of quantum mechanics to solve problems that would take classical computers millennia to process.",
-      features: [
-        "Quantum entanglement networks",
-        "Parallel universe processing",
-        "Exponential speedup algorithms",
-        "Quantum error correction",
-        "Secure quantum communication",
-        "Quantum machine learning"
-      ],
-      stats: [
-        { label: "Processing Speed", value: "1Million x", icon: "🚀" },
-        { label: "Qubits", value: "1000+", icon: "🔢" },
-        { label: "Stability", value: "99.99%", icon: "🛡️" }
-      ]
-    },
-    neural: {
-      title: "Neural Interfaces",
-      subtitle: "Direct Brain-Computer Communication",
-      icon: "🔗",
-      color: "from-emerald-500 to-teal-500",
-      description: "Seamlessly connect your mind to digital systems with our advanced neural interface technology.",
-      features: [
-        "Non-invasive neural reading",
-        "Real-time thought processing",
-        "High-bandwidth data transfer",
-        "Secure neural encryption",
-        "Multi-modal interaction",
-        "Consciousness preservation"
-      ],
-      stats: [
-        { label: "Data Transfer", value: "1TB/s", icon: "📊" },
-        { label: "Latency", value: "<1ms", icon: "⏱️" },
-        { label: "Accuracy", value: "99.8%", icon: "🎯" }
-      ]
-    },
-    biotech: {
-      title: "Biotech AI",
-      subtitle: "Personalized Medicine Revolution",
-      icon: "🧬",
-      color: "from-purple-500 to-pink-500",
-      description: "Revolutionize healthcare with AI-driven biotechnology that creates personalized treatments for every individual.",
-      features: [
-        "Genetic profile analysis",
-        "Personalized drug design",
-        "Real-time health monitoring",
-        "Disease prediction algorithms",
-        "Automated treatment optimization",
-        "Regenerative medicine AI"
-      ],
-      stats: [
-        { label: "Treatment Success", value: "95%", icon: "💊" },
-        { label: "Diagnosis Speed", value: "10x faster", icon: "⚡" },
-        { label: "Cost Reduction", value: "80%", icon: "💰" }
-      ]
-    }
-  };
-
-    }
-  ];
-
-  const currentTech = technologies[activeTech];
-
   return (
     <div className="mb-16">
       <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
@@ -303,103 +183,6 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Technology Visual */}
-          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
-            <div className="relative h-full min-h-[400px]">
-              <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
-              <div className="relative z-10 flex items-center justify-center h-full">
-                <motion.div
-                  key={activeTech}
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-9xl"
-                >
-                  {currentTech.icon}
-                </motion.div>
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                {[...Array(20)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-2 h-2 bg-white rounded-full opacity-30"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                    animate={{
-                      y: [0, -100, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
-                    }}
-                    transition={{
-                      duration: 3 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 2,
-                    }}
-                  />
-                ))}
-          {/* Interactive Demo */}
-          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
-              <h4 className="text-3xl font-bold mb-6 text-center">Interactive Demo</h4>
-              
-              {/* Demo Visualization */}
-              <div className="relative mb-8">
-                <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4 animate-bounce">
-                      {currentTech.icon}
-                    </div>
-                    <p className="text-gray-400">Interactive {currentTech.name} Demo</p>
-                    <p className="text-sm text-gray-500 mt-2">Click to interact</p>
-                  </div>
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
-                <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                <div className="absolute top-1/2 left-4 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
-              </div>
-
-              {/* Demo Controls */}
-              <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Start Interactive Demo
-                </button>
-                <button className="w-full border border-purple-400 text-purple-400 py-3 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors">
-                  View Documentation
-                </button>
-                <button className="w-full border border-cyan-400 text-cyan-400 py-3 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors">
-                  Schedule Live Demo
-                </button>
-              </div>
-
-              {/* Real-time Data */}
-              <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
-                <h5 className="text-lg font-bold mb-3 text-center">Real-time Data</h5>
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-purple-400">
-                      {Math.floor(Math.random() * 100) + 80}%
-                    </div>
-                    <div className="text-sm text-gray-400">Active</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-cyan-400">
-                      {Math.floor(Math.random() * 1000) + 500}
-                    </div>
-                    <div className="text-sm text-gray-400">Processes</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-emerald-400">
-                      {Math.floor(Math.random() * 50) + 25}ms
-                    </div>
-                    <div className="text-sm text-gray-400">Latency</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -431,7 +214,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-3xl font-bold text-white mb-2">∞</div>
             <div className="text-gray-300">Learning Capacity</div>
           </div>
-        </div>
         </div>
       {/* Technology Grid */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -586,6 +368,5 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
-export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
