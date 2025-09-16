@@ -65,6 +65,9 @@ import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
+import NewContentPromoBanner from './src/components/NewContentPromoBanner';
+import FeaturedContentShowcase from './src/components/FeaturedContentShowcase';
+import AdvancedAISolutions2025 from './src/pages/AdvancedAISolutions2025';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
@@ -220,6 +223,7 @@ export default function App(): JSX.Element {
         <EnhancedAccessibility2025 />
         <MobileOptimizer2025 />
         <Header />
+        <NewContentPromoBanner />
         
         <Routes>
           <Route path="/" element={
@@ -752,6 +756,11 @@ export default function App(): JSX.Element {
                   <EnhancedContentCarousel2025 />
                 </div>
 
+                {/* NEW: Featured Content Showcase - Latest Content Display */}
+                <div className="mb-12">
+                  <FeaturedContentShowcase />
+                </div>
+
                 {/* Revolutionary Content Carousel 2027 */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -1278,6 +1287,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+          <Route path="/pages/AdvancedAISolutions2025" element={<AdvancedAISolutions2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
