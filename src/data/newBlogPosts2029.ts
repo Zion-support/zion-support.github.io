@@ -14,6 +14,48 @@ export interface NewBlogPostMeta2029 {
 
 export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
   {
+    id: 9803,
+    title: "AI 2026: Journey Scorecards — KPIs You Can Ship Today",
+    excerpt:
+      "Ready-to-use KPI JSON, thresholds, and dashboards for safe, cost-aware AI.",
+    author: "Riley Gomez",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "ai-2026-journey-scorecards-starter",
+  },
+  {
+    id: 9802,
+    title: "Exec Guide: Evals + Guardrails You Can Ship Tomorrow",
+    excerpt:
+      "Leaders’ playbook to gate changes with evals, policy, and reversible rollouts.",
+    author: "Avery Scott",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy", "Evals", "Rollbacks"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-evals-guardrails-2026.jpg",
+    slug: "exec-guide-evals-guardrails-ship-tomorrow",
+  },
+  {
+    id: 9801,
+    title: "FinServ Case Study: Policy Routing Cuts Spend by 35%",
+    excerpt:
+      "How routing bands, budgets, and scorecards preserved quality while saving millions.",
+    author: "Nina Patel",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-savings-2026.jpg",
+    slug: "finserv-policy-routing-35-savings",
+  },
+  {
     id: 9601,
     title: "AI 2026: Real-Time Incident Postmortems — Evidence First",
     excerpt:
