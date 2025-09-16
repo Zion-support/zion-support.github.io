@@ -1,5 +1,19 @@
 [
   {
+    "title": "Agent Guardrail Testing Playbook: Red Teams, Fuzzers, and Chaos",
+    "url": "/reports/ai-lab/articles/new-agent-guardrail-testing-playbook-1758151200000.md",
+    "createdAt": "2025-09-17T07:00:00.000Z",
+    "tags": ["safety", "testing", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Resilient Agent Deployments: Canary + Eval Gates + Auto-Rollback",
+    "url": "/reports/ai-lab/articles/new-resilient-agent-deployments-1758149400000.md",
+    "createdAt": "2025-09-17T06:30:00.000Z",
+    "tags": ["reliability", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Evidence‑Led Ops Scorecards for Production Agents",
     "url": "/reports/ai-lab/articles/new-ai-lab-content-evidence-led-ops-scorecards-1758145200000.md",
     "createdAt": "2025-09-17T05:00:00.000Z",
