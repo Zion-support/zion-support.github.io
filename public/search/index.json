@@ -205,6 +205,11 @@
     "h1": "AI Consciousness Evolution 2025"
   },
   {
+    "route": "/ai-consciousness-evolution-2026",
+    "title": "AI Consciousness Evolution 2026 | Zion Tech Group",
+    "h1": "AI Consciousness Evolution 2026"
+  },
+  {
     "route": "/ai-consciousness-evolution-2029",
     "title": "Ai Consciousness Evolution 2029 - Zion Tech Group",
     "h1": "Ai Consciousness Evolution 2029"
@@ -975,6 +980,11 @@
     "h1": "Post a Job"
   },
   {
+    "route": "/post-quantum-cryptography-2026",
+    "title": "Post-Quantum Cryptography 2026 | Zion Tech Group",
+    "h1": "Post-Quantum Cryptography 2026"
+  },
+  {
     "route": "/press",
     "title": "",
     "h1": "Press"
@@ -1053,6 +1063,11 @@
     "route": "/quantum-financial-trading",
     "title": "{service.name} - Zion Tech Group",
     "h1": ""
+  },
+  {
+    "route": "/quantum-internet-revolution-2026",
+    "title": "Quantum Internet Revolution 2026 | Zion Tech Group",
+    "h1": "Quantum Internet Revolution 2026"
   },
   {
     "route": "/quantum-logistics",
@@ -1258,6 +1273,11 @@
     "route": "/support",
     "title": "",
     "h1": "How Can We Help?"
+  },
+  {
+    "route": "/synthetic-intelligence-platform-2026",
+    "title": "Synthetic Intelligence Platform 2026 | Zion Tech Group",
+    "h1": "Synthetic Intelligence Platform 2026"
   },
   {
     "route": "/talent",
@@ -2200,6 +2220,11 @@
     "h1": "Agent Platform SLO Blueprint (2026)"
   },
   {
+    "route": "/blog/ai-2026-agentic-observability-deep-dive",
+    "title": "AI 2026: Agentic Observability — Deep Dive | Zion Tech Group",
+    "h1": "AI 2026: Agentic Observability — Deep Dive"
+  },
+  {
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
@@ -2220,9 +2245,19 @@
     "h1": "AI 2026: Edge Agents in Production"
   },
   {
+    "route": "/blog/ai-2026-enterprise-agent-risk-mitigation",
+    "title": "AI 2026: Enterprise Agent Risk Mitigation",
+    "h1": "AI 2026: Enterprise Agent Risk Mitigation"
+  },
+  {
     "route": "/blog/ai-2026-evaluation-cookbook",
     "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
     "h1": "AI 2026: Evaluation Cookbook"
+  },
+  {
+    "route": "/blog/ai-2026-evidence-led-operations-blueprint",
+    "title": "",
+    "h1": "Evidence‑Led Operations Blueprint (2026)"
   },
   {
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
@@ -2263,6 +2298,11 @@
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-autonomy-operations",
+    "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
+    "h1": "AI 2026: Reliable Autonomy Operations"
   },
   {
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
