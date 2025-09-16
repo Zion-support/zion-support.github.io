@@ -43,7 +43,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/ai-2027-breakthrough-innovations.jpg",
     slug: "2027-ai-breakthrough-innovations-future-is-here"
->>>>>>> cursor/create-and-deploy-new-content-b459
   },
   {
     id: 10001,
