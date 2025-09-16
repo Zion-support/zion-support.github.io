@@ -1,48 +1,22 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Revolutionary Technology Content 2026
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_headers
-Disallow: /*.backup
-Disallow: /*.log
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
+Disallow: /_headers
+Disallow: /backup/
+Disallow: /cache/
 
-# Allow all content pages
-Allow: /pages/
+# Allow important pages
 Allow: /blog/
-Allow: /contact/
-
-# Crawl delay
-Crawl-delay: 1
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+Allow: /pages/
+Allow: /ultimate-ai-services-showcase-2026
+Allow: /revolutionary-showcase-2026
