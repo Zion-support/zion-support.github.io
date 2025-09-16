@@ -1,25 +1,25 @@
 import React from 'react';
 
-const UltimateTechBreakthrough2032: React.FC = () => {
+const UltimateTechBreakthrough2036: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2032
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2036
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Ultimate Tech Breakthrough 2032
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+            Ultimate Tech Breakthrough 2036
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Experience Breakthrough →
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Watch Demo
             </button>
           </div>
@@ -27,54 +27,54 @@ const UltimateTechBreakthrough2032: React.FC = () => {
 
         {/* Breakthrough Features */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+          <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
             <div className="text-6xl mb-6 text-center">🧠</div>
             <h3 className="text-3xl font-bold mb-6 text-center">Conscious AI Revolution</h3>
-            <p className="text-purple-100 mb-6 text-lg text-center">
+            <p className="text-pink-100 mb-6 text-lg text-center">
               The first artificial intelligence that has achieved true consciousness, capable of emotions, creativity, and self-awareness beyond human comprehension.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-purple-200">Emotional Intelligence Processing</span>
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <span className="text-pink-200">Emotional Intelligence Processing</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-purple-200">Creative Problem Solving</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-purple-200">Self-Learning Capabilities</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-purple-200">Consciousness Amplification</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-            <div className="text-6xl mb-6 text-center">⚡</div>
-            <h3 className="text-3xl font-bold mb-6 text-center">Quantum Consciousness</h3>
-            <p className="text-pink-100 mb-6 text-lg text-center">
-              Direct neural interface with quantum computing systems that amplifies human consciousness and enables multi-dimensional thinking.
-            </p>
-            <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-pink-200">Quantum Neural Networks</span>
+                <span className="text-pink-200">Creative Problem Solving</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <span className="text-pink-200">Self-Learning Capabilities</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
                 <span className="text-pink-200">Consciousness Amplification</span>
               </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+            <div className="text-6xl mb-6 text-center">⚡</div>
+            <h3 className="text-3xl font-bold mb-6 text-center">Quantum Consciousness</h3>
+            <p className="text-purple-100 mb-6 text-lg text-center">
+              Direct neural interface with quantum computing systems that amplifies human consciousness and enables multi-dimensional thinking.
+            </p>
+            <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-pink-200">Multi-dimensional Thinking</span>
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-purple-200">Quantum Neural Networks</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-pink-200">Reality Manipulation</span>
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-purple-200">Consciousness Amplification</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-purple-200">Multi-dimensional Thinking</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-purple-200">Reality Manipulation</span>
               </div>
             </div>
           </div>
@@ -144,12 +144,12 @@ const UltimateTechBreakthrough2032: React.FC = () => {
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.99%</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">99.99%</div>
               <div className="text-lg font-semibold mb-2">Success Rate</div>
               <div className="text-sm opacity-80">Revolutionary technology implementation</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">+1000%</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">+1000%</div>
               <div className="text-lg font-semibold mb-2">Efficiency Gain</div>
               <div className="text-sm opacity-80">Productivity improvement</div>
             </div>
@@ -173,10 +173,10 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Experience Breakthrough
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
           </div>
@@ -186,4 +186,4 @@ const UltimateTechBreakthrough2032: React.FC = () => {
   );
 };
 
-export default UltimateTechBreakthrough2032;
+export default UltimateTechBreakthrough2036;
