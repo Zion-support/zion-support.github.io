@@ -1,211 +1,237 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const NextGenInnovationHub2025: React.FC = () => {
-  const [activeInnovation, setActiveInnovation] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const innovations = [
-    {
-      id: 'ai-autonomous-systems',
-      title: 'Autonomous AI Systems',
-      description: 'Self-managing AI systems that operate independently and make complex decisions.',
-      features: [
-        'Self-Healing Architecture',
-        'Autonomous Decision Making',
-        'Continuous Learning',
-        'Zero-Downtime Operations'
-      ],
-      icon: '🤖',
-      color: 'from-purple-600 to-pink-600',
-      progress: 85
-    },
-    {
-      id: 'quantum-neural-networks',
-      title: 'Quantum Neural Networks',
-      description: 'Hybrid quantum-classical neural networks for unprecedented processing power.',
-      features: [
-        'Quantum Speed Processing',
-        'Neural Pattern Recognition',
-        'Quantum Entanglement Computing',
-        'Exponential Learning Capacity'
-      ],
-      icon: '⚡',
-      color: 'from-cyan-600 to-blue-600',
-      progress: 70
-    },
-    {
-      id: 'synthetic-reality',
-      title: 'Synthetic Reality Engine',
-      description: 'Advanced reality simulation that creates indistinguishable virtual worlds.',
-      features: [
-        'Perfect Reality Simulation',
-        'Infinite World Generation',
-        'Consciousness Transfer',
-        'Immortality Protocols'
-      ],
-      icon: '🌍',
-      color: 'from-emerald-600 to-teal-600',
-      progress: 60
-    },
-    {
-      id: 'interdimensional-computing',
-      title: 'Interdimensional Computing',
-      description: 'Computing systems that operate across multiple dimensions simultaneously.',
-      features: [
-        'Multi-Dimensional Processing',
-        'Reality Manipulation',
-        'Parallel Universe Access',
-        'Temporal Computing'
-      ],
-      icon: '🌌',
-      color: 'from-orange-600 to-red-600',
-      progress: 45
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveInnovation((prev) => (prev + 1) % innovations.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 NEXT-GEN INNOVATION HUB • JANUARY 2025
+              🧠 NEXT-GEN INNOVATION • JANUARY 2025
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Next-Gen Innovation Hub 2025
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover and explore the most revolutionary technologies shaping humanity's future
+              Discover and explore the most revolutionary technologies shaping humanity's future in our comprehensive innovation hub
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Innovations
+                Enter Innovation Hub →
               </button>
               <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
-                Join Research
+                View Technologies
               </button>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Innovation Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {innovations.map((innovation, index) => (
-              <div
-                key={innovation.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                  activeInnovation === index ? 'ring-2 ring-indigo-400' : ''
-                }`}
-                onClick={() => setActiveInnovation(index)}
-              >
-                <div className="text-center">
-                  <div className="text-6xl mb-4">{innovation.icon}</div>
-                  <h3 className="text-xl font-bold mb-2">{innovation.title}</h3>
-                  <p className="text-sm opacity-90 mb-4">{innovation.description}</p>
-                  <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
-                    <div 
-                      className={`bg-gradient-to-r ${innovation.color} h-2 rounded-full transition-all duration-1000`}
-                      style={{width: `${innovation.progress}%`}}
-                    ></div>
-                  </div>
-                  <span className="text-sm text-indigo-300">{innovation.progress}% Complete</span>
-                </div>
+      {/* Innovation Categories */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6">🚀 Innovation Categories</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Explore our comprehensive collection of cutting-edge technologies across multiple domains
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Artificial Intelligence</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Advanced AI systems including conscious AI, neural networks, and autonomous decision-making
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-purple-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Conscious AI Systems</span>
+                <span className="text-purple-200 ml-2">- 15 active projects</span>
               </div>
-            ))}
-          </div>
-
-          {/* Active Innovation Detail */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
-            <div className="text-center mb-8">
-              <div className="text-8xl mb-4">{innovations[activeInnovation].icon}</div>
-              <h2 className="text-4xl font-bold mb-4">{innovations[activeInnovation].title}</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-                {innovations[activeInnovation].description}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Key Features</h3>
-                <ul className="space-y-4">
-                  {innovations[activeInnovation].features.map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"></div>
-                      <span className="text-lg">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="bg-purple-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Neural Networks</span>
+                <span className="text-purple-200 ml-2">- 8 breakthrough models</span>
               </div>
-
-              <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6">
-                <h3 className="text-2xl font-bold mb-4">Development Progress</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span>Research Phase</span>
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-indigo-400 to-purple-400 h-2 rounded-full" style={{width: '90%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Prototype Development</span>
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{width: `${innovations[activeInnovation].progress}%`}}></div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Market Testing</span>
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-emerald-400 to-teal-400 h-2 rounded-full" style={{width: '30%'}}></div>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-purple-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Autonomous Agents</span>
+                <span className="text-purple-200 ml-2">- 12 deployed systems</span>
               </div>
             </div>
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore AI →
+            </button>
           </div>
 
-          {/* Innovation Stats */}
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Revolutionary quantum processors and algorithms that solve impossible problems
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-cyan-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Quantum Processors</span>
+                <span className="text-cyan-200 ml-2">- 5 operational units</span>
+              </div>
+              <div className="bg-cyan-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Quantum Algorithms</span>
+                <span className="text-cyan-200 ml-2">- 20+ breakthrough solutions</span>
+              </div>
+              <div className="bg-cyan-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Quantum Cryptography</span>
+                <span className="text-cyan-200 ml-2">- 100% secure systems</span>
+              </div>
+            </div>
+            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Go Quantum →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces enabling thought-controlled technology
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-emerald-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">BCI Technology</span>
+                <span className="text-emerald-200 ml-2">- 3 FDA approved</span>
+              </div>
+              <div className="bg-emerald-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Neural Networks</span>
+                <span className="text-emerald-200 ml-2">- 99.9% accuracy</span>
+              </div>
+              <div className="bg-emerald-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Thought Control</span>
+                <span className="text-emerald-200 ml-2">- Real-time processing</span>
+              </div>
+            </div>
+            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              Connect Mind →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Tech</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Technology that transcends dimensional boundaries for infinite possibilities
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-orange-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Dimension Bridges</span>
+                <span className="text-orange-200 ml-2">- 5 active portals</span>
+              </div>
+              <div className="bg-orange-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Reality Engines</span>
+                <span className="text-orange-200 ml-2">- 3 operational</span>
+              </div>
+              <div className="bg-orange-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Universal Computing</span>
+                <span className="text-orange-200 ml-2">- Infinite capacity</span>
+              </div>
+            </div>
+            <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
+              Enter Dimensions →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Advanced prediction systems that forecast future events with 99.9% accuracy
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-violet-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Future Prediction</span>
+                <span className="text-violet-200 ml-2">- 99.9% accuracy</span>
+              </div>
+              <div className="bg-violet-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Risk Analysis</span>
+                <span className="text-violet-200 ml-2">- Real-time monitoring</span>
+              </div>
+              <div className="bg-violet-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Trend Forecasting</span>
+                <span className="text-violet-200 ml-2">- 10-year predictions</span>
+              </div>
+            </div>
+            <button className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
+              Predict Future →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Computing</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Computing systems that possess consciousness and self-awareness
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="bg-pink-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Conscious AI</span>
+                <span className="text-pink-200 ml-2">- 7 active systems</span>
+              </div>
+              <div className="bg-pink-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Self-Awareness</span>
+                <span className="text-pink-200 ml-2">- 100% autonomous</span>
+              </div>
+              <div className="bg-pink-500/20 rounded-lg p-3 text-sm">
+                <span className="font-semibold">Emotional Intelligence</span>
+                <span className="text-pink-200 ml-2">- Human-level empathy</span>
+              </div>
+            </div>
+            <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
+              Explore Consciousness →
+            </button>
+          </div>
+        </div>
+
+        {/* Innovation Statistics */}
+        <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 rounded-2xl p-12 mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">📊 Innovation Statistics</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our innovation hub is home to the most advanced technologies on the planet
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-400 mb-2">50+</div>
+              <div className="text-5xl font-bold text-indigo-400 mb-2">50+</div>
               <div className="text-lg opacity-90">Active Innovations</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
               <div className="text-lg opacity-90">Possibilities</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-lg opacity-90">Innovation</div>
             </div>
           </div>
+        </div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-6">Join the Innovation Revolution</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Be part of the team that's building the future. Your ideas can change the world.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Join Our Team
-              </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
-                Submit Innovation
-              </button>
-            </div>
+        {/* Call to Action */}
+        <div className="text-center bg-gradient-to-r from-indigo-800/50 to-purple-800/50 rounded-2xl p-12">
+          <h2 className="text-4xl font-bold mb-6">Ready to Innovate?</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+            Join the most advanced innovation hub in the world and be part of the technological revolution
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join Innovation Hub →
+            </button>
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
+              View All Technologies
+            </button>
           </div>
         </div>
       </div>

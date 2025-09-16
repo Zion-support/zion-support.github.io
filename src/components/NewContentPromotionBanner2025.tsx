@@ -1,155 +1,99 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const NewContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    {
-      title: 'Interactive Demos',
-      description: 'Experience AI in action with our hands-on demonstrations',
-      icon: '🎮',
-      color: 'from-blue-500 to-purple-500'
-    },
-    {
-      title: 'Success Stories',
-      description: 'Real case studies with measurable ROI results',
-      icon: '📈',
-      color: 'from-green-500 to-blue-500'
-    },
-    {
-      title: 'Expert Insights',
-      description: 'Latest AI trends and industry analysis from our experts',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Interactive Tools',
-      description: 'ROI calculators and assessment tools to explore your potential',
-      icon: '🛠️',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [features.length]);
-
+const NewContentPromotionBanner2025: React.FC = () => {
   return (
-    <div className={`py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Main Content */}
-          <div>
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                AI Content
-              </span>
-            </h2>
-            
-            <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Explore interactive demos, success stories, expert insights, and powerful tools 
-              that showcase the future of AI in business transformation.
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white mb-12">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🔥 HOT: New Content Just Released
+          </div>
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Revolutionary Technology 2025
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technologies including conscious AI, quantum computing, and interdimensional technology
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Conscious AI</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              The world's first truly conscious artificial intelligence systems
             </p>
-
-            {/* Feature Highlight */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className={`text-4xl bg-gradient-to-r ${features[currentFeature].color} bg-clip-text text-transparent`}>
-                  {features[currentFeature].icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">
-                    {features[currentFeature].title}
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    {features[currentFeature].description}
-                  </p>
-                </div>
-              </div>
+            <div className="text-center">
+              <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                NEW
+              </span>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/content"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
-              >
-                Explore New Content
-              </a>
-              <a
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
-              >
-                Try Interactive Demo
-              </a>
-            </div>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore →
+            </a>
           </div>
 
-          {/* Right Side - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`group bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 hover:bg-opacity-20 hover:transform hover:scale-105 ${
-                  index === currentFeature ? 'ring-2 ring-white ring-opacity-50' : ''
-                }`}
-                onClick={() => setCurrentFeature(index)}
-              >
-                <div className={`text-3xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
-                  {feature.description}
-                </p>
-                <div className="mt-4 flex items-center text-sm text-yellow-300 group-hover:text-white transition-colors">
-                  <span>Learn More</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            ))}
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">⚛️</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-4 text-center text-sm">
+              Revolutionary quantum processors solving impossible problems
+            </p>
+            <div className="text-center">
+              <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                NEW
+              </span>
+            </div>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Explore →
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-4 text-center text-sm">
+              Direct brain-computer interfaces for thought control
+            </p>
+            <div className="text-center">
+              <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                NEW
+              </span>
+            </div>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Explore →
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-orange-100 mb-4 text-center text-sm">
+              Technology that transcends dimensional boundaries
+            </p>
+            <div className="text-center">
+              <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                NEW
+              </span>
+            </div>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
+              Explore →
+            </a>
           </div>
         </div>
 
-        {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
-            <div className="text-sm opacity-90">New Articles</div>
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-4">
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              🚀 Explore All Breakthroughs →
+            </a>
+            <a href="/pages/NextGenInnovationHub2025" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg hover:bg-yellow-400/10 transition-colors font-semibold text-lg">
+              🧠 Innovation Hub
+            </a>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
-            <div className="text-sm opacity-90">Case Studies</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
-            <div className="text-sm opacity-90">Interactive Tools</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
-            <div className="text-sm opacity-90">Live Demos</div>
+          <div className="mt-4 text-sm opacity-80">
+            ⚡ Limited Time: Get early access to revolutionary technologies
           </div>
         </div>
       </div>
