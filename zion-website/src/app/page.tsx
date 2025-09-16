@@ -362,6 +362,7 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+<<<<<<< HEAD
                 href="/blog/ai-2026-policy-as-code-production-blueprint"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
@@ -384,6 +385,14 @@ export default function HomePage() {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+                href="/updates/autonomous-retail-fulfillment"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Case Study: Autonomous Retail Fulfillment
+                <span aria-hidden>→</span>
+              </a>
+>>>>>>> origin/feat/content-sept15-1757928952
             </div>
           </div>
         </div>

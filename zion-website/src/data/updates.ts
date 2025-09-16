@@ -13,6 +13,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 =======
     title: 'Guide: Agent Platform Operations (2026)',
@@ -20,6 +21,25 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Launch: Autonomous Ops and SRE for Agents',
 =======
     title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+=======
+    title: 'Report: State of AI Automation (2026 Preview)',
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
+>>>>>>> origin/feat/content-sept15-1757928952
     summary:
       'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
     href: '/blog/ai-2026-policy-as-code-production-blueprint',

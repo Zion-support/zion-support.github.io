@@ -8,9 +8,22 @@ const posts = [
     summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
   },
   {
+<<<<<<< HEAD
     slug: 'ai-2026-autonomous-workflow-architecture',
     title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
     summary: 'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+=======
+    slug: 'ai-2026-cost-transparency-for-agents',
+    title: 'AI 2026: Cost Transparency for Agentic Systems',
+    summary:
+      'Establishing SLOs, SLIs, and cost attribution for complex multi-agent workflows in production.'
+  },
+  {
+    slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
+    title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
+    summary:
+      'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI.'
+>>>>>>> origin/feat/content-sept15-1757928952
   },
   {
     slug: 'ai-2026-production-agent-postmortems',
