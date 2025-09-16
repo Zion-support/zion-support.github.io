@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: E2E AI Change Evidence Playbook (2026 Preview)',
+		summary: 'Practical patterns for evidence bundles, lineage, and policy-as-code at scale.',
+		href: '/updates/ai-change-evidence-playbook-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: 70% Content Velocity with AI Factory',
+		summary: 'How a content team scaled output safely using eval gates and guardrails.',
+		href: '/updates/ai-content-factory-velocity-70',
+		date: '2025-09-16',
+		tag: 'Case Study',
+	},
+	{
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
