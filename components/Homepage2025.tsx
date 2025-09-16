@@ -51,6 +51,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Enterprise Agent Risk Mitigation (2026)',
+      href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
       title: 'Reliable Autonomy Operations (2026)',
       href: '/blog/ai-2026-reliable-autonomy-operations',
       tag: 'New',
