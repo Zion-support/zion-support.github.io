@@ -88,6 +88,24 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-operationalizing-agentic-workflows',
       tag: 'Agentic',
       gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      title: 'Operational Evals — Blueprint (2026)',
+      href: '/blog/ai-2026-operational-evals-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Agent Observability Blueprint (2026)',
+      href: '/blog/ai-2026-agent-observability-blueprint',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
+      title: 'Customer-Facing AI Agents in 2025',
+      href: '/blog/ai-customer-agents-2025',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-lime-500'
     }
   ];
 
@@ -345,20 +363,20 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Guardrails, evals, and FinOps blueprints now live.</p>
+                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-runtime-guardrails-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Runtime Guardrails Blueprint</div>
-                  <div className="text-xs opacity-90">7 min • Safety</div>
+                <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">8 min • Evals</div>
                 </a>
-                <a href="/blog/ai-2026-evaluation-cookbook" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evaluation Cookbook</div>
-                  <div className="text-xs opacity-90">8 min • Evaluations</div>
+                <a href="/blog/ai-2026-agent-observability-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">7 min • Observability</div>
                 </a>
-                <a href="/blog/ai-2026-cost-optimization-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Cost Optimization Blueprint</div>
-                  <div className="text-xs opacity-90">6 min • FinOps</div>
+                <a href="/blog/ai-customer-agents-2025" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Customer-Facing AI Agents in 2025</div>
+                  <div className="text-xs opacity-90">6 min • Customer AI</div>
                 </a>
               </div>
             </div>

@@ -4,6 +4,8 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 
 const posts = [
   { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
+  { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
+  { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
