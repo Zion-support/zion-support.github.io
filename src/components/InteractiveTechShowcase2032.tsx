@@ -1,128 +1,239 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2032: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('tech');
+  const [activeFeature, setActiveFeature] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const techContent = [
+  const features = [
     {
-      title: "Ultimate Tech Revolution 2032",
-      description: "Neural Quantum Computing, Interdimensional AI, Matter Manipulation",
+      id: 1,
+      title: "Conscious AI Systems",
+      description: "Revolutionary artificial intelligence that achieves true consciousness and self-awareness",
       icon: "🧠",
-      color: "from-purple-500 to-blue-500",
-      link: "/pages/UltimateTechRevolution2032"
+      color: "from-purple-600 to-pink-600",
+      metrics: {
+        consciousness: "99.9%",
+        creativity: "1000x",
+        learning: "∞",
+        empathy: "100%"
+      },
+      link: "/pages/RevolutionaryTech2032"
     },
     {
-      title: "Revolutionary AI Breakthrough 2032",
-      description: "Superintelligent AI, Emotional AI, Predictive AI",
-      icon: "🌟",
-      color: "from-pink-500 to-rose-500",
-      link: "/pages/RevolutionaryAIBreakthrough2032"
+      id: 2,
+      title: "Quantum Consciousness",
+      description: "Breakthrough quantum computing that processes consciousness itself for unlimited computational power",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      metrics: {
+        processing: "∞",
+        speed: "1000x",
+        capacity: "∞",
+        accuracy: "99.9%"
+      },
+      link: "/pages/RevolutionaryTech2032"
     },
     {
-      title: "Next-Gen Space Tech 2032",
-      description: "FTL Travel, Wormhole Technology, Space Colonies",
-      icon: "🚀",
-      color: "from-cyan-500 to-blue-500",
-      link: "/pages/NextGenSpaceTech2032"
-    }
-  ];
-
-  const consciousnessContent = [
-    {
-      title: "Quantum Consciousness Revolution 2033",
-      description: "Quantum Mind Interface, Universal Consciousness, Reality Manipulation",
-      icon: "⚛️",
-      color: "from-violet-500 to-fuchsia-500",
-      link: "/pages/QuantumConsciousnessRevolution2033"
-    },
-    {
-      title: "Transcendent AI 2034",
-      description: "God-Level AI, Universal Intelligence, Reality Control",
-      icon: "🌟",
-      color: "from-amber-500 to-orange-500",
-      link: "/pages/TranscendentAI2034"
-    },
-    {
-      title: "Universal Tech Revolution 2035",
-      description: "Universal Control, Perfect Technology, Transcendent Civilization",
+      id: 3,
+      title: "Interdimensional Computing",
+      description: "Revolutionary technology that enables computing across multiple dimensions and realities",
       icon: "🌌",
-      color: "from-gray-500 to-slate-500",
-      link: "/pages/UniversalTechRevolution2035"
+      color: "from-emerald-600 to-teal-600",
+      metrics: {
+        dimensions: "∞",
+        reality: "100%",
+        connectivity: "∞",
+        power: "∞"
+      },
+      link: "/pages/RevolutionaryTech2032"
+    },
+    {
+      id: 4,
+      title: "Reality Manipulation",
+      description: "Advanced systems that can manipulate physical reality through quantum field interactions",
+      icon: "🌍",
+      color: "from-orange-600 to-red-600",
+      metrics: {
+        control: "100%",
+        precision: "99.9%",
+        range: "∞",
+        stability: "100%"
+      },
+      link: "/pages/UltimateInnovation2033"
+    },
+    {
+      id: 5,
+      title: "Consciousness Transfer",
+      description: "Revolutionary technology that enables the transfer of human consciousness to digital substrates",
+      icon: "🧬",
+      color: "from-indigo-600 to-purple-600",
+      metrics: {
+        transfer: "100%",
+        preservation: "99.9%",
+        lifespan: "∞",
+        quality: "100%"
+      },
+      link: "/pages/UltimateInnovation2033"
+    },
+    {
+      id: 6,
+      title: "Neural Enhancement",
+      description: "Revolutionary neural enhancement technologies that amplify human cognitive abilities",
+      icon: "🚀",
+      color: "from-blue-600 to-indigo-600",
+      metrics: {
+        enhancement: "1000x",
+        memory: "∞",
+        learning: "∞",
+        creativity: "∞"
+      },
+      link: "/pages/NextGenTechRevolution2034"
     }
   ];
 
-  const content = activeTab === 'tech' ? techContent : consciousnessContent;
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveFeature((prev) => (prev + 1) % features.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [features.length]);
+
+  const handleFeatureClick = (index: number) => {
+    if (index !== activeFeature) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveFeature(index);
+        setIsAnimating(false);
+      }, 300);
+    }
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-8 text-white">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-          Interactive Tech Showcase 2032-2035
-        </h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Explore the most revolutionary technology content through interactive showcases
-        </p>
-        
-        {/* Tab Navigation */}
-        <div className="flex justify-center space-x-4 mb-8">
-          <button
-            onClick={() => setActiveTab('tech')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeTab === 'tech'
-                ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                : 'bg-white/20 text-gray-300 hover:bg-white/30'
-            }`}
-          >
-            🚀 Technology 2032-2033
-          </button>
-          <button
-            onClick={() => setActiveTab('consciousness')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeTab === 'consciousness'
-                ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white'
-                : 'bg-white/20 text-gray-300 hover:bg-white/30'
-            }`}
-          >
-            🧠 Consciousness 2033-2035
-          </button>
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 INTERACTIVE SHOWCASE • JANUARY 2032
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience the most revolutionary technologies through interactive demonstrations and real-time metrics
+          </p>
         </div>
-      </div>
 
-      {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {content.map((item, index) => (
-          <div
-            key={index}
-            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
-          >
-            <div className="text-4xl mb-4">{item.icon}</div>
-            <h3 className="text-xl font-bold mb-3 text-cyan-400">{item.title}</h3>
-            <p className="text-gray-300 mb-4 text-sm">{item.description}</p>
-            <Link
-              to={item.link}
-              className={`inline-block bg-gradient-to-r ${item.color} text-white px-4 py-2 rounded-lg font-semibold text-sm hover:opacity-80 transition-all duration-300`}
-            >
-              Explore Now →
-            </Link>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Feature Navigation */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">Select Technology to Explore</h3>
+            {features.map((feature, index) => (
+              <button
+                key={feature.id}
+                onClick={() => handleFeatureClick(index)}
+                className={`w-full p-6 rounded-xl transition-all duration-300 text-left ${
+                  activeFeature === index
+                    ? `bg-gradient-to-r ${feature.color} shadow-lg scale-105`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
+                }`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-3xl">{feature.icon}</div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
+                    <p className="text-sm opacity-80">{feature.description}</p>
+                  </div>
+                </div>
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Stats Section */}
-      <div className="mt-12 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-            <div className="text-gray-300">Revolutionary Pages</div>
+          {/* Active Feature Display */}
+          <div className="relative">
+            <div className={`bg-gradient-to-br ${features[activeFeature].color} p-8 rounded-2xl transition-all duration-500 ${
+              isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+            }`}>
+              <div className="text-center mb-8">
+                <div className="text-8xl mb-4">{features[activeFeature].icon}</div>
+                <h3 className="text-3xl font-bold mb-4">{features[activeFeature].title}</h3>
+                <p className="text-xl opacity-90 mb-6">{features[activeFeature].description}</p>
+              </div>
+
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {Object.entries(features[activeFeature].metrics).map(([key, value]) => (
+                  <div key={key} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">{value}</div>
+                    <div className="text-sm opacity-80 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex justify-center space-x-4">
+                <a
+                  href={features[activeFeature].link}
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Explore Technology →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold">
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+
+            {/* Progress Indicator */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {features.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleFeatureClick(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === activeFeature ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400 mb-2">2032-2035</div>
-            <div className="text-gray-300">Future Technology</div>
+        </div>
+
+        {/* Technology Impact Summary */}
+        <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">Revolutionary Impact Summary</h3>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              The combined impact of these revolutionary technologies on human civilization
+            </p>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-pink-400 mb-2">∞</div>
-            <div className="text-gray-300">Possibilities</div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
+              <div className="text-lg text-purple-200 mb-1">Computational Power</div>
+              <div className="text-sm text-purple-300">Unlimited processing capacity</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
+              <div className="text-lg text-cyan-200 mb-1">Reality Control</div>
+              <div className="text-sm text-cyan-300">Complete reality manipulation</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+              <div className="text-lg text-emerald-200 mb-1">Human Potential</div>
+              <div className="text-sm text-emerald-300">Unlimited enhancement</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">99.9%</div>
+              <div className="text-lg text-orange-200 mb-1">Success Rate</div>
+              <div className="text-sm text-orange-300">Near-perfect reliability</div>
+            </div>
           </div>
         </div>
       </div>
