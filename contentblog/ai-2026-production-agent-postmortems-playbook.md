@@ -1,4 +1,16 @@
 ---
+{"title":"Production Agent Postmortems — Playbook (2026)","excerpt":"Blameless, evidence‑driven postmortems that improve agent reliability and safety.","featuredImage":"/blog/agent-postmortems-2026.jpg","publishedDate":"2025-09-16","author":{"name":"Operations Engineering","title":"SRE","avatarUrl":"/images/authors/operations.png"},"tags":["Incidents","Postmortems","Reliability"]}
+---
+
+Practice pillars:
+
+- Standardize incident tags: jailbreaks, policy violations, groundedness
+- Collect traces, eval results, and user impact in one bundle
+- Derive action items mapped to SLOs and policy controls
+
+Benefit: faster learning cycles and measurable risk reduction.
+
+---
 {"title":"Production Agent Postmortems — Playbook (2026)","excerpt":"Evidence-first templates and workflows to turn incidents into durable improvements.","featuredImage":"/images/blog/postmortems-playbook-2026.jpg","publishedDate":"2025-09-16","author":{"name":"ZionTech Group","title":"Reliability Engineering","avatarUrl":"/images/authors/ziontech.png"},"tags":["Reliability","Incident Response","Evidence Bundles"]}
 ---
 

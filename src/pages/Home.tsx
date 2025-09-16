@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useNotifications } from '../context/notifications/NotificationContext';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
-import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import { useNotifications } from '../context/notifications/NotificationContext';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();

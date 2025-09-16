@@ -5,6 +5,18 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-governed-real-time-observability',
+      title: 'Governed Real‑Time Observability (2026)',
+      excerpt: 'Telemetry patterns that preserve sub‑200ms latency while enforcing safety and budget.',
+      author: 'Platform Engineering',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'Observability',
+      tags: ['Observability', 'Real‑Time', 'Governance'],
+      featured: true,
+      image: '/blog/governed-real-time-observability-2026.jpg'
+    },
+    {
       id: 'ai-2026-zero-trust-agents',
       title: 'Zero-Trust Agents (2026)',
       excerpt: 'Risk‑tiered tools, scoped credentials, and JIT approvals for safe autonomy.',

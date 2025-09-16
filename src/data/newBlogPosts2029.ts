@@ -125,5 +125,33 @@ export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
     imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
     slug: "journey-scorecards-starter-kpis",
   },
+  {
+    id: 9907,
+    title: "Blueprint: Agent Rollback Scorecards You Can Trust",
+    excerpt:
+      "Ship reversible changes with scorecards that gate risky diffs and auto‑rollback.",
+    author: "Jordan Lee",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Rollbacks", "Scorecards", "Safety"],
+    featured: true,
+    imageUrl: "/images/blog/agent-rollback-scorecards-2029.jpg",
+    slug: "agent-rollback-scorecards-2029",
+  },
+  {
+    id: 9908,
+    title: "Production Eval Gates: Minimal Set, Maximum Impact",
+    excerpt:
+      "Embed low‑friction gates for quality, cost, and safety in under a sprint.",
+    author: "Priya Raman",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["Evals", "Quality", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/production-eval-gates-2029.jpg",
+    slug: "production-eval-gates-2029",
+  },
 ];
 
