@@ -222,6 +222,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -231,4 +232,8 @@ export const config = {
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
+=======
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
+  ]
+>>>>>>> origin/merge-pr-12271
 };

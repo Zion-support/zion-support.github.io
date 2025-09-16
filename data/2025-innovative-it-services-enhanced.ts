@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeITService2025  {id: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;
@@ -643,8 +650,21 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     marketSize: '$19B blockchain market',
     growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
+<<<<<<< HEAD
     contactInfo: {
       mobile: '+1 302 464 0950',
+=======
+    contactInfo: {},
+    realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
+    launchDate: '2024-09-01', customers: 123,
+    rating: 4.8
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 52;
+>>>>>>> origin/merge-pr-12271
 
 
 

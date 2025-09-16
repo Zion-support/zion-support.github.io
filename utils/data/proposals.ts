@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+
+import fs from 'fs',import path from 'path',import { v4 as uuidv4 } from 'uuid',export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',export type ProposalMeta = {id: string,createdAt: string,updatedAt: string,title: string,targetInstitution: string,type: string,regionalScope: string,budgetOrResolution: string,supportingMultiverses: string[],languages: string[],status: ProposalStatus,import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4  } from 'uuid';
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+export type ProposalMeta = {id: string;
+export type ProposalMeta = {id: string;
+
+import fs from 'fs';
+import { v4 as uuidv4 } from 'uuid';
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+export type ProposalMeta = {id: string;
+export type ProposalMeta = {
+  id: string;
+>>>>>>> origin/merge-pr-12271
   createdAt: string;
   updatedAt: string;
   title: string;

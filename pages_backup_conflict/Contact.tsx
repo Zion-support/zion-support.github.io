@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+;
+>>>>>>> origin/merge-pr-12271
 import Head from 'next/head';
 export default function Contact() {
   return (
@@ -21,5 +26,8 @@ export default function Contact() {
     </>
   );
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/merge-pr-12271

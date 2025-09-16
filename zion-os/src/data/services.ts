@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+
+;
+export interface Service  {id: string,name: string,category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',description: string,features: string[],pricing: {starter: string,professional: string,enterprise: string,pricing: {starter: string;
+    professional: string;
+    enterprise: string;custom?: string;
+export interface Service {id: string;
+  name: string;
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',description: string;
+  features: string[];  pricing: {starter: string;
+
+>>>>>>> origin/merge-pr-12271
 export interface Service {
   id: string;
   name: string;

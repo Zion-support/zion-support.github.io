@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface AdvancedITService {
+=======
+
+;
+  {{id: string;
+export interface AdvancedITService  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

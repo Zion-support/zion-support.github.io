@@ -1,6 +1,7 @@
 {
   "name": "project",
   "private": true,
+<<<<<<< HEAD
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -146,6 +147,46 @@
     "eslint": "8.57.1",
 =======
     "@vitejs/plugin-react": "^4.1.1",
+=======
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ai",
+    "automation",
+    "zion-tech-group"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT",
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "next": "^15.5.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.1",
+    "@types/react": "19.1.12",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+>>>>>>> origin/merge-pr-12271
     "autoprefixer": "^10.4.21",
     "concurrently": "^8.2.2",
     "cssnano": "^7.1.1",

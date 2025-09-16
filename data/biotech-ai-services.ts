@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+export interface BiotechAIService  {id: string;
+>>>>>>> origin/merge-pr-12271
 export interface BiotechAIService {
   id: string;
   name: string;

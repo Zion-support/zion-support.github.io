@@ -1,15 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+<<<<<<< HEAD
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+>>>>>>> origin/merge-pr-12271
   ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -21,11 +31,65 @@ export default {
         'zion-slate-dark': '#0b1220',
         'zion-slate': '#111827',
         'zion-slate-light': '#1f2937',
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        gray: {
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
+          950: '#030712'
+        }
+>>>>>>> origin/merge-pr-12271
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
+<<<<<<< HEAD
   plugins: [],
 }
+=======
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+=======
+};
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+>>>>>>> origin/merge-pr-12271

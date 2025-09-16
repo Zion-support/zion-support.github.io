@@ -23,6 +23,7 @@ export interface ConversationContext {
   proposalLink?: string;
 }
 
+<<<<<<< HEAD
 export interface Conversation {
   id: string;
   participants: string[]; // [clientId, talentId] or any two users
@@ -63,3 +64,9 @@ export interface NewMessageInput {
   context?: ConversationContext;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+export type UserRole = "admin" | "user" | "guest";export type UserRole = "admin" | "user" | "guest";
+export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';export type UserRole = 'admin' | 'user' | 'guest';ursor/expand-services-advertise-and-build-project-4b36;
+ursor/automate-test-improve-and-merge-code-646c;
+export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
+>>>>>>> origin/merge-pr-12271

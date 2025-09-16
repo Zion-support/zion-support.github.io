@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
@@ -49,6 +50,23 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 		if (hit) return hit;
 	}
 	return undefined;
+=======
+
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+export interface Service  {id: string;
+  name: string;
+export interface Service  {id: string;
+  name: string,description: string;
+
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: number;
+  features: string[];
+>>>>>>> origin/merge-pr-12271
 }
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];

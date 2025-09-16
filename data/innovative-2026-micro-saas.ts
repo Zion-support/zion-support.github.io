@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface Innovative2026MicroSaas {
+=======
+
+;
+  id: string;
+export interface Innovative2026MicroSaas  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

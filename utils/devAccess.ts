@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -19,6 +20,16 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export type DevRole = "admin" | "maintainer" | "contributor";
 
+=======
+;
+export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: boolean;roles: DevRole[];
+  userId?: string;
+}roles: DevRole[];
+  userId?: string;
+}const gitDir = path && path.join(process && process.cwd(), '.git')if (!fs && fs.existsSync(gitDir)) return { connected: false }const branch = execSync('git rev-parse --abbrev-ref HEAD', {stdio: ['ignore', 'pipe', 'ignore'];
+    }).toString().trim()return { connected: true, branch }
+  } catch {return { connected: false }
+>>>>>>> origin/merge-pr-12271
 export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
@@ -38,6 +49,7 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   }
 }
 
+<<<<<<< HEAD
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers["x-dev-token"] || req.headers["x-admin-token"];
@@ -46,6 +58,17 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
     return { isAuthenticated: true, roles: ["admin"], userId: "admin" };
   }
   return { isAuthenticated: false, roles: [] };
+=======
+  if (token && adminToken && token === adminToken) {}
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+>>>>>>> origin/merge-pr-12271
 }
 
 export function requireRoles(

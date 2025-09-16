@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+
+;
+export interface KycProfile  {user_id: string;kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploaded_at: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
+export interface KycProfile  {user_id: string;export interface KycProfile  {user_id: string;export interface KycProfile  {userId: string;
+export interface KycProfile  {user_id: string;
+ursor/fix-website-loading-errors-and-merge-6662;
+>>>>>>> origin/merge-pr-12271
 export interface KycProfile {
 
 
@@ -26,6 +40,7 @@ export interface KycProfile {
   audit_trail: Array<{
     at: string;
     by: string;
+<<<<<<< HEAD
     action: string;
 
     details?: any
@@ -36,6 +51,11 @@ export interface KycProfile {
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
   userId: string;
+=======
+    action: string;details?: any;
+  }>;// KYC (Know Your Customer) utilities;
+export interface KycProfile  {userId: string;
+>>>>>>> origin/merge-pr-12271
   role: 'client' | 'talent' | 'both';
   fullLegalName: string;
   businessName?: string;
@@ -57,10 +77,15 @@ export function getRequiredDocuments (role: KycRole): string[] {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+export interface KycProfile  {export interface KycProfile  {userId: string;
+    action: string;
+>>>>>>> origin/merge-pr-12271
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];

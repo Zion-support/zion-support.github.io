@@ -1,4 +1,9 @@
+<<<<<<< HEAD
   url: string;
+=======
+
+export interface PerformanceMetrics  {export interface PerformanceMetrics  {export interface PerformanceMetrics  {url: string;
+>>>>>>> origin/merge-pr-12271
   timestamp: Date;
   loadTime: number;
   firstContentfulPaint: number;
@@ -7,9 +12,23 @@
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
+<<<<<<< HEAD
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
+=======
+
+  speed_index: number;
+  performance_score: number;
+  accessibility_score: number;
+  bestPracticesScore: number,
+  seo_score: number;
+
+}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {
+>>>>>>> origin/merge-pr-12271
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';

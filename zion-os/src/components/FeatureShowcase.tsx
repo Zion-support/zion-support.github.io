@@ -1,5 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
+=======
+
+;
+"use client",import { useState, useEffect } from "react",interface Feature  {id: string,title: string,description: string,icon: React.ReactNode,color: string,details: string[],demo?: string;
+}const features: Feature[] = [;
+  {id: "marketplace",title: "Marketplace & Jobs",description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",icon: (<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
+      </svg>;
+  return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
+      <div className="max-w-7xl mx-auto">;
+        <div className="text-center mb-16">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">;Explore Our Features;
+          </h2>;
+          <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+            Dive deep into the powerful capabilities that make Zion OS the ultimate platform for digital economies;
+          </p>;
+        </div>;
+        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
+          {/* Feature Cards */}
+          <div className="space - y-6">;
+            {features.map ((feature, index) => (<div;
+                key={feature.id}className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
+    icon: (<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+>>>>>>> origin/merge-pr-12271
 "use client";
 
 import { useEffect, useState } from "react";
@@ -84,6 +110,7 @@ const features: Feature[] = [
       "Staking and rewards",
       "Liquidity pools",
       "Token burning mechanisms",
+<<<<<<< HEAD
       "Cross-chain bridges",
     ],
   },
@@ -181,6 +208,22 @@ export function FeatureShowcase() {
     return colorMap[color] || "from-blue-500 to-blue-600";
   };
 
+=======
+      "Cross - chain bridges";
+    ];
+  }
+],export /**;
+ * FeatureShowcase - Function description;
+ */;
+function FeatureShowcase() {const [active_feature, setActiveFeature] = useState < string | null>(null),const [is_visible, setIsVisible] = useState (false),useEffect (() => {setIsVisible (true)}, []),const getColorClasses = (color: string) =>: any {const color_map = {blue: "from - blue - 500 to - blue - 600",purple: "from - purple - 500 to - purple - 600",green: "from - green - 500 to - green - 600",red: "from - red - 500 to - red - 600",yellow: "from - yellow - 500 to - yellow - 600",indigo: "from - indigo - 500 to - indigo - 600";
+    }
+    return color_map[color as keyof typeof color_map] || "from - blue - 500 to - blue - 600";
+  }
+  return (<section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - br from - gray - 900 / 50 to-black / 50">;
+      <div className="max - w-7xl mx-auto">;
+        <div className="text - center mb-16">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;  return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
+>>>>>>> origin/merge-pr-12271
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
       <div className="max-w-7xl mx-auto">
@@ -204,6 +247,7 @@ export function FeatureShowcase() {
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+<<<<<<< HEAD
               >
                 <div className="flex items-start space-x-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
@@ -235,6 +279,60 @@ export function FeatureShowcase() {
             ))}
           </div>
 
+=======
+                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
+                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
+                    : 'hover:bg-white/10';
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}>;
+                <div className="flex items - start space - x-4">;
+                  <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
+                    {feature.icon}
+                  </div>;
+                  <div className="flex - 1">;
+                    <h3 className="text - xl font - semibold mb - 2 text - white">;
+                      {feature.title}
+                    </h3>;
+                    <p className="text - gray - 400 mb - 3">;
+                      {feature.description}
+                    </p>;
+                    {active_feature === feature.id && (<div className="space - y-2 animate - fade - in">;
+                        {feature.details.map ((detail, idx) => (<div key={idx} className="flex items - center space - x-2 text - sm text - gray - 300">;
+              >;
+                <div className="flex items - start space - x-4">;
+                  <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
+                    {feature.icon}
+                  </div>;
+                  <div className="flex - 1">;
+                    <h3 className="text - xl font - semibold mb - 2 text - white">;
+                      {feature.title}
+                    </h3>;
+                    <p className="text - gray - 400 mb - 3">;
+                      {feature.description}
+                    </p>;
+                    {active_feature === feature.id && (<div className="space - y-2 animate - fade-in">;
+                        {feature.details.map ((detail, idx) => (<div key={idx} className="flex items - center space - x-2 text - sm text - gray-300">;
+                    {active_feature === feature.id && (
+                      <div className="space - y-2 animate - fade - in">;
+                        {feature.details.map ((detail, idx) => (
+                          <div key={idx} className="flex items - center space - x-2 text - sm text - gray - 300">;
+                            <div className={`w - 1.5 h - 1.5 bg-${feature.color}-500 rounded - full`}></div>;
+                            <span>{detail}</span>;
+                          </div>))}
+                      </div>)}
+                  </div>;<div className={`transform transition - transform duration - 300 ${active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';}`}>;
+                    <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;
+                  }`}>;
+                    <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;
+                    </svg>;
+                  </div>;
+                </div>;
+              </div>))}
+          </div>;
+>>>>>>> origin/merge-pr-12271
           {/* Interactive Demo Area */}
           <div className="relative">
             <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">

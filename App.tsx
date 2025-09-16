@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
@@ -13,6 +14,21 @@ import CaseStudyPage from './src/CaseStudyPage';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+=======
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
+import ServiceCard from './src/components/ServiceCard';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
+import ContactSection from './src/components/ContactSection';
+import BenefitsSection from './src/components/BenefitsSection';
+import HowItWorksSection from './src/components/HowItWorksSection';
+import FaqSection from './src/components/FaqSection';
+import ChatAssistant from './src/components/ChatAssistant';
+import ScrollToTop from './src/components/ScrollToTop';
+import ParticleBackground from './src/components/ParticleBackground';
+
+export default function App(): React.JSX.Element {
+>>>>>>> origin/merge-pr-12271
 <<<<<<< HEAD
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
@@ -35,6 +51,7 @@ import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 =======
+<<<<<<< HEAD
 import AIPlaybook2025 from './src/pages/AIPlaybook2025';
 >>>>>>> origin/feature/ai-playbook-2025
 import './src/index.css';
@@ -1067,5 +1084,12 @@ export default function App(): JSX.Element {
         <EnhancedFooter />
       </div>
     </Router>
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+  return (
+    <main>
+      <h1>Hello App</h1>
+    </main>
+>>>>>>> origin/merge-pr-12271
   );
 }

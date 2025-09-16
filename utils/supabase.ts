@@ -1,10 +1,15 @@
 // Supabase utilities;
+<<<<<<< HEAD
 export const supabase = {
   // Add supabase functionality here;
   auth: {
 
 
     getUser: () => Promise<any>;
+=======
+export const supabase = {// Add supabase functionality here;
+  auth: {getUser: () => Promise<any>;
+>>>>>>> origin/merge-pr-12271
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
   };

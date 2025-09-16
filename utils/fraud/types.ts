@@ -2,6 +2,7 @@
   id: string;
   case_id: string;
   type: AdminActionType;
+<<<<<<< HEAD
 
 
 
@@ -18,6 +19,15 @@ export interface AdminAction {
   admin_id: string;
   reason: string,
   details: Record < string, any>;
+=======
+  adminId: string;
+  reason: string;
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: "pending" | "executed" | "failed";admin_id: string;
+  reason: string,details: Record < string, any>;
+>>>>>>> origin/merge-pr-12271
   created_at: string;
   executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
@@ -25,9 +35,62 @@ export interface AdminAction {
 
 
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+export interface FraudDetectionResult  {is_fraud: boolean;}}export interface FraudDetectionResult  {isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;isFraud: boolean;
+ursor/fix-website-loading-errors-and-merge-6662;
+  confidence: number;
+  reasons: string[];  confidence: number;
+  reasons: string[];suggested_actions: AdminActionType[],metadata: Record < string, any>;}
+export interface FraudDetectionConfig  {}export interface FraudDetectionConfig  {ursor/fix-website-loading-errors-and-merge-6662;
+  enabled: boolean;
+  rules: {suspiciousActivity: {enabled: boolean;threshold: number;
+    }
+    fake_profile: {enabled: boolean;threshold: number;
+    }
+    fake_profile: {enabled: boolean;
+      threshold: number;
+    }fakeProfile: {enabled: boolean;
+      threshold: number;
+    }paymentFraud: {enabled: boolean;
+      threshold: number;
+    }spam: {enabled: boolean;
+      threshold: number;
+    }export interface FraudDetectionConfig {}export interface FraudDetectionConfig {}fakeProfile: {enabled: boolean;
+      threshold: number;
+}paymentFraud: {enabled: boolean;
+      threshold: number;
+}spam: {enabled: boolean;
+      threshold: number;
+}}autoActions: {enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number;
+  }threshold: number;
+    }
+    payment_fraud: {enabled: boolean;
+      threshold: number;
+    }
+    spam: {enabled: boolean;
+      threshold: number;
+    }
+  }
+  auto_actions: {enabled: boolean;
+    actions: AdminActionType[];
+    confidence_threshold: number;
+  }
+}confidenceThreshold: number;
+  }}
+  status: "pending" | "executed" | "failed";
+>>>>>>> origin/merge-pr-12271
 export interface FraudDetectionResult {
   is_fraud: boolean;
 
@@ -39,9 +102,14 @@ export interface FraudDetectionResult {
   reasons: string[];
 
 
+<<<<<<< HEAD
 
 
 export interface FraudDetectionConfig {
+=======
+}
+export interface FraudDetectionConfig {}
+>>>>>>> origin/merge-pr-12271
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -53,7 +121,11 @@ export interface FraudDetectionConfig {
       enabled: boolean;
 
 
+<<<<<<< HEAD
       threshold: number,
+=======
+      threshold: number
+>>>>>>> origin/merge-pr-12271
     }
     fake_profile: {
       enabled: boolean;
@@ -71,6 +143,7 @@ export interface FraudDetectionConfig {
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
+<<<<<<< HEAD
 
 
 
@@ -79,6 +152,12 @@ export interface FraudDetectionConfig {
 
 
 
+=======
+    confidenceThreshold: number;
+  };
+    confidenceThreshold: number
+  };
+>>>>>>> origin/merge-pr-12271
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -87,6 +166,7 @@ export interface FraudDetectionConfig {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -166,3 +246,13 @@ export interface MonthlyReport {
   topReasons: Array<{ reason: string; count: number }>;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+    confidenceThreshold: number;
+  }}
+    confidenceThreshold: number;
+}confidenceThreshold: number;
+  }}}
+}
+>>>>>>> origin/merge-pr-12271

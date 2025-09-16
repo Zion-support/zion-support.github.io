@@ -43,6 +43,7 @@ function fixMergeConflicts(filePath) {;
     content = content.replace(/
 
     const originalContent = content;
+<<<<<<< HEAD
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/[\s\S]*?[\s\S]*?[a-f0-9]+/g, ''),;
     content = content.replace(/[\s\S]*?[a-f0-9]+/g, ''),;
@@ -109,6 +110,15 @@ function getAllFiles() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
+=======
+    
+    // Remove merge conflict markers and keep HEAD version
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
+      return true;
+>>>>>>> origin/merge-pr-12271
     }
   } catch (error) {
     // Skip directories that can't be read;
@@ -117,6 +127,7 @@ function getAllFiles() {
   return files;
 }
 // Main execution;
+<<<<<<< HEAD
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
@@ -144,6 +155,32 @@ async function main() {;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
+=======
+async function main() {console.log('🔍 Scanning for merge conflicts...')const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md'])let fixedCount = 0;
+  for (const file of files) {try {const content = fs.readFileSync(file, 'utf8')if (content.includes('') |content.includes(';
+      } else if (extensions.some(ext => item.endsWith(ext))) {}
+    } catch (error) {// Skip files that can't be read;
+    }
+  }
+}let fixedCount = 0;
+  for (const file of files) {try {const content = fs.readFileSync(file, 'utf8'),if (fixMergeConflicts(file)) {if (content.includes('        if (fixMergeConflicts(file)) {fixedCount++;
+
+// Main execution
+async function main() {
+  console.log('🔍 Scanning for merge conflicts...');
+  const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+        if (fixMergeConflicts(file)) {;
+          fixedCount++;        }
+  let fixedCount = 0,;
+  for (const file of files) {;
+    try {;
+      const content = fs.readFileSync(file, 'utf8');
+>>>>>>> origin/merge-pr-12271
       if (content.includes('') || content.includes('
 }
 }
@@ -152,6 +189,7 @@ async function main() {;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
+<<<<<<< HEAD
       if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
         if (fixMergeConflicts(file)) {;
           fixedCount++;
@@ -168,3 +206,20 @@ async function main() {;
 ;
 main().catch(console.error),;
 
+=======
+        if (fixMergeConflicts(file)) {;
+        if (fixMergeConflicts(file)) {
+          fixedCount++;
+        }
+      }
+    } catch (error) {// Skip files that can't be read;
+    }
+  }console.log(`✅ Fixed merge conflicts in ${fixedCount} files`)console.log('🎉 Merge conflict resolution completed!')}main().catch(console.error),main().catch(console.error),main().catch(console.error)
+  }
+  
+  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
+  console.log('🎉 Merge conflict resolution completed!');
+}
+
+main().catch(console.error);
+>>>>>>> origin/merge-pr-12271

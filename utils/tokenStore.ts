@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -7,6 +8,28 @@ import path from 'path';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+
+;
+ursor/automate-test-improve-and-merge-code-646c;
+import fs from 'fs';
+import path from 'path';import fs from 'fs';
+import path from 'path';;
+export interface TokenTransaction  {id: string;userId: string;
+  type: "earn" | "spend" | "transfer";export interface TokenTransaction  {export interface TokenTransaction  {export interface TokenTransaction  {export interface TokenTransaction  {id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number;
+export interface TokenTransaction  {export interface TokenTransaction  {id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number,description: string;
+  timestamp: string;
+  metadata?: Record < string, any>;
+}export interface TokenConfig  {export interface TokenConfig  {name: string;
+import fs from "fs";
+import path from "path";
+>>>>>>> origin/merge-pr-12271
 
 ;
 
@@ -38,6 +61,12 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
+=======
+function loadTransactions(): TokenTransaction[] {try {ensureDataDir()if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
+    const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8")return JSON.parse(raw)if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
+    const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8")return JSON.parse(raw)} catch {return [];
+>>>>>>> origin/merge-pr-12271
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');

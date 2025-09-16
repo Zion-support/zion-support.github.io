@@ -4,12 +4,21 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
+=======
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+>>>>>>> origin/merge-pr-12271
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -18,6 +27,7 @@
     "baseUrl": ".",
 <<<<<<< HEAD
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
@@ -41,6 +51,32 @@
 =======
       "@constants/*": ["src/constants/*"],
       "@/components/*": ["src/components/*"]
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
+>>>>>>> origin/merge-pr-12271
     },
     "types": ["vite/client", "node"],
     "plugins": [
@@ -73,6 +109,7 @@
     "coverage"
 >>>>>>> origin/feature/new-content-and-promotions
   ]
+<<<<<<< HEAD
 }
 =======
     "types": ["vite/client", "node"]
@@ -81,3 +118,6 @@
   "exclude": ["node_modules", "dist", "build", "coverage"]
 }
 >>>>>>> origin/feature/blog-promos
+=======
+}
+>>>>>>> origin/merge-pr-12271
