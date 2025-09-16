@@ -88,8 +88,13 @@ import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcas
 import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
 import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessComputingRevolution2030';
 import InterdimensionalTechRevolution2035 from './src/pages/InterdimensionalTechRevolution2035';
+import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
+import ConsciousnessComputingRevolution2031 from './src/pages/ConsciousnessComputingRevolution2031';
+import InterdimensionalTechRevolution2032 from './src/pages/InterdimensionalTechRevolution2032';
 import RevolutionaryTechShowcase2029 from './src/components/RevolutionaryTechShowcase2029';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
+// import UltimateTechBanner2030 from './src/components/UltimateTechBanner2030';
+// import RevolutionaryContentShowcase2030 from './src/components/RevolutionaryContentShowcase2030';
 
 export default function App(): JSX.Element {
   return (
@@ -118,6 +123,9 @@ export default function App(): JSX.Element {
 
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
+
+                {/* Ultimate Tech Banner 2030 */}
+                {/* <UltimateTechBanner2030 /> */}
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -162,9 +170,7 @@ export default function App(): JSX.Element {
                 <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect AI Solution</h2>
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
-                  <EnhancedSearch />
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-44f2
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -244,6 +250,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/InterdimensionalTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 Interdimensional 2035 →
                     </a>
+                    <a href="/pages/UltimateTechRevolution2030" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 Ultimate Tech 2030 →
+                    </a>
+                    <a href="/pages/ConsciousnessComputingRevolution2031" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 Consciousness 2031 →
+                    </a>
+                    <a href="/pages/InterdimensionalTechRevolution2032" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌌 Interdimensional 2032 →
+                    </a>
                   </div>
                 </div>
 
@@ -270,6 +285,11 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
                 </div>
+
+                {/* Revolutionary Content Showcase 2030 */}
+                {/* <div className="mb-12">
+                  <RevolutionaryContentShowcase2030 />
+                </div> */}
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -607,6 +627,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
+          <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2031" element={<ConsciousnessComputingRevolution2031 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2032" element={<InterdimensionalTechRevolution2032 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
