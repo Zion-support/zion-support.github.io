@@ -22,6 +22,13 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
+  {
+    title: 'Launch: Agent Reliability Scorecards v1.0',
+    summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability at scale.',
+    href: '/updates/agent-reliability-scorecards-1-0',
+    date: '2025-09-16',
+    tag: 'Release'
+  },
 
   // Existing content
   {
