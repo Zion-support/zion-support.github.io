@@ -1,3 +1,40 @@
+import React from 'react'
+
+export const metadata = {
+  title: 'AI 2026: Safe Rollouts in Production',
+  description:
+    'Evaluation‑gated releases with canaries, rollback contracts, and release scorecards for autonomous systems.'
+}
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-14">
+          <p className="text-violet-200 text-sm font-semibold">Guide • September 2025</p>
+          <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 2026: Safe Rollouts in Production</h1>
+          <p className="mt-3 text-violet-100/90 max-w-3xl">
+            Ship changes behind evaluation gates and progressive delivery. Use scenario pass‑rates and guardrail signals to decide promote vs rollback.
+          </p>
+        </div>
+      </header>
+      <main className="max-w-5xl mx-auto px-6 py-10 prose prose-lg">
+        <h2>Key Practices</h2>
+        <ul>
+          <li>Define release contracts with objective thresholds</li>
+          <li>Run canary scenarios and live evals on shadow traffic</li>
+          <li>Automate rollback on scorecard regressions</li>
+          <li>Store all evidence in a central hub</li>
+        </ul>
+        <h2>Scorecards</h2>
+        <p>
+          Compute a single promotion score from scenario metrics, override rates, and policy violations. Gate promotions with clear pass criteria.
+        </p>
+      </main>
+    </div>
+  )
+}
+
 import Link from 'next/link';
 
 export const metadata = {
