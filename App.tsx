@@ -214,6 +214,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
+                {/* NEW: New Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
+                
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
                 
@@ -502,6 +505,16 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
+                </div>
+
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
