@@ -89,6 +89,20 @@
   ],
   "items": [
     {
+      "title": "AI 2026: Real‑Time Evals & Inference Guardrails",
+      "href": "/blog/ai-2026-real-time-evals-inference-guardrails",
+      "desc": "Live evaluation hooks and runtime guardrails to keep quality high in prod.",
+      "createdAt": "2025-09-16T23:59:59.950Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Edge Agents in Production — Field Guide",
+      "href": "/blog/ai-2026-edge-agents-production-guide",
+      "desc": "Architectural patterns and safeguards for running agents on the edge.",
+      "createdAt": "2025-09-16T23:59:59.940Z",
+      "source": "blog"
+    },
+    {
       "title": "AI 2026: Low‑Latency Agent Observability",
       "href": "/blog/ai-2026-low-latency-agent-observability.md",
       "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
