@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-1fc3
 import React from 'react';
@@ -285,6 +286,8 @@ const UltimateContentBanner2025: React.FC = () => {
     </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -458,10 +461,13 @@ const UltimateContentBanner2025: React.FC = () => {
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
         </div>
       </div>
     </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 =======
 import React from 'react';
 
@@ -533,6 +539,11 @@ const UltimateContentBanner2025: React.FC = () => {
               Innovation Hub
             </a>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cd00
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2025: React.FC = () => {
@@ -125,15 +128,22 @@ const ComprehensiveServices2025: React.FC = () => {
       </Helmet>
       
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const ComprehensiveServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6">Comprehensive Services2025</h1>
@@ -177,6 +187,11 @@ const ComprehensiveServices2025: React.FC = () => {
           </div>
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       </div>
     </div>
   );

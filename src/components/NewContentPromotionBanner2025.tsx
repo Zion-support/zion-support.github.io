@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -86,11 +89,18 @@ const NewContentPromotionBanner2025: React.FC = () => {
             <a href="/pages/RevolutionaryTechShowcase2025" className="border border-pink-400 text-pink-400 px-8 py-3 rounded-lg hover:bg-pink-400/10 transition-colors font-semibold">
               Watch Live Demos
             </a>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+=======
+"use client";
+'use client';
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import React, { useState, useEffect } from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -214,6 +224,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Progress Indicator */}
         <div className="mt-4 flex space-x-2">
           {promotions.map((_, index) => (
@@ -224,6 +235,27 @@ const NewContentPromotionBanner2025: React.FC = () => {
               }`}
             />
           ))}
+=======
+        {/* Bottom Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
+            <div className="text-sm opacity-90">New Articles</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
+            <div className="text-sm opacity-90">Case Studies</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
+            <div className="text-sm opacity-90">Interactive Tools</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
+            <div className="text-sm opacity-90">Live Demos</div>
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
 

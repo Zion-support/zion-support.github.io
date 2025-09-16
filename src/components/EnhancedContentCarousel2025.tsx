@@ -9,6 +9,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 import { Link } from 'react-router-dom';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -19,6 +20,18 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 
+=======
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % 4);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 <<<<<<< HEAD
   const contentItems = [
     {
@@ -33,6 +46,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
   const contentSlides = [
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 
@@ -50,6 +64,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const slides = [
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
     {
       id: 1,
       title: "Conscious AI Revolution",
@@ -65,6 +82,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
       image: "🧠",
       color: "from-purple-600 to-pink-600",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      link: "/pages/AISolutionsComprehensive2025"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       bgColor: "from-purple-600/20 to-pink-600/20",
       borderColor: "border-purple-400/30",
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
@@ -76,6 +98,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-173f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
     },
     {
@@ -162,6 +185,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
   };
 =======
       link: "/pages/AISolutionsComprehensive2025"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
     },
     {
       id: 2,
@@ -213,6 +239,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -233,7 +263,38 @@ const EnhancedContentCarousel2025: React.FC = () => {
       rating: 5
     }
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+=======
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [contentSlides.length]);
+
+  const nextSlide = () => {
+<<<<<<< HEAD
+    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+=======
+    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+>>>>>>> cursor/create-and-deploy-new-content-8449
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
   return (
 <<<<<<< HEAD
@@ -292,9 +353,20 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Carousel Container */}
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+        {/* Main Carousel */}
+        <div className="relative mb-16">
+          <div className="overflow-hidden rounded-2xl">
+            <motion.div
+              className="flex"
+              animate={{ x: `-${currentSlide * 100}%` }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         <div className="relative max-w-6xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,6 +397,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+<<<<<<< HEAD
 =======
         {/* Main Carousel */}
         <div className="relative mb-16">
@@ -334,6 +407,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
               animate={{ x: `-${currentSlide * 100}%` }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
             >
               {slides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
@@ -354,6 +430,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           </div>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
@@ -365,6 +442,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                       </div>
                       <span className="text-lg">{feature}</span>
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
                         <p className="text-lg opacity-90 leading-relaxed">
                           {slide.description}
@@ -470,11 +549,21 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           </motion.div>
                         </div>
                       </motion.div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
                       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+=======
+                        <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                          Start Interactive Demo →
+                        </button>
+>>>>>>> cursor/create-and-deploy-new-content-8449
+                      </div>
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,6 +604,54 @@ const EnhancedContentCarousel2025: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-8">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">What Industry Leaders Say</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.2 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                  ))}
+                </div>
+                <p className="text-lg mb-6 italic">"{testimonial.quote}"</p>
+                <div className="border-t border-white/20 pt-4">
+                  <div className="font-bold text-lg">{testimonial.name}</div>
+                  <div className="text-sm opacity-70">{testimonial.title}</div>
+                </div>
+              </motion.div>
+            ))}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
           {/* Navigation Controls */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -721,6 +858,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
             ))}
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
@@ -755,6 +893,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </motion.div>
             ))}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </motion.div>
 

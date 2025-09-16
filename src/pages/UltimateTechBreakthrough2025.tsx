@@ -6,7 +6,15 @@ import { Helmet } from 'react-helmet-async';
 
 const UltimateTechBreakthrough2025: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       <Helmet>
         <title>Ultimate Tech Breakthrough 2025 | Zion Tech Group</title>
         <meta name="description" content="Discover the ultimate technological breakthrough of 2025 with Zion Tech Group's revolutionary innovations." />

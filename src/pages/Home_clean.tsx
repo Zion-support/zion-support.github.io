@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-=======
-import React, { useEffect } from 'react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import { motion } from 'framer-motion';
-import { useNotifications } from '../components/NotificationSystem';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../context/notifications/NotificationContext';
@@ -90,18 +82,6 @@ const Home: React.FC = () => {
               Revolutionary AI systems that exhibit true consciousness and self-awareness, 
               capable of independent thought and creative problem-solving.
             </p>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🌟 Ultimate Tech Showcase →
-              </a>
-              <a href="/pages/ComprehensiveServicesShowcase2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🚀 Comprehensive Services →
-              </a>
-              <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                📚 Tech Blog 2026 →
-              </a>
-=======
             <div className="text-center">
               <Link 
                 to="/pages/RevolutionaryAIServices2026" 
@@ -109,7 +89,6 @@ const Home: React.FC = () => {
               >
                 Explore AI Services →
               </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           </div>
           
@@ -137,41 +116,6 @@ const Home: React.FC = () => {
               Advanced AI-powered security systems that predict and prevent threats 
               before they occur, protecting across all dimensions.
             </p>
-<<<<<<< HEAD
-        {/* Content Showcases */}
-        <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        </div>
-
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        </div>
-
-        {/* Enhanced Content Advertising */}
-        <EnhancedContentAdvertising />
-
-        {/* Revolutionary Tech Advertising Banner */}
-        <RevolutionaryTechAdvertisingBanner />
-
-        {/* Interactive Tech Showcase */}
-        <InteractiveTechShowcase />
-
-        {/* Call to Action */}
-        <divsection className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join the revolution and discover how our cutting-edge technologies can transform your business and unlock unprecedented possibilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Start Your Journey →
-              </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                Schedule Consultation
-              </button>
-=======
             <div className="text-center">
               <Link 
                 to="/pages/CybersecurityFortress2025" 
@@ -221,7 +165,6 @@ const Home: React.FC = () => {
               <div className="text-4xl mb-4">🌌</div>
               <h3 className="text-xl font-bold text-white mb-2">Interdimensional</h3>
               <p className="text-gray-300 text-sm">Multi-dimensional computing</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           </div>
         </motion.div>

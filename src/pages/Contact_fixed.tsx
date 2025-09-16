@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-
-export default function Contact() {
-  const { showToast: toast } = useToast();
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-
-const Contact: React.FC = () => {
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
-
-const Contact: React.FC = () => {
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -78,17 +60,6 @@ const Contact: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI-powered technology solutions, consulting, and innovative business services."
-      />
-      
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-          className="max-w-4xl mx-auto text-center"
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -101,7 +72,6 @@ const Contact: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         >
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Contact Us
@@ -110,36 +80,6 @@ const Contact: React.FC = () => {
             Ready to transform your business with revolutionary technology? 
             Get in touch with our experts and discover what's possible.
           </p>
-<<<<<<< HEAD
-      </section>
-
-      {/* Contact Methods Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                <div className="text-cyan-400 mb-4">{method.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
-                <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
-                <p className="text-gray-400 text-sm">{method.description}</p>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-            className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
-              <p className="text-gray-300">
-                Tell us about your project and we'll get back to you within 24 hours
-              </p>
-            </div>
-
-            {isSubmitted ? (
-=======
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -154,7 +94,6 @@ const Contact: React.FC = () => {
             
             {isSubmitted ? (
               <motion.div 
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -162,14 +101,8 @@ const Contact: React.FC = () => {
               >
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-<<<<<<< HEAD
-                <p className="text-gray-300">
-                  Thank you for reaching out. We'll get back to you soon.
-                </p>
-=======
                 <p className="text-gray-300">We'll get back to you within 24 hours.</p>
               </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -273,72 +206,6 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             )}
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Emergency Support Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-            className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
-          >
-            <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
-            <p className="text-gray-300 mb-6">
-              Need immediate assistance? Our 24/7 emergency support team is here to help.
-            </p>
-        </div>
-      </section>
-
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          <divdiv
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven business strategies to deliver 
-              exceptional results for our clients.
-            </p>
-          </divdiv>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Expert Team",
-                description: "Our team consists of industry veterans with decades of combined experience in AI, cloud computing, and digital transformation."
-              },
-              {
-                title: "Proven Results",
-                description: "We've helped hundreds of companies achieve significant improvements in efficiency, cost savings, and competitive advantage."
-              },
-              {
-                title: "24/7 Support",
-                description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
-              }
-            ].map((feature, index) => (
-                key={index}
-                className="text-center"
-              >
-                <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-            ))}
-          </div>
-=======
           </motion.div>
 
           {/* Contact Information */}
@@ -402,7 +269,6 @@ const Contact: React.FC = () => {
               </ul>
             </div>
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>

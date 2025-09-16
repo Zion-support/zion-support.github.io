@@ -6,12 +6,19 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -69,6 +76,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
 <<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
@@ -660,6 +670,12 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
+<<<<<<< HEAD
+=======
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
         </divdiv>
       </div>
