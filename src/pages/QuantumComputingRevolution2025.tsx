@@ -164,8 +164,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <div className="text-center bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -180,16 +178,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -405,7 +393,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
->>>>>>> cursor/create-and-deploy-new-content-3fd6
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Enter the Quantum Era</h2>
           <p className="text-xl text-cyan-200 mb-8 max-w-3xl mx-auto">
@@ -420,20 +407,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
@@ -90,10 +91,27 @@ import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessCompu
 import InterdimensionalTechRevolution2035 from './src/pages/InterdimensionalTechRevolution2035';
 import RevolutionaryTechShowcase2029 from './src/components/RevolutionaryTechShowcase2029';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
+import RevolutionaryContentBanner2030 from './src/components/RevolutionaryContentBanner2030';
+import EnhancedContentShowcase2030 from './src/components/EnhancedContentShowcase2030';
+import InteractiveTechCarousel2030 from './src/components/InteractiveTechCarousel2030';
+import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
+import ConsciousnessComputingRevolution2035 from './src/pages/ConsciousnessComputingRevolution2035';
+import InterdimensionalTechRevolution2040 from './src/pages/InterdimensionalTechRevolution2040';
 
 export default function App(): JSX.Element {
   return (
     <ErrorBoundary>
+      <Helmet>
+        <title>Zion Tech Group - Revolutionary Technology Solutions 2025-2040</title>
+        <meta name="description" content="Leading the future of technology with AI consciousness, quantum computing, neural interfaces, and interdimensional technology. Explore our revolutionary solutions for 2025-2040." />
+        <meta name="keywords" content="AI technology, quantum computing, neural interfaces, consciousness computing, interdimensional tech, future technology, Zion Tech Group" />
+        <meta property="og:title" content="Zion Tech Group - Revolutionary Technology Solutions" />
+        <meta property="og:description" content="Experience the future of technology with our groundbreaking AI, quantum, and consciousness computing solutions." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Revolutionary Technology Solutions" />
+        <meta name="twitter:description" content="Leading the future of technology with revolutionary AI, quantum, and consciousness computing solutions." />
+      </Helmet>
       <Router>
         <div className="min-h-screen bg-white">
         <ScrollToTop />
@@ -121,6 +139,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* Revolutionary Content Banner 2030 */}
+                <RevolutionaryContentBanner2030 />
 
                 {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -162,9 +183,14 @@ export default function App(): JSX.Element {
                 <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect AI Solution</h2>
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
-                  <EnhancedSearch />
+                  <div className="max-w-2xl mx-auto">
+                    <input 
+                      type="text" 
+                      placeholder="Search AI solutions, quantum computing, neural interfaces..." 
+                      className="w-full px-6 py-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-44f2
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -244,6 +270,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/InterdimensionalTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 Interdimensional 2035 →
                     </a>
+                    <a href="/pages/UltimateTechRevolution2030" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 Ultimate Tech 2030 →
+                    </a>
+                    <a href="/pages/ConsciousnessComputingRevolution2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 Consciousness 2035 →
+                    </a>
+                    <a href="/pages/InterdimensionalTechRevolution2040" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌌 Interdimensional 2040 →
+                    </a>
                   </div>
                 </div>
 
@@ -254,6 +289,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* Interactive Tech Carousel 2030 */}
+                <div className="mb-12">
+                  <InteractiveTechCarousel2030 />
                 </div>
 
                 {/* Revolutionary Content Showcase */}
@@ -269,6 +309,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase 2026 */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
+                </div>
+
+                {/* Enhanced Content Showcase 2030 */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase2030 />
                 </div>
 
                 {/* Featured New Services */}
@@ -607,6 +652,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
+          <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2035" element={<ConsciousnessComputingRevolution2035 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2040" element={<InterdimensionalTechRevolution2040 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />

@@ -1,30 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { getPostById } from '../../../data/blog';
 >>>>>>> origin/feat/blog-content-and-promo
 
 type Params = { params: { id: string } };
 
-<<<<<<< HEAD
-const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -49,37 +30,16 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -102,27 +62,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
-<<<<<<< HEAD
-      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
-      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
-    ]
-  },
-  'multi-agent-supply-chains': {
-    id: 'multi-agent-supply-chains',
-    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
-    excerpt:
-      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
-    category: 'AI Solutions',
-    author: 'Dr. Sarah Chen',
-    date: '2025-09-12',
-    readTime: '8 min read',
-    content: [
-      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
-      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -205,9 +144,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     category: 'AI Governance',
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
-<<<<<<< HEAD
-    readTime: '9 min read',
-=======
     readTime: '8 min read',
 >>>>>>> origin/feat/content-promo
     content: [
@@ -215,9 +151,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
     ]
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/content-promo
   'edge-ai-marketplaces': {
     id: 'edge-ai-marketplaces',
@@ -231,10 +164,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
       'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
-<<<<<<< HEAD
->>>>>>> origin/feature/new-content-2025-09-15
-    ]
-=======
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
@@ -250,14 +179,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     date: '2025-09-15',
     readTime: '11 min read',
     content: [
-<<<<<<< HEAD
-      'As organizations adopt autonomous AI, governance must evolve from policy documents to executable guardrails. This blueprint provides a practical approach to building verifiable, adaptive governance that scales.',
-      'We cover policy definition (goals, constraints, metrics), enforcement via policy engines, safe action gates with human-in-the-loop, and continuous assurance through telemetry and audits.',
-      'Implementation patterns include risk-tiered action pipelines, signed policies with provenance, and sandboxed evaluation environments. We map responsibilities across product, security, compliance, and operations.',
-      'The result is a governance system that enables faster iteration while reducing risk, with transparent accountability across stakeholders.'
-    ],
->>>>>>> origin/feature/new-content-2025
-=======
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
@@ -409,37 +330,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'ai-safety-red-teaming-2025': {
-    id: 'ai-safety-red-teaming-2025',
-    title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
-    excerpt:
-      'Hands-on red teaming techniques, tooling, and governance patterns to harden AI systems against prompt injection, data exfiltration, and policy evasion.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Enterprises deploying AI at scale face evolving attack surfaces: prompt injection, tool misuse, covert data exfiltration, and model evasion. Red teaming must be continuous and automated.',
-      'This playbook catalogs realistic adversary techniques, safe sandboxes, and CI-integrated evaluations. It includes attack libraries, policy tests, and response runbooks tied to severity levels.',
-      'We outline how to design guardrails with layered defenses: input sanitization, capability routing, authorization boundaries, and human-in-the-loop escalation for sensitive actions.'
-    ]
-  },
-  'multi-agent-systems-at-scale': {
-    id: 'multi-agent-systems-at-scale',
-    title: 'Operating Multi‑Agent Systems at Scale: Reliability, Cost, and Policy',
-    excerpt:
-      'A field guide to running large multi-agent systems with predictable reliability, bounded cost, and enforceable organizational policy.',
-    category: 'Autonomous Systems',
-    author: 'Michael Rodriguez',
-    date: '2025-09-12',
-    readTime: '11 min read',
-    content: [
-      'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
-      'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
-      'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
-=======
   'ai-governance-operating-systems': {
     id: 'ai-governance-operating-systems',
     title: 'AI Governance Operating Systems: From Policy to Runtime Controls',
@@ -551,29 +441,9 @@ export default function BlogPostPage({ params }: Params) {
       </div>
     </article>
   );
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-}
-=======
 }
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995

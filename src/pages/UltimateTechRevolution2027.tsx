@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
@@ -184,19 +170,11 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
 import { ArrowRight, Zap, Brain, Cpu, Globe, Shield, Rocket, Star } from 'lucide-react';
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
->>>>>>> main
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
@@ -344,7 +322,6 @@ const UltimateTechRevolution2027: React.FC = () => {
               </div>
             </div>
           </motion.div>
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -510,12 +487,7 @@ const UltimateTechRevolution2027: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-9601
         </div>
-<<<<<<< HEAD
-      </section>
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
       </div>
 
       {/* CTA Section */}
@@ -550,9 +522,6 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
     </div>
   );
 };

@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-de2c
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -275,26 +264,6 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </section>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Join the Biotech Revolution</h2>
-          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
-            Be part of the biological revolution that's transforming healthcare, agriculture, 
-            and human potential through cutting-edge biotechnology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Biotech Journey
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
-              Explore Applications
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 import { motion } from 'framer-motion';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -523,23 +492,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-011f
-=======
->>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-011f
-=======
->>>>>>> cursor/create-and-deploy-new-content-de2c
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
             </button>
-=======
         <section className="text-center">
           <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Biology?</h2>
@@ -555,7 +508,6 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Learn More
               </a>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </section>
       </div>

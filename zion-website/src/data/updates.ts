@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type SiteUpdate = {
-  title: string
-  summary: string
-  href: string
-  date?: string
-  tag?: string
-}
-
-export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-=======
   // Fresh content added 2025-09-15
   {
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
-<<<<<<< HEAD
-=======
     title: 'Guide: Agent Platform Operations (2026)',
 =======
     title: 'Launch: Autonomous Ops and SRE for Agents',
@@ -155,24 +130,9 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
   // Fresh content added 2025-09-15
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: 'Deep Dive: Enterprise Agent Observability (2026)',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
     title: 'Guide: Agent Platform Operations (2026)',
@@ -296,8 +256,6 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Governance Toolkit (v2)',
 >>>>>>> origin/feature/content-updates-2025-09-15
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -323,49 +281,20 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Blueprint'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -393,35 +322,15 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
   },
   {
 >>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
@@ -429,51 +338,22 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-8472
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-de62
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-0dce
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -488,15 +368,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> main
@@ -521,60 +392,15 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-  },
-  // Newly added 2025-09-15 (to advertise on homepage)
-  {
-    title: 'Report: Enterprise Retrieval Observability (2026)',
-    summary:
-      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
-    href: '/updates/enterprise-retrieval-observability-2026',
-    date: '2025-09-15',
-    tag: 'Report'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-  },
-  {
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-0dce
-<<<<<<< HEAD
-=======
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-=======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-36f9
@@ -587,8 +413,6 @@ export const siteUpdates: SiteUpdate[] = [
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -597,10 +421,6 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Launch: Autonomous Security Copilot v1.0',
     summary: 'Advanced security automation with real-time threat detection and response capabilities.',
     href: '/updates/autonomous-security-copilot-1-0',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -609,10 +429,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -636,10 +452,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -652,10 +464,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
@@ -713,9 +521,6 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
@@ -1650,28 +1455,13 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
-<<<<<<< HEAD
-=======
 =======
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-    date: '2025-09-15',
-    tag: 'Launch'
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-  },
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -1695,10 +1485,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -1711,10 +1497,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
@@ -1772,9 +1554,6 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
@@ -2960,8 +2739,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/eval-ready-agent-release-automation',
     date: '2025-09-15',
     tag: 'Guide'
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
   }
@@ -3216,30 +2993,8 @@ export const siteUpdates: SiteUpdate[] = [
   }
 ]
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
-  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
-  return [...siteUpdates]
-    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
-    .slice(0, limit)
-}
-
-=======
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
@@ -3263,12 +3018,6 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'advanced-blockchain-course',
-=======
     id: 'ai-security-blueprint',
     title: 'Guide: AI Security Blueprint 2025',
 =======
@@ -3374,28 +3123,6 @@ export const updates: UpdateItem[] = [
     id: 'dapp-challenge',
     title: 'Community Challenge: Build a DApp',
     summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-<<<<<<< HEAD
-    date: '2025-09-08',
-    href: '/updates/dapp-challenge',
-  },
-  {
-    id: 'web3-learning-path',
-    title: 'New Learning Path: Web3 Fundamentals',
-    summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-    date: '2025-09-05',
-    href: '/updates/web3-learning-path',
-  },
-  {
-    id: 'ai-research-lab',
-    title: 'AI Research Lab: September Highlights',
-    summary: 'Breakthroughs in autonomous research agents and multimodal retrieval.',
-    date: '2025-09-01',
-    href: '/updates/ai-research-lab-sept',
-  },
-]
-
->>>>>>> origin/feature/updates-content
-=======
     href: '/updates/dapp-challenge',
     date: '2025-09-05',
     tag: 'Challenge',
@@ -3426,25 +3153,16 @@ export const getLatestUpdates = (limit = 6) => {
 
 >>>>>>> origin/feat/updates-content-and-advertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
   }
 ]
 
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995

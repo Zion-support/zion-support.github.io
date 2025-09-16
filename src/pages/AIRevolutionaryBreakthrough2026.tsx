@@ -1,21 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-import Header from '../Header';
-import Footer from '../Footer';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -269,24 +253,7 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-      </main>
-      
-      <Footer />
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
     </div>
   );
 };

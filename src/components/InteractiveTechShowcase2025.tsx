@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('ai');
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('ai');
-=======
   const [activeTab, setActiveTab] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -69,47 +59,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
           description: "Stem cell therapies regenerating organs and reversing aging",
           link: "/pages/AdvancedBiotechRevolution2026",
           features: ["Organ regeneration", "Anti-aging", "Tissue engineering"]
-<<<<<<< HEAD
-        }
-      ]
->>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
   const [activeTab, setActiveTab] = useState('ai');
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
-        }
-      ]
->>>>>>> cursor/create-and-deploy-new-content-9601
-    }
-  };
-
-  const interactiveFeatures = [
-    {
-      title: "Real-time Processing",
-      description: "Ultra-fast data processing with sub-millisecond response times",
-      icon: "⚡",
-      metric: "< 1ms"
-    },
-    {
-      title: "Accuracy Rate",
-      description: "99.9% accuracy in complex decision making and predictions",
-      icon: "🎯",
-      metric: "99.9%"
-    },
-    {
-      title: "Scalability",
-      description: "Seamlessly scales from single devices to enterprise systems",
-      icon: "📈",
-      metric: "∞"
-    },
-    {
-      title: "Security",
-      description: "Military-grade encryption and quantum-resistant security",
-      icon: "🔒",
-      metric: "100%"
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const techCategories = {
@@ -212,28 +162,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
           status: "Concept Phase"
         }
       ]
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
         }
       ]
->>>>>>> cursor/create-and-deploy-new-content-de2c
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
     }
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -276,70 +210,13 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <p className="text-lg opacity-90">
               Discover the latest breakthroughs in {techCategories[activeTab as keyof typeof techCategories].title.toLowerCase()}
             </p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2025
->>>>>>> cursor/create-and-deploy-new-content-f995
           </div>
 
-<<<<<<< HEAD
-          {/* Technology Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {techCategories[activeTab as keyof typeof techCategories].items.map((item, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${techCategories[activeTab as keyof typeof techCategories].color} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onMouseEnter={() => setHoveredItem(`${activeTab}-${index}`)}
-                onMouseLeave={() => setHoveredItem(null)}
-              >
-                <div className="text-4xl mb-4 text-center">
-                  {techCategories[activeTab as keyof typeof techCategories].icon}
-                </div>
-                
-                <h4 className="text-xl font-bold mb-3 text-center">{item.name}</h4>
-                <p className="text-white/90 mb-4 text-center text-sm">{item.description}</p>
-                
-                {/* Features */}
-                <div className="space-y-2 mb-4">
-                  {item.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="text-xs bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-center"
-                    >
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Status */}
-                <div className="text-center">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    item.status === 'Available Now' 
-                      ? 'bg-green-500/30 text-green-200' 
-                      : item.status === 'Beta Testing'
-                      ? 'bg-yellow-500/30 text-yellow-200'
-                      : 'bg-blue-500/30 text-blue-200'
-                  }`}>
-                    {item.status}
-                  </span>
-                </div>
-
-                {/* Hover Effect */}
-                {hoveredItem === `${activeTab}-${index}` && (
-                  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-                      Learn More →
-                    </button>
-                  </div>
-                )}
-              </div>
-=======
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Selector */}
           <div className="space-y-4">
@@ -362,12 +239,9 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   </div>
                 </div>
               </button>
->>>>>>> cursor/create-and-deploy-new-content-f995
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Technology Display */}
           <div className="relative">
             <div className={`bg-gradient-to-br ${currentTech.bgGradient} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor}/30 transition-all duration-500 ${
@@ -451,17 +325,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-          </div>
-        </div>
-
-              Schedule Demo
-            </button>
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -563,12 +426,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
->>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -582,9 +439,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
               Schedule Demo
             </button>
-<<<<<<< HEAD
-=======
-=======
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -604,10 +458,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
           </div>
         </div>
       </div>
