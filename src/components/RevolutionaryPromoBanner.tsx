@@ -126,44 +126,6 @@ const RevolutionaryPromoBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-              {promos[currentPromo].title}
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              {promos[currentPromo].description}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href={promos[currentPromo].link}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${promos[currentPromo].color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
-              >
-                <span className="text-2xl mr-3">{promos[currentPromo].icon}</span>
-                <span>Explore Technology</span>
-                <span className="ml-2">→</span>
-              </motion.a>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white/30 text-white rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* Promo Indicators */}
-=======
-          </div>
-          
-          {/* Navigation Dots */}
->>>>>>> cursor/create-and-deploy-new-content-df8e
           <div className="flex justify-center space-x-3 mt-8">
             {promos.map((_, index) => (
               <button
@@ -177,66 +139,6 @@ const RevolutionaryPromoBanner: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">∞</div>
-              <div className="text-gray-300">Computational Power</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">0ms</div>
-              <div className="text-gray-300">Processing Latency</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">∞</div>
-              <div className="text-gray-300">Learning Capacity</div>
-            </div>
-=======
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {promos.map((promo, index) => (
-            <a
-              key={index}
-              href={promo.link}
-              className={`bg-gradient-to-br ${promo.color}/30 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 group ${
-                index === currentPromo ? 'ring-2 ring-white/50' : ''
-              }`}
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{promo.icon}</div>
-              <h4 className="text-xl font-bold mb-2">{promo.title}</h4>
-              <p className="text-sm opacity-90 mb-4">{promo.description}</p>
-              <div className="flex items-center text-sm font-semibold">
-                <span>Explore →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of users exploring our revolutionary content and discovering the future of technology
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a 
-              href="/pages/RevolutionaryTechBreakthrough2026"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Start Your Journey
-            </a>
-            <a 
-              href="/pages/UltimateTechShowcase2026"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
-            >
-              View All Content
-            </a>
->>>>>>> cursor/create-and-deploy-new-content-df8e
           </div>
         </div>
       </div>
