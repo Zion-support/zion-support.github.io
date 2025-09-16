@@ -126,10 +126,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-import React, { useState } from 'react';
-
-const RevolutionaryCaseStudies2029: React.FC = () => {
-  const [selectedCase, setSelectedCase] = useState(0);
 
   const caseStudies = [
     {
