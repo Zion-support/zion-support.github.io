@@ -11,6 +11,34 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: Real‑Time Model Routing Playbook (2026 Preview)',
+		summary: 'Cost-aware, reliability-first routing strategies with eval gates and shadow tests.',
+		href: '/updates/real-time-model-routing-playbook-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: 48% Cost Savings with Evidence‑Driven Routing',
+		summary: 'How eval-driven rollouts and traffic mirroring produced measurable savings and quality gains.',
+		href: '/updates/case-study-eval-driven-routing-48-savings',
+		date: '2025-09-16',
+		tag: 'Case Study',
+	},
+	{
+		title: 'Announcement: Autonomous Knowledge Ops Suite v1.0',
+		summary: 'Unified ingestion, provenance, and retrieval governance for production RAG systems.',
+		href: '/updates/autonomous-knowledge-ops-suite-1-0',
+		date: '2025-09-16',
+		tag: 'Announcement',
+	},
+	{
+		title: 'Release: Real‑Time Evals Control Plane',
+		summary: 'Centralized policies, gates, and metrics to ship safer, faster AI updates.',
+		href: '/updates/real-time-evals-control-plane',
+		date: '2025-09-16',
+		tag: 'Release',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
