@@ -80,6 +80,8 @@ import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTech
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
+import NextGenAISolutions2025 from './src/pages/NextGenAISolutions2025';
 
 export default function App(): JSX.Element {
   return (
@@ -539,6 +541,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          <Route path="/pages/NextGenAISolutions2025" element={<NextGenAISolutions2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
