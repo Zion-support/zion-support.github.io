@@ -198,6 +198,10 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+import AIInnovationShowcase2025 from './src/components/AIInnovationShowcase2025';
+import AIInnovationShowcaseBanner2025 from './src/components/AIInnovationShowcaseBanner2025';
+import FutureTechTrendsShowcase2025 from './src/components/FutureTechTrendsShowcase2025';
+import FutureTechTrendsBanner2025 from './src/components/FutureTechTrendsBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -234,6 +238,12 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: AI Innovation Showcase Banner 2025 - Prominent advertising for latest AI innovations */}
+                <AIInnovationShowcaseBanner2025 />
+                
+                {/* NEW: Future Tech Trends Banner 2025 - Advertising for future technology trends */}
+                <FutureTechTrendsBanner2025 />
+                
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
                 
@@ -1404,6 +1414,10 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          
+          {/* NEW: AI Innovation Showcase Routes 2025 */}
+          <Route path="/ai-innovation-showcase-2025" element={<AIInnovationShowcase2025 />} />
+          <Route path="/future-tech-trends-2025" element={<FutureTechTrendsShowcase2025 />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
