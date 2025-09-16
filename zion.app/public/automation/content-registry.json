@@ -1,5 +1,32 @@
 [
   {
+    "type": "report",
+    "title": "Real-Time Agent Metrics: Best Practices for 2026",
+    "description": "New AI/IT insight: Real-Time Agent Metrics: Best Practices for 2026",
+    "link": "/reports/ai-lab/articles/real-time-agent-metrics-best-practices-2025-09-16.md",
+    "tags": ["observability", "agents", "production"],
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "source": "Zion AI Lab"
+  },
+  {
+    "type": "report",
+    "title": "Secure Prompt Engineering: A 2026 Field Guide",
+    "description": "New AI/IT insight: Secure Prompt Engineering: A 2026 Field Guide",
+    "link": "/reports/ai-lab/articles/secure-prompt-engineering-field-guide-2025-09-16.md",
+    "tags": ["security", "prompts", "governance"],
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "source": "Zion AI Lab"
+  },
+  {
+    "type": "report",
+    "title": "Cost-Aware Model Routing: A 2026 Checklist",
+    "description": "New AI/IT insight: Cost-Aware Model Routing: A 2026 Checklist",
+    "link": "/reports/ai-lab/articles/cost-aware-model-routing-checklist-2025-09-16.md",
+    "tags": ["finops", "routing", "production"],
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "source": "Zion AI Lab"
+  },
+  {
     "type": "page",
     "title": "Synthetic Intelligence 2026",
     "description": "Beyond Artificial Intelligence - Experience synthetic consciousness that transcends human limitations",
