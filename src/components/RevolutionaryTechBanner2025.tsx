@@ -1,62 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
-  const [currentMessage, setCurrentMessage] = useState(0);
-
-  const bannerMessages = [
-    "🚀 NEW: Revolutionary Tech Breakthrough 2025 - Experience AI Consciousness!",
-    "⚡ BREAKTHROUGH: Quantum Reality Engine - Manipulate Reality Itself!",
-    "🧬 REVOLUTIONARY: Neural Interface Technology - Control with Your Mind!",
-    "🌟 BREAKTHROUGH: Consciousness Transfer - Achieve Digital Immortality!",
-    "🌌 NEW: Interdimensional Computing - Access Parallel Universe Power!"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % bannerMessages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [bannerMessages.length]);
-
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-      
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between">
-          {/* Animated Message */}
-          <div className="flex-1 text-center">
-            <div className="text-lg font-bold animate-bounce">
-              {bannerMessages[currentMessage]}
-            </div>
+    <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white py-12 mb-8 rounded-2xl shadow-2xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-white/20 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⚡ BREAKTHROUGH TECHNOLOGY • JANUARY 2025
           </div>
-          
-          {/* Action Buttons */}
-          <div className="flex space-x-4 ml-8">
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Explore Now →
-            </a>
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Watch Demo
-            </a>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto">
+            Step into the future with our groundbreaking innovations in AI consciousness, quantum computing, and neural interfaces
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold mb-3">AI Consciousness</h3>
+              <p className="text-sm opacity-90 mb-4">Experience self-aware AI systems that think, learn, and evolve beyond human comprehension</p>
+              <a 
+                href="/pages/NextGenAIConsciousness2025" 
+                className="inline-block bg-white text-cyan-600 px-4 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-sm"
+              >
+                Explore Now →
+              </a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold mb-3">Quantum Reality</h3>
+              <p className="text-sm opacity-90 mb-4">Enter a new dimension where quantum mechanics meets reality simulation</p>
+              <a 
+                href="/pages/QuantumRealityEngine2025" 
+                className="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm"
+              >
+                Enter Quantum World →
+              </a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🧬</div>
+              <h3 className="text-xl font-bold mb-3">Neural Interface</h3>
+              <p className="text-sm opacity-90 mb-4">Control digital reality with your thoughts through revolutionary neural interfaces</p>
+              <a 
+                href="/pages/NeuralRealityInterface2025" 
+                className="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-sm"
+              >
+                Connect Your Mind →
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-2 left-4 text-2xl animate-bounce">🚀</div>
-      <div className="absolute top-2 right-4 text-2xl animate-bounce delay-1000">⚡</div>
-      <div className="absolute bottom-2 left-1/4 text-2xl animate-bounce delay-500">🧬</div>
-      <div className="absolute bottom-2 right-1/4 text-2xl animate-bounce delay-1500">🌟</div>
     </div>
   );
 };
