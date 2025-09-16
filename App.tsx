@@ -225,6 +225,8 @@ import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcas
 import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
 import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 
 export default function App(): JSX.Element {
   return (
@@ -255,6 +257,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 - Latest Interactive Features */}
+                <InteractiveTechShowcase2025 />
                 
                 {/* NEW: Revolutionary Tech Banner 2025 - Latest Breakthrough */}
                 <RevolutionaryTechBanner2025 />
