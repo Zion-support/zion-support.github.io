@@ -77,10 +77,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
   const latestInsights = [
     {
-      title: 'Agentic Product Playbooks',
-      href: '/blog/agentic-product-playbooks',
-      tag: 'Agentic',
+      title: 'AI Roadmap 2026: Enterprise Adoption Guide',
+      href: '/blog/ai-roadmap-2026',
+      tag: 'AI Strategy',
       gradient: 'from-cyan-500 to-fuchsia-500'
+    },
+    {
+      title: 'Quantum Security 2026: Readiness Checklist',
+      href: '/blog/quantum-security-2026',
+      tag: 'Quantum',
+      gradient: 'from-indigo-500 to-purple-500'
     },
     {
       title: 'Cloud Cost Optimization 2025',
@@ -89,15 +95,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
-      title: 'GenAI for Regulated Industries (2025)',
-      href: '/blog/genai-2025-practical-compliance-patterns',
-      tag: 'Compliance',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
-      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
-      tag: 'RevOps',
+      title: 'Agentic Product Playbooks',
+      href: '/blog/agentic-product-playbooks',
+      tag: 'Agentic',
       gradient: 'from-fuchsia-500 to-indigo-500'
     }
   ];
