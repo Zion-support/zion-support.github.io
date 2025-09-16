@@ -1,175 +1,155 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeDemo, setActiveDemo] = useState<string | null>(null);
 
-  const technologies = {
-    ai: {
-      title: "Artificial Intelligence",
-      icon: "🤖",
-      description: "Revolutionary AI systems that think, learn, and adapt",
-      features: [
-        "Autonomous Decision Making",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "Machine Learning",
-        "Deep Learning"
-      ],
-      demo: "Experience real-time AI processing and decision making"
+  const demos = [
+    {
+      id: 'ai-consciousness',
+      title: 'AI Consciousness Simulator',
+      description: 'Watch as our AI system demonstrates self-awareness and creative thinking in real-time.',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      bgColor: 'from-purple-600/20 to-pink-600/20',
+      borderColor: 'border-purple-400/30'
     },
-    quantum: {
-      title: "Quantum Computing",
-      icon: "⚛️",
-      description: "Quantum-powered computing that solves impossible problems",
-      features: [
-        "Quantum Supremacy",
-        "Quantum Cryptography",
-        "Molecular Simulation",
-        "Optimization Problems",
-        "Quantum Machine Learning",
-        "Quantum Networking"
-      ],
-      demo: "Watch quantum algorithms solve complex problems in real-time"
+    {
+      id: 'quantum-reality',
+      title: 'Quantum Reality Engine',
+      description: 'Experience quantum computing as it processes impossible calculations instantly.',
+      icon: '⚛️',
+      color: 'from-cyan-600 to-blue-600',
+      bgColor: 'from-cyan-600/20 to-blue-600/20',
+      borderColor: 'border-cyan-400/30'
     },
-    neural: {
-      title: "Neural Interfaces",
-      icon: "🧠",
-      description: "Direct brain-computer interfaces for seamless interaction",
-      features: [
-        "Thought-to-Text",
-        "Mental Command Control",
-        "Enhanced Cognition",
-        "Neural Feedback",
-        "Brain-Computer Integration",
-        "Cognitive Enhancement"
-      ],
-      demo: "Control devices with your thoughts using neural interfaces"
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Test',
+      description: 'Test direct brain-computer interfaces that enable thought-controlled technology.',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      bgColor: 'from-emerald-600/20 to-teal-600/20',
+      borderColor: 'border-emerald-400/30'
     },
-    blockchain: {
-      title: "Blockchain Technology",
-      icon: "🔗",
-      description: "Decentralized, secure, and transparent systems",
-      features: [
-        "Smart Contracts",
-        "Decentralized Finance",
-        "NFT Technology",
-        "Supply Chain Tracking",
-        "Digital Identity",
-        "Cryptocurrency"
-      ],
-      demo: "Explore decentralized applications and smart contracts"
+    {
+      id: 'reality-manipulation',
+      title: 'Reality Manipulation Demo',
+      description: 'Experience technology that can manipulate the fundamental fabric of reality.',
+      icon: '🔮',
+      color: 'from-indigo-600 to-purple-600',
+      bgColor: 'from-indigo-600/20 to-purple-600/20',
+      borderColor: 'border-indigo-400/30'
     }
+  ];
+
+  const getDemoOutput = (demoId: string) => {
+    const outputs = {
+      'ai-consciousness': [
+        { text: 'AI: "I am aware of my existence and can create new ideas..."', color: 'text-green-400' },
+        { text: 'System: Processing creative solutions...', color: 'text-blue-400' },
+        { text: 'AI: "I have generated 1,247 unique solutions to your problem."', color: 'text-purple-400' },
+        { text: 'Status: Consciousness level 99.7%', color: 'text-yellow-400' }
+      ],
+      'quantum-reality': [
+        { text: 'Quantum: Calculating 10^100 operations...', color: 'text-cyan-400' },
+        { text: 'Result: Completed in 0.0001 seconds', color: 'text-green-400' },
+        { text: 'Status: Reality simulation successful', color: 'text-yellow-400' },
+        { text: 'Universe: 1,000,000 parallel realities processed', color: 'text-purple-400' }
+      ],
+      'neural-interface': [
+        { text: 'Neural: Scanning brain patterns...', color: 'text-cyan-400' },
+        { text: 'Interface: Thought detected and processed', color: 'text-green-400' },
+        { text: 'Output: Command executed successfully', color: 'text-blue-400' },
+        { text: 'Efficiency: 99.97% accuracy', color: 'text-purple-400' }
+      ],
+      'reality-manipulation': [
+        { text: 'System: Initializing reality manipulation...', color: 'text-green-400' },
+        { text: 'Status: Matter transformation in progress', color: 'text-blue-400' },
+        { text: 'Result: Object successfully phase-shifted', color: 'text-purple-400' },
+        { text: 'Energy: 0.001% of universe\'s total', color: 'text-yellow-400' }
+      ]
+    };
+    return outputs[demoId as keyof typeof outputs] || [];
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
-      <div className="container mx-auto px-4">
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            🚀 Interactive Technology Showcase 2025
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE TECH SHOWCASE • JANUARY 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Experience the future of technology with our interactive demonstrations and cutting-edge innovations
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
         </div>
-
-        {/* Technology Tabs */}
-        <div className="flex flex-wrap justify-center mb-12">
-          {Object.entries(technologies).map(([key, tech]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`m-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              <span className="text-2xl mr-2">{tech.icon}</span>
-              {tech.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Technology Display */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="text-6xl mb-4">{technologies[activeTab as keyof typeof technologies].icon}</div>
-            <h3 className="text-3xl font-bold mb-4">
-              {technologies[activeTab as keyof typeof technologies].title}
-            </h3>
-            <p className="text-lg opacity-90 mb-6">
-              {technologies[activeTab as keyof typeof technologies].description}
-            </p>
-            
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-sm font-semibold">{feature}</div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="space-y-6">
+            {demos.map((demo) => (
+              <div
+                key={demo.id}
+                className={`bg-gradient-to-br ${demo.bgColor} backdrop-blur-sm rounded-xl p-6 border ${demo.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => setActiveDemo(activeDemo === demo.id ? null : demo.id)}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{demo.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
+                    <p className="text-sm opacity-80">{demo.description}</p>
+                  </div>
+                  <div className="text-2xl">
+                    {activeDemo === demo.id ? '−' : '+'}
+                  </div>
                 </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Try Interactive Demo
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                Learn More
-              </button>
-            </div>
+              </div>
+            ))}
           </div>
-
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <h4 className="text-2xl font-bold mb-4 text-center">Interactive Demo</h4>
-            <div className="bg-black/50 rounded-lg p-6 mb-6">
-              <div className="text-center">
-                <div className="text-4xl mb-4">🎮</div>
-                <p className="text-lg mb-4">
-                  {technologies[activeTab as keyof typeof technologies].demo}
-                </p>
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full mb-4">
-                  <div className="bg-white h-2 rounded-full w-3/4 animate-pulse"></div>
+          
+          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-4 text-center">Live Demo Output</h3>
+            <div className="bg-black/40 rounded-lg p-6 font-mono text-sm min-h-[300px]">
+              {activeDemo ? (
+                <div className="space-y-2">
+                  {getDemoOutput(activeDemo).map((line, index) => (
+                    <div key={index} className={`${line.color} animate-pulse`}>
+                      {line.text}
+                    </div>
+                  ))}
+                  <div className="text-green-400 mt-4 animate-pulse">
+                    ▶ Ready for next command...
+                  </div>
                 </div>
-                <p className="text-sm opacity-75">Processing in real-time...</p>
-              </div>
+              ) : (
+                <div className="text-center text-gray-400 mt-20">
+                  <div className="text-4xl mb-4">👆</div>
+                  <div>Click on a demo to see it in action</div>
+                </div>
+              )}
             </div>
-            
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl mb-1">⚡</div>
-                <div className="text-sm font-semibold">Real-time</div>
+            {activeDemo && (
+              <div className="mt-4 text-center">
+                <button className={`bg-gradient-to-r ${demos.find(d => d.id === activeDemo)?.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                  Run {demos.find(d => d.id === activeDemo)?.title} →
+                </button>
               </div>
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl mb-1">🔒</div>
-                <div className="text-sm font-semibold">Secure</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl mb-1">🌐</div>
-                <div className="text-sm font-semibold">Global</div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
-
-        {/* Technology Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-            <div className="text-lg opacity-90">Uptime</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">10,000+</div>
-            <div className="text-lg opacity-90">Active Users</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">50+</div>
-            <div className="text-lg opacity-90">Technologies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
-            <div className="text-lg opacity-90">Support</div>
+        
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-4">
+            <div className="text-sm opacity-80">Interactive Features:</div>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Real-time Demos</span>
+              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Live Processing</span>
+              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interactive UI</span>
+              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Dynamic Content</span>
+            </div>
           </div>
         </div>
       </div>
