@@ -14,6 +14,11 @@
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
 import React, { useState, useEffect } from 'react';
 =======
 import React from 'react';
@@ -69,6 +74,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-370d
 import React from 'react';
@@ -88,6 +94,8 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Interactive showcase of cutting-edge technologies that will define the future of humanity
           </p>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
         </div>
         
 <<<<<<< HEAD
@@ -151,6 +159,11 @@ const RevolutionaryAdBanner2036: React.FC = () => {
         </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -175,6 +188,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
 =======
+<<<<<<< HEAD
         <div className="text-center mt-8">
           <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4">
             Explore All Technologies
@@ -183,6 +197,9 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             Learn More
           </button>
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
         </div>
       </div>
     </div>

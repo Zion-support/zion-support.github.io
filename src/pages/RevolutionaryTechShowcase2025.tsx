@@ -1,5 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
@@ -66,6 +76,37 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -271,6 +312,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
       </div>
     </>
+<<<<<<< HEAD
 =======
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
@@ -484,6 +526,15 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       </div>
     </div>
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+<<<<<<< HEAD
+=======
+    </div>
+>>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
   );
 };
 
