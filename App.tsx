@@ -187,6 +187,8 @@ import UltimateAIConsciousness2032 from './src/pages/UltimateAIConsciousness2032
 import UltimateTechSolutions2026 from './src/pages/UltimateTechSolutions2026';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
+import UltimateAIServicesShowcase2026 from './src/pages/UltimateAIServicesShowcase2026';
+import UltimateContentAdvertisingBanner2026 from './src/components/UltimateContentAdvertisingBanner2026';
 =======
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
 import RevolutionaryCaseStudies2032 from './src/pages/RevolutionaryCaseStudies2032';
@@ -325,6 +327,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Advertising Banner */}
+                <UltimateContentAdvertisingBanner2026 />
+                
 <<<<<<< HEAD
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
@@ -1409,6 +1414,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+          <Route path="/ultimate-ai-services-showcase-2026" element={<UltimateAIServicesShowcase2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
