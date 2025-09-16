@@ -52,6 +52,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Reliable Real‑Time Agents (2026)',
+      href: '/blog/ai-2026-reliable-real-time-agents',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
       title: 'Zero‑Trust Agents (2026)',
       href: '/blog/ai-2026-zero-trust-agents',
       tag: 'New',
