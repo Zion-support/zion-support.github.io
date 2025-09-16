@@ -1,6 +1,7 @@
 'use client'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Fragment } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -72,8 +73,11 @@ export default function Navigation() {
 =======
 import React from 'react'
 import { useState } from 'react'
+=======
+>>>>>>> origin/feat/updates-and-fixes
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 const navigation = [
 <<<<<<< HEAD
@@ -101,11 +105,14 @@ export default function Navigation() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/news-and-fixes
 =======
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 >>>>>>> origin/feat/research-article-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -278,6 +285,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -407,3 +415,5 @@ export default function Navigation() {
 =======
 
 >>>>>>> origin/feat/research-article-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes

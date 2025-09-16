@@ -225,6 +225,7 @@ export const updates: UpdateItem[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'advanced-blockchain-course',
 =======
     id: 'ai-security-blueprint',
@@ -245,6 +246,32 @@ export const updates: UpdateItem[] = [
       'We partnered with leading research institutions to accelerate quantum neural networks for enterprise.',
     href: '/updates/quantum-partnership',
     date: '2025-09-14',
+=======
+    id: 'ai-governance-bootcamp',
+    title: 'New Bootcamp: Enterprise AI Governance (Oct 2025)',
+    summary:
+      'Hands-on governance bootcamp covering risk management, policy, evals, and controls for enterprise AI.',
+    href: '/updates/ai-governance-bootcamp',
+    date: '2025-09-15',
+    tag: 'Course',
+  },
+  {
+    id: 'agent-research-insights-2025q3',
+    title: 'Research: Agent Observability Insights (Q3 2025)',
+    summary:
+      'Key findings on monitoring agent behaviors, failure modes, and safe interventions at scale.',
+    href: '/updates/agent-observability-q3-2025',
+    date: '2025-09-14',
+    tag: 'Research',
+  },
+  {
+    id: 'zion-website-refresh',
+    title: 'Announcement: Website UX Refresh and Accessibility Upgrades',
+    summary:
+      'Improved navigation, better performance, and WCAG-focused accessibility enhancements across the site.',
+    href: '/updates/website-ux-refresh-2025',
+    date: '2025-09-13',
+>>>>>>> origin/feat/updates-and-fixes
     tag: 'Announcement',
   },
   {

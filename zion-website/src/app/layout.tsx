@@ -80,9 +80,12 @@ export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description:
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/feat/updates-and-fixes
     'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: [
     'AI',
@@ -169,6 +172,7 @@ export default function RootLayout({
         <Navigation />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <main className="min-h-screen">{children}</main>
 =======
         <main className="min-h-screen pt-16">{children}</main>
@@ -176,6 +180,9 @@ export default function RootLayout({
 =======
         <main className="min-h-screen">{children}</main>
 >>>>>>> origin/feat/content-promo
+=======
+        <main className="min-h-screen">{children}</main>
+>>>>>>> origin/feat/updates-and-fixes
         <Footer />
       </body>
     </html>

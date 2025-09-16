@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 =======
@@ -87,6 +88,23 @@ const team = [
 =======
 import React from 'react'
 >>>>>>> origin/feat/research-article-promo
+=======
+import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+
+const values = [
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+
+const team = [
+  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.", image: '/images/team/sarah-chen.jpg' },
+  { name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg' },
+  { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg' },
+  { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+]
+>>>>>>> origin/feat/updates-and-fixes
 
 const team = [
   { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision.', image: '/images/team/sarah-chen.jpg' },
@@ -131,11 +149,19 @@ export default function AboutPage() {
 <<<<<<< HEAD
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
               About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+=======
+              About{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems,
+>>>>>>> origin/feat/updates-and-fixes
               dedicated to transforming industries and advancing human potential through technology.
 =======
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential.
@@ -163,10 +189,14 @@ export default function AboutPage() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/updates-and-fixes
       {/* Mission & Vision */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -184,7 +214,14 @@ export default function AboutPage() {
                 <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
                 <h3 className="text-xl font-semibold text-white">Our Mission</h3>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-300">To accelerate human progress through cutting-edge AI and technology solutions that solve the world's most complex challenges while maintaining the highest ethical standards.</p>
+=======
+              <p className="text-gray-300">
+                To accelerate human progress through cutting-edge AI and technology solutions that solve the world's
+                most complex challenges while maintaining the highest ethical standards.
+              </p>
+>>>>>>> origin/feat/updates-and-fixes
             </div>
             <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
               <div className="flex items-center gap-x-3 mb-4">
@@ -193,9 +230,15 @@ export default function AboutPage() {
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-gray-300">
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
                 intelligent, efficient, and sustainable world for generations to come.
+=======
+              <p className="text-gray-300">
+                A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent,
+                efficient, and sustainable world for generations to come.
+>>>>>>> origin/feat/updates-and-fixes
               </p>
 =======
               <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world.</p>
@@ -210,6 +253,9 @@ export default function AboutPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
       {/* Company Story */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -222,6 +268,7 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-lg text-gray-300 mb-6">
@@ -239,6 +286,20 @@ export default function AboutPage() {
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
               startups, helping them harness the power of AI to transform their operations and 
               accelerate their growth.
+=======
+            <p className="text-lg text-gray-300 mb-6">
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, Zion Tech Group
+              emerged from a shared vision: to bridge the gap between cutting-edge research and real-world applications.
+            </p>
+            <p className="text-lg text-gray-300 mb-6">
+              What started as a small research lab has grown into a global technology powerhouse, with offices in
+              Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ researchers, engineers, and business
+              professionals work tirelessly to push the boundaries of what's possible.
+            </p>
+            <p className="text-lg text-gray-300">
+              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative startups, helping
+              them harness the power of AI to transform their operations and accelerate their growth.
+>>>>>>> origin/feat/updates-and-fixes
             </p>
 =======
             <p className="text-lg text-gray-300 mb-6">Founded in 2020 by AI researchers and technology entrepreneurs, Zion Tech Group emerged from a vision to bridge the gap between cutting-edge research and real-world applications.</p>
@@ -256,6 +317,9 @@ export default function AboutPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
       {/* Values */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -265,12 +329,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Core Values</p>
+<<<<<<< HEAD
 =======
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Core Values</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">What drives us</p>
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-fixes
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -294,9 +361,7 @@ export default function AboutPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Meet Our Team
-          </p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
           </p>
@@ -335,13 +400,23 @@ export default function AboutPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
       {/* CTA section */}
 =======
 >>>>>>> origin/feat/case-studies-content
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
+<<<<<<< HEAD
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Ready to be part of the AI revolution? Let's discuss how we can work together.</p>
+=======
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Ready to be part of the AI revolution? Let's discuss how we can work together to transform your
+            organization.
+          </p>
+>>>>>>> origin/feat/updates-and-fixes
           <div className="mt-10 flex items-center justify-center gap-x-6">
 <<<<<<< HEAD
             <a
@@ -353,6 +428,7 @@ export default function AboutPage() {
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Careers <span aria-hidden="true">→</span>
             </a>
+<<<<<<< HEAD
 =======
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
@@ -366,12 +442,15 @@ export default function AboutPage() {
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes
           </div>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -819,3 +898,5 @@ export default function AboutPage() {
 }
 
 >>>>>>> origin/feat/research-article-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes

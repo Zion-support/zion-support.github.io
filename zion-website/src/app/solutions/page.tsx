@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
@@ -39,10 +40,16 @@ import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBar
 const flagshipSolutions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
+
+const flagshipSolutions = [
+>>>>>>> origin/feat/updates-and-fixes
   {
     name: 'AI Research Assistant',
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
+<<<<<<< HEAD
 <<<<<<< HEAD
     features: [
       'Natural Language Processing',
@@ -53,6 +60,9 @@ const flagshipSolutions = [
 =======
     features: ['Natural Language Processing', 'Multi-modal Learning', 'Real-time Collaboration', 'Advanced Analytics'],
 >>>>>>> origin/feature/updates-2025-09
+=======
+    features: ['Natural Language Processing', 'Multi-modal Learning', 'Real-time Collaboration', 'Advanced Analytics'],
+>>>>>>> origin/feat/updates-and-fixes
     href: '/solutions/ai-autonomous-research',
   },
   {
@@ -74,6 +84,7 @@ const flagshipSolutions = [
     description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.',
     icon: ShieldCheckIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
     features: [
       'Asset Discovery',
       'Lifecycle Management',
@@ -83,6 +94,9 @@ const flagshipSolutions = [
 =======
     features: ['Asset Discovery', 'Lifecycle Management', 'Security Compliance', 'Cost Optimization'],
 >>>>>>> origin/feature/updates-2025-09
+=======
+    features: ['Asset Discovery', 'Lifecycle Management', 'Security Compliance', 'Cost Optimization'],
+>>>>>>> origin/feat/updates-and-fixes
     href: '/solutions/it-asset-management',
   },
 =======
@@ -106,6 +120,7 @@ const implementationSteps = [
   { step: '03', title: 'Development & Testing', description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.', icon: CogIcon },
   { step: '04', title: 'Deployment & Training', description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.', icon: RocketLaunchIcon },
   { step: '05', title: 'Ongoing Support', description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.', icon: ShieldCheckIcon },
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { RocketLaunchIcon, LightBulbIcon, CpuChipIcon } from '@heroicons/react/24/outline'
@@ -115,6 +130,8 @@ const solutions = [
   { name: 'Quantum Neural Networks', desc: 'Next-generation computing for complex problems.', href: '/solutions/quantum-neural-networks', icon: CpuChipIcon },
   { name: 'Autonomous Operations', desc: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business', icon: RocketLaunchIcon },
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-fixes
 ]
 =======
 import React from 'react'
@@ -140,6 +157,7 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
               Discover our cutting-edge AI and technology solutions designed to transform your business 
               operations and drive unprecedented growth and innovation.
 =======
@@ -149,6 +167,9 @@ export default function SolutionsPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Explore our flagship platforms and accelerators.
 >>>>>>> origin/feat/research-article-promo
+=======
+              Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.
+>>>>>>> origin/feat/updates-and-fixes
             </p>
 =======
             <p className="mt-6 text-lg leading-8 text-gray-300">Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.</p>
@@ -168,6 +189,9 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-fixes
       {/* Flagship Solutions */}
 =======
 >>>>>>> origin/feature/updates-2025-09
@@ -178,10 +202,16 @@ export default function SolutionsPage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Flagship AI Platforms</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
 =======
           <p className="mt-6 text-lg leading-8 text-gray-300">Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence.</p>
 >>>>>>> origin/feat/content-promo
+=======
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence.
+          </p>
+>>>>>>> origin/feat/updates-and-fixes
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
@@ -200,7 +230,13 @@ export default function SolutionsPage() {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
                 <a href={solution.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a>
+=======
+                <a href={solution.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+>>>>>>> origin/feat/updates-and-fixes
               </div>
             ))}
           </div>
@@ -213,12 +249,14 @@ export default function SolutionsPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Transforming Every Sector
-          </p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Transforming Every Sector</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             Our AI solutions are designed to adapt and excel across diverse industries, 
             delivering measurable results and competitive advantages.
+=======
+            Our AI solutions are designed to adapt and excel across diverse industries, delivering measurable results and competitive advantages.
+>>>>>>> origin/feat/updates-and-fixes
           </p>
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -266,12 +304,14 @@ export default function SolutionsPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Proven Process
-          </p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Proven Process</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             From initial assessment to ongoing optimization, we guide you through every step 
             of your AI transformation journey.
+=======
+            From initial assessment to ongoing optimization, we guide you through every step of your AI transformation journey.
+>>>>>>> origin/feat/updates-and-fixes
           </p>
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -312,12 +352,14 @@ export default function SolutionsPage() {
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to transform your business?
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             Let's discuss how our AI solutions can accelerate your growth and give you a 
             competitive edge in your industry.
+=======
+            Let's discuss how our AI solutions can accelerate your growth and give you a competitive edge in your industry.
+>>>>>>> origin/feat/updates-and-fixes
           </p>
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -326,6 +368,7 @@ export default function SolutionsPage() {
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let's discuss how our AI solutions can accelerate your growth and give you a competitive edge.</p>
 >>>>>>> origin/feature/updates-2025-09
           <div className="mt-10 flex items-center justify-center gap-x-6">
+<<<<<<< HEAD
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200 hover:scale-105">Get Started</a>
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -336,6 +379,14 @@ export default function SolutionsPage() {
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
 >>>>>>> origin/feat/content-promo
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Services <span aria-hidden="true">→</span></a>
+=======
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">
+              Get Started
+            </a>
+            <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Services <span aria-hidden="true">→</span>
+            </a>
+>>>>>>> origin/feat/updates-and-fixes
           </div>
 =======
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -363,6 +414,7 @@ export default function SolutionsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -971,3 +1023,5 @@ export default function SolutionsPage() {
 =======
 
 >>>>>>> origin/feat/research-article-promo
+=======
+>>>>>>> origin/feat/updates-and-fixes
