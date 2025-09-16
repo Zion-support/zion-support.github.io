@@ -63,6 +63,10 @@ import NewContent2026UltimateShowcase from './components/NewContent2026UltimateS
 import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
 
+// Import new revolutionary components
+import AdvancedPerformanceOptimizer2026 from './components/AdvancedPerformanceOptimizer2026';
+import RevolutionaryTech2026Showcase from './components/RevolutionaryTech2026Showcase';
+
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
 import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
@@ -1222,6 +1226,10 @@ export default function HomePage() {
         <AutomationWorkflowEngine />
         <EnterpriseDataManagement />
         <APIManagementSystem />
+
+        {/* New Revolutionary Components */}
+        <AdvancedPerformanceOptimizer2026 />
+        <RevolutionaryTech2026Showcase />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>

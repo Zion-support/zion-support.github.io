@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Batch Merge Remaining PRs Script
+# Force Merge Content Branches Script
 set -e
 
-echo "🚀 Starting batch merge of remaining PRs..."
+echo "🚀 Starting force merge of content branches..."
 
 # Colors for output
 RED='\033[0;31m'
@@ -25,25 +25,11 @@ git checkout main
 print_status "Pulling latest changes..."
 git pull origin main
 
-# Get list of recent cursor branches
-print_status "Getting recent cursor branches..."
-git fetch origin
-
-# Focus on the most recent branches first
-recent_branches=(
-    "cursor/create-and-deploy-new-content-b497"
-    "cursor/create-and-deploy-new-content-db92"
-    "feat/new-content-sept-2025"
-    "feature/new-content-2026"
-    "feature/new-content-sep-2025"
-    "feature/revolutionary-content-2026"
-    "revolutionary-content-2026"
-    "feat/new-content-ads"
-    "feat/new-blog-content-sept16"
+# Focus on content branches that are likely to have new content
+content_branches=(
     "feat/new-content-sept16"
+    "feat/new-blog-content-sept16"
     "feat/content-and-homepage-promos-20250916"
-    "feat/new-sept-2025-blog"
-    "feat/add-sept16-content-promos"
     "feat/new-updates-2025-09-16"
     "content/updates-and-blogs-2025-09-16"
     "chore/create-and-deploy-new-content"
@@ -54,28 +40,36 @@ recent_branches=(
 successful_merges=0
 failed_merges=0
 
-print_status "Processing ${#recent_branches[@]} priority branches..."
+print_status "Processing ${#content_branches[@]} content branches..."
 
-for branch in "${recent_branches[@]}"; do
+for branch in "${content_branches[@]}"; do
     print_status "Processing branch: $branch"
     
     # Check if branch exists
     if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        # Try to merge the branch
-        if git merge --no-edit "origin/$branch" 2>/dev/null; then
+        # Try to merge with strategy to favor the incoming branch for content
+        if git merge -X theirs --no-edit "origin/$branch" 2>/dev/null; then
             print_success "Successfully merged $branch"
             ((successful_merges++))
         else
-            print_warning "Merge conflict in $branch, skipping..."
-            git merge --abort 2>/dev/null || true
-            ((failed_merges++))
+            print_warning "Merge conflict in $branch, trying force merge..."
+            # If normal merge fails, try to force merge by taking their changes
+            git reset --hard HEAD
+            if git merge -X theirs --no-edit "origin/$branch" 2>/dev/null; then
+                print_success "Successfully force merged $branch"
+                ((successful_merges++))
+            else
+                print_warning "Failed to merge $branch, skipping..."
+                git merge --abort 2>/dev/null || true
+                ((failed_merges++))
+            fi
         fi
     else
         print_warning "Branch $branch does not exist, skipping..."
     fi
 done
 
-print_status "Batch merge process completed!"
+print_status "Content merge process completed!"
 print_success "Successful merges: $successful_merges"
 print_warning "Failed merges: $failed_merges"
 
@@ -83,4 +77,4 @@ print_warning "Failed merges: $failed_merges"
 print_status "Pushing changes to remote..."
 git push origin main
 
-print_success "Batch merge process completed!"
+print_success "Content merge process completed!"
