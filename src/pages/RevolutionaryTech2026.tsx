@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -283,6 +286,7 @@ const RevolutionaryTech2026: React.FC = () => {
             >
               Contact Our Experts
             </motion.button>
+<<<<<<< HEAD
           </div>
         </motion.div>
       </div>
@@ -292,3 +296,5 @@ const RevolutionaryTech2026: React.FC = () => {
 
 export default RevolutionaryTech2026;
 export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912

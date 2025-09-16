@@ -1,183 +1,110 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [activeService, setActiveService] = useState('ai-solutions');
-
-  const services = {
-    'ai-solutions': {
-      title: 'AI Solutions & Automation',
-      subtitle: 'Intelligent Systems for Modern Business',
-      icon: '🤖',
-      color: 'from-blue-500 to-purple-500',
-      description: 'Transform your business with cutting-edge artificial intelligence solutions that automate complex processes and drive unprecedented growth.',
-      features: [
-        'Machine Learning Implementation',
-        'Natural Language Processing',
-        'Computer Vision Systems',
-        'Predictive Analytics',
-        'Automated Decision Making',
-        'Intelligent Process Automation'
-      ],
-      benefits: [
-        '300% increase in operational efficiency',
-        '90% reduction in manual errors',
-        '24/7 automated operations',
-        'Real-time insights and analytics'
-      ],
-      pricing: {
-        starter: '$2,999/month',
-        professional: '$9,999/month',
-        enterprise: 'Custom pricing'
-      }
+  const services = [
+    {
+      category: "AI Solutions",
+      icon: "🤖",
+      color: "from-blue-600 to-cyan-600",
+      borderColor: "border-blue-400/30",
+      services: [
+        "AI Strategy Consulting",
+        "Machine Learning Implementation",
+        "Natural Language Processing",
+        "Computer Vision Solutions",
+        "AI-Powered Automation",
+        "Predictive Analytics"
+      ]
     },
-    'quantum-computing': {
-      title: 'Quantum Computing Services',
-      subtitle: 'Exponential Computational Power',
-      icon: '⚡',
-      color: 'from-cyan-500 to-blue-500',
-      description: 'Leverage the power of quantum computing to solve complex optimization problems and accelerate research and development.',
-      features: [
-        'Quantum Algorithm Development',
-        'Optimization Problem Solving',
-        'Cryptographic Security',
-        'Drug Discovery Acceleration',
-        'Financial Modeling',
-        'Climate Simulation'
-      ],
-      benefits: [
-        '1000x faster problem solving',
-        'Exponential computational advantage',
-        'Revolutionary breakthrough potential',
-        'Future-proof technology investment'
-      ],
-      pricing: {
-        starter: '$15,999/month',
-        professional: '$49,999/month',
-        enterprise: 'Custom pricing'
-      }
+    {
+      category: "Quantum Computing",
+      icon: "⚡",
+      color: "from-purple-600 to-pink-600",
+      borderColor: "border-purple-400/30",
+      services: [
+        "Quantum Algorithm Development",
+        "Quantum Machine Learning",
+        "Quantum Cryptography",
+        "Quantum Simulation",
+        "Quantum Optimization",
+        "Quantum Error Correction"
+      ]
     },
-    'neural-interfaces': {
-      title: 'Neural Interface Technology',
-      subtitle: 'Direct Brain-Computer Communication',
-      icon: '🔗',
-      color: 'from-emerald-500 to-teal-500',
-      description: 'Enable seamless communication between human minds and digital systems with our advanced neural interface technology.',
-      features: [
-        'Non-invasive Neural Reading',
-        'Real-time Thought Processing',
-        'High-bandwidth Data Transfer',
-        'Secure Neural Encryption',
-        'Multi-modal Interaction',
-        'Consciousness Preservation'
-      ],
-      benefits: [
-        'Direct thought-to-action control',
-        'Enhanced cognitive capabilities',
-        'Seamless human-machine integration',
-        'Revolutionary accessibility solutions'
-      ],
-      pricing: {
-        starter: '$8,999/month',
-        professional: '$24,999/month',
-        enterprise: 'Custom pricing'
-      }
+    {
+      category: "Neural Interfaces",
+      icon: "🧠",
+      color: "from-emerald-600 to-teal-600",
+      borderColor: "border-emerald-400/30",
+      services: [
+        "Brain-Computer Interface Design",
+        "Neural Signal Processing",
+        "Cognitive Enhancement Systems",
+        "Virtual Reality Integration",
+        "Memory Augmentation",
+        "Thought-Controlled Devices"
+      ]
     },
-    'biotech-ai': {
-      title: 'Biotech AI Solutions',
-      subtitle: 'Personalized Medicine Revolution',
-      icon: '🧬',
-      color: 'from-purple-500 to-pink-500',
-      description: 'Revolutionize healthcare and biotechnology with AI-driven solutions for personalized medicine and advanced research.',
-      features: [
-        'Genetic Profile Analysis',
-        'Personalized Drug Design',
-        'Real-time Health Monitoring',
-        'Disease Prediction Algorithms',
-        'Automated Treatment Optimization',
-        'Regenerative Medicine AI'
-      ],
-      benefits: [
-        '95% treatment success rate',
-        '10x faster diagnosis',
-        '80% cost reduction',
-        'Personalized healthcare solutions'
-      ],
-      pricing: {
-        starter: '$12,999/month',
-        professional: '$39,999/month',
-        enterprise: 'Custom pricing'
-      }
+    {
+      category: "Space Technology",
+      icon: "🚀",
+      color: "from-orange-600 to-red-600",
+      borderColor: "border-orange-400/30",
+      services: [
+        "Spacecraft Design & Development",
+        "Mars Colonization Planning",
+        "Asteroid Mining Technology",
+        "Space Tourism Solutions",
+        "Satellite Constellation Management",
+        "Interplanetary Communication"
+      ]
     },
-    'space-technology': {
-      title: 'Space Technology Services',
-      subtitle: 'Interplanetary Communication & Exploration',
-      icon: '🚀',
-      color: 'from-orange-500 to-red-500',
-      description: 'Pioneer the future of space technology with our advanced communication networks and exploration systems.',
-      features: [
-        'Interplanetary Communication',
-        'Satellite Constellation Management',
-        'Space Resource Mining',
-        'Planetary Exploration Systems',
-        'Space-based Manufacturing',
-        'Cosmic Weather Prediction'
-      ],
-      benefits: [
-        'Global communication coverage',
-        'Space resource utilization',
-        'Planetary exploration capabilities',
-        'Future space economy access'
-      ],
-      pricing: {
-        starter: '$25,999/month',
-        professional: '$79,999/month',
-        enterprise: 'Custom pricing'
-      }
+    {
+      category: "Biotechnology",
+      icon: "🧬",
+      color: "from-green-600 to-emerald-600",
+      borderColor: "border-green-400/30",
+      services: [
+        "AI-Powered Drug Discovery",
+        "Personalized Medicine",
+        "Genetic Engineering",
+        "Synthetic Biology",
+        "Biomarker Development",
+        "Therapeutic Solutions"
+      ]
     },
-    'cybersecurity': {
-      title: 'Advanced Cybersecurity',
-      subtitle: 'Quantum-Safe Security Solutions',
-      icon: '🛡️',
-      color: 'from-indigo-500 to-purple-500',
-      description: 'Protect your digital assets with next-generation cybersecurity solutions powered by quantum-safe encryption.',
-      features: [
-        'Quantum-Safe Encryption',
-        'AI-Powered Threat Detection',
-        'Zero-Trust Architecture',
-        'Behavioral Analytics',
-        'Automated Incident Response',
-        'Blockchain Security'
-      ],
-      benefits: [
-        '99.99% security guarantee',
-        'Real-time threat prevention',
-        'Automated security management',
-        'Future-proof protection'
-      ],
-      pricing: {
-        starter: '$5,999/month',
-        professional: '$19,999/month',
-        enterprise: 'Custom pricing'
-      }
+    {
+      category: "Cybersecurity",
+      icon: "🛡️",
+      color: "from-indigo-600 to-purple-600",
+      borderColor: "border-indigo-400/30",
+      services: [
+        "Quantum-Safe Encryption",
+        "AI-Powered Threat Detection",
+        "Zero-Trust Architecture",
+        "Blockchain Security",
+        "IoT Security Solutions",
+        "Incident Response Planning"
+      ]
     }
-  };
-
-  const currentService = services[activeService as keyof typeof services];
+  ];
 
   return (
     <>
       <Helmet>
         <title>Comprehensive Services Showcase 2027 - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of revolutionary technology services including AI solutions, quantum computing, neural interfaces, biotech AI, space technology, and advanced cybersecurity." />
-        <meta name="keywords" content="AI services, quantum computing, neural interfaces, biotech AI, space technology, cybersecurity, technology solutions, 2027" />
+        <meta name="description" content="Explore our comprehensive range of revolutionary technology services including AI, quantum computing, neural interfaces, and more for 2027." />
+        <meta name="keywords" content="Tech Services 2027, AI Solutions, Quantum Computing, Neural Interfaces, Space Technology, Biotechnology" />
+        <meta property="og:title" content="Comprehensive Services Showcase 2027 - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive range of revolutionary technology services for 2027." />
+        <meta property="og:type" content="website" />
       </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -185,158 +112,279 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
                 🚀 COMPREHENSIVE SERVICES • 2027
               </div>
-              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Revolutionary Technology Services
+              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Comprehensive Services Showcase 2027
               </h1>
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-                Transform your business with our comprehensive suite of cutting-edge technology services. 
-                From AI solutions to space technology, we provide the tools you need to dominate your industry.
+                Discover our complete range of revolutionary technology services designed to transform your business 
+                and unlock unprecedented possibilities in the digital age.
               </p>
             </motion.div>
           </div>
         </div>
 
-        {/* Service Navigation */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="flex flex-wrap justify-center gap-4">
-            {Object.entries(services).map(([key, service]) => (
-              <button
-                key={key}
-                onClick={() => setActiveService(key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeService === key
-                    ? `bg-gradient-to-r ${service.color} text-white shadow-lg`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
+        {/* Services Overview */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Service Categories</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              From AI solutions to space technology, we offer comprehensive services across all major technology domains
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.category}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${service.color}/30 backdrop-blur-sm rounded-xl p-8 border ${service.borderColor} hover:scale-105 transition-all duration-300`}
               >
-                <span className="mr-2">{service.icon}</span>
-                {service.title}
-              </button>
+                <div className="text-6xl mb-4 text-center">{service.icon}</div>
+                <h3 className="text-2xl font-bold mb-6 text-center">{service.category}</h3>
+                <div className="space-y-3">
+                  {service.services.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <span className="text-sm opacity-90">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 text-center">
+                  <button className={`bg-gradient-to-r ${service.color} px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                    Learn More →
+                  </button>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Service Details */}
+        {/* Featured Solutions */}
         <div className="container mx-auto px-4 py-20">
-          <AnimatePresence mode="wait">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Featured Solutions</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our most popular and innovative solutions that are transforming industries worldwide
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              key={activeService}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-600/30"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30"
             >
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Left Side - Description */}
+              <div className="flex items-center space-x-4 mb-6">
+                <span className="text-4xl">🌟</span>
                 <div>
-                  <div className="flex items-center mb-8">
-                    <div className="text-6xl mr-6">{currentService.icon}</div>
-                    <div>
-                      <h2 className="text-4xl font-bold mb-2">{currentService.title}</h2>
-                      <p className="text-xl text-gray-300">{currentService.subtitle}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                    {currentService.description}
-                  </p>
-
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold mb-4 text-blue-400">Key Benefits</h3>
-                    <div className="space-y-3">
-                      {currentService.benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-center">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                          <span className="text-gray-300">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className={`bg-gradient-to-r ${currentService.color} p-6 rounded-lg`}>
-                    <h3 className="text-2xl font-bold mb-4">Pricing Plans</h3>
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="text-center">
-                        <div className="text-sm text-white/80 mb-1">Starter</div>
-                        <div className="text-xl font-bold">{currentService.pricing.starter}</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-sm text-white/80 mb-1">Professional</div>
-                        <div className="text-xl font-bold">{currentService.pricing.professional}</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-sm text-white/80 mb-1">Enterprise</div>
-                        <div className="text-xl font-bold">{currentService.pricing.enterprise}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Side - Features */}
-                <div>
-                  <h3 className="text-2xl font-bold mb-6">Service Features</h3>
-                  <div className="space-y-4 mb-8">
-                    {currentService.features.map((feature, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="flex items-center p-4 bg-white/5 rounded-lg border border-white/10"
-                      >
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-4"></div>
-                        <span className="text-gray-300">{feature}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg p-6 border border-gray-600/30">
-                    <h4 className="text-xl font-bold mb-4">Ready to Get Started?</h4>
-                    <p className="text-gray-300 mb-6">
-                      Contact our experts to discuss how {currentService.title.toLowerCase()} can transform your business.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <button className={`bg-gradient-to-r ${currentService.color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
-                        Get Started
-                      </button>
-                      <button className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                        Schedule Demo
-                      </button>
-                    </div>
-                  </div>
+                  <h3 className="text-2xl font-bold">AI-Powered Business Automation</h3>
+                  <p className="text-blue-100">Complete business transformation through AI</p>
                 </div>
               </div>
+              <p className="text-lg opacity-90 mb-6">
+                Transform your business operations with our comprehensive AI automation solutions. 
+                From customer service to supply chain management, we help you achieve unprecedented efficiency.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>50% reduction in operational costs</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>99.9% automation accuracy</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>24/7 intelligent monitoring</span>
+                </div>
+              </div>
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started →
+              </button>
             </motion.div>
-          </AnimatePresence>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <span className="text-4xl">🚀</span>
+                <div>
+                  <h3 className="text-2xl font-bold">Quantum Computing Solutions</h3>
+                  <p className="text-emerald-100">Solve impossible problems with quantum power</p>
+                </div>
+              </div>
+              <p className="text-lg opacity-90 mb-6">
+                Harness the power of quantum computing to solve complex optimization problems, 
+                accelerate drug discovery, and revolutionize cryptography.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Exponential speed improvements</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Unbreakable quantum encryption</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Advanced simulation capabilities</span>
+                </div>
+              </div>
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Solutions →
+              </button>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Pricing Tiers */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Service Tiers</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Choose the perfect service tier for your business needs and budget
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
+            >
+              <h3 className="text-2xl font-bold mb-4">Starter</h3>
+              <div className="text-4xl font-bold mb-6">$5,000<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Basic AI consultation</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Technology assessment</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Monthly progress reports</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Email support</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-gray-600 to-gray-700 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 relative"
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  MOST POPULAR
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Professional</h3>
+              <div className="text-4xl font-bold mb-6">$15,000<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Full AI implementation</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Custom solution development</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Weekly progress meetings</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Training and onboarding</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
+            >
+              <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold mb-6">$50,000<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Complete technology transformation</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Dedicated team of experts</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>24/7 support and monitoring</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>Custom research and development</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-400">✓</span>
+                  <span>White-label solutions</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Contact Sales
+              </button>
+            </motion.div>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold mb-6">Transform Your Business Today</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join thousands of forward-thinking companies already leveraging our revolutionary technology services. 
-              Start your transformation journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Contact Our Experts
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Download Service Catalog
-              </button>
+        <motion.section className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 py-20">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+              <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+                Join thousands of companies that have already transformed their operations with our revolutionary technology services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                  Start Your Journey →
+                </button>
+                <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
+                  Schedule Consultation
+                </button>
+              </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.section>
       </div>
     </>
   );

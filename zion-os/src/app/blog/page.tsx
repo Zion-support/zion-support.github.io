@@ -85,7 +85,7 @@ export default function BlogPage() {
     },
     {
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -143,7 +143,7 @@ export default function BlogPage() {
     },
     {
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt:
@@ -237,7 +237,7 @@ export default function BlogPage() {
       date: '2024-01-05',
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       featured: true
     }
   ];
@@ -297,7 +297,7 @@ export default function BlogPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'edge-ai-compliance-2025',
       title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
       excerpt: 'Deploy edge AI with privacy-by-design, verifiable audit trails, and policy controls.',
@@ -341,7 +341,7 @@ export default function BlogPage() {
 =======
 >>>>>>> origin/feat/content-promo
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     },
     {
       id: 'autonomous-it-operations',
@@ -385,7 +385,7 @@ export default function BlogPage() {
     },
     {
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'sovereign-ai-commerce-2025',
       title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
       excerpt: 'A practical guide to deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
@@ -487,7 +487,7 @@ export default function BlogPage() {
 >>>>>>> origin/feature/blog-content-2025
 =======
     { name: 'AI Solutions', count: 3, active: false },
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
@@ -502,7 +502,7 @@ export default function BlogPage() {
 =======
     { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     { name: 'Content Marketing', count: 1, active: false }
   ];
 
@@ -586,7 +586,7 @@ export default function BlogPage() {
             href="/blog/ai-safety-governance-blueprint-2025"
 =======
             href="/blog/sovereign-ai-commerce-2025"
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
           >
@@ -663,7 +663,7 @@ export default function BlogPage() {
                 AG
 =======
                 SA
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -689,7 +689,7 @@ export default function BlogPage() {
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
                 </p>
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
             </div>
