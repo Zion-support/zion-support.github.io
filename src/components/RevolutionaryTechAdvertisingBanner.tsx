@@ -1,135 +1,170 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryTechAdvertisingBanner: React.FC = () => {
-  const features = [
+  const [currentAd, setCurrentAd] = useState(0);
+  
+  const advertisements = [
     {
-      icon: "🚀",
-      title: "AI-Powered Automation",
-      description: "Transform your business with intelligent automation systems",
-      cta: "Learn More"
+      title: "🚀 NEW: AI Consciousness 2026",
+      subtitle: "Experience the first truly conscious AI systems",
+      cta: "Explore Now",
+      link: "/pages/AdvancedAIConsciousness2026",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-500/20 to-pink-500/20"
     },
     {
-      icon: "⚡",
-      title: "Quantum Computing Solutions",
-      description: "Unlock unprecedented computational power for complex problems",
-      cta: "Explore Now"
+      title: "⚡ BREAKTHROUGH: Quantum Neural Networks",
+      subtitle: "Revolutionary quantum-AI fusion technology",
+      cta: "Discover More",
+      link: "/pages/QuantumNeuralFusion2026",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-500/20 to-blue-500/20"
     },
     {
-      icon: "🧠",
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer communication for seamless interaction",
-      cta: "Discover"
+      title: "🧬 REVOLUTIONARY: Neural Reality Interface",
+      subtitle: "Direct brain-computer interface technology",
+      cta: "Try Demo",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-500/20 to-teal-500/20"
     },
     {
-      icon: "🧬",
-      title: "Biotech AI Revolution",
-      description: "Personalized medicine powered by artificial intelligence",
-      cta: "Get Started"
+      title: "🌟 INNOVATION: Holographic Computing",
+      subtitle: "3D holographic displays and interfaces",
+      cta: "Experience",
+      link: "/pages/AdvancedHolographicTechnology2026",
+      gradient: "from-orange-600 to-red-600",
+      bgGradient: "from-orange-500/20 to-red-500/20"
+    },
+    {
+      title: "🌌 FUTURE: Space Technology Solutions",
+      subtitle: "Advanced space exploration and colonization",
+      cta: "Launch Into Space",
+      link: "/pages/AdvancedSpaceTech2026",
+      gradient: "from-pink-600 to-rose-600",
+      bgGradient: "from-pink-500/20 to-rose-500/20"
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAd((prev) => (prev + 1) % advertisements.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [advertisements.length]);
+
+  const currentAdData = advertisements[currentAd];
+
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        {/* Main Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY TECHNOLOGY SOLUTIONS • 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Transform Your Future Today
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-            Join thousands of forward-thinking companies already leveraging our revolutionary technology solutions. 
-            Experience unprecedented growth, efficiency, and innovation with Zion Tech Group.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation →
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-              View Case Studies
-            </button>
-          </div>
-        </motion.div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-300 mb-4 text-sm">{feature.description}</p>
-              <button className="text-purple-400 hover:text-white transition-colors font-semibold text-sm">
-                {feature.cta} →
-              </button>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Join Our Success Stories</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              See how leading companies are transforming their operations with our revolutionary technology solutions
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">500%</div>
-              <div className="text-gray-300">Average ROI Increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">95%</div>
-              <div className="text-gray-300">Client Satisfaction Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-400 mb-2">24/7</div>
-              <div className="text-gray-300">Expert Support Available</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Urgency Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-6 text-center"
-        >
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-2xl animate-pulse">⚡</span>
-            <h4 className="text-2xl font-bold">Limited Time Offer</h4>
-            <span className="text-2xl animate-pulse">⚡</span>
-          </div>
-          <p className="text-lg mb-4">
-            Get 50% off your first month of revolutionary technology solutions. 
-            Transform your business before your competitors do!
-          </p>
-          <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Claim Your Discount Now
-          </button>
-        </motion.div>
+    <div className="relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-pink-600/10 animate-pulse"></div>
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          />
+        ))}
       </div>
+
+      {/* Main Banner Content */}
+      <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-blue-900/90 to-indigo-900/90 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            {/* Left Side - Main Message */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center space-x-3 mb-2">
+                <span className="text-2xl animate-bounce">🚀</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  {currentAdData.title}
+                </h2>
+                <span className="px-2 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold rounded-full animate-pulse">
+                  NEW
+                </span>
+              </div>
+              <p className="text-lg text-gray-200 mb-4">
+                {currentAdData.subtitle}
+              </p>
+            </div>
+
+            {/* Right Side - CTA Button */}
+            <div className="flex items-center space-x-4">
+              <a
+                href={currentAdData.link}
+                className={`bg-gradient-to-r ${currentAdData.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center whitespace-nowrap transform hover:scale-105`}
+              >
+                {currentAdData.cta} →
+              </a>
+              <button className="text-white hover:text-gray-300 transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center space-x-2 mt-4">
+            {advertisements.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentAd(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentAd ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Promotional Strip */}
+      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center space-x-8 text-sm font-semibold">
+            <span className="flex items-center space-x-1">
+              <span className="text-lg">🤖</span>
+              <span>AI Consciousness</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <span className="text-lg">⚡</span>
+              <span>Quantum Computing</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <span className="text-lg">🧬</span>
+              <span>Neural Interfaces</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <span className="text-lg">🌟</span>
+              <span>Holographic Tech</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <span className="text-lg">🌌</span>
+              <span>Space Technology</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };
