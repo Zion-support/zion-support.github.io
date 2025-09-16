@@ -273,6 +273,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   'ai-safety-red-teaming-2025': {
     id: 'ai-safety-red-teaming-2025',
     title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
@@ -333,6 +334,38 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 >>>>>>> origin/feature/new-content-promotion
     ]
   }
+=======
+  'edge-ai-compliance-2025': {
+    id: 'edge-ai-compliance-2025',
+    title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
+    excerpt:
+      'A field guide to deploying edge AI with privacy-by-design, audit trails, and policy controls that satisfy global regulations.',
+    category: 'AI Solutions',
+    author: 'Dr. Maria Garcia',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'AI at the edge is now mission-critical across healthcare, finance, and public sectors. But moving models to the edge introduces risks around privacy, drift, and local decision accountability.',
+      'This guide presents a compliance blueprint: capture purpose and lawful basis, implement privacy-by-design (minimization, on-device redaction), enable deterministic overrides, and log verifiable events for audit.',
+      'We include a reference architecture using policy engines, encrypted telemetry, reproducible model manifests, and secure update channels integrated with Zion OS orchestration.'
+    ]
+  },
+  'ai-accessibility-2025': {
+    id: 'ai-accessibility-2025',
+    title: 'AI Accessibility 2025: Designing Inclusive Autonomous Experiences',
+    excerpt:
+      'Practical patterns to ensure AI products are accessible by default—from multimodal inputs to explainable interactions.',
+    category: 'Accessibility',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '7 min read',
+    content: [
+      'Inclusive AI requires intentional design that supports assistive tech, multiple modalities, and clear recoveries when autonomy fails.',
+      'We outline patterns: caption-first media, voice+text parity, haptic cues, adjustable autonomy, and explainable steps for every critical action.',
+      'Teams adopting these patterns report higher engagement, reduced abandonment, and improved trust across diverse users.'
+    ]
+  },
+>>>>>>> origin/feature/content-sept15-2025
 };
 
 export function generateStaticParams() {
