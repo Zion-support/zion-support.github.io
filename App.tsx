@@ -43,6 +43,13 @@ import InterdimensionalComputing2027 from './src/pages/InterdimensionalComputing
 import RevolutionaryTech2027Banner from './src/components/RevolutionaryTech2027Banner';
 import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
 
+// Import NEW ULTIMATE 2030 CONTENT
+import AdvancedQuantumConsciousness2028 from './src/pages/AdvancedQuantumConsciousness2028';
+import NeuralRealityEngine2030 from './src/pages/NeuralRealityEngine2030';
+import InterdimensionalTechRevolution2030 from './src/pages/InterdimensionalTechRevolution2030';
+import UltimateTechShowcase2030 from './src/components/UltimateTechShowcase2030';
+import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -56,6 +63,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Tech 2027 Banner */}
                 <RevolutionaryTech2027Banner />
+
+                {/* NEW: Ultimate Tech Showcase 2030 */}
+                <UltimateTechShowcase2030 />
 
                 {/* NEW: Ultimate 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -294,6 +304,9 @@ export default function App(): JSX.Element {
                 {/* Ultimate Tech Showcase 2027 */}
                 <UltimateTechShowcase2027 />
 
+                {/* Interactive Tech Showcase */}
+                <InteractiveTechShowcase />
+
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -495,6 +508,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIConsciousnessEvolution2027" element={<AIConsciousnessEvolution2027 />} />
           <Route path="/pages/QuantumRealityControl2027" element={<QuantumRealityControl2027 />} />
           <Route path="/pages/InterdimensionalComputing2027" element={<InterdimensionalComputing2027 />} />
+
+          {/* NEW ULTIMATE 2030 CONTENT ROUTES */}
+          <Route path="/pages/AdvancedQuantumConsciousness2028" element={<AdvancedQuantumConsciousness2028 />} />
+          <Route path="/pages/NeuralRealityEngine2030" element={<NeuralRealityEngine2030 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2030" element={<InterdimensionalTechRevolution2030 />} />
 >>>>>>> origin/cursor/create-and-deploy-new-content-0d00
 
           <Route path="/blog" element={
