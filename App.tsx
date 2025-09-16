@@ -45,6 +45,11 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import FeaturedContentSection2026 from './src/components/FeaturedContentSection2026';
+import RevolutionaryAIServices2026 from './src/pages/RevolutionaryAIServices2026';
+import NextGenTechSolutions2026 from './src/pages/NextGenTechSolutions2026';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
@@ -306,20 +311,20 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
-=======
-                {/* Advanced Search Component */}
-                <div className="mb-8">
-                  <AdvancedSearch />
-                </div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+                
+                {/* NEW: Revolutionary Content Banner 2026 - Latest Technology */}
+                <RevolutionaryContentBanner2026 />
+                
+                {/* NEW: Revolutionary Services Showcase 2026 */}
+                <RevolutionaryServicesShowcase2026 />
+                
+                {/* NEW: Featured Content Section 2026 - Revolutionary Content */}
+                <FeaturedContentSection2026 />
                 
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
-                
-<<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
                 
@@ -1379,6 +1384,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+          <Route path="/revolutionary-ai-services-2026" element={<RevolutionaryAIServices2026 />} />
+          <Route path="/next-gen-tech-solutions-2026" element={<NextGenTechSolutions2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
