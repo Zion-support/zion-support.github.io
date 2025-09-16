@@ -3,11 +3,22 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Header from '../Header';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const NextGenInnovationHub2026: React.FC = () => {
   return (
@@ -156,6 +167,10 @@ const NextGenInnovationHub2026: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🏆 Success Stories</h2>
@@ -191,9 +206,15 @@ const NextGenInnovationHub2026: React.FC = () => {
                 This revolutionized our R&D process."
               </p>
               <div className="text-cyan-300 font-semibold">99.9% Time Reduction</div>
+<<<<<<< HEAD
             </div>
 =======
 <<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         {/* Future Vision */}
         <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -303,6 +324,9 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Enter VR Lab
               </button>
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
         {/* Success Stories */}
         <div className="mb-16">
@@ -340,6 +364,7 @@ const NextGenInnovationHub2026: React.FC = () => {
               </p>
               <div className="text-cyan-300 font-semibold">99.9% Time Reduction</div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </div>
           </div>
         </div>
@@ -374,16 +399,30 @@ const NextGenInnovationHub2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Be part of the future. Explore our innovations and transform your business today.
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Innovate?</h2>
           <p className="text-2xl text-cyan-200 mb-8 max-w-4xl mx-auto">
             Join the next generation of innovators and be part of the technological 
             revolution that's changing the world
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the future. Explore our innovations and transform your business today.
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -395,9 +434,17 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </div>
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </main>
       
       <EnhancedFooter />
@@ -413,10 +460,17 @@ const NextGenInnovationHub2026: React.FC = () => {
         </div>
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     </div>
   );
 };

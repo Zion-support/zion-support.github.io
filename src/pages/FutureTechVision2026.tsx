@@ -61,6 +61,9 @@ const FutureTechVision2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -73,12 +76,16 @@ const FutureTechVision2026: React.FC = () => {
             Envisioning the future of technology and its transformative impact on humanity
 =======
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -125,6 +132,7 @@ const FutureTechVision2026: React.FC = () => {
             Our comprehensive roadmap for the next decade of technological advancement.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 <<<<<<< HEAD
@@ -145,6 +153,11 @@ const FutureTechVision2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </p>
         </div>
 
@@ -212,6 +225,7 @@ const FutureTechVision2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -273,6 +287,8 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-lg opacity-80 mb-2">Consciousness</div>
               <div className="text-sm opacity-60">AI achievement</div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
             </motion.div>
 <<<<<<< HEAD
@@ -527,18 +543,81 @@ const FutureTechVision2026: React.FC = () => {
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+      {/* Impact Predictions */}
+      <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-6">📊 Predicted Impact</h2>
+            <p className="text-xl opacity-80 max-w-3xl mx-auto">
+              Our technologies are predicted to have transformative effects across all industries and aspects of human life.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <div className="text-5xl font-bold text-purple-400 mb-2">1000x</div>
+              <div className="text-lg opacity-80 mb-2">Productivity Increase</div>
+              <div className="text-sm opacity-60">Across all industries</div>
+            </div>
+            <div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <div className="text-5xl font-bold text-indigo-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-80 mb-2">Problem Solving</div>
+              <div className="text-sm opacity-60">Success rate</div>
+            </div>
+            <div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-lg opacity-80 mb-2">Scalability</div>
+              <div className="text-sm opacity-60">Unlimited growth</div>
+            </div>
+            <div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
+              <div className="text-lg opacity-80 mb-2">Consciousness</div>
+              <div className="text-sm opacity-60">AI achievement</div>
+            </div>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
         {/* Impact Predictions */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -581,12 +660,16 @@ const FutureTechVision2026: React.FC = () => {
             </a>
 =======
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -685,6 +768,7 @@ const FutureTechVision2026: React.FC = () => {
             </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 <<<<<<< HEAD
@@ -732,12 +816,19 @@ const FutureTechVision2026: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </motion.div>
 =======
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
     </div>
   );

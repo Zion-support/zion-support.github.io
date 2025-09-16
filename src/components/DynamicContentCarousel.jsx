@@ -83,6 +83,11 @@ const DynamicContentCarousel = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 <<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
@@ -99,6 +104,7 @@ const DynamicContentCarousel = () => {
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -126,10 +132,19 @@ const DynamicContentCarousel = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-8069
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -145,7 +160,11 @@ const DynamicContentCarousel = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
             }`}
           />
         ))}

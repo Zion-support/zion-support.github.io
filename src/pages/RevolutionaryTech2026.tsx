@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -34,15 +35,35 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import React from 'react';
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+import React from 'react';
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +80,10 @@ import { motion } from 'framer-motion';
 =======
 
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const RevolutionaryTech2026: React.FC = () => {
   return (
@@ -349,6 +374,7 @@ const RevolutionaryTech2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,6 +412,10 @@ const RevolutionaryTech2026: React.FC = () => {
 =======
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+            </button>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
@@ -394,6 +424,7 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default RevolutionaryTech2026;
 <<<<<<< HEAD
@@ -429,7 +460,28 @@ export default RevolutionaryTech2026;
 <<<<<<< HEAD
 export default RevolutionaryTech2026;
 =======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3

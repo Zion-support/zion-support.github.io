@@ -5,6 +5,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -16,6 +19,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,7 +55,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -168,6 +178,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -187,11 +202,21 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -218,13 +243,20 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     }
   ];
 
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,6 +269,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -270,7 +305,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -450,6 +489,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             ))}
                           </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -469,11 +513,21 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -500,7 +554,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
                         </div>
                       </div>
                     </div>
@@ -508,6 +566,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -520,6 +581,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -553,7 +617,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
               </div>
             ))}
           </div>
@@ -659,6 +727,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             </a>
           ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -678,11 +751,21 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -709,7 +792,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         </div>
       </div>
     </div>

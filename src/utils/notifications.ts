@@ -1,14 +1,47 @@
 // Notification utilities
 interface NotificationOptions {
+<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
+=======
+<<<<<<< HEAD
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+=======
+<<<<<<< HEAD
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+=======
+=======
+=======
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
  */
 
 export interface NotificationOptions {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 // Notification utilities
 interface NotificationOptions {
   title: string;
@@ -51,6 +84,16 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   requireInteraction?: boolean;
   silent?: boolean;
   vibrate?: number[];
@@ -99,6 +142,18 @@ export const notifications = {
     if (Notification.permission !== 'granted') {
       console.warn('Notification permission not granted');
       return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
@@ -106,6 +161,29 @@ export const notifications = {
   actions?: NotificationAction[];
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
+
+  }
+
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return null;
+    }
+
+    if (this.permission !== 'granted') {
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     }
 
     try {
@@ -119,6 +197,16 @@ export const notifications = {
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
@@ -149,6 +237,16 @@ export const notifications = {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -171,6 +269,18 @@ export const notifications = {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       console.error('Error showing notification:', error);
       return null;
     }
@@ -205,6 +315,16 @@ export const notifications = {
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       requireInteraction: true
     });
   },
@@ -235,6 +355,18 @@ export default notificationManager;
 };
 
 export default notifications;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       requireInteraction: true,
     });
   }

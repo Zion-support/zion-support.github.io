@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -12,6 +16,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-261d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
@@ -26,6 +31,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -68,7 +80,12 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       description: "Direct brain-computer communication enabling thought-controlled technology",
       link: "/pages/NeuralInterfaceEvolution2026",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+<<<<<<< HEAD
+      icon: "🧬",
+      badge: "NEURAL"
+=======
       icon: "🧬"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +99,9 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       badge: "ULTIMATE"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     },
     {
       id: 5,
@@ -113,14 +133,29 @@ const RevolutionaryContentBanner2026: React.FC = () => {
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [contentSlides.length]);
+
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [contentSlides.length]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +166,9 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   return (
     <div className="relative mb-12 overflow-hidden">
       {/* Main Banner */}
@@ -180,10 +218,13 @@ const RevolutionaryContentBanner2026: React.FC = () => {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
         <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
@@ -207,10 +248,14 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
 
       {/* Slide Indicators */}
@@ -232,6 +277,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 =======
       {/* Dynamic Content Carousel */}
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+>>>>>>> cursor/create-and-deploy-new-content-079e
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10">
           <div className="text-center mb-8">
@@ -261,25 +307,25 @@ const RevolutionaryContentBanner2026: React.FC = () => {
                 <div className="flex items-center justify-between h-full">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-4">
-                      <span className="text-6xl">{slides[currentSlide].icon}</span>
+                      <span className="text-6xl">{contentSlides[currentSlide].icon}</span>
                       <div>
                         <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-xs font-bold">
-                          {slides[currentSlide].badge}
+                          {contentSlides[currentSlide].badge}
                         </span>
                       </div>
                     </div>
-                    <h3 className="text-3xl font-bold mb-4">{slides[currentSlide].title}</h3>
-                    <p className="text-xl mb-4 opacity-90">{slides[currentSlide].subtitle}</p>
-                    <p className="text-lg mb-6 opacity-80">{slides[currentSlide].description}</p>
+                    <h3 className="text-3xl font-bold mb-4">{contentSlides[currentSlide].title}</h3>
+                    <p className="text-xl mb-4 opacity-90">{contentSlides[currentSlide].subtitle}</p>
+                    <p className="text-lg mb-6 opacity-80">{contentSlides[currentSlide].description}</p>
                     <a 
-                      href={slides[currentSlide].link}
+                      href={contentSlides[currentSlide].link}
                       className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-lg"
                     >
-                      Explore {slides[currentSlide].title.split(' ')[0]} →
+                      Explore {contentSlides[currentSlide].title.split(' ')[0]} →
                     </a>
                   </div>
                   <div className="hidden md:block">
-                    <div className="text-8xl opacity-30">{slides[currentSlide].icon}</div>
+                    <div className="text-8xl opacity-30">{contentSlides[currentSlide].icon}</div>
                   </div>
                 </div>
               </motion.div>
@@ -287,7 +333,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 
             {/* Navigation Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {slides.map((_, index) => (
+              {contentSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
@@ -323,7 +369,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 
       {/* Interactive Tech Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {slides.slice(0, 6).map((slide, index) => (
+        {contentSlides.slice(0, 6).map((slide, index) => (
           <motion.div
             key={slide.id}
             initial={{ opacity: 0, y: 30 }}
@@ -368,7 +414,11 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
 
       {/* Quick Access Grid */}
@@ -384,6 +434,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             <div className="text-3xl mb-2">{slide.icon}</div>
             <h4 className="font-bold text-sm mb-2">{slide.title}</h4>
             <p className="text-xs opacity-90">{slide.description}</p>
+<<<<<<< HEAD
           </a>
         ))}
 <<<<<<< HEAD
@@ -392,6 +443,21 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+          </a>
+        ))}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+          </a>
+        ))}
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
 
       {/* Featured Content Stats */}
