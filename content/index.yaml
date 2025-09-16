@@ -577,6 +577,36 @@ content_index:
         rollback_time: "< 5 min"
         audit_ready: true
 
+    - id: "ai-2026-safe-rollouts-in-production"
+      type: "blog"
+      title: "AI 2026: Safe Rollouts in Production — Eval‑Gated Releases and Automated Rollback"
+      file_path: "/content/blog/ai-2026-safe-rollouts-in-production.md"
+      url: "/blog/ai-2026-safe-rollouts-in-production"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
+
+    - id: "ai-2026-autonomous-evidence-led-operations"
+      type: "blog"
+      title: "AI 2026: Autonomous Evidence‑Led Operations — Centralizing Evals, Incidents, and KPIs"
+      file_path: "/content/blog/ai-2026-autonomous-evidence-led-operations.md"
+      url: "/blog/ai-2026-autonomous-evidence-led-operations"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Operations", "Evaluations", "SLOs", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        approval_speed: "2x"
+        incident_reduction: "40%"
+        audit_ready: true
+
     - id: "ai-2026-agent-platform-health-dashboard-starter"
       type: "resource"
       title: "AI 2026: Agent Platform Health Dashboard — Starter Kit"
