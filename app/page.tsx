@@ -150,11 +150,11 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
             <div>
               <p className="text-sm font-semibold text-indigo-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy‑as‑Code Blueprint</h2>
-              <p className="text-gray-600 mt-2">Encode approvals, risk tiers, and evaluation gates as versioned policy.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy‑as‑Code Starter Kit</h2>
+              <p className="text-gray-600 mt-2">Copy‑paste policies, risk tiers, and approvals wired to eval gates.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700"><span className="mr-2 inline-flex items-center rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">New</span>Read Article</Link>
+              <Link href="/blog/ai-2026-policy-as-code-starter-kit" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700"><span className="mr-2 inline-flex items-center rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">New</span>Read Article</Link>
             </div>
           </div>
         </div>

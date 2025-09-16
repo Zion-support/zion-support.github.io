@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const posts = [
   { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },
   { href: '/blog/ai-2026-agentic-observability-overview', title: 'Agentic Observability — Executive Overview (2026)', tag: 'New' },
   { href: '/blog/ai-2026-agent-posture-management', title: 'Agent Posture Management — Executive Guide (2026)', tag: 'Featured' },
   { href: '/blog/ai-2026-trusted-rag-guardrailed-retrieval', title: 'Trusted RAG — Guardrailed Retrieval (2026)', tag: 'New' },
