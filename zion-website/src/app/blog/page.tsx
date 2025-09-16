@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-evaluating-real-world-rag-latency',
+    title: 'AI 2026: Evaluating Real-World RAG Latency — Patterns and Tradeoffs',
+    summary:
+      'Latency budgets, hybrid retrieval, streaming, and telemetry to keep RAG fast and grounded in production.'
+  },
+  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:

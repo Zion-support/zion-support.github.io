@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Deep Dive: Evaluating Real-World RAG Latency',
+    summary: 'Budgets, hybrid retrieval, streaming, and telemetry for production-grade RAG.',
+    href: '/blog/ai-2026-evaluating-real-world-rag-latency',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
+  {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
     href: '/updates/ai-risk-mitigation-guide-2026',
