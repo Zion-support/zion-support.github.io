@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Notification utilities
+interface NotificationOptions {
+// Conflict resolved
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
@@ -8,16 +33,66 @@ export interface NotificationOptions {
 interface NotificationOptions {
 // Notification utilities
 interface NotificationOptions {
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+  data?: any;
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -38,6 +113,24 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+      this.permission = await this.requestPermission();
+      if (this.permission !== 'granted') {
+        console.warn('Notification permission denied');
+        return null;
+      }
+// Conflict resolved
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   requireInteraction?: boolean;
   silent?: boolean;
   vibrate?: number[];
@@ -122,9 +215,35 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-dc9e
+// Conflict resolvedmain
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     }
 
     try {
@@ -133,7 +252,38 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        timestamp: options.timestamp || Date.now(),
+        actions: options.actions
+// Conflict resolved
+// Conflict resolved
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        vibrate: options.vibrate
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
@@ -142,10 +292,38 @@ class NotificationManager {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-b0b6
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-dc9e
+// Conflict resolvedmain
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -157,13 +335,64 @@ class NotificationManager {
 
       return notification;
     } catch (error) {
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+  showSuccess(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/success.png',
+      tag: 'success',
+    });
+  }
+
+  showError(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+// Conflict resolved
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -202,13 +431,79 @@ class NotificationManager {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-dc9e
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+      requireInteraction: true,
+    });
+  }
+
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/info.png',
+      tag: 'info',
+    });
+  }
+
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/warning.png',
+      tag: 'warning',
+    });
+  }
+}
+
+export const notificationManager = new NotificationManager();
+export default notificationManager;
+// Conflict resolved
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       requireInteraction: true
     });
   },
@@ -264,8 +559,34 @@ export default notifications;
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
 export default notificationManager;
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-dc9e
+// Conflict resolvedmain
+// Conflict resolved
+export default notificationManager;
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-d3a3
+// Conflict resolved
+// Conflict resolvedmain
+// Conflict resolvedcursor/create-and-deploy-new-content-8735
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f977
+// Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
