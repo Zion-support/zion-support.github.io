@@ -1,5 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
