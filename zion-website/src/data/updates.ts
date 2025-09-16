@@ -1,4 +1,4 @@
-export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release'
+export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release' | 'Blueprint' | 'Field Guide' | 'Blog'
 
 export interface UpdateItem {
 	title: string
@@ -10,6 +10,41 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    {
+        title: 'Launch: Trustworthy AI Evidence Vault v1.2',
+        summary: 'Faster evidence bundling, expanded policy checks, and auditor-ready exports.',
+        href: '/updates/trustworthy-ai-evidence-vault-1-2',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Agent Incident Playbooks (2026)',
+        summary: 'Standard response patterns with eval gates, lineage capture, and rollback plans.',
+        href: '/blog/ai-2026-production-agent-incident-playbooks',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Secure Tool Access for Agents',
+        summary: 'Scoped tokens, least-privilege adapters, and real-time policy enforcement.',
+        href: '/updates/secure-tool-access-for-agents-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Field Guide: Evaluating Multimodal RAG',
+        summary: 'Practical rubrics and KPIs for image, audio, and text retrieval pipelines.',
+        href: '/updates/field-guide-evaluating-multimodal-rag',
+        date: '2025-09-16',
+        tag: 'Field Guide',
+    },
+    {
+        title: 'Blog: Shipping Safer Agents with Canary + Shadow',
+        summary: 'A pragmatic rollout path that reduces risk while increasing iteration speed.',
+        href: '/blog/ai-2026-canary-shadow-for-agent-rollouts',
+        date: '2025-09-16',
+        tag: 'Blog',
+    },
     {
         title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
         summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
