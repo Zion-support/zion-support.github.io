@@ -7,6 +7,9 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
     {
       id: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
       title: "Conscious AI Networks",
       description: "Self-aware artificial intelligence systems that possess genuine consciousness and emotional intelligence",
       icon: "🧠",
@@ -70,6 +73,7 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       textColor: "text-pink-100",
       link: "/pages/UltimateTechBreakthrough2035",
       features: ["Faster-than-light travel", "Time manipulation", "Interstellar colonization", "Temporal paradox resolution"]
+<<<<<<< HEAD
 =======
       title: "Conscious AI Revolution",
       description: "Experience AI systems with genuine consciousness, creativity, and emotional intelligence that surpass human capabilities.",
@@ -129,6 +133,8 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       textColor: "text-amber-100",
       link: "/pages/RevolutionaryTechBreakthrough2035"
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
     }
   ];
 
@@ -154,6 +160,9 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -209,6 +218,7 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
                         >
                           Explore {slide.title} →
                         </a>
+<<<<<<< HEAD
 =======
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -274,6 +284,8 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
                           </ul>
                         </div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
                       </div>
                     </div>
                   </div>
@@ -286,10 +298,14 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
           <button
             onClick={prevSlide}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
 =======
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -298,10 +314,14 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
           <button
             onClick={nextSlide}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
 =======
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -310,21 +330,30 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
 =======
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+        {/* Slide Indicators */}
+        <div className="flex justify-center space-x-3 mt-8">
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className={`w-3 h-3 rounded-full transition-colors ${
 =======
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+              className={`w-3 h-3 rounded-full transition-colors ${
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
             />
@@ -332,6 +361,9 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {slides.slice(0, 3).map((slide) => (
@@ -364,6 +396,22 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             </a>
           </div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Don't just read about the future - experience it with our revolutionary technology showcase
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/TranscendentTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All Technologies →
+            </a>
+            <a href="/pages/UltimateTechBreakthrough2035" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
+              View Breakthrough
+            </a>
+          </div>
         </div>
 
         {/* Call to Action */}

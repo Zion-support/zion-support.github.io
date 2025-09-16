@@ -10,12 +10,15 @@ const AISolutionsComprehensive2025: React.FC = () => {
 =======
   const [selectedSolution, setSelectedSolution] = useState('enterprise');
 >>>>>>> cursor/create-and-deploy-new-content-e495
+<<<<<<< HEAD
 =======
 import { motion, AnimatePresence } from 'framer-motion';
 
 const AISolutionsComprehensive2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -23,6 +26,9 @@ const AISolutionsComprehensive2025: React.FC = () => {
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 <<<<<<< HEAD
   const aiSolutions = [
     {
@@ -973,6 +979,7 @@ const AISolutionsComprehensive2025: React.FC = () => {
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+<<<<<<< HEAD
 =======
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -1192,6 +1199,13 @@ const AISolutionsComprehensive2025: React.FC = () => {
         </div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
       </div>
+=======
+              Schedule Consultation
+            </button>
+          </div>
+        </motion.div>
+      </motion.div>
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
     </div>
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e495

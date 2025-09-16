@@ -9,6 +9,9 @@ const UltimateTechBreakthrough2032: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH • JANUARY 2032
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Ultimate Tech Breakthrough 2032
@@ -138,6 +141,7 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
+<<<<<<< HEAD
 =======
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -226,6 +230,8 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Learn More
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
             </button>
           </div>
         </div>

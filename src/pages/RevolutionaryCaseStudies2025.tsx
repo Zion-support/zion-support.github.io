@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 import React, { useState } from 'react';
 =======
 import React from 'react';
@@ -542,6 +545,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
+<<<<<<< HEAD
 =======
       {/* Industry Breakdown */}
       <div className="container mx-auto px-4 py-16">
@@ -595,9 +599,11 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
               Download Case Studies
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

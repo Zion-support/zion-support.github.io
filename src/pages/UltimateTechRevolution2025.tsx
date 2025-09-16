@@ -101,6 +101,7 @@ const UltimateTechRevolution2025: React.FC = () => {
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Learn More →
             </button>
+<<<<<<< HEAD
 =======
               The first truly conscious artificial intelligence that can think, feel, and create independently
             </p>
@@ -118,6 +119,8 @@ const UltimateTechRevolution2025: React.FC = () => {
               </span>
             </div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           </div>
 
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -599,6 +602,7 @@ const UltimateTechRevolution2025: React.FC = () => {
           </div>
         </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-e495
+<<<<<<< HEAD
 =======
         {/* Call to Action */}
         <div className="text-center">
@@ -616,6 +620,8 @@ const UltimateTechRevolution2025: React.FC = () => {
           </div>
         </div>
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
       </div>
     </div>
   );

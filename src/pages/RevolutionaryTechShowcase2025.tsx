@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -78,6 +81,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       content: "The neural interface technology has opened up possibilities we never thought possible.",
       avatar: "👩‍⚕️"
 =======
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -85,6 +89,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -1127,12 +1133,15 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         </motion.div>
       </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-e495
+<<<<<<< HEAD
 =======
         </div>
 =======
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
       </div>
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
     </div>
   );
 };

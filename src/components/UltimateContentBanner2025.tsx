@@ -7,6 +7,65 @@ import React from 'react';
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 
 const UltimateContentBanner2025: React.FC = () => {
+<<<<<<< HEAD
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+    {
+      title: "🚀 Revolutionary Tech Showcase 2025",
+      description: "Experience the most advanced technologies reshaping our world",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
+    },
+    {
+      title: "🤖 AI Solutions Comprehensive 2025",
+      description: "Transform your business with our comprehensive AI solutions",
+      link: "/pages/AISolutionsComprehensive2025",
+      color: "from-blue-600 to-cyan-600",
+      bgColor: "from-blue-900/90 to-cyan-900/90"
+    },
+    {
+      title: "🌟 Ultimate Tech Breakthrough 2025",
+      description: "Witness the most revolutionary technological breakthroughs in history",
+      link: "/pages/UltimateTechBreakthrough2025",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
   return (
 <<<<<<< HEAD
     <motion.div

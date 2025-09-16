@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase2025: React.FC = () => {
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
   const [activeTab, setActiveTab] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -231,12 +237,42 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE TECH SHOWCASE • JANUARY 2025
           </div>
+<<<<<<< HEAD
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
+=======
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+            Interactive Tech Showcase 2025
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience cutting-edge technologies through interactive demos and real-time simulations
+          </p>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {techCategories.map((category) => {
+            const colors = getColorClasses(category.color);
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === category.id
+                    ? `${colors.button} text-white shadow-lg`
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                <span className="text-2xl mr-2">{category.icon}</span>
+                {category.title}
+              </button>
+            );
+          })}
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
@@ -54,7 +57,10 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -65,6 +71,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         </div>
 
         {/* Interactive Technology Demos */}
+<<<<<<< HEAD
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🔬 Live Technology Demonstrations</h2>
@@ -81,6 +88,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
 <<<<<<< HEAD
         {/* Interactive Technology Demos */}
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <div className="text-6xl mb-4 text-center">🎮</div>
@@ -169,6 +178,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <li>• Universal connectivity</li>
               </ul>
             </div>
+<<<<<<< HEAD
 =======
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
@@ -223,6 +233,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
             <div className="text-lg opacity-90">Possibilities</div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           </div>
         </div>
 
@@ -230,6 +242,9 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in exploring the most revolutionary technologies that will shape 
             the future of human civilization and consciousness.
@@ -240,6 +255,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
+<<<<<<< HEAD
 =======
           <p className="text-xl mb-8 opacity-90">
             Join us in exploring the most revolutionary technologies of 2032
@@ -251,6 +267,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Schedule Demo
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cad4ed638271abf0c299f946164227bf540b415a
             </button>
           </div>
         </div>
