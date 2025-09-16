@@ -841,6 +841,48 @@ content_index:
         coverage: "Top 10 journeys"
         adoption_time: "< 1 day"
         audit_ready: true
+    - id: "ai-2026-foundational-model-routing-patterns"
+      type: "blog"
+      title: "AI 2026: Foundational Model Routing Patterns — Cost, Quality, and Latency"
+      file_path: "/content/blog/ai-2026-foundational-model-routing-patterns.md"
+      url: "/blog/ai-2026-foundational-model-routing-patterns"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Model Routing", "Cost Optimization", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "30-60%"
+        latency_p95: "stable"
+        quality: ">= target"
+    - id: "ai-2026-causal-evaluation-blueprint"
+      type: "blog"
+      title: "AI 2026: Causal Evaluation Blueprint — Measure Cause‑Effect Correctness"
+      file_path: "/content/blog/ai-2026-causal-evaluation-blueprint.md"
+      url: "/blog/ai-2026-causal-evaluation-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Causality", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        uplift_detection: ">= 5pp"
+        rollback_time: "< 5 min"
+        audit_ready: true
+    - id: "ai-2026-agent-postmortems-lessons-learned"
+      type: "blog"
+      title: "AI 2026: Agent Postmortems — Lessons Learned from Real Incidents"
+      file_path: "/content/blog/ai-2026-agent-postmortems-lessons-learned.md"
+      url: "/blog/ai-2026-agent-postmortems-lessons-learned"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Incidents", "Postmortems", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        repeat_incidents: "-40%"
+        remediation_lead_time: "-50%"
+        verification_evals: "wired"
   latest_2026_content:
     - id: "ai-2026-autonomous-evals-blueprint"
       type: "blog"

@@ -738,6 +738,31 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New: Fresh blog highlights (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Foundational Model Routing Patterns</h3>
+              <p className="text-gray-600 mb-4">Balance cost, quality, and latency with policy‑gated routing.</p>
+              <Link href="/blog/ai-2026-foundational-model-routing-patterns" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Causal Evaluation Blueprint</h3>
+              <p className="text-gray-600 mb-4">Gate behavior with counterfactuals, interventions, and scorecards.</p>
+              <Link href="/blog/ai-2026-causal-evaluation-blueprint" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Postmortems: Lessons Learned</h3>
+              <p className="text-gray-600 mb-4">From incidents to policies, evals, and runbooks that stick.</p>
+              <Link href="/blog/ai-2026-agent-postmortems-lessons-learned" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: GTM Agents Blueprint */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
