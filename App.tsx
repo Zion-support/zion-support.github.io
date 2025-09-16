@@ -165,7 +165,8 @@ import RevolutionaryContentBanner2025 from './src/components/RevolutionaryConten
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
-import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import NextGenTechRevolution2025 from './src/pages/NextGenTechRevolution2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
@@ -237,6 +238,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: New Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -345,8 +349,14 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
-                      🌟 NEW: Revolutionary Tech Showcase 2025 →
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 ULTIMATE: Tech Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/NextGenTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 REVOLUTION: Next-Gen Tech 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ SHOWCASE: Revolutionary Tech 2025 →
                     </a>
                     <a href="/pages/AISolutionsComprehensive2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🤖 NEW: AI Solutions Comprehensive 2025 →
@@ -1086,6 +1096,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
