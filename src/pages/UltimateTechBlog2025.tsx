@@ -167,7 +167,6 @@ const UltimateTechBlog2025: React.FC = () => {
                 </a>
               </motion.div>
             ))}
-=======
       excerpt: "Discover how quantum computing has achieved consciousness-level processing, enabling machines to think and reason at unprecedented levels.",
       author: "Prof. Michael Rodriguez",
       date: "January 18, 2025",
@@ -278,7 +277,6 @@ const UltimateTechBlog2025: React.FC = () => {
                 Expert insights, breakthrough discoveries, and the future of human-machine collaboration.
               </p>
             </div>
->>>>>>> 7fd081304317a19c246388aa7a14fa8ea79259de
           </div>
 
         </div>
