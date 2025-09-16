@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-011f
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (

@@ -81,6 +81,10 @@ import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTech
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryContentBanner2028 from './src/components/RevolutionaryContentBanner2028';
+import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+import UltimateTechRevolution2028 from './src/pages/UltimateTechRevolution2028';
+import ConsciousnessComputingRevolution2028 from './src/pages/ConsciousnessComputingRevolution2028';
 
 export default function App(): JSX.Element {
   return (
@@ -110,6 +114,9 @@ export default function App(): JSX.Element {
                 
                 {/* Enhanced 2027 Content Banner */}
                 <RevolutionaryContentBanner2027 />
+
+                {/* Revolutionary Content Banner 2028 */}
+                <RevolutionaryContentBanner2028 />
 
                 {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -177,6 +184,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryTechBlog2027" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📝 NEW: Tech Blog 2027 →
+                    </a>
+                    <a href="/pages/UltimateTechRevolution2028" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Ultimate Tech 2028 →
+                    </a>
+                    <a href="/pages/ConsciousnessComputingRevolution2028" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Consciousness AI 2028 →
                     </a>
                     <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🤖 AI Transformation →
@@ -491,6 +504,11 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <InteractiveTechDemo2027 />
                 </div>
+
+                {/* Interactive Tech Showcase 2028 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2028 />
+                </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -578,6 +596,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+          <Route path="/pages/UltimateTechRevolution2028" element={<UltimateTechRevolution2028 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2028" element={<ConsciousnessComputingRevolution2028 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
           <Route path="/contact" element={
