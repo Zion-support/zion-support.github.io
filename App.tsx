@@ -60,6 +60,11 @@ import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
 import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
+import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
+import AdvancedConsciousnessComputing2026 from './src/pages/AdvancedConsciousnessComputing2026';
+import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTechRevolution2026';
 
 export default function App(): JSX.Element {
   return (
@@ -174,6 +179,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/RevolutionaryTechBlog2026" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📚 Tech Blog 2026
                     </a>
+                    <a href="/pages/RevolutionaryTechShowcase2026" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🚀 Revolutionary Tech 2026
+                    </a>
+                    <a href="/pages/AdvancedConsciousnessComputing2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 Consciousness Computing
+                    </a>
+                    <a href="/pages/InterdimensionalTechRevolution2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌌 Interdimensional Tech
+                    </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
                     </a>
@@ -230,6 +244,16 @@ export default function App(): JSX.Element {
                 {/* Innovation Showcase 2026 */}
                 <div className="mb-12">
                   <InnovationShowcase2026 />
+                </div>
+
+                {/* Revolutionary Content Showcase 2026 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2026 />
+                </div>
+
+                {/* Interactive Tech Showcase 2026 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2026 />
                 </div>
 
                 {/* Enhanced Content Showcase */}
@@ -669,6 +693,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
+          <Route path="/pages/AdvancedConsciousnessComputing2026" element={<AdvancedConsciousnessComputing2026 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
           <Route path="/pages/AIContentGenerator" element={<AIContentGenerator />} />
           <Route path="/pages/AIMatcher" element={<AIMatcher />} />
