@@ -8,6 +8,10 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import SecurityMonitor from './components/SecurityMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import DarkModeToggle from './components/DarkModeToggle';
+import PWAInstaller from './components/PWAInstaller';
+import MobileOptimizer from './components/MobileOptimizer';
 
 // Loading component for better UX
 const LoadingSpinner = () => (
@@ -262,6 +266,10 @@ const App: React.FC = () => {
         <PerformanceMonitor />
         <PerformanceOptimizer />
         <SecurityMonitor />
+        <AccessibilityEnhancer />
+        <DarkModeToggle />
+        <PWAInstaller />
+        <MobileOptimizer />
       </div>
     </Router>
     </ErrorBoundary>
