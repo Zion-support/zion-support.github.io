@@ -89,20 +89,6 @@
   ],
   "items": [
     {
-      "title": "Reliable Agent Rollouts — Executive Checklist (2026)",
-      "href": "/reports/ai-lab/articles/reliable-agent-rollouts-checklist-1758120000000.md",
-      "desc": "A concise preflight→canary→rollback checklist for safe agent releases",
-      "createdAt": "2025-09-17T06:00:00.000Z",
-      "source": "Zion AI Lab"
-    },
-    {
-      "title": "Agent Reliability Field Guide (2026)",
-      "href": "/reports/ai-lab/articles/agent-reliability-field-guide-1758123600000.md",
-      "desc": "Evidence-first ops, eval gates, and incident readiness in practice",
-      "createdAt": "2025-09-17T07:00:00.000Z",
-      "source": "Zion AI Lab"
-    },
-    {
       "title": "Agent Runbooks with Guardrails (2026)",
       "href": "/reports/ai-lab/articles/agent-runbooks-guardrails-1758092400000.md",
       "desc": "Scorecard-driven incident response with policy events and containment",
