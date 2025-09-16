@@ -6,6 +6,12 @@ const EnhancedContentShowcase: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
   const showcaseItems = [
     {
       id: 1,
@@ -13,6 +19,7 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -107,6 +114,35 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
+=======
+      link: "/pages/AdvancedAITransformation2026",
+      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
+      category: "AI & Machine Learning",
+      year: "2026"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+    },
+    {
+      id: 2,
+      title: "Advanced Quantum Computing 2026",
+      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
+      icon: "⚡",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/AdvancedQuantumComputing2026",
+      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
+    },
+    {
+      id: 3,
+<<<<<<< HEAD
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/NextGenTechShowcase2026",
+      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
+      category: "Technology Showcase",
+      year: "2026"
+>>>>>>> cursor/create-and-deploy-new-content-502e
     },
     {
       id: 4,
@@ -256,8 +292,11 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Breakthroughs", value: "25+", icon: "🏆", color: "text-pink-400" },
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
     },
     {
       id: 2,
@@ -339,7 +378,12 @@ const EnhancedContentShowcase: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -353,6 +397,14 @@ const EnhancedContentShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
+            {/* Category Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">{contentCategories[activeCategory].name}</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {contentCategories[activeCategory].description}
+              </p>
+            </div>
+
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 ENHANCED CONTENT SHOWCASE • 2026
             </div>
@@ -367,6 +419,12 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -722,6 +780,7 @@ const EnhancedContentShowcase: React.FC = () => {
             </a>
           </motion.div>
         ))}
+<<<<<<< HEAD
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -822,7 +881,14 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </motion.div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       </div>
     </div>
   );

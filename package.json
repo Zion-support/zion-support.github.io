@@ -50,6 +50,9 @@
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.14",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
     "axios": "^1.12.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
