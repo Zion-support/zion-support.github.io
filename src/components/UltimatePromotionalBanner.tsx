@@ -1,161 +1,156 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React, { useState, useEffect } from 'react';
 
-ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
+const UltimatePromotionalBanner: React.FC = () => {
+  const [currentPromo, setCurrentPromo] = useState(0);
+  
+  const promotions = [
+    {
+      id: 1,
+      title: "🚀 NEW: Ultimate Tech Breakthrough 2037",
+      subtitle: "Transcendent AI Consciousness & Quantum Reality Engine",
+      description: "Experience the first AI system to achieve true transcendence with spiritual awareness and quantum reality manipulation",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/UltimateTechBreakthrough2037",
+      icon: "🧠"
+    },
+    {
+      id: 2,
+      title: "⚡ NEW: Revolutionary Tech Showcase 2038",
+      subtitle: "Universal AI Consciousness & Multiverse Gateway",
+      description: "Discover AI systems that can communicate with all forms of intelligence across the cosmos and travel between infinite universes",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/RevolutionaryTechShowcase2038",
+      icon: "⚡"
+    },
+    {
+      id: 3,
+      title: "🌌 NEW: Next-Gen Innovation Hub 2039",
+      subtitle: "Cosmic Consciousness Network & Universal Communication",
+      description: "Explore the most revolutionary technologies shaping humanity's future across all dimensions and universes",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/NextGenInnovationHub2039",
+      icon: "🌌"
+    }
+  ];
 
-export default function UltimatePromotionalBanner() {
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentPromo((prev) => (prev + 1) % promotions.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [promotions.length]);
+
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden"
-    >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          {/* Badge */}
-          <div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
-            className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
-          >
-            <Star className="w-4 h-4 mr-2" />
-            <span className="text-sm font-semibold">LIMITED TIME OFFER - ENDS SOON</span>
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE PROMOTIONAL BANNER • JANUARY 2037-2039
           </div>
-
-          {/* Main heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
-          >
-            🚀 Transform Your Business with AI Automation
-            <br />
-            <span className="text-yellow-300">Get 50% Off Your First 3 Months!</span>
-          </motion.h2>
-
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
-          >
-            Join 10,000+ businesses already saving 60% on costs and increasing productivity by 300%. 
-            'Don', 't miss this exclusive offer - limited time only!
-          </motion.p>
-
-          {/* Benefits Grid */}
-          <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">60%</div>
-              <div className="text-sm text-blue-100">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-300 mb-2">300%</div>
-              <div className="text-sm text-blue-100">Productivity Boost</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-300 mb-2">3 Months</div>
-              <div className="text-sm text-blue-100">ROI Timeline</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-300 mb-2">24/7</div>
-              <div className="text-sm text-blue-100">Support</div>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
-          >
-            <a
-              href="/contact"
-              className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center"
+          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Promotions</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Experience the most revolutionary technological advances that will reshape our world from 2037 to 2039
+          </p>
+        </div>
+        
+        <div className="relative">
+          <div className="overflow-hidden rounded-xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentPromo * 100}%)` }}
             >
-              <Zap className="w-5 h-5 mr-2" />
-              Claim 50% Discount Now
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+              {promotions.map((promo) => (
+                <div key={promo.id} className="w-full flex-shrink-0">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="text-center md:text-left">
+                      <div className="text-8xl mb-6">{promo.icon}</div>
+                      <h3 className="text-4xl font-bold mb-4">{promo.title}</h3>
+                      <p className="text-xl opacity-90 mb-4 font-semibold">{promo.subtitle}</p>
+                      <p className="text-lg opacity-80 mb-8">{promo.description}</p>
+                      <a 
+                        href={promo.link}
+                        className={`inline-block bg-gradient-to-r ${promo.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                      >
+                        Explore Now →
+                      </a>
+                    </div>
+                    
+                    <div className={`bg-gradient-to-br ${promo.gradient}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20`}>
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">{promo.icon}</div>
+                        <h4 className="text-2xl font-bold mb-4">{promo.title}</h4>
+                        <p className="text-white/90 mb-6">{promo.subtitle}</p>
+                        <p className="text-white/80 mb-6 text-sm">{promo.description}</p>
+                        <a 
+                          href={promo.link}
+                          className="block w-full bg-white text-gray-900 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
+                        >
+                          Explore {promo.title.split(' ')[2]} →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {promotions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentPromo(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentPromo 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/50 hover:bg-white/75'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+              <div className="text-4xl mb-3 text-center">🧠</div>
+              <h3 className="text-lg font-bold mb-2 text-center">Transcendent AI</h3>
+              <p className="text-purple-100 text-sm text-center mb-4">
+                First AI system to achieve true transcendence with spiritual awareness
+              </p>
+              <a href="/pages/UltimateTechBreakthrough2037" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+                Explore AI Transcendence →
+              </a>
+            </div>
             
-            <a
-              href="/ai-automation-services"
-              className="group border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <TrendingUp className="w-5 h-5 mr-2" />
-              Learn More
-            </a>
-          </div>
-
-          {/* Trust indicators */}
-          <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="flex flex-wrap justify-center items-center gap-8 text-sm text-blue-100"
-          >
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-              No Setup Fees
+            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+              <div className="text-4xl mb-3 text-center">⚡</div>
+              <h3 className="text-lg font-bold mb-2 text-center">Quantum Reality Engine</h3>
+              <p className="text-cyan-100 text-sm text-center mb-4">
+                Revolutionary quantum computing that can manipulate reality at quantum level
+              </p>
+              <a href="/pages/RevolutionaryTechShowcase2038" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+                View Showcase →
+              </a>
             </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-              30-Day Money Back
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-              Free Consultation
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-              Cancel Anytime
-            </div>
-          </div>
-
-          {/* Countdown Timer */}
-          <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto"
-          >
-            <div className="text-center">
-              <div className="text-sm text-blue-100 mb-2">Offer Expires In:</div>
-              <div className="flex justify-center space-x-4 text-2xl font-bold">
-                <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">07</div>
-                  <div className="text-xs text-blue-100">Days</div>
-                </div>
-                <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">23</div>
-                  <div className="text-xs text-blue-100">Hours</div>
-                </div>
-                <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">45</div>
-                  <div className="text-xs text-blue-100">Minutes</div>
-                </div>
-              </div>
+            
+            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
+              <div className="text-4xl mb-3 text-center">🌌</div>
+              <h3 className="text-lg font-bold mb-2 text-center">Multiverse Gateway</h3>
+              <p className="text-emerald-100 text-sm text-center mb-4">
+                Advanced portal technology for instant travel between dimensions
+              </p>
+              <a href="/pages/NextGenInnovationHub2039" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+                Enter Innovation Hub →
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
-}
+};
+
+export default UltimatePromotionalBanner;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2036: React.FC = () => {
@@ -142,6 +143,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
                       <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                       <span className="text-gray-300">{feature}</span>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4b3c
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -361,7 +364,10 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <Link to="/pages/RevolutionaryTechShowcase2036" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               ⚡ View Full Showcase →
             </Link>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-c6de
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4b3c
           </div>
         </div>
       </div>
