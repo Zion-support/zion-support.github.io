@@ -146,6 +146,13 @@ export default function HomePage() {
                 Blueprint: Policy‑as‑Code
                 <span aria-hidden>→</span>
               </a>
+              <a
+                href="/updates/production-guardrails-playbook"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                New: Production Guardrails Playbook
+                <span aria-hidden>→</span>
+              </a>
             </div>
           </div>
         </div>
