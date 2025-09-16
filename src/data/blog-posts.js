@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 1001,
+    title: "AI 2026: Enterprise Governance in Practice",
+    excerpt: "Executable guardrails, audit trails, and rollout policies teams actually use.",
+    content: "Turn governance from documents into code: reference controls mapped to systems, automated evidence collection, and policy-as-code that gates ML releases. This practical guide shows templates, repo layouts, and runtime hooks that keep velocity high while satisfying risk and compliance.",
+    author: "Alexandra Patel",
+    authorRole: "Chief Governance Architect",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Governance",
+    tags: ["Governance", "Policy-as-Code", "Risk", "Compliance", "MLOps"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-governance-in-practice-2026.jpg",
+    slug: "ai-2026-enterprise-governance-in-practice"
+  },
+  {
+    id: 1002,
+    title: "RAG Systems That Actually Ship: Patterns and Anti-Patterns (2026)",
+    excerpt: "Production-ready RAG with evaluation, caching, chunking, and drift monitoring.",
+    content: "Most RAG demos fail in production due to retrieval quality, context budgeting, and silent regressions. We detail proven designs: query planning, semantic caching, chunk attribution, eval harnesses, and guardrails that keep answers safe and grounded over time.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "11 min read",
+    category: "AI & Machine Learning",
+    tags: ["RAG", "Evaluation", "Caching", "Observability", "Guardrails"],
+    featured: true,
+    imageUrl: "/images/blog/production-rag-patterns-2026.jpg",
+    slug: "rag-systems-that-actually-ship-2026"
+  },
+  {
     id: 35,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",

@@ -41,6 +41,7 @@ import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrou
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
+import AIEnterpriseGovernance2026 from './src/pages/AIEnterpriseGovernance2026';
 
 // Component imports
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
@@ -52,6 +53,7 @@ import NewContentBanner2025 from './src/components/NewContentBanner2025';
 import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import NewContentPromoBanner from './src/components/NewContentPromoBanner';
 
 function App() {
   return (
@@ -72,6 +74,7 @@ function App() {
                   <FeaturedContentSection />
                   
                   {/* New Content Banners */}
+                  <NewContentPromoBanner />
                   <NewContentBanner2025 />
                   <EnhancedContentShowcase2025 />
                   <RevolutionaryAdBanner2036 />
@@ -113,6 +116,7 @@ function App() {
             <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
             <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
             <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+            <Route path="/pages/AIEnterpriseGovernance2026" element={<AIEnterpriseGovernance2026 />} />
             
             {/* Case Study Route */}
             <Route path="/case-study/:id" element={<CaseStudyPage />} />
