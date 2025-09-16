@@ -42,6 +42,9 @@ import RevolutionaryContentBanner2026 from './src/components/RevolutionaryConten
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
 import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import TranscendentAIServices2026 from './src/pages/TranscendentAIServices2026';
+import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -671,6 +674,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Content Promotion Banner 2026 */}
                 <NewContentPromotionBanner2026 />
+                
+                {/* Interactive Tech Showcase 2026 */}
+                <InteractiveTechShowcase2026 />
                 
                 {/* Revolutionary Services Showcase 2026 */}
                 <RevolutionaryServicesShowcase2026 />
@@ -3084,6 +3090,9 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
+          <Route path="/transcendent-ai-services-2026" element={<TranscendentAIServices2026 />} />
+          <Route path="/ultimate-tech-breakthrough-2026" element={<UltimateTechBreakthrough2026 />} />
+          <Route path="/interactive-tech-showcase-2026" element={<InteractiveTechShowcase2026 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
