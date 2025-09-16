@@ -28,6 +28,7 @@ import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import AutonomousAgentsInProduction2025 from './src/pages/AutonomousAgentsInProduction2025';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
@@ -1296,6 +1297,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+          <Route path="/pages/AutonomousAgentsInProduction2025" element={<AutonomousAgentsInProduction2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />

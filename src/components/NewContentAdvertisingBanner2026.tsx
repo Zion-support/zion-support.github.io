@@ -161,13 +161,13 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
+                    <a href="/pages/AutonomousAgentsInProduction2025" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                       Read Now
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-all duration-300">
+                    </a>
+                    <a href="/blog" className="px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-all duration-300">
                       Explore All Content
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
