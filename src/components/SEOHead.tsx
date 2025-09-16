@@ -27,7 +27,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical = "https://ziontechgroup.com",
   ogImage = "https://ziontechgroup.com/og-image-2027.jpg",
   structuredData
->>>>>>> cursor/create-and-deploy-new-content-cd00
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -61,7 +61,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 <<<<<<< HEAD
 =======
       {/* Basic Meta Tags */}
->>>>>>> cursor/create-and-deploy-new-content-cd00
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -111,7 +111,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="language" content="English" />
       <meta name="geo.region" content="US" />
       <meta name="geo.placename" content="United States" />
->>>>>>> cursor/create-and-deploy-new-content-cd00
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -169,7 +169,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               }
             ]
           }
->>>>>>> cursor/create-and-deploy-new-content-cd00
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         })}
       </script>
     </Helmet>

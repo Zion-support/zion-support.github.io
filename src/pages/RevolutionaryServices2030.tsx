@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
 import { 
   Rocket, 
   Brain, 
@@ -416,10 +415,7 @@ const RevolutionaryServices2030: React.FC = () => {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <divdiv
             className="text-center max-w-5xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
@@ -447,7 +443,7 @@ const RevolutionaryServices2030: React.FC = () => {
                 Download Brochure
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
@@ -456,11 +452,8 @@ const RevolutionaryServices2030: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
+              <divdiv
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -468,7 +461,7 @@ const RevolutionaryServices2030: React.FC = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -477,10 +470,8 @@ const RevolutionaryServices2030: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -490,15 +481,13 @@ const RevolutionaryServices2030: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our cutting-edge services that will redefine what's possible in technology and business.
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <divdiv
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
               >
@@ -570,7 +559,7 @@ const RevolutionaryServices2030: React.FC = () => {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -579,10 +568,8 @@ const RevolutionaryServices2030: React.FC = () => {
       {/* Testimonials */}
       <section className="py-20 bg-slate-800/20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -592,15 +579,13 @@ const RevolutionaryServices2030: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Hear from industry leaders who have transformed their businesses with our Revolutionary Services 2030.
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <divdiv
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
               >
@@ -624,7 +609,7 @@ const RevolutionaryServices2030: React.FC = () => {
                     <div className="text-sm text-cyan-400">{testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -634,10 +619,8 @@ const RevolutionaryServices2030: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -658,7 +641,7 @@ const RevolutionaryServices2030: React.FC = () => {
                   Contact Sales
                 </button>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </section>

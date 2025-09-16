@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import { 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
@@ -92,10 +91,7 @@ export default function AIFinancialPlanningPlatform() {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divdiv
               className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
@@ -111,32 +107,26 @@ export default function AIFinancialPlanningPlatform() {
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
                   Start Free Trial
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </divbutton>
+                <divbutton
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Watch Demo
-                </motion.button>
+                </divbutton>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -146,15 +136,13 @@ export default function AIFinancialPlanningPlatform() {
                 Our AI platform combines advanced financial modeling with machine learning to deliver 
                 comprehensive financial planning and wealth management solutions.
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -164,7 +152,7 @@ export default function AIFinancialPlanningPlatform() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -173,10 +161,8 @@ export default function AIFinancialPlanningPlatform() {
         {/* Benefits Section */}
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -186,22 +172,20 @@ export default function AIFinancialPlanningPlatform() {
                 Experience dramatic improvements in financial planning efficiency, investment returns, and 
                 goal achievement with our AI-powered financial planning platform.
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-white font-medium text-sm">{benefit}</span>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -210,10 +194,8 @@ export default function AIFinancialPlanningPlatform() {
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -223,22 +205,20 @@ export default function AIFinancialPlanningPlatform() {
                 From retirement planning to investment management, our platform provides AI-powered 
                 solutions for every aspect of your financial life.
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {useCases.map((useCase, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
                   </div>
                   <span className="text-white font-medium text-sm">{useCase}</span>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -247,10 +227,8 @@ export default function AIFinancialPlanningPlatform() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Financial Planning?
@@ -260,22 +238,18 @@ export default function AIFinancialPlanningPlatform() {
                 with AI automation. Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
                   Get Started Now
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </divbutton>
+                <divbutton
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales
-                </motion.button>
+                </divbutton>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
       </div>

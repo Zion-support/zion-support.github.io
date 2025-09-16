@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Award
   TrendingUp
@@ -48,10 +47,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
-      transition={{ duration: 0.8ease: "easeOut" }}
+    <divdiv
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
     >
       {/* Background Pattern */}
@@ -64,10 +60,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex-1">
-            <motion.div
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.2 }}
+            <divdiv
               className="flex items-center gap-3 mb-3"
             >
               <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -79,30 +72,21 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-            </motion.div>
+            </divdiv>
 
-            <motion.h2
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.3 }}
+            <divh2
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🏆 Revolutionary Case Studies 2027
-            </motion.h2>
+            </divh2>
 
-            <motion.p
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.4 }}
+            <divp
               className="text-base md:text-lg text-gray-800 mb-4 max-w-2xl"
             >
               Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
-            </motion.p>
+            </divp>
 
-            <motion.div
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.5 }}
+            <divdiv
               className="flex flex-wrap items-center gap-3"
             >
               <button className="bg-gray-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center gap-2 group">
@@ -114,26 +98,20 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 <Award className="w-4 h-4" />
                 Success Stories
               </button>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Right Content - Rotating Stats */}
-          <motion.div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.6delay: 0.4 }}
+          <divdiv
             className="hidden lg:flex items-center gap-8"
           >
             <div className="relative w-24 h-24">
               {stats.map((statindex) => (
-                <motion.div
+                <divdiv
                   key={stat.label}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{
                     opacity: currentStat === index ? 1 : 0,
                     scale: currentStat === index ? 1 : 0.8
                   }}
-                  transition={{ duration: 0.5 }}
                   className="absolute inset-0 flex flex-col items-center justify-center"
                 >
                   <div className="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center shadow-lg">
@@ -143,7 +121,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                     <div className="text-xs text-gray-700">{stat.label}</div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
             
@@ -155,14 +133,11 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 Results
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Progress Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6delay: 0.8 }}
+        <divdiv
           className="mt-4"
         >
           <div className="flex items-center justify-between text-sm text-gray-800 mb-2">
@@ -170,22 +145,17 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
             <span>Ready to Explore</span>
           </div>
           <div className="w-full bg-black/20 rounded-full h-1.5">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 4delay: 1 }}
+            <divdiv
               className="h-1.5 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full"
             />
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Floating Elements */}
-        <motion.div
-          animate={{
+        <divdiv
             y: [0-60],
             rotate: [020]
           }}
-          transition={{
             duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
@@ -193,14 +163,12 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute top-3 right-3 w-5 h-5 bg-black/20 rounded-full flex items-center justify-center"
         >
           <TrendingUp className="w-3 h-3 text-gray-900" />
-        </motion.div>
+        </divdiv>
 
-        <motion.div
-          animate={{
+        <divdiv
             y: [060],
             rotate: [0-20]
           }}
-          transition={{
             duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
@@ -209,7 +177,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute bottom-3 left-3 w-4 h-4 bg-black/20 rounded-full flex items-center justify-center"
         >
           <Award className="w-2 h-2 text-gray-900" />
-        </motion.div>
+        </divdiv>
       </div>
 
       {/* Dismiss Button */}
@@ -219,7 +187,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
       >
         <X className="w-3 h-3 text-gray-900" />
       </button>
-    </motion.div>
+    </divdiv>
   );
 };
 

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Building2
@@ -46,12 +45,8 @@ const BusinessTransformation2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6ease: "easeOut" }}
+    <div>
+      <divdiv
         className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
       >
         {/* Animated background elements */}
@@ -66,16 +61,14 @@ const BusinessTransformation2025PromotionBanner = () => {
             {/* Left side - Main content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2repeat: Infinityease: "linear" }}
+                <divdiv
                   className="flex items-center gap-2"
                 >
                   <Sparkles className="w-6 h-6 text-green-400" />
                   <span className="text-green-400 font-bold text-sm uppercase tracking-wider">
                     Proven Results
                   </span>
-                </motion.div>
+                </divdiv>
                 <div className="flex items-center gap-1 text-blue-400">
                   <Clock className="w-4 h-4" />
                   <span className="text-sm font-semibold">Live Data</span>
@@ -92,17 +85,13 @@ const BusinessTransformation2025PromotionBanner = () => {
 
               {/* Rotating metrics showcase */}
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
-                <motion.div
+                <divdiv
                   key={currentMetric}
-                  initial={{ opacity: 0x: 20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: -20 }}
-                  transition={{ duration: 0.5 }}
                   className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white"
                 >
                   <currentMetricData.icon className="w-5 h-5 mr-2" />
                   <span className="font-semibold">{currentMetricData.value} {currentMetricData.label}</span>
-                </motion.div>
+                </divdiv>
                 <div className="flex items-center text-green-400">
                   <Users className="w-4 h-4 mr-1" />
                   <span className="text-sm">500+ Companies</span>
@@ -127,35 +116,29 @@ const BusinessTransformation2025PromotionBanner = () => {
 
             {/* Right side - CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
               >
                 <Building2 className="w-5 h-5 mr-2" />
                 View Success Stories
                 <ChevronRight className="w-4 h-4 ml-2" />
-              </motion.button>
+              </divbutton>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <TrendingUp className="w-5 h-5 mr-2" />
                 Calculate ROI
-              </motion.button>
+              </divbutton>
             </div>
 
             {/* Close button */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+            <divbutton
               onClick={() => setIsDismissed(true)}
               className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
             >
               <X className="w-6 h-6" />
-            </motion.button>
+            </divbutton>
           </div>
 
           {/* Metric indicators */}
@@ -175,8 +158,8 @@ const BusinessTransformation2025PromotionBanner = () => {
         <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce" />
         <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" />
         <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
-      </motion.div>
-    </AnimatePresence>
+      </divdiv>
+    </div>
   );
 };
 

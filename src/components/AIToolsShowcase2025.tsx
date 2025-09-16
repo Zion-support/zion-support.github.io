@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -120,10 +119,7 @@ export default function AIToolsShowcase2025() {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -140,13 +136,10 @@ export default function AIToolsShowcase2025() {
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.2 }}
+        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -162,23 +155,16 @@ export default function AIToolsShowcase2025() {
               {category}
             </button>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Tools Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6delay: 0.4 }}
+        <divdiv
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <AnimatePresence>
+          <div>
             {filteredTools.map((toolindex) => (
-              <motion.div
+              <divdiv
                 key={tool.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
                 onMouseEnter={() => setHoveredTool(tool.id)}
                 onMouseLeave={() => setHoveredTool(null)}
@@ -247,23 +233,18 @@ export default function AIToolsShowcase2025() {
                 </div>
 
                 {/* Hover Effect */}
-                <motion.div
+                <divdiv
                   className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={false}
-                  animate={{
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
                 />
-              </motion.div>
+              </divdiv>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </divdiv>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.8 }}
+        <divdiv
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -283,7 +264,7 @@ export default function AIToolsShowcase2025() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );
