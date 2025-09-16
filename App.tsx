@@ -168,7 +168,6 @@ import NewContentPromotionBanner2025 from './src/components/NewContentPromotionB
 import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
-import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import UltimateTechBanner2039 from './src/components/UltimateTechBanner2039';
 import RevolutionaryTechBanner2040 from './src/components/RevolutionaryTechBanner2040';
 import NextGenInnovationBanner2041 from './src/components/NextGenInnovationBanner2041';
@@ -193,6 +192,12 @@ import UltimateTechBanner2035 from './src/components/UltimateTechBanner2035';
 import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
 import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
 import RevolutionaryAdBanner2035 from './src/components/RevolutionaryAdBanner2035';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -219,6 +224,9 @@ export default function App(): JSX.Element {
                 <RevolutionaryContentBanner />
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 - Enhanced */}
                 <RevolutionaryContentBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
@@ -1074,6 +1082,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
