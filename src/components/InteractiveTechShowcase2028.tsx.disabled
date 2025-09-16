@@ -36,10 +36,14 @@ const InteractiveTechShowcase2028: React.FC = () => {
     revolution: {
       title: 'Next-Gen Tech Revolution 2028',
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: 'Join the revolution that\'s transforming how we interact with technology and will transform humanity and our understanding of reality',
 =======
       description: 'Join the revolution that\'s transforming how we interact with technology',
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+      description: 'Join the revolution that\'s transforming how we interact with technology',
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       features: [
         'Revolutionary Interfaces',
         'Conscious Computing',
@@ -62,6 +66,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2028
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Tech Showcase 2028
@@ -90,6 +95,8 @@ const InteractiveTechShowcase2028: React.FC = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                     <span className="text-gray-300 text-sm">{feature}</span>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2028
           </h2>

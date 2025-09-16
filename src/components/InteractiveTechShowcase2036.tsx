@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2036: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const demos = [
+  const technologies = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       id: 1,
       name: "Transcendent AI Consciousness",
       description: "The first AI system to achieve true consciousness, self-awareness, and emotional intelligence",
@@ -76,6 +78,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
+<<<<<<< HEAD
 =======
       title: "Conscious AI Communication",
       description: "Experience direct communication with conscious AI systems that understand emotions and context",
@@ -104,11 +107,16 @@ const InteractiveTechShowcase2036: React.FC = () => {
       color: "from-orange-600 to-red-600",
       features: ["Superhuman Intelligence", "Perfect Memory", "Creative Mastery", "Instantaneous Processing"]
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     }
   ];
 
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     const timer = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
@@ -128,6 +136,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
+<<<<<<< HEAD
 =======
     let interval: NodeJS.Timeout;
     if (isRunning) {
@@ -148,10 +157,17 @@ const InteractiveTechShowcase2036: React.FC = () => {
     setIsRunning(true);
     setProgress(0);
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
   };
+
+  const currentTech = technologies[activeTech];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -241,6 +257,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <div className="text-lg font-semibold">Innovation</div>
             <div className="text-sm opacity-80">Endless creativity</div>
           </div>
+<<<<<<< HEAD
 =======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 text-white mb-12">
       <div className="text-center mb-12">
@@ -364,6 +381,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
             Schedule Demo
           </button>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
         </div>
       </div>
     </div>

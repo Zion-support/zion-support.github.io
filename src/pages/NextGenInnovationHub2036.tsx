@@ -3,6 +3,9 @@ import React from 'react';
 const NextGenInnovationHub2036: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -238,6 +241,7 @@ const NextGenInnovationHub2036: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Visit Innovation Hub
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -532,6 +536,8 @@ const NextGenInnovationHub2036: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Submit Your Innovation
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
             </button>
           </div>
         </div>

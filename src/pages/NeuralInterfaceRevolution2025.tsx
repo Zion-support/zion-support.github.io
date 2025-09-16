@@ -1324,6 +1324,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Experience the future of human-computer interaction with neural interfaces that 
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
+<<<<<<< HEAD
 =======
               <div className="text-4xl mb-4">💭</div>
               <h3 className="text-2xl font-bold mb-4">Thought Control</h3>
@@ -1365,12 +1366,17 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <div className="text-5xl font-bold text-emerald-400 mb-2">24/7</div>
               <div className="text-lg text-emerald-200">Monitoring</div>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
         <div
 =======
         {/* Neural Interface Features */}
@@ -1646,6 +1652,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               Start Neural Journey
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
+<<<<<<< HEAD
 =======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Connect Mind & Machine</h2>
@@ -1658,6 +1665,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               Learn More
             </button>
 =======

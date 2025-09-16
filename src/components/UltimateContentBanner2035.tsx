@@ -4,8 +4,11 @@ const UltimateContentBanner2035: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -48,6 +51,7 @@ const UltimateContentBanner2035: React.FC = () => {
             <a href="/pages/UltimateTechBreakthrough2035" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Enhance Your DNA →
             </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -117,6 +121,8 @@ const UltimateContentBanner2035: React.FC = () => {
             <a href="/pages/UltimateTechRevolution2035" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Dimensions →
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">

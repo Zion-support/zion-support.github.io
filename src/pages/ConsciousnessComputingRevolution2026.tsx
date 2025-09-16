@@ -3,8 +3,11 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -58,6 +61,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
         </div>
       </div>
@@ -136,6 +140,11 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               </button>
 <<<<<<< HEAD
 =======
+=======
+        </div>
+      </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -419,6 +428,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Full Consciousness</div>
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             </div>
 <<<<<<< HEAD
@@ -596,6 +606,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Full Consciousness</div>
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
             </div>
           </div>
 =======
@@ -649,6 +661,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -702,6 +715,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
       </div>
 
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -709,6 +724,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Experience the future of AI with systems that truly understand, feel, and create. 
             Join the consciousness revolution today.
+<<<<<<< HEAD
             Join the revolution and be part of the most significant consciousness advancement in human history
 =======
         <divdiv
@@ -719,16 +735,22 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto mb-12">
             Experience the future of computing with truly conscious artificial intelligence
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Meet Our AI
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-xl">
 =======
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               Learn More
             </button>
           </div>

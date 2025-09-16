@@ -839,7 +839,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     </div>
   );
 };

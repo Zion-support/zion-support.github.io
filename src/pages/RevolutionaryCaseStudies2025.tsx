@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 import React, { useState } from 'react';
@@ -7,23 +8,16 @@ import React, { useState } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-99e3
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedCase, setSelectedCase] = useState(0);
-
-  const categories = [
-    { id: 'all', name: 'All Industries', icon: '🌟' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: '🏭' },
-    { id: 'healthcare', name: 'Healthcare', icon: '🏥' },
-    { id: 'finance', name: 'Finance', icon: '💰' },
-    { id: 'retail', name: 'Retail', icon: '🛒' },
-    { id: 'technology', name: 'Technology', icon: '💻' }
-  ];
-
   const caseStudies = [
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "Fortune 500 Manufacturing Revolution",
       category: "manufacturing",
@@ -157,6 +151,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 
   const currentCase = filteredCases[selectedCase];
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       title: "Fortune 500 AI Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -271,12 +267,16 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     { label: "Average Efficiency Gain", value: "400%", icon: "📈" },
     { label: "Success Rate", value: "99.8%", icon: "✅" }
   ];
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -290,6 +290,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Discover how leading companies are transforming their businesses with our cutting-edge AI and technology solutions
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
@@ -307,12 +309,16 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Discover how our revolutionary technologies have transformed businesses across industries. 
               Real results from real companies using cutting-edge AI and quantum computing solutions.
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
             </p>
           </motion.div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Category Filter */}
@@ -370,6 +376,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               <button className="w-full bg-white/20 text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
                 View Full Case Study →
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       {/* Stats Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -458,13 +466,17 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 
               <button className={`w-full bg-gradient-to-r ${study.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 Read Full Case Study →
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               </button>
             </motion.div>
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Detailed Case Study View */}
         {currentCase && (
@@ -547,6 +559,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               Schedule Consultation
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       {/* Industry Breakdown */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -575,6 +589,33 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               <p className="text-gray-300 mb-4">300% precision improvement with neural interfaces</p>
               <div className="text-2xl font-bold text-indigo-400">$30M+ Saved</div>
             </div>
+<<<<<<< HEAD
+=======
+          </div>
+        </motion.div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the companies already experiencing revolutionary results. 
+            Start your transformation journey with a free consultation and proof of concept.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Free Consultation
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
+              Download Case Studies
+            </button>
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
         </motion.div>
       </div>

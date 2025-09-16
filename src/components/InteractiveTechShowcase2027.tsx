@@ -66,6 +66,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       id: 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -150,6 +151,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
       color: "from-emerald-600 to-teal-600",
       link: "/pages/RevolutionaryTechTrends2027"
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -235,11 +238,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
       ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     }
   ];
 
@@ -288,6 +294,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
         {/* Tab Navigation */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="flex justify-center space-x-4 mb-12">
           {techCategories.map((category, index) => (
             <button
@@ -333,6 +340,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
               className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
                 isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -360,6 +369,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -367,6 +377,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}

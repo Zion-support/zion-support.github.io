@@ -7,6 +7,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
   const technologies = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: 'conscious-ai',
       name: 'Conscious AI Systems',
       icon: '🧠',
@@ -64,6 +65,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
       bgColor: 'from-emerald-600/20 to-teal-600/20',
       borderColor: 'border-emerald-400/30'
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
       id: 1,
       title: "Conscious AI Systems",
       description: "Self-aware artificial intelligence with emotional intelligence and creative problem-solving capabilities",
@@ -146,7 +149,10 @@ const InteractiveTechShowcase2034: React.FC = () => {
         "Fidelity": "100%"
       },
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
     }
   ];
 
@@ -167,6 +173,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
     return () => clearInterval(interval);
   }, [technologies.length]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const currentTech = technologies[activeTech];
 =======
@@ -250,6 +257,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     ? `bg-gradient-to-r ${tech.bgColor} ${tech.borderColor} border-2`
                     : 'bg-gray-800/50 border-gray-600 hover:border-gray-400'
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -275,6 +284,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 key={tech.id}
                 className={`bg-gradient-to-r ${tech.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer transition-all duration-500 ${
                   hoveredCard === index ? 'scale-105 shadow-2xl' : 'hover:scale-102'
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
                 }`}
               >
@@ -285,6 +295,13 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     <h4 className="text-xl font-bold">{tech.name}</h4>
                     <p className="text-gray-300 text-sm">{tech.description}</p>
 =======
+=======
+                }`}
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => setActiveTech(index)}
+              >
+>>>>>>> cursor/create-and-deploy-new-content-99e3
                 <div className="flex items-center space-x-6">
                   <div className="text-6xl">{tech.icon}</div>
                   <div className="flex-1">
@@ -300,6 +317,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
                   </div>
                 </div>
@@ -312,6 +330,11 @@ const InteractiveTechShowcase2034: React.FC = () => {
           <div className="relative">
             <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-3xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-50' : 'scale-100 opacity-100'}`}>
 =======
+=======
+                  </div>
+                  <div className="text-4xl opacity-50">→</div>
+                </div>
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               </div>
             ))}
           </div>
@@ -320,6 +343,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
               {/* Technology Header */}
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
               <div className="text-center mb-8">
                 <div className="text-8xl mb-4 animate-bounce">{currentTech.icon}</div>
@@ -333,16 +357,36 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   <div key={index} className="flex items-center space-x-3">
                     <div className={`w-3 h-3 bg-gradient-to-r ${currentTech.color} rounded-full`}></div>
                     <span className="text-lg">{feature}</span>
+=======
+              <div className="text-center mb-8">
+                <div className="text-8xl mb-6 animate-bounce">{technologies[activeTech].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
+                <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {technologies[activeTech].features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`}
+                  >
+                    <div className="text-2xl mb-2">✨</div>
+                    <h4 className="font-bold text-sm">{feature}</h4>
+>>>>>>> cursor/create-and-deploy-new-content-99e3
                   </div>
                 ))}
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="text-center">
                 <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                   Experience {currentTech.name} →
                 </button>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
               {/* Metrics */}
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
@@ -471,6 +515,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
             <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Contact Us →
             </a>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6">
@@ -493,6 +538,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
               Experience {technologies[activeTab as keyof typeof technologies].title} →
             </a>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
         </div>
       </div>
