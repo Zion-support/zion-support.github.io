@@ -154,6 +154,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -480,6 +481,12 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       </main>
       
       <Footer />
+=======
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-6f79
     </div>
   );
 };
