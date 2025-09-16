@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "title": "Executive Brief — Safe Agent Rollouts (2026)",
+      "href": "/blog/ai-2026-exec-brief-safe-agent-rollouts.md",
+      "desc": "Evidence-first release patterns that keep autonomy safe, fast, and auditable.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "Production-Ready Agent Runbooks (2026)",
+      "href": "/blog/ai-2026-agent-runbooks-in-production.md",
+      "desc": "Runbooks integrating live evals, incidents, and rollback workflows.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Runtime Observability — Playbook (2026)",
+      "href": "/blog/ai-2026-governed-runtime-observability-playbook.md",
+      "desc": "Streaming SLIs, eval hooks, and policy events wired to incidents and SLOs.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "blog"
+    },
+    {
       "title": "Governed Real-Time Observability (2026)",
       "href": "/blog/ai-2026-governed-real-time-observability.md",
       "desc": "Streaming SLIs, eval hooks, and policy events without slowing teams.",
