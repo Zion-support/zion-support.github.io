@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 4001,
+    title: "AI 2026: Eval-Driven Releases — Ship Faster with Safety Gates",
+    excerpt: "Practical blueprint to wire evals into CI/CD, canaries, and rollbacks.",
+    content: "This guide shows how to connect scenario suites to CI/CD, promote via policy gates, and use progressive delivery with automatic rollback when SLOs breach. Includes reference metrics, dashboards, and a minimal repo structure you can copy.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Evaluations", "Progressive Delivery", "Release Engineering"],
+    featured: true,
+    imageUrl: "/images/blog/eval-driven-releases-2026.jpg",
+    slug: "ai-2026-eval-driven-releases-ship-faster-with-safety-gates"
+  },
+  {
+    id: 4002,
+    title: "Cost Scorecards for Agents — Visibility for Finance and Engineering",
+    excerpt: "Token budgets, routing bands, and monthly scorecards that everyone trusts.",
+    content: "Implement shared cost scorecards using pipeline-level budgets, model routing bands, and per-journey KPIs. We cover alerting, anomaly detection, and real examples to cut spend 25–40% without quality loss.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["FinOps", "Routing", "Budgets", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/agent-cost-scorecards-2026.jpg",
+    slug: "cost-scorecards-for-agents-visibility-for-finance-and-engineering"
+  },
+  {
     id: 3001,
     title: "AI 2026: Production RAG Playbook",
     excerpt: "Low-latency, eval‑gated retrieval that ships to prod with confidence.",
