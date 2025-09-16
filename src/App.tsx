@@ -6,6 +6,9 @@ import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowc
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import UltimateTechShowcaseBanner2026 from './components/UltimateTechShowcaseBanner2026';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
 import ContentPromotionBanner from './components/ContentPromotionBanner';
 import ContentSpotlight from './components/ContentSpotlight';
@@ -56,6 +59,10 @@ import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBan
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
+import AdvancedAIServices2026 from './pages/AdvancedAIServices2026';
+import BlogPost_Jan2026_AIEthicsFramework from './pages/BlogPost_Jan2026_AIEthicsFramework';
+import BlogPost_Jan2026_QuantumComputingBreakthrough from './pages/BlogPost_Jan2026_QuantumComputingBreakthrough';
+import BlogPost_Jan2026_EdgeAIRevolution from './pages/BlogPost_Jan2026_EdgeAIRevolution';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -119,6 +126,21 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* NEW: Ultimate Tech Showcase Banner 2026 */}
+              <div className="mb-12">
+                <UltimateTechShowcaseBanner2026 />
+              </div>
+
+              {/* NEW: Revolutionary Content Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* NEW: New Content Showcase 2026 */}
+              <div className="mb-12">
+                <NewContentShowcase2026 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -434,6 +456,12 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
+          
+          {/* NEW: January 2026 Content Routes */}
+          <Route path="/advanced-ai-services-2026" element={<AdvancedAIServices2026 />} />
+          <Route path="/blog/ai-ethics-framework-2026" element={<BlogPost_Jan2026_AIEthicsFramework />} />
+          <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
+          <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
         </Routes>
         
         <Footer />
