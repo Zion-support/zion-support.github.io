@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -6,6 +7,10 @@ import React from 'react';
 import React from 'react';
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/create-and-deploy-new-content-0cca
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -15,6 +20,12 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+<<<<<<< HEAD
+=======
+import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
+import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
+import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
+>>>>>>> cursor/create-and-deploy-new-content-0cca
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -76,6 +87,7 @@ const Home: React.FC = () => {
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -89,6 +101,8 @@ const Home: React.FC = () => {
             </Link>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -100,8 +114,11 @@ const Home: React.FC = () => {
                 📚 Tech Blog 2026 →
               </a>
             </div>
+<<<<<<< HEAD
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">

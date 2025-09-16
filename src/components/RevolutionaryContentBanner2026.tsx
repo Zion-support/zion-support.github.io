@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,6 +43,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       description: "Direct brain-computer communication enabling thought-controlled technology",
       link: "/pages/NeuralInterfaceEvolution2026",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+<<<<<<< HEAD
 =======
       title: "🌟 Ultimate Tech Revolution 2026",
       subtitle: "The convergence of all breakthrough technologies",
@@ -69,11 +73,17 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       gradient: "from-rose-600 to-pink-600",
       icon: "💭",
       badge: "CONSCIOUSNESS"
+=======
+      icon: "🧬"
+>>>>>>> cursor/create-and-deploy-new-content-0cca
     }
   ];
 
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
 =======
@@ -112,6 +122,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             >
               🚀 View All Content →
             </a>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -195,10 +206,13 @@ const RevolutionaryContentBanner2026: React.FC = () => {
                 />
               ))}
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Interactive Tech Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {contentSlides.slice(0, 6).map((slide, index) => (
@@ -244,6 +258,23 @@ const RevolutionaryContentBanner2026: React.FC = () => {
         </div>
       </div>
 
+=======
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {contentSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-purple-600 scale-125' 
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-0cca
       {/* Quick Access Grid */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {contentSlides.map((slide, index) => (
@@ -258,10 +289,13 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             <h4 className="font-bold text-sm mb-2">{slide.title}</h4>
             <p className="text-xs opacity-90">{slide.description}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </a>
         ))}
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
           </a>
         ))}
       </div>

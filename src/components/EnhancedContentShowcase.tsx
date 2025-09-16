@@ -31,9 +31,9 @@ const EnhancedContentShowcase: React.FC = () => {
         },
         {
           title: "Neural Reality Engine",
-          description: "Direct brain-computer interface technology",
+          description: "Direct brain-computer interfaces",
           link: "/pages/RevolutionaryTechBreakthrough2025",
-          stats: "Real-time",
+          stats: "Full Immersion",
           gradient: "from-emerald-600 to-teal-600"
         }
       ]
@@ -398,6 +398,7 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Emerging technologies and future innovations",
       content: [
         {
+<<<<<<< HEAD
           title: "Interdimensional Computing",
           description: "Computing across multiple dimensions simultaneously",
           image: "🌍",
@@ -429,11 +430,61 @@ const EnhancedContentShowcase: React.FC = () => {
           category: "Omniversal AI",
           features: ["Multi-universe operation", "Universal intelligence", "Reality synchronization"],
           impact: "Creates universal artificial intelligence"
+=======
+          title: "Autonomous AI Systems",
+          description: "Self-evolving AI without human intervention",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "24/7 Learning",
+          gradient: "from-indigo-600 to-purple-600"
+        },
+        {
+          title: "Metaverse Integration",
+          description: "Seamless physical-virtual world integration",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "Holographic UI",
+          gradient: "from-cyan-600 to-blue-600"
+        },
+        {
+          title: "Biotech Revolution",
+          description: "AI-powered biotechnology solutions",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "Personalized Medicine",
+          gradient: "from-emerald-600 to-teal-600"
+        }
+      ]
+    },
+    showcase: {
+      title: "Ultimate Showcase",
+      icon: "🎯",
+      color: "blue",
+      content: [
+        {
+          title: "Interactive Demos",
+          description: "Experience technologies in action",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Live Demo",
+          gradient: "from-blue-600 to-indigo-600"
+        },
+        {
+          title: "Quantum Simulator",
+          description: "Interactive quantum computing concepts",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Real-time",
+          gradient: "from-purple-600 to-pink-600"
+        },
+        {
+          title: "Bio AI Lab",
+          description: "Explore biotechnology with AI",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Hands-on",
+          gradient: "from-green-600 to-emerald-600"
+>>>>>>> cursor/create-and-deploy-new-content-0cca
         }
       ]
     }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { label: "Total Content", value: "500+", icon: "📚", color: "text-purple-400" },
     { label: "Active Users", value: "2.5M+", icon: "👥", color: "text-indigo-400" },
@@ -525,6 +576,30 @@ const EnhancedContentShowcase: React.FC = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
+=======
+  const getColorClasses = (color: string) => {
+    const colors = {
+      purple: {
+        bg: "bg-purple-600",
+        text: "text-purple-600",
+        border: "border-purple-600",
+        hover: "hover:bg-purple-50"
+      },
+      indigo: {
+        bg: "bg-indigo-600",
+        text: "text-indigo-600",
+        border: "border-indigo-600",
+        hover: "hover:bg-indigo-50"
+      },
+      blue: {
+        bg: "bg-blue-600",
+        text: "text-blue-600",
+        border: "border-blue-600",
+        hover: "hover:bg-blue-50"
+      }
+    };
+    return colors[color as keyof typeof colors] || colors.purple;
+>>>>>>> cursor/create-and-deploy-new-content-0cca
   };
 =======
 <<<<<<< HEAD
@@ -1201,6 +1276,7 @@ const EnhancedContentShowcase: React.FC = () => {
             <div
               key={index}
               className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-gray-300"
+<<<<<<< HEAD
             >
 <<<<<<< HEAD
               <div className="mb-4">
@@ -1367,54 +1443,53 @@ const EnhancedContentShowcase: React.FC = () => {
             <a
               href={slide.link}
               className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
             >
               <div className="mb-4">
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${item.gradient} text-white mb-3`}>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${colorClasses.bg} text-white mb-3`}>
                   {item.stats}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 text-sm mb-4">
                   {item.description}
                 </p>
               </div>
+              
               <a
                 href={item.link}
-                className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
               >
-                Explore Now
-                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                Explore Content
+                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join thousands of innovators exploring the next generation of technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/pages/RevolutionaryTechBreakthrough2025"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-              >
-                Start Exploring
-              </a>
-              <a
-                href="/pages/UltimateTechShowcase2026"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300"
-              >
-                View All Content
-              </a>
-            </div>
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-8 py-6">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to Explore?</h3>
+          <p className="text-gray-600 mb-4">
+            Dive deeper into our revolutionary content and discover the future of technology
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a
+              href="/pages/RevolutionaryTechBreakthrough2025"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              View All Breakthroughs
+            </a>
+            <a
+              href="/pages/NextGenInnovationHub2026"
+              className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors font-semibold"
+            >
+              Explore Innovations
+            </a>
           </div>
         </div>
               Explore Now →

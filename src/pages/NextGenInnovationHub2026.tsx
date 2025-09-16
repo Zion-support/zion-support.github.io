@@ -5,6 +5,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 const NextGenInnovationHub2026: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -271,6 +272,8 @@ const NextGenInnovationHub2026: React.FC = () => {
               </p>
               <div className="text-cyan-300 font-semibold">99.9% Time Reduction</div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <Header />
       
@@ -456,33 +459,17 @@ const NextGenInnovationHub2026: React.FC = () => {
                 <li>• Shape the future of innovation</li>
                 <li>• Make a global impact</li>
               </ul>
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
             </div>
-          </div>
-        </div>
-
-        {/* Innovation Stats */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-indigo-300 mb-2">1000+</div>
-            <div className="text-purple-100">Active Projects</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-300 mb-2">50+</div>
-            <div className="text-purple-100">Countries</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-300 mb-2">10K+</div>
-            <div className="text-purple-100">Innovators</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-300 mb-2">99%</div>
-            <div className="text-purple-100">Success Rate</div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -496,6 +483,8 @@ const NextGenInnovationHub2026: React.FC = () => {
               Contact Us
             </button>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Innovate?</h2>
           <p className="text-2xl text-cyan-200 mb-8 max-w-4xl mx-auto">
             Join the next generation of innovators and be part of the technological 
@@ -518,6 +507,7 @@ const NextGenInnovationHub2026: React.FC = () => {
       
       <EnhancedFooter />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate?</h2>
           <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
             Join the innovation revolution and be part of the future. Our Next-Gen Innovation Hub 
@@ -531,6 +521,8 @@ const NextGenInnovationHub2026: React.FC = () => {
       </div>
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
     </div>
   );
 };

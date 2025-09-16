@@ -2,6 +2,7 @@ import React from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated background elements */}
@@ -85,6 +86,8 @@ const RevolutionaryContentBanner: React.FC = () => {
               Learn More
             </a>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0cca
   const [currentBanner, setCurrentBanner] = useState(0);
   
   const banners = [
