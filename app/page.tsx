@@ -273,6 +273,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Promo: Agent Platform Guardrails Blueprint (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-orange-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Platform Guardrails Blueprint</h2>
+              <p className="text-gray-600 mt-2">Policy‑as‑code, approvals, risk tiers, and safe tool use at runtime.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-agent-platform-guardrails-blueprint" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Read Article</Link>
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block border border-rose-600 text-rose-700 px-5 py-3 rounded-lg font-semibold hover:bg-rose-50">Policy‑as‑Code</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Promo: Continuous Eval Gates at Scale (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
