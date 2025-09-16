@@ -89,6 +89,41 @@
   ],
   "items": [
     {
+      "title": "Guide — Shipping Trustworthy RAG in 48 Hours",
+      "href": "/pages/EdgeAICompliance2026",
+      "desc": "A rapid, practical path to grounded retrieval with eval gates",
+      "createdAt": "2025-09-16T22:10:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Safe Autonomy Rollouts: Canary, Kill‑Switch, Rollback",
+      "href": "/pages/AIIncidentResponse2026",
+      "desc": "Operational controls to keep agentic systems reliable in prod",
+      "createdAt": "2025-09-16T22:08:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Case Study — 30% Cost Reduction via Policy‑Aware Routing",
+      "href": "/pages/AdvancedAnalyticsDashboard2026",
+      "desc": "Routing policies tied to budget and latency targets at scale",
+      "createdAt": "2025-09-16T22:06:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (v3.2)",
+      "href": "/pages/AgenticOpsControls2026",
+      "desc": "Approvals, observability, and rollback patterns wired to SLOs",
+      "createdAt": "2025-09-16T22:04:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Practical Eval Gates Without Slowing Teams",
+      "href": "/pages/InnovationShowcase2026",
+      "desc": "How to maintain velocity while improving quality with evals",
+      "createdAt": "2025-09-16T22:02:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Feature — Smart Workflow Templates (Q4 2025)",
       "href": "/reports/features/feature-2025-09-smart-workflow-templates",
       "desc": "Prebuilt templates to launch eval‑gated agent workflows fast",

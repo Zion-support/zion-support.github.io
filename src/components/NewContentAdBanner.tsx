@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ContentItem = {
   title: string;
@@ -35,10 +35,9 @@ const NewContentAdBanner: React.FC = () => {
     };
   }, []);
 
-  const headline = useMemo(() => {
-    if (items.length > 0) return 'Fresh drops — explore our newest content';
-    return 'Explore our latest guides, briefs, and case studies';
-  }, [items.length]);
+  const headline = items.length > 0
+    ? 'Fresh drops — explore our newest content'
+    : 'Explore our latest guides, briefs, and case studies';
 
   if (error) {
     return (
