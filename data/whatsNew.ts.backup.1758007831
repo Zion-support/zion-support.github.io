@@ -11,10 +11,39 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+<<<<<<< HEAD
+    id: "operational-risk-metrics-for-agents-2026",
+    title: "AI 2026: Operational Risk Metrics for Agents",
+    description:
+      "Standardize override rates, violations, groundedness, and MTTR across teams.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-operational-risk-metrics-for-agents",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "production-evidence-hub-blueprint-2026",
+    title: "AI 2026: Production Evidence Hub — Blueprint",
+    description:
+      "Centralize evals, traces, incidents, approvals, and KPIs for audit‑ready ops.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-production-evidence-hub-blueprint",
+    emoji: "🧾",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "operational-evals-blueprint-2026",
+    title: "AI 2026: Operational Evals — Blueprint",
+    description:
+      "Eval gates, canary scorecards, and automated rollback with an audit‑ready evidence hub.",
+=======
     id: "operational-evals-blueprint-2026",
     title: "AI 2026: Operational Evals — Blueprint",
     description:
       "Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-e626
     ctaLabel: "Read Blueprint",
     href: "/blog/ai-2026-operational-evals-blueprint",
     emoji: "🧩",
