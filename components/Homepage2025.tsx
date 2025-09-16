@@ -105,6 +105,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
       tag: 'RevOps',
       gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'Operationalizing Agentic Workflows (2026)',
+      href: '/blog/ai-2026-operationalizing-agentic-workflows',
+      tag: 'Agentic',
+      gradient: 'from-cyan-500 to-purple-500'
     }
   ];
 
