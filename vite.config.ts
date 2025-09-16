@@ -172,7 +172,7 @@ export default defineConfig(({ command, mode }) => {
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
-      exclude: ['@rollup/rollup-linux-x64-gnu'],
+      exclude: ['@rollup/rollup-linux-x64-gnu', 'motion-utils'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {

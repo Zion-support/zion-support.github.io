@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const InteractiveTechDemo2042: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -178,10 +179,13 @@ const InteractiveTechDemo2042: React.FC = () => {
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
   };
 
   const stopDemo = () => {
     setIsRunning(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     setProgress(0);
@@ -261,11 +265,14 @@ const InteractiveTechDemo2042: React.FC = () => {
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
               </button>
             ))}
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Active Demo Display */}
@@ -410,10 +417,13 @@ const InteractiveTechDemo2042: React.FC = () => {
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
                   </div>
                 ))}
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex space-x-4">
@@ -484,10 +494,13 @@ const InteractiveTechDemo2042: React.FC = () => {
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Navigation Controls */}
@@ -541,6 +554,8 @@ const InteractiveTechDemo2042: React.FC = () => {
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
         </div>
       </div>
     </div>

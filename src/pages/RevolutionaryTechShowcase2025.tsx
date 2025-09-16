@@ -5,6 +5,7 @@
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
@@ -654,3 +655,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 };
 
 export default RevolutionaryTechShowcase2025;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
+>>>>>>> cursor/create-and-deploy-new-content-ec50

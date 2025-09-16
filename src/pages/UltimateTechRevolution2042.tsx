@@ -1,9 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ec50
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
@@ -587,3 +590,5 @@ const UltimateTechRevolution2042: React.FC = () => {
 };
 
 export default UltimateTechRevolution2042;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

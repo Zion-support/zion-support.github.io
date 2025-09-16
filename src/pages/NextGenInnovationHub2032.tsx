@@ -7,9 +7,12 @@ const NextGenInnovationHub2032: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ec50
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -568,3 +571,5 @@ const NextGenInnovationHub2032: React.FC = () => {
 };
 
 export default NextGenInnovationHub2032;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
