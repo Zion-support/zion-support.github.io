@@ -45,30 +45,8 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -82,7 +60,6 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
-<<<<<<< HEAD
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -91,8 +68,6 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
-=======
-<<<<<<< HEAD
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
@@ -185,39 +160,13 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
-=======
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-011f
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-011f
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
     tag: "Blueprint",
     date: "2025-09-15",
   },
