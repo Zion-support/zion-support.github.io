@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -104,14 +104,14 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -50 }}
             whileInView={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -120,7 +120,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
               <Sparkles className="w-4 h-4" />
               <span>Business Success Stories Showcase 2026</span>
               <Fire className="w-4 h-4 text-orange-400" />
-            </motion.div>
+            </div>
 
             {/* Title */}
             <motion.h2
@@ -149,7 +149,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             </motion.p>
 
             {/* Current Story Highlight */}
-            <motion.div
+            <div
               key={currentStory}
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
@@ -176,10 +176,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   <div className="text-sm text-purple-200">Return on Investment</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Stats */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -197,10 +197,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   </div>
                 );
               })}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.7 }}
@@ -215,10 +215,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 Start Your Journey
               </button>
-            </motion.div>
+            </div>
 
             {/* Trust Indicators */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
@@ -236,11 +236,11 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>Industry Recognition</span>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Visual */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 50 }}
             whileInView={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -264,7 +264,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   const isActive = index === currentStory;
                   
                   return (
-                    <motion.div
+                    <div
                       key={index}
                       initial={{ opacity: 0x: 20 }}
                       animate={{ 
@@ -291,7 +291,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                           <div className="text-yellow-400 font-bold text-sm">{story.roi}</div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   );
                 })}
               </div>
@@ -325,30 +325,30 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <motion.div
+            <div
               animate={{ y: [0-10] }}
               transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <TrendingUp className="w-8 h-8 text-white" />
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               animate={{ y: [010] }}
               transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 }}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <Award className="w-6 h-6 text-white" />
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               animate={{ y: [0-50] }}
               transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 }}
               className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <DollarSign className="w-4 h-4 text-white" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
 
         {/* Story Indicators */}

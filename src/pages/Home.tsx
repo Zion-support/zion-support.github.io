@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';

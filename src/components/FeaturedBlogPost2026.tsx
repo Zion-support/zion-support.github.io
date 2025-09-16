@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -159,7 +159,7 @@ const FeaturedBlogPost2026 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -180,12 +180,12 @@ const FeaturedBlogPost2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay ahead of the curve with our expert analysisbreakthrough researchand cutting-edge insights into the world of AIquantum computingand emerging technologies.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Featured Post */}
           <div className="lg:col-span-2">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.1 }}
@@ -295,13 +295,13 @@ const FeaturedBlogPost2026 = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
             {/* Categories */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -326,10 +326,10 @@ const FeaturedBlogPost2026 = () => {
                   </button>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Popular Posts */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.3 }}
@@ -357,10 +357,10 @@ const FeaturedBlogPost2026 = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Newsletter Signup */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
@@ -380,12 +380,12 @@ const FeaturedBlogPost2026 = () => {
                   Subscribe
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* View All Posts CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
@@ -395,7 +395,7 @@ const FeaturedBlogPost2026 = () => {
             View All Blog Posts
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

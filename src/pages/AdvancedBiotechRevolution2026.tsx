@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Research Overview
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -59,9 +59,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Real-time gene monitoring</li>
               <li>• Personalized treatments</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -77,9 +77,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Artificial organs</li>
               <li>• Bio-manufacturing</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -95,7 +95,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Cognitive enhancement</li>
               <li>• Neural prosthetics</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 

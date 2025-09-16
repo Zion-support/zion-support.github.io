@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -46,7 +46,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Dimension Gateway */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -66,10 +66,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
                 Open Gateway →
               </button>
-            </motion.div>
+            </div>
 
             {/* Reality Engine */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -89,10 +89,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
                 Engine Reality →
               </button>
-            </motion.div>
+            </div>
 
             {/* Consciousness Transfer */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -112,7 +112,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
                 Transfer Consciousness →
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,7 +126,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -150,9 +150,9 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                   <span>Cross-dimensional learning</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -164,7 +164,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Our interdimensional research facilities allow scientists to study 
                 phenomena that exist beyond our current understanding of physics.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -172,7 +172,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -191,7 +191,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

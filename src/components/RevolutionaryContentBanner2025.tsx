@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +47,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       
       {/* Main Banner */}
       <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -62,12 +62,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Discover the most groundbreaking technological innovations that will reshape the future
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
-            <motion.div
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
@@ -98,7 +98,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Dots */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const NextGenAISolutions2025: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const NextGenAISolutions2025: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -81,7 +81,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 features: ["Industry-specific training", "Custom algorithms", "Domain expertise"]
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const NextGenAISolutions2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -134,7 +134,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 description: "AI diagnostic system achieved 99.9% accuracy in medical image analysis, reducing diagnostic time by 70%."
               }
             ].map((story, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -145,7 +145,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 <div className="text-xl font-semibold text-white mb-2">{story.label}</div>
                 <div className="text-purple-300 mb-4">{story.company}</div>
                 <p className="text-gray-300 text-sm">{story.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -154,7 +154,7 @@ const NextGenAISolutions2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -174,7 +174,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

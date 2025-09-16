@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 =======
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -234,7 +234,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -249,7 +249,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -264,7 +264,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.filter(post => post.featured).map((post) => (
-              <motion.div
+              <div
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -287,7 +287,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                   <span className="text-sm text-gray-400">By {post.author}</span>
                   <span className="text-sm text-gray-400">{post.date}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -301,7 +301,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <motion.div
+              <div
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -331,14 +331,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Newsletter Signup */}
         <div className="container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -359,7 +359,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
               </button>
             </div>
-          </motion.div>
+          </div>
 <<<<<<< HEAD
         </div>
       </div>

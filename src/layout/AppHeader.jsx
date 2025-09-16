@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Menu, 
   X, 
@@ -81,7 +81,7 @@ export function AppHeader() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <motion.div 
+              <div 
                 className="relative"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -90,7 +90,7 @@ export function AppHeader() {
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </motion.div>
+              </div>
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
                 <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
@@ -218,7 +218,7 @@ export function AppHeader() {
               >
                 <AnimatePresence mode="wait">
                   {mobileMenuOpen ? (
-                    <motion.div
+                    <div
                       key="close"
                       initial={{ rotate: -90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
@@ -226,9 +226,9 @@ export function AppHeader() {
                       transition={{ duration: 0.2 }}
                     >
                       <X className="w-6 h-6" />
-                    </motion.div>
+                    </div>
                   ) : (
-                    <motion.div
+                    <div
                       key="menu"
                       initial={{ rotate: 90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
@@ -236,17 +236,17 @@ export function AppHeader() {
                       transition={{ duration: 0.2 }}
                     >
                       <Menu className="w-6 h-6" />
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
+                
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          <AnimatePresence>
+          
             {mobileMenuOpen && (
-              <motion.div 
+              <div 
                 className="lg:hidden"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
@@ -315,9 +315,9 @@ export function AppHeader() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          
         </div>
       </header>
       

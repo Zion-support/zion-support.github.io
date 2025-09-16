@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryFeatures2025 = () => {
   const features = [
@@ -51,7 +51,7 @@ const RevolutionaryFeatures2025 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -63,11 +63,11 @@ const RevolutionaryFeatures2025 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of technology with our groundbreaking features that are reshaping industries worldwide.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((featureindex) => (
-            <motion.div
+            <div
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,13 +79,13 @@ const RevolutionaryFeatures2025 = () => {
               />
               
               <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full">
-                <motion.div
+                <div
                   whileHover={{ scale: 1.2rotate: 10 }}
                   transition={{ duration: 0.3 }}
                   className="text-5xl mb-6"
                 >
                   {feature.icon}
-                </motion.div>
+                </div>
                 
                 <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {feature.title}
@@ -100,19 +100,19 @@ const RevolutionaryFeatures2025 = () => {
                     {feature.stats}
                   </span>
                   
-                  <motion.div
+                  <div
                     whileHover={{ x: 5 }}
                     className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
                   >
                     →
-                  </motion.div>
+                  </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -142,7 +142,7 @@ const RevolutionaryFeatures2025 = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

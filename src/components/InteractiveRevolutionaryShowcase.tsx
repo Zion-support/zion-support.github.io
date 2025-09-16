@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveRevolutionaryShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -53,7 +53,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -65,10 +65,10 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Explore the most advanced technologies of 2026 with interactive demonstrations and real-time experiences
           </p>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,12 +90,12 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Area */}
         <div className="relative">
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -105,14 +105,14 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
             >
               {/* Left Side - Content */}
               <div>
-                <motion.div
+                <div
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className={`text-8xl mb-6 text-center lg:text-left`}
                 >
                   {technologies[activeTab as keyof typeof technologies].icon}
-                </motion.div>
+                </div>
                 
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
@@ -152,31 +152,31 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                   ))}
                 </motion.ul>
 
-                <motion.div
+                <div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
                   className="flex space-x-4"
                 >
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300`}
                   >
                     Experience Demo →
-                  </motion.button>
-                  <motion.button
+                  </button>
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                   >
                     Learn More
-                  </motion.button>
-                </motion.div>
+                  </button>
+                </div>
               </div>
 
               {/* Right Side - Interactive Demo */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -199,21 +199,21 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                     </div>
                   </div>
 
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Launch Interactive Demo
-                  </motion.button>
+                  </button>
                 </div>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+              </div>
+            </div>
+          
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -223,14 +223,14 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
             Join the revolutionary technology movement and be part of the most significant breakthrough in human history
           </p>
-          <motion.button
+          <button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             Start Your Journey →
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
     </div>
   );

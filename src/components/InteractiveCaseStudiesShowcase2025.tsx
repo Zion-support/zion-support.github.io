@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -182,7 +182,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -202,10 +202,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
             Discover how leading companies are achieving remarkable results with our AI solutions. 
             See the measurable impact on their business.
           </p>
-        </motion.div>
+        </div>
 
         {/* Industry Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -230,12 +230,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
               </span>
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Case Study Details */}
-          <motion.div
+          <div
             key={currentStudy?.id}
             initial={{ opacity: 0x: -30 }}
             animate={{ opacity: 1x: 0 }}
@@ -331,10 +331,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 {currentStudy?.teamSize} team members
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Visual Content */}
-          <motion.div
+          <div
             key={`visual-${currentStudy?.id}`}
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
@@ -383,11 +383,11 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -420,10 +420,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           >
             <ArrowRight className="w-5 h-5 text-gray-600" />
           </button>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -447,7 +447,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

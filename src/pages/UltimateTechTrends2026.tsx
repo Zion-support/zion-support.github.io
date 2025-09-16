@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechTrends2026: React.FC = () => {
   const [expandedTrend, setExpandedTrend] = useState<string | null>(null);
@@ -79,7 +79,7 @@ const UltimateTechTrends2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -102,13 +102,13 @@ const UltimateTechTrends2026: React.FC = () => {
                 Download Report
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Trends Grid */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -116,11 +116,11 @@ const UltimateTechTrends2026: React.FC = () => {
         >
           <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Technology Trends</h2>
           <p className="text-xl opacity-80">Click on any trend to explore its impact and timeline</p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trend, index) => (
-            <motion.div
+            <div
               key={trend.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ const UltimateTechTrends2026: React.FC = () => {
               </button>
 
               {expandedTrend === trend.id && (
-                <motion.div
+                <div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
@@ -166,16 +166,16 @@ const UltimateTechTrends2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Market Impact Section */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -183,10 +183,10 @@ const UltimateTechTrends2026: React.FC = () => {
         >
           <h2 className="text-4xl font-bold mb-4">📊 Market Impact Analysis</h2>
           <p className="text-xl opacity-80">How these trends are transforming industries worldwide</p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -196,9 +196,9 @@ const UltimateTechTrends2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Market Value</h3>
             <div className="text-4xl font-bold text-green-400 mb-2">$15.2T</div>
             <p className="text-sm opacity-60">Projected by 2030</p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -208,9 +208,9 @@ const UltimateTechTrends2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Companies</h3>
             <div className="text-4xl font-bold text-blue-400 mb-2">2,500+</div>
             <p className="text-sm opacity-60">Active in these fields</p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -220,9 +220,9 @@ const UltimateTechTrends2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Jobs Created</h3>
             <div className="text-4xl font-bold text-purple-400 mb-2">5M+</div>
             <p className="text-sm opacity-60">New positions by 2028</p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -232,13 +232,13 @@ const UltimateTechTrends2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Global Impact</h3>
             <div className="text-4xl font-bold text-orange-400 mb-2">95%</div>
             <p className="text-sm opacity-60">Of industries affected</p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Future Predictions */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -246,10 +246,10 @@ const UltimateTechTrends2026: React.FC = () => {
         >
           <h2 className="text-4xl font-bold mb-4">🔮 Future Predictions</h2>
           <p className="text-xl opacity-80">What to expect in the coming years</p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -270,9 +270,9 @@ const UltimateTechTrends2026: React.FC = () => {
                 <span>Synthetic intelligence surpasses human performance in specific domains</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
@@ -293,13 +293,13 @@ const UltimateTechTrends2026: React.FC = () => {
                 <span>Interdimensional technology begins commercial applications</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
@@ -320,7 +320,7 @@ const UltimateTechTrends2026: React.FC = () => {
               Join Our Community
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

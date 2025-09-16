@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
 
 const AI2025LatestInnovationsShowcase = () => {
@@ -77,7 +77,7 @@ const AI2025LatestInnovationsShowcase = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -96,13 +96,13 @@ const AI2025LatestInnovationsShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0scale: 1.1 }}
                 animate={{ opacity: 1scale: 1 }}
@@ -133,8 +133,8 @@ const AI2025LatestInnovationsShowcase = () => {
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
                   <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Dots */}
@@ -154,7 +154,7 @@ const AI2025LatestInnovationsShowcase = () => {
         </div>
 
         {/* Features Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.3 }}
@@ -172,10 +172,10 @@ const AI2025LatestInnovationsShowcase = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -198,7 +198,7 @@ const AI2025LatestInnovationsShowcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

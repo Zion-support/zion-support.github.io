@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedSpaceTech2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 Mission Overview
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -59,9 +59,9 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <li>• Advanced life support</li>
               <li>• Sustainable agriculture</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -77,9 +77,9 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <li>• Quantum propulsion</li>
               <li>• Cryogenic hibernation</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -95,7 +95,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <li>• Space tourism</li>
               <li>• Asteroid mining</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -144,7 +144,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-cyan-500"></div>
           
           <div className="space-y-12">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -158,9 +158,9 @@ const AdvancedSpaceTech2026: React.FC = () => {
               </div>
               <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex-shrink-0"></div>
               <div className="w-1/2 pl-8"></div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -174,9 +174,9 @@ const AdvancedSpaceTech2026: React.FC = () => {
                   <p className="text-cyan-100">Lunar Base Construction</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -190,7 +190,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
               </div>
               <div className="w-8 h-8 bg-purple-500 rounded-full border-4 border-white flex-shrink-0"></div>
               <div className="w-1/2 pl-8"></div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

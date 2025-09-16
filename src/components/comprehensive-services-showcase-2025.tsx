@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search, Filter, Grid3X3, List, 
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
@@ -179,7 +179,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
               animate={{
@@ -201,7 +201,7 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -225,7 +225,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },
                 { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
               ].map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -237,7 +237,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   </div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-cyan-300">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -254,7 +254,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -351,7 +351,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -433,13 +433,13 @@ export default function ComprehensiveServicesShowcase2025() {
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         ) : (
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -525,7 +525,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         )}
@@ -557,7 +557,7 @@ export default function ComprehensiveServicesShowcase2025() {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -584,7 +584,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 View Pricing Plans
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </Layout>

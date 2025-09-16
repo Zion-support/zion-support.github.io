@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   TrendingUp
   Brain
@@ -258,7 +258,7 @@ const AITrends2026Predictions = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-1 h-1 bg-indigo-400 rounded-full opacity-30"
             style={{
@@ -280,7 +280,7 @@ const AITrends2026Predictions = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -302,10 +302,10 @@ const AITrends2026Predictions = () => {
             Expert predictions and probability assessments for the most significant 
             technological breakthroughs expected in 2026.
           </p>
-        </motion.div>
+        </div>
 
         {/* Statistics */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -335,10 +335,10 @@ const AITrends2026Predictions = () => {
             </div>
             <div className="text-gray-300">Investment</div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Category Tabs */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -362,10 +362,10 @@ const AITrends2026Predictions = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Predictions Grid */}
-        <motion.div
+        <div
           key={activeCategory}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -373,7 +373,7 @@ const AITrends2026Predictions = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {categories[activeCategory as keyof typeof categories].predictions.map((predictionindex) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -440,12 +440,12 @@ const AITrends2026Predictions = () => {
 
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -476,7 +476,7 @@ const AITrends2026Predictions = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

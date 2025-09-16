@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Sun, Moon, Monitor } from 'lucide-react';
 
 interface ThemeToggleProps {
@@ -22,7 +22,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
             const isActive = currentTheme === theme.id;
             
             return (
-              <motion.button
+              <button
                 key={theme.id}
                 onClick={() => onThemeChange(theme.id)}
                 className={`relative p-3 rounded-xl transition-all duration-300 ${
@@ -39,20 +39,20 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                 
                 {/* Active indicator */}
                 {isActive && (
-                  <motion.div
+                  <div
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                     layoutId="activeTheme"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-              </motion.button>
+              </button>
             );
           })}
         </div>
       </div>
       
       {/* Theme indicator */}
-      <motion.div
+      <div
         className="mt-3 text-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
         <span className="text-xs text-gray-400 font-medium">
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
-      </motion.div>
+      </div>
     </div>
   );
 };

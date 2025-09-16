@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -34,14 +34,14 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Quantum Capabilities Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -51,7 +51,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
               Discover the unprecedented computational power that quantum computing brings to the table
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -98,7 +98,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 features: ["Gravitational Waves", "Magnetic Fields", "Time Dilation"]
               }
             ].map((capability, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -126,7 +126,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       {/* Quantum Applications Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -136,10 +136,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
               See how quantum computing is revolutionizing industries and solving humanity's greatest challenges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -198,9 +198,9 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -259,7 +259,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,7 +267,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       {/* Quantum Technology Stack */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -277,10 +277,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
               The complete ecosystem of quantum computing technologies and tools
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -309,9 +309,9 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                   Neutral Atom Arrays
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -340,9 +340,9 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                   Quantum Machine Learning
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -371,7 +371,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                   Quantum Machine Learning
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -379,7 +379,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       {/* Performance Metrics */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -389,7 +389,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
               Measurable improvements and breakthrough performance indicators
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -398,7 +398,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               { metric: "1000+", label: "Qubits", description: "Current Generation" },
               { metric: "0.001s", label: "Coherence Time", description: "Quantum State Stability" }
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -408,7 +408,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 <div className="text-5xl font-bold text-cyan-400 mb-2">{item.metric}</div>
                 <div className="text-xl font-semibold text-white mb-2">{item.label}</div>
                 <div className="text-cyan-200 text-sm">{item.description}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -417,7 +417,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -438,7 +438,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

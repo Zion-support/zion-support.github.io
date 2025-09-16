@@ -4,14 +4,14 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -27,10 +27,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience the future of computing with quantum technology that solves impossible problems, 
             breaks encryption, and revolutionizes industries across the globe.
           </p>
-        </motion.div>
+        </div>
 
         {/* Quantum Capabilities Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -77,10 +77,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Protein folding simulation</li>
             </ul>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quantum Applications */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,10 +146,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quantum Hardware Showcase */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -197,10 +197,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quantum Software Stack */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -270,10 +270,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -293,7 +293,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175

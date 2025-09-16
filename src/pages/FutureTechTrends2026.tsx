@@ -19,7 +19,7 @@ const FutureTechTrends2026: React.FC = () => {
                 Get Trend Report
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

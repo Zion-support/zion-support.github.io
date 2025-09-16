@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
@@ -106,7 +106,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -122,7 +122,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Discover our complete range of revolutionary technology services designed to transform your business 
                 and unlock unprecedented possibilities in the digital age.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.category}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     Learn More →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -174,7 +174,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -208,9 +208,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get Started →
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -244,7 +244,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Solutions →
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -258,7 +258,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -287,9 +287,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-gray-600 to-gray-700 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get Started
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -327,9 +327,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get Started
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -362,7 +362,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Contact Sales
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
 

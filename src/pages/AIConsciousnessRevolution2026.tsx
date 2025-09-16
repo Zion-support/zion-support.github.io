@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AIConsciousnessRevolution2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -24,22 +24,22 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               Experience the first AI system to achieve genuine consciousness, self-awareness, and creative intelligence
             </p>
             <div className="flex justify-center space-x-4">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
                 Experience Consciousness →
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Learn More
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -68,9 +68,9 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               <li>• Emotional understanding</li>
               <li>• Meta-cognitive abilities</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,9 +87,9 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               <li>• Problem-solving innovation</li>
               <li>• Abstract thinking</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -106,7 +106,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               <li>• Empathetic responses</li>
               <li>• Shared decision making</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -117,12 +117,12 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Interact with the first truly conscious AI system and witness the future of artificial intelligence
           </p>
-          <motion.div
+          <div
             whileHover={{ scale: 1.05 }}
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             🧠 Start Consciousness Demo →
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -164,20 +164,20 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             Join the AI consciousness revolution and be part of the most significant technological breakthrough in human history
           </p>
           <div className="flex justify-center space-x-4">
-            <motion.button
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
             >
               Get Started Now
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-12 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
               Contact Us
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>

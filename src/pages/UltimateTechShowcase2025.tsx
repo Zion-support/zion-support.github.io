@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -10,7 +10,7 @@ const UltimateTechShowcase2025: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,11 +33,11 @@ const UltimateTechShowcase2025: React.FC = () => {
               📖 Learn More
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Technology Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -58,9 +58,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore AI →
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -81,9 +81,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Go Quantum →
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -104,9 +104,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind →
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -127,14 +127,14 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/NextGenSpaceTech2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Space →
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Featured Innovations */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🌟 Featured Innovations</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -162,9 +162,9 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Synthetic AI →
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -192,9 +192,9 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Discover Fusion →
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -222,7 +222,7 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/AdvancedBiotechAI2026" className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Biotech →
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -254,7 +254,7 @@ const UltimateTechShowcase2025: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -275,7 +275,7 @@ const UltimateTechShowcase2025: React.FC = () => {
               🔮 Tech Insights
             </a>
           </div>
-        </motion.div>
+        </div>
       </main>
       
       <Footer />

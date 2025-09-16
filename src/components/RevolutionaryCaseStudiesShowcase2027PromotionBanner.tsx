@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Award
   TrendingUp
@@ -48,7 +48,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: -100 }}
       animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
       transition={{ duration: 0.8ease: "easeOut" }}
@@ -64,7 +64,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex-1">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -79,7 +79,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             <motion.h2
               initial={{ opacity: 0x: -30 }}
@@ -99,7 +99,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
               Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
             </motion.p>
 
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.5 }}
@@ -114,11 +114,11 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 <Award className="w-4 h-4" />
                 Success Stories
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Rotating Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -126,7 +126,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           >
             <div className="relative w-24 h-24">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={stat.label}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{
@@ -143,7 +143,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                     <div className="text-xs text-gray-700">{stat.label}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
             
@@ -155,11 +155,11 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 Results
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Progress Indicator */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -170,17 +170,17 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
             <span>Ready to Explore</span>
           </div>
           <div className="w-full bg-black/20 rounded-full h-1.5">
-            <motion.div
+            <div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 4delay: 1 }}
               className="h-1.5 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Floating Elements */}
-        <motion.div
+        <div
           animate={{
             y: [0-60],
             rotate: [020]
@@ -193,9 +193,9 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute top-3 right-3 w-5 h-5 bg-black/20 rounded-full flex items-center justify-center"
         >
           <TrendingUp className="w-3 h-3 text-gray-900" />
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           animate={{
             y: [060],
             rotate: [0-20]
@@ -209,7 +209,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute bottom-3 left-3 w-4 h-4 bg-black/20 rounded-full flex items-center justify-center"
         >
           <Award className="w-2 h-2 text-gray-900" />
-        </motion.div>
+        </div>
       </div>
 
       {/* Dismiss Button */}
@@ -219,7 +219,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
       >
         <X className="w-3 h-3 text-gray-900" />
       </button>
-    </motion.div>
+    </div>
   );
 };
 

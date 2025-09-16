@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
+
 =======
 import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -116,7 +116,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -194,7 +194,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
 >>>>>>> cursor/create-and-deploy-new-content-502e
           ))}
         </div>
@@ -309,7 +309,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               View All Content
             </button>
           </div>
-        </motion.div>
+        </div>
 =======
           )}
 >>>>>>> cursor/create-and-deploy-new-content-502e

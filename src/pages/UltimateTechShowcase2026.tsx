@@ -220,7 +220,7 @@ const UltimateTechShowcase2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -235,7 +235,7 @@ const UltimateTechShowcase2026: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Experience the most comprehensive collection of revolutionary technologies that are reshaping our world and defining the future of human civilization.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -243,7 +243,7 @@ const UltimateTechShowcase2026: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -253,7 +253,7 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-3xl font-bold mb-2 text-emerald-400">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -269,7 +269,7 @@ const UltimateTechShowcase2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech) => (
-              <motion.div
+              <div
                 key={tech.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -313,7 +313,7 @@ const UltimateTechShowcase2026: React.FC = () => {
                   <span className="text-sm text-gray-400">Impact Level:</span>
                   <span className="text-sm font-semibold text-emerald-400">{tech.impact}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
@@ -359,7 +359,7 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
 =======
         <div className="container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -377,7 +377,7 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Contact Our Experts
               </button>
             </div>
-          </motion.div>
+          </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-502e
         </div>

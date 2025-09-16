@@ -33,7 +33,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
       {/* Features Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -46,11 +46,11 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Discover the cutting-edge technologies that are revolutionizing industries 
               and creating unprecedented opportunities for growth and innovation.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
                   <CheckCircle className="w-5 h-5" />
                   <span>{feature.impact}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -81,7 +81,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -103,7 +103,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de62
 =======

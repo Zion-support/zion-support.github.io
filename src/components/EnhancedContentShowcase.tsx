@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -379,7 +379,7 @@ const EnhancedContentShowcase: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -402,7 +402,7 @@ const EnhancedContentShowcase: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Experience our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -481,7 +481,7 @@ const EnhancedContentShowcase: React.FC = () => {
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -588,8 +588,8 @@ const EnhancedContentShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Controls */}
@@ -648,7 +648,7 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Quick Access Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {showcaseItems.map((item, index) => (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -667,7 +667,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 >
                   Explore →
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -746,7 +746,7 @@ const EnhancedContentShowcase: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
-          <motion.div
+          <div
             key={slide.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -763,13 +763,13 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               Explore Now →
             </a>
-          </motion.div>
+          </div>
         ))}
 <<<<<<< HEAD
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -830,22 +830,22 @@ const EnhancedContentShowcase: React.FC = () => {
                       </div>
                     </div>
                     
-                    <motion.button
+                    <button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={`w-full bg-gradient-to-r ${contentCategories[activeCategory].color} py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                     >
                       Explore Content →
-                    </motion.button>
+                    </button>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -864,7 +864,7 @@ const EnhancedContentShowcase: React.FC = () => {
               Create Account
             </button>
           </div>
-        </motion.div>
+        </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======

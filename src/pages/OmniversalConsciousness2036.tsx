@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const OmniversalConsciousness2036: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const OmniversalConsciousness2036: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -37,13 +37,13 @@ const OmniversalConsciousness2036: React.FC = () => {
                 🌌 Transcendent Awareness
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -55,7 +55,7 @@ const OmniversalConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Journey through the infinite levels of consciousness evolution
           </p>
-        </motion.div>
+        </div>
 
         <div className="space-y-8">
           {[
@@ -108,7 +108,7 @@ const OmniversalConsciousness2036: React.FC = () => {
               borderColor: "border-fuchsia-500/30"
             }
           ].map((level, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -130,7 +130,7 @@ const OmniversalConsciousness2036: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -138,7 +138,7 @@ const OmniversalConsciousness2036: React.FC = () => {
       {/* Benefits Section */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -150,7 +150,7 @@ const OmniversalConsciousness2036: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the infinite benefits of unified consciousness
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -185,7 +185,7 @@ const OmniversalConsciousness2036: React.FC = () => {
                 description: "Complete inner peace through understanding of universal unity"
               }
             ].map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <div className="text-6xl mb-4 text-center">{benefit.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{benefit.title}</h3>
                 <p className="text-gray-300 text-center">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -203,7 +203,7 @@ const OmniversalConsciousness2036: React.FC = () => {
 
       {/* Integration Process */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -215,10 +215,10 @@ const OmniversalConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The journey to omniversal consciousness through guided evolution
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -240,9 +240,9 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <span className="text-gray-300">{step}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -271,13 +271,13 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <span className="text-violet-400">∞ (Transcendent)</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -297,7 +297,7 @@ const OmniversalConsciousness2036: React.FC = () => {
               Learn More
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

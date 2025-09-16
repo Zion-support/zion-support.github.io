@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Crown, Star, TrendingUp, ArrowRight,
@@ -132,7 +132,7 @@ export default function UltimateServicesShowcase2029() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -199,7 +199,7 @@ export default function UltimateServicesShowcase2029() {
                 <div className="text-gray-400">Support Available</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -263,14 +263,14 @@ export default function UltimateServicesShowcase2029() {
       {/* Services Grid */}
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 variants={itemVariants}
                 className="group relative"
@@ -360,9 +360,9 @@ export default function UltimateServicesShowcase2029() {
                   {/* Hover Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* No Results */}
           {filteredServices.length === 0 && (
@@ -390,7 +390,7 @@ export default function UltimateServicesShowcase2029() {
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -422,7 +422,7 @@ export default function UltimateServicesShowcase2029() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

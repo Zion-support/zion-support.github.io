@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+
 ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAward
 
 const UltimateTechShowcase2026Banner = () => {
@@ -54,7 +54,7 @@ const UltimateTechShowcase2026Banner = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -76,17 +76,17 @@ const UltimateTechShowcase2026Banner = () => {
             Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
           </p>
-        </motion.div>
+        </div>
 
         {/* Technology Showcase */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {technologies.map((techindex) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,20 +117,20 @@ const UltimateTechShowcase2026Banner = () => {
                   <span>{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
+                  <div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${tech.progress}%` }}
                     transition={{ duration: 1delay: index * 0.2 }}
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                  ></motion.div>
+                  ></div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Achievements */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -142,7 +142,7 @@ const UltimateTechShowcase2026Banner = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {achievements.map((achievementindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -156,13 +156,13 @@ const UltimateTechShowcase2026Banner = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.number}</div>
                 <div className="text-gray-300 text-sm">{achievement.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -179,7 +179,7 @@ const UltimateTechShowcase2026Banner = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
@@ -189,18 +189,18 @@ const UltimateTechShowcase2026Banner = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </motion.button>
+              </button>
               
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
               >
                 Schedule Demo
-              </motion.button>
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

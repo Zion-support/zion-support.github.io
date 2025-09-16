@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, 
   Zap, 
@@ -99,7 +99,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -133,14 +133,14 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                 Get Started
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Revolutionary Trends Section */}
       <section id="trends" className="py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -152,13 +152,13 @@ const RevolutionaryTechTrends2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               These groundbreaking trends are not just predictions—they're already transforming industries and creating new possibilities for businesses worldwide.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => {
               const IconComponent = trend.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   <a href="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -195,7 +195,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -207,13 +207,13 @@ const RevolutionaryTechTrends2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Early adoption of these revolutionary trends positions your organization at the forefront of innovation, driving measurable business outcomes.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +225,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -235,7 +235,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -254,7 +254,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                 Explore Services
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
@@ -134,7 +134,7 @@ const UltimateContentShowcase2026: React.FC = () => {
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
           transition={{ duration: 0.8 }}
@@ -149,10 +149,10 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Explore the most advanced technologies ever created, pushing the boundaries of what's possible in 2026
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -172,11 +172,11 @@ const UltimateContentShowcase2026: React.FC = () => {
               {category.name}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Content Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCategory}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -186,7 +186,7 @@ const UltimateContentShowcase2026: React.FC = () => {
           >
             <div className="grid md:grid-cols-2 gap-8">
               {currentCategory.content.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -219,14 +219,14 @@ const UltimateContentShowcase2026: React.FC = () => {
                   <button className={`w-full bg-gradient-to-r ${currentCategory.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                     Explore {item.title} →
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Interactive Demo Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -267,10 +267,10 @@ const UltimateContentShowcase2026: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -283,7 +283,7 @@ const UltimateContentShowcase2026: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -304,13 +304,13 @@ const UltimateContentShowcase2026: React.FC = () => {
                   <div className="text-sm opacity-75">{testimonial.role}</div>
                   <div className="text-sm opacity-75">{testimonial.company}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -328,7 +328,7 @@ const UltimateContentShowcase2026: React.FC = () => {
               📞 Schedule Demo
             </button>
           </div>
-        </motion.div>
+        </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
       id: 1,
@@ -379,7 +379,7 @@ const UltimateContentShowcase2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -394,13 +394,13 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Experience the most advanced technologies that will reshape our world forever
           </p>
-        </motion.div>
+        </div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Showcase Carousel */}
           <div className="relative overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -419,7 +419,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {showcaseItems[currentSlide].features.map((feature, index) => (
-                        <motion.div
+                        <div
                           key={index}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -428,7 +428,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                         >
                           <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></span>
                           <span className="text-purple-200">{feature}</span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                     <a
@@ -454,8 +454,8 @@ const UltimateContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
 
             {/* Navigation Arrows */}
             <button
@@ -508,7 +508,7 @@ const UltimateContentShowcase2026: React.FC = () => {
 
         {/* Quick Access Grid */}
         <div className="mt-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -516,11 +516,11 @@ const UltimateContentShowcase2026: React.FC = () => {
           >
             <h3 className="text-3xl font-bold mb-4">Quick Access to All Technologies</h3>
             <p className="text-lg opacity-80">Explore all our revolutionary technologies at once</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {showcaseItems.map((item, index) => (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -537,7 +537,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                 >
                   Explore Now →
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

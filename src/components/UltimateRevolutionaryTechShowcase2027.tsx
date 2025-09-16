@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -85,7 +85,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   }, []);
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
@@ -102,14 +102,14 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: isVisible ? 1 : 0 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-4"
           >
             🌟 ULTIMATE REVOLUTIONARY TECH 2027
-          </motion.div>
+          </div>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
@@ -132,7 +132,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Technology Details */}
-            <motion.div
+            <div
               key={currentTech}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -160,7 +160,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {revolutionaryTechs[currentTech].features.map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -169,13 +169,13 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                     <span className="text-white font-medium">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-6">
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -184,13 +184,13 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Visual Representation */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
@@ -217,7 +217,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 
                 {/* Floating Elements */}
                 {[...Array(20)].map((_, i) => (
-                  <motion.div
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
@@ -236,7 +236,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -255,7 +255,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ delay: 1.5 }}
@@ -275,10 +275,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 🚀 Ultimate Tech Showcase →
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

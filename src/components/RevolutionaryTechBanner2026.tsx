@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const RevolutionaryTechBanner2026: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 backdrop-blur-sm rounded-2xl p-8 mb-8 text-white">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -69,7 +69,7 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </motion.p>
 
           {/* Feature Highlights */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -90,10 +90,10 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
               <p className="text-sm opacity-80">Direct brain-computer communication</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Call to Action Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -123,10 +123,10 @@ const RevolutionaryTechBanner2026: React.FC = () => {
             >
               🧬 Experience Neural Tech →
             </motion.a>
-          </motion.div>
+          </div>
 
           {/* Animated Progress Bar */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -134,7 +134,7 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           >
             <div className="text-sm opacity-80 mb-2">Revolutionary Technology Progress</div>
             <div className="w-full bg-white/20 rounded-full h-2">
-              <motion.div
+              <div
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -142,8 +142,8 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               />
             </div>
             <div className="text-xs opacity-60 mt-2">100% Complete - Ready for Launch</div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );

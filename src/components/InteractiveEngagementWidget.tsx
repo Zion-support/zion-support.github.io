@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 interface EngagementData {
   visitors: number;
@@ -79,7 +79,7 @@ export default function InteractiveEngagementWidget() {
   if (!isVisible) return null;
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
@@ -118,7 +118,7 @@ export default function InteractiveEngagementWidget() {
       {/* Rotating testimonials */}
       <div className="border-t pt-3">
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={currentTestimonial}
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
@@ -143,8 +143,8 @@ export default function InteractiveEngagementWidget() {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
       </div>
 
       {/* Call to action */}
@@ -153,6 +153,6 @@ export default function InteractiveEngagementWidget() {
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 }

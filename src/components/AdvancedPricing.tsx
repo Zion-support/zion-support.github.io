@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 CheckStarZapCrownInfinity
 
 interface PricingTier {
@@ -90,7 +90,7 @@ export default function AdvancedPricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tierindex) => (
-            <motion.div
+            <div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export default function AdvancedPricing() {
               >
                 {tier.ctaText}
               </motion.a>
-            </motion.div>
+            </div>
           ))}
         </div>
 

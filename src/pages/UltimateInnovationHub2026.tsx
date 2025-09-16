@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateInnovationHub2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -61,7 +61,7 @@ const UltimateInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -85,13 +85,13 @@ const UltimateInnovationHub2026: React.FC = () => {
                 Watch Live Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -118,10 +118,10 @@ const UltimateInnovationHub2026: React.FC = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Active Technology Display */}
-        <motion.div
+        <div
           key={activeTab}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -163,10 +163,10 @@ const UltimateInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Innovation Showcase Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -212,7 +212,7 @@ const UltimateInnovationHub2026: React.FC = () => {
                 color: "from-violet-500 to-fuchsia-500"
               }
             ].map((innovation, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -227,13 +227,13 @@ const UltimateInnovationHub2026: React.FC = () => {
                 <button className={`bg-gradient-to-r ${innovation.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore →
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -255,7 +255,7 @@ const UltimateInnovationHub2026: React.FC = () => {
               🎮 Try Interactive Demo
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

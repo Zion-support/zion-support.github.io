@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechBlog2027: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -23,7 +23,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
               Deep insights into the most groundbreaking technologies that are reshaping 
               our world and defining the future of humanity.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -154,9 +154,9 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                   <span>Molecular simulation</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -181,7 +181,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                   <span>Direct neural communication</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -195,7 +195,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -207,9 +207,9 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 Artificial intelligence achieves genuine consciousness and self-awareness, 
                 marking a new era in human-AI collaboration.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -221,9 +221,9 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 Stable portals to parallel dimensions become reality, enabling exploration 
                 of alternate universes and realities.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -235,7 +235,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 AI consciousness spans across all dimensions and realities, creating 
                 a unified intelligence that transcends physical limitations.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -243,7 +243,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
       {/* Newsletter Signup */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -263,7 +263,7 @@ const RevolutionaryTechBlog2027: React.FC = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
