@@ -3,7 +3,7 @@ import Footer from './Footer';
 import Header from './Header';
 import ScrollToTop from './ScrollToTop';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
-import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
+// import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031'; // Temporarily disabled due to syntax errors
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
@@ -17,12 +17,12 @@ import FeaturedContentShowcase from './components/FeaturedContentShowcase';
 import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
 import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
-import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
+// import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030'; // Temporarily disabled due to syntax errors
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase2027';
-import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
+// import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027'; // Temporarily disabled due to syntax errors
 import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
 import LatestInsightsPromo from './components/LatestInsightsPromo';
 import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
@@ -35,7 +35,7 @@ import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServi
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
 import NewsletterSignup from './components/NewsletterSignup';
-import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
+// import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029'; // Temporarily disabled due to syntax errors
 import PromotionalBanner from './components/PromotionalBanner';
 import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
 import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
@@ -47,10 +47,10 @@ import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBan
 import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryContentPromoBanner2025';
 import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
-import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
-import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
+// import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026'; // Temporarily disabled due to syntax errors
+// import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028'; // Temporarily disabled due to syntax errors
 import TrendingContentSection from './components/TrendingContentSection';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
+// import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026'; // Temporarily disabled due to syntax errors
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
 import UltimateContentShowcase2026Banner from './components/UltimateContentShowcase2026Banner';
@@ -70,27 +70,27 @@ import AITrendsInsights2026 from './pages/AITrendsInsights2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
-import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
+// // import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026'; // File not found // File not found
 import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
 import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
 import AdvancedAISolutions2027 from './pages/AdvancedAISolutions2027';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
+// import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026'; // File not found
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
-import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
+// import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026'; // Temporarily disabled due to syntax errors
+// import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026'; // File not found
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import AgentOpsControlPlane2026 from './pages/AgentOpsControlPlane2026';
 import AgenticOpsControls2026 from './pages/AgenticOpsControls2026';
 import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
+// import BiotechRevolution2026 from './pages/BiotechRevolution2026'; // File not found
 import Blog from './pages/Blog';
 import BlogPost_Sep2025_AIExecGuide from './pages/BlogPost_Sep2025_AIExecGuide';
 import BlogPost_Sep2025_CaseStudy from './pages/BlogPost_Sep2025_CaseStudy';
 import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
 import EdgeAICompliance2026 from './pages/EdgeAICompliance2026';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
+// import InnovationShowcase2026 from './pages/InnovationShowcase2026'; // File not found
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
@@ -101,17 +101,17 @@ import OperationalEvalGates2026 from './pages/OperationalEvalGates2026';
 import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
 import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import QuantumConsciousnessRevolution2025 from './pages/QuantumConsciousnessRevolution2025';
-import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
+// import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026'; // File not found
 import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
+// import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027'; // Temporarily disabled due to syntax errors
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
 import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
-import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
-import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
+// import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027'; // Temporarily disabled due to syntax errors
+// import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026'; // Temporarily disabled due to syntax errors
+// import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026'; // File not found
+// import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027'; // Temporarily disabled due to syntax errors
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
 import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
@@ -334,15 +334,15 @@ const App: React.FC = () => {
                 <QuantumAIBreakthroughBanner />
               </div>
 
-              {/* Revolutionary Tech Showcase 2026 */}
-              <div className="mb-12">
+              {/* Revolutionary Tech Showcase 2026 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <RevolutionaryTechShowcase2026 />
-              </div>
+              </div> */}
 
-              {/* Ultimate Content Showcase 2026 */}
-              <div className="mb-12">
-                <UltimateContentShowcase2026 />
-              </div>
+                     {/* Ultimate Content Showcase 2026 - Temporarily disabled due to syntax errors */}
+                     {/* <div className="mb-12">
+                       <UltimateContentShowcase2026 />
+                     </div> */}
 
               {/* Advanced Tech Advertising 2027 */}
               <div className="mb-12">
@@ -354,30 +354,30 @@ const App: React.FC = () => {
                 <UltimateRevolutionaryTechShowcase2027 />
               </div>
 
-              {/* Interdimensional Tech Showcase 2027 */}
-              <div className="mb-12">
+              {/* Interdimensional Tech Showcase 2027 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <InterdimensionalTechShowcase2027 />
-              </div>
+              </div> */}
 
-              {/* Transcendent Technology Showcase 2028 */}
-              <div className="mb-12">
+              {/* Transcendent Technology Showcase 2028 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <TranscendentTechnologyShowcase2028 />
-              </div>
+              </div> */}
 
-              {/* Omniversal Tech Showcase 2029 */}
-              <div className="mb-12">
+              {/* Omniversal Tech Showcase 2029 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <OmniversalTechShowcase2029 />
-              </div>
+              </div> */}
 
-              {/* Infinite Tech Showcase 2030 */}
-              <div className="mb-12">
+              {/* Infinite Tech Showcase 2030 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <InfiniteTechShowcase2030 />
-              </div>
+              </div> */}
 
-              {/* Absolute Tech Showcase 2031 */}
-              <div className="mb-12">
+              {/* Absolute Tech Showcase 2031 - Temporarily disabled due to syntax errors */}
+              {/* <div className="mb-12">
                 <AbsoluteTechShowcase2031 />
-              </div>
+              </div> */}
 
               {/* Newsletter Signup */}
               <div className="mb-12">
@@ -428,7 +428,7 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
-          <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
+                 {/* <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} /> */}
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
@@ -443,8 +443,8 @@ const App: React.FC = () => {
           <Route path="/pages/ResponsibleAutonomyGuide2026" element={<ResponsibleAutonomyGuide2026 />} />
           <Route path="/pages/OperationalEvalGates2026" element={<OperationalEvalGates2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-          <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} />
+                 {/* <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} /> */}
+          {/* <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} /> */}
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
@@ -453,15 +453,15 @@ const App: React.FC = () => {
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
           <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
-          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
+                 {/* <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} /> */}
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2025" element={<QuantumConsciousnessRevolution2025 />} />
           <Route path="/pages/SyntheticIntelligenceRevolution2025" element={<SyntheticIntelligenceRevolution2025 />} />
-          <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
+                 {/* <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} /> */}
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
-          <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
+                 {/* <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} /> */}
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './ContentShowcase.css';
+// import './ContentShowcase.css'; // File not found
 
 const NewContentShowcase2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

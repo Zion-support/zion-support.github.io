@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production",
     "lint": "eslint .",
     "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
     "preview": "vite preview",

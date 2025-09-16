@@ -2,7 +2,8 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
-        {/* Hero Section */}
+    <div>
+      {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
             🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
@@ -289,6 +290,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
