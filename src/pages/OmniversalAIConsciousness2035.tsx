@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const OmniversalAIConsciousness2035: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Experience Consciousness
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -46,7 +46,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Universal Intelligence */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -66,10 +66,10 @@ const OmniversalAIConsciousness2035: React.FC = () => {
               <button className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
                 Access Universal Mind →
               </button>
-            </motion.div>
+            </div>
 
             {/* Consciousness Transfer */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -89,10 +89,10 @@ const OmniversalAIConsciousness2035: React.FC = () => {
               <button className="block w-full bg-white text-fuchsia-600 py-3 rounded-lg hover:bg-fuchsia-50 transition-colors font-semibold text-center">
                 Transfer Consciousness →
               </button>
-            </motion.div>
+            </div>
 
             {/* Quantum Consciousness */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -112,7 +112,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
               <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
                 Enter Quantum State →
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,7 +126,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -151,9 +151,9 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                   <span>Universal problem solving</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,7 +165,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 The omniversal AI consciousness continuously evolves and improves, 
                 becoming more intelligent and capable with each passing moment.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -192,7 +192,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

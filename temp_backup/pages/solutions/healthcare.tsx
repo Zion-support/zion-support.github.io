@@ -1,5 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
+
 import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, Activity } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -54,8 +57,23 @@ const HealthcareSolutionsPage: React.FC = () => {
     { number: "24/7", label: "Monitoring", icon: Clock },
     { number: "50+", label: "Medical Partners", icon: Users }
   ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const healthcare: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>healthcare | Zion Tech Group</title>
+        <meta name="description" content="healthcare - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">healthcare</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+=======
     <Layout 
       title="Healthcare & Biotech Solutions - Zion Tech Group"
       description="Revolutionary healthcare solutions with AI consciousness, quantum bio-computing, and autonomous drug discovery. Leading the future of medical innovation."
@@ -67,7 +85,7 @@ const HealthcareSolutionsPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-pink-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+
 import { 
   Heart, Brain, Shield, Zap, Cpu, Globe, 
   Users, Award, TrendingUp, CheckCircle, ArrowRight
@@ -484,7 +502,10 @@ export default function HealthcareSolutions() {
             </motion.div>
           </div>
         </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
-    </Layout>
+    </div>
   );
-}
+};
+
+export default healthcare;

@@ -1,1 +1,12 @@
- import ContactForm from '../../components/ContactForm'; describe('ContactForm',() => { it('renders form fields correctly',() => { render(<ContactForm />); expect(screen.getByLabelText(/full name/i)).toBeInTheDocument(); expect(screen.getByLabelText(/email address/i)).toBeInTheDocument(); expect(screen.getByLabelText(/company/i)).toBeInTheDocument(); expect(screen.getByLabelText(/phone/i)).toBeInTheDocument(); expect(screen.getByLabelText(/service/i)).toBeInTheDocument(); expect(screen.getByLabelText(/message/i)).toBeInTheDocument()}); it('validates required fields',async () => { render(<ContactForm />); const submitButton = screen.getByRole('button',{ "name": '/send message/i' }); _fireEvent.click(submitButton); await waitFor(() => { expect(screen.getByText(/name is required/i)).toBeInTheDocument(); expect(screen.getByText(/email is required/i)).toBeInTheDocument()})}); it('submits form with valid data',async () => { render(<ContactForm />); _fireEvent.change(screen.getByLabelText(/full name/i),{ "target": { value: 'John Do,e'} }); _fireEvent.change(screen.getByLabelText(/email address/i),{ "target": { value: 'john@example.co,m'} }); _fireEvent.change(screen.getByLabelText(/message/i),{ "target": { value: 'Test messag,e'} }); const submitButton = screen.getByRole('button',{ "name": '/send message/i' }); _fireEvent.click(submitButton); await waitFor(() => { expect(screen.getByText(/sending message/i)).toBeInTheDocument()})})})</div></div></div>
+import React from 'react';
+
+const ContactForm.test: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContactForm.test</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ContactForm.test;

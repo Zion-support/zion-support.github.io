@@ -1,30 +1,12 @@
-export function Avatar(props: any) {
-    return (<div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}>
-      {children}
-    </div>);
-}
-export function AvatarImage(props: any) {
-    return (<img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`}  />);
-}
-export function AvatarFallback(props: any) {
-    return (<div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}>
-      {children}
-    </div>);
-}
 import React from 'react';
-import {cn} from '@/lib/utils';
-const Avatar = React.forwardRef(({className, ...props}, ref) => (<div ref={ref} className = {cn('relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
-  className)} {...props} />));
-Avatar.displayName = 'Avatar';
-const AvatarImage = React.forwardRef(({className, src, alt = '', ...props}, ref) => (<img ref={ref} className = {cn('aspect-square h-full w-full',
-  className)} src={src} alt={alt} {...props}  />));
-AvatarImage.displayName = 'AvatarImage';
-const AvatarFallback = React.forwardRef(({className, ...props}, ref) => (<div ref={ref} className = {cn('flex h-full w-full items-center justify-center rounded-full bg-muted',
-  className)} {...props} />));
-AvatarFallback.displayName = 'AvatarFallback';
-export {Avatar, AvatarImage, AvatarFallback};
 
+const Avatar: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Avatar</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
 export default Avatar;
-</div>
-</div>

@@ -1,6 +1,20 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const ContentQualityAnalyzer: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContentQualityAnalyzer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ContentQualityAnalyzer;
+=======
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';'''
-import {motion} from 'framer-motion';
+
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = ("props": "any) => {"}
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);'
@@ -112,7 +126,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
             status: 'open'
 import React, {useState, useEffect} from 'react';
-import {motion} from 'framer-motion';
+
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);';
@@ -943,3 +957,4 @@ export {ContentQualityAnalyzer};
 </motion>
 </motion>
 </motion>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

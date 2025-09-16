@@ -1,73 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ContentShowcase } from '../components/ContentShowcase';
-import { ServicesHighlight } from '../components/ServicesHighlight';
+import { Helmet } from 'react-helmet-async';
 
 const EnhancedHome: React.FC = () => {
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: Award },
-    { number: '98%', label: 'Client Satisfaction', icon: Star },
-    { number: '50+', label: 'Expert Team Members', icon: Users },
-    { number: '24/7', label: 'Support Available', icon: TrendingUp }
-  ];
-
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights.',
-      icon: '🤖',
-      link: '/services/ai-solutions'
-    },
-    {
-      title: 'Cybersecurity Excellence',
-      description: 'Protect your business with enterprise-grade security solutions and threat intelligence.',
-      icon: '🛡️',
-      link: '/services/cybersecurity'
-    },
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scale your operations with robust cloud solutions and seamless migration services.',
-      icon: '☁️',
-      link: '/services/cloud-services'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and BI solutions.',
-      icon: '📊',
-      link: '/services/data-analytics'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'InnovateLabs',
-      role: 'CEO',
-      content: 'Outstanding cybersecurity implementation. We feel completely secure with their advanced protection systems.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'DataFlow Inc',
-      role: 'VP of Operations',
-      content: 'Their data analytics platform gave us insights we never knew existed. Game-changing technology.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <SEO 
@@ -81,32 +15,23 @@ const EnhancedHome: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divh1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6"
             >
               Transform Your Business with
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Cutting-Edge Technology
               </span>
-            </motion.h1>
+            </divh1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <divp
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
             >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
-            </motion.p>
+            </divp>
             
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <Link
@@ -120,13 +45,10 @@ const EnhancedHome: React.FC = () => {
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
-            </motion.div>
+            </div>
             
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+            <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => {
@@ -141,7 +63,7 @@ const EnhancedHome: React.FC = () => {
                   </div>
                 );
               })}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -161,11 +83,9 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
                 <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -184,7 +104,7 @@ const EnhancedHome: React.FC = () => {
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -204,11 +124,9 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white rounded-lg shadow-md p-6"
               >
                 <div className="flex items-center mb-4">
@@ -230,7 +148,7 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -273,3 +191,4 @@ const EnhancedHome: React.FC = () => {
 };
 
 export default EnhancedHome;
+</div></div>

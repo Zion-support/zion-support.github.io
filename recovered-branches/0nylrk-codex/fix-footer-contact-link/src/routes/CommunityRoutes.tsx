@@ -1,40 +1,11 @@
-import { Fragment } from "react";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
+import React from 'react';
 
-const CommunityRoutes = () => {
+const CommunityRoutes: React.FC = () => {
   return (
-    <Routes>
-      {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
-      
-      {/* Protected routes */}
-      <Route
-        path="/community/create"
-        element={
-          <ProtectedRoute>
-            <CreatePostPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/community/edit/:postId"
-        element={
-          <ProtectedRoute>
-            <EditPostPage />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CommunityRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

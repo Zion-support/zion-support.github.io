@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedHolographicReality2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -59,9 +59,9 @@ const AdvancedHolographicReality2026: React.FC = () => {
               <li>• Real-time rendering</li>
               <li>• Haptic feedback integration</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -77,9 +77,9 @@ const AdvancedHolographicReality2026: React.FC = () => {
               <li>• Spatial mapping</li>
               <li>• Contextual overlays</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -95,7 +95,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
               <li>• Emotion recognition</li>
               <li>• Predictive interaction</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -192,16 +192,8 @@ const AdvancedHolographicReality2026: React.FC = () => {
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-80 mb-8">Join the holographic revolution and transform your business</p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Download Brochure
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">AdvancedHolographicReality2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

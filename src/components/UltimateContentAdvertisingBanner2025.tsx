@@ -1,83 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star
-  ArrowRight
-  Zap
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  Download,
-  ExternalLink
-} from 'lucide-react';
-
-const UltimateContentAdvertisingBanner2025 = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  const advertisingContent = [
-    {
-      id: 1,
-      title: "🚀 Revolutionary AI Solutions 2025",
-      subtitle: "Transform Your Business with Cutting-Edge Technology",
-      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.",
-      cta: "Explore AI Solutions",
-      href: "/ai-2025-ultimate-breakthrough",
-      stats: "500+ Success Stories",
-      color: "from-purple-600 to-blue-600",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      id: 2,
-      title: "💼 Enterprise Automation Mastery",
-      subtitle: "Streamline Operations with Intelligent Automation",
-      description: "Our comprehensive automation suite reduces operational costs by 60% while increasing productivity by 300%. Join 1000+ enterprises already transforming their workflows.",
-      cta: "Start Automation Journey",
-      href: "/automation-solutions-2025",
-      stats: "60% Cost Reduction",
-      color: "from-green-600 to-emerald-600",
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      id: 3,
-      title: "🌐 Quantum Computing Breakthrough",
-      subtitle: "Next-Generation Computing Power",
-      description: "Experience the future with our quantum computing solutions. Process complex algorithms 1000x faster and unlock unprecedented computational capabilities.",
-      cta: "Discover Quantum Power",
-      href: "/quantum-computing-2025-ultimate-breakthrough",
-      stats: "1000x Faster Processing",
-      color: "from-indigo-600 to-purple-600",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      id: 4,
-      title: "🧠 Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      description: "Breakthrough neural interface technology enabling direct communication between human consciousness and AI systems. The future is here.",
-      cta: "Experience Neural Tech",
-      href: "/neural-interface-revolution-2026",
-      stats: "Revolutionary Technology",
-      color: "from-pink-600 to-rose-600",
-      icon: <Users className="w-8 h-8" />
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % advertisingContent.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const currentContent = advertisingContent[currentSlide];
-
+const UltimateContentAdvertisingBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
       {/* Animated Background */}
@@ -89,59 +12,39 @@ const UltimateContentAdvertisingBanner2025 = () => {
       <div className="absolute bottom-20 left-32 w-12 h-12 bg-pink-500/30 rounded-full animate-bounce delay-2000" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="text-center"
           >
             {/* Main Content */}
             <div className="mb-8">
-              <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2type: "spring"stiffness: 200 }}
+              <div
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
-              </motion.div>
+              </div>
               
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+              <divh2
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
               >
                 {currentContent.title}
-              </motion.h2>
+              </divh2>
               
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+              <divp
                 className="text-xl md:text-2xl text-blue-100 mb-6"
               >
                 {currentContent.subtitle}
-              </motion.p>
+              </divp>
               
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
+              <divp
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto"
               >
                 {currentContent.description}
-              </motion.p>
+              </divp>
             </div>
 
             {/* Stats and CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+            <div
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
             >
               <div className="flex items-center gap-2 text-yellow-400">
@@ -163,13 +66,10 @@ const UltimateContentAdvertisingBanner2025 = () => {
                   Watch Demo
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Additional CTAs */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
+            <div
               className="flex flex-wrap justify-center gap-4"
             >
               <a
@@ -195,9 +95,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
                 <Users className="w-4 h-4" />
                 Join Webinar
               </a>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+            </div>
+          </div>
+        </div>
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">

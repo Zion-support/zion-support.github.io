@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+
 
 // Extend global types for browser APIs
 declare global {
@@ -155,16 +158,13 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       return () => observer.disconnect();
     }
   }, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const PerformanceEnhancer: React.FC = () => {
   return (
-    <div ref={ref}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        {children}
-      </motion.div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceEnhancer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

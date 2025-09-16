@@ -1,22 +1,22 @@
-import React from 'react'
-import Link from 'next/link'
-import {ArrowRight, Phone, Mail} from 'lucide-react'
-export default function Servicerecommendations(props: any) {return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Servicerecommendations</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          This is a placeholder component for servicerecommendations.
-        </p>
-        
-        <div className="flex flex-col sm: flex-row gap-4">
-          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
-            Contact Us <ArrowRight className="w-4 h-4 ml-2"  />
-          </Link>
-          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
-            Go Home <Phone className="w-4 h-4 ml-2"  />
-          </Link>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ServiceRecommendations: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ServiceRecommendations | Zion Tech Group</title>
+        <meta name="description" content="ServiceRecommendations - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ServiceRecommendations</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
-  )};
+  );
+};
+
+export default ServiceRecommendations;

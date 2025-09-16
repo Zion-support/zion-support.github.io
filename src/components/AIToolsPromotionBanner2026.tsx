@@ -1,103 +1,9 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  BookOpen,
-  Lightbulb,
-  Target,
-  Globe,
-  X,
-  ArrowRight,
-  Code,
-  Database,
-  Shield,
-  BarChart3,
-  MessageSquare,
-  Image,
-  FileText,
-  Search,
-  Settings,
-  Cpu,
-  Network,
-  CheckCircle
-} from 'lucide-react';
-
-const AIToolsPromotionBanner2026 = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  const featuredTools = [
-    {
-      icon: Code,
-      name: "Neural Code Generator",
-      description: "AI-powered code generation",
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "bg-gradient-to-r from-blue-600/10 to-cyan-600/10",
-      borderColor: "border-blue-500/30"
-    },
-    {
-      icon: BarChart3,
-      name: "Intelligent Data Analyzer",
-      description: "Advanced analytics platform",
-      color: "from-green-600 to-emerald-600",
-      bgColor: "bg-gradient-to-r from-green-600/10 to-emerald-600/10",
-      borderColor: "border-green-500/30"
-    },
-    {
-      icon: FileText,
-      name: "Content Creation Suite",
-      description: "Complete content generation",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
-      borderColor: "border-purple-500/30"
-    },
-    {
-      icon: Settings,
-      name: "Smart Automation Hub",
-      description: "Workflow automation",
-      color: "from-orange-600 to-red-600",
-      bgColor: "bg-gradient-to-r from-orange-600/10 to-red-600/10",
-      borderColor: "border-orange-500/30"
-    }
-  ];
-
-  const benefits = [
-    "24 AI Tools Available",
-    "50K+ Active Users",
-    "Free Trial Available",
-    "24/7 Support"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTool((prev) => (prev + 1) % featuredTools.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const currentFeature = featuredTools[currentTool];
-
-  if (!isVisible) return null;
-
+const AIToolsPromotionBanner2026: React.FC = () => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
+    <div>
+      <div
         className="relative overflow-hidden"
       >
         {/* Main Banner */}
@@ -106,11 +12,8 @@ const AIToolsPromotionBanner2026 = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4 flex-1">
-                <motion.div
+                <div
                   key={currentTool}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.3 }}
                   className="flex items-center gap-3"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${currentFeature.color} rounded-xl flex items-center justify-center`}>
@@ -124,7 +27,7 @@ const AIToolsPromotionBanner2026 = () => {
                       {currentFeature.description}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Center Benefits */}
@@ -160,11 +63,8 @@ const AIToolsPromotionBanner2026 = () => {
 
         {/* Animated Progress Bar */}
         <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
-          <motion.div
+          <div
             key={currentTool}
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
-            transition={{ duration: 3ease: 'linear' }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
@@ -172,19 +72,17 @@ const AIToolsPromotionBanner2026 = () => {
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
               style={{
                 left: `${10 + i * 10}%`,
                 top: '50%',
               }}
-              animate={{
                 y: [0-150],
                 opacity: [0.30.80.3],
                 scale: [0.510.5],
               }}
-              transition={{
                 duration: 2 + i * 0.3,
                 repeat: Infinity,
                 delay: i * 0.4,
@@ -192,9 +90,10 @@ const AIToolsPromotionBanner2026 = () => {
             />
           ))}
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 
 export default AIToolsPromotionBanner2026;
+</div></div>

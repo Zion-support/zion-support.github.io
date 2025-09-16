@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const ScrollToTop: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ScrollToTop</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ScrollToTop;
+=======
 import React, {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+
 ;
 export default function Page("props": "any) {;
             window.addEventListener('scroll'", toggleVisibility);
@@ -96,3 +110,4 @@ export default ScrollToTop;
 </motion>
 </AnimatePresence>
 import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

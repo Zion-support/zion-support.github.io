@@ -1,55 +1,33 @@
-
-import React from "react";
-import Layout from "../components/Layout";
-ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
+import { Helmet } from 'react-helmet-async';
 
-import React from "react";
-import Layout from "../components/Layout";
-origin/main
-
-export default function ITServices() {
+const ITServices: React.FC = () => {
   return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              IT Services
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
-origin/automation-improvements-final
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete IT solutions to power your digital transformation.
-            </p>
-          </div>
-          <div className="text-center">
-
-            <p className="text-gray-600">
-              IT Services page is under construction.
-            </p>
-            <p className="text-gray-600">IT Services page is under construction.</p>
-origin/automation-improvements-final
-
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ITServices | Zion Tech Group</title>
+        <meta name="description" content="ITServices - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ITServices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </Layout>;
+    </div>
   );
+};
 
+<<<<<<< HEAD
+export default ITServices;
+=======
 }
 }
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import Layout from '../components/Layout';
 import { 
   Server, 
@@ -654,3 +632,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

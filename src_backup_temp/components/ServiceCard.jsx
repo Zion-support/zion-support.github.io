@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+
+const ServiceCard: React.FC = () => {
+=======
 export default ServiceCard;
-import {motion} from 'framer-motion';
+
 ;
 export default function Page("props": "any) {;
 ;
@@ -184,10 +188,13 @@ export {ServiceCard};
 </motion>
 </motion>
 export default function ServiceCard.js({ }: ServiceCard.jsProps) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <div>
-      <h1>ServiceCard.js</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ServiceCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ServiceCard;

@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const FutureTechTrends2025 = () => {
+const FutureTechTrends2025= () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">FutureTechTrends2025</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>FutureTechTrends2025 | Zion Tech Group</title>
+        <meta name="description" content="FutureTechTrends2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -19,41 +18,49 @@ const FutureTechTrends2025 = () => {
             Revolutionary technology solutions and insights for the future
           </p>
         </div>
-
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-bold mb-4">AI Revolution</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced artificial intelligence systems that will transform every industry
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Revolution</h3>
+            <p className="text-gray-300 mb-4">
+              Artificial intelligence transforming every industry
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Learn More
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Machine learning advances</li>
+              <li>• Natural language processing</li>
+              <li>• Computer vision breakthroughs</li>
+            </ul>
           </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum computing breakthroughs that will solve impossible problems
+          
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Next-generation computing power and capabilities
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Explore
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Quantum algorithms</li>
+              <li>• Quantum simulation</li>
+              <li>• Quantum optimization</li>
+            </ul>
           </div>
-
-          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
-            <p className="text-gray-300 mb-6">
-              Direct brain-computer interfaces that will revolutionize human-computer interaction
+          
+          <div className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 rounded-xl p-6 backdrop-blur-sm border border-pink-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-pink-300">Neural Interfaces</h3>
+            <p className="text-gray-300 mb-4">
+              Direct brain-computer interfaces and communication
             </p>
-            <button className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Discover
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Brain-computer interfaces</li>
+              <li>• Neural signal processing</li>
+              <li>• Thought-controlled systems</li>
+            </ul>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-12a7
+        </div>
+        
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Explore Trends
+          </button>
         </div>
       </div>
     </div>

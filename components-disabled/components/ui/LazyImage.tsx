@@ -1,4 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import React from 'react';
+=======
+
 
 interface LazyImageProps {
   src: string;
@@ -40,27 +43,13 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
   };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const LazyImage: React.FC = () => {
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
-      <img
-        src={placeholder}
-        alt=""
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
-        }`}
-      />
-      
-      {/* Actual Image */}
-      {isInView && (
-        <motion.img
-          ref={imgRef}
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-        />
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LazyImage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

@@ -1,4 +1,19 @@
-import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';
-import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from\';\';@heroicons/react/24/outline\' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) useEffect(() => {\'';
-const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from";";@heroicons/react/24/outline" const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) useEffect(() => {"";"""
-import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';
+<<<<<<< HEAD
+import React from 'react';
+
+const EnhancedAccessibility.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedAccessibility.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnhancedAccessibility.js;
+=======
+
+
+const React,{ useState,useEffect } from";react" """
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -78,6 +78,7 @@ const InteractiveContentDiscovery2027: React.FC = () => {
 
   const featuredItems = contentItems.filter(item => item.featured);
 
+const InteractiveContentDiscovery2027: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>

@@ -1,6 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
+
+const Sidebar: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Sidebar</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Sidebar;
+=======
 import Link from 'next/link';
-import { motion  } from 'framer-motion';
+
 import { X,Home,Users,Briefcase,Phone,Mail,MapPin,Clock,Star,CheckCircle,ArrowRight,Building2,Rocket,Factory,Cpu,Network,Target,Code,Brain,Workflow,MessageCircle,ArrowUp,Sparkles,Truck,BookOpen,BarChart3,Leaf,Satellite,HelpCircle,Building,DollarSign,ShoppingCart,Heart,Eye,Database,Cloud,Server,Shield,Zap,Lock,} from 'lucide-react';
 interface SidebarProps  {isOpen: boolean;
   onClose: () => void;
@@ -153,3 +166,4 @@ interface SidebarProps  {isOpen: boolean;
       </motion.div>;
     </>;
   )}export default Sidebar;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

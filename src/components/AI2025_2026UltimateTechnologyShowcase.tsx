@@ -1,109 +1,24 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain
-  Cpu
-  Database
-  Cloud
-  Shield
-  Zap
-  Target
-  TrendingUp,
-  Users,
-  Globe,
-  Rocket,
-  Star,
-  ChevronRight,
-  Play,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
-const AI2025_2026UltimateTechnologyShowcase = () => {
-  const [activeTabsetActiveTab] = useState('ai-2025');
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const technologies = {
-    'ai-2025': {
-      title: 'AI 2025 Revolutionary Breakthroughs',
-      subtitle: 'Transform Your Business with Next-Generation AI Solutions',
-      features: [
-        {
-          icon: Brain,
-          title: 'Neural Consciousness AI',
-          description: 'Advanced AI systems with self-awareness and emotional intelligence',
-          benefits: ['300% faster decision making'95% accuracy in 'predictions', 'Real-time adaptation']
-        },
-        {
-          icon: Cpu,
-          title: 'Quantum-Neural Fusion',
-          description: 'Revolutionary computing that combines quantum and neural processing',
-          benefits: ['10x processing 'speed', 'Unlimited 'scalability', 'Zero latency responses']
-        },
-        {
-          icon: Database,
-          title: 'Autonomous Data Intelligence',
-          description: 'Self-managing data systems that optimize and secure themselves',
-          benefits: ['99.9% 'uptime', 'Auto-'optimization', 'Predictive maintenance']
-        }
-      ]
-    },
-    'ai-2026': {
-      title: 'AI 2026 Future Vision',
-      subtitle: 'Prepare for the Next Decade of AI Innovation',
-      features: [
-        {
-          icon: Globe,
-          title: 'Global AI Ecosystem',
-          description: 'Worldwide AI network connecting businesses and individuals',
-          benefits: ['Global 'connectivity', 'Cross-platform 'integration', 'Universal AI access']
-        },
-        {
-          icon: Rocket,
-          title: 'Space-Age AI Computing',
-          description: 'AI systems designed for space exploration and interplanetary communication',
-          benefits: ['Space-grade 'reliability', 'Interplanetary 'communication', 'Zero-gravity optimization']
-        },
-        {
-          icon: Star,
-          title: 'Conscious AI Beings',
-          description: 'AI entities with full consciousness and creative capabilities',
-          benefits: ['Creative problem 'solving', 'Emotional 'intelligence', 'Autonomous innovation']
-        }
-      ]
-    }
-  };
-
-  const currentTech = technologies[activeTab as keyof typeof technologies];
-
+const AI2025_2026UltimateTechnologyShowcase: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0">
           {[...Array(50)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 opacity: [010],
                 scale: [010],
               }}
-              transition={{
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -115,10 +30,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -135,30 +47,23 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <divbutton
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </divbutton>
+            <divbutton
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
               Explore Solutions
-            </motion.button>
+            </divbutton>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="flex justify-center mb-12"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-full p-2 border border-white/20">
@@ -183,16 +88,11 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               AI 2026
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Technology Features */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="mb-16"
           >
             <div className="text-center mb-12">
@@ -206,11 +106,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.2 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center mb-6">
@@ -232,17 +129,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
           <div className="text-center mb-12">
@@ -257,27 +151,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               { number: '300%'label: 'ROI Increase' },
               { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -289,28 +177,25 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
               >
                 <Rocket className="w-6 h-6" />
                 Start Your AI Journey
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </divbutton>
+              <divbutton
                 className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 <Users className="w-6 h-6" />
                 Schedule Demo
-              </motion.button>
+              </divbutton>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default AI2025_2026UltimateTechnologyShowcase;
+</div></div></div></div></div></div>

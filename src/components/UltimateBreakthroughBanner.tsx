@@ -1,12 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateBreakthroughBanner: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
+    <div
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-red-600/50 backdrop-blur-sm"></div>
@@ -39,7 +36,7 @@ const UltimateBreakthroughBanner: React.FC = () => {
           <span className="bg-white/20 px-3 py-1 rounded-full">⚡ Revolutionary Tech</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

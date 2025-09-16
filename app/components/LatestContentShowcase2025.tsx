@@ -1,19 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
 import Link from 'next/link';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-export default function LatestContentShowcase2025() {
+const LatestContentShowcase2025: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Latest Content & Insights 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our latest research, case studies, and implementation guides covering the most cutting-edge AI and automation technologies.
-          </p>
-        </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LatestContentShowcase2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
+export default LatestContentShowcase2025;
+=======
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">✅</div>
@@ -43,3 +45,23 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">🧭</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Trustworthy Autonomous Agents Blueprint</h3>
+            <p className="text-gray-600 mb-4">
+              Governance-by-design with evals, policy, and safety telemetry for reliable autonomy.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link href="/blog/ai-2026-trustworthy-autonomous-agents-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">
+                Read Article →
+              </Link>
+              <Link href="/content/trustworthy-autonomous-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">
+                Implementation Guide →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

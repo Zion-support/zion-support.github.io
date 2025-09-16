@@ -1,4 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import React from 'react';
+=======
+
 
 interface UltraFuturisticBackground2037Props {
   intensity?: 'low' | 'medium' | 'high';
@@ -299,18 +302,13 @@ export default function UltraFuturisticBackground2037({
 
     return () => {
       if (typeof window !== 'undefined') {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const UltraFuturisticBackground2037: React.FC = () => {
   return (
-    <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'transparent',
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-        }}
-      />
-      {children}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2037</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

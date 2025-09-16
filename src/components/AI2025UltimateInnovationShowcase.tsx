@@ -1,74 +1,16 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const AI2025UltimateInnovationShowcase: React.FC = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const innovations = [
-    {
-      title: "Quantum-AI Fusion Technology",
-      description: "Revolutionary fusion of quantum computing and artificial intelligence delivering unprecedented processing power",
-      icon: Cpu,
-      metrics: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "Autonomous Business Operations",
-      description: "Self-managing business systems that adapt and optimize without human intervention",
-      icon: Brain,
-      metrics: "99.9% automation accuracy",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
-      icon: Zap,
-      metrics: "Real-time consciousness sync",
-      color: "from-orange-600 to-red-600"
-    },
-    {
-      title: "Transcendent Intelligence",
-      description: "AI systems that transcend traditional limitationsachieving superhuman cognitive abilities",
-      icon: Rocket,
-      metrics: "Beyond human comprehension",
-      color: "from-indigo-600 to-purple-600"
-    }
-  ];
-
-  const benefits = [
-    { icon: TrendingUptext: "2,500-5,000% ROI Increase"color: "text-green-500" },
-    { icon: Targetext: "99.9% Accuracy Rate"color: "text-blue-500" },
-    { icon: Userstext: "10M+ Users Impacted"color: "text-purple-500" },
-    { icon: Globetext: "Global Implementation"color: "text-orange-500" },
-    { icon: Shieldtext: "Enterprise Security"color: "text-red-500" }
-  ];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.2duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -81,16 +23,13 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
-        </motion.div>
+        </div>
 
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
-              transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl"
@@ -103,41 +42,32 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{innovation.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{innovation.metrics}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.8duration: 0.8 }}
+        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Proven Results & Impact</h2>
           <div className="grid md:grid-cols-5 gap-6">
             {benefits.map((benefitindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
-                transition={{ delay: 1 + index * 0.1duration: 0.5 }}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gray-700 rounded-xl mb-4">
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
                 </div>
                 <p className="text-white font-semibold text-sm">{benefit.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 1.2duration: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -158,9 +88,9 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join thousands of enterprises already transforming with our AI innovations
           </p>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

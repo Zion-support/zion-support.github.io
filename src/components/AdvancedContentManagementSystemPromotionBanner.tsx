@@ -1,71 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Settings
-  BarChart3
-  Users
-  TrendingUp
-  Eye
-  Heart
-  Share2,
-  Download,
-  Edit,
-  Plus,
-  Search,
-  Filter,
-  Calendar,
-  Tag,
-  Globe,
-  Zap,
-  Brain,
-  Cpu,
-  Database,
-  Cloud,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  RefreshCw,
-  Target,
-  Activity,
-  Star,
-  Clock
-} from 'lucide-react';
-
-const AdvancedContentManagementSystemPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    'Advanced Content Analytics',
-    'Real-Time Performance Tracking',
-    'Automated Content Optimization',
-    'Multi-Platform Publishing',
-    'AI-Powered Content Suggestions',
-    'Collaborative Workflow Management'
-  ];
-
-  const stats = [
-    { value: '1,247'label: 'Content 'Items', 'icon: Database },
-    { value: '2.8M+'label: 'Total 'Views', 'icon: Eye },
-    { value: '156K+'label: ''Engagements', 'icon: Heart },
-    { value: '5.5%'label: 'Avg. 'Rate', 'icon: TrendingUp }
-  ];
-
-  const contentTypes = [
-    { icon: Globelabel: 'Blog 'Posts', 'count: '342'color: 'green' },
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' },
-    { icon: Brainlabel: ''Tutorials', 'count: '289'color: 'orange' },
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'cyan' },
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' },
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
-  ];
-
+const AdvancedContentManagementSystemPromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
       {/* Background Pattern */}
@@ -79,10 +14,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
@@ -114,13 +46,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Stats Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           {stats.map((statindex) => (
@@ -132,13 +61,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {features.map((featureindex) => (
@@ -154,13 +80,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Content Types Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
         >
           <div className="text-center mb-8">
@@ -179,13 +102,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center mt-12"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -209,7 +129,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

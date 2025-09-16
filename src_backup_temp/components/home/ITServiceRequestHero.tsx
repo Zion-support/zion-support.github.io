@@ -1,16 +1,24 @@
-;export function ITServiceRequestHero(...args[]):  {
-  const [location, setLocation] = useState<any>("");
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
-    if(location.trim()) {
+import React from 'react';
 
+<<<<<<< HEAD
+const ITServiceRequestHero: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ITServiceRequestHero</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ITServiceRequestHero;
+=======
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false);
 ;
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+
   const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
@@ -43,7 +51,7 @@ import { motion  } from 'framer-motion';
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+
 import { Link  } from 'react-router-dom';
         viewport={{ "once": "tru e "}}
 ";
@@ -317,3 +325,4 @@ export function ITServiceRequestHero(props: any) {
 </motion>
 </any>
 </any>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

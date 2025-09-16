@@ -1,123 +1,14 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Globe
-  Shield
-  Users
-  BarChart3
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  ArrowRight,
-  Star,
-  CheckCircle,
-  Lightbulb,
-  Target
-} from 'lucide-react';
-
-const AI2025TrendsInnovationShowcase = () => {
-  const [activeTrendsetActiveTrend] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveTrend((prev) => (prev + 1) % trends.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const trends = [
-    {
-      id: 1,
-      title: "Generative AI Revolution",
-      description: "Transform your business with cutting-edge generative AI that creates contentautomates processesand drives innovation.",
-      icon: Brain,
-      stats: "85% efficiency increase",
-      color: "from-purple-500 to-pink-500",
-      features: ["Content Generation"Process Automation"Creative Solutions"]
-    },
-    {
-      id: 2,
-      title: "Edge AI Computing",
-      description: "Deploy AI directly on devices for real-time processingreduced latencyand enhanced privacy.",
-      icon: Cpu,
-      stats: "60% faster processing",
-      color: "from-blue-500 to-cyan-500",
-      features: ["Real-time Processing"Privacy Protection"Reduced Latency"]
-    },
-    {
-      id: 3,
-      title: "AI-Powered Analytics",
-      description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize performance.",
-      icon: BarChart3,
-      stats: "300% better insights",
-      color: "from-green-500 to-emerald-500",
-      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]
-    },
-    {
-      id: 4,
-      title: "Quantum AI Integration",
-      description: "Experience the future with quantum-enhanced AI that solves complex problems exponentially faster.",
-      icon: Zap,
-      stats: "1000x faster computation",
-      color: "from-yellow-500 to-orange-500",
-      features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"]
-    }
-  ];
-
-  const innovations = [
-    {
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces for seamless human-AI interaction",
-      impact: "Revolutionary",
-      category: "Human-AI Integration"
-    },
-    {
-      title: "Autonomous Business Systems",
-      description: "Self-managing business processes that adapt and optimize automatically",
-      impact: "Transformative",
-      category: "Business Automation"
-    },
-    {
-      title: "AI-Powered Cybersecurity",
-      description: "Advanced threat detection and prevention using machine learning",
-      impact: "Critical",
-      category: "Security"
-    },
-    {
-      title: "Predictive Customer Experience",
-      description: "Anticipate customer needs and deliver personalized experiences",
-      impact: "Game-changing",
-      category: "Customer Experience"
-    }
-  ];
-
-  const benefits = [
-    { icon: TrendingUptext: "Increased Revenue"value: "+150%" },
-    { icon: Userstext: "Customer Satisfaction"value: "95%" },
-    { icon: Shieldtext: "Security Enhancement"value: "99.9%" },
-    { icon: Globetext: "Global Reach"value: "200+" }
-  ];
-
+const AI2025TrendsInnovationShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
@@ -134,7 +25,7 @@ const AI2025TrendsInnovationShowcase = () => {
             Discover the revolutionary AI trends and innovations that will transform your business in 2025 and beyond. 
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Trends Carousel */}
         <div className="mb-16">
@@ -143,7 +34,7 @@ const AI2025TrendsInnovationShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 2025</h3>
               {trends.map((trendindex) => (
-                <motion.div
+                <div
                   key={trend.id}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeTrend === index
@@ -151,8 +42,6 @@ const AI2025TrendsInnovationShowcase = () => {
                       : 'bg-white/5 border border-white/10 hover:bg-white/10'
                   }`}
                   onClick={() => setActiveTrend(index)}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-center space-x-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${trend.color}`}>
@@ -164,19 +53,14 @@ const AI2025TrendsInnovationShowcase = () => {
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400" />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Trend Display */}
             <div className="relative">
-              <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={activeTrend}
-                  initial={{ opacity: 0x: 50 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: -50 }}
-                  transition={{ duration: 0.5 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
                   <div className="flex items-center space-x-4 mb-6">
@@ -201,8 +85,8 @@ const AI2025TrendsInnovationShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -212,11 +96,8 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Innovations</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {innovations.map((innovationindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -235,7 +116,7 @@ const AI2025TrendsInnovationShowcase = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {innovation.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -245,11 +126,8 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {benefits.map((benefitindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
@@ -257,16 +135,13 @@ const AI2025TrendsInnovationShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
                 <div className="text-gray-300">{benefit.text}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -278,7 +153,7 @@ const AI2025TrendsInnovationShowcase = () => {
               Download Report
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

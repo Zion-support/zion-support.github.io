@@ -1,36 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
-const RevolutionaryContentShowcase = () => {
-  const [activeContent, setActiveContent] = useState(0);
-
-  const contentItems = [
-    {
-      title: "Synthetic Intelligence 2026",
-      description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/SyntheticIntelligence2026",
-      features: ["Autonomous AI Agents", "Synthetic Consciousness", "Creative AI", "Collective Intelligence"]
-    },
-    {
-      title: "Quantum-Neural Fusion 2026",
-      description: "Revolutionary fusion of quantum computing and neural networks for unprecedented processing power",
-      icon: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"]
-    },
-    {
-      title: "Next-Gen Tech Showcase 2026",
-      description: "Discover the most advanced technologies of 2026 featuring revolutionary innovations",
-      icon: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/NextGenTechShowcase2026",
-      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"]
-    }
-  ];
-
+const RevolutionaryContentShowcase= () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -68,11 +38,8 @@ const RevolutionaryContentShowcase = () => {
         </div>
 
         {/* Active Content Display */}
-        <motion.div
+        <div
           key={activeContent}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -121,7 +88,7 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

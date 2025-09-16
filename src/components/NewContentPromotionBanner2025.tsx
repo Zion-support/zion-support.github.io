@@ -1,155 +1,120 @@
-"use client";
-'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const NewContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    {
-      title: 'Interactive Demos',
-      description: 'Experience AI in action with our hands-on demonstrations',
-      icon: '🎮',
-      color: 'from-blue-500 to-purple-500'
-    },
-    {
-      title: 'Success Stories',
-      description: 'Real case studies with measurable ROI results',
-      icon: '📈',
-      color: 'from-green-500 to-blue-500'
-    },
-    {
-      title: 'Expert Insights',
-      description: 'Latest AI trends and industry analysis from our experts',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Interactive Tools',
-      description: 'ROI calculators and assessment tools to explore your potential',
-      icon: '🛠️',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [features.length]);
-
+const NewContentPromotionBanner2025: React.FC = () => {
   return (
-    <div className={`py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Main Content */}
-          <div>
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                AI Content
-              </span>
-            </h2>
-            
-            <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Explore interactive demos, success stories, expert insights, and powerful tools 
-              that showcase the future of AI in business transformation.
-            </p>
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl shadow-2xl">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-indigo-500/30"></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-32 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
+      </div>
 
-            {/* Feature Highlight */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className={`text-4xl bg-gradient-to-r ${features[currentFeature].color} bg-clip-text text-transparent`}>
-                  {features[currentFeature].icon}
+      <div className="relative z-10 p-8 md:p-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-4">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                New Content Available
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Revolutionary Tech Insights
+                <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                  2025 Edition
+                </span>
+              </h2>
+              
+              <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
+                Discover the latest breakthroughs in AI, quantum computing, neural interfaces, 
+                and synthetic intelligence. Our expert researchers share cutting-edge insights 
+                that are shaping the future of technology.
+              </p>
+
+              {/* Feature Highlights */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">4</div>
+                  <div className="text-white/80 text-sm">New Articles</div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">
-                    {features[currentFeature].title}
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    {features[currentFeature].description}
-                  </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">50+</div>
+                  <div className="text-white/80 text-sm">Expert Insights</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">100%</div>
+                  <div className="text-white/80 text-sm">Fresh Content</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">∞</div>
+                  <div className="text-white/80 text-sm">Possibilities</div>
                 </div>
               </div>
-            </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/content"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
-              >
-                Explore New Content
-              </a>
-              <a
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
-              >
-                Try Interactive Demo
-              </a>
-            </div>
-          </div>
-
-          {/* Right Side - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`group bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 hover:bg-opacity-20 hover:transform hover:scale-105 ${
-                  index === currentFeature ? 'ring-2 ring-white ring-opacity-50' : ''
-                }`}
-                onClick={() => setCurrentFeature(index)}
-              >
-                <div className={`text-3xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
-                  {feature.description}
-                </p>
-                <div className="mt-4 flex items-center text-sm text-yellow-300 group-hover:text-white transition-colors">
-                  <span>Learn More</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Explore All Articles
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
+                </Link>
+                <Link
+                  to="/blog/ai-powered-autonomous-business-operations-2025"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300 border border-white/30"
+                >
+                  Read Latest
+                </Link>
+              </div>
+            </div>
+
+            {/* Featured Articles Preview */}
+            <div className="flex-1 max-w-md">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-4">Featured Articles</h3>
+                <div className="space-y-3">
+                  <Link 
+                    to="/blog/ai-powered-autonomous-business-operations-2025"
+                    className="block p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <div className="text-white font-medium text-sm">AI-Powered Autonomous Business Operations</div>
+                    <div className="text-white/70 text-xs mt-1">12 min read • AI Innovation</div>
+                  </Link>
+                  <Link 
+                    to="/blog/quantum-computing-revolution-2025"
+                    className="block p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <div className="text-white font-medium text-sm">Quantum Computing Revolution</div>
+                    <div className="text-white/70 text-xs mt-1">15 min read • Quantum Computing</div>
+                  </Link>
+                  <Link 
+                    to="/blog/neural-interface-technology-2025"
+                    className="block p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <div className="text-white font-medium text-sm">Neural Interface Technology</div>
+                    <div className="text-white/70 text-xs mt-1">10 min read • Neural Interfaces</div>
+                  </Link>
+                  <Link 
+                    to="/blog/synthetic-intelligence-2025"
+                    className="block p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <div className="text-white font-medium text-sm">Synthetic Intelligence</div>
+                    <div className="text-white/70 text-xs mt-1">14 min read • Synthetic Intelligence</div>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
-            <div className="text-sm opacity-90">New Articles</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
-            <div className="text-sm opacity-90">Case Studies</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
-            <div className="text-sm opacity-90">Interactive Tools</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
-            <div className="text-sm opacity-90">Live Demos</div>
+            </div>
           </div>
         </div>
       </div>

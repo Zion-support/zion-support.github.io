@@ -1,68 +1,25 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-const AIServicesPage = () => {
-  const aiServices = [
-    {
-      title: 'AI Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
-      price: 'Starting at $2,999/month'
-    },
-    {
-      title: 'Machine Learning Automation',
-      description: 'Automate complex processes and decision-making with custom machine learning models.',
-      price: 'Starting at $4,999/month'
-    },
-    {
-      title: 'AI Customer Support',
-      description: 'Enhance customer experience with intelligent chatbots and automated support systems.',
-      price: 'Starting at $1,999/month'
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and make data-driven decisions with our predictive modeling services.',
-      price: 'Starting at $3,499/month'
-    },
-    {
-      title: 'AI Content Generation',
-      description: 'Create high-quality content at scale with our AI-powered content generation tools.',
-      price: 'Starting at $999/month'
-    },
-    {
-      title: 'Computer Vision Solutions',
-      description: 'Implement image recognition and visual analysis for your business applications.',
-      price: 'Starting at $5,999/month'
-    }
-  ];
-
+const AIServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divh1 
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
               AI-Powered
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Services</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            </divh1>
+            <divp 
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
               Transform your business with cutting-edge AI solutions designed to automate, optimize, and revolutionize your operations.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            </divp>
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -71,7 +28,7 @@ const AIServicesPage = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
                 Learn More
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -81,11 +38,8 @@ const AIServicesPage = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
@@ -101,7 +55,7 @@ const AIServicesPage = () => {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -110,26 +64,17 @@ const AIServicesPage = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divh2 
             className="text-4xl font-bold text-white mb-6"
           >
             Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          </divh2>
+          <divp 
             className="text-xl text-gray-300 mb-8"
           >
             Let's discuss how our AI services can drive your success.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          </divp>
+          <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -138,7 +83,7 @@ const AIServicesPage = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
               View Portfolio
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

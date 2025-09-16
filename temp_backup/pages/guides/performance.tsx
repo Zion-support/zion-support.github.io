@@ -1,29 +1,22 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function PerformanceGuide() {
+const performance: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Performance & Monitoring — Zion Tech Group</title>
-        <meta name="description" content="How we achieve fast, reliable, and observable systems." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12 max-w-4xl">
-          <h1 className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">Performance & Monitoring</h1>
-          <p className="text-white/85 mb-6">From real‑time telemetry to predictive insights, we keep systems fast and healthy.</p>
-          <ul className="list-disc pl-6 space-y-2 text-white/85">
-            <li>Budget‑driven Lighthouse checks</li>
-            <li>Real‑time metrics and alerting</li>
-            <li>Geo‑distributed delivery and caching</li>
-            <li>Automated bottleneck detection</li>
-          </ul>
-          <div className="mt-10">
-            <Link href="/" className="text-cyan-300 hover:text-cyan-200">← Back to Home</Link>
-          </div>
-        </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>performance | Zion Tech Group</title>
+        <meta name="description" content="performance - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">performance</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
+export default performance;

@@ -1,39 +1,29 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-const RevolutionaryContentBanner2034_2036: React.FC = () => {
+const RevolutionaryContentBanner2034-2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="flex items-center justify-center space-x-4 mb-6"
         >
           <span className="text-4xl animate-bounce">🌟</span>
           <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2034-2036</h3>
           <span className="text-4xl animate-bounce">🌟</span>
-        </motion.div>
+        </div>
         
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <divp
           className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto"
         >
           Experience the most advanced technology content featuring Next-Gen AI Revolution 2034, 
           Quantum Reality Manipulation 2035, Transcendent Consciousness 2036, and revolutionary 
           breakthroughs in consciousness evolution, reality manipulation, and universal awareness
-        </motion.p>
+        </divp>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8"
         >
           <a 
@@ -54,12 +44,9 @@ const RevolutionaryContentBanner2034_2036: React.FC = () => {
           >
             🧘 NEW: Transcendent Consciousness 2036 →
           </a>
-        </motion.div>
+        </div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="flex justify-center space-x-4"
         >
           <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
@@ -71,10 +58,10 @@ const RevolutionaryContentBanner2034_2036: React.FC = () => {
           <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
             🌟 REALITY MANIPULATION
           </span>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default RevolutionaryContentBanner2034_2036;
+export default RevolutionaryContentBanner2034-2036;

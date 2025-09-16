@@ -1,4 +1,18 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import React from 'react';
+
+const PerformanceOptimizedLoader: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceOptimizedLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default PerformanceOptimizedLoader;
+=======
+
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const sizeClasses = {
         sm: 'w-6 h-6',
@@ -104,3 +118,4 @@ export function PageSkeleton({ className = "" }) {
       </div>
     </div>);
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

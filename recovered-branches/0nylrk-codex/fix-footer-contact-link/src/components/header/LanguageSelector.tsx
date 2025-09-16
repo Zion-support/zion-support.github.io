@@ -1,36 +1,12 @@
-
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
 
+const LanguageSelector: React.FC = () => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">{t('general.select_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {supportedLanguages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            className={`cursor-pointer ${
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'
-            }`}
-            onClick={() => changeLanguage(lang.code)}
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-lg">{lang.flag}</span>
-              <span>{t(`language.${lang.code}`)}</span>
-            </div>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LanguageSelector</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default LanguageSelector;

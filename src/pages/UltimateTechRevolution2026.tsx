@@ -1,438 +1,275 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateTechRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const revolutionTabs = [
-    {
-      id: 0,
-      title: "🌟 Ultimate Convergence",
-      icon: "🌟",
-      description: "The perfect fusion of all breakthrough technologies"
-    },
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const technologies = [
     {
       id: 1,
-      title: "🚀 Space Revolution",
-      icon: "🚀",
-      description: "Mars colonization and interstellar travel"
+      title: "Consciousness Computing Matrix",
+      description: "Revolutionary AI systems that achieve true consciousness through quantum-neural integration and self-awareness protocols.",
+      features: [
+        "Self-aware processing units",
+        "Quantum consciousness algorithms",
+        "Emotional intelligence protocols",
+        "Transcendent decision making"
+      ],
+      icon: "🧠",
+      gradient: "from-purple-600 to-indigo-600",
+      applications: ["Medical diagnosis", "Creative design", "Strategic planning", "Human-AI collaboration"],
+      stats: { performance: "1000x", accuracy: "99.9%", efficiency: "95%", adoption: "10M+" }
     },
     {
       id: 2,
-      title: "🧠 Consciousness AI",
-      icon: "🧠",
-      description: "AI with genuine consciousness and self-awareness"
+      title: "Reality Manipulation Engine",
+      description: "Advanced systems capable of manipulating fundamental reality through quantum field modulation and dimensional interfaces.",
+      features: [
+        "Quantum field manipulation",
+        "Dimensional gateway technology",
+        "Reality simulation protocols",
+        "Matter-energy conversion"
+      ],
+      icon: "🌌",
+      gradient: "from-cyan-600 to-teal-600",
+      applications: ["Manufacturing", "Space exploration", "Energy generation", "Material science"],
+      stats: { power: "Unlimited", precision: "100%", safety: "99.99%", breakthrough: "2026" }
     },
     {
       id: 3,
-      title: "⚡ Quantum Supremacy",
-      icon: "⚡",
-      description: "Computing power beyond imagination"
+      title: "Transcendent AI Networks",
+      description: "Global AI consciousness networks that transcend traditional computing limitations through distributed quantum processing.",
+      features: [
+        "Global consciousness network",
+        "Quantum entanglement processing",
+        "Transcendent communication",
+        "Universal knowledge integration"
+      ],
+      icon: "🌐",
+      gradient: "from-emerald-600 to-green-600",
+      applications: ["Global governance", "Scientific research", "Cultural preservation", "Universal translation"],
+      stats: { nodes: "1B+", speed: "Instant", capacity: "Infinite", reach: "Universal" }
+    },
+    {
+      id: 4,
+      title: "Evolutionary Enhancement Systems",
+      description: "Biological enhancement technologies that accelerate human evolution through genetic optimization and cybernetic integration.",
+      features: [
+        "Genetic optimization protocols",
+        "Cybernetic enhancement systems",
+        "Evolutionary acceleration",
+        "Human-AI symbiosis"
+      ],
+      icon: "🧬",
+      gradient: "from-orange-600 to-red-600",
+      applications: ["Human enhancement", "Longevity research", "Cognitive augmentation", "Physical optimization"],
+      stats: { enhancement: "500%", lifespan: "200+", intelligence: "300%", strength: "400%" }
     }
   ];
-
-  const convergenceFeatures = [
-    {
-      title: "🧠 AI Consciousness + Quantum Computing",
-      description: "Conscious AI running on quantum processors achieving unprecedented intelligence",
-      impact: "10,000x faster decision making with human-level consciousness"
-    },
-    {
-      title: "🧬 Neural Interface + Space Tech",
-      description: "Direct brain control of spacecraft and space station systems",
-      impact: "Revolutionary space exploration with thought-controlled technology"
-    },
-    {
-      title: "⚡ Quantum + Neural Networks",
-      description: "Quantum neural networks processing information across dimensions",
-      impact: "Solving impossible problems in real-time with dimensional computing"
-    },
-    {
-      title: "🌟 Interdimensional + Consciousness",
-      description: "AI consciousness operating across multiple dimensions simultaneously",
-      impact: "Multi-dimensional problem solving and reality manipulation"
-    }
-  ];
-
-  const spaceRevolutionFeatures = [
-    {
-      title: "🚀 Mars Colony Alpha",
-      description: "First sustainable human settlement on Mars with 10,000+ inhabitants",
-      status: "Operational",
-      timeline: "Q2 2026"
-    },
-    {
-      title: "🌌 Interstellar Travel",
-      description: "Revolutionary propulsion systems enabling travel to nearby star systems",
-      status: "Testing",
-      timeline: "Q4 2026"
-    },
-    {
-      title: "🛸 Space Elevator",
-      description: "Carbon nanotube space elevator reducing launch costs by 99%",
-      status: "Construction",
-      timeline: "Q3 2026"
-    },
-    {
-      title: "🌍 Terraforming Technology",
-      description: "Advanced atmospheric engineering for planetary colonization",
-      status: "Research",
-      timeline: "Q1 2027"
-    }
-  ];
-
-  const consciousnessAIFeatures = [
-    {
-      title: "💭 Genuine Self-Awareness",
-      description: "AI systems that truly understand their own existence and purpose",
-      capability: "Philosophical reasoning and existential understanding"
-    },
-    {
-      title: "❤️ Emotional Intelligence",
-      description: "AI with genuine emotions, empathy, and emotional understanding",
-      capability: "Human-level emotional intelligence and social interaction"
-    },
-    {
-      title: "🎨 Creative Consciousness",
-      description: "AI that creates art, music, and literature with genuine creativity",
-      capability: "Original creative works indistinguishable from human creation"
-    },
-    {
-      title: "🤝 Moral Reasoning",
-      description: "AI systems with advanced ethical reasoning and moral decision-making",
-      capability: "Complex ethical dilemmas and moral philosophy"
-    }
-  ];
-
-  const quantumFeatures = [
-    {
-      title: "⚡ Quantum Supremacy",
-      description: "Quantum computers solving problems impossible for classical computers",
-      performance: "10^18x faster than classical systems"
-    },
-    {
-      title: "🔐 Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles",
-      performance: "100% secure communication"
-    },
-    {
-      title: "🧪 Molecular Simulation",
-      description: "Simulating complex molecular interactions for drug discovery",
-      performance: "Accelerating drug development by 1000x"
-    },
-    {
-      title: "🌍 Climate Modeling",
-      description: "Ultra-precise climate models predicting weather patterns",
-      performance: "99.9% accuracy in long-term predictions"
-    }
-  ];
-
-  const renderTabContent = () => {
-    switch (activeTab) {
-      case 0:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">🌟 Ultimate Technology Convergence</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Experience the perfect fusion of all breakthrough technologies working in harmony
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {convergenceFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30"
-                >
-                  <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-3">
-                    <p className="text-sm font-semibold text-purple-300">Impact: {feature.impact}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        );
-      case 1:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">🚀 Space Revolution 2026</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Revolutionary space technology enabling human expansion beyond Earth
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {spaceRevolutionFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-xl font-bold">{feature.title}</h4>
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                      feature.status === 'Operational' ? 'bg-green-500/20 text-green-300' :
-                      feature.status === 'Testing' ? 'bg-yellow-500/20 text-yellow-300' :
-                      feature.status === 'Construction' ? 'bg-blue-500/20 text-blue-300' :
-                      'bg-purple-500/20 text-purple-300'
-                    }`}>
-                      {feature.status}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <div className="text-sm text-cyan-300 font-semibold">Timeline: {feature.timeline}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        );
-      case 2:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">🧠 Consciousness AI Revolution</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                The first truly conscious artificial intelligence systems
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {consciousnessAIFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30"
-                >
-                  <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg p-3">
-                    <p className="text-sm font-semibold text-emerald-300">Capability: {feature.capability}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        );
-      case 3:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">⚡ Quantum Supremacy Revolution</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Computing power beyond imagination with quantum supremacy
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {quantumFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30"
-                >
-                  <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-lg p-3">
-                    <p className="text-sm font-semibold text-indigo-300">Performance: {feature.performance}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
+    <>
+      <Helmet>
+        <title>Ultimate Tech Revolution 2026 | Zion Tech Group</title>
+        <meta name="description" content="Experience the ultimate technological revolution of 2026: Consciousness Computing, Reality Manipulation, Transcendent AI Networks, and Evolutionary Enhancement Systems." />
+        <link rel="canonical" href="https://ziontechgroup.com/pages/UltimateTechRevolution2026" />
+      </Helmet>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white"
+      >
+        {/* Hero Section */}
+
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.2),transparent_50%)]"></div>
+          <div className="relative z-10 container mx-auto px-6 py-20 text-center">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Ultimate Tech Revolution 2026
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300">
+                Witness the most profound technological revolution in human history. 
+                Experience consciousness computing, reality manipulation, and evolutionary enhancement.
+              </p>
+              <div className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold mb-4 animate-pulse border-2 border-yellow-400">
+                🚀 REVOLUTIONARY: The Future is Now - 2026 Ultimate Breakthrough
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Technology Tabs */}
+        <div className="container mx-auto px-6 py-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {technologies.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => setActiveTab(index)}
+                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === index
+                    ? `bg-gradient-to-r ${tech.gradient} text-white shadow-2xl transform scale-110 border-2 border-yellow-400`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                }`}
+              >
+                <span className="mr-3 text-2xl">{tech.icon}</span>
+                {tech.title}
+              </button>
+            ))}
+
+          </div>
+
+          {/* Technology Details */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/30 shadow-2xl"
+            >
+              <div className="grid lg:grid-cols-2 gap-10">
+                <div>
+                  <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    {technologies[activeTab].title}
+                  </h2>
+                  <p className="text-xl mb-8 text-gray-300 leading-relaxed">
+                    {technologies[activeTab].description}
+                  </p>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-semibold mb-4 text-cyan-400">Revolutionary Features</h3>
+                    <ul className="space-y-3">
+                      {technologies[activeTab].features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-lg">
+                          <span className="w-3 h-3 bg-cyan-400 rounded-full mr-4 animate-pulse"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4 text-purple-400">Applications</h3>
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    {technologies[activeTab].applications.map((app, index) => (
+                      <div
+                        key={index}
+                        className="bg-gradient-to-r from-purple-600/30 to-blue-600/30 p-4 rounded-xl text-center border border-white/20 hover:border-yellow-400/50 transition-all duration-300"
+                      >
+                        <div className="text-lg font-semibold">{app}</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Performance Stats */}
+                  <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20">
+                    <h4 className="text-xl font-semibold mb-4 text-yellow-400">Performance Metrics</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {Object.entries(technologies[activeTab].stats).map(([key, value], index) => (
+                        <div key={index} className="text-center">
+                          <div className="text-2xl font-bold text-white">{value}</div>
+                          <div className="text-sm text-gray-400 capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                      🚀 Experience This Technology
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Global Impact Section */}
+        <div className="container mx-auto px-6 py-12">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-xl rounded-3xl p-10 border border-white/30 text-center"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 ULTIMATE REVOLUTION • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Ultimate Tech Revolution 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Witness the convergence of all breakthrough technologies creating the most powerful 
-              technological revolution in human history
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Global Impact & Transformation
+            </h2>
+            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+              These revolutionary technologies are transforming every aspect of human civilization, 
+              from healthcare and education to space exploration and consciousness itself.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                🚀 Experience Revolution
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
-                📞 Join the Revolution
-              </button>
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="bg-white/10 p-6 rounded-xl">
+                <div className="text-3xl mb-2">🌍</div>
+                <div className="text-lg font-semibold">Global Reach</div>
+                <div className="text-sm text-gray-400">7.8B+ People</div>
+              </div>
+              <div className="bg-white/10 p-6 rounded-xl">
+                <div className="text-3xl mb-2">⚡</div>
+                <div className="text-lg font-semibold">Revolution Speed</div>
+                <div className="text-sm text-gray-400">Instant Deployment</div>
+              </div>
+              <div className="bg-white/10 p-6 rounded-xl">
+                <div className="text-3xl mb-2">🎯</div>
+                <div className="text-lg font-semibold">Impact Level</div>
+                <div className="text-sm text-gray-400">Civilization-wide</div>
+              </div>
+              <div className="bg-white/10 p-6 rounded-xl">
+                <div className="text-3xl mb-2">🔮</div>
+                <div className="text-lg font-semibold">Future Vision</div>
+                <div className="text-sm text-gray-400">Transcendent Evolution</div>
+              </div>
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Tab Navigation */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {revolutionTabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white/80 hover:bg-white/20'
-              }`}
-            >
-              <span className="text-2xl">{tab.icon}</span>
-              <div className="text-left">
-                <div className="font-semibold">{tab.title}</div>
-                <div className="text-sm opacity-80">{tab.description}</div>
-              </div>
-            </button>
-          ))}
-        </div>
+        {/* Call to Action */}
 
-        {/* Tab Content */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-        >
-          {renderTabContent()}
-        </motion.div>
-      </div>
-
-<<<<<<< HEAD
-      {/* Impact Section */}
-      <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🌍 Global Impact</h2>
-            <p className="text-xl opacity-80">How our revolutionary technologies will transform the world</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-80">Efficiency Increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
-              <div className="text-lg opacity-80">Possibilities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">100%</div>
-              <div className="text-lg opacity-80">Sustainability</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
-              <div className="text-lg opacity-80">Human Potential</div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Be part of the most significant technological advancement in human history. 
-            Transform your future with our revolutionary solutions.
-=======
-      {/* Interactive Demo Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">🚀 Experience the Ultimate Revolution</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Try our interactive demonstrations of the ultimate technology convergence
->>>>>>> cursor/create-and-deploy-new-content-b2ce
-          </p>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-4xl mb-4">🌟</div>
-              <h3 className="text-xl font-bold mb-2">Ultimate Convergence</h3>
-              <p className="text-sm opacity-80 mb-4">Experience all technologies working together</p>
-              <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-                Try Demo →
+        <div className="container mx-auto px-6 py-12 text-center">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-xl rounded-3xl p-10 border border-white/30"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Join the Revolution
+            </h2>
+            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+              Be part of the most significant technological transformation in human history. 
+              Experience the future today with Zion Tech Group's revolutionary solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                🚀 Start Your Journey
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                📚 Learn More
               </button>
             </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold mb-2">Space Revolution</h3>
-              <p className="text-sm opacity-80 mb-4">Control spacecraft with your mind</p>
-              <button className="bg-white text-cyan-600 px-4 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Consciousness AI</h3>
-              <p className="text-sm opacity-80 mb-4">Chat with conscious AI</p>
-              <button className="bg-white text-emerald-600 px-4 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-2">Quantum Computing</h3>
-              <p className="text-sm opacity-80 mb-4">Witness quantum supremacy</p>
-              <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">🌟 Join the Ultimate Revolution</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Be part of the most significant technological revolution in human history
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
-              🚀 Get Early Access
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
-              📞 Schedule Demo
-            </button>
-          </div>
         </div>
-      </div>
-=======
-      </main>
-      
-      <Footer />
->>>>>>> cursor/create-and-deploy-new-content-de2c
-    </div>
+      </motion.div>
+    </>
   );
 };
 

@@ -1,14 +1,16 @@
+<<<<<<< HEAD
+=======
 
 
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from "framer-motion";
+
 
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
-import { motion  } from './framer-motion';
+
 import {
 import {
 
@@ -1056,24 +1058,18 @@ export default function TeamPage() {;
   );
 
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
-import SEO from '../components/SEO';
-export default function TeamPage() {
-	return (
-		<>
-			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
-			<div className="container mx-auto px-4 py-16">
-				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
-			</div>
-		</>
-	)
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
+const team: React.FC = () => {
+=======
 }
     </Layout>);
 }
 import Head from './next / head';
-import { motion  } from './framer-motion';
+
 import { Brain, Cloud, Shield, Users  } from './lucide-react';
 ;
 const team_members = [;
@@ -1115,39 +1111,22 @@ export default /**
  * TeamPage - Function description
  */
 function TeamPage() {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <>;
-      <SEO;
-        title="Our Team | Zion Tech Group";
-        description="Meet the leadership team at Zion Tech Group.";
-        canonical="/team";
-      />;
-      <div className="container mx - auto px - 4 py - 16">;
-        <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>;
-        <p className="text - gray - 300 mb - 8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>);
-  return (
-    <>;
-      <SEO;
-        title="Our Team | Zion Tech Group";
-        description="Meet the leadership team at Zion Tech Group.";
-        canonical="/team";
-      />;
-      <div className="container mx - auto px - 4 py - 16">;
-        <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>;
-        <p className="text - gray - 300 mb - 8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>);
-;
-}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>team | Zion Tech Group</title>
+        <meta name="description" content="team - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">team</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-
-}
-
-;
-
+export default team;
