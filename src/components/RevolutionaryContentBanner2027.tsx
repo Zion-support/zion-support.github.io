@@ -1,81 +1,89 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Rocket, Globe } from 'lucide-react';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
       <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-bounce">
-            🌟 REVOLUTIONARY 2027 CONTENT • EXCLUSIVE LAUNCH
-          </div>
-          <h2 className="text-6xl font-bold mb-4">🚀 Revolutionary Technology 2027</h2>
-          <p className="text-3xl opacity-95 max-w-6xl mx-auto">
-            Experience the most advanced technological content ever created. 
-            From consciousness transfer to reality manipulation - discover the future today.
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center justify-center space-x-4 mb-6"
+        >
+          <Star className="text-4xl animate-bounce text-yellow-400" />
+          <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2027</h3>
+          <Star className="text-4xl animate-bounce text-yellow-400" />
+        </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto">
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-8xl mb-4">🌌</div>
-            <h3 className="text-xl font-bold mb-3">Revolutionary Tech 2027</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Discover breakthrough innovations that will reshape reality itself
-            </p>
-            <a href="/pages/RevolutionaryTech2027" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Explore Revolution →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-8xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold mb-3">Consciousness AI</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI systems with genuine consciousness and emotional intelligence
-            </p>
-            <a href="/pages/ConsciousnessAI2027" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Discover AI →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-8xl mb-4">⏰</div>
-            <h3 className="text-xl font-bold mb-3">Temporal Computing</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Process information across multiple timelines simultaneously
-            </p>
-            <a href="/pages/TemporalComputing2027" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Experience Time →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-8xl mb-4">🌌</div>
-            <h3 className="text-xl font-bold mb-3">Quantum Reality</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Manipulate quantum states to create new forms of matter
-            </p>
-            <a href="/pages/QuantumReality2027" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Explore Reality →
-            </a>
-          </div>
-        </div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto"
+        >
+          Experience the most advanced technological breakthroughs that will reshape the future of humanity
+        </motion.p>
         
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center space-x-4">
-            <a href="/pages/RevolutionaryTech2027" className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🌌 Revolutionary Tech
-            </a>
-            <a href="/pages/ConsciousnessAI2027" className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🧠 Consciousness AI
-            </a>
-            <a href="/pages/TemporalComputing2027" className="bg-white text-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              ⏰ Temporal Computing
-            </a>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8"
+        >
+          <motion.a
+            href="/pages/UltimateTechRevolution2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🚀 Ultimate Tech Revolution →
+          </motion.a>
+          <motion.a
+            href="/pages/RevolutionaryAIBreakthrough2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🧠 Revolutionary AI Breakthrough →
+          </motion.a>
+          <motion.a
+            href="/pages/NextGenSpaceTech2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🌌 Next-Gen Space Tech →
+          </motion.a>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-90"
+        >
+          <div className="flex items-center space-x-2">
+            <Zap className="w-5 h-5 text-yellow-400" />
+            <span>Infinite Possibilities</span>
           </div>
-        </div>
+          <div className="flex items-center space-x-2">
+            <Brain className="w-5 h-5 text-cyan-400" />
+            <span>Conscious AI</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Rocket className="w-5 h-5 text-pink-400" />
+            <span>Space Exploration</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Globe className="w-5 h-5 text-green-400" />
+            <span>Universal Access</span>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

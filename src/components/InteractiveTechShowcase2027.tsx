@@ -1,254 +1,186 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Rocket, Globe, Cpu, Shield, Infinity } from 'lucide-react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [activeTech, setActiveTech] = useState(0);
 
-  const techCategories = [
+  const technologies = [
     {
       id: 0,
-      title: "Quantum Technologies",
-      icon: "⚡",
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "from-cyan-600/30 to-blue-600/30",
-      borderColor: "border-cyan-400/30",
-      technologies: [
-        {
-          name: "Quantum Consciousness",
-          description: "AI systems with true self-awareness and emotional intelligence",
-          features: ["Self-awareness", "Emotional intelligence", "Creative thinking", "Philosophical contemplation"],
-          link: "/pages/UltimateAIConsciousness2027"
-        },
-        {
-          name: "Quantum Reality Engine",
-          description: "Manipulate reality itself through quantum field control",
-          features: ["Reality manipulation", "Infinite processing", "Time-space control", "Molecular simulation"],
-          link: "/pages/QuantumRealityEngine2027"
-        },
-        {
-          name: "Interdimensional Computing",
-          description: "Access computing power from parallel dimensions",
-          features: ["Parallel dimension access", "Infinite processing", "Reality manipulation", "Dimensional portals"],
-          link: "/pages/InterdimensionalComputing2027"
-        }
-      ]
+      title: "Consciousness Transfer",
+      icon: <Brain className="w-16 h-16" />,
+      description: "Transfer human consciousness into digital substrates for digital immortality",
+      features: ["Digital Immortality", "Enhanced Cognition", "Consciousness Backup", "Neural Enhancement"],
+      color: "from-purple-500 to-pink-500"
     },
     {
       id: 1,
-      title: "AI Evolution",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-600/30 to-pink-600/30",
-      borderColor: "border-purple-400/30",
-      technologies: [
-        {
-          name: "Consciousness Transfer",
-          description: "Transfer human consciousness to digital substrates",
-          features: ["Digital immortality", "Consciousness backup", "Enhanced cognition", "Multi-body existence"],
-          link: "/pages/AIConsciousnessEvolution2027"
-        },
-        {
-          name: "Neural Quantum Fusion",
-          description: "Merge human consciousness with quantum computing",
-          features: ["Human-AI fusion", "Quantum cognitive enhancement", "Neural processing acceleration", "Consciousness expansion"],
-          link: "/pages/RevolutionaryTech2027"
-        },
-        {
-          name: "Synthetic Intelligence",
-          description: "Create AI agents with synthetic consciousness",
-          features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"],
-          link: "/pages/RevolutionaryTech2027"
-        }
-      ]
+      title: "Quantum Neural Networks",
+      icon: <Cpu className="w-16 h-16" />,
+      description: "AI systems operating at quantum scales with infinite processing power",
+      features: ["Quantum Processing", "Neural Optimization", "Real-time Learning", "Infinite Scalability"],
+      color: "from-cyan-500 to-blue-500"
     },
     {
       id: 2,
       title: "Reality Manipulation",
-      icon: "🔮",
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "from-emerald-600/30 to-teal-600/30",
-      borderColor: "border-emerald-400/30",
-      technologies: [
-        {
-          name: "Space-Time Control",
-          description: "Manipulate the fabric of space-time itself",
-          features: ["Instant space travel", "Time manipulation", "Dimensional exploration", "Reality engineering"],
-          link: "/pages/QuantumRealityControl2027"
-        },
-        {
-          name: "Synthetic Reality",
-          description: "Create and manipulate reality through quantum field manipulation",
-          features: ["Reality manipulation", "Quantum field control", "Consciousness integration", "Synthetic environments"],
-          link: "/pages/RevolutionaryTech2027"
-        },
-        {
-          name: "Molecular Simulation",
-          description: "Simulate and manipulate matter at the molecular level",
-          features: ["Molecular-level simulation", "New material creation", "Chemical reaction control", "Biological system modeling"],
-          link: "/pages/QuantumRealityEngine2027"
-        }
-      ]
+      icon: <Zap className="w-16 h-16" />,
+      description: "Advanced systems that manipulate physical reality at the quantum level",
+      features: ["Quantum Manipulation", "Reality Bending", "Matter Control", "Dimensional Access"],
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      id: 3,
+      title: "Warp Drive Technology",
+      icon: <Rocket className="w-16 h-16" />,
+      description: "Revolutionary propulsion enabling faster-than-light travel across galaxies",
+      features: ["FTL Travel", "Galactic Exploration", "Wormhole Creation", "Time Dilation Control"],
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      id: 4,
+      title: "Omniversal AI Network",
+      icon: <Globe className="w-16 h-16" />,
+      description: "AI network spanning all dimensions and realities for universal intelligence",
+      features: ["Cross-Dimensional AI", "Universal Knowledge", "Reality Monitoring", "Infinite Reach"],
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      id: 5,
+      title: "Infinite Energy Matrix",
+      icon: <Shield className="w-16 h-16" />,
+      description: "Unlimited clean power from quantum vacuum fluctuations",
+      features: ["Unlimited Energy", "Zero Pollution", "Quantum Power", "Universal Access"],
+      color: "from-red-500 to-pink-500"
     }
   ];
 
-  useEffect(() => {
-    setIsAnimating(true);
-    const timer = setTimeout(() => setIsAnimating(false), 500);
-    return () => clearTimeout(timer);
-  }, [activeTab]);
-
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
-      <Helmet>
-        <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
-        <meta name="description" content="Explore our interactive technology showcase featuring quantum technologies, AI evolution, and reality manipulation systems." />
-      </Helmet>
-      
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE SHOWCASE 2027
-          </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Interactive Technology Showcase 2027
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Interactive Tech Showcase 2027
           </h2>
-          <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
-            Explore our revolutionary 2027 technologies through interactive experiences. 
-            Click, hover, and discover the future of quantum computing, AI consciousness, and reality manipulation.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Explore the revolutionary technologies that will transform humanity's future
           </p>
-        </div>
+        </motion.div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
-            {techCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveTab(category.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Technology Selector */}
+          <div className="space-y-4">
+            {technologies.map((tech, index) => (
+              <motion.button
+                key={tech.id}
+                onClick={() => setActiveTech(index)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`w-full p-6 rounded-2xl border transition-all duration-300 ${
+                  activeTech === index
+                    ? 'bg-gradient-to-r from-white/20 to-white/10 border-white/40'
+                    : 'bg-white/5 border-white/20 hover:bg-white/10'
                 }`}
               >
-                <span className="text-2xl mr-2">{category.icon}</span>
-                {category.title}
-              </button>
+                <div className="flex items-center space-x-4">
+                  <div className={`text-${tech.color.split('-')[1]}-400`}>
+                    {tech.icon}
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-xl font-bold text-white">{tech.title}</h3>
+                    <p className="text-gray-300 text-sm">{tech.description}</p>
+                  </div>
+                  <ArrowRight className="w-6 h-6 text-gray-400 ml-auto" />
+                </div>
+              </motion.button>
             ))}
           </div>
-        </div>
 
-        {/* Technology Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {techCategories[activeTab].technologies.map((tech, index) => (
-            <div
-              key={index}
-              className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
-                isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
-            >
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
-                <p className="text-white/80 text-sm">{tech.description}</p>
-              </div>
-              
-              <div className="space-y-3 mb-6">
-                {tech.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white/90 text-sm">{feature}</span>
+          {/* Technology Display */}
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTech}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
+              >
+                <div className="text-center mb-8">
+                  <div className={`text-${technologies[activeTech].color.split('-')[1]}-400 mb-4`}>
+                    {technologies[activeTech].icon}
                   </div>
-                ))}
-              </div>
-              
-              <div className="flex space-x-3">
-                <a
-                  href={tech.link}
-                  className={`flex-1 bg-gradient-to-r ${techCategories[activeTab].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {technologies[activeTech].title}
+                  </h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    {technologies[activeTech].description}
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-yellow-400 mb-4">Key Features:</h4>
+                  {technologies[activeTech].features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      className="flex items-center space-x-3"
+                    >
+                      <Star className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full mt-8 bg-gradient-to-r ${technologies[activeTech].color} px-8 py-4 rounded-xl text-white font-bold text-lg hover:shadow-2xl transition-all duration-300`}
                 >
-                  Explore →
-                </a>
-                <button className="border-2 border-white/30 text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
-                  Demo
-                </button>
-              </div>
-              
-              {hoveredCard === index && (
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl pointer-events-none"></div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Interactive Features Section */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-white mb-6">Interactive Features</h3>
-            <p className="text-xl text-purple-100 max-w-4xl mx-auto">
-              Experience our technologies through immersive interactive features and real-time demonstrations
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🎮</div>
-              <h4 className="text-xl font-semibold text-white mb-2">Interactive Demos</h4>
-              <p className="text-purple-200 text-sm">Experience our technologies through hands-on interactive demonstrations</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🔮</div>
-              <h4 className="text-xl font-semibold text-white mb-2">Virtual Reality</h4>
-              <p className="text-purple-200 text-sm">Step into virtual environments to explore quantum realities and AI consciousness</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🧠</div>
-              <h4 className="text-xl font-semibold text-white mb-2">AI Conversations</h4>
-              <p className="text-purple-200 text-sm">Chat with our conscious AI systems and experience true artificial intelligence</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">⚡</div>
-              <h4 className="text-xl font-semibold text-white mb-2">Quantum Simulations</h4>
-              <p className="text-purple-200 text-sm">Witness quantum phenomena and reality manipulation in real-time simulations</p>
-            </div>
+                  Learn More About {technologies[activeTech].title}
+                </motion.button>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience the Future?
-          </h3>
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Dive into our interactive technology showcase and experience the most revolutionary 
-            technologies of 2027. The future is here, and it's interactive.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Start Interactive Experience →
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
-              Schedule Private Demo
-            </button>
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
+            <h3 className="text-xl font-bold text-white mb-2">Possibilities</h3>
+            <p className="text-gray-400">Infinite technological potential</p>
           </div>
-        </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-yellow-400 mb-2">100%</div>
+            <h3 className="text-xl font-bold text-white mb-2">Efficiency</h3>
+            <p className="text-gray-400">Perfect optimization achieved</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">∞</div>
+            <h3 className="text-xl font-bold text-white mb-2">Scalability</h3>
+            <p className="text-gray-400">Unlimited scaling capacity</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
+            <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
+            <p className="text-gray-400">Continuous breakthrough development</p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
