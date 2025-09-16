@@ -1,28 +1,27 @@
-
-export default function Page() {
-	return (
-		<div className="bg-black min-h-screen">
-			<div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-				<p className="text-sm text-blue-300">Blueprint • 2025-09-16</p>
-				<h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-					Trustworthy Model Routing (2026)
-				</h1>
-				<p className="mt-6 text-lg leading-8 text-gray-300">
-					Policy- and cost-aware routing with safety backstops, budget enforcement, and eval-driven
-					promotion criteria.
-				</p>
-				<div className="mt-10 grid gap-6">
-					<div className="rounded-2xl bg-white/5 p-6 text-gray-200">
-						<h2 className="text-xl font-semibold text-white">Highlights</h2>
-						<ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
-							<li>Multi-objective routing: cost, quality, and safety</li>
-							<li>Shadow tests with automatic rollback triggers</li>
-							<li>Evidence bundles and auditability built-in</li>
-						</ul>
-					</div>
-					<a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">Back to updates →</a>
-				</div>
-			</div>
-		</div>
-	)
+export default function TrustworthyModelRouting2026() {
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Blueprint: Trustworthy Model Routing (2026)</h1>
+          <p className="text-gray-600 mb-8">Policy- and cost-aware routing with safety backstops and budget enforcement.</p>
+          <div className="prose prose-gray max-w-none">
+            <h2>Overview</h2>
+            <p>
+              Implement a routing control plane that considers policy compliance, safety, latency and cost, with auditable decisions
+              and graceful degradation strategies.
+            </p>
+            <h3>Core Components</h3>
+            <ul>
+              <li>Policy engine with rules and exceptions</li>
+              <li>Live eval signals and model health scores</li>
+              <li>Budget and quota enforcement</li>
+              <li>Fallbacks and circuit breakers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
+
