@@ -70,6 +70,13 @@ import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBan
 import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
+import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
+import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
+import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
+import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
+import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
+import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
+import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 
 const App: React.FC = () => {
   return (
@@ -207,6 +214,26 @@ const App: React.FC = () => {
                 <RevolutionaryContentBanner2027 />
               </div>
 
+              {/* NEW: Futuristic Tech Promotion Banner 2035 */}
+              <div className="mb-12">
+                <FuturisticTechPromotionBanner2035 />
+              </div>
+
+              {/* NEW: Quantum Computing Breakthrough 2035 */}
+              <div className="mb-12">
+                <QuantumComputingBreakthrough2035 />
+              </div>
+
+              {/* NEW: Neural Interface Revolution 2036 */}
+              <div className="mb-12">
+                <NeuralInterfaceRevolution2036 />
+              </div>
+
+              {/* NEW: Interdimensional Tech Showcase 2037 */}
+              <div className="mb-12">
+                <InterdimensionalTechShowcase2037 />
+              </div>
+
               {/* Promotional Banner */}
               <div className="mb-12">
                 <PromotionalBanner />
@@ -248,6 +275,9 @@ const App: React.FC = () => {
           <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
           <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
+          <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
+          <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
         </Routes>
         
         <Footer />
