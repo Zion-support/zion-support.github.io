@@ -184,13 +184,6 @@ const QuantumRealityEngine2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default QuantumRealityEngine2026;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-01e2
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -390,12 +383,4 @@ export default QuantumRealityEngine2026;
               Learn About AI Consciousness
             </a>
 export default QuantumRealityEngine2026;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
 export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-1912
->>>>>>> cursor/create-and-deploy-new-content-01e2
