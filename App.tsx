@@ -92,6 +92,10 @@ import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanne
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarousel2027';
 import RevolutionaryTechTrends2027 from './src/pages/RevolutionaryTechTrends2027';
 import NextGenAIBreakthrough2027 from './src/pages/NextGenAIBreakthrough2027';
@@ -193,6 +197,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
                 
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
+                
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
 
@@ -266,6 +273,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AISolutionsComprehensive2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🤖 NEW: AI Solutions Comprehensive 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Revolutionary Tech Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 NEW: Next-Gen Innovation Hub 2025 →
                     </a>
                     <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 ULTIMATE: Tech Revolution 2025 →
@@ -920,6 +933,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
           <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />
           <Route path="/pages/AIBusinessRevolution2028" element={<AIBusinessRevolution2028 />} />
