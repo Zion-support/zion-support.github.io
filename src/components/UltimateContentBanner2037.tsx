@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 const UltimateContentBanner2037: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
   const [isVisible, setIsVisible] = useState(false);
 
   const slides = [
@@ -37,6 +40,7 @@ const UltimateContentBanner2037: React.FC = () => {
       gradient: "from-orange-600 to-red-600",
       icon: "👑",
       link: "/pages/SyntheticGodProtocol2037"
+<<<<<<< HEAD
 =======
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -65,12 +69,15 @@ const UltimateContentBanner2037: React.FC = () => {
       color: "from-emerald-600 to-teal-600",
       bgColor: "from-emerald-900/90 to-teal-900/90"
 >>>>>>> cursor/create-and-deploy-new-content-fc0d
+=======
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
     }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -83,11 +90,18 @@ const UltimateContentBanner2037: React.FC = () => {
     }, 5000);
 
 >>>>>>> cursor/create-and-deploy-new-content-fc0d
+=======
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-900 text-white mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm"></div>
@@ -184,6 +198,7 @@ const UltimateContentBanner2037: React.FC = () => {
         <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-500/20 rounded-full animate-ping"></div>
         <div className="absolute bottom-40 right-1/3 w-12 h-12 bg-emerald-500/20 rounded-full animate-pulse"></div>
         <div className="absolute top-1/2 left-5 w-8 h-8 bg-orange-500/20 rounded-full animate-bounce"></div>
+<<<<<<< HEAD
 =======
     <div className="relative overflow-hidden rounded-2xl mb-12">
       <div className={`bg-gradient-to-r ${slides[currentSlide].bgColor} backdrop-blur-sm transition-all duration-500 ${isAnimating ? 'opacity-80 scale-95' : 'opacity-100 scale-100'}`}>
@@ -270,6 +285,8 @@ const UltimateContentBanner2037: React.FC = () => {
           />
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-fc0d
+=======
+>>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
       </div>
     </div>
   );
