@@ -62,6 +62,16 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/blog/ai-2026-exec-guide-to-agent-slo-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Leadership • 5 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Executive Guide to Agent SLOs</h3>
+                  <p className="text-white/80">Turn evals and traces into executive scorecards that drive decisions.</p>
+                </Link>
+                <Link href="/blog/ai-2026-agent-platform-readiness-checklist" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Platform Readiness</h3>
+                  <p className="text-white/80">A pragmatic checklist for safe, observable, cost‑aware agent platforms.</p>
+                </Link>
                 <Link href="/blog/ai-2026-runtime-evidence-bundles" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Runtime Evidence Bundles</h3>
