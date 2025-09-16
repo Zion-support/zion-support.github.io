@@ -5,6 +5,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
   const showcaseItems = [
     {
       id: 1,
@@ -139,9 +140,25 @@ const EnhancedContentShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
   };
+=======
+    },
+    {
+      id: 2,
+      title: "Advanced Quantum Computing 2026",
+      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
+      icon: "⚡",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/AdvancedQuantumComputing2026",
+      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
+    },
+    {
+      id: 3,
+      title: "Neural Interface Revolution 2026",
+      description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
+      icon: "🧬",
+>>>>>>> cursor/create-and-deploy-new-content-7a01
 
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -166,6 +183,7 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -671,6 +689,8 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7a01
       </div>
     </div>
   );

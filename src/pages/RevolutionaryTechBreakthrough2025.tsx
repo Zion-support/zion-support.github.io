@@ -8,6 +8,10 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY BREAKTHROUGH 2025 • EXCLUSIVE LAUNCH
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-7a01
           </div>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Revolutionary Technology Breakthrough 2025
@@ -17,6 +21,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -96,6 +101,8 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
           </motion.div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7a01
         {/* Revolutionary Technologies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl">
@@ -186,9 +193,13 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f7d1
 >>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-7a01
         </div>
       </div>
     </div>
