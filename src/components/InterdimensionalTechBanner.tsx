@@ -56,13 +56,7 @@ const InterdimensionalTechBanner: React.FC = () => {
               <div className="flex items-center gap-4">
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.3, 1]
-                  }}
                   transition={{ 
-                    rotate: { duration: 12, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
-                  }}
                   className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center"
                 >
                   <Layers className="w-6 h-6 text-white" />
@@ -93,9 +87,6 @@ const InterdimensionalTechBanner: React.FC = () => {
 
                 <motion.div
                   animate={{ 
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.1, 1]
-                  }}
                   transition={{ duration: 2.5, repeat: Infinity }}
                   className="hidden md:flex items-center gap-2 text-cyan-400"
                 >
@@ -144,13 +135,7 @@ const InterdimensionalTechBanner: React.FC = () => {
                 
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.2, 1]
-                  }}
                   transition={{ 
-                    rotate: { duration: 4, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                  }}
                   className="flex items-center gap-1 text-yellow-400"
                 >
                   <Infinity className="w-4 h-4" />
@@ -166,17 +151,8 @@ const InterdimensionalTechBanner: React.FC = () => {
               <motion.div
                 key={i}
                 animate={{
-                  x: [0, Math.random() * 300 - 150],
-                  y: [0, Math.random() * 100 - 50],
-                  opacity: [0, 0.7, 0],
-                  scale: [0, 1.5, 0],
-                  rotate: [0, 360]
-                }}
                 transition={{
-                  duration: Math.random() * 10 + 8,
-                  repeat: Infinity,
-                  delay: Math.random() * 4
-                }}
+                  delay
                 className="absolute w-2 h-2 border border-indigo-400 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,

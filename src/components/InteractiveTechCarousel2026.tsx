@@ -195,27 +195,16 @@ const InteractiveTechCarousel2026: React.FC = () => {
                   {/* Floating Elements */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 5, 0]
-                    }}
                     transition={{ 
-                      duration: 3,
-                      repeat: Infinity,
                       ease: "easeInOut"
                     }}
                     className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-60 blur-sm"
                   />
                   <motion.div
                     animate={{ 
-                      y: [0, 10, 0],
-                      rotate: [0, -5, 0]
-                    }}
                     transition={{ 
-                      duration: 4,
-                      repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 1
-                    }}
+                      delay
                     className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60 blur-sm"
                   />
                 </motion.div>

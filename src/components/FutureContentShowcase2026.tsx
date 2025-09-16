@@ -78,10 +78,7 @@ const FutureContentShowcase2026: React.FC = () => {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ 
-                opacity: isLoaded ? 1 : 0, 
-                scale: isLoaded ? 1 : 0.9,
-                y: activeCard === index ? -20 : 0
-              }}
+                y
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className={`relative bg-gradient-to-br ${content.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
                 activeCard === index ? 'ring-2 ring-white/50 shadow-2xl' : ''

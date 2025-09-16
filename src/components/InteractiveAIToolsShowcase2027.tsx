@@ -156,17 +156,11 @@ const InteractiveAIToolsShowcase2027 = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
-              x: [0Math.random() * 1000],
-              y: [0Math.random() * 1000],
-              scale: [010],
-            }}
-              duration: Math.random() * 12 + 8,
-              repeat: Infinity,
-              delay: Math.random() * 6,
-            }}
+              scale
+                                          delay
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -177,7 +171,7 @@ const InteractiveAIToolsShowcase2027 = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -198,10 +192,10 @@ const InteractiveAIToolsShowcase2027 = () => {
             Discover and interact with the most advanced AI tools and technologies 
             that are transforming industries in 2027.
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -260,11 +254,11 @@ const InteractiveAIToolsShowcase2027 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Featured Tools */}
         {featuredTools.length > 0 && (
-          <divdiv
+          <div
             className="mb-16"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -274,7 +268,7 @@ const InteractiveAIToolsShowcase2027 = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredTools.map((toolindex) => (
-                <divdiv
+                <div
                   key={tool.id}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => setSelectedTool(tool)}
@@ -350,14 +344,14 @@ const InteractiveAIToolsShowcase2027 = () => {
                       </button>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         )}
 
         {/* All Tools Grid */}
-        <divdiv
+        <div
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white">All AI Tools</h2>
@@ -372,7 +366,7 @@ const InteractiveAIToolsShowcase2027 = () => {
               : 'grid-cols-1'
           }`}>
             {filteredTools.map((toolindex) => (
-              <divdiv
+              <div
                 key={tool.id}
                 className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
@@ -454,13 +448,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </button>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-3xl p-12 backdrop-blur-sm border border-white/20">
@@ -483,17 +477,17 @@ const InteractiveAIToolsShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
 
       {/* Tool Detail Modal */}
       <div>
         {selectedTool && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedTool(null)}
           >
-            <divdiv
+            <div
               className="bg-slate-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -572,8 +566,8 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </div>

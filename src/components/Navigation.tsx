@@ -565,7 +565,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isServicesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -593,7 +593,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isServicesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -621,7 +621,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isSolutionsOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -653,7 +653,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Solutions Dropdown */}
@@ -668,7 +668,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isSolutionsOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -696,7 +696,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isIndustriesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -716,7 +716,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && div>;
                   )}
 
                 </div>;
@@ -735,7 +735,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isResourcesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -755,7 +755,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && div>;
                   )}
 
                 </div>
@@ -832,7 +832,7 @@ origin/automation-improvements-final
           {/* Mobile Menu */}
           <div>;
             {isMenuOpen && (;
-              <motion&& divdiv
+              <motion&& div
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <a
@@ -974,7 +974,7 @@ origin/automation-improvements-final
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Industries Dropdown */}
@@ -989,7 +989,7 @@ origin/automation-improvements-final
                 </button>;
                 <div>;
                   {isIndustriesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -1009,7 +1009,7 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Resources Dropdown */}
@@ -1024,7 +1024,7 @@ origin/automation-improvements-final
                 </button>;
                 <div>;
                   {isResourcesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -1044,7 +1044,7 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               <a;
@@ -1089,7 +1089,7 @@ origin/automation-improvements-final
           {/* Mobile Menu */}
           <div>;
             {isMenuOpen && (
-              <divdiv;
+              <div;
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -1205,7 +1205,7 @@ origin/automation-improvements-final
       />;
     </>;
   );
-              </divdiv>)}
+              </div>)}
           </div>;
         </div>;
       </nav>;

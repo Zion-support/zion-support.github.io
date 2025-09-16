@@ -88,7 +88,7 @@ export default function RevolutionaryTestimonialsShowcase() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -106,16 +106,16 @@ export default function RevolutionaryTestimonialsShowcase() {
             'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses 
             with our AI solutions and achieved extraordinary results.
           </p>
-        </divdiv>
+        </div>
 
         {/* Stats */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {stats.map((statindex) => (
-            <divdiv
+            <div
               key={stat.label}
               whileInView={{ opacity: 1scale: 1 }}
               viewport={{ once: true }}
@@ -124,14 +124,14 @@ export default function RevolutionaryTestimonialsShowcase() {
               <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
               <div className="text-sm text-gray-600">{stat.label}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Featured Testimonials */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
-            <divdiv
+            <div
               key={testimonial.id}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -169,18 +169,18 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="text-xs text-blue-600">{testimonial.industry}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Additional Testimonials Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {testimonials.filter(testimonial => !testimonial.featured).map((testimonialindex) => (
-            <divdiv
+            <div
               key={testimonial.id}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -214,12 +214,12 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="text-xs text-blue-600">{testimonial.company}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
@@ -243,7 +243,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               View All Case Studies
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

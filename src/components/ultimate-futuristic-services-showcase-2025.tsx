@@ -171,7 +171,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -188,7 +188,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
@@ -197,10 +197,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -280,11 +280,11 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {sortedServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 className={`group relative ${
                   viewMode === 'grid' 
@@ -409,9 +409,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
@@ -436,7 +436,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -461,7 +461,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 View Pricing
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </Layout>

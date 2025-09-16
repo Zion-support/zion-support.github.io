@@ -70,7 +70,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -88,12 +88,12 @@ export default function RevolutionaryCaseStudiesShowcase() {
             Discover how leading companies are achieving extraordinary results with our AI solutions. 
             These 'aren', 't just numbers—'they', 're transformations that matter.
           </p>
-        </divdiv>
+        </div>
 
         {/* Featured Case Studies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {caseStudies.filter(study => study.featured).map((studyindex) => (
-            <divdiv
+            <div
               key={study.id}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -133,18 +133,18 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Additional Case Studies */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-6 mb-12"
         >
           {caseStudies.filter(study => !study.featured).map((studyindex) => (
-            <divdiv
+            <div
               key={study.id}
               whileInView={{ opacity: 1x: 0 }}
               viewport={{ once: true }}
@@ -183,12 +183,12 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   <ArrowRight className="w-3 h-3 ml-1" />
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
@@ -218,7 +218,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
               View All Case Studies
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

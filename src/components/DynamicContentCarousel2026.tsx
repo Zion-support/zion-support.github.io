@@ -192,15 +192,8 @@ const DynamicContentCarousel2026: React.FC = () => {
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
             animate={{
-              x: [0, Math.random() * 1000],
-              y: [0, Math.random() * 1000],
-              opacity: [0, 1, 0],
-            }}
             transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+              delay
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

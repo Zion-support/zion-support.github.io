@@ -70,7 +70,7 @@ import React, { useState, useEffect } from 'react';
         </div>
 
           </div>
-        </divdiv>
+        </div>
       </div>
   );
 };

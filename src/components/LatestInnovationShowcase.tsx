@@ -64,7 +64,7 @@ const LatestInnovationShowcase: React.FC = () => {
 
         {/* Innovation Carousel */}
         <div className="relative">
-            <divdiv
+            <div
               key={currentInnovation}
               className="grid md:grid-cols-2 gap-8 items-center"
             >
@@ -96,7 +96,7 @@ const LatestInnovationShowcase: React.FC = () => {
                   Try Demo →
                 </button>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}

@@ -22,7 +22,7 @@ const AICodeReviewSecurityScanner = () => {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
@@ -69,14 +69,14 @@ const AICodeReviewSecurityScanner = () => {
                   SOC2 & ISO27001 compliant
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -87,7 +87,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our AI-powered platform provides end-to-end code analysis, security scanning, and quality assurance 
                 to protect your applications and improve development efficiency.
               </p>
-            </divdiv>
+            </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -122,7 +122,7 @@ const AICodeReviewSecurityScanner = () => {
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
               ].map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
@@ -132,7 +132,7 @@ const AICodeReviewSecurityScanner = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -141,7 +141,7 @@ const AICodeReviewSecurityScanner = () => {
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -152,7 +152,7 @@ const AICodeReviewSecurityScanner = () => {
                 Choose the plan that fits your development team size and security requirements. 
                 All plans include our core AI-powered security scanning capabilities.
               </p>
-            </divdiv>
+            </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -207,7 +207,7 @@ const AICodeReviewSecurityScanner = () => {
                   popular: false
                 }
               ].map((plan, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
@@ -251,7 +251,7 @@ const AICodeReviewSecurityScanner = () => {
                   >
                     Get Started
                   </divbutton>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -260,7 +260,7 @@ const AICodeReviewSecurityScanner = () => {
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -271,7 +271,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our platform delivers measurable results that improve your security posture, 
                 development efficiency, and code quality while reducing costs and risks.
               </p>
-            </divdiv>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
@@ -292,7 +292,7 @@ const AICodeReviewSecurityScanner = () => {
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
                 ].map((benefit, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     whileInView={{ opacity: 1, x: 0 }}
                     className="flex items-start"
@@ -304,7 +304,7 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
               
@@ -326,7 +326,7 @@ const AICodeReviewSecurityScanner = () => {
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
                 ].map((benefit, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     whileInView={{ opacity: 1, x: 0 }}
                     className="flex items-start"
@@ -338,7 +338,7 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -348,7 +348,7 @@ const AICodeReviewSecurityScanner = () => {
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -359,7 +359,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our AI-powered code security platform is used by development teams across various industries 
                 to protect their applications and improve code quality.
               </p>
-            </divdiv>
+            </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -372,7 +372,7 @@ const AICodeReviewSecurityScanner = () => {
                 "Educational Institutions",
                 "Startups & Enterprises"
               ].map((useCase, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
@@ -381,7 +381,7 @@ const AICodeReviewSecurityScanner = () => {
                     <Users className="w-6 h-6" />
                   </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -390,7 +390,7 @@ const AICodeReviewSecurityScanner = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -419,14 +419,14 @@ const AICodeReviewSecurityScanner = () => {
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
             >
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -457,7 +457,7 @@ const AICodeReviewSecurityScanner = () => {
                   <p>Middletown DE 19709</p>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

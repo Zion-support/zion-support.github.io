@@ -177,7 +177,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
                 x: [0, 100, 0],
@@ -197,7 +197,7 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <divdiv
+          <div
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -218,7 +218,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },
                 { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
               ].map((stat, index) => (
-                <divdiv
+                <div
                   key={stat.label}
                   className="text-center"
                 >
@@ -227,7 +227,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   </div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-cyan-300">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
@@ -244,7 +244,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 />
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -341,7 +341,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
@@ -420,13 +420,13 @@ export default function ComprehensiveServicesShowcase2025() {
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
                 </button>
-              </divdiv>
+              </div>
             ))}
           </div>
         ) : (
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
@@ -509,7 +509,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         )}
@@ -541,7 +541,7 @@ export default function ComprehensiveServicesShowcase2025() {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -566,7 +566,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 View Pricing Plans
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </Layout>

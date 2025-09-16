@@ -108,7 +108,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 Experience <span className="text-yellow-400 font-bold">50000% ROI</span> with revolutionary 
                 neural architectures and quantum-enhanced processing.
               </p>
-            </divdiv>
+            </div>
 
             {/* Interactive Feature Showcase */}
               <div className="space-y-8">
@@ -118,7 +118,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 
                 <div className="space-y-6">
                   {features.map((feature, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className={`p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${
                         currentFeature === index
@@ -142,13 +142,13 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                           </div>
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
               </div>
 
               <div className="relative">
-                <divdiv
+                <div
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
                   key={currentFeature}
                 >
@@ -168,7 +168,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                     
                     {/* Animated Progress Bar */}
                     <div className="w-full bg-white/20 rounded-full h-3 mb-6">
-                      <divdiv
+                      <div
                         className="bg-gradient-to-r from-yellow-400 to-orange-500 h-3 rounded-full"
                       />
                     </div>
@@ -177,9 +177,9 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                       Performance Score: 98.7%
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Success Metrics */}
               <div className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
@@ -198,7 +198,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-2">340%</div>
                 <div className="text-gray-300">Efficiency Gain</div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Call to Action */}
               <div className="space-y-6">
@@ -232,7 +232,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Floating Elements */}

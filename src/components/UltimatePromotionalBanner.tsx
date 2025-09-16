@@ -177,13 +177,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <motion.div
           animate={{ 
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            rotate: [0, 180, 360]
-          }}
           transition={{ 
-            duration: 10,
-            repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute top-4 right-4 text-4xl opacity-20"
@@ -193,13 +187,7 @@ const UltimatePromotionalBanner: React.FC = () => {
         
         <motion.div
           animate={{ 
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-            rotate: [0, -180, -360]
-          }}
           transition={{ 
-            duration: 12,
-            repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute bottom-4 left-4 text-4xl opacity-20"
@@ -208,7 +196,7 @@ const UltimatePromotionalBanner: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </divsection>

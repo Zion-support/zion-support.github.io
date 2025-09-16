@@ -142,7 +142,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -151,10 +151,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Overall Stats */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -166,10 +166,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Case Study Selector */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {caseStudies.map((caseStudyindex) => (
@@ -190,10 +190,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <p className="text-xs text-gray-500 mt-1">{caseStudy.industry}</p>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Active Case Study Details */}
-          <divdiv
+          <div
             key={activeCase}
             className="bg-white rounded-2xl shadow-xl p-8 mb-12"
           >
@@ -280,11 +280,11 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -306,7 +306,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

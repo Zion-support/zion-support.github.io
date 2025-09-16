@@ -74,7 +74,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden"
         >
           {/* Background with gradient */}
@@ -88,16 +88,12 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(8)].map((_i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                }}
-                  y: [0-30],
-                  opacity: [0.30.80.3],
-                  scale: [1.21],
                 }}
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
@@ -111,7 +107,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left side - Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentSlide}
                   className="flex items-start space-x-4"
                 >
@@ -174,45 +170,42 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right side - Visual elements */}
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative w-64 h-64">
                   {/* Rotating elements */}
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                   />
 
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <divdiv
+                    <div
                       className={`w-20 h-20 rounded-full bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center shadow-2xl`}
                     >
                       <currentSlideData.icon className="w-10 h-10 text-white" />
-                    </divdiv>
+                    </div>
                   </div>
 
                   {/* Floating dots */}
                   {[...Array(6)].map((_i) => (
-                    <divdiv
+                    <div
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full"
                       style={{
                         left: `${20 + (i * 15)}%`,
                         top: `${20 + (i * 10)}%`,
-                      }}
-                        y: [0-10],
-                        opacity: [0.610.6],
                       }}
                         duration: 2 + i * 0.5,
                         repeat: Infinity,
@@ -247,7 +240,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );

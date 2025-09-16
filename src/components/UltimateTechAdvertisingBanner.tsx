@@ -154,12 +154,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
                     <motion.div 
                       className="absolute -top-4 -right-4 w-16 h-16 bg-white/30 rounded-full flex items-center justify-center text-2xl"
                       animate={{ 
-                        y: [0, -10, 0],
-                        rotate: [0, 5, 0]
-                      }}
                       transition={{ 
-                        duration: 2,
-                        repeat: Infinity,
                         ease: "easeInOut"
                       }}
                     >
@@ -169,15 +164,9 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
                     <motion.div 
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-white/30 rounded-full flex items-center justify-center text-xl"
                       animate={{ 
-                        y: [0, 10, 0],
-                        rotate: [0, -5, 0]
-                      }}
                       transition={{ 
-                        duration: 2.5,
-                        repeat: Infinity,
                         ease: "easeInOut",
-                        delay: 1
-                      }}
+                        delay
                     >
                       {advertisingSlides[currentSlide].bgPattern.split('')[2]}
                     </motion.div>

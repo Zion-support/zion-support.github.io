@@ -136,7 +136,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Main Feature Showcase */}
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-2xl">
-              <divdiv
+              <div
                 key={activeFeature}
                 className={`bg-gradient-to-br ${currentFeature.gradient} p-12 rounded-2xl relative overflow-hidden`}
                 onMouseEnter={() => setIsHovering(true)}
@@ -163,13 +163,13 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     
                     <div className="grid grid-cols-1 gap-4 mb-8">
                       {currentFeature.demo.metrics.map((metric, index) => (
-                        <divdiv
+                        <div
                           key={index}
                           className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="font-semibold">{metric}</span>
-                        </divdiv>
+                        </div>
                       ))}
                     </div>
                     
@@ -209,16 +209,10 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(9)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded"
-                                  scale: [1, 1.5, 1],
-                                  opacity: [0.3, 1, 0.3]
-                                }}
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: i * 0.1
-                                }}
+                                                                                                      delay
                               />
                             ))}
                           </div>
@@ -235,7 +229,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           </div>
 
@@ -262,7 +256,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <divdiv
+            <div
               key={feature.id}
               whileInView={{ opacity: 1, y: 0 }}
               className={`bg-gradient-to-br ${feature.gradient} p-6 rounded-xl hover:shadow-2xl transition-all duration-300 cursor-pointer ${
@@ -294,7 +288,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
               >
                 Try Demo
               </divbutton>
-            </divdiv>
+            </div>
           ))}
         </div>
 

@@ -92,7 +92,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"
       >
         {/* Background Pattern */}
@@ -107,7 +107,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <divdiv
+            <div
               className="text-white"
             >
               <div className="flex items-center mb-6">
@@ -132,7 +132,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 {stats.map((statindex) => {
                   const Icon = stat.icon;
                   return (
-                    <divdiv
+                    <div
                       key={stat.label}
                       className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                     >
@@ -141,7 +141,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         <span className="text-sm text-gray-300">{stat.label}</span>
                       </div>
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    </divdiv>
+                    </div>
                   );
                 })}
               </div>
@@ -161,10 +161,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   Watch Demo
                 </divbutton>
               </div>
-            </divdiv>
+            </div>
 
             {/* Right Content - Interactive Innovation Showcase */}
-            <divdiv
+            <div
               className="relative"
             >
               {/* Innovation Categories */}
@@ -177,14 +177,14 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   {categories.map((categoryindex) => {
                     const Icon = category.icon;
                     return (
-                      <divdiv
+                      <div
                         key={category.name}
                         className="bg-white/5 rounded-xl p-4 text-center hover:bg-white/10 transition-colors cursor-pointer group"
                       >
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                         <div className="text-white font-semibold">{category.name}</div>
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>
-                      </divdiv>
+                      </div>
                     );
                   })}
                 </div>
@@ -192,7 +192,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
               {/* Rotating Innovation Highlight */}
               <div className="relative h-40 bg-gradient-to-r from-yellow-400/20 to-pink-400/20 rounded-xl overflow-hidden">
-                  <divdiv
+                  <div
                     key={currentInnovation}
                     className="absolute inset-0 flex items-center justify-center p-6"
                   >
@@ -212,7 +212,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         Impact: {innovations[currentInnovation].impact}
                       </p>
                     </div>
-                  </divdiv>
+                  </div>
                 </div>
                 
                 {/* Innovation Indicators */}
@@ -230,33 +230,33 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
 
               {/* Floating Innovation Icons */}
-              <divdiv
+              <div
                   y: [0-10],
                   rotate: [050]
                 }}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
                 <Brain className="h-6 w-6" />
-              </divdiv>
+              </div>
               
-              <divdiv
+              <div
                   y: [010],
                   rotate: [0-50]
                 }}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
                 <Atom className="h-6 w-6" />
-              </divdiv>
+              </div>
 
-              <divdiv
+              <div
                   y: [0-150],
                   x: [050]
                 }}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >
                 <Network className="h-5 w-5" />
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -270,7 +270,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
-      </divdiv>
+      </div>
     </div>
   );
 };

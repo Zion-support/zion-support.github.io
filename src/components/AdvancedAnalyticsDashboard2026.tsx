@@ -3,12 +3,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  BarChart3
-  TrendingUp
-  Users
-  DollarSign
-  Eye
-  MousePointer
+  BarChart3,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Eye,
+  MousePointer,
   Clock,
   Target,
   Zap,
@@ -132,7 +132,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
     };
 
     loadData();
-  }[selectedTimeframe]);
+  }, [selectedTimeframe]);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -148,10 +148,10 @@ const AdvancedAnalyticsDashboard2026 = () => {
   };
 
   const timeframes = [
-    { value: '24'h', 'label: '24 Hours' },
-    { value: '7'd', 'label: '7 Days' },
-    { value: '30'd', 'label: '30 Days' },
-    { value: '90'd', 'label: '90 Days' }
+    { value: '24h', label: '24 Hours' },
+    { value: '7d', label: '7 Days' },
+    { value: '30d', label: '30 Days' },
+    { value: '90d', label: '90 Days' }
   ];
 
   if (isLoading) {
@@ -199,7 +199,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div>
           {analyticsData.map((itemindex) => (
-            <divdiv
+            <div
               key={item.id}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
             >
@@ -227,7 +227,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
               <div className="text-xs text-gray-500">
                 {item.description}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>

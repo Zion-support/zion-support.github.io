@@ -104,7 +104,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
     <div>
       {/* Update Available Notification */}
       {isUpdateAvailable && (
-        <divdiv
+        <div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
         >
           <div className="flex items-start gap-3">
@@ -152,12 +152,12 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </divdiv>
+        </div>
       )}
 
       {/* Update Installed Notification */}
       {isUpdateInstalled && (
-        <divdiv
+        <div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
         >
           <div className="flex items-start gap-3">
@@ -188,12 +188,12 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </divdiv>
+        </div>
       )}
 
       {/* Error Notification */}
       {error && (
-        <divdiv
+        <div
           className="fixed bottom-4 right-4 bg-red-900 border border-red-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
         >
           <div className="flex items-start gap-3">
@@ -217,7 +217,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );

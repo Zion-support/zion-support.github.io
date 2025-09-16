@@ -86,7 +86,7 @@ const allServices = [
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <div
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -106,7 +106,7 @@ const allServices = [
                 Enterprise Ready
               </span>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -163,7 +163,7 @@ const allServices = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
@@ -256,18 +256,18 @@ const allServices = [
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
           {/* Services Display */}
             {viewMode === 'grid' ? (
-              <divdiv 
+              <div 
                 key="grid"
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
-                  <divdiv
+                  <div
                     key={service.id}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                   >
@@ -395,9 +395,9 @@ const allServices = [
                         </div>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
-              </divdiv>
+              </div>
             )}
           </div>
 
@@ -427,7 +427,7 @@ const allServices = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
             >
@@ -438,9 +438,9 @@ const allServices = [
               <p className="text-gray-600">
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
             >
@@ -451,9 +451,9 @@ const allServices = [
               <p className="text-gray-600">
                 Bank-grade security and compliance for mission-critical business applications
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
             >
@@ -464,7 +464,7 @@ const allServices = [
               <p className="text-gray-600">
                 Cloud-native solutions that scale globally with enterprise-grade reliability
               </p>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>

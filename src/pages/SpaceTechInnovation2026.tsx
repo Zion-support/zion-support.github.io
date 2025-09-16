@@ -7,9 +7,8 @@ const SpaceTechInnovation2026: React.FC = () => {
       <div>
         <p>Space Tech Innovation 2026</p>
       </div>
-    </div>
-
-    <div>
+      
+      <div>
       {/* Space Technologies */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <div className="bg-gradient-to-br from-blue-800 to-cyan-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
@@ -117,7 +116,6 @@ const SpaceTechInnovation2026: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

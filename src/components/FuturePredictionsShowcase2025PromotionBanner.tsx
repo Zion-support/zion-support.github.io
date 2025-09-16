@@ -58,7 +58,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
     >
       {/* Animated Background Elements */}
@@ -72,13 +72,13 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-400 to-purple-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6"
             >
               <Calendar className="w-4 h-4" />
               FUTURE PREDICTIONS
               <Sparkles className="w-4 h-4" />
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh2
@@ -99,7 +99,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
             </divp>
 
             {/* Features */}
-            <divdiv
+            <div
               className="flex flex-wrap gap-4 mb-8"
             >
               {[
@@ -112,10 +112,10 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   <span className="text-white text-sm font-medium">{feature.text}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group flex items-center gap-3 bg-gradient-to-r from-pink-400 to-purple-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
@@ -128,11 +128,11 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 <ChevronRight className="w-5 h-5" />
                 View Timeline
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Visual - Rotating Predictions */}
-          <divdiv
+          <div
             className="relative"
           >
             <div className="relative w-80 h-80">
@@ -144,7 +144,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               
               {/* Center Content */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <divdiv
+                <div
                   key={currentPrediction}
                   className="text-center"
                 >
@@ -153,16 +153,14 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   </div>
                   <div className="text-white font-bold text-lg">{predictions[currentPrediction].title}</div>
                   <div className="text-gray-300 text-sm">{predictions[currentPrediction].year}</div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Floating Prediction Icons */}
               {predictions.map((predictionindex) => (
-                <divdiv
+                <div
                   key={index}
-                    opacity: index === currentPrediction ? 1 : 0.3
-                    scale: index === currentPrediction ? 1 : 0.8 
-                  }}
+                    scale
                   className={`absolute ${
                     index === 0 ? 'top-4 left-1/2' :
                     index === 1 ? 'top-1/2 right-4' :
@@ -172,7 +170,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   <div className={`w-12 h-12 bg-gradient-to-r ${prediction.color} rounded-full flex items-center justify-center shadow-lg`}>
                     <prediction.icon className="w-6 h-6 text-white" />
                   </div>
-                </divdiv>
+                </div>
               ))}
 
               {/* Timeline Dots */}
@@ -188,10 +186,10 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 ></div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

@@ -158,7 +158,7 @@ const UltimateAIToolsShowcase2025 = () => {
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -176,10 +176,10 @@ const UltimateAIToolsShowcase2025 = () => {
             Discover the most advanced AI tools and solutions that are reshaping how we work
             createand innovate in 2025.
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filter */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -217,16 +217,16 @@ const UltimateAIToolsShowcase2025 = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Tools Grid */}
-        <divdiv
+        <div
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredTools.map((tool) => (
-              <divdiv
+              <div
                 key={tool.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
                 onHoverStart={() => setHoveredTool(tool.id)}
@@ -308,13 +308,13 @@ const UltimateAIToolsShowcase2025 = () => {
                     </button>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -336,7 +336,7 @@ const UltimateAIToolsShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

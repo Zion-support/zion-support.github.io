@@ -157,12 +157,12 @@ const BusinessSolutionsShowcase2025 = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-          <divdiv
+          <div
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
           >
             <Building2 className="w-4 h-4 mr-2" />
             Business Solutions 2025
-          </divdiv>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Transform Your Business Operations
           </h2>
@@ -170,7 +170,7 @@ const BusinessSolutionsShowcase2025 = () => {
             Discover comprehensive business solutions that drive growthefficiencyand innovation 
             across every aspect of your organization.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
@@ -192,15 +192,15 @@ const BusinessSolutionsShowcase2025 = () => {
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Solutions Grid */}
-          <divdiv
+          <div
             key={activeCategory}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {currentCategory.solutions.map((solutionindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
               >
@@ -247,9 +247,9 @@ const BusinessSolutionsShowcase2025 = () => {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
 
         {/* Success Stories */}
@@ -276,7 +276,7 @@ const BusinessSolutionsShowcase2025 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
@@ -297,7 +297,7 @@ const BusinessSolutionsShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </divsection>
   );

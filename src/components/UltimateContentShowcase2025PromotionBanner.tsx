@@ -64,7 +64,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-purple-900 via-slate-900 to-blue-900 border-b border-purple-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -77,7 +77,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <div
                 className="flex items-center gap-3"
               >
                 <div className="relative">
@@ -97,13 +97,13 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                     Revolutionary AI Innovation & Future Predictions
                   </p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Rotating Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-purple-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                    <div
                       key={currentFeature}
                       className="flex items-center gap-2"
                     >
@@ -118,7 +118,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                           {features[currentFeature].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,7 +163,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           {/* Mobile Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+                <div
                   key={currentFeature}
                   className="flex items-center gap-2"
                 >
@@ -178,7 +178,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                       {features[currentFeature].description}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -186,10 +186,10 @@ const UltimateContentShowcase2025PromotionBanner = () => {
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
-        <divdiv
+        <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
+        ></div>
+      </div>
     </div>
   );
 };

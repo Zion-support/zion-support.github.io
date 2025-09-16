@@ -139,7 +139,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -165,10 +165,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               Future-Ready Solutions
             </span>
           </div>
-        </divdiv>
+        </div>
 
         {/* Technology Tabs */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -190,10 +190,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Active Technology Display */}
-        <divdiv
+        <div
           key={activeTab}
           className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 mb-16 border border-white/10"
         >
@@ -241,10 +241,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Success Stories */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -261,10 +261,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -287,7 +287,7 @@ const AI2025UltimateTechnologyShowcase = () => {
               Explore All Technologies
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

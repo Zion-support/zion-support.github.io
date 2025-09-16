@@ -59,10 +59,7 @@ const UltimateContentBanner2025: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.8,
         staggerChildren: 0.1
       }
     }
@@ -71,9 +68,6 @@ const UltimateContentBanner2025: React.FC = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
       transition: { duration: 0.6 }
     }
   };
@@ -102,14 +96,8 @@ const UltimateContentBanner2025: React.FC = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
             transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+              delay
           />
         ))}
       </div>

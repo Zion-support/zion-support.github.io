@@ -171,16 +171,12 @@ const AIToolsShowcase2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
         <div className="absolute inset-0">
           {[...Array(15)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-              }}
-                y: [0-50],
-                opacity: [010],
-                scale: [0.510.5],
               }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
@@ -193,7 +189,7 @@ const AIToolsShowcase2026 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
@@ -207,10 +203,10 @@ const AIToolsShowcase2026 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => {
@@ -233,17 +229,17 @@ const AIToolsShowcase2026 = () => {
               </button>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Tools Grid */}
-        <divdiv
+        <div
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           <div>
             {filteredTools.map((toolindex) => {
               const Icon = tool.icon;
               return (
-                <divdiv
+                <div
                   key={tool.id}
                   onHoverStart={() => setHoveredTool(tool.id)}
                   onHoverEnd={() => setHoveredTool(null)}
@@ -312,23 +308,23 @@ const AIToolsShowcase2026 = () => {
                   {/* Hover Overlay */}
                   <div>
                     {hoveredTool === tool.id && (
-                      <divdiv
+                      <div
                         className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                       >
                         <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
                           Get Started
                         </button>
-                      </divdiv>
+                      </div>
                     )}
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -347,7 +343,7 @@ const AIToolsShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

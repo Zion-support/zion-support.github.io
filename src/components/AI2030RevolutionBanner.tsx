@@ -148,27 +148,16 @@ const AI2030RevolutionBanner: React.FC = () => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               animate={{ 
-                x: [0, 100, 0],
-                opacity: [0.1, 0.3, 0.1]
-              }}
               transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
                 ease: "easeInOut" 
               }}
               className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-full blur-xl"
             />
             <motion.div
               animate={{ 
-                x: [0, -100, 0],
-                opacity: [0.1, 0.3, 0.1]
-              }}
               transition={{ 
-                duration: 5, 
-                repeat: Infinity, 
                 ease: "easeInOut",
-                delay: 1
-              }}
+                delay
               className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-full blur-xl"
             />
           </div>

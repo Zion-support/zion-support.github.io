@@ -324,12 +324,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           {/* Animated Background Elements */}
                           <motion.div
                             animate={{
-                              y: [0, -20, 0],
-                              rotate: [0, 5, 0]
-                            }}
                             transition={{
-                              duration: 4,
-                              repeat: Infinity,
                               ease: "easeInOut"
                             }}
                             className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl"
@@ -339,15 +334,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
                           <motion.div
                             animate={{
-                              y: [0, 20, 0],
-                              rotate: [0, -5, 0]
-                            }}
                             transition={{
-                              duration: 3,
-                              repeat: Infinity,
                               ease: "easeInOut",
-                              delay: 1
-                            }}
+                              delay
                             className="absolute top-16 right-12 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xl"
                           >
                             ⚡
@@ -355,15 +344,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
                           <motion.div
                             animate={{
-                              y: [0, -15, 0],
-                              x: [0, 10, 0]
-                            }}
                             transition={{
-                              duration: 5,
-                              repeat: Infinity,
                               ease: "easeInOut",
-                              delay: 2
-                            }}
+                              delay
                             className="absolute bottom-20 left-16 w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-xl"
                           >
                             🚀
@@ -372,13 +355,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           {/* Central Hub */}
                           <motion.div
                             animate={{
-                              scale: [1, 1.1, 1],
-                              rotate: [0, 360]
-                            }}
                             transition={{
-                              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-                              rotate: { duration: 20, repeat: Infinity, ease: "linear" }
-                            }}
                             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl"
                           >
                             ⚡

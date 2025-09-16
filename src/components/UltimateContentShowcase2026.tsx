@@ -140,7 +140,7 @@ const UltimateContentShowcase2026 = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -153,12 +153,12 @@ const UltimateContentShowcase2026 = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Experience the most advanced technologies that will reshape our world forever
           </p>
-        </divdiv>
+        </div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Showcase Carousel */}
           <div className="relative overflow-hidden rounded-3xl">
-              <divdiv
+              <div
                 key={currentSlide}
                 className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30"
               >
@@ -173,13 +173,13 @@ const UltimateContentShowcase2026 = () => {
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {showcaseItems[currentSlide].features.map((feature, index) => (
-                        <divdiv
+                        <div
                           key={index}
                           className="flex items-center space-x-2"
                         >
                           <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></span>
                           <span className="text-purple-200">{feature}</span>
-                        </divdiv>
+                        </div>
                       ))}
                     </div>
                     <a
@@ -205,7 +205,7 @@ const UltimateContentShowcase2026 = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Navigation Arrows */}
@@ -227,17 +227,17 @@ const UltimateContentShowcase2026 = () => {
 
         {/* Quick Access Grid */}
         <div className="mt-20">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">Quick Access to All Technologies</h3>
             <p className="text-lg opacity-80">Explore all our revolutionary technologies at once</p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {showcaseItems.map((item, index) => (
-              <divdiv
+              <div
                 key={item.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300`}
@@ -288,7 +288,7 @@ const UltimateContentShowcase2026 = () => {
                 >
                   Explore Now →
                 </a>
-              </divdiv>
+              </div>
             ))}
           </AnimatePresence>
         </motion.div>

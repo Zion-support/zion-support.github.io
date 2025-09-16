@@ -63,14 +63,8 @@ const NewContentShowcase2045: React.FC = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-            }}
             transition={{
-              duration: Math.random() * 2 + 1,
-              repeat: Infinity,
-              delay: Math.random() * 1,
-            }}
+              delay
           />
         ))}
       </div>

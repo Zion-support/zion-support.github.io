@@ -67,14 +67,8 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                     top: `${Math.random() * 100}%`,
                   }}
                   animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.2, 0.8, 0.2],
-                  }}
                   transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: Math.random() * 2,
-                  }}
+                    delay
                 />
               ))}
             </div>

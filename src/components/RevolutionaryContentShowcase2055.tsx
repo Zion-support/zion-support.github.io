@@ -137,12 +137,7 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
                 <div className="text-center">
                   <motion.div
                     animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.1, 1]
-                    }}
                     transition={{ 
-                      duration: 10,
-                      repeat: Infinity,
                       ease: "linear"
                     }}
                     className={`w-80 h-80 mx-auto bg-gradient-to-r ${contentItems[activeContent].color} rounded-full flex items-center justify-center text-9xl shadow-2xl`}

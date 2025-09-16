@@ -58,7 +58,7 @@ const PromotionalBanner: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${banners[currentBanner].gradient.split(' ').join(', ')})`,
@@ -79,7 +79,7 @@ const PromotionalBanner: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <divdiv
+              <div
                 key={currentBanner}
                 className="text-white"
               >
@@ -89,7 +89,7 @@ const PromotionalBanner: React.FC = () => {
                 <p className="text-lg opacity-90">
                   {banners[currentBanner].subtitle}
                 </p>
-              </divdiv>
+              </div>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -122,7 +122,7 @@ const PromotionalBanner: React.FC = () => {
           <div className="absolute top-1/2 -right-10 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute bottom-0 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

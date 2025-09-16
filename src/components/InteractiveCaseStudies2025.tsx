@@ -152,7 +152,7 @@ export default function InteractiveCaseStudies2025() {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -169,10 +169,10 @@ export default function InteractiveCaseStudies2025() {
             Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
             Real case studiesreal resultsreal impact.
           </p>
-        </divdiv>
+        </div>
 
         {/* Industry Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {industries.map((industry) => (
@@ -188,15 +188,15 @@ export default function InteractiveCaseStudies2025() {
               {industry}
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Case Studies Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div>
             {filteredCaseStudies.map((caseStudyindex) => (
-              <divdiv
+              <div
                 key={caseStudy.id}
                 className={`group relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer ${
                   caseStudy.isFeatured ? 'border-blue-500/50 shadow-lg shadow-blue-500/10' : 'border-white/10'
@@ -271,13 +271,13 @@ export default function InteractiveCaseStudies2025() {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -299,17 +299,17 @@ export default function InteractiveCaseStudies2025() {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
 
       {/* Case Study Modal */}
       <div>
         {selectedCase && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedCase(null)}
           >
-            <divdiv
+            <div
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -387,8 +387,8 @@ export default function InteractiveCaseStudies2025() {
                   </button>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </div>

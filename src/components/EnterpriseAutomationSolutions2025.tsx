@@ -292,7 +292,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -305,10 +305,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Transform your enterprise with AI-powered automation solutions. 
             Streamline processesreduce costsand accelerate growth.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -324,16 +324,16 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               {category.name} ({category.count})
             </button>
           ))}
-        </divdiv>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
-            <divdiv
+            <div
               className="grid gap-6"
             >
               {filteredSolutions.map((solutionindex) => (
-                <divdiv
+                <div
                   key={solution.id}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
                     selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''
@@ -423,20 +423,20 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
 
           {/* Demo Panel */}
           <div className="lg:col-span-1">
-            <divdiv
+            <div
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
               
                 {selectedSolutionData ? (
-                  <divdiv
+                  <div
                     key={selectedSolutionData.id}
                   >
                     <div className="text-center mb-6">
@@ -528,9 +528,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         </button>
                       </div>
                     )}
-                  </divdiv>
+                  </div>
                 ) : (
-                  <divdiv
+                  <div
                     className="text-center py-12"
                   >
                     <Building2 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -540,15 +540,15 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <p className="text-gray-400">
                       Choose an automation solution to see it in action
                     </p>
-                  </divdiv>
+                  </div>
                 )}
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Enterprise Stats */}
-        <divdiv
+        <div
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -565,7 +565,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
       </div>
     </div>
   );

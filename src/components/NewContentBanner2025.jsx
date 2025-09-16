@@ -118,12 +118,7 @@ const NewContentBanner2025 = () => {
               <div className="hidden md:block">
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, 0]
-                  }}
                   transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="text-white opacity-20"
