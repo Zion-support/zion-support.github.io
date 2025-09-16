@@ -67,6 +67,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       title: 'Governed Real‑Time Observability (2026)',
       href: '/blog/ai-2026-governed-real-time-observability',
       tag: 'New',
+      gradient: 'from-teal-500 to-emerald-600'
+    },
+    {
+      title: 'Governed Real‑Time Observability (2026)',
+      href: '/blog/ai-2026-governed-real-time-observability',
+      tag: 'New',
       gradient: 'from-emerald-500 to-teal-600'
     },
     {
