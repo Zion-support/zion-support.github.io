@@ -108,6 +108,9 @@ import RevolutionaryServices2033 from './src/pages/RevolutionaryServices2033';
 import UltimateContentBanner2033 from './src/components/UltimateContentBanner2033';
 import UltimateContentBanner2034 from './src/components/UltimateContentBanner2034';
 import RevolutionaryServicesShowcase from './src/components/RevolutionaryServicesShowcase';
+import InterdimensionalComputingBanner2026 from './src/components/InterdimensionalComputingBanner2026';
+import ConsciousnessComputingBanner2026 from './src/components/ConsciousnessComputingBanner2026';
+import InterdimensionalComputingRevolution2026 from './src/pages/InterdimensionalComputingRevolution2026';
 
 export default function App(): JSX.Element {
   return (
@@ -171,6 +174,12 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Ultimate Content Banner 2034 */}
                 <UltimateContentBanner2034 />
+
+                {/* NEW: Interdimensional Computing Banner 2026 */}
+                <InterdimensionalComputingBanner2026 />
+
+                {/* NEW: Consciousness Computing Banner 2026 */}
+                <ConsciousnessComputingBanner2026 />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -282,6 +291,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryServices2033" className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Revolutionary Services 2033 →
+                    </a>
+                    <a href="/pages/InterdimensionalComputingRevolution2026" className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Interdimensional Computing 2026 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -745,6 +757,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/TranscendentTechRevolution2033" element={<TranscendentTechRevolution2033 />} />
           <Route path="/pages/UltimateTechEvolution2034" element={<UltimateTechEvolution2034 />} />
           <Route path="/pages/RevolutionaryServices2033" element={<RevolutionaryServices2033 />} />
+          <Route path="/pages/InterdimensionalComputingRevolution2026" element={<InterdimensionalComputingRevolution2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
