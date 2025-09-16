@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
-      borderColor: 'border-orange-400/30'
-    }
-  ];
-
-=======
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
