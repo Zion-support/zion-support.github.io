@@ -11,11 +11,6 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-<<<<<<< HEAD
-		title: 'Launch: AI Governance Dashboard v5',
-		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
-		href: '/updates/ai-governance-dashboard-v5',
-=======
 		title: 'Guide: E2E AI Change Evidence Playbook (2026 Preview)',
 		summary: 'Practical patterns for evidence bundles, lineage, and policy-as-code at scale.',
 		href: '/updates/ai-change-evidence-playbook-2026',
@@ -33,7 +28,6 @@ export const updates: UpdateItem[] = [
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
->>>>>>> cursor/create-and-deploy-new-content-30c4
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
