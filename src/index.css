@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Base styles */
 html {
   scroll-behavior: smooth;
@@ -44,14 +43,12 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
-=======
 /* Custom styles */
 body {
   font-family: 'Inter', sans-serif;
 }
 
 /* Animation utilities */
->>>>>>> cursor/create-and-deploy-new-content-e058
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -65,14 +62,14 @@ body {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-<<<<<<< HEAD
 /* Responsive design helpers */
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-=======
+}
+
 /* Gradient text utilities */
 .bg-clip-text {
   -webkit-background-clip: text;
@@ -82,7 +79,6 @@ body {
 /* Glass morphism effects */
 .backdrop-blur-sm {
   backdrop-filter: blur(4px);
->>>>>>> cursor/create-and-deploy-new-content-e058
 }
 
 /* Custom scrollbar */
@@ -101,8 +97,6 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-<<<<<<< HEAD
-=======
 }
 
 /* Responsive utilities */
@@ -118,5 +112,4 @@ body {
   .text-4xl {
     font-size: 1.75rem;
   }
->>>>>>> cursor/create-and-deploy-new-content-e058
 }

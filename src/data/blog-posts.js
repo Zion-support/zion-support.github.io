@@ -193,8 +193,7 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
-  }
-  ,
+  },
   {
     id: 7,
     title: "Enterprise AI Security Blueprint (2025)",
@@ -297,12 +296,8 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
-=======
-    imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
-    slug: "next-gen-innovation-hub-future-born"
   },
   {
     id: 44,
@@ -408,7 +403,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/augmented-reality-business-future.jpg",
     slug: "augmented-reality-business-future-customer-experience"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
   },
   {
     id: 51,
@@ -467,10 +461,6 @@ export const blogPosts = [
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
     featured: true,
-<<<<<<< HEAD
-    imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
-    slug: "temporal-ai-computing-across-time-itself"
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -563,7 +553,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/universal-translation-matrix-breaking-barriers.jpg",
     slug: "universal-translation-matrix-breaking-language-barriers"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
   }
 ];
 
