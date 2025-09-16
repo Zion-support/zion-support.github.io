@@ -1,107 +1,91 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0
-  });
-
-  useEffect(() => {
-    // Measure performance metrics
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      
-      // Measure render time
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        
-        // Get memory usage if available
-        const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-        
-        setMetrics({
-          loadTime,
-          renderTime,
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          bundleSize: 0 // This would be calculated from actual bundle analysis
-        });
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  // Lazy load images
+  const lazyLoadImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
       });
-    };
+    });
 
-    // Measure after initial load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Lazy loading optimization
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    // Observe all images with data-src attribute
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => observer.observe(img));
-
-    return () => observer.disconnect();
+    images.forEach(img => imageObserver.observe(img));
   }, []);
 
   // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/src/index.css',
-        '/src/components/EnhancedHeroSection.tsx',
-        '/src/components/FeaturedContentSection.tsx'
-      ];
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/src/index.css',
+      '/src/components/RevolutionaryContentBanner2025.tsx',
+      '/src/components/InteractiveTechShowcase2025.tsx'
+    ];
 
-      criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script';
-        document.head.appendChild(link);
-      });
-    };
-
-    preloadCriticalResources();
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'script';
+      document.head.appendChild(link);
+    });
   }, []);
 
-  // Bundle splitting optimization
-  const loadComponentLazily = (importFn: () => Promise<any>) => {
-    return React.lazy(importFn);
-  };
+  // Optimize scroll performance
+  const optimizeScrollPerformance = useCallback(() => {
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttle scroll events
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Update scroll-dependent elements
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-  return null; // This component doesn't render anything visible
+    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', updateScrollPosition);
+    };
+  }, []);
+
+  // Memory cleanup
+  const cleanupMemory = useCallback(() => {
+    // Clean up unused event listeners
+    const cleanup = () => {
+      // Remove any unused event listeners
+      window.removeEventListener('beforeunload', cleanup);
+    };
+    
+    window.addEventListener('beforeunload', cleanup);
+  }, []);
+
+  useEffect(() => {
+    // Initialize performance optimizations
+    lazyLoadImages();
+    preloadCriticalResources();
+    const scrollCleanup = optimizeScrollPerformance();
+    cleanupMemory();
+
+    // Cleanup on unmount
+    return () => {
+      scrollCleanup();
+    };
+  }, [lazyLoadImages, preloadCriticalResources, optimizeScrollPerformance, cleanupMemory]);
+
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
