@@ -21,7 +21,6 @@ import React, { useState } from 'react';
 
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
 
 const Contact: React.FC = () => {
 

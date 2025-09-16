@@ -264,8 +264,6 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </section>
 
         {/* Call to Action */}
-import { motion } from 'framer-motion';
-
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
