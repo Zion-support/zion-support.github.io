@@ -147,7 +147,6 @@ const reasonsToChoose = [
 export default function ServicesPage() {
   return (
     <div className="bg-black">
-      {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
@@ -165,7 +164,6 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Services</h2>
@@ -209,7 +207,6 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Service Process */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -242,7 +239,6 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Why Choose Us */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
@@ -270,7 +266,6 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -295,6 +290,7 @@ export default function ServicesPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -456,3 +452,6 @@ export default function ServicesPage() {
 		</div>
 	)
 }
+=======
+
+>>>>>>> origin/feature/updates-2025-09

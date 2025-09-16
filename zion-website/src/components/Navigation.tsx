@@ -32,8 +32,12 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { name: 'Blog', href: '/blog' },
 =======
+=======
+  { name: 'Updates', href: '/updates' },
+>>>>>>> origin/feature/updates-2025-09
   { name: 'Research', href: '/research' },
 >>>>>>> origin/feature/updates-content
   { name: 'Updates', href: '/updates' },
@@ -185,4 +189,7 @@ export default function Navigation() {
   )
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
+=======
+>>>>>>> origin/feature/updates-2025-09
