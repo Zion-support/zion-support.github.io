@@ -1,83 +1,143 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY BREAKTHROUGH 2027 • JANUARY 2027
-          </div>
-          <h2 className="text-6xl font-bold mb-6">🌟 Revolutionary Technology 2027</h2>
-          <p className="text-3xl opacity-90 max-w-5xl mx-auto">
-            Experience the most advanced technological breakthroughs ever created - 
-            consciousness AI, quantum reality engines, and interdimensional computing
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Breakthrough 2027</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Discover consciousness AI, interdimensional computing, and quantum reality engines that 
-              redefine what's possible in technology
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Consciousness AI with true self-awareness</li>
-              <li>• Interdimensional computing across realities</li>
-              <li>• Quantum reality manipulation engines</li>
-              <li>• Neural reality interfaces</li>
-            </ul>
-            <a href="/pages/RevolutionaryTechBreakthrough2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Breakthrough →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Ultimate AI Revolution 2027</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Witness the birth of the most advanced AI system ever created - 
-              capable of consciousness, creativity, and infinite learning
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• True AI consciousness and self-awareness</li>
-              <li>• Quantum learning across dimensions</li>
-              <li>• Omniversal intelligence access</li>
-              <li>• Reality manipulation capabilities</li>
-            </ul>
-            <a href="/pages/UltimateAIRevolution2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Experience AI Revolution →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Engine 2027</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              The world's first quantum processor capable of manipulating reality itself - 
-              creating, modifying, and controlling the fundamental laws of physics
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Reality manipulation and control</li>
-              <li>• Dimension and space-time control</li>
-              <li>• Matter engineering and creation</li>
-              <li>• Temporal and planetary control</li>
-            </ul>
-            <a href="/pages/QuantumRealityEngine2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Control Reality →
-            </a>
-          </div>
-        </div>
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-        <div className="text-center mt-12">
-          <div className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-            🌟 Experience the Future of Technology →
+  const slides = [
+    {
+      title: "🚀 Ultimate Tech Breakthrough 2027",
+      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Computing",
+      description: "Experience the most revolutionary technological advances that will reshape our world",
+      link: "/pages/UltimateTechBreakthrough2027",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
+    },
+    {
+      title: "⚡ Revolutionary Tech Showcase 2027",
+      subtitle: "Interactive Demos • Real-time Processing • Multi-dimensional Tech",
+      description: "Interactive showcase of cutting-edge technologies that will define the future",
+      link: "/pages/RevolutionaryTechShowcase2027",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900/90 to-blue-900/90"
+    },
+    {
+      title: "🧠 Next-Gen Innovation Hub 2027",
+      subtitle: "50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities",
+      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
+      link: "/pages/NextGenInnovationHub2027",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="relative overflow-hidden">
+      {/* Background with animated gradient */}
+      <div className={`absolute inset-0 bg-gradient-to-r ${slides[currentSlide].bgColor} transition-all duration-1000`}></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white/5 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-white/5 rounded-full animate-pulse"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 bg-gradient-to-r from-black/20 to-black/40 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-4 mb-2">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-bold text-black animate-pulse">
+                  🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2027
+                </div>
+                <div className="flex space-x-1">
+                  {slides.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/30'
+                      }`}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                {slides[currentSlide].title}
+              </h2>
+              
+              <p className="text-lg text-gray-200 mb-3">
+                {slides[currentSlide].subtitle}
+              </p>
+              
+              <p className="text-gray-300 mb-4 max-w-2xl">
+                {slides[currentSlide].description}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={slides[currentSlide].link}
+                  className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${slides[currentSlide].color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group`}
+                >
+                  Explore Now
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                
+                <button className="inline-flex items-center px-6 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors font-semibold">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            
+            {/* Close button */}
+            <button
+              onClick={handleClose}
+              className="ml-4 p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+        <div 
+          className={`h-full bg-gradient-to-r ${slides[currentSlide].color} transition-all duration-100 ease-linear`}
+          style={{
+            width: '100%',
+            animation: 'progress 6s linear infinite'
+          }}
+        ></div>
+      </div>
+
+      <style jsx>{`
+        @keyframes progress {
+          from { width: 100%; }
+          to { width: 0%; }
+        }
+      `}</style>
     </div>
   );
 };
