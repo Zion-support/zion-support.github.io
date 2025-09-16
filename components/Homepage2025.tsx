@@ -17,6 +17,7 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
+import dynamic from 'next/dynamic';
 import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
@@ -338,6 +339,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
     }
   ];
 
+  const NewContentAdBanner = dynamic(() => import('../src/components/NewContentAdBanner'), { ssr: false });
+  const ContentSpotlight = dynamic(() => import('../src/components/ContentSpotlight'), { ssr: false });
+
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -552,6 +556,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
+          {/* Automated new content banners */}
+          <NewContentAdBanner />
+          <ContentSpotlight />
           {/* New Content Promo */}
           <div className="mb-8 rounded-2xl p-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
