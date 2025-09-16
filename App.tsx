@@ -5,7 +5,6 @@ import Header from './src/Header';
 import Footer from './src/Footer';
 import EnhancedNavigation from './src/components/EnhancedNavigation';
 import EnhancedFooter from './src/components/EnhancedFooter';
-import EnhancedSearch from './src/components/EnhancedSearch';
 import AnalyticsDashboard from './src/components/AnalyticsDashboard';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
@@ -80,7 +79,6 @@ export default function App(): JSX.Element {
                   <p className="text-xl text-gray-600 mb-8">
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
-                  <EnhancedSearch />
                 </div>
 
                 {/* ULTRA-PROMINENT NEW CONTENT BANNER */}
