@@ -1,5 +1,20 @@
 export const blogPosts = [
   {
+    id: 9001,
+    title: "AI 2026: Post‑Incident Learning Loops — Operational Excellence",
+    excerpt: "Turn incidents into durable improvements with evidence‑led learning loops and scorecards.",
+    content: "Post‑incident learning loops transform outages into systematic improvements. This guide shows how to capture decisive telemetry, synthesize findings into evidence bundles, and wire actions to scorecards that gate future changes. Includes role checklists, timeline templates, and a lightweight RCA format that actually gets used.",
+    author: "Casey Morgan",
+    authorRole: "Principal Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Reliability",
+    tags: ["Incidents", "RCA", "SRE", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/post-incident-learning-loops-2026.jpg",
+    slug: "ai-2026-post-incident-learning-loops"
+  },
+  {
     id: 8001,
     title: "AI 2026: Agent Posture Management — Executive Guide",
     excerpt: "Continuously assess and harden agent systems with evidence-led posture metrics.",
@@ -1123,5 +1138,5 @@ export const newContent2026 = [
 
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026];
-
-export const BLOG_POSTS = allBlogPosts;
+// Keep compatibility export; prefer BLOG_POSTS as unified list
+export const BLOG_POSTS_ALL = allBlogPosts;

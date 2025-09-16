@@ -81,16 +81,11 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
-<<<<<<< HEAD
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-=======
-
 // Import new 2026 breakthrough promotional banners
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
-import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
-
->>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -418,8 +413,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={8} />
+      {/* What's New dynamic section (disabled: component not present) */}
+      {/* <WhatsNew highlightOnly limit={8} /> */}
       
       <div className='min-h-screen bg-white'>
         {/* NEW FEATURED: AI 2026 Breakthrough Banners */}
@@ -640,8 +635,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={8} />
+      {/* What's New dynamic section (disabled) */}
+      {/* <WhatsNew highlightOnly limit={8} /> */}
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -651,6 +646,12 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
               <p className="text-gray-600 mb-4">Eval‑gated triage, mitigation, and escalation with autonomous agents.</p>
               <Link href="/content/ai-2026-agent-incident-response-playbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Reliability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Post‑Incident Learning Loops — Operational Excellence</h3>
+              <p className="text-gray-600 mb-4">Turn incidents into durable improvements with evidence‑led scorecards.</p>
+              <Link href="/blog/ai-2026-post-incident-learning-loops" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
             </div>
             <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Operations</div>
@@ -754,7 +755,7 @@ export default function HomePage() {
         <NewMultimodalAgents2025Banner />
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
-        
+      
         {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability + Evals */}
         <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -796,7 +797,7 @@ export default function HomePage() {
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
-        
+      
         {/* New Content Promo: Risk Management & Compliance (2026) */}
         <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -834,13 +835,13 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
+      
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
-        
+      
         {/* New Content 2025 Advanced Automation Banner - NEW FEATURED */}
         <NewContent2025AdvancedAutomationBanner />
-        
+      
         {/* Advanced Automation Content Showcase 2025 - NEW FEATURED */}
         <AdvancedAutomationContentShowcase2025 />
         
@@ -987,7 +988,6 @@ export default function HomePage() {
           </div>
         </section>
 
-=======
         {/* New Content Promo: Multimodal Agents Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1054,8 +1054,7 @@ export default function HomePage() {
         <NewContent2026UltimateBanner />
         <AI2026ContentShowcaseBanner />
 
-=======
-=======
+        
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 
