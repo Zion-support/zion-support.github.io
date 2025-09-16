@@ -70,6 +70,7 @@ import NewContentShowcase2027 from './components/NewContentShowcase2027';
 import RevolutionaryServicesBanner2027 from './components/RevolutionaryServicesBanner2027';
 import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
 import RevolutionaryTechBanner2027 from './components/RevolutionaryTechBanner2027';
+import NewContent2027PromotionBanner from './components/NewContent2027PromotionBanner';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AI2027UltimateBreakthrough from './pages/AI2027UltimateBreakthrough';
 import QuantumAIRevolution2027 from './pages/QuantumAIRevolution2027';
@@ -88,6 +89,9 @@ import AdvancedAIServices2026 from './pages/AdvancedAIServices2026';
 import BlogPost_Jan2026_AIEthicsFramework from './pages/BlogPost_Jan2026_AIEthicsFramework';
 import BlogPost_Jan2026_QuantumComputingBreakthrough from './pages/BlogPost_Jan2026_QuantumComputingBreakthrough';
 import BlogPost_Jan2026_EdgeAIRevolution from './pages/BlogPost_Jan2026_EdgeAIRevolution';
+import AIConsciousnessRevolution2027 from './pages/AIConsciousnessRevolution2027';
+import QuantumBusinessAutomation2027 from './pages/QuantumBusinessAutomation2027';
+import NeuralInterfaceRevolution2027 from './pages/NeuralInterfaceRevolution2027';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -235,6 +239,11 @@ const App: React.FC = () => {
               {/* NEW: Content Showcase 2027 */}
               <div className="mb-12">
                 <NewContentShowcase2027 />
+              </div>
+
+              {/* NEW: Revolutionary Content 2027 Promotion Banner */}
+              <div className="mb-12">
+                <NewContent2027PromotionBanner />
               </div>
 
               {/* Featured Content Showcase 2026 */}
@@ -576,6 +585,11 @@ const App: React.FC = () => {
           <Route path="/blog/ai-ethics-framework-2026" element={<BlogPost_Jan2026_AIEthicsFramework />} />
           <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
           <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
+          
+          {/* NEW: Revolutionary Content Routes 2027 */}
+          <Route path="/ai-consciousness-revolution-2027" element={<AIConsciousnessRevolution2027 />} />
+          <Route path="/quantum-business-automation-2027" element={<QuantumBusinessAutomation2027 />} />
+          <Route path="/neural-interface-revolution-2027" element={<NeuralInterfaceRevolution2027 />} />
         </Routes>
         
         <Footer />
