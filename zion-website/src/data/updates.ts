@@ -363,6 +363,13 @@ export const updates: UpdateItem[] = [
 	},
   // Newly added updates (2025-09-16)
   {
+    title: 'Launch: Agent Playbook Library v1.0',
+    summary: 'Curated incident, rollout, and governance playbooks with eval gates and evidence bundles.',
+    href: '/updates/agent-playbook-library-1-0',
+    date: '2025-09-16',
+    tag: 'Launch',
+  },
+  {
     title: 'Blueprint: Production Evidence Bundles (2026)',
     summary: 'Standardized artifacts for audits: inputs, outputs, policies, evals, and traces.',
     href: '/updates/production-evidence-bundles-2026',
