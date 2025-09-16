@@ -306,7 +306,16 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
             <div className="mb-8">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <div className="mb-8">
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>

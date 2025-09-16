@@ -1,8 +1,18 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {

@@ -3,6 +3,13 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -120,13 +127,27 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
     }
   ];
 
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -305,14 +326,28 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                               </li>
                             ))}
                           </ul>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
               </div>
             ))}
           </div>
@@ -417,8 +452,15 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
             </a>
           ))}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
         </div>
       </div>
     </div>

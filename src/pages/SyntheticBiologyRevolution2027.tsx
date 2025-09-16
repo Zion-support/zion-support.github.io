@@ -71,8 +71,22 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
+<<<<<<< HEAD
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Explore Bio-Energy →
+=======
+            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
+              Engineer Life →
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
             </a>
 =======
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
