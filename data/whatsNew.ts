@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-benchmarking-best-practices-2026",
+    title: "AI 2026: Agent Benchmarking Best Practices",
+    description:
+      "From toy tasks to production: suites, policy gates, and observability for reliable agents.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-benchmarking-best-practices",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "safe-rollouts-2026",
     title: "AI 2026: Safe Rollouts in Production",
     description:
