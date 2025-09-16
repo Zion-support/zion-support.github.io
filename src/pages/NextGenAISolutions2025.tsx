@@ -55,7 +55,11 @@ const NextGenAISolutions2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
 
@@ -205,7 +209,11 @@ const NextGenAISolutions2025: React.FC = () => {
                 <p className="text-gray-300 text-sm">{story.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
 
@@ -305,7 +313,11 @@ const NextGenAISolutions2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
 

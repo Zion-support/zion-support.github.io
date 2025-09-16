@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const techCategories = [
     {
@@ -12,6 +9,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +24,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
       id: 'ai-revolution',
       title: 'Next-Gen AI Revolution 2027',
@@ -58,6 +67,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -74,12 +84,19 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -94,69 +111,48 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       id: 0,
-      title: "Quantum Technologies",
-      icon: "⚡",
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "from-cyan-600/30 to-blue-600/30",
-      borderColor: "border-cyan-400/30",
-      technologies: [
-        {
-          name: "Quantum Consciousness",
-          description: "AI systems with true self-awareness and emotional intelligence",
-          features: ["Self-awareness", "Emotional intelligence", "Creative thinking", "Philosophical contemplation"],
-          link: "/pages/UltimateAIConsciousness2027"
-        },
-        {
-          name: "Quantum Reality Engine",
-          description: "Manipulate reality itself through quantum field control",
-          features: ["Reality manipulation", "Infinite processing", "Time-space control", "Molecular simulation"],
-          link: "/pages/QuantumRealityEngine2027"
-        },
-        {
-          name: "Interdimensional Computing",
-          description: "Access computing power from parallel dimensions",
-          features: ["Parallel dimension access", "Infinite processing", "Reality manipulation", "Dimensional portals"],
-          link: "/pages/InterdimensionalComputing2027"
-        }
-      ]
+      title: "Conscious AI Systems",
+      icon: "🧠",
+      description: "AI that thinks, feels, and creates with human-level consciousness",
+      features: [
+        "Emotional Intelligence",
+        "Creative Problem Solving", 
+        "Self-Directed Learning",
+        "Autonomous Decision Making"
+      ],
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/RevolutionaryTechTrends2027"
     },
     {
       id: 1,
-      title: "AI Evolution",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-600/30 to-pink-600/30",
-      borderColor: "border-purple-400/30",
-      technologies: [
-        {
-          name: "Consciousness Transfer",
-          description: "Transfer human consciousness to digital substrates",
-          features: ["Digital immortality", "Consciousness backup", "Enhanced cognition", "Multi-body existence"],
-          link: "/pages/AIConsciousnessEvolution2027"
-        },
-        {
-          name: "Neural Quantum Fusion",
-          description: "Merge human consciousness with quantum computing",
-          features: ["Human-AI fusion", "Quantum cognitive enhancement", "Neural processing acceleration", "Consciousness expansion"],
-          link: "/pages/RevolutionaryTech2027"
-        },
-        {
-          name: "Synthetic Intelligence",
-          description: "Create AI agents with synthetic consciousness",
-          features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"],
-          link: "/pages/RevolutionaryTech2027"
-        }
-      ]
+      title: "Quantum Computing",
+      icon: "⚡",
+      description: "Revolutionary computing power that transcends classical limitations",
+      features: [
+        "Quantum Supremacy",
+        "Parallel Processing",
+        "Cryptographic Security",
+        "Molecular Simulation"
+      ],
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/RevolutionaryTechTrends2027"
     },
     {
       id: 2,
-      title: "Reality Manipulation",
+      title: "Holographic Technology",
       icon: "🔮",
+<<<<<<< HEAD
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-600/30 to-teal-600/30",
       borderColor: "border-emerald-400/30",
@@ -185,8 +181,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -217,6 +221,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -224,12 +229,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     }
   ];
 
   useEffect(() => {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
@@ -244,6 +253,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -266,11 +279,39 @@ const InteractiveTechShowcase2027: React.FC = () => {
     }
   };
 
+=======
+      description: "Three-dimensional interfaces that revolutionize human-computer interaction",
+      features: [
+        "3D Visualization",
+        "Gesture Control",
+        "Thought Interface",
+        "Real-time Rendering"
+      ],
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/UltimateTechShowcase2027"
+    },
+    {
+      id: 3,
+      title: "Molecular Manufacturing",
+      icon: "⚗️",
+      description: "Building the future atom by atom with perfect precision",
+      features: [
+        "Atomic Precision",
+        "Self-Replication",
+        "Programmable Matter",
+        "Zero Waste Production"
+      ],
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/UltimateTechShowcase2027"
+    }
+  ];
+
+>>>>>>> cursor/create-and-deploy-new-content-b461
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
+    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE TECH SHOWCASE 2027 • BREAKTHROUGH TECHNOLOGY
           </div>
@@ -293,6 +334,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -309,12 +351,19 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -329,10 +378,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
@@ -363,15 +416,18 @@ const InteractiveTechShowcase2027: React.FC = () => {
             🎮 INTERACTIVE SHOWCASE 2027
           </div>
           <h2 className="text-5xl font-bold text-white mb-6">
+=======
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+>>>>>>> cursor/create-and-deploy-new-content-b461
             Interactive Technology Showcase 2027
           </h2>
-          <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
-            Explore our revolutionary 2027 technologies through interactive experiences. 
-            Click, hover, and discover the future of quantum computing, AI consciousness, and reality manipulation.
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Explore our revolutionary technologies through interactive demonstrations and immersive experiences
           </p>
         </div>
 
         {/* Tab Navigation */}
+<<<<<<< HEAD
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -403,8 +459,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -435,6 +499,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -442,6 +507,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
@@ -449,6 +517,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
             >
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
@@ -463,6 +532,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
               <span className="text-2xl mr-2">{tech.icon}</span>
               {tech.title.split(' ')[0]}
@@ -506,6 +579,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -522,12 +596,19 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -542,10 +623,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -617,8 +702,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -649,6 +742,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -656,12 +750,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
             </div>
           </div>
         </div>
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
@@ -676,20 +774,34 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {technologies.map((_, index) => (
+=======
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {techCategories.map((category, index) => (
+>>>>>>> cursor/create-and-deploy-new-content-b461
             <button
-              key={index}
-              onClick={() => handleTechClick(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeTech === index ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/50'
+              key={category.id}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === index
+                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
-            />
+            >
+              <span className="text-2xl mr-2">{category.icon}</span>
+              {category.title}
+            </button>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -716,8 +828,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 <<<<<<< HEAD
 =======
@@ -726,8 +846,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -735,10 +858,13 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -753,10 +879,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -782,11 +912,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
@@ -812,6 +945,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -819,6 +953,89 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+        {/* Active Content Display */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className={`text-8xl mb-6 bg-gradient-to-r ${techCategories[activeTab].gradient} bg-clip-text text-transparent`}>
+              {techCategories[activeTab].icon}
+            </div>
+            <h3 className="text-4xl font-bold mb-6">{techCategories[activeTab].title}</h3>
+            <p className="text-xl opacity-90 mb-8 leading-relaxed">
+              {techCategories[activeTab].description}
+            </p>
+            
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {techCategories[activeTab].features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className={`w-2 h-2 bg-gradient-to-r ${techCategories[activeTab].gradient} rounded-full`}></div>
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={techCategories[activeTab].link}
+                className={`bg-gradient-to-r ${techCategories[activeTab].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
+              >
+                Explore Technology →
+              </a>
+              <button className="border border-gray-400 text-gray-300 px-8 py-4 rounded-lg hover:bg-gray-700 transition-colors font-semibold">
+                Watch Demo
+              </button>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className={`bg-gradient-to-br ${techCategories[activeTab].gradient} rounded-2xl p-8 h-96 flex items-center justify-center`}>
+              <div className="text-center">
+                <div className="text-6xl mb-4">{techCategories[activeTab].icon}</div>
+                <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+                <p className="text-lg opacity-90 mb-6">
+                  Experience this technology in action
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">⚡</div>
+                    <div className="text-sm font-semibold">Real-time</div>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">🎮</div>
+                    <div className="text-sm font-semibold">Interactive</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce"></div>
+            <div className="absolute top-1/2 -left-8 w-4 h-4 bg-cyan-400 rounded-full animate-ping"></div>
+          </div>
+        </div>
+
+        {/* Technology Stats */}
+        <div className="mt-16 grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">10^15x</div>
+            <div className="text-gray-300">Faster Processing</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Scalability</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">100%</div>
+            <div className="text-gray-300">Success Rate</div>
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
       </div>

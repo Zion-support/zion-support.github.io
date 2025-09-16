@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -287,7 +291,11 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
 import { motion } from 'framer-motion';
 =======
 
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -516,6 +524,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
@@ -539,7 +551,11 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
             </button>
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </section>
       </div>

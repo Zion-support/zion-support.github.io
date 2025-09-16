@@ -4,10 +4,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 const InteractiveTechShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const showcases = [
+=======
+<<<<<<< HEAD
+  const [activeShowcase, setActiveShowcase] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const showcases = [
+=======
+<<<<<<< HEAD
+  const [activeDemo, setActiveDemo] = useState(0);
+
+  const techDemos = [
+=======
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const technologies = [
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     {
       id: 1,
       title: "🧠 AI Consciousness Demo",
@@ -136,6 +160,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
   }, [isHovered, showcases.length]);
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     <div className="relative mb-16 overflow-hidden">
       {/* Main Showcase Banner */}
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -201,12 +229,53 @@ const InteractiveTechShowcase2026: React.FC = () => {
                           🚀 Try Interactive Demo →
                         </a>
                       </div>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE DEMO • JANUARY 2026
+          </div>
+<<<<<<< HEAD
+          <h2 className="text-4xl font-bold mb-4">🌟 Interactive Technology Showcase 2026</h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technologies through interactive demonstrations
+          </p>
+        </div>
+
+        {/* Main Demo Area */}
+        <div className="mb-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeDemo}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            >
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <span className="text-4xl">{techDemos[activeDemo].icon}</span>
+                    <div>
+                      <h3 className="text-2xl font-bold">{techDemos[activeDemo].title}</h3>
+                      <p className="text-lg opacity-80">{techDemos[activeDemo].subtitle}</p>
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
                     </div>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
             {/* Navigation Controls */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
               {showcases.map((_, index) => (
@@ -219,6 +288,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -312,6 +382,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </AnimatePresence>
         </div>
 
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
         {/* Demo Navigation */}
         <div className="flex justify-center space-x-2 mb-8">
           {techDemos.map((_, index) => (
@@ -411,7 +484,55 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </button>
             </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {showcaseItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-b461
+          </div>
+        </div>
+      </div>
+
+      {/* Interactive Tech Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {showcases.map((showcase, index) => (
+          <motion.div
+            key={showcase.id}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className={`bg-gradient-to-br ${showcase.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 group`}
+            onClick={() => setActiveShowcase(index)}
+          >
+            <div className="flex items-center space-x-3 mb-4">
+              <span className="text-4xl group-hover:animate-bounce">{showcase.icon}</span>
+              <div>
+                <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-bold">
+                  {showcase.badge}
+                </span>
+              </div>
+            </div>
+            <h3 className="text-xl font-bold mb-2">{showcase.title}</h3>
+            <p className="text-sm opacity-90 mb-4">{showcase.subtitle}</p>
+            <div className="flex items-center justify-between">
+              <span className="text-xs opacity-75">Click to explore →</span>
+              <span className="text-2xl opacity-50 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
       {/* Live Demo Statistics */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-12">
@@ -437,6 +558,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <div className="text-sm text-gray-300">Countries Reached</div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       </div>
 
 <<<<<<< HEAD
@@ -478,13 +603,20 @@ const InteractiveTechShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 =======
             </div>
           ))}
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       </div>
     </div>
   );

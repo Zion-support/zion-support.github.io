@@ -288,7 +288,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       color: "from-orange-600 to-red-600"
 =======
       link: "/pages/NextGenSpaceTech2030"
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     }
   ];
 
@@ -491,7 +495,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     </div>
   );
 };

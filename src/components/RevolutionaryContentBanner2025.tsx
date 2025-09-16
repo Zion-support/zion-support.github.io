@@ -2,6 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 <<<<<<< HEAD
@@ -15,7 +22,11 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -156,8 +167,15 @@ import React, { useState, useEffect } from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -227,9 +245,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
       <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
         <div
@@ -315,6 +336,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <div className="text-sm opacity-90">{content.subtitle}</div>
             </motion.a>
           ))}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
         </div>
       </div>
 
@@ -357,7 +382,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
+<<<<<<< HEAD
       </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -365,6 +393,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

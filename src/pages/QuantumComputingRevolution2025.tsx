@@ -10,7 +10,11 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -30,7 +34,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ QUANTUM BREAKTHROUGH 2025 • REVOLUTIONARY COMPUTING
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
             Quantum Computing Revolution 2025
@@ -335,7 +343,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
             Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
           </p>
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
         </div>
 
         {/* Quantum Features */}
@@ -502,12 +514,23 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -739,12 +762,24 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -753,13 +788,25 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       </div>
     </div>
   );

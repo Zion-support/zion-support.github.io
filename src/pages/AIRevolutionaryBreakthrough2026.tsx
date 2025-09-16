@@ -10,8 +10,25 @@ import { Helmet } from 'react-helmet-async';
 =======
 import Header from '../Header';
 import Footer from '../Footer';
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import Header from '../Header';
@@ -22,7 +39,11 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -278,6 +299,14 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 <<<<<<< HEAD
       </div>
@@ -290,6 +319,12 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
       <Footer />
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       </main>
@@ -301,7 +336,11 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     </div>
   );
 };

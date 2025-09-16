@@ -2,10 +2,21 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState('ai');
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
@@ -218,8 +229,16 @@ const InteractiveTechShowcase2025: React.FC = () => {
           status: "Concept Phase"
         }
       ]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -229,6 +248,15 @@ const InteractiveTechShowcase2025: React.FC = () => {
       ]
 >>>>>>> cursor/create-and-deploy-new-content-de2c
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -237,12 +265,27 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     }
   };
 
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -463,12 +506,22 @@ const InteractiveTechShowcase2025: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
 
@@ -512,7 +565,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
 =======
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -540,7 +597,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <span className="mr-2">{category.icon}</span>
             {category.title}
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </button>
         ))}
       </div>
@@ -693,7 +754,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
             <p className="text-sm text-gray-300">{feature.description}</p>
 =======
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       {/* Technology Cards */}
       <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
@@ -703,8 +768,16 @@ const InteractiveTechShowcase2025: React.FC = () => {
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -719,7 +792,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
 >>>>>>> main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 
             {/* Features List */}
             <div className="mb-6">
@@ -767,7 +844,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
 >>>>>>> main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         ))}
       </div>
@@ -813,7 +894,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -836,6 +921,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-de2c
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 <<<<<<< HEAD
@@ -855,6 +944,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
         {/* Call to Action */}
@@ -895,11 +988,21 @@ const InteractiveTechShowcase2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-9601
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-1c0b
           </div>
         </div>
       </div>
