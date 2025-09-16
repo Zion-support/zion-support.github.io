@@ -1,12 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
 import React from 'react';
 
 const RevolutionaryAdBanner2034: React.FC = () => {
   return (
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <motion.div
@@ -118,8 +114,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -223,7 +217,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-indigo-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
       <div className="absolute top-1/4 right-1/3 w-28 h-28 bg-cyan-500/20 rounded-full blur-2xl animate-pulse delay-1500"></div>
     </div>
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
@@ -363,8 +356,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       </div>
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
   );
 };
 

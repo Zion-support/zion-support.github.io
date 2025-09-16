@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,8 +10,6 @@
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
@@ -180,7 +177,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
         
         <div className="text-center mt-8">
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -193,8 +189,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-370d
 =======
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -210,14 +204,11 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             </a>
           ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
         </div>
       </div>
     </div>

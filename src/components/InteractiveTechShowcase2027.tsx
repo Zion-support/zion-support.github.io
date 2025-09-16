@@ -68,7 +68,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -157,8 +156,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -246,7 +243,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -256,8 +252,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     }
   ];
 
@@ -314,7 +308,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         <div className="flex justify-center space-x-4 mb-12">
           {techCategories.map((category, index) => (
             <button
@@ -364,8 +357,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -395,7 +386,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -407,8 +397,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
