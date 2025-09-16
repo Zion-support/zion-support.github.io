@@ -59,6 +59,13 @@ export const updates: UpdateItem[] = [
 		tag: 'Launch',
 	},
 	{
+		title: 'Launch: Real‑Time Agent Observability Console v1.1',
+		summary: 'Live traces, tool metrics, and eval overlays for production agents.',
+		href: '/updates/agent-observability-console-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
 		title: 'Guide: Real-Time Evals Control Plane',
 		summary: 'Centralize eval gates, rollout policies, and live scorecards across services.',
 		href: '/updates/real-time-evals-control-plane',
