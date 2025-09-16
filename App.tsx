@@ -385,6 +385,12 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Carousel 2036 */}
                 <RevolutionaryContentCarousel2036 />
 
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
+                <RevolutionaryTechBanner2025 />
+
+                {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */}
+                <UltimateContentShowcase2025 />
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
