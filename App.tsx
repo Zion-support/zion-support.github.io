@@ -196,6 +196,12 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+// New 2027 Content Components and Pages
+import NewContent2027PromotionalBanner from './src/components/NewContent2027PromotionalBanner';
+import NewContent2027Carousel from './src/components/NewContent2027Carousel';
+import AI2027RevolutionaryBreakthroughs from './src/pages/AI2027RevolutionaryBreakthroughs';
+import QuantumComputingRevolution2027 from './src/pages/QuantumComputingRevolution2027';
+import NeuralInterfaceRevolution2027 from './src/pages/NeuralInterfaceRevolution2027';
 
 export default function App(): JSX.Element {
   return (
@@ -232,6 +238,12 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: 2027 Content Promotional Banner - prominently displays new breakthrough content */}
+                <NewContent2027PromotionalBanner />
+                
+                {/* NEW: 2027 Content Carousel - dynamic showcase of latest articles */}
+                <NewContent2027Carousel />
+                
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
                 
@@ -1396,6 +1408,11 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          
+          {/* NEW: 2027 Revolutionary Content Routes */}
+          <Route path="/ai-2027-revolutionary-breakthroughs" element={<AI2027RevolutionaryBreakthroughs />} />
+          <Route path="/quantum-computing-revolution-2027" element={<QuantumComputingRevolution2027 />} />
+          <Route path="/neural-interface-revolution-2027" element={<NeuralInterfaceRevolution2027 />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
