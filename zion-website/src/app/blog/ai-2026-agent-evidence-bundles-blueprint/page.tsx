@@ -1,29 +1,28 @@
-// @ts-nocheck
+import React from 'react'
+
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agent Evidence Bundles — Blueprint</h1>
-          <p className="text-gray-700 mb-6">
-            Design evidence bundles that pair actions with provenance, policy checks, eval results,
-            and approvals. Make audits fast and incident response objective with signed artifacts.
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+        <div className="text-sm text-blue-300">Guide</div>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Agent Evidence Bundles — 2026 Blueprint</h1>
+        <p className="mt-4 text-gray-300">Design signed evidence bundles with provenance, policy checks, and evaluator signals.</p>
+        <div className="mt-10 space-y-6 text-gray-300">
+          <p>
+            Evidence bundles unify inputs, outputs, policies, traces, and evaluation results into a single,
+            signed artifact per change. This enables reproducibility, root‑cause analysis, and audit readiness.
           </p>
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">Core Artifacts</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Trace excerpts with tool inputs/outputs</li>
-            <li>Policy-as-code decision logs and outcomes</li>
-            <li>Objective eval scores and thresholds</li>
-            <li>Approvals, budgets, and change tickets</li>
+          <h2 className="text-xl font-semibold text-white">Core Components</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Provenance and lineage metadata</li>
+            <li>Policy‑as‑code decisions and exceptions</li>
+            <li>Evaluator rubrics, scores, and thresholds</li>
           </ul>
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">Rollout</h2>
-          <p className="text-gray-700">
-            Start with high-risk tools, capture minimal viable evidence, and iterate toward full
-            lineage with retention policies and privacy controls.
-          </p>
+          <div className="mt-8">
+            <a href="/blog" className="text-blue-400 hover:text-blue-300 font-semibold">Back to blog →</a>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
-
