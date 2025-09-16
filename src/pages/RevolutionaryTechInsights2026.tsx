@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -39,6 +40,8 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fdcc
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -552,6 +555,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Applications Section */}
@@ -668,6 +672,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fdcc
 
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
@@ -730,4 +736,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fdcc

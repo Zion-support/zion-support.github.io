@@ -5,6 +5,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
   const showcaseItems = [
     {
       id: 1,
@@ -16,20 +17,21 @@ const EnhancedContentShowcase: React.FC = () => {
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
       category: "AI & Machine Learning",
       year: "2026"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fdcc
     },
     {
       id: 2,
-      title: "Quantum-Neural Fusion 2026",
-      description: "Revolutionary fusion of quantum computing and neural networks, creating unprecedented processing power for complex problem solving.",
-      image: "⚛️",
+      title: "Advanced Quantum Computing 2026",
+      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
+      icon: "⚡",
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
-      category: "Quantum Computing",
-      year: "2026"
+      link: "/pages/AdvancedQuantumComputing2026",
+      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: "Next-Gen Tech Showcase 2026",
       description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
       image: "🌟",
@@ -139,9 +141,13 @@ const EnhancedContentShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
   };
+=======
+      title: "Neural Interface Revolution 2026",
+      description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
+      icon: "🧬",
+>>>>>>> cursor/create-and-deploy-new-content-fdcc
 
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -166,6 +172,7 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -671,6 +678,8 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fdcc
       </div>
     </div>
   );
