@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New content (2025-09-16 - additional batch)
+    {
+        title: 'Guide: Agent Safety Governance Checklist (2026)',
+        summary: 'Operational checklist covering policies, eval gates, incident runbooks, and evidence.',
+        href: '/updates/agent-safety-governance-checklist-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Launch: Autonomous Rollback Controller v1.0',
+        summary: 'Automated policy-gated rollbacks with signed evidence and objective thresholds.',
+        href: '/updates/autonomous-rollback-controller-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
     // AI Lab fresh articles (2025-09-17)
     {
         title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
