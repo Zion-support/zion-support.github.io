@@ -250,5 +250,27 @@
       "createdAt": "2025-09-16T14:20:00.000Z",
       "source": "release-notes"
     }
+    ,
+    {
+      "title": "Guide — Edge AI Compliance 2026",
+      "href": "/pages/EdgeAICompliance2026",
+      "desc": "Device attestation, data residency, and auditability patterns at the edge",
+      "createdAt": "2025-09-16T15:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Handbook — AI Incident Response 2026",
+      "href": "/pages/AIIncidentResponse2026",
+      "desc": "Containment, forensics, and gameday readiness for agentic systems",
+      "createdAt": "2025-09-16T15:05:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Controls — Agentic Ops Control Plane 2026",
+      "href": "/pages/AgenticOpsControls2026",
+      "desc": "Guardrails, approvals, and rollback patterns aligned to SLOs",
+      "createdAt": "2025-09-16T15:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    }
   ]
 }
