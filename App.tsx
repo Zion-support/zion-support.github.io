@@ -46,6 +46,8 @@ import RevolutionaryContentBanner2025 from './src/components/RevolutionaryConten
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
 import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
 import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTracker2025';
@@ -304,6 +306,16 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Revolutionary Tech Showcase 2025 - Latest Technology Demo */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2025 />
+                </div>
+                
+                {/* NEW: AI Solutions Comprehensive 2025 - Complete AI Suite */}
+                <div className="mb-12">
+                  <AISolutionsComprehensive2025 />
+                </div>
                 
                 {/* NEW: Ultimate Content Banner 2034 - Latest Revolutionary Content */}
                 <UltimateContentBanner2034 />
