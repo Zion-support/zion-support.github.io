@@ -88,6 +88,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       gradient: 'from-amber-500 to-pink-500'
     },
     {
+      title: 'Safe Autonomy in Production (2026)',
+      href: '/blog/ai-2026-safe-autonomy-in-production',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Evidence Hub in Practice (2026)',
+      href: '/blog/ai-2026-evidence-hub-in-practice',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-violet-600'
+    },
+    {
       title: 'Agentic Observability — Deep Dive (2026)',
       href: '/blog/ai-2026-agentic-observability-deep-dive',
       tag: 'New',
