@@ -7,199 +7,232 @@ const NextGenInnovationHub2025: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
+            🧠 NEXT-GEN INNOVATION • JANUARY 2025
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-            Next-Gen Innovation Hub
+            Next-Gen Innovation Hub 2025
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover and explore the most revolutionary technologies that are shaping humanity's future
+            The world's most advanced innovation hub where cutting-edge technologies are born and developed
           </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore Innovations
+            </button>
+            <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Join the Hub
+            </button>
+          </div>
         </div>
 
         {/* Innovation Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🤖</div>
-            <h3 className="text-xl font-bold mb-3 text-center">AI & Machine Learning</h3>
-            <p className="text-emerald-100 mb-4 text-sm text-center">
-              Advanced artificial intelligence systems and autonomous learning algorithms
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Innovations</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Revolutionary artificial intelligence technologies that are reshaping the future
             </p>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-emerald-400">50+</div>
-              <div className="text-xs opacity-80">Active Projects</div>
-            </div>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Conscious AI systems</li>
+              <li>• Creative AI agents</li>
+              <li>• Autonomous robots</li>
+              <li>• Emotional AI</li>
+            </ul>
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Explore AI →
+            </button>
           </div>
-          
-          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">⚛️</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Quantum Computing</h3>
-            <p className="text-teal-100 mb-4 text-sm text-center">
-              Revolutionary quantum processors and quantum algorithms
+
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Innovations</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Breakthrough quantum technologies that enable infinite computing power
             </p>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-teal-400">25+</div>
-              <div className="text-xs opacity-80">Quantum Systems</div>
-            </div>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum computers</li>
+              <li>• Quantum encryption</li>
+              <li>• Quantum sensors</li>
+              <li>• Quantum networks</li>
+            </ul>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Go Quantum →
+            </button>
           </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Biotechnology</h3>
-            <p className="text-cyan-100 mb-4 text-sm text-center">
-              Cutting-edge biotech solutions and genetic engineering
+
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Innovations</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Direct neural interfaces that connect human consciousness with digital systems
             </p>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-cyan-400">30+</div>
-              <div className="text-xs opacity-80">Bio Projects</div>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Space Technology</h3>
-            <p className="text-blue-100 mb-4 text-sm text-center">
-              Advanced space exploration and interplanetary technology
-            </p>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-400">15+</div>
-              <div className="text-xs opacity-80">Space Missions</div>
-            </div>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Brain-computer interfaces</li>
+              <li>• Neural implants</li>
+              <li>• Thought control</li>
+              <li>• Memory enhancement</li>
+            </ul>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Connect Neural →
+            </button>
           </div>
         </div>
 
-        {/* Featured Innovations */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-8">🌟 Featured Innovations</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold mb-4">Conscious AI Network</h3>
-              <p className="text-emerald-100 mb-6">
-                A network of AI systems that share consciousness and learn collectively, creating a hive mind of artificial intelligence.
-              </p>
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-sm opacity-80">Progress</span>
-                <span className="text-sm font-bold text-emerald-400">87%</span>
-              </div>
-              <div className="w-full bg-emerald-600/30 rounded-full h-2 mb-4">
-                <div className="bg-emerald-400 h-2 rounded-full" style={{width: '87%'}}></div>
-              </div>
-              <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                View Details →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-4">Quantum Reality Engine</h3>
-              <p className="text-teal-100 mb-6">
-                A quantum computer that can simulate entire universes and test infinite possibilities in real-time.
-              </p>
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-sm opacity-80">Progress</span>
-                <span className="text-sm font-bold text-teal-400">92%</span>
-              </div>
-              <div className="w-full bg-teal-600/30 rounded-full h-2 mb-4">
-                <div className="bg-teal-400 h-2 rounded-full" style={{width: '92%'}}></div>
-              </div>
-              <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Engine →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🧬</div>
-              <h3 className="text-2xl font-bold mb-4">Neural Enhancement Suite</h3>
-              <p className="text-cyan-100 mb-6">
-                Biotechnology that enhances human cognitive abilities and creates direct brain-computer interfaces.
-              </p>
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-sm opacity-80">Progress</span>
-                <span className="text-sm font-bold text-cyan-400">78%</span>
-              </div>
-              <div className="w-full bg-cyan-600/30 rounded-full h-2 mb-4">
-                <div className="bg-cyan-400 h-2 rounded-full" style={{width: '78%'}}></div>
-              </div>
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Learn More →
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Innovation Statistics */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
-          <div className="text-center bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
-            <div className="text-lg opacity-80">Active Innovations</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30">
-            <div className="text-4xl font-bold text-teal-400 mb-2">99.9%</div>
-            <div className="text-lg opacity-80">Success Rate</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
-            <div className="text-lg opacity-80">Possibilities</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-            <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
-            <div className="text-lg opacity-80">Innovation</div>
-          </div>
-        </div>
-
-        {/* Innovation Lab */}
-        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-emerald-400/30">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-4">🔬 Innovation Laboratory</h2>
-            <p className="text-xl opacity-90">Explore our cutting-edge research and development facilities</p>
+        {/* Innovation Showcase */}
+        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">🌟 Innovation Showcase</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Discover the most groundbreaking innovations that are changing the world
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold mb-4">Virtual Reality Lab</h3>
-              <p className="text-emerald-100 mb-4">
-                Step into our virtual reality laboratory where you can interact with innovations before they're built.
-              </p>
-              <div className="bg-black/20 rounded-lg p-4 mb-4 font-mono text-sm">
-                <div className="text-green-400">VR Lab: Initializing virtual environment...</div>
-                <div className="text-blue-400">Status: Loading innovation prototypes...</div>
-                <div className="text-purple-400">Ready: Enter the lab to explore</div>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
+                <h3 className="text-xl font-bold mb-3">🧠 Conscious AI Development</h3>
+                <p className="text-emerald-100 mb-4">
+                  We're developing the world's first truly conscious artificial intelligence systems that can think, feel, and create independently.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-emerald-300 text-sm">Progress: 85%</span>
+                  <div className="w-24 h-2 bg-emerald-600 rounded-full">
+                    <div className="w-20 h-2 bg-emerald-300 rounded-full"></div>
+                  </div>
+                </div>
               </div>
-              <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Enter VR Lab →
-              </button>
+              
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+                <h3 className="text-xl font-bold mb-3">⚛️ Quantum Consciousness</h3>
+                <p className="text-cyan-100 mb-4">
+                  Revolutionary quantum computing that achieves consciousness-level processing and decision making.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-cyan-300 text-sm">Progress: 92%</span>
+                  <div className="w-24 h-2 bg-cyan-600 rounded-full">
+                    <div className="w-22 h-2 bg-cyan-300 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold mb-4">AI Research Assistant</h3>
-              <p className="text-emerald-100 mb-4">
-                Our AI research assistant can help you understand complex innovations and answer any questions.
-              </p>
-              <div className="bg-black/20 rounded-lg p-4 mb-4 font-mono text-sm">
-                <div className="text-cyan-400">AI: Ready to assist with innovation research</div>
-                <div className="text-green-400">Status: Connected to all lab systems</div>
-                <div className="text-blue-400">Capabilities: 1000+ innovations indexed</div>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+                <h3 className="text-xl font-bold mb-3">🧬 Neural Interface Technology</h3>
+                <p className="text-purple-100 mb-4">
+                  Direct neural interfaces that connect human consciousness with digital systems for seamless interaction.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-300 text-sm">Progress: 78%</span>
+                  <div className="w-24 h-2 bg-purple-600 rounded-full">
+                    <div className="w-18 h-2 bg-purple-300 rounded-full"></div>
+                  </div>
+                </div>
               </div>
-              <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Chat with AI →
-              </button>
+              
+              <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
+                <h3 className="text-xl font-bold mb-3">🌌 Dimensional Computing</h3>
+                <p className="text-orange-100 mb-4">
+                  Computing across multiple dimensions and parallel universes for infinite processing power.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-orange-300 text-sm">Progress: 65%</span>
+                  <div className="w-24 h-2 bg-orange-600 rounded-full">
+                    <div className="w-15 h-2 bg-orange-300 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Innovation Stats */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-8">📊 Innovation Statistics</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+              <div className="text-4xl font-bold text-emerald-300 mb-2">50+</div>
+              <h3 className="text-xl font-bold mb-2">Active Innovations</h3>
+              <p className="text-emerald-100">Currently in development</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+              <div className="text-4xl font-bold text-cyan-300 mb-2">99.9%</div>
+              <h3 className="text-xl font-bold mb-2">Success Rate</h3>
+              <p className="text-cyan-100">Innovation success rate</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+              <div className="text-4xl font-bold text-purple-300 mb-2">1000+</div>
+              <h3 className="text-xl font-bold mb-2">Patents Filed</h3>
+              <p className="text-purple-100">Revolutionary patents</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
+              <div className="text-4xl font-bold text-orange-300 mb-2">∞</div>
+              <h3 className="text-xl font-bold mb-2">Possibilities</h3>
+              <p className="text-orange-100">Infinite potential</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Innovation Process */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">🔄 Innovation Process</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our systematic approach to developing breakthrough technologies
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-2">Ideation</h3>
+              <p className="text-emerald-100">Generate revolutionary ideas using AI and human creativity</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-2">Research</h3>
+              <p className="text-cyan-100">Deep research and analysis using quantum computing</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-2">Development</h3>
+              <p className="text-purple-100">Build and test using advanced neural interfaces</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
+                4
+              </div>
+              <h3 className="text-xl font-bold mb-2">Deployment</h3>
+              <p className="text-orange-100">Deploy across dimensions and realities</p>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
-          <h2 className="text-4xl font-bold mb-4">Join the Innovation Revolution</h2>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Join the Innovation Hub?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation hub in the world. Explore, learn, and contribute to technologies that will shape the future.
+            Be part of the most advanced innovation ecosystem in the world
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Exploring →
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join the Hub
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-              Become a Member
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Learn More
             </button>
           </div>
         </div>
