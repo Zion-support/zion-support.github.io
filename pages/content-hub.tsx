@@ -19,6 +19,28 @@ const ContentHub: React.FC = () => {
 
   const featuredContent = [
     {
+      id: 16,
+      title: 'Safe Autonomy in Production',
+      excerpt: 'Deploy agents with guardrails, SLOs, and audit‑ready evidence.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
+      id: 15,
+      title: 'Evidence Hub in Practice',
+      excerpt: 'Centralize evals, traces, and policy events to ship safely.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
       id: 12,
       title: 'Agentic Benchmarking Field Guide',
       excerpt: 'Design production-like benchmarks with SLIs, scenarios, and eval gates.',
@@ -76,6 +98,26 @@ const ContentHub: React.FC = () => {
   ];
 
   const recentContent = [
+    {
+      id: 17,
+      title: 'Safe Autonomy in Production',
+      excerpt: 'Deploy agents with guardrails, SLOs, and audit‑ready evidence.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      image: '/api/placeholder/300/200',
+    },
+    {
+      id: 16,
+      title: 'Evidence Hub in Practice',
+      excerpt: 'Centralize evals, traces, and policy events to ship safely.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      image: '/api/placeholder/300/200',
+    },
     {
       id: 13,
       title: 'Operationalizing AI Safety Controls',

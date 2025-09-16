@@ -38,6 +38,22 @@ export default function EvidenceHubInPractice2026() {
             Product and safety leads review deltas per release. On-call teams correlate regressions with
             policy violations. Auditors pull justifications with a click.
           </p>
+
+          <h2>What to Capture</h2>
+          <ul>
+            <li>Structured traces of prompts, tools, and model calls</li>
+            <li>Scenario-based evals aligned to SLOs and policies</li>
+            <li>Policy signals: violations, overrides, approvals, budgets</li>
+            <li>Incidents and remediations linked to KPIs</li>
+          </ul>
+
+          <h2>Operationalizing</h2>
+          <p>
+            Wire preflight and runtime eval gates, enforce budgets, and surface dashboards for leaders. Treat evidence as
+            a first-class artifact in CI/CD and live ops.
+          </p>
+
+          <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
         </article>
       </main>
     </div>

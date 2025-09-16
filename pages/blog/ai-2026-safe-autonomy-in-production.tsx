@@ -42,6 +42,27 @@ export default function SafeAutonomyInProduction2026() {
             Connect guardrail decisions to traces and incidents. Gate merges and deploys with evaluation suites and
             automate graceful degradation on regression.
           </p>
+
+          <h2>Guardrails First</h2>
+          <ul>
+            <li>Scoped permissions and risk tiers for tools and actions</li>
+            <li>Approvals and budgets for high-risk operations</li>
+            <li>Runtime checks for policy, groundedness, and safety</li>
+          </ul>
+
+          <h2>Operational SLOs</h2>
+          <p>
+            Define a concise SLO set across safety, quality, reliability, latency, and cost. Wire alerts to incidents
+            and ensure healthy rollback paths.
+          </p>
+
+          <h2>Audit-Ready Evidence</h2>
+          <p>
+            Centralize traces, evals, and policy events. Link decisions and overrides to business outcomes for
+            transparent postmortems and governance.
+          </p>
+
+          <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
         </article>
       </main>
     </div>
