@@ -1,7 +1,7 @@
-import { newBlogPosts2026 } from './newContent2026';
+import { newContent2026 } from './newContent2026';
 
 export const blogPosts = [
-  ...newBlogPosts2026,
+  ...newContent2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
@@ -46,7 +46,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/ai-2027-breakthrough-innovations.jpg",
     slug: "2027-ai-breakthrough-innovations-future-is-here"
->>>>>>> cursor/create-and-deploy-new-content-b459
   },
   {
     id: 10001,
@@ -2696,14 +2695,21 @@ export const getBlogTags = () => {
 };
 
 // New content added for enhanced engagement
-export const newContent2026 = [
+// Note: newContent2026 is now imported from './newContent2026'
+
+// Fresh promoted content (2025-09-16) - moved to earlier in file
+
+// Additional fresh content (2029 preview)
+export const extraContent2029 = [
   {
-    id: 9501,
-    title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
-    excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
-    content: "A concise executive guide with minimal YAML, JSON scorecard schemas, and a reference GitHub Check that blocks merges on failing evals. Includes rollout ladders, budget dials, and audit‑ready evidence capture.",
-    author: "Avery Scott",
-    authorRole: "Platform Staff Engineer",
+    id: 9901,
+    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
+    excerpt:
+      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
+    content:
+      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
     publishDate: "2025-09-16",
     readTime: "6 min read",
     category: "Governance",
@@ -3272,58 +3278,64 @@ export const newContent2026 = [
   }
 ];
 
-// Additional fresh content (2029 preview)
-export const extraContent2029 = [
+// Additional fresh content (2029 preview) - moved to earlier in file
+
+// Merge new content with existing blog posts
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...newBlogPosts];
+// Keep compatibility export; prefer BLOG_POSTS as unified list
+export const BLOG_POSTS_ALL = allBlogPosts;
+// Back-compat named export expected by some routes/components
+export const BLOG_POSTS = allBlogPosts;
+
+// Add new blog posts to the existing array
+const newBlogPosts = [
   {
-    id: 9901,
-    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
-    excerpt:
-      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
-    content:
-      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
-    author: "Riley Gomez",
-    authorRole: "Head of Platform Engineering",
-    publishDate: "2025-09-16",
-    readTime: "6 min read",
-    category: "Operations",
-    tags: ["Evidence", "Scorecards", "Policy"],
-    featured: true,
-    imageUrl: "/images/blog/evidence-native-engineering-2029.jpg",
-    slug: "ai-2029-evidence-native-engineering"
-  },
-  {
-    id: 9902,
-    title: "Trusted RAG 2029: Live Freshness Windows and Budget Guardrails",
-    excerpt:
-      "Blueprint for continuously-grounded retrieval with freshness, drift monitors, and spend caps.",
-    content:
-      "Ground answers in sources you can verify. This blueprint shows how to implement freshness windows, detect semantic drift, and enforce budget guardrails for retrieval-heavy systems. Includes copy-paste checks, example policies, and dashboards to track grounding quality over time.",
-    author: "Nina Patel",
-    authorRole: "Applied AI Architect",
-    publishDate: "2025-09-16",
+    id: 20001,
+    title: "AI-Powered Content Marketing Revolution 2026: 500% Engagement Boost",
+    excerpt: "Discover how AI-driven content marketing strategies are delivering unprecedented engagement rates and ROI for businesses worldwide.",
+    content: "The content marketing landscape has been completely transformed by AI in 2026. Our latest research shows that businesses using AI-powered content strategies are seeing 500% increases in engagement, 300% higher conversion rates, and 400% improvement in content ROI. The key lies in AI's ability to understand audience psychology, predict content performance, and create personalized experiences at scale. Our advanced AI content engine analyzes over 10,000 data points per user to create hyper-personalized content that resonates with each individual. This includes dynamic content adaptation, real-time optimization, and predictive content creation that anticipates user needs before they even express them. Companies implementing our AI content marketing platform report 500% increase in engagement rates, 300% higher conversion rates, 400% improvement in content ROI, and 600% faster content production cycles.",
+    author: "Jennifer Martinez",
+    authorRole: "AI Content Marketing Director",
+    publishDate: "2025-01-21",
     readTime: "7 min read",
-    category: "RAG",
-    tags: ["RAG", "Freshness", "FinOps"],
+    category: "AI Marketing",
+    tags: ["AI Marketing", "Content Strategy", "Engagement", "ROI"],
     featured: true,
-    imageUrl: "/images/blog/trusted-rag-guardrails-2029.jpg",
-    slug: "trusted-rag-2029-guardrails"
-  },
-  {
-    id: 9903,
-    title: "Agent SLOs 2029: Minimal Set That Scales Across Teams",
-    excerpt:
-      "A pragmatic SLO set for safety, groundedness, reliability, and budget with ready-to-ship templates.",
-    content:
-      "Cut through noise with four SLOs that matter. We provide targets, templates, and wiring guidance so drift blocks risky changes automatically. Works across agent teams without bespoke dashboards for each.",
-    author: "Avery Scott",
-    authorRole: "Platform Staff Engineer",
-    publishDate: "2025-09-16",
-    readTime: "5 min read",
-    category: "Operations",
-    tags: ["SLOs", "Reliability", "Budgets"],
-    featured: true,
-    imageUrl: "/images/blog/agent-slos-2029.jpg",
-    slug: "agent-slos-2029-minimal-set"
+    imageUrl: "/images/blog/ai-content-marketing-revolution-2026.jpg",
+    slug: "ai-content-marketing-revolution-2026"
+  }
+];
+
+// Helper functions for blog post management
+export const getBlogPostBySlug = (slug) => {
+  return allBlogPosts.find(post => post.slug === slug);
+};
+
+export const getBlogPostsByCategory = (category) => {
+  return allBlogPosts.filter(post => post.category === category);
+};
+
+export const getFeaturedBlogPosts = () => {
+  return allBlogPosts.filter(post => post.featured);
+};
+
+export const getBlogPostsByTag = (tag) => {
+  return allBlogPosts.filter(post => post.tags.includes(tag));
+};
+
+export const getRecentBlogPosts = (limit = 5) => {
+  return allBlogPosts
+    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+    .slice(0, limit);
+};
+
+export const getAllTags = () => {
+  const allTags = allBlogPosts.flatMap(post => post.tags);
+  return [...new Set(allTags)].map(tag => ({
+    name: tag,
+    count: allTags.filter(t => t === tag).length
+  }));
+};
   },
   {
     id: 9904,
