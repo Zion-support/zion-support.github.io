@@ -56,11 +56,15 @@ import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBan
 import UltimateContentShowcase2026Banner from './components/UltimateContentShowcase2026Banner';
 import RevolutionaryContentPromotionBanner2026 from './components/RevolutionaryContentPromotionBanner2026';
 import NewContentBreakthroughBanner2026 from './components/NewContentBreakthroughBanner2026';
+import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPromotionBanner2026';
+import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
 import QuantumAIRevolution2026 from './pages/QuantumAIRevolution2026';
+import NextGenAIContentHub2026 from './pages/NextGenAIContentHub2026';
+import AITrendsInsights2026 from './pages/AITrendsInsights2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -153,6 +157,16 @@ const App: React.FC = () => {
               {/* New Content Promotion Banner 2026 */}
               <div className="mb-12">
                 <NewContentPromotionBanner2026 />
+              </div>
+
+              {/* Next Gen AI Content Promotion Banner 2026 */}
+              <div className="mb-12">
+                <NextGenAIContentPromotionBanner2026 />
+              </div>
+
+              {/* AI Trends Promotion Banner 2026 */}
+              <div className="mb-12">
+                <AITrendsPromotionBanner2026 />
               </div>
 
               {/* Featured Content Showcase 2026 */}
@@ -458,6 +472,10 @@ const App: React.FC = () => {
           {/* NEW: Ultimate Content Routes 2026 */}
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
+          
+          {/* NEW: Next Gen Content Routes 2026 */}
+          <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
+          <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
         </Routes>
         
         <Footer />
