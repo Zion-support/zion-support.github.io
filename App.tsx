@@ -30,17 +30,16 @@ import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
-<<<<<<< HEAD
-import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-import NewShowcase2025 from './src/pages/NewShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-=======
-import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
->>>>>>> cursor/create-and-deploy-new-content-dc9e
+import AIAutonomousResearchAssistant from './src/pages/AIAutonomousResearchAssistant';
+import AIContentGenerator from './src/pages/AIContentGenerator';
+import AIMatcher from './src/pages/AIMatcher';
+import AIPoweredITAssetManagement from './src/pages/AIPoweredITAssetManagement';
+import AIServicesPage from './src/pages/AIServicesPage';
+import AIServicesShowcase from './src/pages/AIServicesShowcase';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
@@ -48,15 +47,12 @@ import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
-<<<<<<< HEAD
-=======
 import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
 import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 
 export default function App(): JSX.Element {
   return (
@@ -79,14 +75,6 @@ export default function App(): JSX.Element {
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Synthetic Intelligence →
-=======
                       Experience the future of technology with our groundbreaking new content on Advanced AI Transformation, 
                       Quantum-Neural Fusion, Next-Gen Tech Showcase, and Revolutionary Neural Interfaces
                     </p>
@@ -102,7 +90,6 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Synthetic Intelligence →
->>>>>>> cursor/create-and-deploy-new-content-dc9e
                       </a>
                       <a href="/pages/AdvancedQuantumComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚡ Advanced Quantum →
@@ -113,25 +100,18 @@ export default function App(): JSX.Element {
                       <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum-Neural Fusion →
                       </a>
-<<<<<<< HEAD
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Revolution 2025 →
+                      <a href="/pages/NextGenTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Next-Gen Showcase →
                       </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Breakthrough →
+                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🤖 Synthetic Intelligence →
                       </a>
+                      <a href="/pages/QuantumComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        ⚡ Quantum Computing Revolution →
                       </a>
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Revolution 2025 →
+                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧬 Neural Interface Revolution →
                       </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Breakthrough →
-                      </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural Interface →
-                      </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
                     </div>
                     <div className="mt-6">
                       <a href="/pages/NextGenTechShowcase2026" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
@@ -201,7 +181,6 @@ export default function App(): JSX.Element {
                     <a href="/pages/BiotechAIRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧬 Biotech Revolution
                     </a>
-<<<<<<< HEAD
                     <a href="/pages/AIInnovationPlaybook2025" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📘 AI Playbook
                     </a>
@@ -217,8 +196,6 @@ export default function App(): JSX.Element {
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
                     </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
                   </div>
                 </div>
 
@@ -647,19 +624,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-<<<<<<< HEAD
-          <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
-          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
-          <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-=======
-          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
->>>>>>> cursor/create-and-deploy-new-content-dc9e
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
@@ -667,14 +635,17 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-<<<<<<< HEAD
-=======
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
->>>>>>> cursor/create-and-deploy-new-content-dc9e
+          <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
+          <Route path="/pages/AIContentGenerator" element={<AIContentGenerator />} />
+          <Route path="/pages/AIMatcher" element={<AIMatcher />} />
+          <Route path="/pages/AIPoweredITAssetManagement" element={<AIPoweredITAssetManagement />} />
+          <Route path="/pages/AIServicesPage" element={<AIServicesPage />} />
+          <Route path="/pages/AIServicesShowcase" element={<AIServicesShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
