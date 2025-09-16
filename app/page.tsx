@@ -66,6 +66,8 @@ import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIConten
 // Import new revolutionary components
 import AdvancedPerformanceOptimizer2026 from './components/AdvancedPerformanceOptimizer2026';
 import RevolutionaryTech2026Showcase from './components/RevolutionaryTech2026Showcase';
+import AdvancedAI2026Dashboard from './components/AdvancedAI2026Dashboard';
+import QuantumConsciousnessShowcase2026 from './components/QuantumConsciousnessShowcase2026';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -1292,6 +1294,8 @@ export default function HomePage() {
         {/* New Revolutionary Components */}
         <AdvancedPerformanceOptimizer2026 />
         <RevolutionaryTech2026Showcase />
+        <AdvancedAI2026Dashboard />
+        <QuantumConsciousnessShowcase2026 />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
