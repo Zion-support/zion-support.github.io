@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-99e3
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
   return (
@@ -20,41 +14,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-          {/* Interactive Demo Grid */}
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-              {demos.map((demo, index) => (
-                <div
-                  key={demo.id}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer group ${
-                    activeDemo === index ? 'ring-2 ring-purple-400 scale-105' : ''
-                  }`}
-                  onClick={() => setActiveDemo(index)}
-                >
-                  <div className="flex items-start space-x-6">
-                    <div className={`w-20 h-20 bg-gradient-to-r ${demo.color} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300`}>
-                      {demo.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3">{demo.title}</h3>
-                      <p className="text-lg opacity-90 mb-4">{demo.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-purple-300">Duration: {demo.duration}</span>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDemoStart(demo.id);
-                          }}
-                          className={`bg-gradient-to-r ${demo.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold ${
-                            isLoading ? 'opacity-50 cursor-not-allowed' : ''
-                          }`}
-                          disabled={isLoading}
-                        >
-                          {isLoading ? 'Starting...' : 'Start Demo'}
-                        </button>
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
                       </div>
                     </div>
                   </div>
@@ -115,9 +74,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                     <div className="text-3xl font-bold text-indigo-300 mb-2">Revolutionary</div>
                     <div className="text-sm text-indigo-200">This demo will fundamentally change your understanding of technology</div>
                   </div>
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
-=======
         {/* Interactive Technology Demos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -197,13 +153,11 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 <p className="text-gray-300 mb-4">Witness quantum computing manipulating physical reality</p>
                 <div className="bg-black/20 rounded-lg p-4 mb-4">
                   <div className="text-blue-400 text-sm">Quantum State: Superposition achieved. Reality manipulation in progress...</div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
                 </div>
                 <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
                   Manipulate Reality
                 </button>
               </div>
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
@@ -322,14 +276,7 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                   </li>
                 ))}
               </ul>
->>>>>>> cursor/create-and-deploy-new-content-9c82
             </div>
-<<<<<<< HEAD
-          </div>
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
 
         {/* Interactive Demo Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -358,34 +305,7 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                 Enter Portal
               </button>
-<<<<<<< HEAD
-=======
-            
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-4">🌌 Multiverse Portal</h3>
-                <p className="text-gray-300 mb-4">Open portals to parallel universes and explore alternate realities</p>
-                <div className="bg-black/20 rounded-lg p-4 mb-4">
-                  <div className="text-emerald-400 text-sm">Portal Status: Connected to Universe Alpha-7. Ready for exploration.</div>
-                </div>
-                <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-                  Open Portal
-                </button>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-4">🧬 Neural Interface Demo</h3>
-                <p className="text-gray-300 mb-4">Experience direct brain-computer interface technology</p>
-                <div className="bg-black/20 rounded-lg p-4 mb-4">
-                  <div className="text-pink-400 text-sm">Neural Link: Established. Thought-to-action translation active.</div>
-                </div>
-                <button className="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
-                  Connect Neural Interface
-                </button>
-              </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
             </div>
-=======
             </div>
           </div>
         </div>
@@ -407,45 +327,15 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-lg opacity-80">Support</div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl mb-8 opacity-90">Join us in exploring the most advanced technologies ever created</p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Interactive Experience →
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-              Learn More
-=======
-          <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Future?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join the technological revolution and be part of the future today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Contact Sales
->>>>>>> cursor/create-and-deploy-new-content-9c82
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
     </div>
   );
 };
