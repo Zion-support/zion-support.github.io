@@ -3,6 +3,7 @@ import React from 'react';
 const NewContentBanner2025: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +198,8 @@ const NewContentBanner2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>

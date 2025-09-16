@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Contact() {
   const { showToast: toast } = useToast();
@@ -13,6 +14,12 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lu
 import React from 'react';
 
 const Contact: React.FC = () => {
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -61,18 +68,17 @@ const Contact: React.FC = () => {
 
   const services = [
     "AI & Machine Learning",
-    "Cloud & DevOps",
-    "Cybersecurity",
-    "Data Analytics",
-    "Digital Transformation",
-    "IT Infrastructure",
-    "Micro SaaS Solutions",
     "Quantum Computing",
-    "Blockchain Services",
-    "IoT Solutions"
+    "Cybersecurity",
+    "Neural Interfaces",
+    "Conscious AI Systems",
+    "Interdimensional Computing",
+    "Digital Transformation",
+    "Cloud Solutions"
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
@@ -82,15 +88,29 @@ const Contact: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <Helmet>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for revolutionary AI, quantum computing, and cybersecurity solutions. Contact us today for a consultation." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Let's Build the Future
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Together</span>
+          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Contact Us
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge AI and technology solutions? 
-            Our team of experts is here to help you navigate the digital landscape.
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Ready to transform your business with revolutionary technology? 
+            Get in touch with our experts and discover what's possible.
           </p>
+<<<<<<< HEAD
       </section>
 
       {/* Contact Methods Grid */}
@@ -119,136 +139,141 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
+=======
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+            
+            {isSubmitted ? (
+              <motion.div 
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
                 className="text-center py-12"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+<<<<<<< HEAD
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
+=======
+                <p className="text-gray-300">We'll get back to you within 24 hours.</p>
+              </motion.div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name *
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Name *</label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
-                      required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your full name"
+                      required
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="Your full name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Email *</label>
                     <input
                       type="email"
-                      id="email"
                       name="email"
-                      required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your email"
+                      required
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="your.email@company.com"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Company</label>
                     <input
                       type="text"
-                      id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter company name"
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="Your company name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Phone</label>
                     <input
                       type="tel"
-                      id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter phone number"
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service of Interest
-                  </label>
+                  <label className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
-                    id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
+                      <option key={index} value={service} className="bg-gray-800 text-white">
+                        {service}
+                      </option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Project Details *
-                  </label>
+                  <label className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
-                    id="message"
                     name="message"
-                    required
-                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your project, goals, and timeline..."
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300 resize-none"
+                    placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
 
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-5 w-5 mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </button>
               </form>
             )}
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -313,8 +338,73 @@ const Contact: React.FC = () => {
                 </div>
             ))}
           </div>
+=======
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                Ready to revolutionize your business with cutting-edge technology? 
+                Our team of experts is here to help you explore the possibilities.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {contactMethods.map((method, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-lg">
+                      {method.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
+                      <p className="text-cyan-400 font-medium text-lg mb-1">{method.details}</p>
+                      <p className="text-gray-300">{method.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Additional Information */}
+            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
+              <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Revolutionary AI and quantum computing solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Expert team with cutting-edge expertise
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Proven track record of successful implementations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  24/7 support and maintenance
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
-      </section>
+      </div>
     </div>
   );
 };

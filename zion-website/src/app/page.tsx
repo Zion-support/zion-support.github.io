@@ -1,159 +1,8 @@
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
+ 
 import React from 'react'
-=======
->>>>>>> origin/feat/research-article-promo
-=======
-import React from 'react'
+import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
->>>>>>> origin/feat/updates-content-and-advertising
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-6f93
-import {
-  ChartBarIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-import React from 'react'
->>>>>>> origin/feat/news-and-fixes
-=======
-import React from 'react'
->>>>>>> cursor/create-and-deploy-new-content-9c82
-import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-=======
-import React from 'react'
-=======
->>>>>>> origin/feat/new-updates-and-homepage-promo
-import {
-  ChartBarIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
->>>>>>> origin/feat/new-updates-and-homepage-promo
-  UserGroupIcon
-=======
-import React from 'react'
-import { 
-	LightBulbIcon, 
-	CpuChipIcon, 
-	GlobeAltIcon, 
-	ShieldCheckIcon,
-	ChartBarIcon,
-	UserGroupIcon
->>>>>>> origin/feat/new-content-home-20250915
-=======
-  UserGroupIcon,
->>>>>>> origin/feat/research-article-promo
-} from '@heroicons/react/24/outline'
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
-import { getLatestUpdates } from '../data/updates'
-=======
-import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-
-const features = [
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-import React from 'react'
-=======
->>>>>>> origin/feat/new-updates-and-homepage-promo
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-import {
-  ChartBarIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
->>>>>>> origin/feat/new-updates-and-homepage-promo
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
-import { getLatestUpdates } from '../data/updates'
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
-import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-=======
-=======
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
->>>>>>> cursor/create-and-deploy-new-content-9c82
-import { getLatestUpdates } from '../data/updates'
->>>>>>> cursor/create-and-deploy-new-content-1912
-
-const features = [
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-6f93
-  {
-    name: 'AI-Powered Research',
-    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon
-  },
+  { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   {
     name: 'Quantum Computing',
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -172,11 +21,7 @@ const features = [
 >>>>>>> cursor/create-and-deploy-new-content-9c82
     icon: CpuChipIcon
   },
-  {
-    name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon
-  },
+  { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
   {
     name: 'Enterprise Security',
 =======
@@ -1180,8 +1025,8 @@ export default function HomePage() {
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
 =======
-            {getLatestUpdates(6).map((item) => (
-              <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            {latest.map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
 =======
             {latest.map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

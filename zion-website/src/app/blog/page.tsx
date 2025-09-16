@@ -7,9 +7,8 @@ const posts = [
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
     summary:
@@ -34,6 +33,9 @@ const posts = [
       'From sourcing to contract ops with policy-as-code and measurable savings.'
   },
   {
+    slug: 'ai-2026-governed-tool-use-blueprint',
+    title: 'AI 2026: Governed Tool Use — Blueprint',
+    summary: 'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
   },
   {
     slug: 'ai-2026-production-agent-postmortems',
@@ -76,6 +78,8 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+  },
+  {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:

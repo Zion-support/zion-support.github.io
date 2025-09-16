@@ -1,23 +1,76 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, 
+  Star, 
+  Clock, 
+  User, 
+  Tag, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Cpu,
+  Brain,
+  Rocket,
+  Target,
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  CheckCircle,
+  ChevronLeft,
+  Pause,
+  PlayCircle
+} from 'lucide-react';
+import { getFeaturedBlogPosts, getRecentBlogPosts, getBlogCategories } from '../data/blog-posts';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
 
-const EnhancedContentCarousel2025: React.FC = () => {
+const EnhancedContentCarousel2025 = () => {
+  const [featuredPosts, setFeaturedPosts] = useState([]);
+  const [recentPosts, setRecentPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
 
+const EnhancedContentCarousel2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+
+=======
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % 4);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
 <<<<<<< HEAD
   const contentItems = [
     {
       id: 1,
-<<<<<<< HEAD
       title: 'Next-Gen AI Consciousness',
       description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
       icon: '🧠',
@@ -28,6 +81,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
   const contentSlides = [
+<<<<<<< HEAD
+=======
+
+  const contentSlides = [
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 =======
 import { motion } from 'framer-motion';
 
@@ -45,6 +103,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const slides = [
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
     {
       id: 1,
       title: "Conscious AI Revolution",
@@ -60,15 +124,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
       image: "🧠",
       color: "from-purple-600 to-pink-600",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      link: "/pages/AISolutionsComprehensive2025"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       bgColor: "from-purple-600/20 to-pink-600/20",
       borderColor: "border-purple-400/30",
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
-<<<<<<< HEAD
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
@@ -76,134 +141,86 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-173f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-    },
-    {
-      id: 2,
-      title: 'Quantum Reality Engine',
-      description: 'Step into quantum-powered realities where multiple dimensions coexist and anything is possible',
-      icon: '⚛️',
-      gradient: 'from-cyan-600 to-blue-600',
-      link: '/pages/QuantumRealityEngine2025',
-      features: ['Quantum simulation', 'Multi-dimensional reality', 'Consciousness integration', 'Reality manipulation']
-    },
-    {
-      id: 3,
-      title: 'Interdimensional Revolution',
-      description: 'Break through dimensional barriers and explore infinite realities beyond space and time',
-      icon: '🌌',
-      gradient: 'from-emerald-600 to-teal-600',
-      link: '/pages/InterdimensionalTechRevolution2025',
-      features: ['Dimensional portals', 'Reality manipulation', 'Consciousness transfer', 'Multi-universe access']
-    },
-    {
-      id: 4,
-      title: 'Advanced AI Solutions',
-      description: 'Comprehensive AI solutions that transform businesses and accelerate innovation',
-      icon: '🤖',
-      gradient: 'from-orange-600 to-red-600',
-      link: '/pages/AISolutionsComprehensive2025',
-      features: ['Business automation', 'Predictive analytics', 'Natural language processing', 'Computer vision']
-    },
-    {
-      id: 5,
 <<<<<<< HEAD
-      title: "Conscious AI Systems",
-      subtitle: "The Future of Artificial Intelligence",
-      description: "Experience the first truly conscious AI that thinks, feels, and creates like a human mind. Revolutionary emotional intelligence and creative problem-solving capabilities.",
-      image: "🧠",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900 to-pink-900",
-      link: "/pages/AIRevolution2025",
-      features: ["Emotional Intelligence", "Creative Problem Solving", "Self-Learning", "Ethical Decision Making"],
-      stats: { users: "1M+", accuracy: "99.9%", speed: "1B ops/sec" }
-    },
-    {
-      id: 2,
-      title: "Quantum Consciousness",
-      subtitle: "Direct Neural Interface with Quantum Computing",
-      description: "Breakthrough technology that allows direct neural interface with quantum computing systems for enhanced cognitive processing and reality manipulation.",
-      image: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900 to-blue-900",
-      link: "/pages/QuantumComputingRevolution2025",
-      features: ["Quantum Neural Networks", "Consciousness Amplification", "Multi-dimensional Thinking", "Reality Manipulation"],
-      stats: { users: "500K+", accuracy: "100%", speed: "∞ ops/sec" }
-    },
-    {
-      id: 3,
-      title: "Neural Interface Technology",
-      subtitle: "Seamless Mind-Machine Connection",
-      description: "Revolutionary non-invasive brain-computer interface that enables thought-controlled systems and digital telepathy capabilities.",
-      image: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900 to-teal-900",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Digital Telepathy"],
-      stats: { users: "2M+", accuracy: "99.99%", speed: "Real-time" }
-    },
-    {
-      id: 4,
-      title: "Interdimensional Technology",
-      subtitle: "Access to Parallel Dimensions",
-      description: "Breakthrough technology that allows interaction with parallel dimensions and alternate realities, opening infinite possibilities for exploration.",
-      image: "🌌",
-      color: "from-violet-600 to-purple-600",
-      bgColor: "from-violet-900 to-purple-900",
-      link: "/pages/UltimateTechBreakthrough2025",
-      features: ["Dimensional Portals", "Reality Shifting", "Parallel Universe Access", "Time-Space Control"],
-      stats: { users: "100K+", accuracy: "100%", speed: "Instant" }
-    },
-    {
-      id: 5,
-      title: "Advanced Analytics 2025",
-      subtitle: "Predictive Intelligence at Scale",
-      description: "Next-generation analytics platform with predictive intelligence that can forecast trends and optimize decisions across all business functions.",
-      image: "📊",
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-900 to-red-900",
-      link: "/pages/AdvancedAnalytics2025",
-      features: ["Predictive Intelligence", "Real-time Analytics", "AI-Powered Insights", "Automated Optimization"],
-      stats: { users: "5M+", accuracy: "98.5%", speed: "Real-time" }
-    },
-    {
-      id: 6,
-      title: "Cybersecurity Fortress 2025",
-      subtitle: "Quantum-Proof Security Solutions",
-      description: "Advanced cybersecurity platform with quantum-proof encryption and AI-powered threat detection that protects against even the most sophisticated attacks.",
-      image: "🛡️",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900 to-purple-900",
-      link: "/pages/CybersecurityFortress2025",
-      features: ["Quantum-Proof Encryption", "AI Threat Detection", "Zero-Trust Architecture", "Automated Response"],
-      stats: { users: "10M+", accuracy: "99.99%", speed: "Instant" }
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 =======
-      title: "Reality Manipulation Engine",
-      description: "Technology that can manipulate the fundamental fabric of reality itself, enabling matter transformation and time control.",
-      image: "🔮",
-      color: "from-pink-600 to-rose-600",
-      bgColor: "from-pink-600/20 to-rose-600/20",
-      borderColor: "border-pink-400/30",
-      features: ["Matter transformation", "Time dilation control", "Gravity manipulation", "Dimensional shifting"],
-      link: "/pages/RevolutionaryTechBreakthrough2025"
->>>>>>> cursor/create-and-deploy-new-content-f2c7
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  useEffect(() => {
+    setFeaturedPosts(getFeaturedBlogPosts());
+    setRecentPosts(getRecentBlogPosts(12));
+    setCategories(getBlogCategories());
+  }, []);
+
+  useEffect(() => {
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % featuredPosts.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isPlaying, featuredPosts.length]);
+
+  const contentSections = [
+    {
+      id: 'ai-revolution',
+      title: 'AI Revolution 2025',
+      description: 'Discover the latest breakthroughs in artificial intelligence',
+      icon: Brain,
+      color: 'from-purple-600 to-blue-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('ai')))
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      description: 'Explore the quantum realm and its applications',
+      icon: Cpu,
+      color: 'from-blue-600 to-cyan-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('quantum')))
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity Fortress',
+      description: 'Protect your digital assets with advanced security',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('security')))
+    },
+    {
+      id: 'sustainability',
+      title: 'Green Technology',
+      description: 'Building a sustainable digital future',
+      icon: Globe,
+      color: 'from-green-600 to-emerald-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('green') || tag.toLowerCase().includes('sustainable')))
+    },
+    {
+      id: 'automation',
+      title: 'Business Automation',
+      description: 'Streamline operations with intelligent automation',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('automation')))
+    },
+    {
+      id: 'cloud-computing',
+      title: 'Cloud Computing',
+      description: 'Edge-to-edge intelligence and distributed systems',
+      icon: Globe,
+      color: 'from-indigo-600 to-purple-600',
+      posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('cloud')))
     }
   ];
 
-  useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentItems.length]);
-
   const nextSlide = () => {
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
@@ -220,37 +237,23 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
 <<<<<<< HEAD
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-<<<<<<< HEAD
-    if (!isAutoPlaying) return;
-    
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
-    
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
   };
 =======
       link: "/pages/AISolutionsComprehensive2025"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
     },
     {
       id: 2,
@@ -302,6 +305,13 @@ const EnhancedContentCarousel2025: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -322,6 +332,41 @@ const EnhancedContentCarousel2025: React.FC = () => {
       rating: 5
     }
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+=======
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [contentSlides.length]);
+
+  const nextSlide = () => {
+<<<<<<< HEAD
+    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+=======
+    setCurrentSlide((prev) => (prev + 1) % featuredPosts.length);
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + featuredPosts.length) % featuredPosts.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+=======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 
 <<<<<<< HEAD
@@ -337,10 +382,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -350,6 +401,22 @@ const EnhancedContentCarousel2025: React.FC = () => {
       </div>
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎠 ENHANCED CONTENT CAROUSEL • JANUARY 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
 <<<<<<< HEAD
@@ -358,6 +425,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -367,6 +436,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
             Revolutionary Technology Showcase
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
             Discover the most advanced technologies that are reshaping our world and defining the future
 =======
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
@@ -388,18 +458,35 @@ const EnhancedContentCarousel2025: React.FC = () => {
             Discover the most advanced technologies that are reshaping our world. 
             From conscious AI to interdimensional computing, experience the future today.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e058
 =======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
             Explore our most advanced technologies with interactive demonstrations and real-time features
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
+<<<<<<< HEAD
           </p>
         </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         {/* Carousel Container */}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+        {/* Main Carousel */}
+        <div className="relative mb-16">
+          <div className="overflow-hidden rounded-2xl">
+            <motion.div
+              className="flex"
+              animate={{ x: `-${currentSlide * 100}%` }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         <div className="relative max-w-6xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -425,11 +512,21 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+          </p>
+        </motion.div>
+
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 =======
         {/* Main Carousel */}
         <div className="relative mb-16">
@@ -439,6 +536,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
               animate={{ x: `-${currentSlide * 100}%` }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
             >
               {slides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
@@ -459,17 +562,273 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           </div>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
                       </div>
                       <span className="text-lg">{feature}</span>
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+
+                        <p className="text-lg opacity-90 leading-relaxed">
+                          {slide.description}
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-4">
+                          {Object.entries(slide.stats).map(([key, value], idx) => (
+                            <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                              <div className="text-2xl font-bold">{value}</div>
+                              <div className="text-sm opacity-70 capitalize">{key}</div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <motion.a
+                            href={slide.link}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
+                          >
+                            Explore Technology →
+                          </motion.a>
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
+                          >
+                            Watch Demo
+                          </motion.button>
+                        </div>
+                      </motion.div>
+
+                      {/* Visual */}
+                      <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="relative"
+                      >
+                        <div className="relative w-full h-80 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20 overflow-hidden">
+                          {/* Animated Background Elements */}
+                          <motion.div
+                            animate={{
+                              y: [0, -20, 0],
+                              rotate: [0, 5, 0]
+                            }}
+                            transition={{
+                              duration: 4,
+                              repeat: Infinity,
+                              ease: "easeInOut"
+                            }}
+                            className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl"
+                          >
+                            {slide.image}
+                          </motion.div>
+
+                          <motion.div
+                            animate={{
+                              y: [0, 20, 0],
+                              rotate: [0, -5, 0]
+                            }}
+                            transition={{
+                              duration: 3,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                              delay: 1
+                            }}
+                            className="absolute top-16 right-12 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xl"
+                          >
+                            ⚡
+                          </motion.div>
+
+                          <motion.div
+                            animate={{
+                              y: [0, -15, 0],
+                              x: [0, 10, 0]
+                            }}
+                            transition={{
+                              duration: 5,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                              delay: 2
+                            }}
+                            className="absolute bottom-20 left-16 w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-xl"
+                          >
+                            🚀
+                          </motion.div>
+
+                          {/* Central Hub */}
+                          <motion.div
+                            animate={{
+                              scale: [1, 1.1, 1],
+                              rotate: [0, 360]
+                            }}
+                            transition={{
+                              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                              rotate: { duration: 20, repeat: Infinity, ease: "linear" }
+                            }}
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl"
+                          >
+                            ⚡
+                          </motion.div>
+                        </div>
+                      </motion.div>
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+                      </div>
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+=======
+                        <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                          Start Interactive Demo →
+                        </button>
+>>>>>>> cursor/create-and-deploy-new-content-8449
+=======
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Featured Content
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              {' '}Carousel
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Explore our curated collection of cutting-edge technology insights
+          </p>
+          
+          {/* Controls */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <button
+              onClick={togglePlayPause}
+              className="bg-white/10 backdrop-blur-sm rounded-full p-3 hover:bg-white/20 transition-all duration-300"
+            >
+              {isPlaying ? <Pause className="w-6 h-6 text-white" /> : <PlayCircle className="w-6 h-6 text-white" />}
+            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={prevSlide}
+                className="bg-white/10 backdrop-blur-sm rounded-full p-3 hover:bg-white/20 transition-all duration-300"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="bg-white/10 backdrop-blur-sm rounded-full p-3 hover:bg-white/20 transition-all duration-300"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Main Carousel */}
+        <div className="relative mb-12">
+          <div className="overflow-hidden rounded-2xl">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -300 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="relative"
+              >
+                {featuredPosts[currentSlide] && (
+                  <div className="bg-gradient-to-r from-slate-800 to-slate-900 p-8 md:p-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                      {/* Content */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            {featuredPosts[currentSlide].category}
+                          </span>
+                          <span className="text-yellow-400 flex items-center text-sm">
+                            <Star className="w-4 h-4 fill-current mr-1" />
+                            Featured
+                          </span>
+                        </div>
+                        
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                          {featuredPosts[currentSlide].title}
+                        </h3>
+                        
+                        <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                          {featuredPosts[currentSlide].excerpt}
+                        </p>
+                        
+                        <div className="flex items-center gap-6 text-sm text-gray-400 mb-6">
+                          <span className="flex items-center">
+                            <Clock className="w-4 h-4 mr-2" />
+                            {featuredPosts[currentSlide].readTime}
+                          </span>
+                          <span className="flex items-center">
+                            <User className="w-4 h-4 mr-2" />
+                            {featuredPosts[currentSlide].author}
+                          </span>
+                          <span>{featuredPosts[currentSlide].publishDate}</span>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {featuredPosts[currentSlide].tags.slice(0, 3).map((tag, index) => (
+                            <span
+                              key={index}
+                              className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <Link
+                          to={`/blog/${featuredPosts[currentSlide].slug}`}
+                          className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group"
+                        >
+                          <BookOpen className="w-5 h-5 mr-2" />
+                          Read Full Article
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                      </div>
+                      
+                      {/* Visual */}
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-8 h-80 flex items-center justify-center">
+                          <BookOpen className="w-24 h-24 text-white opacity-50" />
+                        </div>
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                          <TrendingUp className="w-12 h-12 text-white" />
+                        </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
+=======
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
+                      </div>
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
                 </div>
+<<<<<<< HEAD
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -491,11 +850,13 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   <div className="text-9xl mb-6 animate-pulse">
                     {contentItems[currentSlide].icon}
 =======
+<<<<<<< HEAD
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
                       </div>
@@ -611,406 +972,87 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
-                      </div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  ))}
-                </div>
-<<<<<<< HEAD
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                  <a 
-                    href={contentItems[currentSlide].link}
-                    className={`bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
-                  >
-                    Explore Technology →
-                  </a>
-                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-
-              {/* Visual Demo Area */}
-              <div className="bg-gradient-to-br from-gray-700/50 to-purple-700/50 rounded-xl p-8 min-h-[400px] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-9xl mb-6 animate-pulse">
-                    {contentItems[currentSlide].icon}
-=======
-<<<<<<< HEAD
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
                   </div>
-                  <div className="text-2xl font-semibold mb-4">
-                    {contentItems[currentSlide].title} Demo
-                  </div>
-                  <div className="w-full h-4 bg-gray-600 rounded-full mb-4">
-                    <div 
-                      className={`h-4 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full animate-pulse`}
-                      style={{width: '75%'}}
-                    ></div>
-                  </div>
-                  <p className="text-gray-300">
-                    Interactive demonstration of {contentItems[currentSlide].title.toLowerCase()}
-                  </p>
-                </div>
-              </div>
-            </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
           </div>
-
-          {/* Navigation Controls */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="flex justify-center items-center mt-8 space-x-4">
-            <button 
-              onClick={prevSlide}
-              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
-            >
-              <span className="text-2xl">‹</span>
-            </button>
-            
-            {/* Slide Indicators */}
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-          <div className="flex justify-center items-center space-x-4 mt-8">
-            <button
-              onClick={prevSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-<<<<<<< HEAD
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-            <div className="flex space-x-2">
-              {contentItems.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    index === currentSlide 
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
-                      : 'bg-gray-600 hover:bg-gray-500'
-=======
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-                  }`}
-                />
-              ))}
-            </div>
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button 
-              onClick={nextSlide}
-              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
-            >
-              <span className="text-2xl">›</span>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-            <button
-              onClick={nextSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-            </button>
-          </div>
-        </div>
-
-<<<<<<< HEAD
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-5 gap-4 mt-12">
-          {contentItems.map((item, index) => (
-<<<<<<< HEAD
-=======
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl overflow-hidden mb-12">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
-      
-      {/* Header */}
-      <div className="relative z-10 p-8 text-center">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🚀 ENHANCED CONTENT CAROUSEL • JANUARY 2025
-        </div>
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Revolutionary Technology Showcase
-        </h2>
-        <p className="text-xl text-white/90 max-w-3xl mx-auto">
-          Explore our cutting-edge technologies with interactive demonstrations and real-time capabilities
-        </p>
-      </div>
-
-      {/* Main Carousel */}
-      <div className="relative z-10 px-8 pb-8">
-        <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
           
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Auto-play Toggle */}
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="absolute top-4 right-4 z-20 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-          >
-            {isAutoPlaying ? (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-              </svg>
-            ) : (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            )}
-          </button>
-
-          {/* Content */}
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Content */}
-            <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-6xl">{currentItem.image}</span>
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{currentItem.title}</h3>
-                  <p className="text-lg text-purple-200">{currentItem.subtitle}</p>
-                </div>
-              </div>
-              
-              <p className="text-lg text-white/90 mb-6">{currentItem.description}</p>
-              
-              {/* Features */}
-              <div className="grid grid-cols-2 gap-2 mb-6">
-                {currentItem.features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                    <span className="text-sm text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-purple-400">{currentItem.stats.users}</div>
-                  <div className="text-xs text-white/70">Users</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-pink-400">{currentItem.stats.accuracy}</div>
-                  <div className="text-xs text-white/70">Accuracy</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-cyan-400">{currentItem.stats.speed}</div>
-                  <div className="text-xs text-white/70">Speed</div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex space-x-4">
-                <Link
-                  to={currentItem.link}
-                  className={`bg-gradient-to-r ${currentItem.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                >
-                  Explore Technology →
-                </Link>
-                <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
-                  Try Demo
-                </button>
-              </div>
-            </div>
-
-            {/* Right Side - Interactive Demo */}
-            <div className={`bg-gradient-to-br ${currentItem.bgColor} rounded-xl p-6 border border-purple-400/30`}>
-              <h4 className="text-2xl font-bold mb-4 text-center text-white">🎮 Interactive Demo</h4>
-              <div className="bg-black/50 rounded-lg p-6 mb-4">
-                <div className="text-green-400 font-mono text-sm">
-                  <div className="mb-2">$ Initializing {currentItem.title}...</div>
-                  <div className="text-gray-400">Loading breakthrough technology...</div>
-                  <div className="text-gray-400">Connecting to quantum networks...</div>
-                  <div className="text-gray-400">Establishing neural interface...</div>
-                  <div className="text-green-400">✓ System ready for interaction</div>
-                  <div className="text-cyan-400">→ Click "Try Demo" to start</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-white/80">Live Technology Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Dots Navigation */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {contentItems.map((_, index) => (
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-purple-400 scale-125' 
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-8 mt-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-            <div className="text-gray-300">Revolutionary Technologies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
-            <div className="text-gray-300">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-            <div className="text-gray-300">Available Demos</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
-            <div className="text-gray-300">Possibilities</div>
-=======
-            <button
-              onClick={nextSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Slide Counter */}
-          <div className="text-center mt-4">
-            <span className="text-sm opacity-80">
-              {currentSlide + 1} of {contentSlides.length}
-            </span>
-          </div>
-        </div>
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-        {/* Technology Tags */}
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-4">
-            <div className="text-sm opacity-80">Featured Technologies:</div>
-            <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Conscious AI</span>
-              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Computing</span>
-              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interdimensional Tech</span>
-              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
-              <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
-            </div>
-<<<<<<< HEAD
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
-        {/* Quick Access Grid */}
-        <div className="mt-8">
-          <h3 className="text-xl font-bold text-center mb-4 text-white">⚡ Quick Access</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {contentItems.map((item, index) => (
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {featuredPosts.slice(0, 6).map((_, index) => (
               <button
-                key={item.id}
+                key={index}
                 onClick={() => goToSlide(index)}
-                className={`p-3 rounded-lg transition-all duration-300 text-center group ${
-                  index === currentIndex
-                    ? `bg-gradient-to-r ${item.color} text-white shadow-lg`
-                    : 'bg-white/10 text-white/70 hover:bg-white/20'
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-purple-400 scale-125' : 'bg-gray-600 hover:bg-gray-500'
                 }`}
-              >
-                <div className="text-2xl mb-1 group-hover:scale-110 transition-transform duration-300">
-                  {item.image}
-                </div>
-                <div className="text-xs font-semibold">{item.title.split(' ')[0]}</div>
-              </button>
+              />
             ))}
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
-              ))}
-            </motion.div>
           </div>
+        </div>
 
+        {/* Content Categories Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <h3 className="text-3xl font-bold text-white text-center mb-8">
+            Explore by Category
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {contentSections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                onMouseEnter={() => setHoveredCard(section.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                  <section.icon className="w-6 h-6 text-white" />
+                </div>
+                
+                <h4 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300 relative z-10">
+                  {section.title}
+                </h4>
+                
+                <p className="text-gray-300 mb-4 relative z-10">
+                  {section.description}
+                </p>
+                
+                <div className="flex items-center justify-between relative z-10">
+                  <span className="text-purple-400 font-semibold">
+                    {section.posts.length} Articles
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+=======
+                    </div>
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {slides.map((_, index) => (
@@ -1054,7 +1096,325 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
+          {/* Navigation Controls */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className="flex justify-center items-center mt-8 space-x-4">
+            <button 
+              onClick={prevSlide}
+              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
+            >
+              <span className="text-2xl">‹</span>
+            </button>
+            
+            {/* Slide Indicators */}
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+            <div className="flex space-x-2">
+              {contentSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    index === currentSlide 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
+                      : 'bg-gray-600 hover:bg-gray-500'
+=======
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+<<<<<<< HEAD
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+                  }`}
+                />
+              ))}
+            </div>
+<<<<<<< HEAD
+            
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <button 
+              onClick={nextSlide}
+              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
+            >
+              <span className="text-2xl">›</span>
+=======
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+            </button>
+=======
+        {/* Recent Articles Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h3 className="text-3xl font-bold text-white text-center mb-8">
+            Latest Articles
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentPosts.slice(0, 6).map((post, index) => (
+              <motion.div
+                key={post.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
+              >
+                <div className="h-48 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-white opacity-50" />
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {post.category}
+                    </span>
+                    {post.featured && (
+                      <span className="text-yellow-400 flex items-center text-sm">
+                        <Star className="w-4 h-4 fill-current mr-1" />
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300 line-clamp-2">
+                    {post.title}
+                  </h4>
+                  
+                  <p className="text-gray-300 mb-4 text-sm line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <span className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {post.readTime}
+                    </span>
+                    <span>{post.publishDate}</span>
+                  </div>
+                  
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors duration-300 text-sm"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Explore More?
+            </h3>
+            <p className="text-xl text-purple-100 mb-6">
+              Discover our complete collection of technology insights and innovations
+            </p>
+            <Link
+              to="/ultimate-content-showcase-2025"
+              className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              <Lightbulb className="w-5 h-5 mr-2" />
+              View All Content
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+=======
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
+<<<<<<< HEAD
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300">Available Demos</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Possibilities</div>
+=======
+<<<<<<< HEAD
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Slide Counter */}
+          <div className="text-center mt-4">
+            <span className="text-sm opacity-80">
+              {currentSlide + 1} of {contentSlides.length}
+            </span>
+          </div>
+        </div>
+
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+        {/* Technology Tags */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-4">
+            <div className="text-sm opacity-80">Featured Technologies:</div>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Conscious AI</span>
+              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Computing</span>
+              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interdimensional Tech</span>
+              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
+              <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
+            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+        {/* Quick Access Grid */}
+        <div className="mt-8">
+          <h3 className="text-xl font-bold text-center mb-4 text-white">⚡ Quick Access</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {contentItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => goToSlide(index)}
+                className={`p-3 rounded-lg transition-all duration-300 text-center group ${
+                  index === currentIndex
+                    ? `bg-gradient-to-r ${item.color} text-white shadow-lg`
+                    : 'bg-white/10 text-white/70 hover:bg-white/20'
+                }`}
+              >
+                <div className="text-2xl mb-1 group-hover:scale-110 transition-transform duration-300">
+                  {item.image}
+                </div>
+                <div className="text-xs font-semibold">{item.title.split(' ')[0]}</div>
+              </button>
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-8">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+          </div>
+        </div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">What Industry Leaders Say</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.2 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                  ))}
+                </div>
+                <p className="text-lg mb-6 italic">"{testimonial.quote}"</p>
+                <div className="border-t border-white/20 pt-4">
+                  <div className="font-bold text-lg">{testimonial.name}</div>
+                  <div className="text-sm opacity-70">{testimonial.title}</div>
+                </div>
+              </motion.div>
+            ))}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </motion.div>
 
@@ -1085,6 +1445,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
               Download Whitepaper
             </motion.button>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-4964
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
         </motion.div>
       </div>
     </div>
