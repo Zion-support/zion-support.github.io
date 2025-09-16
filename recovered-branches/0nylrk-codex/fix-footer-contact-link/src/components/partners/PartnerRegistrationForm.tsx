@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -8,12 +9,31 @@ import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
 const partnerFormSchema = z.object({
+=======
+
+import {useState} from "react";
+import {z} from "zod";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+>>>>>>> origin/merge-pr-12271
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
   instagram: z.string().optional(),
   youtube: z.string().optional(),
   linkedin: z.string().optional(),
 
+<<<<<<< HEAD
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 
 export function PartnerRegistrationForm() {
@@ -77,23 +97,122 @@ export function PartnerRegistrationForm() {
             audience_size: data.audience_size,
             payout_method: data.payout_method,
             bio: data.bio,
+=======
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,
+
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
+  async function onSubmit(data: PartnerFormValues) {
+    if (!user) {
+      toast({
+        title: "Authentication required"
+        description: "You must be logged in to register as a partner."
+        variant: "destructive"})
+      return
+
           }
         ])
         .select();
+      if (error) throw error;
+import { useState } from "react",;
+import { z } from "zod",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+const partnerFormSchema = z.object({;
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),;
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),;
+  twitter: z.string().optional(),;
+  instagram: z.string().optional(),;
+  youtube: z.string().optional(),;
+  linkedin: z.string().optional(),;
+  niche: z.string().min(2, { message: "Please specify your niche." }),;
+  audience_size: z.string(),;
+  payout_method: z.string(),;
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodResolver(partnerFormSchema),;
+    defaultValues: {;
+      name: "",;
+      website: "",;
+      twitter: "",;
+      instagram: "",;
+      youtube: "",;
+      linkedin: "",;
+      niche: "",;
+      audience_size: "",;
+      payout_method: "paypal",;
+      bio: ""}}),;
+  const checkExistingPartner = async () => {;
+    const { data: existingPartner } = await supabase;
+      .from('partner_profiles');
+      .select('id');    }
+    setIsSubmitting(true);
+    try {;
+      // Check if they already have a partner profile;
+      const hasExistingPartner = await checkExistingPartner();
+      if (hasExistingPartner) return;
+          {
+            user_id: user.id
+            name: data.name
+            website: data.website |null
+            social_media: {      // Insert new partner profile;
+      const { data: newPartner, error } = await supabase;
+        .from('partner_profiles');
+        .insert([;
+          {;
+            user_id: user && user.id,;
+            name: data && data.name,;
+            website: data && data.website || null,;
+            social_media: {;
+              twitter: data && data.twitter || null,;
+              instagram: data && data.instagram || null,;
+              youtube: data && data.youtube || null,;
+              linkedin: data && data.linkedin || null},;
+            niche: data && data.niche,;
+            audience_size: data && data.audience_size,;
+            payout_method: data && data.payout_method,;
+            bio: data && data.bio,;
+            status: 'pending', // Partners need approval;
+
+>>>>>>> origin/merge-pr-12271
+          }
+        ])
+        .select();
+<<<<<<< HEAD
 
       if (error) throw error;
 
       toast({
         title: "Application submitted!",
         description: "Your partner application has been submitted for review.",
+=======
+      if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
+      }
+    } catch (error: any) {      toast({
+        title: "Submission failed"
+        description: error.message |"There was a problem submitting your application."
+>>>>>>> origin/merge-pr-12271
 
       // Create a referral code if they don't have one already
       const { data: existingCode } = await supabase
         .from('referral_codes')
         .select('code')
     } finally {
+<<<<<<< HEAD
       setIsSubmitting(false);
     }
+=======
+      setIsSubmitting(false)    }
+>>>>>>> origin/merge-pr-12271
   }
 
   return (
@@ -117,6 +236,7 @@ export function PartnerRegistrationForm() {
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
                 )}
               />
 
@@ -163,6 +283,100 @@ export function PartnerRegistrationForm() {
                   )}
                 />
               </div>
+=======
+        ]);
+        .select(),;
+      if (error) throw error,;
+
+              twitter: data.twitter || null,
+              instagram: data.instagram || null,
+              youtube: data.youtube || null,
+              linkedin: data.linkedin || null},
+            niche: data.niche,
+            audience_size: data.audience_size,
+            payout_method: data.payout_method,
+            bio: data.bio,
+            status: 'pending', // Partners need approval;
+          }
+        ]);
+        .select ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Application submitted!",
+        description: "Your partner application has been submitted for review.",
+        variant: "default"}),
+      // Create a referral code if they don't have one already;
+      const { data: existing_code } = await supabase;
+        .from ('referral_codes');
+        .select ('code');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        await supabase.rpc ('generate_referral_code', { user_id: user.id });
+      }
+    } catch (error: any) {
+      console.error ('Error submitting partner application:', error);
+      toast ({
+        title: "Submission failed",
+        description: error.message || "There was a problem submitting your application.",
+        variant: "destructive"});
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue-light">;
+      <CardHeader>;
+        <CardTitle > Partner Registration</CardTitle>;
+        <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField;
+                      <FormControl>;
+                        <Input placeholder="@username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+                <FormField
+                  control={form && form.control}
+                  name="instagram"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Instagram (Optional)</FormLabel>;
+                />;
+                <FormField;
+
+                  control={form.control}
+                  name="instagram";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Instagram (Optional)</FormLabel>;
+                      <FormControl>;
+                        <Input placeholder="@username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
+                        <Input placeholder="Profile URL or username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+>>>>>>> origin/merge-pr-12271
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
@@ -195,6 +409,7 @@ export function PartnerRegistrationForm() {
               </div>
 
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name="niche"
                 render={({ field }) => (
@@ -213,8 +428,13 @@ export function PartnerRegistrationForm() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
+=======
+                control={form && form.control}                <FormField
+                  control={form && form.control}
+>>>>>>> origin/merge-pr-12271
                   name="audience_size"
                   render={({ field }) => (
+<<<<<<< HEAD
                     <FormItem>
                       <FormLabel>Audience Size</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -296,3 +516,39 @@ export function PartnerRegistrationForm() {
     </Card>
   );
 }
+=======
+                        <FormControl>;
+                          <SelectTrigger>;
+                            <SelectValue placeholder="Select audience size" />;
+                          </SelectTrigger>;
+                        </FormControl>;
+                        <SelectContent>;
+
+                />;
+                      />;
+                    </FormControl>;
+                    <FormDescription>;
+                      Limit: 500 characters;
+                    </FormDescription>;
+                    <FormMessage />;
+
+            <Button 
+              type="submit" 
+
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+                  </FormItem>)}
+              />;
+            </div>;
+            <Button;
+              type="submit";
+              className="w - full bg - zion - purple hover:bg - zion - purple-dark";
+              disabled={is_submitting}
+            >;
+              {is_submitting ? "Submitting..." : "Submit Application"}
+};
+}
+
+}
+>>>>>>> origin/merge-pr-12271

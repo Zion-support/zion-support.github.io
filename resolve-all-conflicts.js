@@ -6,6 +6,7 @@ const path = require('path');
 
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
+<<<<<<< HEAD
 // Function to run git commands safely
 function runGitCommand(command, description) {
   try {
@@ -17,6 +18,53 @@ function runGitCommand(command, description) {
     console.log(`⚠️  ${description} failed: ${error.message}`);
     return null;
   }
+=======
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+    try {
+        console.log(`🔧 Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check if file has merge conflicts
+<<<<<<< HEAD
+        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+
+        if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+            return false; // No conflicts to resolve
+        }
+        
+        // Strategy: Keep HEAD version (current branch) for most conflicts
+        // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
+        
+        // Remove any remaining conflict markers
+        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/\n?/g, '');
+        
+=======
+
+        content = content.replace(/\n([\s\S]*?)        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/=======\n?/g, '');
+        content = content.replace(/        
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+        // Clean up any duplicate content
+        content = content.replace(/\n\n\n+/g, '\n\n');
+        
+        // Write the resolved content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`✅ Resolved conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.error(`❌ Error processing ${filePath}:`, error.message);
+        return false;
+    }
+>>>>>>> origin/merge-pr-12271
 }
 
 // Function to resolve conflicts by accepting our version
@@ -69,9 +117,23 @@ function resolveConflicts() {
       fs.writeFileSync('/workspace/package.json', JSON.stringify(mergedPackage, null, 2));
       runGitCommand('git add package.json', 'Adding merged package.json');
     } catch (error) {
+<<<<<<< HEAD
       console.log('⚠️  Could not merge package.json automatically, using ours');
       runGitCommand('git checkout --ours package.json', 'Using our package.json');
       runGitCommand('git add package.json', 'Adding our package.json');
+=======
+        // If git command fails, use grep to find files with conflict markers
+        try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+            const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+            return result.trim().split('\n').filter(file => file.length > 0);
+        } catch (e) {
+            return [];
+        }
+>>>>>>> origin/merge-pr-12271
     }
   }
   

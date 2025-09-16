@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Environment security configuration
 export const securityConfig = {
   // Ensure sensitive environment variables are not exposed
@@ -26,4 +27,22 @@ export const securityConfig = {
     
     return clientVars;
   }
+=======
+;
+}};}}}},}
+
+;
+
+
+
+}
+;
+
+;
+},;
+,;
+
+
+;
+>>>>>>> origin/merge-pr-12271
 };

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface EnterpriseItService2029 {
+=======
+
+;
+  id: string;
+export interface EnterpriseItService2029  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

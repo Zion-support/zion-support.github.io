@@ -17,6 +17,7 @@
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@babel/plugin-proposal-decorators": "^7.28.0",
     "@babel/plugin-transform-react-jsx": "^7.27.1",
     "@hello-pangea/dnd": "^18.0.1",
@@ -73,54 +74,34 @@
     "vaul": "^0.9.0",
     "vite-plugin-pwa": "^1.0.3",
     "zod": "^3.22.4"
+=======
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "postcss": "^8.4.24",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.14.2",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+>>>>>>> cursor/create-and-deploy-new-content-376e
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-decorators": "^7.28.0",
-    "@babel/plugin-proposal-private-methods": "^7.18.6",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/plugin-transform-react-jsx": "^7.27.1",
-    "@rollup/rollup-linux-x64-gnu": "^4.50.2",
-    "@testing-library/cypress": "^8.0.2",
-    "@testing-library/jest-dom": "^6.1.2",
-    "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.11.17",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.17",
-    "cypress": "^15.2.0",
-    "cypress-real-events": "^1.12.0",
-    "eslint": "8.57.1",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "cypress": "^12.17.2",
+    "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^30.0.5",
-    "jsdom": "^24.0.0",
-    "postcss": "^8.4.35",
-    "rimraf": "^5.0.5",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "jest": "^29.6.1",
     "rollup-plugin-visualizer": "^6.0.3",
-    "tailwindcss": "^3.4.1",
-    "terser": "^5.43.1",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.2.2",
-    "vite": "^7.1.5",
-    "vite-plugin-pwa": "^1.0.3",
-    "vitest": "^3.2.4"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "overrides": {
-    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
-    "glob": "^10.3.10",
-    "rimraf": "^5.0.5"
-  },
-  "resolutions": {
-    "glob": "^10.4.5",
-    "rimraf": "^5.0.5",
-    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+    "vitest": "^0.34.1"
   }
 }

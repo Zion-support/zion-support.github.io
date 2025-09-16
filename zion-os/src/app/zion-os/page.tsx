@@ -1,4 +1,24 @@
 
+<<<<<<< HEAD
+=======
+;
+import Link from "next/link",export const metadata = {title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},export default function ZionOSPage() {return (<div className="min-h-screen">;{/* Hero Section */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
+            <span className="gradient - text">Zion OS</span>;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+            Launch sovereign AI - powered digital economies with one click.;
+            Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.;
+          </p>;
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+            <Link href="/multiverse / launch" className="btn - primary text - lg px - 8 py - 4">;
+              Launch Your Economy;
+            </Link>;
+            <Link href="/docs" className="btn - secondary text - lg px - 8 py - 4">;
+    <div className="min-h-screen">;    <div className="min-h-screen">;
+>>>>>>> origin/merge-pr-12271
 import Link from "next/link";
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
@@ -35,6 +55,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* Platform Overview */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -87,6 +108,91 @@ export default function ZionOSPage() {
         </div>
       </section>
 
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
+            <div>;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+                The Future of Digital Economies;
+              </h2>;<p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
+                Zion OS is a revolutionary platform that enables anyone to create, deploy,<div className="absolute inset - 0 -z - 10 overflow-hidden">;
+          <div className="absolute top - 1/2 left - 1/2 -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - blue - 500 / 20 to - purple - 600 / 20 rounded - full blur - 3xl animate - pulse-slow"></div>;
+        </div>;
+      </section>;
+      {/* Platform Overview */}
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
+            <div>;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+                The Future of Digital Economies;
+              </h2>;
+                and manage sovereign digital economies powered by artificial intelligence.;
+                Our unified deployment protocol makes it possible to launch complex;
+                economic systems in minutes, not months.;
+              </p>;<p className="text - lg text - gray - 300 leading - relaxed">;
+                Whether you're building a decentralized marketplace, launching a DAO,or creating a new token ecosystem, Zion OS provides all the tools you need;
+                to succeed in the digital economy revolution.;
+              </p>;
+            </div>;
+            <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p - 8">;
+              <h3 className="text - 2xl font - bold mb - 4">Key Benefits</h3>;
+              <ul className="space - y-3 text - gray - 300">;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  One - click deployment;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  AI - powered governance;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  Built - in security;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+            <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p-8">;
+              <h3 className="text - 2xl font - bold mb-4">Key Benefits</h3>;
+              <ul className="space - y-3 text - gray-300">;
+                <li className="flex items-center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  One - click deployment;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  AI - powered governance;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  Built - in security;
+                </li>;
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+                  </svg>;
+                  Scalable infrastructure;
+                </li>;
+              </ul>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/merge-pr-12271
       {/* Core Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
@@ -176,6 +282,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* How It Works */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -224,6 +331,75 @@ export default function ZionOSPage() {
         </div>
       </section>
 
+=======
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto">;
+          <div className="text - center mb - 16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
+              How Zion OS Works;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              Three simple steps to launch your sovereign digital economy;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - blue - 400">1</span>;
+              </div>;<h3 className="text - xl font - semibold mb - 3">Configure</h3>;
+              <p className="text - gray - 400">;
+                Use our intuitive launch wizard to configure your economy's parameters,including governance rules, token economics, and marketplace settings.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - purple - 400">2</span>;
+              </div>;<h3 className="text - xl font - semibold mb - 3">Deploy</h3>;
+              <p className="text - gray - 400">;
+                Click deploy and watch as Zion OS automatically creates your infrastructure,smart contracts, and governance systems in minutes.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - green - 400">3</span>;
+              </div>;<h3 className="text - xl font - semibold mb - 3">Launch</h3>;
+              <p className="text - gray - 400">;
+                Your economy is ready to go! Start inviting users, launching projects,<section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-7xl mx-auto">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;
+              How Zion OS Works;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              Three simple steps to launch your sovereign digital economy;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - blue - 400">1</span>;
+              </div>;
+                including governance rules, token economics, and marketplace settings.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - purple - 400">2</span>;
+              </div>;
+                smart contracts, and governance systems in minutes.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - green - 400">3</span>;
+              </div>;
+                and building your digital community.;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/merge-pr-12271
       {/* Use Cases */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">

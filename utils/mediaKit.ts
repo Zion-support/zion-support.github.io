@@ -44,6 +44,11 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
+<<<<<<< HEAD
+=======
+    {
+      path: ''
+>>>>>>> origin/merge-pr-12271
   ];
 
 ;

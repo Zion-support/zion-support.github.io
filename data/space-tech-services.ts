@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+export interface SpaceTechService  {id: string;
+>>>>>>> origin/merge-pr-12271
 export interface SpaceTechService {
   id: string;
   name: string;
