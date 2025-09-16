@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Guide: Production Agent Governance Toolkit (2026)',
+    summary: 'Policy-as-code templates, eval gates, and audit-ready evidence for safe agent ops.',
+    href: '/updates/production-agent-governance-toolkit-2026',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+    title: 'Starter Pack: Agent Runbooks (2026)',
+    summary: 'Standardized incident runbooks for agents: hallucinations, budgets, permissions, and latency.',
+    href: '/updates/agent-runbooks-starter-pack-2026',
+    date: '2025-09-16',
+    tag: 'Starter Pack'
+  },
+  {
     title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
     summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
     href: '/updates/real-time-rag-benchmark-suite-1-0',
