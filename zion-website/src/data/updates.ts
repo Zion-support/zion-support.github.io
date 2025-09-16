@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Newly added updates (2025-09-16 - batch 2)
+    {
+        title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
+        summary: 'Drop-in UI widgets for live safety, latency and quality guardrails with alerts.',
+        href: '/updates/real-time-agent-metrics-widgets-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Incident Simulation Toolkit v1.1',
+        summary: 'Run realistic failure drills with eval gates, evidence capture, and rollback practice.',
+        href: '/updates/incident-simulation-toolkit-1-1',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // Newly added updates (2025-09-16 - additional)
     {
         title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',
