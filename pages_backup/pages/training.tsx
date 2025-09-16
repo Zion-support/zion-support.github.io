@@ -10,7 +10,6 @@
 import React from 'react';
 
 export default function Training() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <Layout
@@ -1174,12 +1173,10 @@ origin/automation-improvements-final
 }  )
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 
   )
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
 
@@ -1239,11 +1236,7 @@ export default Training;
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

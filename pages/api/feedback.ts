@@ -9,7 +9,6 @@ import {
 
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import {
   saveFeedbackFallback
@@ -79,7 +78,6 @@ if ( {) {
           private_key: (FIREBASE_PRIVATE_KEY || "").replace (/\\n / g, "\n"),
 
         }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
 
@@ -125,7 +123,6 @@ if ( {) {
 =======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 export default async /**
  * handler - Function description
@@ -149,7 +146,6 @@ function handler() {
   return ok (res, { id: doc.id });
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
@@ -220,7 +216,6 @@ async function tryWriteToFirestore(req, res) {
     const admin = require("firebase-admin"),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -234,4 +229,3 @@ async function tryWriteToFirestore(req, res) {
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

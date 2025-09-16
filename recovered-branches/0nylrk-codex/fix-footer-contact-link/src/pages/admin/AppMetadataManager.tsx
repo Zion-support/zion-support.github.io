@@ -18,7 +18,6 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -39,7 +38,6 @@ const AppMetadataManager: React.FC = () => {
   return (
     <AppLayout>
       <SEO 
->>>>>>> origin/auto/autonomy-17186719616
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
@@ -60,4 +58,3 @@ export default AppMetadataManager;
 };
 
 export default AppMetadataManager;
->>>>>>> origin/auto/autonomy-17186719616

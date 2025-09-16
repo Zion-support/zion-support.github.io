@@ -16,11 +16,8 @@ import { Badge } from "@/components/ui/badge";
           </CardTitle>
         </CardHeader>
         <CardContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -28,7 +25,6 @@ import { Badge } from "@/components/ui/badge";
         </CardContent>
       </Card>
       
->>>>>>> origin/auto/autonomy-17186719616
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -37,11 +33,8 @@ import { Badge } from "@/components/ui/badge";
           </CardTitle>
         </CardHeader>
         <CardContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -49,7 +42,6 @@ import { Badge } from "@/components/ui/badge";
         </CardContent>
       </Card>
       
->>>>>>> origin/auto/autonomy-17186719616
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -58,11 +50,8 @@ import { Badge } from "@/components/ui/badge";
           </CardTitle>
         </CardHeader>
         <CardContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -70,7 +59,6 @@ import { Badge } from "@/components/ui/badge";
         </CardContent>
       </Card>
       
->>>>>>> origin/auto/autonomy-17186719616
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -79,11 +67,8 @@ import { Badge } from "@/components/ui/badge";
           </CardTitle>
         </CardHeader>
         <CardContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -91,7 +76,6 @@ import { Badge } from "@/components/ui/badge";
         </CardContent>
       </Card>
       
->>>>>>> origin/auto/autonomy-17186719616
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -175,4 +159,3 @@ export default QuoteStatusCards;
     </div>
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

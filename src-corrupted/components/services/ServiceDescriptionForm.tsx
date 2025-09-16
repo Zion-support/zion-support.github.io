@@ -13,7 +13,6 @@ type FormData = z && z.infer<typeof formSchema>;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 }
@@ -73,8 +72,6 @@ type FormData = z.infer<typeof formSchema>,
 
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {

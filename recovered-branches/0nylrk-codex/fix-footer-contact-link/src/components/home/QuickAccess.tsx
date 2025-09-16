@@ -33,11 +33,8 @@ export function QuickAccess() {
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           ))}
@@ -86,4 +83,3 @@ export function QuickAccess() {
     </section>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

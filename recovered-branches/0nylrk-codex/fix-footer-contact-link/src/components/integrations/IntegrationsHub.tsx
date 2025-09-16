@@ -3,14 +3,12 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 } from "@/components/ui/card";
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
@@ -20,16 +18,12 @@ import { Badge } from "@/components/ui/badge";
           <Button>Connect New Integration</Button>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
       
->>>>>>> origin/auto/autonomy-17186719616
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -53,16 +47,12 @@ import { Badge } from "@/components/ui/badge";
             </div>
           </CardContent>
         </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
         
->>>>>>> origin/auto/autonomy-17186719616
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -92,11 +82,8 @@ import { Badge } from "@/components/ui/badge";
             </ul>
           </CardContent>
           <CardFooter className="pt-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -109,21 +96,16 @@ import { Badge } from "@/components/ui/badge";
       
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md:w-[400px]">
->>>>>>> origin/auto/autonomy-17186719616
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
         
->>>>>>> origin/auto/autonomy-17186719616
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
@@ -133,15 +115,11 @@ import { Badge } from "@/components/ui/badge";
             <ZapierIntegration />
           </TabsContent>
           
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -153,16 +131,12 @@ import { Badge } from "@/components/ui/badge";
                 <WebhookManager />
               </CardContent>
             </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
             
->>>>>>> origin/auto/autonomy-17186719616
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -177,12 +151,9 @@ import { Badge } from "@/components/ui/badge";
         </div>
       </Tabs>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   );
@@ -192,4 +163,3 @@ import { Badge } from "@/components/ui/badge";
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

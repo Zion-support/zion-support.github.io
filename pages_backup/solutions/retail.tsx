@@ -46,8 +46,6 @@ import {
 const features = [
   {
     icon: ShoppingCart,
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -160,8 +158,6 @@ export default function RetailSolutions() {
 ];
 
 export default function RetailSolutionsPage() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -202,10 +198,8 @@ export default function RetailSolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
@@ -339,8 +333,6 @@ export default function RetailSolutionsPage() {
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -366,8 +358,6 @@ export default function RetailSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

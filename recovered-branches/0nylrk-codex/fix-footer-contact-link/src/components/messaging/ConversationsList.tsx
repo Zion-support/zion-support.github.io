@@ -25,7 +25,6 @@ export function ConversationsList({
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               }}
@@ -95,4 +94,3 @@ function ConversationsList() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

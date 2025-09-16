@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -181,7 +178,6 @@ export default function Onboarding() {
 
             {currentStep === 1 && (
               <div className="mt-6">
->>>>>>> origin/auto/autonomy-17186719616
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
@@ -197,7 +193,6 @@ export default function Onboarding() {
       <Footer />
     </>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -206,4 +201,3 @@ export default function Onboarding() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -45,7 +45,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee Engagement',;'
     'Compliance & Reporting',;'
     'Onboarding & Offboarding',;'    'Succession Planning';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ()

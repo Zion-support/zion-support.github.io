@@ -19,10 +19,8 @@
       </div>
       <Progress value={progress} className={sizeClasses[size].progress} />
       <div className="text-xs text-muted-foreground">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default ReputationDisplay;
@@ -35,4 +33,3 @@ export default ReputationDisplay;
 };
 
 export default ReputationDisplay;
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,5 +1,3 @@
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 export default function HomePage() {
   return (
     <>
@@ -22,8 +20,6 @@ export default function HomePage() {
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Address: 364 E
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
@@ -32,5 +28,3 @@ export default function HomePage() {
     </>
   );
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

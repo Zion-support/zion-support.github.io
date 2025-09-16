@@ -154,4 +154,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(g);
   res.status(200).json({ record: g });
 }
->>>>>>> origin/auto/autonomy-17186719616

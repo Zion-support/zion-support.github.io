@@ -32,7 +32,6 @@
 
   const handleSave = () => {
     setIsSubmitting(true);
->>>>>>> origin/auto/autonomy-17186719616
 
     // Simulate API call
     setTimeout(() => {
@@ -67,7 +66,6 @@
   },
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -81,7 +79,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -209,7 +206,6 @@
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
                 </div>
->>>>>>> origin/auto/autonomy-17186719616
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}

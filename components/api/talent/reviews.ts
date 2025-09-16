@@ -2,11 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -24,4 +21,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

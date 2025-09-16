@@ -15,11 +15,9 @@ import { v4 as uuidv4 } from "uuid";
   if (!studentEmail || !grantCode || !courseId) {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -30,4 +28,3 @@ import { v4 as uuidv4 } from "uuid";
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now });
 }
->>>>>>> origin/auto/autonomy-17186719616

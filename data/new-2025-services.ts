@@ -578,10 +578,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 =======
     reviews: 6
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616
 

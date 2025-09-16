@@ -1,8 +1,6 @@
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 =======
 import { useState, useEffect } from "react";
@@ -29,7 +27,6 @@ export default function ITOnsiteServicesPage() {
   // Check for success parameter in URL
   const success = searchParams.get("success");
   
->>>>>>> origin/auto/autonomy-17186719616
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -42,12 +39,9 @@ export default function ITOnsiteServicesPage() {
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -68,7 +62,6 @@ export default function ITOnsiteServicesPage() {
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs 
->>>>>>> origin/auto/autonomy-17186719616
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -88,12 +81,9 @@ export default function ITOnsiteServicesPage() {
       <QuoteFormSection />
     </AppLayout>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

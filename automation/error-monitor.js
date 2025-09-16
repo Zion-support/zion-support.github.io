@@ -42,7 +42,6 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Initial health check
     await this.performHealthCheck();
 
@@ -85,7 +84,6 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
       });
     }
@@ -196,14 +194,12 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     return errors;
   }
 
@@ -220,13 +216,11 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
           timestamp: new Date().toISOString(),
         });
       }
     }
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     return errors;
   }
 
@@ -251,7 +245,6 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -271,14 +264,12 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
       });
     }
@@ -309,7 +300,6 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 

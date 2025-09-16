@@ -1,12 +1,10 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -31,12 +29,8 @@ interface AutocompleteSuggestionsProps {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 }
@@ -133,7 +127,6 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     match: text.substring(index, index + searchTerm.length),
     after: text.substring(index + searchTerm.length)
   };
->>>>>>> origin/auto/autonomy-17186719616
 };
 
 export function AutocompleteSuggestions({ 

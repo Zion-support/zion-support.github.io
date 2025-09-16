@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import {
   DollarSign,
   Brain,
@@ -16,7 +15,6 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -85,7 +83,6 @@ const services = [
       'Compliance dashboards'';
     ];
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const benefits = [
   {
@@ -108,7 +105,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText;
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 export default function FinancePage() {
   return (
@@ -164,7 +160,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -182,7 +177,6 @@ export default function FinancePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -200,7 +194,6 @@ export default function FinancePage() {
                   </ul>,
                 </motion.div>;
               ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -212,7 +205,6 @@ export default function FinancePage() {
               animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -239,7 +231,6 @@ export default function FinancePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -251,7 +242,6 @@ export default function FinancePage() {
               animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?

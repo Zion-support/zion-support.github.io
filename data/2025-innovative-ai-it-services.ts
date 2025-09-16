@@ -149,7 +149,6 @@
       'Risk management',
       'Financial modeling',
       'Market analysis',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -358,7 +357,6 @@
       'Reduce healthcare costs by 40%'
     ],
     targetAudience: [
->>>>>>> origin/auto/autonomy-17186719616
       'Hospitals and clinics',
       'Medical imaging centers',
       'Research institutions',

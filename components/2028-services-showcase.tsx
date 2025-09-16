@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -205,7 +204,6 @@ export default function ServicesShowcase2028() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
->>>>>>> origin/auto/autonomy-17186719616
               <Link
                 href="/revolutionary-2028-pricing"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
@@ -226,13 +224,10 @@ export default function ServicesShowcase2028() {
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
               </div>
             </div>
           </motion.div>
@@ -253,12 +248,9 @@ export default function ServicesShowcase2028() {
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -270,7 +262,6 @@ export default function ServicesShowcase2028() {
                     </div>
 
                     <Link
->>>>>>> origin/auto/autonomy-17186719616
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
@@ -287,9 +278,7 @@ export default function ServicesShowcase2028() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Featured Services */}
@@ -338,7 +327,6 @@ export default function ServicesShowcase2028() {
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
->>>>>>> origin/auto/autonomy-17186719616
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
@@ -380,9 +368,7 @@ export default function ServicesShowcase2028() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Market Analysis */}
@@ -409,20 +395,16 @@ export default function ServicesShowcase2028() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Market <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Insights</span>
             </h2>
->>>>>>> origin/auto/autonomy-17186719616
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -569,7 +551,6 @@ export default function ServicesShowcase2028() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -661,7 +642,6 @@ export default function ServicesShowcase2028() {
                 <span>24/7 Expert Support</span>
               </div>
               <div className="flex items-center space-x-2">
->>>>>>> origin/auto/autonomy-17186719616
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Money-Back Guarantee</span>
               </div>
@@ -678,4 +658,3 @@ export default function ServicesShowcase2028() {
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

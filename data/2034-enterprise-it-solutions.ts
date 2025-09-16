@@ -15,7 +15,6 @@
     rating: 4.8,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -31,7 +30,6 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -47,7 +45,6 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Detections-as-code',
@@ -63,7 +60,6 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -79,7 +75,6 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -748,7 +743,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
->>>>>>> origin/auto/autonomy-17186719616
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',

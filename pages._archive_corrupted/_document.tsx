@@ -11,14 +11,10 @@ export default function Document() {
         <meta name="description" content="Zion Tech Group - Leading Technology Solutions"  />
         <link rel="preconnect" href=""https": //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         <link
           href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\"
           rel=\"stylesheet\"
         />
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       </Head>
       <body>
         <Main  />
@@ -27,5 +23,3 @@ export default function Document() {
     </Html>
   )
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

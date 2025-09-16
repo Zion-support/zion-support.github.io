@@ -2,7 +2,6 @@
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 interface GeneratedDescriptionDisplayProps {
@@ -38,7 +37,6 @@ export function GeneratedDescriptionDisplay({
   description, 
   onSave 
 }: GeneratedDescriptionDisplayProps) {
->>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);

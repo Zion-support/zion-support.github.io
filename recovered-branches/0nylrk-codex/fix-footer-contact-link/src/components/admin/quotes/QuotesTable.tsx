@@ -25,9 +25,7 @@ interface QuotesTableProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -60,7 +58,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus,
   toggleArchive,
   deleteQuote,
->>>>>>> origin/auto/autonomy-17186719616
   onViewDetails
 }) => {
   return (
@@ -127,8 +124,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
                   </div>;
                 </TableCell>;
@@ -154,14 +149,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 };
@@ -270,4 +261,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
     </div>
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

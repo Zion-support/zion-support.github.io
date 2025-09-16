@@ -264,7 +264,6 @@ function DetailsStep() {
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
       
->>>>>>> origin/auto/autonomy-17186719616
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -303,10 +302,8 @@ function DetailsStep() {
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -356,7 +353,6 @@ function DetailsStep() {
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
         <Textarea 
->>>>>>> origin/auto/autonomy-17186719616
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
           rows={4}
@@ -369,13 +365,11 @@ function DetailsStep() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 function BudgetStep() {
@@ -471,9 +465,7 @@ function PreviewStep() {
         </CardContent>
       </Card>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -482,4 +474,3 @@ function PreviewStep() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

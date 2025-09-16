@@ -86,15 +86,12 @@ if (state.connections[existing_idx] = connection) {
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   res.status (200).json ({
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

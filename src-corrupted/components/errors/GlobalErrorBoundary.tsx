@@ -82,7 +82,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userFeedback: ''
       showDetails: false
     } }    ,}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       showDetails: false
     }
@@ -930,14 +929,12 @@ if ( {) {
       buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
     };
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1025,7 +1022,6 @@ if ( {) {
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
@@ -1150,7 +1146,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   )}
@@ -1269,7 +1264,6 @@ if ( {) {
                       className="border-t pt-4"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     >
                       <div className="space-y-4">
@@ -1288,7 +1282,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         {process.env.NODE_ENV === 'development' &&
@@ -1526,7 +1519,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -1548,7 +1540,6 @@ if ( {) {
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                             Copy Details
                           </Button>
@@ -1568,7 +1559,6 @@ if ( {) {
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                             Copy Details
                           </Button>

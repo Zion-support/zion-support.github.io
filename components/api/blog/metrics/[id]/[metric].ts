@@ -4,12 +4,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -25,4 +22,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!post) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ ok: true, metrics: post.metrics });
 }
->>>>>>> origin/auto/autonomy-17186719616

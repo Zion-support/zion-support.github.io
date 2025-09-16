@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -16,7 +13,6 @@ import { Footer } from '@/components/Footer';
 import { DisputeDashboard } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 
->>>>>>> origin/auto/autonomy-17186719616
 function DisputesPage() {
   return (
     <ProtectedRoute>

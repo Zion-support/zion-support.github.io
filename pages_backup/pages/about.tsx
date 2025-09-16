@@ -389,11 +389,9 @@ export default AboutPage,
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React from "react";
@@ -616,27 +614,18 @@ origin/automation-improvements-final
   );
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/automation-improvements-final
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+
 
 
 
