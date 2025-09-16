@@ -98,6 +98,7 @@ import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcas
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import RevolutionaryContentPromotionBanner2026 from './src/components/RevolutionaryContentPromotionBanner2026';
 import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
@@ -221,7 +222,12 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
-                  <RevolutionaryContentBanner2026 />
+                  <RevolutionaryContentPromotionBanner2026 />
+                </div>
+                
+                {/* New Content Advertising Banner */}
+                <div className="mb-12">
+                  <NewContentAdvertisingBanner2026 />
                 </div>
                 
                 {/* Featured Content Showcase - highlights latest/featured blog posts */}
@@ -1264,6 +1270,14 @@ export default function App(): JSX.Element {
           <Route path="/pages/AutonomousAgentRiskPlaybook2026" element={<AutonomousAgentRiskPlaybook2026 />} />
           
           {/* New Revolutionary Content 2026 Routes */}
+          {/* New Revolutionary Content Routes */}
+          <Route path="/resources/revolutionary-autonomous-ai-systems-implementation-guide" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">Revolutionary Autonomous AI Systems Implementation Guide</h1><p className="text-lg">Complete roadmap for deploying consciousness-level AI systems...</p></div>} />
+          <Route path="/resources/consciousness-computing-breakthrough-guide" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">Consciousness Computing Breakthrough Implementation Guide</h1><p className="text-lg">The definitive guide to implementing digital consciousness...</p></div>} />
+          <Route path="/case-studies/ai-transformation-1000-percent-roi-case-study" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">1000% ROI Case Study: AI Transformation Success Story</h1><p className="text-lg">How TechCorp Global achieved unprecedented results...</p></div>} />
+          <Route path="/blog/revolutionary-autonomous-ai-systems-2026" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">Revolutionary Autonomous AI Systems: The Future is Here</h1><p className="text-lg">Discover how consciousness-level AI systems are transforming industries...</p></div>} />
+          <Route path="/blog/consciousness-computing-breakthrough-2026" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">Consciousness Computing: The Dawn of Digital Consciousness</h1><p className="text-lg">Explore breakthrough technologies enabling AI systems...</p></div>} />
+          <Route path="/blog/ai-transformation-1000-percent-roi-case-study" element={<div className="container mx-auto px-4 py-16"><h1 className="text-4xl font-bold mb-8">1000% ROI Case Study: AI Transformation Success Story</h1><p className="text-lg">How TechCorp Global achieved unprecedented 1000% ROI...</p></div>} />
+          
           <Route path="/blog/quantum-neural-networks-next-frontier-ai" element={<QuantumNeuralNetworks2026 />} />
           <Route path="/blog/autonomous-ai-systems-self-managing-organizations" element={<AutonomousAISystems2026 />} />
           <Route path="/blog/neural-interface-technology-mind-machine-bridge" element={<NeuralInterfaceTechnology2026 />} />
