@@ -4,6 +4,8 @@ import Header from './Header';
 import ScrollToTop from './ScrollToTop';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
@@ -56,6 +58,8 @@ import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBan
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
+import AIBusinessAutomation2026 from './pages/AIBusinessAutomation2026';
+import QuantumComputingEnterprise2026 from './pages/QuantumComputingEnterprise2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -119,6 +123,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* NEW: Revolutionary Tech Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryTechBanner2026 />
+              </div>
+
+              {/* NEW: New Content Showcase 2026 */}
+              <div className="mb-12">
+                <NewContentShowcase2026 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -434,6 +448,10 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2026 */}
+          <Route path="/ai-business-automation-2026" element={<AIBusinessAutomation2026 />} />
+          <Route path="/quantum-computing-enterprise-2026" element={<QuantumComputingEnterprise2026 />} />
         </Routes>
         
         <Footer />
