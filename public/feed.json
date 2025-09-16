@@ -1,7 +1,12 @@
 {
   "site": "https://example.com",
-  "updated": "2025-09-16T11:45:20.907Z",
+  "updated": "2025-09-16T18:05:00.000Z",
   "items": [
+    {
+      "title": "Incident Triage with Evaluation Gates — Field Guide (2026)",
+      "route": "/reports/ai-lab/articles/incident-triage-eval-gates-field-guide-1758127200000.md",
+      "date": 1758127200000
+    },
     {
       "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
       "route": "/blog/cloud-native-automation",
@@ -98,7 +103,8 @@
       "date": 1758023091429.071
     },
     {
-      "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
+      "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion
+          Tech Group",
       "route": "/blog/ai-automation-trends-2025",
       "date": 1758023091429.071
     },

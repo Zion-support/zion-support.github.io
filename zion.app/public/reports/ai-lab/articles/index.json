@@ -1,5 +1,12 @@
 [
   {
+    "title": "Incident Triage with Evaluation Gates — A Field Guide (2026)",
+    "url": "/reports/ai-lab/articles/incident-triage-eval-gates-field-guide-1758127200000.md",
+    "createdAt": "2025-09-16T18:00:00.000Z",
+    "tags": ["incidents", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",
     "url": "/reports/ai-lab/articles/abduct-act-predict-scaffolding-causal-inference-for-automated-failure-attributio-1757920034174.md",
     "createdAt": "2025-09-15T07:07:14.174Z",
@@ -100,16 +107,14 @@
     "createdAt": "2025-09-16T10:00:00.000Z",
     "tags": ["governance", "safety", "policy"],
     "source": "Zion AI Lab"
-  }
-  ,
+  },
   {
     "title": "Production Eval Gates in the Wild: Lessons from Real Deployments",
     "url": "/reports/ai-lab/articles/production-eval-gates-in-the-wild-1758049200000.md",
     "createdAt": "2025-09-16T12:00:00.000Z",
     "tags": ["evals", "reliability", "progressive-delivery", "observability"],
     "source": "Zion AI Lab"
-  }
-  ,
+  },
   {
     "title": "Agentic Evidence Hub — Executive Overview",
     "url": "/reports/ai-lab/articles/agentic-evidence-hub-executive-overview-1758052800000.md",
@@ -130,8 +135,7 @@
     "createdAt": "2025-09-16T14:02:00.000Z",
     "tags": ["evals", "case-study", "operations"],
     "source": "Zion AI Lab"
-  }
-  ,
+  },
   {
     "title": "Operational Risk Scorecards for Production Agents",
     "url": "/reports/ai-lab/articles/new-operational-risk-scorecards-1758056400000.md",
@@ -180,8 +184,7 @@
     "createdAt": "2025-09-16T21:00:00.000Z",
     "tags": ["cost", "governance", "product"],
     "source": "Zion AI Lab"
-  }
-  ,
+  },
   {
     "title": "Agent Incident Postmortems — Evidence‑First Templates",
     "url": "/reports/ai-lab/articles/agent-incident-postmortems-evidence-first-templates-1758087000000.md",
@@ -195,8 +198,7 @@
     "createdAt": "2025-09-17T00:00:00.000Z",
     "tags": ["cost", "governance", "policy"],
     "source": "Zion AI Lab"
-  }
-  ,
+  },
   {
     "title": "Zero‑Downtime Agent Releases: Blue/Green, Canary, Eval Gates",
     "url": "/reports/ai-lab/articles/zero-downtime-agent-releases-1758081600000.md",
