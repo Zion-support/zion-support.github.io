@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function AutonomousAgentRiskPlaybook2026(): JSX.Element {
   return (
