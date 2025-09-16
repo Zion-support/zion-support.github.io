@@ -1,38 +1,3 @@
-// @ts-nocheck
-import React from 'react'
-
-export default function ProductionEvidenceHubBlueprint() {
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-gray-500 mb-2">Blueprint • Sep 16, 2025 • 9 min read</p>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI 2026: Production Evidence Hub — Blueprint
-          </h1>
-          <p className="text-gray-700 text-lg mb-8">
-            Centralize evals, traces, policy events, incidents, and postmortems into a single evidence hub to unlock
-            audit readiness and faster incident response.
-          </p>
-          <div className="prose prose-lg max-w-none">
-            <h2>Reference architecture</h2>
-            <p>
-              We outline ingestion adapters, a unified schema, and role-based access to ensure the right stakeholders
-              can query evidence when it matters.
-            </p>
-            <h3>Key capabilities</h3>
-            <ul>
-              <li>Signed telemetry ingestion and normalization</li>
-              <li>Evals and policy events correlation</li>
-              <li>Workflow integration for incidents and postmortems</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
 import React from 'react'
 
 export const metadata = {
@@ -86,4 +51,3 @@ export default function Page() {
 		</main>
 	)
 }
-

@@ -55,5 +55,4 @@ export default function Page() {
     </div>
   )
 }
-
-export default Page
+ 
