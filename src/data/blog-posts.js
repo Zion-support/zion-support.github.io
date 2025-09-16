@@ -15,6 +15,21 @@ export const blogPosts = [
     slug: "ai-2026-production-evidence-hub-blueprint"
   },
   {
+    id: 59,
+    title: "AI 2026: Resilient Agent Architectures",
+    excerpt: "Fault‑tolerant, eval‑gated, and cost‑aware patterns to harden agents in production.",
+    content: "Design resilient agent architectures for production: isolate failure domains, implement retry and backoff policies, enforce timeouts and budgets, and gate risky steps with evaluation harnesses. This guide covers observability-first patterns, deterministic rollback, and policy-as-code controls to keep autonomy safe and affordable at scale.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Reliability", "Evals", "Cost Management", "SRE"],
+    featured: true,
+    imageUrl: "/images/blog/resilient-agent-architectures-2026.jpg",
+    slug: "ai-2026-resilient-agent-architectures"
+  },
+  {
     id: 35,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
