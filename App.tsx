@@ -59,6 +59,13 @@ import RevolutionaryContentBanner2034_2036 from './src/components/RevolutionaryC
 import InteractiveContentShowcase2034_2036 from './src/components/InteractiveContentShowcase2034-2036';
 import UltimateContentPromotionBanner from './src/components/UltimateContentPromotionBanner';
 
+// Import NEW REVOLUTIONARY TECH BREAKTHROUGH 2025 CONTENT
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import RevolutionaryTechBreakthroughBanner2025 from './src/components/RevolutionaryTechBreakthroughBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import EnhancedNewsletterSignup2025 from './src/components/EnhancedNewsletterSignup2025';
+import UltimateContentPromotionBanner2025 from './src/components/UltimateContentPromotionBanner2025';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -78,6 +85,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: 2034-2036 Revolutionary Content Banner */}
                 <RevolutionaryContentBanner2034_2036 />
+
+                {/* NEW: Revolutionary Tech Breakthrough 2025 Banner */}
+                <RevolutionaryTechBreakthroughBanner2025 />
 
                 {/* NEW: Ultimate 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -313,6 +323,21 @@ export default function App(): JSX.Element {
                   <UltimateContentPromotionBanner />
                 </div>
 
+                {/* Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
+                {/* Enhanced Newsletter Signup 2025 */}
+                <div className="mb-12">
+                  <EnhancedNewsletterSignup2025 />
+                </div>
+
+                {/* Ultimate Content Promotion Banner 2025 */}
+                <div className="mb-12">
+                  <UltimateContentPromotionBanner2025 />
+                </div>
+
                 {/* Ultimate Content Showcase */}
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
@@ -544,6 +569,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenAIRevolution2034" element={<NextGenAIRevolution2034 />} />
           <Route path="/pages/QuantumRealityManipulation2035" element={<QuantumRealityManipulation2035 />} />
           <Route path="/pages/TranscendentConsciousness2036" element={<TranscendentConsciousness2036 />} />
+
+          {/* NEW REVOLUTIONARY TECH BREAKTHROUGH 2025 CONTENT ROUTES */}
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
 
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
