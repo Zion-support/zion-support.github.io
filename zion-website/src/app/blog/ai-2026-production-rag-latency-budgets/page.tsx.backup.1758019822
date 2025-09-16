@@ -1,0 +1,61 @@
+// @ts-nocheck
+import React from 'react'
+
+export const metadata = {
+  title: 'Production RAG Latency Budgets (2026) — Practical Guide',
+  description:
+    'A pragmatic framework for setting and enforcing latency budgets for Retrieval-Augmented Generation (RAG) systems in production.',
+}
+
+export default function Page() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-16 text-gray-200">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white">Production RAG Latency Budgets (2026)</h1>
+      <p className="mt-4 text-lg text-gray-300">
+        This guide outlines actionable patterns to define, measure, and enforce latency budgets for production-grade
+        RAG systems, including cache strategies, real-time fallbacks, and observability signals.
+      </p>
+
+      <section className="mt-10 space-y-6">
+        <h2 className="text-2xl font-semibold text-white">Key Takeaways</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Define hard SLOs: p50/p95/p99 response budgets for end-to-end requests.</li>
+          <li>Use tiered retrieval with dynamic timeouts and partial responses.</li>
+          <li>Adopt real-user monitoring to align budgets with perceived latency.</li>
+          <li>Instrument cache hit rate, embedding latency, vector scan latency, and model inference.</li>
+          <li>Create playbooks for brownout/blackout modes when budgets are exceeded.</li>
+        </ul>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-2xl font-semibold text-white">Suggested Budgets</h2>
+        <p className="text-gray-300">
+          Example enterprise targets for interactive experiences: p50 ≤ 600ms, p95 ≤ 1.8s, p99 ≤ 3.5s. Adjust by
+          modality, network, and device class.
+        </p>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-2xl font-semibold text-white">Implementation Checklist</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Add end-to-end tracing IDs across retrieval and generation hops.</li>
+          <li>Emit structured metrics with per-stage timings and sample payload sizes.</li>
+          <li>Use adaptive timeouts, speculative queries, and aggressive memoization.</li>
+          <li>Gate deploys with latency regression tests and synthetic probes.</li>
+        </ol>
+      </section>
+    </main>
+  )
+}
+
+<<<<<<< HEAD
+=======
+import React from 'react'
+
+export const metadata = {
+  title: 'Guide: Production RAG Latency Budgets (2026)',
+  description: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
+}
+
+// Removed duplicate default component to fix build error. The page above is the intended default export.
+>>>>>>> origin/chore/add-updates-2025-09-16

@@ -1,0 +1,15 @@
+
+
+const EmergingTechnologyTrends = () => {
+  return (
+    <div>
+      <Head>
+        <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
+        <meta name="description" content="EmergingTechnologyTrends page" />
+      </Head>
+      
+      <main>
+        <h1>EmergingTechnologyTrends</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
