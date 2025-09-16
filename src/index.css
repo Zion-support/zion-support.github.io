@@ -9,6 +9,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
@@ -114,6 +115,8 @@
 }
 
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b33e
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -338,10 +341,6 @@ body {
   border: 0;
 }
 
-.high-contrast {
-  filter: contrast(150%) brightness(120%);
-}
-
 .high-contrast button,
 .high-contrast input,
 .high-contrast select,
@@ -452,13 +451,21 @@ body {
     padding-right: 1rem;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-b33e
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b33e
 }
