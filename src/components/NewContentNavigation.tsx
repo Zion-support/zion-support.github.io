@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
@@ -193,13 +193,13 @@ const NewContentNavigation = () => {
                 </span>
               </div>
               
-              <Link
+              <a
                 href={item.href}
                 className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Now
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -252,13 +252,13 @@ const NewContentNavigation = () => {
                     ))}
                   </div>
                   
-                  <Link
+                  <a
                     href={category.href}
                     className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 font-medium rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300 group-hover:translate-y-[-2px]"
                   >
                     Explore {category.title}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </motion.div>
@@ -282,21 +282,21 @@ const NewContentNavigation = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/demo"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
               >
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

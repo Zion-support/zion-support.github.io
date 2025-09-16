@@ -5,7 +5,7 @@ import {
   ArrowRight, Check, Star, BarChart3, 
   Globe, Zap, Shield, Crown, Brain, Atom
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
@@ -855,19 +855,19 @@ export default function MarketPricing() {
               you need to succeed in today's rapidly evolving technology landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/pricing"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Our Pricing
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
                 Get Custom Quote
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

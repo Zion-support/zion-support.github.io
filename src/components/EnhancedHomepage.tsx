@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -212,7 +212,7 @@ const EnhancedHomepage: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
-              <Link href="/services">
+              <a href="/services">
                 <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                   whileHover={{ scale: 1.05 }}
@@ -221,9 +221,9 @@ const EnhancedHomepage: React.FC = () => {
                   Explore Services
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
-              </Link>
+              </a>
               
-              <Link href="/quote">
+              <a href="/quote">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
@@ -232,7 +232,7 @@ const EnhancedHomepage: React.FC = () => {
                   Get Quote
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Contact Information */}
@@ -360,7 +360,7 @@ const EnhancedHomepage: React.FC = () => {
                 className="text-center mt-12"
                 variants={itemVariants}
               >
-                <Link href="/services">
+                <a href="/services">
                   <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
@@ -369,7 +369,7 @@ const EnhancedHomepage: React.FC = () => {
                     View All Services
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
                   </motion.button>
-                </Link>
+                </a>
               </motion.div>
             )}
           </div>
@@ -420,7 +420,7 @@ const EnhancedHomepage: React.FC = () => {
                       ))}
                     </div>
                     
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+                    <a href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -429,7 +429,7 @@ const EnhancedHomepage: React.FC = () => {
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
                       </motion.button>
-                    </Link>
+                    </a>
                   </div>
                   
                   <div className="relative">
@@ -475,7 +475,7 @@ const EnhancedHomepage: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
             >
-              <Link href="/quote">
+              <a href="/quote">
                 <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
@@ -484,9 +484,9 @@ const EnhancedHomepage: React.FC = () => {
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
-              </Link>
+              </a>
               
-              <Link href="/contact">
+              <a href="/contact">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
@@ -495,7 +495,7 @@ const EnhancedHomepage: React.FC = () => {
                   Contact Us
                   <Phone className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
-              </Link>
+              </a>
             </motion.div>
           </div>
         </motion.section>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025ContentMarketingRevolutionShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -179,12 +179,12 @@ const AI2025ContentMarketingRevolutionShowcase = () => {
                     ))}
                   </div>
                   
-                  <Link
+                  <a
                     href={item.url}
                     className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
                   >
                     Read Full {item.type}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -251,12 +251,12 @@ const AI2025ContentMarketingRevolutionShowcase = () => {
                   ))}
                 </div>
                 
-                <Link
+                <a
                   href={item.url}
                   className="w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center block text-sm"
                 >
                   Read {item.type}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -272,18 +272,18 @@ const AI2025ContentMarketingRevolutionShowcase = () => {
               Join Fortune 500 companies transforming their content marketing with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Help
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

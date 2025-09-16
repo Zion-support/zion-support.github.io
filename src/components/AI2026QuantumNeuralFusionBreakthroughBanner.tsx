@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026QuantumNeuralFusionBreakthroughBanner() {
   return (
@@ -51,18 +51,18 @@ export default function AI2026QuantumNeuralFusionBreakthroughBanner() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough" 
               className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Explore Quantum Fusion
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2026-quantum-neural-fusion-success" 
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View Quantum Success
-            </Link>
+            </a>
           </div>
           
           {/* Trust indicators */}

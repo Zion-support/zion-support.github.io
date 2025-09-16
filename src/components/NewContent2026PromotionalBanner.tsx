@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Rocket
   Brain
@@ -66,28 +66,28 @@ const NewContent2026PromotionalBanner = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <a 
                   href="/ai-2026-breakthrough-showcase"
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                 >
                   <Rocket className="h-5 w-5 mr-2" />
                   Explore AI 2026
                   <ArrowRight className="h-4 w-4 ml-2" />
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/quantum-computing-solutions-2026"
                   className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
                 >
                   <Atom className="h-5 w-5 mr-2" />
                   Quantum Computing
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/advanced-automation-solutions-2026"
                   className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
                 >
                   <Bot className="h-5 w-5 mr-2" />
                   Automation Solutions
-                </Link>
+                </a>
               </div>
             </div>
 

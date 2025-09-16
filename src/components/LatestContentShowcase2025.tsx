@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarTrendingUpBookOpenTargetUsersZapClockExternalLink
 
 const LatestContentShowcase2025: React.FC = () => {
@@ -107,7 +107,7 @@ const LatestContentShowcase2025: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {featuredContent.map((item, index) => (
-            <Link
+            <a
               key={item.id}
               href={item.url}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-blue-300"
@@ -182,7 +182,7 @@ const LatestContentShowcase2025: React.FC = () => {
                   <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -233,20 +233,20 @@ const LatestContentShowcase2025: React.FC = () => {
               Get personalized AI implementation guidance and join thousands of companies already seeing results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/newsletter"
                 className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Subscribe to Updates</span>
                 <Zap className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

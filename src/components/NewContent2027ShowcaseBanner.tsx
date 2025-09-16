@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2027ShowcaseBanner: React.FC = () => {
   const newContentItems = [
@@ -73,7 +73,7 @@ const NewContent2027ShowcaseBanner: React.FC = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {newContentItems.map((item, index) => (
-            <Link
+            <a
               key={index}
               href={item.link}
               className="group bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-300/20 hover:border-cyan-300/40 transition-all duration-300 hover:transform hover:scale-105"
@@ -101,7 +101,7 @@ const NewContent2027ShowcaseBanner: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -117,19 +117,19 @@ const NewContent2027ShowcaseBanner: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/ai-2027-breakthrough"
               className="bg-gradient-to-r from-yellow-500 to-orange-600 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-yellow-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-2xl"
             >
               Experience the Revolution
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/ai-2027-whitepaper"
               className="border-2 border-yellow-400 text-yellow-400 px-10 py-5 rounded-xl font-bold text-xl hover:bg-yellow-400 hover:text-black transition-all"
             >
               Download Whitepaper
-            </Link>
+            </a>
           </div>
         </div>
 

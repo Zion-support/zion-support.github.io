@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -158,18 +158,18 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href={currentContent.url}
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 text-center"
                 >
                   Read Full {currentContent.type}
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
                 >
                   Get Consultation
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -220,18 +220,18 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
             <span className="text-sm font-medium">🔥 LIMITED TIME: Free ROI Analysis + Implementation Roadmap</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services/ai-transformation"
               className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               View All Success Stories
-            </Link>
+            </a>
           </div>
         </div>
 

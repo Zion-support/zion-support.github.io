@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
 
 export default function AI2025ContentRevolution5000ROIBanner() {
@@ -126,22 +126,22 @@ export default function AI2025ContentRevolution5000ROIBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-content-revolution-5000-roi-success" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <Award className="w-5 h-5" />
               Read Full Case Study
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border border-white/20"
             >
               <Users className="w-5 h-5" />
               Start Your Success Story
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </div>
           <p className="text-green-200 text-sm">
             Join 500+ companies achieving breakthrough results with AI 2025

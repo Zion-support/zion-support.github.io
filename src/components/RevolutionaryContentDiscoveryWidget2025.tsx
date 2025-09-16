@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryContentDiscoveryWidget2025() {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -183,7 +183,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               </div>
 
               {/* CTA */}
-              <Link
+              <a
                 href={item.href}
                 className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
@@ -191,7 +191,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -202,7 +202,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
             Ready to transform your business with revolutionary AI technology?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
@@ -210,8 +210,8 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-2025-roi-calculator"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
@@ -219,7 +219,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AIBusinessIntelligenceShowcase2025 = () => {
   const content = [
@@ -175,12 +175,12 @@ const AIBusinessIntelligenceShowcase2025 = () => {
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
-                  <Link
+                  <a
                     href={item.url}
                     className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -197,18 +197,18 @@ const AIBusinessIntelligenceShowcase2025 = () => {
               Join Fortune 500 companies transforming their decision-making with AI-powered business intelligence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026QuantumNeuralFusionBanner() {
   return (
@@ -89,24 +89,24 @@ export default function AI2026QuantumNeuralFusionBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
+          <a
             href="/ai-2026-quantum-neural-fusion-breakthrough"
             className="bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-lg"
           >
             ⚛️ Enter the Quantum Era
-          </Link>
-          <Link
+          </a>
+          <a
             href="/case-studies/ai-2026-quantum-neural-success"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-600 transition-colors"
           >
             📊 View Quantum Success Stories
-          </Link>
-          <Link
+          </a>
+          <a
             href="/resources/ai-2026-quantum-implementation-guide"
             className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-colors"
           >
             📚 Get Quantum Guide
-          </Link>
+          </a>
         </div>
 
         {/* Trust Indicators */}
@@ -166,18 +166,18 @@ export default function AI2026QuantumNeuralFusionBanner() {
           
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               ⚛️ Explore Quantum Features
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-white/25"
             >
               🚀 Get Quantum Access
-            </Link>
+            </a>
           </div>
           
           {/* Success metrics */}

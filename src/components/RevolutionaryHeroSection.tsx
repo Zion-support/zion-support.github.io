@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryHeroSection() {
   return (
@@ -60,18 +60,18 @@ export default function RevolutionaryHeroSection() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link 
+              <a 
                 href="/ai-2025-breakthrough-content-showcase"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Explore Breakthroughs
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact"
                 className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
-              </Link>
+              </a>
             </div>
           </div>
           
@@ -93,12 +93,12 @@ export default function RevolutionaryHeroSection() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-yellow-300 font-bold text-lg">10,000% ROI</div>
-                <Link 
+                <a 
                   href="/ai-2025-breakthrough-content-showcase"
                   className="text-yellow-300 text-sm font-semibold hover:text-yellow-200 transition-colors"
                 >
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -118,12 +118,12 @@ export default function RevolutionaryHeroSection() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-cyan-300 font-bold text-lg">15,000% ROI</div>
-                <Link 
+                <a 
                   href="/quantum-computing-solutions-2025"
                   className="text-cyan-300 text-sm font-semibold hover:text-cyan-200 transition-colors"
                 >
                   Discover →
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -143,12 +143,12 @@ export default function RevolutionaryHeroSection() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-green-300 font-bold text-lg">8,500% ROI</div>
-                <Link 
+                <a 
                   href="/automation-solutions-2025"
                   className="text-green-300 text-sm font-semibold hover:text-green-200 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -168,12 +168,12 @@ export default function RevolutionaryHeroSection() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-orange-300 font-bold text-lg">Fortune 500</div>
-                <Link 
+                <a 
                   href="/case-studies"
                   className="text-orange-300 text-sm font-semibold hover:text-orange-200 transition-colors"
                 >
                   View Cases →
-                </Link>
+                </a>
               </div>
             </div>
           </div>

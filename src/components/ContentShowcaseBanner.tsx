@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ContentShowcaseBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -102,12 +102,12 @@ export default function ContentShowcaseBanner() {
               <p className="text-gray-600 text-xs mb-3 leading-relaxed">
                 {currentItem.description}
               </p>
-              <Link
+              <a
                 href={currentItem.link}
                 className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-xs hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Now →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

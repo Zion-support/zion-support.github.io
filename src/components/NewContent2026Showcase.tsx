@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2026Showcase() {
   return (
@@ -38,12 +38,12 @@ export default function NewContent2026Showcase() {
               <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">99.9% Accuracy</span>
               <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">Breakthrough</span>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-2026-neural-consciousness-breakthrough"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
             >
               Explore Neural Consciousness →
-            </Link>
+            </a>
           </div>
           
           {/* Healthcare Case Study */}
@@ -59,12 +59,12 @@ export default function NewContent2026Showcase() {
               <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">2M+ Patients</span>
               <span className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">95% Recovery</span>
             </div>
-            <Link 
+            <a 
               href="/case-studies/ai-2026-neural-consciousness-healthcare-breakthrough"
               className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
             >
               View Healthcare Case Study →
-            </Link>
+            </a>
           </div>
           
           {/* Implementation Guide */}
@@ -80,12 +80,12 @@ export default function NewContent2026Showcase() {
               <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">99.9% Success</span>
               <span className="bg-pink-500/20 text-pink-400 px-2 py-1 rounded text-xs">Complete Guide</span>
             </div>
-            <Link 
+            <a 
               href="/resources/ai-2026-neural-consciousness-implementation-guide"
               className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-semibold"
             >
               Download Implementation Guide →
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -97,9 +97,9 @@ export default function NewContent2026Showcase() {
             <p className="text-gray-300 text-sm mb-3">
               Revolutionary quantum computing solutions with 15,000% ROI and breakthrough performance.
             </p>
-            <Link href="/quantum-computing-solutions-2025" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
+            <a href="/quantum-computing-solutions-2025" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
               Explore Quantum Solutions →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -108,9 +108,9 @@ export default function NewContent2026Showcase() {
             <p className="text-gray-300 text-sm mb-3">
               Next-generation autonomous systems delivering 10,000% ROI and 99.9% reliability.
             </p>
-            <Link href="/automation-solutions-2026" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+            <a href="/automation-solutions-2026" className="text-green-400 hover:text-green-300 text-sm font-semibold">
               View Automation Solutions →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -119,9 +119,9 @@ export default function NewContent2026Showcase() {
             <p className="text-gray-300 text-sm mb-3">
               AI 2026-2030 future predictions and breakthrough technology forecasts.
             </p>
-            <Link href="/ai-2026-2030-future-predictions-breakthrough" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
+            <a href="/ai-2026-2030-future-predictions-breakthrough" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
               Read Predictions →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -130,9 +130,9 @@ export default function NewContent2026Showcase() {
             <p className="text-gray-300 text-sm mb-3">
               Comprehensive toolscalculatorsand resources for AI implementation.
             </p>
-            <Link href="/tools" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
+            <a href="/tools" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
               Browse Tools →
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -161,30 +161,30 @@ export default function NewContent2026Showcase() {
         <div className="mt-12 text-center">
           <h3 className="text-xl font-bold text-white mb-6">Quick Access to All Content</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/blog"
               className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📝 All Blog Posts
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies"
               className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📊 Case Studies
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources"
               className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📚 Resources
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars"
               className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📺 Webinars
-            </Link>
+            </a>
           </div>
         </div>
       </div>

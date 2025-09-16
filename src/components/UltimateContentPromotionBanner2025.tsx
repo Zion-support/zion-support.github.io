@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentPromotionBanner2025: React.FC = () => {
   return (
@@ -82,18 +82,18 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/content"
               className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-12 py-4 rounded-xl font-bold text-xl hover:from-yellow-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore All Content
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-12 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Get Expert Consultation
-            </Link>
+            </a>
           </div>
           
           {/* Trust Indicators */}

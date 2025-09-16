@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
@@ -354,13 +354,13 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                     </div>
 
                     {/* CTA */}
-                    <Link
+                    <a
                       href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}`}
                       className="group/btn inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <span>Read More</span>
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
-                    </Link>
+                    </a>
                   </div>
                 </motion.div>
               );

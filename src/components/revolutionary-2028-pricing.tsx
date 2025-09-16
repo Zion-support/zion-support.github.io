@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
@@ -154,20 +154,20 @@ export default function Revolutionary2028Pricing() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/2028-services-showcase"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Services</span>
                 <Rocket className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             {/* Pricing Stats */}
@@ -250,12 +250,12 @@ export default function Revolutionary2028Pricing() {
                       ))}
                     </ul>
 
-                    <Link
+                    <a
                       href={tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                     >
                       {tier.cta}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -316,12 +316,12 @@ export default function Revolutionary2028Pricing() {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <Link
+                          <a
                             href={service.link}
                             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
                           >
                             Learn More
-                          </Link>
+                          </a>
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
@@ -423,20 +423,20 @@ export default function Revolutionary2028Pricing() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>Schedule Demo</span>
                 <Clock className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-purple-300">

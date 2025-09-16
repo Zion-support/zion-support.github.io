@@ -35,7 +35,6 @@
   },
   "include": [
     "src/**/*",
-    "src/types/offline-shims.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",

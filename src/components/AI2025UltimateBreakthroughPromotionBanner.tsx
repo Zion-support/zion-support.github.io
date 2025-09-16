@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025UltimateBreakthroughPromotionBanner() {
   return (
@@ -34,18 +34,18 @@ export default function AI2025UltimateBreakthroughPromotionBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution" 
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Breakthroughs
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2025-global-transformation-breakthrough" 
               className="bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
           
           <div className="mt-8 text-sm text-gray-400">

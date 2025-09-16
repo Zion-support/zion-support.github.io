@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const FeaturedContentShowcase2025 = () => {
   const featuredContent = [
@@ -161,12 +161,12 @@ const FeaturedContentShowcase2025 = () => {
                 </div>
                 
                 {/* CTA Button */}
-                <Link 
+                <a 
                   href={content.url}
                   className={`block w-full bg-gradient-to-r ${content.badgeColor} hover:shadow-lg text-white font-bold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105`}
                 >
                   Explore {content.type}
-                </Link>
+                </a>
               </div>
               
               {/* Hover effect overlay */}
@@ -185,18 +185,18 @@ const FeaturedContentShowcase2025 = () => {
               Join the revolution and achieve 5,000% ROI with our breakthrough AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact"
                 className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/tools/ai-2025-roi-calculator"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Calculate Your ROI
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026QuantumRevolutionUltimateBanner = () => {
   return (
@@ -19,18 +19,18 @@ const AI2026QuantumRevolutionUltimateBanner = () => {
             Experience unprecedented computational power and revolutionary AI capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/ai-2026-quantum-revolution"
               className="bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Explore Quantum AI
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-computing/demo"
               className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Watch Quantum Demo
-            </Link>
+            </a>
           </div>
         </div>
         

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContentRevolutionBanner() {
   return (
@@ -30,24 +30,24 @@ export default function UltimateContentRevolutionBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🚀 AI 2025 Ultimate Breakthrough
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               ⚛️ Quantum-Neural Fusion
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2030-transcendent-intelligence"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🌌 Transcendent Intelligence
-            </Link>
+            </a>
           </div>
           
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">

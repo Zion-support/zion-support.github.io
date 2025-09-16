@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const SustainableAI2025RevolutionBanner: React.FC = () => {
   return (
@@ -37,18 +37,18 @@ const SustainableAI2025RevolutionBanner: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/blog/ai-2025-sustainable-technology-revolution-complete-guide"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Sustainable AI →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies/fortune-500-sustainable-ai-transformation-2025-ultimate-success"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-all duration-300"
               >
                 View Success Story
-              </Link>
+              </a>
             </div>
           </div>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function SOC2ComplianceAutomationPage() {
 	return (
@@ -52,7 +52,7 @@ export default function SOC2ComplianceAutomationPage() {
 					</div>
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</a>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>

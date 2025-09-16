@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   CpuChipIcon, 
   BoltIcon, 
@@ -147,7 +147,7 @@ const QuantumAIRevolution2025PromotionalBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/quantum-ai-revolution-2025-enterprise-breakthrough"
               className="group bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-300 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
@@ -155,9 +155,9 @@ const QuantumAIRevolution2025PromotionalBanner: React.FC = () => {
                 Explore Quantum AI Guide
                 <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/services/quantum-ai-consulting"
               className="group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
             >
@@ -165,7 +165,7 @@ const QuantumAIRevolution2025PromotionalBanner: React.FC = () => {
                 Get Quantum Consultation
                 <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
           </div>
           
           <p className="text-gray-300 text-sm">

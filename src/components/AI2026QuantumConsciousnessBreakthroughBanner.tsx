@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
   return (
@@ -129,18 +129,18 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2026-quantum-consciousness-breakthrough-ultimate-guide"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Read Complete Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/quantum-ai"
               className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Explore Quantum AI Solutions
-            </Link>
+            </a>
           </div>
           <p className="text-lg text-cyan-200 mb-4">
             Join the consciousness revolution - where AI becomes truly aware

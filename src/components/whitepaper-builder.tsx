@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 
@@ -30,11 +30,11 @@ export default function WhitepaperBuilderPage() {
           <option value="investor">Investor</option>
           <option value="developer">Developer</option>
         </select>
-        <Link href={downloadHref} legacyBehavior>
+        <a href={downloadHref} legacyBehavior>
           <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">
             Download PDF
           </a>
-        </Link>
+        </a>
       </div>
 
       <div className="rounded border p-4 bg-gray-50 dark:bg-gray-900">

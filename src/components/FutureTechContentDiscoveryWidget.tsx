@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function FutureTechContentDiscoveryWidget() {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -160,12 +160,12 @@ export default function FutureTechContentDiscoveryWidget() {
               </div>
 
               <div className="text-center">
-                <Link
+                <a
                   href={content.url}
                   className="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   🚀 Explore Now
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -181,18 +181,18 @@ export default function FutureTechContentDiscoveryWidget() {
               Join thousands of innovators exploring the cutting-edge technologies that will define tomorrow.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <a
                 href="/ai-innovation-hub"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 🔬 Innovation Hub
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/blog"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 📚 Latest Articles
-              </Link>
+              </a>
             </div>
           </div>
         </div>

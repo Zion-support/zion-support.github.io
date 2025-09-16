@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveAIAssessment2025 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -213,12 +213,12 @@ const InteractiveAIAssessment2025 = () => {
           >
             Retake Assessment
           </button>
-          <Link
+          <a
             href="/contact"
             className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
           >
             Get Expert Consultation
-          </Link>
+          </a>
         </div>
       </div>
     );

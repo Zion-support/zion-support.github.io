@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 const RevolutionaryFeatures2025 = () => {
@@ -127,19 +127,19 @@ const RevolutionaryFeatures2025 = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/features-showcase" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-full text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 🚀 Explore All Features
-              </Link>
+              </a>
               
-              <Link 
+              <a 
                 href="/demo-request" 
                 className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
                 📅 Book Demo
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

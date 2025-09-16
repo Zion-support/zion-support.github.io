@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
@@ -150,13 +150,13 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </div>
               
               <div className="flex gap-4">
-                <Link
+                <a
                   href={currentContent.href}
                   className={`group relative inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
                 >
                   <span className="mr-2">{currentContent.cta}</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
                 
                 <button className="group inline-flex items-center px-6 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full hover:bg-white/30 transition-all duration-300">
                   <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -172,29 +172,29 @@ const UltimateContentAdvertisingBanner2025 = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <Link
+              <a
                 href="/case-studies"
                 className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
               >
                 <Download className="w-4 h-4" />
                 Download Case Studies
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/contact"
                 className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
               >
                 <ExternalLink className="w-4 h-4" />
                 Schedule Consultation
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/webinars"
                 className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
               >
                 <Users className="w-4 h-4" />
                 Join Webinar
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </AnimatePresence>

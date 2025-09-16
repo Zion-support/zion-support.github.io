@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateContentRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -101,18 +101,18 @@ const NewContent2025UltimateContentRevolutionBanner = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Read Full Content →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/content"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
               >
                 Explore All Content
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025UltimateBreakthroughRevolutionPromotionBanner() {
   return (
@@ -50,7 +50,7 @@ export default function AI2025UltimateBreakthroughRevolutionPromotionBanner() {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution" 
               className="group bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
             >
@@ -60,8 +60,8 @@ export default function AI2025UltimateBreakthroughRevolutionPromotionBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies" 
               className="group bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
@@ -71,7 +71,7 @@ export default function AI2025UltimateBreakthroughRevolutionPromotionBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

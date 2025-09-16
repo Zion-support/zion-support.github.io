@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTechTrends2026 = () => {
   const trends = [
@@ -59,12 +59,12 @@ const RevolutionaryTechTrends2026 = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {trend.description}
                   </p>
-                  <Link 
+                  <a 
                     href={trend.link}
                     className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold group-hover:translate-x-2 transition-transform duration-300"
                   >
                     Explore Trend →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -78,18 +78,18 @@ const RevolutionaryTechTrends2026 = () => {
               Join our premium community to get early access to the latest tech trends and exclusive content.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/premium-access"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-full font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
               >
                 Get Premium Access
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/newsletter"
                 className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Subscribe to Newsletter
-              </Link>
+              </a>
             </div>
           </div>
         </div>

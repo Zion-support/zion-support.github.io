@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026QuantumBreakthroughPromotionBanner() {
   return (
@@ -53,7 +53,7 @@ export default function AI2026QuantumBreakthroughPromotionBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2026-quantum-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -61,13 +61,13 @@ export default function AI2026QuantumBreakthroughPromotionBanner() {
               <svg className="ml-2 w-5 h-5" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-ai-demonstration"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Live Quantum Demo
-            </Link>
+            </a>
           </div>
 
           {/* Stats */}

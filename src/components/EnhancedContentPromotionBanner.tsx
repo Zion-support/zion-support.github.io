@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const EnhancedContentPromotionBanner = () => {
   return (
@@ -74,18 +74,18 @@ const EnhancedContentPromotionBanner = () => {
                 with our proven AI and technology solutions. Start your journey today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <a 
                   href="/services"
                   className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Services →
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/contact"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300"
                 >
                   Get Free Consultation
-                </Link>
+                </a>
               </div>
             </div>
             

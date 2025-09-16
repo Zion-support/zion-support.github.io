@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { useRouter } from 'next/router';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
@@ -122,7 +122,7 @@ export function PrimaryNav() {
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
                 <>
-                  <Link
+                  <a
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -132,13 +132,13 @@ export function PrimaryNav() {
                     }}
                   >
                     {t('auth.login')}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
-                  </Link>
+                  </a>
                 </>
               )}
               {isLoggedIn && <UserMenu />}
@@ -150,7 +150,7 @@ export function PrimaryNav() {
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
-              <Link
+              <a
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -160,7 +160,7 @@ export function PrimaryNav() {
                 }}
               >
                 {t('auth.login')}
-              </Link>
+              </a>
             )}
             {isLoggedIn && <UserMenu />}
           </div>

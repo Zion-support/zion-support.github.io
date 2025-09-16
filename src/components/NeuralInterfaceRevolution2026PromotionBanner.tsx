@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NeuralInterfaceRevolution2026PromotionBanner() {
   return (
@@ -47,18 +47,18 @@ export default function NeuralInterfaceRevolution2026PromotionBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/neural-interface-revolution-2026"
               className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore Technologies
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-violet-900 transition-all duration-300"
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </div>

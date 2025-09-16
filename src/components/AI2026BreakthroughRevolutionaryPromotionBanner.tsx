@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026BreakthroughRevolutionaryPromotionBanner() {
   return (
@@ -47,7 +47,7 @@ export default function AI2026BreakthroughRevolutionaryPromotionBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-breakthrough-revolutionary-content"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
@@ -57,8 +57,8 @@ export default function AI2026BreakthroughRevolutionaryPromotionBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2026-quantum-neural-fusion-success"
               className="group bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
@@ -68,7 +68,7 @@ export default function AI2026BreakthroughRevolutionaryPromotionBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </Link>
+            </a>
           </div>
           
           {/* Additional Info */}
