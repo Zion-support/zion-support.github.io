@@ -23,6 +23,7 @@ export interface Service {
 
 // Import new revolutionary services
 import { newServices2026 } from './newServices2026';
+import { NEW_SERVICES_2026 } from './newContent2026';
 
 export const COMPREHENSIVE_SERVICES: Service[] = [
   {
@@ -481,5 +482,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
   },
-  ...newServices2026
+  ...newServices2026,
+  ...NEW_SERVICES_2026
 ];

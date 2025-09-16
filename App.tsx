@@ -196,6 +196,9 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+import NewContentShowcase2026 from './src/pages/NewContentShowcase2026';
+import NewContentPromotionalBanner2026 from './src/components/NewContentPromotionalBanner2026';
+import NewContentCarousel2026 from './src/components/NewContentCarousel2026';
 
 export default function App(): JSX.Element {
   return (
@@ -227,6 +230,7 @@ export default function App(): JSX.Element {
         <MobileOptimizer2025 />
         <Header />
         <UltimatePromotionalBanner2026 />
+        <NewContentPromotionalBanner2026 />
         
         <Routes>
           <Route path="/" element={
@@ -243,6 +247,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
                   <RevolutionaryContentPromotionBanner2026 />
+                </div>
+                
+                {/* New Content Carousel 2026 - showcases latest content */}
+                <div className="mb-12">
+                  <NewContentCarousel2026 />
                 </div>
                 
                 {/* New Content Advertising Banner */}
@@ -1371,6 +1380,7 @@ export default function App(): JSX.Element {
           <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/TranscendentTechRevolution2027" element={<TranscendentTechRevolution2027 />} />
+          <Route path="/pages/NewContentShowcase2026" element={<NewContentShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

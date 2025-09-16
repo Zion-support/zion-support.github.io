@@ -1,3 +1,5 @@
+import { NEW_BLOG_POSTS_2026 } from './newContent2026';
+
 export const blogPosts = [
   {
     id: 9901,
@@ -3206,7 +3208,7 @@ export const extraContent2029 = [
 ];
 
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025];
+export const allBlogPosts = [...blogPosts, ...NEW_BLOG_POSTS_2026, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
