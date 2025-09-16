@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentWidget = () => {
   const [selectedCategorysetSelectedCategory] = useState('ai');
@@ -53,7 +53,7 @@ const InteractiveContentWidget = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -65,10 +65,10 @@ const InteractiveContentWidget = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Selector */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -88,11 +88,11 @@ const InteractiveContentWidget = () => {
               {category.title}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={selectedCategory}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ const InteractiveContentWidget = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
           >
             {contentCategories[selectedCategory].items.map((itemindex) => (
-              <div
+              <motion.div
                 key={item.title}
                 initial={{ opacity: 0scale: 0.9 }}
                 animate={{ opacity: 1scale: 1 }}
@@ -142,19 +142,19 @@ const InteractiveContentWidget = () => {
                 </a>
                 
                 {hoveredItem === item.title && (
-                  <div
+                  <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
                   />
                 )}
-              </div>
+              </motion.div>
             ))}
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -166,7 +166,7 @@ const InteractiveContentWidget = () => {
           >
             🚀 Access Full Content Library
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

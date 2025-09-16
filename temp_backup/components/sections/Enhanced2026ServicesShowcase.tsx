@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Lock } from 'lucide-react';
 import { cuttingEdgeInnovationServices } from '../../data/2026-cutting-edge-innovations';
 import { enterpriseSolutions2026 } from '../../data/2026-enterprise-solutions';

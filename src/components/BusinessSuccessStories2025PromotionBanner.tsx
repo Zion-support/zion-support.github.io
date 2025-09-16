@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -93,14 +93,14 @@ const BusinessSuccessStories2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div
+          <motion.div
             initial={{ opacity: 0x: -50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -108,7 +108,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
             >
               <Sparkles className="w-4 h-4 mr-2" />
               REAL SUCCESS STORIES
-            </div>
+            </motion.div>
 
             {/* Main Heading */}
             <motion.h2
@@ -135,7 +135,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
             </motion.p>
 
             {/* Stats */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
@@ -147,10 +147,10 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
             {/* Industries */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -166,10 +166,10 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.7 }}
@@ -190,11 +190,11 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                 <BookOpen className="w-5 h-5 mr-2" />
                 Read Case Studies
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Content - Testimonial Carousel */}
-          <div
+          <motion.div
             initial={{ opacity: 0x: 50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -213,7 +213,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               </div>
 
               {/* Testimonial Content */}
-              <div
+              <motion.div
                 key={currentTestimonial}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -246,7 +246,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2 mb-4">
@@ -268,21 +268,21 @@ const BusinessSuccessStories2025PromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <div
+            <motion.div
               animate={{ y: [0-10] }}
               transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               animate={{ y: [010] }}
               transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

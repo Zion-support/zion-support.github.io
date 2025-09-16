@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Lock, Users, Shield, Eye, AlertTriangle, CheckCircle } from 'lucide-react';

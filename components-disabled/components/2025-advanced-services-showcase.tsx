@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence  } from 'framer-motion';
   website: 'https://ziontechgroup.com';
 import React, { useState, useEffect } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
 }
 const allServices = [;
@@ -43,7 +43,7 @@ const allServices = [;
   }
   {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';
 import SEO from '../components/SEO';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
   Brain, Atom, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin;

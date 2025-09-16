@@ -1,5 +1,4 @@
 import React from 'react';
-    
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedAISolutions2026: React.FC = () => {
@@ -38,8 +37,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               <li>• Emotional Intelligence</li>
               <li>• Creative Problem Solving</li>
               <li>• Autonomous Learning</li>
-    
-    
             </ul>
             <button className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
               Learn More →
@@ -47,7 +44,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-    
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Neural Networks</h3>
             <p className="text-purple-100 mb-6 text-center">
@@ -61,13 +57,10 @@ const AdvancedAISolutions2026: React.FC = () => {
             </ul>
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Quantum →
-    
-    
             </button>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-    
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Agents</h3>
             <p className="text-emerald-100 mb-6 text-center">
@@ -81,13 +74,10 @@ const AdvancedAISolutions2026: React.FC = () => {
             </ul>
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Deploy Agents →
-    
-    
             </button>
           </div>
         </div>
 
-    
         {/* AI Capabilities Showcase */}
         <div className="bg-gradient-to-r from-slate-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-slate-400/30">
           <div className="text-center mb-12">
@@ -115,14 +105,11 @@ const AdvancedAISolutions2026: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-green-400 text-sm font-semibold">95.7% Accuracy</span>
-    
-    
                 </div>
               </div>
             </div>
             
             <div className="space-y-6">
-    
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-lg p-6 border border-emerald-400/30">
                 <h3 className="text-xl font-bold mb-3">Computer Vision</h3>
                 <p className="text-emerald-100 mb-4">
@@ -142,8 +129,6 @@ const AdvancedAISolutions2026: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-green-400 text-sm font-semibold">Real-time Processing</span>
-    
-    
                 </div>
               </div>
             </div>
@@ -151,7 +136,6 @@ const AdvancedAISolutions2026: React.FC = () => {
         </div>
 
         {/* Industry Applications */}
-    
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Industry Applications</h2>
@@ -188,16 +172,12 @@ const AdvancedAISolutions2026: React.FC = () => {
                 <li>• Predictive Maintenance</li>
                 <li>• Supply Chain Optimization</li>
                 <li>• Process Automation</li>
-    
-    
-    
               </ul>
             </div>
           </div>
         </div>
 
         {/* Performance Metrics */}
-    
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
             <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
@@ -231,8 +211,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Get Started Today
-    
-    
             </button>
             <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation

@@ -1,6 +1,8 @@
 import React from 'react';
-    
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -266,10 +268,22 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </section>
 
         {/* Call to Action */}
-    
+<<<<<<< HEAD
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Join the Biotech Revolution</h2>
+          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
+            Be part of the biological revolution that's transforming healthcare, agriculture, 
+            and human potential through cutting-edge biotechnology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Biotech Journey
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
+              Explore Applications
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
-
-    
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -278,7 +292,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -301,7 +315,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Research Overview
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -313,7 +327,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -329,9 +343,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Real-time gene monitoring</li>
               <li>• Personalized treatments</li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -347,9 +361,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Artificial organs</li>
               <li>• Bio-manufacturing</li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -365,7 +379,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Cognitive enhancement</li>
               <li>• Neural prosthetics</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -497,9 +511,11 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
-    
-    
+>>>>>>> cursor/create-and-deploy-new-content-011f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
             </button>
+=======
         <section className="text-center">
           <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Biology?</h2>
@@ -515,8 +531,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Learn More
               </a>
             </div>
-            </button>
-    
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </section>
       </div>

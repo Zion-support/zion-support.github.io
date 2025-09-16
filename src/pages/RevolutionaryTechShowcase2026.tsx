@@ -1,6 +1,4 @@
 import React from 'react';
-    
-    
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -157,12 +155,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                   <span className="text-green-400 text-sm font-semibold">Live Demo Active</span>
                 </div>
               </div>
-    
             </div>
           </div>
         </div>
 
-    
         {/* Technology Impact Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
@@ -184,13 +180,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-lg opacity-90">System Uptime</div>
             <div className="text-sm text-pink-300 mt-2">Continuous Operation</div>
-    
           </div>
         </div>
 
         {/* Call to Action */}
-    
-    
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -203,9 +196,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-colors font-semibold text-lg">
               Download Brochure
-    
-    
-    
             </button>
           </div>
         </div>

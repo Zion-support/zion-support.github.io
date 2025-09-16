@@ -1,67 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import React from 'react';
 
 const RevolutionaryTechBanner2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const slides = [
-    {
-      id: 1,
-      title: "🚀 Revolutionary Tech 2026",
-      subtitle: "Experience the Future Today",
-      description: "AI Consciousness • Quantum Supremacy • Neural Interfaces",
-      link: "/pages/NextGenTechRevolution2026",
-      gradient: "from-purple-600 to-pink-600",
-      textColor: "text-white"
-    },
-    {
-      id: 2,
-      title: "🧠 Conscious AI Systems",
-      subtitle: "True Artificial Intelligence",
-      description: "Self-aware AI that thinks, feels, and creates",
-      link: "/pages/ConsciousAISystems2026",
-      gradient: "from-blue-600 to-cyan-600",
-      textColor: "text-white"
-    },
-    {
-      id: 3,
-      title: "⚡ Quantum Supremacy",
-      subtitle: "Computational Revolution",
-      description: "1000x faster than classical computers",
-      link: "/pages/QuantumSupremacy2026",
-      gradient: "from-emerald-600 to-teal-600",
-      textColor: "text-white"
-    },
-    {
-      id: 4,
-      title: "🌟 Digital Immortality",
-      subtitle: "Eternal Digital Existence",
-      description: "Preserve consciousness in digital form",
-      link: "/pages/DigitalImmortality2026",
-      gradient: "from-orange-600 to-red-600",
-      textColor: "text-white"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative overflow-hidden">
-    
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-bounce">🚀</span>
+          <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h3>
+          <span className="text-3xl animate-bounce">🚀</span>
+        </div>
+        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+          Experience the future of technology with our groundbreaking new content featuring AI Revolutionary Breakthrough, 
+          Quantum Reality, Neural Interface Evolution, and Revolutionary Technology Showcase
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧠 AI Revolutionary Breakthrough →
+          </a>
+          <a href="/pages/QuantumReality2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚛️ Quantum Reality 2026 →
+          </a>
+          <a href="/pages/NeuralInterfaceEvolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧬 Neural Interface Evolution →
+          </a>
+          <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🤖 Synthetic Intelligence →
+          </a>
+        </div>
+        <div className="mt-6">
+          <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
+            🌟 NEW: AI Revolutionary Breakthrough 2026 →
+          </a>
+          <a href="/pages/QuantumReality2026" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 ml-4">
+            ⚛️ NEW: Quantum Reality 2026 →
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

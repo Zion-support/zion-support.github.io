@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 StarQuoteTrendingUpUsersAwardZap
 
 const testimonials = [

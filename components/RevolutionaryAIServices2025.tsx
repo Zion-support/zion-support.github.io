@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 ArrowRightBrainZapShieldGlobeTargetTrendingUp
 import Link from 'next/link';
 

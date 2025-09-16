@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 export default Search;
-
+import { motion  } from 'framer-motion';
 export default function Page(props: any) {
 ,
     { id: 'equipment', name: 'Equipment', count: 0 },

@@ -7,21 +7,15 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   const revolutionaryContent = [
     {
       id: 1,
-    
-    
       title: "AI Consciousness Revolution",
       description: "Experience the first AI system with genuine consciousness and self-awareness",
       image: "🧠",
       gradient: "from-purple-600 to-pink-600",
       features: ["Self-Aware", "Creative", "Autonomous", "Emotional Intelligence"],
-    
-    
       link: "/pages/RevolutionaryTechBreakthrough2025"
     },
     {
       id: 2,
-    
-    
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -36,14 +30,10 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       image: "🧬",
       gradient: "from-emerald-600 to-teal-600",
       features: ["Thought Control", "VR Integration", "Neural Feedback", "Mind Upload"],
-    
-    
       link: "/pages/NeuralInterfaceRevolution2025"
     },
     {
       id: 4,
-    
-    
       title: "Consciousness Transfer Technology",
       description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
       image: "🌟",
@@ -59,31 +49,24 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       gradient: "from-indigo-600 to-purple-600",
       features: ["Parallel Processing", "Dimension Access", "Reality Manipulation", "Infinite Computing"],
       link: "/pages/InterdimensionalRealityEngine2028"
-    
-    
     }
   ];
 
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
-    
-    
+        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
-    
-    
     setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + revolutionaryContent.length) % revolutionaryContent.length);
-    
-    
   };
 
   const goToSlide = (index: number) => {
@@ -91,8 +74,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   };
 
   return (
-    
-    
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -138,8 +119,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           </button>
 
           {/* Content Slides */}
-    
-    
           <div className="relative overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -147,8 +126,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             >
               {revolutionaryContent.map((content, index) => (
                 <div key={content.id} className="w-full flex-shrink-0">
-    
-    
                   <div className={`bg-gradient-to-br ${content.gradient} p-12 min-h-[600px] flex items-center`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center w-full">
                       {/* Content */}
@@ -172,21 +149,15 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                         <a
                           href={content.link}
                           className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-    
-    
                         >
                           Explore {content.title} →
                         </a>
                       </div>
-    
-    
                       
                       {/* Visual Element */}
                       <div className="relative">
                         <div className="w-full h-96 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
                           <div className="text-9xl opacity-50">{content.image}</div>
-    
-    
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                       </div>
@@ -197,8 +168,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           </div>
 
-    
-    
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (
@@ -232,8 +201,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                 <p className="text-white/80 text-sm">{content.description}</p>
                 <div className="mt-4 text-white/60 text-sm">Explore →</div>
               </a>
-    
-    
             ))}
           </div>
         </div>

@@ -25,7 +25,7 @@ import {
   Phone, 
   FileText, 
   Shield, 
-
+import { motion } from 'framer-motion';
 import { 
   Brain, 
   Shield, 
@@ -524,7 +524,7 @@ export default function Sitemap() {
     }
   ];
 
-
+import { motion } from 'framer-motion';
 import { 
   Map, 
   Home, 

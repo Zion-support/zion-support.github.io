@@ -5,7 +5,7 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -220,7 +220,7 @@ export default function RevolutionaryServicesPage() {
               </motion.p>
               
               {/* Service Count Stats */}
-              <div 
+              <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -242,10 +242,10 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
                   <div className="text-gray-400">Average ROI</div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* CTA Buttons */}
-              <div 
+              <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -267,7 +267,7 @@ export default function RevolutionaryServicesPage() {
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
                 </Button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -295,7 +295,7 @@ export default function RevolutionaryServicesPage() {
         {/* Category Navigation */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
@@ -303,7 +303,7 @@ export default function RevolutionaryServicesPage() {
               viewport={{ once: true }}
             >
               {enhancedCategories.map((category, index) => (
-                <div
+                <motion.div
                   key={category.name}
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
@@ -323,16 +323,16 @@ export default function RevolutionaryServicesPage() {
                     <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
                     <div className="text-xs text-gray-500">Services</div>
                   </UltraFuturisticCard>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Popular Services Showcase */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div 
+            <motion.div 
               className="text-center mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -349,9 +349,9 @@ export default function RevolutionaryServicesPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
-            </div>
+            </motion.div>
 
-            <div 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -359,7 +359,7 @@ export default function RevolutionaryServicesPage() {
               viewport={{ once: true }}
             >
               {popularServices.slice(0, 6).map((service, index) => (
-                <div
+                <motion.div
                   key={service.id}
                   variants={itemVariants}
                   whileHover={{ y: -10 }}
@@ -399,9 +399,9 @@ export default function RevolutionaryServicesPage() {
                            </Button>
                     </div>
                   </UltraFuturisticCard>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -409,7 +409,7 @@ export default function RevolutionaryServicesPage() {
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
-            <div 
+            <motion.div 
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -478,10 +478,10 @@ export default function RevolutionaryServicesPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Services Display */}
-            <div 
+            <motion.div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
@@ -492,7 +492,7 @@ export default function RevolutionaryServicesPage() {
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
-                <div
+                <motion.div
                   key={service.id}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
@@ -593,12 +593,12 @@ export default function RevolutionaryServicesPage() {
                       </div>
                     )}
                   </UltraFuturisticCard>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             {filteredServices.length === 0 && (
-              <div 
+              <motion.div 
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -617,22 +617,22 @@ export default function RevolutionaryServicesPage() {
                          >
                            Clear Filters
                          </Button>
-              </div>
+              </motion.div>
             )}
           </div>
         </section>
 
         {/* Service Details Modal */}
-        
+        <AnimatePresence>
           {selectedService && (
-            <div
+            <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
             >
-              <div
+              <motion.div
                 className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -748,15 +748,15 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )}
-        
+        </AnimatePresence>
 
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-            <div 
+            <motion.div 
               className="max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -806,7 +806,7 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>

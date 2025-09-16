@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { 
   ArrowRight, 

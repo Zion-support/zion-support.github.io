@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, EyeOff, Keyboard, MousePointer, 
   Contrast, Type, ZoomIn, ZoomOut, RotateCcw

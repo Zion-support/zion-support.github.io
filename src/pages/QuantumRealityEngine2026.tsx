@@ -1,5 +1,3 @@
-    
-    
 import React from 'react';
 
 const QuantumRealityEngine2026: React.FC = () => {
@@ -256,19 +254,11 @@ const QuantumRealityEngine2026: React.FC = () => {
   );
 };
 
-    
-    
-    
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 export default QuantumRealityEngine2026;
-    
-export default QuantumRealityEngine2026;
-    
-    
-    
-    
-export default QuantumRealityEngine2026;
-    
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -468,15 +458,9 @@ export default QuantumRealityEngine2026;
               Learn About AI Consciousness
             </a>
 export default QuantumRealityEngine2026;
-    
-    
-    
-    
-    
-    
-    
-    
+<<<<<<< HEAD
+=======
 export default QuantumRealityEngine2026;
-    
-    
-    
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Shield, Zap, Target, Users, Award, Clock, 

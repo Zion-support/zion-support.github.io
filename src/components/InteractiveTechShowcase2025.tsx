@@ -1,239 +1,89 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-    
-    
-    
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
-    
-        }
-      ]
-    
-  const [activeTab, setActiveTab] = useState('ai');
-    }
-  };
+=======
+  const [activeTab, setActiveTab] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  return (
-    
-    }
-  };
-
-  const interactiveFeatures = [
+  const techCategories = [
     {
-      title: "Real-time Processing",
-      description: "Ultra-fast data processing with sub-millisecond response times",
-      icon: "⚡",
-      metric: "< 1ms"
-    },
-    {
-      title: "Accuracy Rate",
-      description: "99.9% accuracy in complex decision making and predictions",
-      icon: "🎯",
-      metric: "99.9%"
-    },
-    {
-      title: "Scalability",
-      description: "Seamlessly scales from single devices to enterprise systems",
-      icon: "📈",
-      metric: "∞"
-    },
-    {
-      title: "Security",
-      description: "Military-grade encryption and quantum-resistant security",
-      icon: "🔒",
-      metric: "100%"
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
-  const techCategories = {
-    ai: {
-      title: "AI Consciousness Revolution",
+      title: "AI & Consciousness",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
-      items: [
+      technologies: [
         {
-          name: "Self-Aware AI",
-          description: "First AI system with genuine consciousness and self-awareness",
-          features: ["Emotional Intelligence", "Creative Thinking", "Autonomous Decision Making"],
-          status: "Available Now"
+          name: "AI Consciousness Revolution",
+          description: "First AI systems achieving genuine consciousness and self-awareness",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          features: ["Self-awareness", "Creative thinking", "Emotional intelligence"]
         },
         {
-          name: "Collaborative Intelligence",
-          description: "AI systems that work seamlessly with human teams",
-          features: ["Team Integration", "Contextual Understanding", "Adaptive Learning"],
-          status: "Beta Testing"
-        },
-        {
-          name: "Creative AI Engine",
-          description: "AI that generates original art, music, and literature",
-          features: ["Original Content", "Style Transfer", "Emotional Expression"],
-          status: "Coming Soon"
+          name: "Neural Interface Technology",
+          description: "Direct brain-computer communication enabling thought control",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          features: ["Non-invasive BCI", "Thought control", "Memory enhancement"]
         }
       ]
     },
-    quantum: {
-      title: "Quantum Reality Engine",
-      icon: "⚡",
+    {
+      title: "Space Technology",
+      icon: "🚀",
       color: "from-cyan-600 to-blue-600",
-      items: [
+      technologies: [
         {
-          name: "Quantum Supremacy",
-          description: "Quantum computers solving impossible problems",
-          features: ["1000+ Qubits", "Error Correction", "Exponential Speed"],
-          status: "Available Now"
+          name: "Interplanetary Travel",
+          description: "Advanced propulsion systems enabling rapid travel between planets",
+          link: "/pages/NextGenSpaceTech2026",
+          features: ["Nuclear propulsion", "Mars transit", "Reusable spacecraft"]
         },
         {
-          name: "Reality Manipulation",
-          description: "Control physical reality through quantum mechanics",
-          features: ["Teleportation", "Time Dilation", "Parallel Worlds"],
-          status: "Beta Testing"
-        },
-        {
-          name: "Quantum AI Integration",
-          description: "AI powered by quantum computing principles",
-          features: ["Quantum Neural Networks", "Superposition Learning", "Entanglement Processing"],
-          status: "Research Phase"
+          name: "Space Habitats",
+          description: "Self-sustaining space colonies with advanced life support",
+          link: "/pages/NextGenSpaceTech2026",
+          features: ["Modular design", "Life support", "Artificial gravity"]
         }
       ]
     },
-    neural: {
-      title: "Neural Interface Revolution",
+    {
+      title: "Biotechnology",
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
-      items: [
+      technologies: [
         {
-          name: "Thought Control",
-          description: "Control devices directly with your mind",
-          features: ["Non-Invasive BCI", "Real-time Processing", "Multi-device Control"],
-          status: "Available Now"
+          name: "Gene Therapy Revolution",
+          description: "Advanced gene editing curing diseases and enhancing capabilities",
+          link: "/pages/AdvancedBiotechRevolution2026",
+          features: ["CRISPR 3.0", "Disease cure", "Human enhancement"]
         },
         {
-          name: "Neural VR Integration",
-          description: "Experience virtual reality through neural interfaces",
-          features: ["Full Sensory Immersion", "Thought Navigation", "Emotional Feedback"],
-          status: "Beta Testing"
-        },
-        {
-          name: "Mind Upload Technology",
-          description: "Transfer consciousness to digital systems",
-          features: ["Consciousness Backup", "Digital Immortality", "Neural Mapping"],
-          status: "Research Phase"
+          name: "Regenerative Medicine",
+          description: "Stem cell therapies regenerating organs and reversing aging",
+          link: "/pages/AdvancedBiotechRevolution2026",
+          features: ["Organ regeneration", "Anti-aging", "Tissue engineering"]
         }
       ]
-    },
-    consciousness: {
-      title: "Consciousness Transfer",
-      icon: "🌟",
-      color: "from-violet-600 to-fuchsia-600",
-      items: [
-        {
-          name: "Digital Immortality",
-          description: "Achieve eternal life through consciousness transfer",
-          features: ["Consciousness Backup", "Body Transfer", "Life Extension"],
-          status: "Beta Testing"
-        },
-        {
-          name: "Consciousness Sharing",
-          description: "Share experiences and memories between minds",
-          features: ["Memory Transfer", "Experience Sharing", "Collective Consciousness"],
-          status: "Research Phase"
-        },
-        {
-          name: "Reality Simulation",
-          description: "Create and inhabit custom realities",
-          features: ["Custom Worlds", "Physics Manipulation", "Infinite Possibilities"],
-          status: "Concept Phase"
-        }
-      ]
-    
-    
-        }
-      ]
-    
-    
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
   const [activeTab, setActiveTab] = useState('ai');
-    
+>>>>>>> cursor/create-and-deploy-new-content-261d
     }
   };
 
   return (
-    
-    
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH SHOWCASE 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Explore Revolutionary Technologies
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Interact with the most advanced technologies that are reshaping our world
-          </p>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(techCategories).map(([key, category]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white/10 text-white/70 hover:bg-white/20'
-              }`}
-            >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Category Content */}
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">
-              {techCategories[activeTab as keyof typeof techCategories].title}
-            </h3>
-            <p className="text-lg opacity-90">
-              Discover the latest breakthroughs in {techCategories[activeTab as keyof typeof techCategories].title.toLowerCase()}
-            </p>
-    
-          </div>
-
-    
-            ))}
-          </div>
-
-    
-    
-    
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </div>
 
               Schedule Demo
             </button>
-    
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {techCategories.map((category, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeTab === index
-                ? `bg-gradient-to-r ${category.color} text-white`
-                : 'bg-white/20 text-white hover:bg-white/30'
-            }`}
-          >
-    
-    
+<<<<<<< HEAD
+=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -254,26 +104,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
           >
             <span className="mr-2">{category.icon}</span>
             {category.title}
-    
-            <span className="mr-2">{category.icon}</span>
-            {category.title}
-    
           </button>
         ))}
       </div>
 
-    
-          </div>
-        </div>
-
-    
-          <div
-            key={index}
-            className={`bg-gradient-to-br ${techCategories[activeTab].color}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onMouseEnter={() => setHoveredCard(index)}
-            onMouseLeave={() => setHoveredCard(null)}
-          >
-    
       {/* Technology Cards */}
       <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
@@ -283,7 +117,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
-    
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -291,8 +124,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
               </div>
               <div className="text-4xl opacity-60">{techCategories[activeTab].icon}</div>
             </div>
-    
-    
 
             {/* Features List */}
             <div className="mb-6">
@@ -331,14 +162,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
             {hoveredCard === index && (
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl pointer-events-none"></div>
             )}
-    
-    
           </div>
         ))}
       </div>
 
-    
-    
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -358,38 +185,9 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
-    
-    
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="text-center">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Experience the Future?</h3>
-          <p className="text-lg mb-6 opacity-90">Join thousands of innovators already using our revolutionary technology</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-purple-50 transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of pioneers who are already using these revolutionary technologies
-          </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
-              Start Your Journey
-            </button>
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
-              Schedule Demo
-            </button>
-    
-    
-    
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </div>
       </div>

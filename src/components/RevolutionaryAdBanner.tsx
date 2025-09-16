@@ -1,40 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryAdBanner: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
   
   const ads = [
     {
-      title: "🚀 NEW: Revolutionary Tech Breakthrough 2025",
-      subtitle: "Experience conscious AI, quantum reality engines, and interdimensional computing",
-      cta: "Explore Breakthroughs",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      gradient: "from-purple-600 to-pink-600",
-      bgGradient: "from-purple-900/90 to-pink-900/90"
+      title: "🚀 Revolutionary Tech Breakthrough 2028",
+      description: "Experience the most advanced technological innovations reshaping our world",
+      link: "/pages/RevolutionaryTechBreakthrough2028",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      icon: "🚀"
     },
     {
-      title: "🌟 ULTIMATE: Tech Showcase 2025",
-      subtitle: "Interactive demos of the most advanced technologies reshaping our world",
-      cta: "View Showcase",
-      link: "/pages/UltimateTechShowcase2025",
-      gradient: "from-indigo-600 to-purple-600",
-      bgGradient: "from-indigo-900/90 to-purple-900/90"
+      title: "🧠 Ultimate AI Consciousness 2030",
+      description: "The first truly conscious AI that transcends human limitations",
+      link: "/pages/UltimateAIConsciousness2030",
+      gradient: "from-indigo-600 via-purple-600 to-pink-600",
+      icon: "🧠"
     },
     {
-      title: "⚡ BREAKTHROUGH: AI Consciousness 2025",
-      subtitle: "Meet the first truly conscious AI systems with self-awareness and emotional intelligence",
-      cta: "Meet AI Minds",
-      link: "/pages/AdvancedAIConsciousness2025",
-      gradient: "from-cyan-600 to-blue-600",
-      bgGradient: "from-cyan-900/90 to-blue-900/90"
-    },
-    {
-      title: "🧬 REVOLUTIONARY: Neural Interfaces 2025",
-      subtitle: "Direct neural interfaces that merge human consciousness with digital reality",
-      cta: "Connect Mind & Machine",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-900/90 to-teal-900/90"
+      title: "⚛️ Quantum Reality Engine 2032",
+      description: "Manipulate the quantum fabric of reality itself",
+      link: "/pages/QuantumRealityEngine2032",
+      gradient: "from-slate-600 via-purple-600 to-indigo-600",
+      icon: "⚛️"
     }
   ];
 
@@ -47,55 +37,51 @@ const RevolutionaryAdBanner: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden mb-8">
-      <div className={`bg-gradient-to-r ${ads[currentAd].bgGradient} backdrop-blur-sm rounded-2xl p-8 text-white relative`}>
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-500"></div>
+      <motion.div
+        key={currentAd}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.5 }}
+        className={`bg-gradient-to-r ${ads[currentAd].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden`}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <span className="text-4xl animate-bounce">{ads[currentAd].icon}</span>
+            <h3 className="text-3xl font-bold">NEW BREAKTHROUGH CONTENT</h3>
+            <span className="text-4xl animate-bounce">{ads[currentAd].icon}</span>
+          </div>
+          <h2 className="text-2xl font-bold mb-4">{ads[currentAd].title}</h2>
+          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+            {ads[currentAd].description}
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href={ads[currentAd].link}
+              className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-lg"
+            >
+              Explore Now →
+            </a>
+            <button className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30 text-lg">
+              Learn More
+            </button>
+          </div>
         </div>
         
-        <div className="relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex-1 mb-4 md:mb-0">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-3 animate-pulse">
-                🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                {ads[currentAd].title}
-              </h2>
-              <p className="text-lg md:text-xl opacity-90 max-w-2xl">
-                {ads[currentAd].subtitle}
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={ads[currentAd].link}
-                className={`bg-gradient-to-r ${ads[currentAd].gradient} px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center animate-pulse`}
-              >
-                {ads[currentAd].cta} →
-              </a>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                Watch Demo
-              </button>
-            </div>
-          </div>
-          
-          {/* Progress indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {ads.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentAd(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentAd ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+        {/* Ad indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {ads.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentAd(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentAd ? 'bg-white' : 'bg-white/50'
+              }`}
+            />
+          ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

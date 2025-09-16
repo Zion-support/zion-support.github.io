@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react';
 
 interface RevolutionaryServiceCardProps {

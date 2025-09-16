@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const UniversalTechRevolution2032: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -18,11 +18,11 @@ const UniversalTechRevolution2032: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             The ultimate technological revolution that spans across galaxies, dimensions, and consciousness itself
           </p>
-        </div>
+        </motion.div>
 
         {/* Revolutionary Technologies */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
@@ -31,9 +31,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               Quantum-entangled communication networks spanning entire galaxies with instant data transfer
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
@@ -42,9 +42,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               Computing systems that operate across multiple dimensions simultaneously for infinite processing power
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
           >
@@ -53,9 +53,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               Technology that can create and sustain life forms across any environment in the universe
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30"
           >
@@ -64,9 +64,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               Advanced systems that can engineer and modify the fundamental laws of physics in localized areas
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30"
           >
@@ -75,9 +75,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               A vast network connecting all conscious beings across the universe for shared experiences
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-red-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30"
           >
@@ -86,11 +86,11 @@ const UniversalTechRevolution2032: React.FC = () => {
             <p className="opacity-90">
               Technology that harvests energy from the quantum vacuum and dark matter across the universe
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Advanced Systems */}
-        <div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -123,10 +123,10 @@ const UniversalTechRevolution2032: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Implementation Phases */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
@@ -165,10 +165,10 @@ const UniversalTechRevolution2032: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Benefits and Impact */}
-        <div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 1 }}
@@ -197,10 +197,10 @@ const UniversalTechRevolution2032: React.FC = () => {
               <p className="opacity-80 text-sm">Harmony across all species and civilizations</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 1 }}
@@ -221,7 +221,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               🌟 Join Universal Mind
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

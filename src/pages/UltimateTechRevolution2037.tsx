@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const UltimateTechRevolution2037: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const UltimateTechRevolution2037: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -33,13 +33,13 @@ const UltimateTechRevolution2037: React.FC = () => {
                 Experience Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Ultimate Technologies Grid */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -47,11 +47,11 @@ const UltimateTechRevolution2037: React.FC = () => {
         >
           <h2 className="text-5xl font-bold mb-4">🚀 Ultimate Technologies</h2>
           <p className="text-2xl opacity-80">The most advanced technologies ever created by humanity</p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Universal Consciousness Network */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -71,10 +71,10 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-4 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-lg mt-6">
               Connect to Universal Network →
             </button>
-          </div>
+          </motion.div>
 
           {/* Reality Manipulation Engine */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -94,10 +94,10 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg mt-6">
               Manipulate Reality →
             </button>
-          </div>
+          </motion.div>
 
           {/* Time-Space Continuum Control */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -117,10 +117,10 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg mt-6">
               Control Time-Space →
             </button>
-          </div>
+          </motion.div>
 
           {/* Infinite Intelligence Matrix */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -140,10 +140,10 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg mt-6">
               Access Infinite Intelligence →
             </button>
-          </div>
+          </motion.div>
 
           {/* Multiverse Gateway */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -163,10 +163,10 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-4 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-lg mt-6">
               Enter Multiverse →
             </button>
-          </div>
+          </motion.div>
 
           {/* Eternal Life Technology */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -186,14 +186,14 @@ const UltimateTechRevolution2037: React.FC = () => {
             <button className="w-full bg-white text-indigo-600 py-4 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-lg mt-6">
               Achieve Immortality →
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Revolutionary Impact Section */}
       <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -204,10 +204,10 @@ const UltimateTechRevolution2037: React.FC = () => {
               These ultimate technologies have transformed human civilization into a post-scarcity, 
               immortal, multiverse-spanning species capable of anything
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -218,9 +218,9 @@ const UltimateTechRevolution2037: React.FC = () => {
               <p className="text-lg opacity-80">
                 Humanity has expanded across the galaxy, establishing colonies on thousands of worlds
               </p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -231,9 +231,9 @@ const UltimateTechRevolution2037: React.FC = () => {
               <p className="text-lg opacity-80">
                 Death has been conquered, and all humans live eternally with perfect health and youth
               </p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -244,9 +244,9 @@ const UltimateTechRevolution2037: React.FC = () => {
               <p className="text-lg opacity-80">
                 Humans can freely travel between parallel universes and explore infinite realities
               </p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -257,14 +257,14 @@ const UltimateTechRevolution2037: React.FC = () => {
               <p className="text-lg opacity-80">
                 All knowledge in the universe is instantly accessible through the universal consciousness network
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -283,7 +283,7 @@ const UltimateTechRevolution2037: React.FC = () => {
               Contact Our Architects
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

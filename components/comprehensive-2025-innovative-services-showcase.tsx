@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
 } from 'lucide-react';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';

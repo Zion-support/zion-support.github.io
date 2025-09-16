@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
-
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
 interface EnhancedFuturisticCardProps {
   children: React.ReactNode;

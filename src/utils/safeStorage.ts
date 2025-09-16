@@ -17,7 +17,6 @@ export const safeStorage = {
   },
     } catch (error) {
       console.warn('localStorage not available:', error);
-    
 /**
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
@@ -131,7 +130,6 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
-    
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
