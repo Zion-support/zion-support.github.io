@@ -119,7 +119,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <div className="text-2xl font-bold">24/7</div>
               <div className="text-2xl font-bold">Updates</div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-01e2
           </div>
         </div>
       </div>

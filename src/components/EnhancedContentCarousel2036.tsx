@@ -68,8 +68,9 @@ const EnhancedContentCarousel2036: React.FC = () => {
           </p>
         </div>
 
-        {/* Main Slide Display */}
+        {/* Carousel Container */}
         <div className="relative">
+          {/* Main Slide Display */}
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 min-h-[500px] flex items-center">
             <div className="w-full">
               <div className="grid md:grid-cols-2 gap-12 items-center">

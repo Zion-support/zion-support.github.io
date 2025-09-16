@@ -9,9 +9,9 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-4 text-sm">
             <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: AI 2026 Revolutionary Breakthrough Content Available</span>
-            <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
-              Read Now →
+            <span className="font-semibold">NEW: Revolutionary Tech Breakthrough 2025 - AI Consciousness, Quantum Computing & Interdimensional Technology</span>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
+              Explore Now →
             </a>
             <span className="animate-pulse">🚀</span>
           </div>
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Services
             </a>
-            <a href="/pages/RevolutionaryTechBlog2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <a href="/pages/RevolutionaryTechBlog2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Blog
             </a>
             <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">

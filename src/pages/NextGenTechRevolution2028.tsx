@@ -2,7 +2,6 @@ import React from 'react';
 
 const NextGenTechRevolution2028: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -184,7 +183,6 @@ const NextGenTechRevolution2028: React.FC = () => {
                   <p className="text-gray-300">Full Consciousness Transfer Technology</p>
                 </div>
               </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -356,14 +354,12 @@ const NextGenTechRevolution2028: React.FC = () => {
             <div className="text-center">
               <div className="text-4xl font-bold text-green-400 mb-2">∞</div>
               <div className="text-lg opacity-90">Possibilities</div>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
           <p className="text-xl mb-8 opacity-90">
             Be among the first to experience the next generation of technology
@@ -373,7 +369,6 @@ const NextGenTechRevolution2028: React.FC = () => {
               Join the Revolution
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-=======
           <h2 className="text-4xl font-bold mb-6">🚀 Join the Revolution</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
             Be part of the most significant technological revolution in human history. 
@@ -384,7 +379,6 @@ const NextGenTechRevolution2028: React.FC = () => {
               Start Revolution
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
               Learn More
             </button>
           </div>

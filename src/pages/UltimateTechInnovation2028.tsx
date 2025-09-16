@@ -3,7 +3,6 @@ import React from 'react';
 const UltimateTechInnovation2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -175,7 +174,6 @@ const UltimateTechInnovation2028: React.FC = () => {
               </div>
               <p className="text-gray-300 mb-4">"Neural interface trading systems increased profits by 250% while reducing risk by 80%."</p>
               <div className="text-emerald-400 font-semibold">+250% Profits</div>
-=======
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -362,13 +360,11 @@ const UltimateTechInnovation2028: React.FC = () => {
               <button className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Roadmap
               </button>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -380,7 +376,6 @@ const UltimateTechInnovation2028: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">🌟 Ready to Innovate?</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
@@ -393,7 +388,6 @@ const UltimateTechInnovation2028: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </button>
           </div>
         </div>

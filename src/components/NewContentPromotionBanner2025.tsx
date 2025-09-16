@@ -1,156 +1,105 @@
-"use client";
-'use client';
-
 import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-const NewContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
+const NewContentPromotionBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const promotions = [
     {
-      title: 'Interactive Demos',
-      description: 'Experience AI in action with our hands-on demonstrations',
-      icon: '🎮',
-      color: 'from-blue-500 to-purple-500'
+      id: 1,
+      title: "🚀 NEW: Revolutionary AI Solutions 2025",
+      description: "Experience groundbreaking AI technologies that are reshaping industries",
+      link: "/pages/RevolutionaryAISolutions2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
     },
     {
-      title: 'Success Stories',
-      description: 'Real case studies with measurable ROI results',
-      icon: '📈',
-      color: 'from-green-500 to-blue-500'
+      id: 2,
+      title: "⚡ BREAKTHROUGH: Quantum Computing Revolution",
+      description: "Discover quantum-powered solutions that solve impossible problems",
+      link: "/pages/QuantumComputingRevolution2025",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900/90 to-blue-900/90"
     },
     {
-      title: 'Expert Insights',
-      description: 'Latest AI trends and industry analysis from our experts',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-500'
+      id: 3,
+      title: "🧠 INNOVATION: Neural Interface Technology",
+      description: "Connect your mind directly to AI systems with neural interfaces",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
     },
     {
-      title: 'Interactive Tools',
-      description: 'ROI calculators and assessment tools to explore your potential',
-      icon: '🛠️',
-      color: 'from-orange-500 to-red-500'
+      id: 4,
+      title: "🌟 ULTIMATE: Next-Gen Innovation Hub",
+      description: "Explore the most advanced technologies shaping our future",
+      link: "/pages/NextGenInnovationHub2025",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900/90 to-red-900/90"
     }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
     return () => clearInterval(interval);
-  }, [features.length]);
+  }, [promotions.length]);
 
   return (
-    <div className={`py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Main Content */}
-          <div>
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                AI Content
-              </span>
-            </h2>
-            
-            <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Explore interactive demos, success stories, expert insights, and powerful tools 
-              that showcase the future of AI in business transformation.
-            </p>
-
-            {/* Feature Highlight */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className={`text-4xl bg-gradient-to-r ${features[currentFeature].color} bg-clip-text text-transparent`}>
-                  {features[currentFeature].icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">
-                    {features[currentFeature].title}
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    {features[currentFeature].description}
-                  </p>
-                </div>
+    <div className="relative overflow-hidden mb-12">
+      <div className={`bg-gradient-to-r ${promotions[currentSlide].bgColor} backdrop-blur-sm rounded-2xl p-8 text-white relative`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold animate-pulse">
+                  NEW CONTENT
+                </span>
+                <span className="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-sm font-semibold">
+                  JANUARY 2025
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                {promotions[currentSlide].title}
+              </h2>
+              <p className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl">
+                {promotions[currentSlide].description}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href={promotions[currentSlide].link}
+                  className={`bg-gradient-to-r ${promotions[currentSlide].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
+                >
+                  Explore Now →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                  Watch Demo
+                </button>
               </div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/content"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
-              >
-                Explore New Content
-              </a>
-              <a
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
-              >
-                Try Interactive Demo
-              </a>
-            </div>
-          </div>
-
-          {/* Right Side - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`group bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 hover:bg-opacity-20 hover:transform hover:scale-105 ${
-                  index === currentFeature ? 'ring-2 ring-white ring-opacity-50' : ''
-                }`}
-                onClick={() => setCurrentFeature(index)}
-              >
-                <div className={`text-3xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
-                  {feature.description}
-                </p>
-                <div className="mt-4 flex items-center text-sm text-yellow-300 group-hover:text-white transition-colors">
-                  <span>Learn More</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </div>
+            <div className="hidden md:block ml-8">
+              <div className="text-8xl opacity-20">
+                {currentSlide === 0 && "🤖"}
+                {currentSlide === 1 && "⚛️"}
+                {currentSlide === 2 && "🧠"}
+                {currentSlide === 3 && "🌟"}
               </div>
-            ))}
+            </div>
           </div>
         </div>
-
-        {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
-            <div className="text-sm opacity-90">New Articles</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
-            <div className="text-sm opacity-90">Case Studies</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
-            <div className="text-sm opacity-90">Interactive Tools</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
-            <div className="text-sm opacity-90">Live Demos</div>
-          </div>
+        
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {promotions.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

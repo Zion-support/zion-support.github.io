@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 import React from 'react';
 
 const QuantumRealityEngine2026: React.FC = () => {
@@ -271,69 +254,9 @@ const QuantumRealityEngine2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 export default QuantumRealityEngine2026;
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-bec3
 export default QuantumRealityEngine2026;
-=======
-<<<<<<< HEAD
-export default QuantumRealityEngine2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-01e2
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -533,75 +456,4 @@ export default QuantumRealityEngine2026;
               Learn About AI Consciousness
             </a>
 export default QuantumRealityEngine2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-=======
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
-export default QuantumRealityEngine2026;
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
