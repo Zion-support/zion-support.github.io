@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -349,6 +350,8 @@ const UltimateContentShowcase2025: React.FC = () => {
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5775
 import React, { useState } from 'react';
 
 const UltimateContentShowcase2025: React.FC = () => {
@@ -467,7 +470,6 @@ const UltimateContentShowcase2025: React.FC = () => {
         <p className="text-xl text-gray-300 max-w-4xl mx-auto">
           Explore our revolutionary technologies through interactive showcases and discover what's possible when innovation meets imagination.
         </p>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       </div>
 
       {/* Tab Navigation */}
@@ -600,11 +602,6 @@ const UltimateContentShowcase2025: React.FC = () => {
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
-=======
-          </div>
-        </div>
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
     </div>
   );
 };
