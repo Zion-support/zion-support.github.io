@@ -67,6 +67,11 @@ const Home = () => {
                   <h3 className="text-2xl font-semibold mb-2">Governed Agent Operations Checklist</h3>
                   <p className="text-white/80">A pragmatic, audit‑ready checklist for safe, observable agent operations.</p>
                 </Link>
+                <Link href="/blog/ai-2026-cost-aware-observability-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Cost‑Aware Observability Blueprint</h3>
+                  <p className="text-white/80">Unify traces, evals, and spend to stay fast, safe, and on budget.</p>
+                </Link>
                 <Link href="/blog/ai-2026-enterprise-architecture-modernization" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Architecture • 8 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Enterprise Architecture Modernization</h3>
