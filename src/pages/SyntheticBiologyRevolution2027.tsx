@@ -59,4 +59,3 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 };
 
 export default SyntheticBiologyRevolution2027;
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

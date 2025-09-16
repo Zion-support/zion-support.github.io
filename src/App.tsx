@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
-<<<<<<< HEAD
 import ScrollToTop from './ScrollToTop';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
@@ -139,17 +138,14 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
-=======
 import Footer from './Footer';
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         <Header />
-        
-<<<<<<< HEAD
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={
             <div className="space-y-0">
@@ -581,18 +577,6 @@ const App: React.FC = () => {
           <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
           <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
         </Routes>
-=======
-        <main className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
-              Revolutionary technology solutions for the future
-            </p>
-          </div>
-        </main>
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         
         <Footer />
       </div>

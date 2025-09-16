@@ -1,17 +1,12 @@
-import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import React from 'react';
 
-const AIAutonomousResearchAssistant: React.FC = () => {
+const AIAutonomousResearchAssistant = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIAutonomousResearchAssistant | Zion Tech Group</title>
-        <meta name="description" content="AIAutonomousResearchAssistant - Revolutionary technology solutions" />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIAutonomousResearchAssistant</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+          <h1 className="text-4xl font-bold mb-4">AIAutonomousResearchAssistant</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
@@ -19,4 +14,3 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 };
 
 export default AIAutonomousResearchAssistant;
-=======

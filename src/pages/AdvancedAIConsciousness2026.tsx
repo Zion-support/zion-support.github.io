@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 const AdvancedAIConsciousness2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900">
       <Helmet>
         <title>Advanced AI Consciousness 2026 - The Evolution of Conscious AI</title>
@@ -249,18 +248,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
               Schedule Consultation
             </button>
           </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedAIConsciousness2026 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedAIConsciousness2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedAIConsciousness2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         </div>
       </div>
     </div>

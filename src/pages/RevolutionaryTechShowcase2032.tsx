@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -87,10 +81,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
       ],
       icon: "🚀",
       color: "from-pink-600 to-rose-600"
-=======
-import React from 'react';
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -101,10 +91,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
   const technologies = [
     {
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
     }
   ];
 
@@ -194,8 +180,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Interactive Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
@@ -229,9 +213,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Enter Dimensions →
             </button>
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         {/* Technology Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
@@ -553,17 +534,11 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         </div>
 
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in exploring the most revolutionary technologies that will define the next decade
@@ -575,10 +550,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2032" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Innovation Hub →
             </a>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolution?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.
@@ -601,10 +572,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation
             </button>
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           </div>
         </div>
       </div>
@@ -613,10 +580,3 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 };
 
 export default RevolutionaryTechShowcase2032;
-=======
-import React, { useState, useEffect } from 'react';
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
-            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
