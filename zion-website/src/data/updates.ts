@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
+    summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
+    href: '/updates/real-time-rag-benchmark-suite-1-0',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Blueprint: Secure Tooling Permissions (2026)',
     summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.',
     href: '/blog/ai-2026-secure-tooling-permissions-blueprint',

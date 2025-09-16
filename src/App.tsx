@@ -82,6 +82,9 @@ import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 <<<<<<< HEAD
 import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
+import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
+import NewAIResearchBreakthrough2026 from './pages/NewAIResearchBreakthrough2026';
+import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
 =======
 import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
@@ -103,7 +106,7 @@ const App: React.FC = () => {
               
               {/* New Content Promo Banner */}
               <div className="mb-12">
-                <NewContentPromoBannerClean />
+                <NewlyAddedContentPromo />
               </div>
 
               {/* NEW: Advanced Tech Breakthrough Banner */}
@@ -261,6 +264,8 @@ const App: React.FC = () => {
           
           {/* Routes for all pages */}
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
+          <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
+          <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
