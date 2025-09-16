@@ -282,6 +282,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
+                {/* NEW: Revolutionary Content Banner 2028 - Latest Breakthrough Technologies */}
+                <RevolutionaryContentBanner2028 />
+                
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
                 
@@ -1429,6 +1432,9 @@ export default function App(): JSX.Element {
             </main>
           } />
           <Route path="/improvements" element={<ComprehensiveImprovements2025 />} />
+          <Route path="/consciousness-transfer-2028" element={<ConsciousnessTransfer2028 />} />
+          <Route path="/interdimensional-computing-2028" element={<InterdimensionalComputing2028 />} />
+          <Route path="/neural-reality-engine-2028" element={<NeuralRealityEngine2028 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
