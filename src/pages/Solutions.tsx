@@ -1,46 +1,49 @@
+import React from 'react';
 
-export default function Solutions() {
+const Solutions: React.FC = () => {
   const solutions = [
     {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Autonomous systems, machine learning models, and intelligent automation that transform business operations.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/services/ai'
+      title: 'Enterprise AI Solutions',
+      description: 'Comprehensive AI implementation for large-scale enterprises.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      icon: Cloud,
-      title: 'Cloud Platforms',
-      description: 'Scalable cloud infrastructure, serverless architectures, and DevOps automation for modern applications.',
-      features: ['Cloud Migration', 'Serverless Computing', 'DevOps Automation', 'Multi-Cloud Strategy'],
-      link: '/services/cloud'
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to cloud infrastructure with zero downtime.',
+      features: ['AWS Migration', 'Azure Integration', 'Google Cloud Setup', 'Hybrid Cloud Solutions']
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Zero-trust security, threat detection, and compliance automation to protect your digital assets.',
-      features: ['Threat Detection', 'Identity Management', 'Compliance Automation', 'Security Audits'],
-      link: '/services/cybersecurity'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end business process modernization and optimization for the digital age.',
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Performance Optimization'],
-      link: '/services/digital-transformation'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Advanced data processing, business intelligence, and real-time analytics for informed decision-making.',
-      features: ['Big Data Processing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
-      link: '/services/data-analytics'
-    },
-    {
-      icon: Globe,
-      title: 'IoT Solutions',
-      description: 'Connected devices, edge computing, and smart infrastructure for the Internet of Things.',
-      features: ['Device Management', 'Edge Computing', 'Smart Infrastructure', 'Sensor Networks'],
-      link: '/services/iot'
+      title: 'Data Analytics Platform',
+      description: 'Advanced analytics platform for data-driven decision making.',
+      features: ['Real-time Analytics', 'Data Visualization', 'Business Intelligence', 'Custom Dashboards']
     }
   ];
+
+  return (
+    <div className="min-h-screen py-20 px-4">
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">Our Solutions</h1>
+        <p className="text-gray-300 text-lg text-center mb-12 max-w-3xl mx-auto">
+          Comprehensive technology solutions tailored to meet your specific business needs.
+        </p>
+        <div className="space-y-12">
+          {solutions.map((solution, index) => (
+            <div key={index} className="bg-slate-800/50 p-8 rounded-lg border border-purple-500/20">
+              <h2 className="text-3xl font-bold text-white mb-4">{solution.title}</h2>
+              <p className="text-gray-300 text-lg mb-6">{solution.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {solution.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="bg-purple-600/20 p-4 rounded-lg text-center">
+                    <span className="text-white font-semibold">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Solutions;
