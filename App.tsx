@@ -4,9 +4,6 @@ import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
 import EnhancedNavigation from './src/components/EnhancedNavigation';
-import EnhancedFooter from './src/components/EnhancedFooter';
-import EnhancedSearch from './src/components/EnhancedSearch';
-import AnalyticsDashboard from './src/components/AnalyticsDashboard';
 import PerformanceMonitor from './src/components/PerformanceMonitor';
 import UserFeedbackSystem from './src/components/UserFeedbackSystem';
 import NotificationSystem from './src/components/NotificationSystem';
@@ -966,7 +963,7 @@ export default function App(): JSX.Element {
           } />
         </Routes>
         
-        <EnhancedFooter />
+        <Footer />
       </div>
     </Router>
   );
