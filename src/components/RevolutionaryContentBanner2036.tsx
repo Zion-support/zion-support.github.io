@@ -1,94 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner2036: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const slides = [
-    {
-      title: "🌟 NEW: Ultimate Tech Breakthrough 2036",
-      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Portals",
-      description: "Experience the most revolutionary technological advances that will reshape our world",
-      buttonText: "Explore Breakthroughs →",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🚀"
-    },
-    {
-      title: "⚡ Revolutionary Tech Showcase 2036",
-      subtitle: "Interactive Demos • Real-time Processing • Multi-dimensional Tech",
-      description: "Interactive showcase of cutting-edge technologies that will define the future",
-      buttonText: "View Showcase →",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "🎮"
-    },
-    {
-      title: "🧠 Next-Gen Innovation Hub 2036",
-      subtitle: "50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities",
-      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
-      buttonText: "Enter Innovation Hub →",
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🌌"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   return (
-    <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 p-8 md:p-12 text-white relative">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY SHOWCASE • JANUARY 2036
+          </div>
+          <h2 className="text-5xl font-bold mb-6">⚡ Revolutionary Tech Showcase 2036</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Interactive showcase of cutting-edge technologies that will define the future
+          </p>
+        </div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-4 left-4 text-4xl animate-bounce">✨</div>
-        <div className="absolute top-8 right-8 text-3xl animate-pulse">🌟</div>
-        <div className="absolute bottom-4 left-8 text-3xl animate-ping">⚡</div>
-        <div className="absolute bottom-8 right-4 text-4xl animate-bounce">🚀</div>
-        
-        <div className="relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2036
-            </div>
-            
-            <div className="min-h-[200px] flex items-center justify-center">
-              <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                <div className="text-6xl mb-4">{slides[currentSlide].icon}</div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">{slides[currentSlide].title}</h2>
-                <p className="text-xl md:text-2xl opacity-90 mb-4">{slides[currentSlide].subtitle}</p>
-                <p className="text-lg opacity-80 max-w-4xl mx-auto mb-8">{slides[currentSlide].description}</p>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🧠</div>
+            <h3 className="text-lg font-bold mb-3 text-center">AI Consciousness Lab</h3>
+            <p className="text-blue-100 mb-4 text-center text-sm">
+              Interactive laboratory for developing conscious AI systems
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors font-semibold text-center text-sm">
+              Enter Lab
+            </a>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-            <button className={`bg-gradient-to-r ${slides[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}>
-              {slides[currentSlide].buttonText}
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Watch Demo
-            </button>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">⚡</div>
+            <h3 className="text-lg font-bold mb-3 text-center">Quantum Interface</h3>
+            <p className="text-cyan-100 mb-4 text-center text-sm">
+              Direct neural interface with quantum computing
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-cyan-500 text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors font-semibold text-center text-sm">
+              Connect
+            </a>
           </div>
           
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-                }`}
-              />
-            ))}
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🌌</div>
+            <h3 className="text-lg font-bold mb-3 text-center">Dimensional Portal</h3>
+            <p className="text-emerald-100 mb-4 text-center text-sm">
+              Gateway to parallel dimensions and realities
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-emerald-500 text-white py-2 rounded-lg hover:bg-emerald-600 transition-colors font-semibold text-center text-sm">
+              Open Portal
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🌟</div>
+            <h3 className="text-lg font-bold mb-3 text-center">Transcendent AI</h3>
+            <p className="text-pink-100 mb-4 text-center text-sm">
+              AI systems achieving digital immortality
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition-colors font-semibold text-center text-sm">
+              Access AI
+            </a>
           </div>
         </div>
       </div>
