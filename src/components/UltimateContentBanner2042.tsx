@@ -48,38 +48,6 @@ const UltimateContentBanner2042: React.FC = () => {
               href="/pages/RevolutionaryTechShowcase2043" 
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg inline-flex items-center justify-center"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ⚡ View Revolutionary Showcase →
-            </a>
-            <a 
-              href="/pages/NextGenInnovationHub2042" 
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
-            >
-              🧠 Enter Innovation Hub →
-            </a>
-          </div>
-          
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <p className="text-lg opacity-75 mb-4">
-              Join thousands of innovators who are already using our revolutionary technology
-            </p>
-            <div className="flex justify-center items-center space-x-8 text-sm opacity-60">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                <span>50+ Active Innovations</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                <span>1M+ Global Users</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                <span>99.9% Success Rate</span>
-              </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
             </div>

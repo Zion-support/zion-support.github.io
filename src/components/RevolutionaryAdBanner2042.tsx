@@ -1,31 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2042: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "Ultimate Tech Revolution 2042",
-      subtitle: "Experience the most revolutionary technological advances",
-      icon: "🚀",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/UltimateTechRevolution2042"
-    },
-    {
-      title: "Revolutionary Tech Showcase 2042",
-      subtitle: "Interactive showcase of cutting-edge technologies",
-      icon: "⚡",
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
   const [currentAd, setCurrentAd] = useState(0);
   
   const ads = [
     {
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
       color: "from-cyan-600 to-blue-600",
@@ -63,12 +42,6 @@ const RevolutionaryAdBanner2042: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentAd(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  currentSlide === index ? 'bg-white' : 'bg-white/30'
-=======
-                  index === currentAd ? 'bg-purple-400' : 'bg-gray-400'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
                   index === currentAd ? 'bg-purple-400' : 'bg-gray-400'
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
@@ -77,40 +50,6 @@ const RevolutionaryAdBanner2042: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {/* Quick Links */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <a 
-            href="/pages/UltimateTechRevolution2042"
-            className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300 text-center"
-          >
-            <div className="text-4xl mb-3">🚀</div>
-            <h3 className="text-lg font-bold mb-2">Ultimate Revolution</h3>
-            <p className="text-sm opacity-75">Experience breakthrough technologies</p>
-          </a>
-          
-          <a 
-            href="/pages/RevolutionaryTechShowcase2042"
-            className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300 text-center"
-          >
-            <div className="text-4xl mb-3">⚡</div>
-            <h3 className="text-lg font-bold mb-2">Tech Showcase</h3>
-            <p className="text-sm opacity-75">Interactive technology demos</p>
-          </a>
-          
-          <a 
-            href="/pages/NextGenInnovationHub2042"
-            className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300 text-center"
-          >
-            <div className="text-4xl mb-3">🧠</div>
-            <h3 className="text-lg font-bold mb-2">Innovation Hub</h3>
-            <p className="text-sm opacity-75">Discover revolutionary innovations</p>
-          </a>
-        </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
       </div>

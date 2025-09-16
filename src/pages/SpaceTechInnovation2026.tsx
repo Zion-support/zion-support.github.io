@@ -50,49 +50,6 @@ const SpaceTechInnovation2026: React.FC = () => {
                 </ul>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-=======
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-purple-400 to-pink-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2027
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Mars Base Construction</h3>
-                <p className="text-gray-300">Robotic construction of the first permanent Mars base</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2028
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">First Human Mission</h3>
-                <p className="text-gray-300">First humans land on Mars and begin colonization</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2030
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Self-Sustaining Colony</h3>
-                <p className="text-gray-300">Mars colony becomes fully self-sustaining</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">SpaceTechInnovation2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         </div>
       </div>
     </div>

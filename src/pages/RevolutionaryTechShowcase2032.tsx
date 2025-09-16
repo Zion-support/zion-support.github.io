@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -101,8 +94,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
   const technologies = [
     {
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
     }
@@ -194,44 +185,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Interactive Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4 text-center">🎮</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Interactive Demos</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Experience our technologies through immersive interactive demonstrations
-            </p>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Start Demo →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <div className="text-4xl mb-4 text-center">⚡</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Real-time Processing</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Watch our AI systems process complex problems in real-time
-            </p>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              View Processing →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <div className="text-4xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Multi-dimensional Tech</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Explore technologies that operate across multiple dimensions
-            </p>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Enter Dimensions →
-            </button>
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         {/* Technology Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
@@ -553,8 +506,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         </div>
 
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           </div>
@@ -562,20 +513,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the most revolutionary technologies that will define the next decade
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Ultimate Breakthrough →
-            </a>
-            <a href="/pages/NextGenInnovationHub2032" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Innovation Hub →
-            </a>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 =======
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
@@ -601,8 +538,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation
             </button>
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           </div>
