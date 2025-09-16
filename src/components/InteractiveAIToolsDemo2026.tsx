@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Play
   Pause
@@ -134,7 +134,7 @@ const InteractiveAIToolsDemo2026 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -147,10 +147,10 @@ const InteractiveAIToolsDemo2026 = () => {
             Experience the power of our cutting-edge AI tools through interactive demonstrations. 
             See how our solutions can transform your workflow in real-time.
           </p>
-        </motion.div>
+        </div>
 
         {/* Demo Selector */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -173,10 +173,10 @@ const InteractiveAIToolsDemo2026 = () => {
               <p className="text-sm text-blue-200">{demo.description}</p>
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Interactive Demo Area */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -223,7 +223,7 @@ const InteractiveAIToolsDemo2026 = () => {
               <span className="text-sm text-blue-200">{progress}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
-              <motion.div
+              <div
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
                 style={{ width: `${progress}%` }}
                 transition={{ duration: 0.1 }}
@@ -265,10 +265,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -293,10 +293,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -321,7 +321,7 @@ const InteractiveAIToolsDemo2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

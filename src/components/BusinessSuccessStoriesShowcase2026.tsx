@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -232,7 +232,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -249,10 +249,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             Discover how leading companies across industries achieved unprecedented success 
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
-        </motion.div>
+        </div>
 
         {/* Featured Stories */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -265,7 +265,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <motion.div
+                <div
                   key={story.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -367,14 +367,14 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* All Stories Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -387,7 +387,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <motion.div
+                <div
                   key={story.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -450,14 +450,14 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       Read Story
                     </button>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -482,7 +482,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

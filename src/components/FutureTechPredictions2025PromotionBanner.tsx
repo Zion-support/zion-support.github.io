@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Rocket
   Brain
@@ -305,13 +305,13 @@ const FutureTechPredictions2025PromotionBanner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -50 }}
             animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 }}
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -319,7 +319,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
             >
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">Future Tech Predictions 2025-2030</span>
-            </motion.div>
+            </div>
 
             {/* Main Heading */}
             <motion.h1
@@ -345,7 +345,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
             </motion.p>
 
             {/* Rotating Predictions */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.5 }}
@@ -364,12 +364,12 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   >
                     {predictions[currentPrediction]}
                   </motion.span>
-                </AnimatePresence>
+                
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.6 }}
@@ -383,11 +383,11 @@ const FutureTechPredictions2025PromotionBanner = () => {
                 <Calendar className="w-5 h-5 mr-2" />
                 View Timeline
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Content - Stats & Visual */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 50 }}
             animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8delay: 0.4 }}
@@ -410,7 +410,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={stat.label}
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
@@ -419,7 +419,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -431,11 +431,11 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10"></div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Technology Progress Bars */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
@@ -444,7 +444,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-6">Technology Development Progress</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((techindex) => (
-              <motion.div
+              <div
                 key={tech.name}
                 initial={{ opacity: 0x: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
@@ -456,20 +456,20 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   <span className="text-gray-400">{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
+                  <div
                     initial={{ width: 0 }}
                     animate={{ width: `${tech.progress}%` }}
                     transition={{ duration: 1delay: 1.4 + index * 0.1 }}
                     className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`}
                   />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Bottom Stats Bar */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.4 }}
@@ -481,7 +481,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
             { icon: Rocketlabel: ''Years', 'value: '6' },
             { icon: Starlabel: ''Technologies', 'value: '25+' }
           ].map((itemindex) => (
-            <motion.div
+            <div
               key={item.label}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
@@ -493,9 +493,9 @@ const FutureTechPredictions2025PromotionBanner = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
               <div className="text-sm text-gray-400">{item.label}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
 
 const ContactFormEnhanced: React.FC = () => {
@@ -39,7 +39,7 @@ const ContactFormEnhanced: React.FC = () => {
   };
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -113,7 +113,7 @@ const ContactFormEnhanced: React.FC = () => {
           />
         </div>
 
-        <motion.button
+        <button
           type="submit"
           disabled={isSubmitting}
           whileHover={{ scale: 1.02 }}
@@ -131,31 +131,31 @@ const ContactFormEnhanced: React.FC = () => {
               Send Message
             </>
           )}
-        </motion.button>
+        </button>
 
         {submitStatus === 'success' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center text-green-600 bg-green-50 p-3 rounded-md"
           >
             <CheckCircle className="w-5 h-5 mr-2" />
             Message sent successfully!
-          </motion.div>
+          </div>
         )}
 
         {submitStatus === 'error' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center text-red-600 bg-red-50 p-3 rounded-md"
           >
             <AlertCircle className="w-5 h-5 mr-2" />
             Failed to send message. Please try again.
-          </motion.div>
+          </div>
         )}
       </form>
-    </motion.div>
+    </div>
   );
 };
 

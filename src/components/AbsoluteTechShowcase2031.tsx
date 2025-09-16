@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const AbsoluteTechShowcase2031: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -122,6 +122,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -143,6 +144,9 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
     <motion.div
+=======
+    <div
+>>>>>>> cursor/create-and-deploy-new-content-b461
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.2 }}
@@ -150,18 +154,26 @@ const AbsoluteTechShowcase2031: React.FC = () => {
     >
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+<<<<<<< HEAD
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
 <<<<<<< HEAD
 =======
 =======
-        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
 >>>>>>> cursor/create-and-deploy-new-content-4f5e
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,10 +211,14 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+>>>>>>> cursor/create-and-deploy-new-content-b461
         
         {/* Absolute Particles */}
         {[...Array(60)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-6 h-6 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-60"
             style={{
@@ -228,14 +244,14 @@ const AbsoluteTechShowcase2031: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: isVisible ? 1 : 0 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             🔮 ABSOLUTE TECH 2031
-          </motion.div>
+          </div>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
@@ -259,7 +275,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <motion.div
+            <div
               key={currentTech}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -287,7 +303,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {absoluteTechs[currentTech].features.map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -296,13 +312,13 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(absoluteTechs[currentTech].stats).map(([key, value], index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -311,13 +327,13 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Visual Representation */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2 }}
@@ -344,7 +360,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 
                 {/* Absolute Energy Effects */}
                 {[...Array(70)].map((_, i) => (
-                  <motion.div
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-80"
                     style={{
@@ -365,7 +381,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -384,7 +400,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ delay: 2 }}
@@ -404,10 +420,10 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

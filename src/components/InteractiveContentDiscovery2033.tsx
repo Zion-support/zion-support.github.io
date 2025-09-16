@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
 
 const InteractiveContentDiscovery2033: React.FC = () => {
@@ -109,7 +109,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -121,10 +121,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -145,7 +145,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
-              <motion.button
+              <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
                 whileHover={{ scale: 1.05 }}
@@ -158,14 +158,14 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               >
                 {filter.icon}
                 {filter.label}
-              </motion.button>
+              </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={`${activeFilter}-${searchTerm}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -174,7 +174,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -227,35 +227,35 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <Eye className="w-4 h-4" />
                     <span className="text-sm">{item.views} views</span>
                   </div>
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <span className="text-sm font-semibold">Explore</span>
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </button>
                 </div>
 
                 {/* Hover Effect */}
-                <AnimatePresence>
+                
                   {hoveredItem === item.id && (
-                    <motion.div
+                    <div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl pointer-events-none"
                     />
                   )}
-                </AnimatePresence>
-              </motion.div>
+                
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-12"
@@ -263,7 +263,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No content found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-          </motion.div>
+          </div>
         )}
       </div>
     </motion.section>

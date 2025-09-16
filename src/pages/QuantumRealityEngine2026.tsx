@@ -269,6 +269,7 @@ const QuantumRealityEngine2026: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
@@ -278,6 +279,11 @@ export default QuantumRealityEngine2026;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 export default QuantumRealityEngine2026;
+=======
+<<<<<<< HEAD
+export default QuantumRealityEngine2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -286,7 +292,17 @@ export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -487,7 +503,10 @@ export default QuantumRealityEngine2026;
             </a>
 export default QuantumRealityEngine2026;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
@@ -507,9 +526,18 @@ export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
 export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -517,4 +545,10 @@ export default QuantumRealityEngine2026;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461

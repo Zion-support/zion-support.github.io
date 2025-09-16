@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const EnhancedContentShowcase: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const EnhancedContentShowcase: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 Watch Interactive Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -67,9 +67,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-400 transition-colors font-semibold">
               Explore AI →
             </button>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -92,9 +92,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-400 transition-colors font-semibold">
               Go Quantum →
             </button>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -117,9 +117,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-emerald-500 text-white py-2 rounded-lg hover:bg-emerald-400 transition-colors font-semibold">
               Connect Mind →
             </button>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -142,9 +142,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-400 transition-colors font-semibold">
               Explore Systems →
             </button>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -167,9 +167,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-cyan-500 text-white py-2 rounded-lg hover:bg-cyan-400 transition-colors font-semibold">
               Discover Edge AI →
             </button>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -192,7 +192,7 @@ const EnhancedContentShowcase: React.FC = () => {
             <button className="w-full bg-violet-500 text-white py-2 rounded-lg hover:bg-violet-400 transition-colors font-semibold">
               See Predictions →
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -239,7 +239,7 @@ export default function ComprehensiveServicesShowcase2030() {
   };
 
   const getServiceCard = (service: any, index: number) => (
-    <motion.div
+    <div
       key={service.id}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -345,7 +345,7 @@ export default function ComprehensiveServicesShowcase2030() {
           <Mail className="w-4 h-4 ml-2" />
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
@@ -359,7 +359,7 @@ export default function ComprehensiveServicesShowcase2030() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -412,7 +412,7 @@ export default function ComprehensiveServicesShowcase2030() {
                 <div className="text-gray-300">Client Satisfaction</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -454,7 +454,7 @@ export default function ComprehensiveServicesShowcase2030() {
 
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -469,7 +469,7 @@ export default function ComprehensiveServicesShowcase2030() {
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage in the digital age.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
         <div className="mb-16">
@@ -536,15 +536,15 @@ export default function ComprehensiveServicesShowcase2030() {
         {/* Services Grid/List */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
+            
               {sortedServices.map((service, index) => getServiceCard(service, index))}
-            </AnimatePresence>
+            
           </div>
         ) : (
           <div className="space-y-6">
-            <AnimatePresence>
+            
               {sortedServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -638,14 +638,14 @@ export default function ComprehensiveServicesShowcase2030() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
+            
           </div>
         )}
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -676,7 +676,7 @@ export default function ComprehensiveServicesShowcase2030() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Footer Contact Section */}

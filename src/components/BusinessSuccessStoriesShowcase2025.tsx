@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -156,7 +156,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -168,10 +168,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Overall Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -186,10 +186,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               <div className="text-sm text-slate-600">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Success Stories Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -208,11 +208,11 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               {story.company}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Active Success Story */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeStory}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -273,11 +273,11 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Results Summary */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -308,10 +308,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               <div className="text-green-100">Success Rate</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -331,7 +331,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               Start Your Journey
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

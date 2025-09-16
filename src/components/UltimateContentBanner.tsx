@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const UltimateContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,8 +47,8 @@ const UltimateContentBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -101,8 +101,8 @@ const UltimateContentBanner: React.FC = () => {
             />
           ))}
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const PromotionalBanner: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -58,8 +58,8 @@ const PromotionalBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -84,7 +84,7 @@ const PromotionalBanner: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <motion.div
+              <div
                 key={currentBanner}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -97,7 +97,7 @@ const PromotionalBanner: React.FC = () => {
                 <p className="text-lg opacity-90">
                   {banners[currentBanner].subtitle}
                 </p>
-              </motion.div>
+              </div>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -130,8 +130,8 @@ const PromotionalBanner: React.FC = () => {
           <div className="absolute top-1/2 -right-10 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute bottom-0 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

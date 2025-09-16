@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 import React from 'react';
@@ -19,6 +20,29 @@ const DynamicContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 import React from 'react';
@@ -60,7 +84,25 @@ const DynamicContentCarousel: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
@@ -81,8 +123,11 @@ const DynamicContentCarousel: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -104,7 +149,13 @@ const DynamicContentCarousel: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
     </div>
   );
@@ -114,10 +165,14 @@ export default DynamicContentCarousel;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -125,6 +180,10 @@ export default DynamicContentCarousel;
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 <<<<<<< HEAD
 =======
@@ -157,4 +216,10 @@ export default DynamicContentCarousel;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461

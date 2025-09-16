@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
@@ -170,7 +170,7 @@ export default function EnhancedServicesShowcase() {
         {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -199,14 +199,14 @@ export default function EnhancedServicesShowcase() {
                   <span className="text-pink-300 font-semibold">24/7 Support</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -219,11 +219,11 @@ export default function EnhancedServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((category, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ export default function EnhancedServicesShowcase() {
                       </Button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -347,7 +347,7 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid/List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -357,7 +357,7 @@ export default function EnhancedServicesShowcase() {
               }
             >
               {filteredServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   variants={itemVariants}
                   className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
@@ -482,9 +482,9 @@ export default function EnhancedServicesShowcase() {
                       </div>
                     </div>
                   )}
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
 
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
@@ -509,7 +509,7 @@ export default function EnhancedServicesShowcase() {
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -557,7 +557,7 @@ export default function EnhancedServicesShowcase() {
                   <DollarSign className="ml-2 w-6 h-6" />
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

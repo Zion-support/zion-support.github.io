@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Sparkles
@@ -197,7 +197,7 @@ const AIPoweredContentRecommendationSystem = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -219,10 +219,10 @@ const AIPoweredContentRecommendationSystem = () => {
             Discover the most relevant content tailored to your interests using our advanced AI algorithms. 
             Get personalized recommendations that match your reading patterns and preferences.
           </p>
-        </motion.div>
+        </div>
 
         {/* AI Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -242,10 +242,10 @@ const AIPoweredContentRecommendationSystem = () => {
               <div className="text-gray-600 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -270,11 +270,11 @@ const AIPoweredContentRecommendationSystem = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* AI Processing Indicator */}
         {isLoading && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center mb-8"
@@ -283,21 +283,21 @@ const AIPoweredContentRecommendationSystem = () => {
               <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
               AI is analyzing your preferences and generating recommendations...
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Recommendations Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <AnimatePresence>
+          
             {recommendations.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
-                <motion.div
+                <div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -399,14 +399,14 @@ const AIPoweredContentRecommendationSystem = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* Load More */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -419,7 +419,7 @@ const AIPoweredContentRecommendationSystem = () => {
             <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
             Generate More Recommendations
           </button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

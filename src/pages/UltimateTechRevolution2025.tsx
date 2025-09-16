@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, 
   Zap, 
@@ -104,7 +104,7 @@ const UltimateTechRevolution2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -137,7 +137,7 @@ const UltimateTechRevolution2025: React.FC = () => {
                 Watch Live Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </main>
 
@@ -146,7 +146,7 @@ const UltimateTechRevolution2025: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {revolutionaryStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const UltimateTechRevolution2025: React.FC = () => {
                 </div>
                 <div className={`text-5xl font-bold mb-3 ${stat.color}`}>{stat.number}</div>
                 <div className="text-gray-300 text-lg">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -169,7 +169,7 @@ const UltimateTechRevolution2025: React.FC = () => {
       {/* Breakthrough Technologies */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -182,11 +182,11 @@ const UltimateTechRevolution2025: React.FC = () => {
               Discover the cutting-edge technologies that are revolutionizing every aspect 
               of human existence and creating unprecedented opportunities for growth.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {breakthroughTechnologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -219,7 +219,7 @@ const UltimateTechRevolution2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -228,7 +228,7 @@ const UltimateTechRevolution2025: React.FC = () => {
       {/* Use Cases Section */}
       <div className="py-24 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -241,11 +241,11 @@ const UltimateTechRevolution2025: React.FC = () => {
               See how these revolutionary technologies are already transforming industries 
               and creating new possibilities for human advancement.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ const UltimateTechRevolution2025: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -266,7 +266,7 @@ const UltimateTechRevolution2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -288,7 +288,7 @@ const UltimateTechRevolution2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

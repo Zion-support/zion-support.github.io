@@ -153,7 +153,7 @@ export default function NewsPage() {
     },
     {
       id: 2,
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -161,7 +161,7 @@ export default function NewsPage() {
         {featuredArticle && (
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -171,9 +171,9 @@ export default function NewsPage() {
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Featured Story
                 </h2>
-              </motion.div>
+              </div>
               
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -227,7 +227,7 @@ export default function NewsPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
         )}
@@ -263,7 +263,7 @@ export default function NewsPage() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our latest developments and breakthroughs
               </p>
-            </motion.div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
@@ -274,7 +274,7 @@ export default function NewsPage() {
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -327,7 +327,7 @@ export default function NewsPage() {
                   </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -337,7 +337,7 @@ export default function NewsPage() {
                 <Newspaper className="w-4 h-4 mr-2" />
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -353,12 +353,12 @@ export default function NewsPage() {
                 Stay updated with the latest developments, breakthroughs, and innovations 
                 from Zion Tech Group and the technology industry.
               </p>
-            </motion.div>
+            </div>
 
         {/* Category Filter */}
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -372,7 +372,7 @@ export default function NewsPage() {
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
@@ -564,7 +564,7 @@ export default function News() {
           </motion.p>
           
           {/* Search and Filter */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -596,7 +596,7 @@ export default function News() {
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -647,7 +647,7 @@ export default function News() {
           >
             Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.
           </motion.p>
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -660,7 +660,7 @@ export default function News() {
             <a href="#insights" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
               Industry Insights
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -687,7 +687,7 @@ export default function News() {
       {/* Featured News */}
       <section id="featured" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -700,7 +700,7 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most important announcements and breakthrough developments.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredNews.map((article, index) => (
@@ -759,7 +759,7 @@ export default function News() {
       {/* Recent News */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -772,7 +772,7 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Stay current with our latest developments and industry updates.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
             {recentNews.map((article, index) => (
@@ -826,7 +826,7 @@ export default function News() {
       {/* Industry Insights */}
       <section id="insights" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -839,11 +839,11 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Deep analysis and thought leadership on emerging technologies and industry trends.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {industryInsights.map((insight, index) => (
-              <motion.div 
+              <div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -874,7 +874,7 @@ export default function News() {
                   <span>Read Insight</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -883,7 +883,7 @@ export default function News() {
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -905,7 +905,7 @@ export default function News() {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1026,7 +1026,7 @@ export default function News() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {upcomingEvents.map((event, index) => (
-              <motion.div
+              <div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1076,7 +1076,7 @@ export default function News() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1085,7 +1085,7 @@ export default function News() {
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1113,12 +1113,12 @@ export default function News() {
             <p className="text-sm text-gray-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -1128,7 +1128,7 @@ export default function News() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
@@ -1174,7 +1174,7 @@ export default function News() {
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -1193,7 +1193,7 @@ export default function News() {
                   Subscribe
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
@@ -1230,7 +1230,7 @@ export default function News() {
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1243,11 +1243,11 @@ export default function News() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore news by category to find updates in your areas of interest.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
-                <motion.div
+                <div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1264,7 +1264,7 @@ export default function News() {
                     {category.name}
                   </h3>
                   <p className="text-gray-400 text-xs">{category.count} articles</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -1273,7 +1273,7 @@ export default function News() {
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1286,7 +1286,7 @@ export default function News() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Stay updated with our latest announcements and developments.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
@@ -1329,7 +1329,7 @@ export default function News() {
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1357,7 +1357,7 @@ export default function News() {
                   Press Kit
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
@@ -1365,7 +1365,7 @@ export default function News() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1393,7 +1393,7 @@ export default function News() {
                 Contact Our Team
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -1402,7 +1402,7 @@ export default function News() {
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1423,7 +1423,7 @@ export default function News() {
                 About Zion Tech Group
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

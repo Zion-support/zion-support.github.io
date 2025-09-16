@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
   return (
@@ -20,14 +20,14 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-green-600 to-teal-600 rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🎯 Implementation Master Framework</span>
-          </motion.div>
+          </div>
 
           {/* Main Heading */}
           <motion.h1
@@ -54,7 +54,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
           </motion.p>
 
           {/* Success Metrics */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -80,10 +80,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Cost Reduction</h3>
               <p className="text-sm opacity-80">Implementation cost efficiency</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Framework Pillars */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: 0.8 }}
@@ -117,10 +117,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
                 <p className="text-xs opacity-80">Launch & Scale</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -138,10 +138,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
             >
               🎯 Start Implementation
             </a>
-          </motion.div>
+          </div>
 
           {/* Social Proof */}
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4, duration: 0.8 }}
@@ -155,7 +155,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
               <div className="text-lg font-semibold">Airbnb</div>
               <div className="text-lg font-semibold">Tesla</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

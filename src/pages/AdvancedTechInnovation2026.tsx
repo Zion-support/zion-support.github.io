@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedTechInnovation2026: React.FC = () => {
   const innovations = [
@@ -46,7 +46,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -70,7 +70,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -79,7 +79,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -89,7 +89,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-2">{stat.value}</div>
                 <div className="text-sm opacity-80">{stat.unit}</div>
                 <div className="text-lg font-semibold">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -98,7 +98,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
       {/* Innovations Grid */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -109,11 +109,11 @@ const AdvancedTechInnovation2026: React.FC = () => {
               Discover the cutting-edge technologies that are transforming our world and creating 
               unprecedented opportunities for human advancement.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {innovations.map((innovation, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
                     Learn More →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -146,7 +146,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -164,7 +164,7 @@ const AdvancedTechInnovation2026: React.FC = () => {
                 Contact Our Team
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

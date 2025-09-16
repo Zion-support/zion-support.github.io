@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Mail
   CheckCircle
@@ -85,7 +85,7 @@ const NewsletterSignup2026 = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
@@ -99,7 +99,7 @@ const NewsletterSignup2026 = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
             animate={{
@@ -131,7 +131,7 @@ const NewsletterSignup2026 = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8 }}
@@ -159,7 +159,7 @@ const NewsletterSignup2026 = () => {
               {benefits.map((benefitindex) => {
                 const Icon = benefit.icon;
                 return (
-                  <motion.div
+                  <div
                     key={benefit.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ const NewsletterSignup2026 = () => {
                       <h3 className="text-white font-medium mb-1">{benefit.title}</h3>
                       <p className="text-gray-400 text-sm">{benefit.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -181,7 +181,7 @@ const NewsletterSignup2026 = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={stat.label}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -190,13 +190,13 @@ const NewsletterSignup2026 = () => {
                 >
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Newsletter Form */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -204,7 +204,7 @@ const NewsletterSignup2026 = () => {
           >
             <AnimatePresence mode="wait">
               {!isSubscribed ? (
-                <motion.div
+                <div
                   key="form"
                   initial={{ opacity: 0scale: 0.9 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -240,13 +240,13 @@ const NewsletterSignup2026 = () => {
                     </div>
 
                     {error && (
-                      <motion.div
+                      <div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-red-400 text-sm"
                       >
                         {error}
-                      </motion.div>
+                      </div>
                     )}
 
                     <button
@@ -273,9 +273,9 @@ const NewsletterSignup2026 = () => {
                       <span>We respect your privacy. Unsubscribe at any time.</span>
                     </div>
                   </form>
-                </motion.div>
+                </div>
               ) : (
-                <motion.div
+                <div
                   key="success"
                   initial={{ opacity: 0scale: 0.9 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -312,14 +312,14 @@ const NewsletterSignup2026 = () => {
                   >
                     Subscribe another email
                   </button>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </motion.div>
+            
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -348,9 +348,9 @@ const NewsletterSignup2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -19,6 +20,8 @@
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -34,15 +37,16 @@ import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 export default function Contact() {
   const { showToast: toast } = useToast();
 =======
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -74,6 +78,8 @@ const Contact: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -135,6 +141,7 @@ const Contact: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -147,6 +154,8 @@ const Contact: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -156,7 +165,7 @@ const Contact: React.FC = () => {
       
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -170,20 +179,20 @@ const Contact: React.FC = () => {
             Ready to transform your business with cutting-edge AI and technology solutions? 
             Our team of experts is here to help you navigate the digital landscape.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {contactMethods.map((method, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -194,16 +203,16 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-400 text-sm">{method.description}</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -217,7 +226,7 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
-              <motion.div
+              <div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-12"
@@ -227,7 +236,7 @@ const Contact: React.FC = () => {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -351,14 +360,14 @@ const Contact: React.FC = () => {
                 </div>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -368,6 +377,7 @@ const Contact: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
@@ -399,6 +409,8 @@ const Contact: React.FC = () => {
               <li>• Technology consulting</li>
             </ul>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -415,7 +427,7 @@ const Contact: React.FC = () => {
                 Email Support
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -461,7 +473,11 @@ const Contact: React.FC = () => {
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
           <motion.div
+=======
+          <div
+>>>>>>> cursor/create-and-deploy-new-content-b461
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -472,7 +488,11 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
+<<<<<<< HEAD
           </motion.div>
+=======
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-b461
 >>>>>>> cursor/create-and-deploy-new-content-376e
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -490,7 +510,7 @@ const Contact: React.FC = () => {
                 description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -504,8 +524,9 @@ const Contact: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -519,6 +540,8 @@ const Contact: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
           </div>
         </div>
       </section>

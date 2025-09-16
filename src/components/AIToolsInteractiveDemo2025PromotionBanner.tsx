@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Play
   Sparkles
@@ -43,7 +43,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   }[]);
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
@@ -56,7 +56,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -77,10 +77,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 Testexploreand discover 24+ cutting-edge AI tools with live demonstrations. 
                 See how AI can transform your workflow in real-time.
               </p>
-            </motion.div>
+            </div>
 
             {/* Features List */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
@@ -97,10 +97,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -115,10 +115,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 View All Tools
               </button>
-            </motion.div>
+            </div>
 
             {/* Stats */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
@@ -136,11 +136,11 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <div className="text-2xl font-bold text-white mb-1">99.9%</div>
                 <div className="text-sm text-gray-400">Uptime</div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Interactive Demo Preview */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -159,7 +159,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               {/* Tool Showcase */}
               <div className="space-y-4">
                 {tools.map((toolindex) => (
-                  <motion.div
+                  <div
                     key={tool.name}
                     initial={{ opacity: 0.5scale: 0.95 }}
                     animate={{ 
@@ -192,7 +192,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                         </div>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -203,7 +203,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span>{Math.round((currentTool + 1) / tools.length * 100)}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
+                  <div
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${((currentTool + 1) / tools.length) * 100}%` }}
@@ -214,7 +214,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             </div>
 
             {/* Floating Elements */}
-            <motion.div
+            <div
               animate={{ 
                 y: [0-10],
                 rotate: [050]
@@ -227,9 +227,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Zap className="w-8 h-8 text-white" />
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               animate={{ 
                 y: [010],
                 rotate: [0-50]
@@ -243,14 +243,14 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Star className="w-6 h-6 text-white" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Brain, ArrowRight } from 'lucide-react';
 
 const AIServicesPage = () => {
@@ -59,7 +59,7 @@ const AIServicesPage = () => {
             >
               Transform your business with cutting-edge AI solutions designed to automate, optimize, and revolutionize your operations.
             </motion.p>
-            <motion.div 
+            <div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -71,7 +71,7 @@ const AIServicesPage = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
                 Learn More
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -81,7 +81,7 @@ const AIServicesPage = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ const AIServicesPage = () => {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -126,7 +126,7 @@ const AIServicesPage = () => {
           >
             Let's discuss how our AI services can drive your success.
           </motion.p>
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -138,7 +138,7 @@ const AIServicesPage = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
               View Portfolio
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

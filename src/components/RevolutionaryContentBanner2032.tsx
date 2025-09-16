@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryContentBanner2032: React.FC = () => {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -98,7 +98,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
         </div>
         
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -107,16 +107,16 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           <p className="text-lg opacity-90 mb-4">
             Don't miss the most revolutionary technology content of 2032!
           </p>
-          <motion.button
+          <button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl"
           >
             🚀 Explore 2032 Revolution →
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

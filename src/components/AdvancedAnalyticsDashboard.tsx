@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 interface AnalyticsData {
   visitors: {
@@ -177,7 +177,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     type?: 'currency' | 'percentage' | 'number';
     icon: string;
   }) => (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600"
@@ -197,7 +197,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       <div className="text-sm text-gray-600 dark:text-gray-400">
         {title}
       </div>
-    </motion.div>
+    </div>
   );
 
   const ProgressBar = ({ value, max, label, color = 'blue' }: {
@@ -222,7 +222,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
           <span>{formatNumber(value)}</span>
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-          <motion.div
+          <div
             className={`h-2 rounded-full ${colorClasses[color as keyof typeof colorClasses]}`}
             initial={{ width: 0 }}
             animate={{ width: `${percentage}%` }}

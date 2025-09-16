@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Star, Quote } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
@@ -36,7 +36,7 @@ const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,11 +51,11 @@ const TestimonialSection: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <div
               key={testimonial.id}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }}
@@ -98,12 +98,12 @@ const TestimonialSection: React.FC = () => {
                   <div className="text-xs text-cyan-400">{testimonial.company}</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ const TestimonialSection: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

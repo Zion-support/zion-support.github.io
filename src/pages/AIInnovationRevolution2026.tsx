@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain, 
   Zap, 
@@ -222,7 +222,7 @@ const AIInnovationRevolution2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(200)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20"
               style={{
@@ -270,13 +270,13 @@ const AIInnovationRevolution2026: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
         >
           <div className="mb-8">
-            <motion.div
+            <div
               initial={{ scale: 0 }}
               animate={{ scale: isVisible ? 1 : 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -284,7 +284,7 @@ const AIInnovationRevolution2026: React.FC = () => {
             >
               <Sparkles className="w-5 h-5 text-purple-400" />
               <span className="text-purple-300">AI Innovation Revolution</span>
-            </motion.div>
+            </div>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
@@ -297,27 +297,27 @@ const AIInnovationRevolution2026: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <motion.button
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
               <span>Explore Innovations</span>
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
             >
               View Demo
-            </motion.button>
+            </button>
           </div>
 
           {/* Innovation Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {innovationStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -327,16 +327,16 @@ const AIInnovationRevolution2026: React.FC = () => {
                 <stat.icon className="w-6 h-6 text-purple-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Innovations Section */}
       <section id="innovations" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -349,11 +349,11 @@ const AIInnovationRevolution2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               The most groundbreaking AI innovations that will reshape our world in 2026
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {aiInnovations2026.map((innovation, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -409,7 +409,7 @@ const AIInnovationRevolution2026: React.FC = () => {
                   <span>Explore Innovation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -418,7 +418,7 @@ const AIInnovationRevolution2026: React.FC = () => {
       {/* Industry Revolutions Section */}
       <section id="revolutions" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -431,11 +431,11 @@ const AIInnovationRevolution2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               How AI innovations are revolutionizing every industry and aspect of human life
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industryRevolutions.map((revolution, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +459,7 @@ const AIInnovationRevolution2026: React.FC = () => {
                   </span>
                   <span className="text-sm text-gray-400">{revolution.timeline}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -468,7 +468,7 @@ const AIInnovationRevolution2026: React.FC = () => {
       {/* Success Stories Section */}
       <section id="success" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -481,11 +481,11 @@ const AIInnovationRevolution2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Real-world implementations and their transformative results
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -510,7 +510,7 @@ const AIInnovationRevolution2026: React.FC = () => {
                   <h4 className="font-semibold text-green-300 mb-2">Results:</h4>
                   <p className="text-gray-300 text-sm">{story.results}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -519,7 +519,7 @@ const AIInnovationRevolution2026: React.FC = () => {
       {/* Testimonials Section */}
       <section id="testimonials" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -532,11 +532,11 @@ const AIInnovationRevolution2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Hear from the visionaries who are leading the AI innovation revolution
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -562,7 +562,7 @@ const AIInnovationRevolution2026: React.FC = () => {
                     <div className="text-xs text-purple-400">{testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -571,7 +571,7 @@ const AIInnovationRevolution2026: React.FC = () => {
       {/* CTA Section */}
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -585,22 +585,22 @@ const AIInnovationRevolution2026: React.FC = () => {
               Experience the future of artificial intelligence today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               >
                 Explore AI Innovations
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Schedule AI Demo
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

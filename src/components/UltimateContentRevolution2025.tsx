@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -178,7 +178,7 @@ const UltimateContentRevolution2025 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -210,7 +210,7 @@ const UltimateContentRevolution2025 = () => {
                 <ChevronRight className="ml-2 h-5 w-5" />
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -219,7 +219,7 @@ const UltimateContentRevolution2025 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((statindex) => (
-              <motion.div
+              <div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -231,7 +231,7 @@ const UltimateContentRevolution2025 = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -268,7 +268,7 @@ const UltimateContentRevolution2025 = () => {
 
           {/* Content Grid */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -277,7 +277,7 @@ const UltimateContentRevolution2025 = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {contentSections[activeTab].items.map((itemindex) => (
-                <motion.div
+                <div
                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -293,10 +293,10 @@ const UltimateContentRevolution2025 = () => {
                     <span className="text-sm font-medium text-blue-400">{item.metrics}</span>
                     <Star className="h-4 w-4 text-yellow-400" />
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          
         </div>
       </div>
 
@@ -310,7 +310,7 @@ const UltimateContentRevolution2025 = () => {
 
           <div className="relative">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0x: 50 }}
                 animate={{ opacity: 1x: 0 }}
@@ -333,8 +333,8 @@ const UltimateContentRevolution2025 = () => {
                   </div>
                 </div>
                 <p className="text-lg text-gray-300 italic">"{testimonials[currentSlide].content}"</p>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
 
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">

@@ -149,9 +149,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -498,9 +506,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
@@ -745,9 +761,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
                 Read the Blueprint →
               </Link>
             </div>
@@ -909,9 +933,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

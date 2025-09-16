@@ -13,7 +13,7 @@ import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/listings';
 import { ProductListing } from '@/types/listings';
-import { motion } from 'framer-motion';
+
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -215,7 +215,7 @@ export default function EquipmentDetail() {
         />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
-            <motion.div 
+            <div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -246,7 +246,7 @@ export default function EquipmentDetail() {
                   Browse Equipment
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </>
@@ -284,7 +284,7 @@ export default function EquipmentDetail() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
-            <motion.div 
+            <div 
               className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -319,10 +319,10 @@ export default function EquipmentDetail() {
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
 
             {/* Product Details */}
-            <motion.div 
+            <div 
               className="space-y-6"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -467,7 +467,7 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

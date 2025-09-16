@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -10,7 +10,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,11 +33,11 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               📖 Learn More
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Revolutionary Breakthroughs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -58,9 +58,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             <a href="/pages/ConsciousnessComputingRevolution2034" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Reality →
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -81,9 +81,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Discover Quantum →
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -104,14 +104,14 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             <a href="/pages/TranscendentAI2030" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Transcendent →
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Advanced Technologies */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔬 Advanced Technologies 2035</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -125,9 +125,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               <a href="/pages/ConsciousnessComputingRevolution2034" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                 Explore Waves →
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -141,9 +141,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
                 Explore Fields →
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -157,9 +157,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               <a href="/pages/AdvancedQuantumComputing2026" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
                 Explore Energy →
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -173,7 +173,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               <a href="/pages/AdvancedTechTrends2027" className="block w-full bg-white text-teal-600 py-2 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center text-sm">
                 Explore Time →
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -208,7 +208,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2035</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -226,9 +226,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Transcendent AI entities</li>
                 <li>• Quantum reality manipulation</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
@@ -245,12 +245,12 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Reality manipulation abilities</li>
                 <li>• Universal creation powers</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -271,7 +271,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
               🌌 Transcendent AI
             </a>
           </div>
-        </motion.div>
+        </div>
       </main>
       
       <Footer />

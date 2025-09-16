@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Sparkles
   ArrowRight
@@ -31,7 +31,7 @@ const NewContentShowcase2026PromotionBanner = () => {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
@@ -40,7 +40,7 @@ const NewContentShowcase2026PromotionBanner = () => {
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <motion.div
+        <div
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
@@ -100,7 +100,7 @@ const NewContentShowcase2026PromotionBanner = () => {
           {/* Visual */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <motion.div
+              <div
                 animate={{ y: [-10-10] }}
                 transition={{ duration: 3repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
@@ -108,9 +108,9 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <Brain className="w-8 h-8 text-purple-300 mb-2" />
                 <h4 className="text-white font-semibold mb-1">AI Innovations</h4>
                 <p className="text-sm text-purple-200">Neural interfaces & quantum AI</p>
-              </motion.div>
+              </div>
               
-              <motion.div
+              <div
                 animate={{ y: [10-10] }}
                 transition={{ duration: 4repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
@@ -118,9 +118,9 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <Zap className="w-8 h-8 text-pink-300 mb-2" />
                 <h4 className="text-white font-semibold mb-1">Automation</h4>
                 <p className="text-sm text-pink-200">Smart workflows & processes</p>
-              </motion.div>
+              </div>
               
-              <motion.div
+              <div
                 animate={{ y: [-515-5] }}
                 transition={{ duration: 5repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
@@ -128,9 +128,9 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <Rocket className="w-8 h-8 text-yellow-300 mb-2" />
                 <h4 className="text-white font-semibold mb-1">Future Tech</h4>
                 <p className="text-sm text-yellow-200">2030+ predictions</p>
-              </motion.div>
+              </div>
               
-              <motion.div
+              <div
                 animate={{ y: [15-515] }}
                 transition={{ duration: 6repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
@@ -138,16 +138,16 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <Target className="w-8 h-8 text-green-300 mb-2" />
                 <h4 className="text-white font-semibold mb-1">Interactive</h4>
                 <p className="text-sm text-green-200">Live demonstrations</p>
-              </motion.div>
+              </div>
             </div>
             
             {/* Floating elements */}
-            <motion.div
+            <div
               animate={{ rotate: 360 }}
               transition={{ duration: 20repeat: Infinityease: "linear" }}
               className="absolute -top-4 -right-4 w-16 h-16 border-2 border-white/30 rounded-full"
             />
-            <motion.div
+            <div
               animate={{ rotate: -360 }}
               transition={{ duration: 15repeat: Infinityease: "linear" }}
               className="absolute -bottom-4 -left-4 w-12 h-12 border-2 border-white/20 rounded-full"
@@ -155,7 +155,7 @@ const NewContentShowcase2026PromotionBanner = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

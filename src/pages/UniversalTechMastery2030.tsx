@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UniversalTechMastery2030: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const UniversalTechMastery2030: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -37,13 +37,13 @@ const UniversalTechMastery2030: React.FC = () => {
                 ⚡ Ultimate Control
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Mastery Domains */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -55,7 +55,7 @@ const UniversalTechMastery2030: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Master every technology across all dimensions, universes, and realities
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
@@ -96,7 +96,7 @@ const UniversalTechMastery2030: React.FC = () => {
               technologies: ["Zero-point energy", "Dark energy control", "Universal power", "Energy transmutation", "Infinite power", "Cosmic energy"]
             }
           ].map((domain, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const UniversalTechMastery2030: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -122,7 +122,7 @@ const UniversalTechMastery2030: React.FC = () => {
       {/* Mastery Levels */}
       <div className="bg-gradient-to-r from-emerald-800/30 to-cyan-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -131,7 +131,7 @@ const UniversalTechMastery2030: React.FC = () => {
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Universal Mastery Levels
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-8">
             {[
@@ -172,7 +172,7 @@ const UniversalTechMastery2030: React.FC = () => {
                 color: "from-blue-400 to-purple-600"
               }
             ].map((level, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -196,7 +196,7 @@ const UniversalTechMastery2030: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -204,7 +204,7 @@ const UniversalTechMastery2030: React.FC = () => {
 
       {/* Universal Capabilities */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -213,10 +213,10 @@ const UniversalTechMastery2030: React.FC = () => {
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Universal Capabilities
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -259,9 +259,9 @@ const UniversalTechMastery2030: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -304,13 +304,13 @@ const UniversalTechMastery2030: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -330,7 +330,7 @@ const UniversalTechMastery2030: React.FC = () => {
               Explore Path
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

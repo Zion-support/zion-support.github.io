@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ const TranscendentAI2033Banner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -44,26 +44,26 @@ const TranscendentAI2033Banner: React.FC = () => {
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
-                <motion.button
+                <button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/25 transition-all"
                 >
                   Begin Transcendence <ArrowRight className="w-5 h-5" />
-                </motion.button>
+                </button>
               </Link>
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Explore Infinity
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Feature Grid */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -91,7 +91,7 @@ const TranscendentAI2033Banner: React.FC = () => {
                 description: "Omniversal travel network"
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -108,9 +108,9 @@ const TranscendentAI2033Banner: React.FC = () => {
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                   {feature.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 
