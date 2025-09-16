@@ -47,7 +47,8 @@ const posts = [
 // Fresh posts (Sept 16, 2025)
 posts.unshift(
   { slug: 'ai-2026-agent-rollback-patterns', title: 'Agent Rollback Patterns — Safe Recovery (2026)', excerpt: 'Staged deploys, eval gates, evidence bundles, and containment for safe recovery.' },
-  { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' }
+  { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' },
+  { slug: 'ai-2026-production-agent-postmortems-playbook', title: 'Production Agent Postmortems — Playbook (2026)', excerpt: 'Blameless, evidence‑driven postmortems that improve safety and speed.' }
 )
 
 // Newly added posts (Sept 2025)

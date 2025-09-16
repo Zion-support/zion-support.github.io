@@ -76,6 +76,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       gradient: 'from-amber-500 to-orange-600'
     },
     {
+      title: 'Production Agent Postmortems — Playbook (2026)',
+      href: '/blog/ai-2026-production-agent-postmortems-playbook',
+      tag: 'New',
+      gradient: 'from-fuchsia-500 to-pink-600'
+    },
+    {
       title: 'Safe Tooling Permissions — Playbook (2026)',
       href: '/blog/ai-2026-safe-tooling-permissions-playbook',
       tag: 'New',
