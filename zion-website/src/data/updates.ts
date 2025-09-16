@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Guide: Agent Observability Blueprint (2026)',
+        summary: 'End-to-end traces, SLIs/SLOs, eval overlays, and evidence bundles for agents.',
+        href: '/updates/agent-observability-blueprint-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Guide: Agent Reliability — 2026 Blueprint',
         summary: 'Standardize SLOs, eval gates, and evidence bundles for reliable production agents.',
         href: '/blog/ai-2026-agent-reliability-blueprint',
