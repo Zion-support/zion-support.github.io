@@ -1,16 +1,16 @@
 import React from 'react';
 
-const RevolutionaryContentBanner2035: React.FC = () => {
+const RevolutionaryContentBanner2036: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 p-8 md:p-12">
         <div className="text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY TECHNOLOGY • JANUARY 2035
+            🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2036
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            🚀 Revolutionary Technology Showcase 2035
+            🚀 Revolutionary Technology Showcase 2036
           </h2>
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto">
             Experience the future with our groundbreaking content on Conscious AI, Quantum Consciousness, 
@@ -66,4 +66,4 @@ const RevolutionaryContentBanner2035: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentBanner2035;
+export default RevolutionaryContentBanner2036;
