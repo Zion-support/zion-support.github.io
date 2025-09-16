@@ -100,6 +100,12 @@ export default function HomePage() {
             Real‑Time Guardrail Metrics —
             <a href="/updates/real-time-guardrail-metrics-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Safety Governance Checklist —
+            <a href="/updates/agent-safety-governance-checklist-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Autonomous Rollback Controller —
+            <a href="/updates/autonomous-rollback-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Failure Analysis Toolkit (2026) —
             <a href="/updates/autonomous-failure-analysis-toolkit-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">report</a>
             <span className="mx-2 text-blue-300/60">|</span>
