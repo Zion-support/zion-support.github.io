@@ -60,6 +60,11 @@ import RevolutionaryContentBanner from './src/components/RevolutionaryContentBan
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
+import UltimateBreakthroughBanner from './src/components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from './src/components/NeuralRealityBanner';
+import UltimateTechAdvertisingBanner from './src/components/UltimateTechAdvertisingBanner';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
+import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
 
 export default function App(): JSX.Element {
   return (
@@ -469,6 +474,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/ComprehensiveServicesShowcase2027" element={<ComprehensiveServicesShowcase2027 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
