@@ -7,6 +7,8 @@ import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
+import AdvancedAnalytics from './src/components/AdvancedAnalytics';
+import AIPoweredFeatures from './src/components/AIPoweredFeatures';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import SEOOptimizer from './src/components/SEOOptimizer';
 import MobileOptimizer from './src/components/MobileOptimizer';
@@ -141,7 +143,6 @@ export default function App(): JSX.Element {
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
                   <EnhancedSearch />
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-44f2
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -471,6 +472,21 @@ export default function App(): JSX.Element {
                 {/* Interactive Tech Demo 2027 */}
                 <div className="mb-12">
                   <InteractiveTechDemo2027 />
+                </div>
+
+                {/* Performance Optimizer */}
+                <div className="mb-12">
+                  <PerformanceOptimizer />
+                </div>
+
+                {/* Advanced Analytics */}
+                <div className="mb-12">
+                  <AdvancedAnalytics />
+                </div>
+
+                {/* AI-Powered Features */}
+                <div className="mb-12">
+                  <AIPoweredFeatures />
                 </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
