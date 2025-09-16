@@ -66,6 +66,10 @@ import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
+import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
+import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
+import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
+import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
 
 const App: React.FC = () => {
   return (
@@ -198,6 +202,11 @@ const App: React.FC = () => {
                 <NewsletterSignup />
               </div>
 
+              {/* Revolutionary Content Banner 2027 - NEW */}
+              <div className="mb-12">
+                <RevolutionaryContentBanner2027 />
+              </div>
+
               {/* Promotional Banner */}
               <div className="mb-12">
                 <PromotionalBanner />
@@ -236,6 +245,9 @@ const App: React.FC = () => {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
+          <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
+          <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
         </Routes>
         
         <Footer />
