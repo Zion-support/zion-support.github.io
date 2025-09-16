@@ -315,7 +315,6 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
->>>>>>> origin/feat/new-content-2026-evals
       featured: true
       is_new: true
       metrics:
@@ -722,14 +721,20 @@ content_index:
         incident_reduction: "40%"
         review_time: "-50%"
         coverage: "100% gated"
-
-<<<<<<< HEAD
     - id: "ai-2026-agent-evidence-hub-starter"
       type: "resource"
       title: "AI 2026: Agent Evidence Hub — Starter Kit"
       file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
       url: "/resources/ai-2026-agent-evidence-hub-starter"
-=======
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Evidence", "Governance", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        integration_time: "< 1 day"
+        audit_ready: true
+
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"
       title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
@@ -1060,9 +1065,37 @@ content_index:
         downtime_reduction: "85%"
         cost_savings: "60%"
         prediction_accuracy: "95%"
-<<<<<<< HEAD
       reading_time: "18 min read"
-=======
-      reading_time: "18 min read"
-<<<<<<< HEAD
- 
+
+  newly_added_september_2025:
+    - id: "ai-2026-operational-reliability-blueprint"
+      type: "blog"
+      title: "AI 2026: Operational Reliability Blueprint — Evals, Scorecards, Rollbacks"
+      file_path: "/content/blog/ai-2026-operational-reliability-blueprint.md"
+      url: "/blog/ai-2026-operational-reliability-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Governance", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "16 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        change_failure_rate: "< 3%"
+        rollback_time: "< 5 min"
+
+    - id: "ai-2026-governed-tool-use-case-studies"
+      type: "blog"
+      title: "AI 2026: Governed Tool Use — Real-World Case Studies"
+      file_path: "/content/blog/ai-2026-governed-tool-use-case-studies.md"
+      url: "/blog/ai-2026-governed-tool-use-case-studies"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Safety", "Tool Use", "Governance", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "12 min read"
+      metrics:
+        incident_reduction: "40%"
+        approval_speed: "2x"
+        audit_ready: true
