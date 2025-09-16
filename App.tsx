@@ -94,10 +94,13 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
+import AIBusinessTransformation2027 from './src/pages/AIBusinessTransformation2027';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
+import NewContentPromotionBanner2027 from './src/components/NewContentPromotionBanner2027';
+import FeaturedContentShowcase2027 from './src/components/FeaturedContentShowcase2027';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import NewContentAdvertisingBanner2025 from './src/components/NewContentAdvertisingBanner2025';
 import FeaturedContentShowcase2025 from './src/components/FeaturedContentShowcase2025';
@@ -231,9 +234,17 @@ export default function App(): JSX.Element {
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              {/* NEW: 2027 Content Promotion Banner */}
+              <NewContentPromotionBanner2027 />
+              
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Featured Content Showcase 2027 - latest revolutionary content */}
+                <div className="mb-12">
+                  <FeaturedContentShowcase2027 />
+                </div>
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
@@ -1215,6 +1226,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+          <Route path="/ai-powered-business-transformation-2027-guide" element={<AIBusinessTransformation2027 />} />
           <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
           <Route path="/pages/NewContentSeptember2025" element={<NewContentSeptember2025 />} />
           <Route path="/pages/AIExecutiveBriefQ1_2026" element={<AIExecutiveBriefQ1_2026 />} />
