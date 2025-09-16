@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -14,7 +12,11 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
->>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -42,7 +44,9 @@ const InteractiveTechShowcase: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -278,7 +282,11 @@ const InteractiveTechShowcase: React.FC = () => {
 
     return () => clearInterval(interval);
   }, [technologies.length]);
->>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
   const currentTech = technologies[activeTech];
 
@@ -445,7 +453,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
-=======
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
@@ -543,14 +550,20 @@ const InteractiveTechShowcase: React.FC = () => {
                     <div className="text-sm text-gray-400">Latency</div>
                   </div>
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
               </div>
             </div>
           </div>
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
         {/* Technology Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -842,6 +855,9 @@ export default InteractiveTechShowcase;
             </motion.div>
 export default InteractiveTechShowcase;
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 =======
 
               {/* Demo Button */}
@@ -866,4 +882,4 @@ export default InteractiveTechShowcase;
 
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9

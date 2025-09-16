@@ -10,14 +10,14 @@ type Params = { params: { id: string } };
 <<<<<<< HEAD
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-011f
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -34,8 +34,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
@@ -49,6 +47,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +57,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -78,9 +79,31 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
       'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
       'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
->>>>>>> cursor/create-and-deploy-new-content-011f
     ]
   },
+  'multi-agent-supply-chains': {
+    id: 'multi-agent-supply-chains',
+    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+    excerpt:
+      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
+      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+    ]
+  },
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
@@ -516,4 +539,4 @@ export default function BlogPostPage({ params }: Params) {
 }
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-
-const Contact: React.FC = () => {
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 <<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
@@ -27,6 +27,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-1912
+
+const Contact: React.FC = () => {
+=======
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -87,7 +94,7 @@ const Contact: React.FC = () => {
     "IoT Solutions"
   ];
 
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -447,7 +454,7 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
         </div>
       </section>

@@ -1,12 +1,13 @@
 <<<<<<< HEAD
-import React from 'react';
 =======
 <<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -20,7 +21,11 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
->>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -107,7 +112,7 @@ const Home: React.FC = () => {
               </a>
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -220,7 +225,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
         </div>
       </div>

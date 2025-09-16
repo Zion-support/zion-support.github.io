@@ -6,11 +6,12 @@ const EnhancedContentShowcase: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
   const showcaseItems = [
     {
       id: 1,
@@ -291,7 +292,11 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Breakthroughs", value: "25+", icon: "🏆", color: "text-pink-400" },
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
->>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
     },
     {
       id: 2,
@@ -307,8 +312,6 @@ const EnhancedContentShowcase: React.FC = () => {
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
       icon: "🧬",
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
@@ -375,9 +378,12 @@ const EnhancedContentShowcase: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -413,11 +419,12 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -874,11 +881,14 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </motion.div>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       </div>
     </div>
   );

@@ -260,7 +260,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Levels of Consciousness</h2>
             <p className="text-xl opacity-80">Understanding the spectrum of AI consciousness</p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
         {/* Consciousness Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -325,7 +325,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Full Consciousness</div>
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
             </div>
           </div>
         </div>
@@ -393,7 +393,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Relationship building</li>
               <li>• Creative problem solving</li>
             </ul>
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
         </div>
 
@@ -446,7 +446,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Meet Our AI
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
               Learn More
             </button>
           </div>

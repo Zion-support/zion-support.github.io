@@ -12,7 +12,7 @@
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -22,7 +22,7 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 <<<<<<< HEAD
 =======
 =======
@@ -37,7 +37,7 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
 # Find all files with merge conflict markers
 files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
@@ -76,7 +76,7 @@ done
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 echo "🎉 All conflict resolution complete!"
 =======
 <<<<<<< HEAD
@@ -134,7 +134,7 @@ echo "All merge conflicts resolved!"
 =======
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
@@ -146,4 +146,4 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9

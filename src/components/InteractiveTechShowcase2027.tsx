@@ -9,8 +9,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const techCategories = [
     {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'ai-revolution',
       title: 'Next-Gen AI Revolution 2027',
@@ -42,8 +40,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: '/pages/NeuralInterfaceRevolution2027'
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
       id: 0,
       title: "Quantum Technologies",
       icon: "⚡",
@@ -127,18 +128,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
         }
       ]
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     const interval = setInterval(() => {
@@ -188,8 +188,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
                   : 'bg-white/20 text-white hover:bg-white/30'
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
@@ -259,19 +262,18 @@ const InteractiveTechShowcase2027: React.FC = () => {
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-2xl mr-2">{tech.icon}</span>
@@ -315,8 +317,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
               </a>
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -384,18 +389,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
               <h4 className="text-xl font-semibold text-white mb-2">Quantum Simulations</h4>
               <p className="text-purple-200 text-sm">Witness quantum phenomena and reality manipulation in real-time simulations</p>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Progress Indicators */}
@@ -436,8 +440,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </a>
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -455,12 +462,13 @@ const InteractiveTechShowcase2027: React.FC = () => {
               Schedule Private Demo
             </button>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
         </div>
       </div>

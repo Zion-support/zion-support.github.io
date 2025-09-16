@@ -2,7 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
@@ -233,7 +233,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Dimensional Demo
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
             </button>
           </div>
         </div>

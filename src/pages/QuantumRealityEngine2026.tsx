@@ -255,7 +255,9 @@ const QuantumRealityEngine2026: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 export default QuantumRealityEngine2026;
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
@@ -458,7 +460,11 @@ export default QuantumRealityEngine2026;
             </a>
 export default QuantumRealityEngine2026;
 =======
+<<<<<<< HEAD
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> cursor/create-and-deploy-new-content-36f9
