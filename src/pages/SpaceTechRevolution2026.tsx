@@ -2,8 +2,6 @@ import React from 'react';
 
 const SpaceTechRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -72,7 +70,6 @@ const SpaceTechRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-purple-400 mb-2">2026</div>
               <div className="text-lg opacity-80">Future is Now</div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>

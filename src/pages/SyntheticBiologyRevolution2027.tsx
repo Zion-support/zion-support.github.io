@@ -5,7 +5,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text-center mb-20">
           <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-xl font-bold mb-10 animate-pulse">
             🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
@@ -95,18 +94,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
               Start Bio-Manufacturing →
             </button>
-=======
-            </div>
-          </div>
-        </div>
-
-        {/* Success Stories */}
->>>>>>> cursor/create-and-deploy-new-content-4d2c
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -121,8 +112,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
             </button>
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
           </div>
         </div>
       </div>
