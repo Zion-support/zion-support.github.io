@@ -9,50 +9,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const techCategories = [
     {
       id: 0,
-<<<<<<< HEAD
-      title: "Conscious AI Systems",
-      icon: "🧠",
-      description: "AI that thinks, feels, and creates with human-level consciousness",
-      features: [
-        "Emotional Intelligence",
-        "Creative Problem Solving", 
-        "Self-Directed Learning",
-        "Autonomous Decision Making"
-      ],
-      gradient: "from-purple-600 to-pink-600",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/RevolutionaryTechTrends2027"
-    },
-    {
-      id: 1,
-      title: "Quantum Computing",
-      icon: "⚡",
-      description: "Revolutionary computing power that transcends classical limitations",
-      features: [
-        "Quantum Supremacy",
-        "Parallel Processing",
-        "Cryptographic Security",
-        "Molecular Simulation"
-      ],
-      gradient: "from-cyan-600 to-blue-600",
-      color: "from-cyan-600 to-blue-600",
-      link: "/pages/RevolutionaryTechTrends2027"
-    },
-    {
-      id: 2,
-      title: "Holographic Technology",
-      icon: "🔮",
-      description: "Immersive holographic interfaces that blur the line between reality and virtuality",
-      features: [
-        "3D Holographic Displays",
-        "Touchless Interaction",
-        "Spatial Computing",
-        "Augmented Reality"
-      ],
-      gradient: "from-emerald-600 to-teal-600",
-      color: "from-emerald-600 to-teal-600",
-      link: "/pages/RevolutionaryTechTrends2027"
-=======
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -134,7 +90,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
           link: "/pages/QuantumRealityEngine2027"
         }
       ]
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
     }
   ];
 
@@ -145,6 +100,22 @@ const InteractiveTechShowcase2027: React.FC = () => {
   }, [activeTab]);
 
   return (
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
+      <Helmet>
+        <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
+        <meta name="description" content="Explore our interactive technology showcase featuring quantum technologies, AI evolution, and reality manipulation systems." />
+      </Helmet>
+      
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
@@ -159,32 +130,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-<<<<<<< HEAD
-        <div className="flex justify-center space-x-4 mb-12">
-          {techCategories.map((category, index) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === index
-                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-            >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Technology Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {techCategories.map((tech, index) => (
-            <div
-              key={index}
-              className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
-                isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
-=======
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -211,15 +156,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
               key={index}
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4 animate-bounce">{tech.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-2">{tech.title}</h3>
+                <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
                 <p className="text-white/80 text-sm">{tech.description}</p>
               </div>
               
@@ -235,7 +179,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
               <div className="flex space-x-3">
                 <a
                   href={tech.link}
-                  className={`flex-1 bg-gradient-to-r ${tech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
+                  className={`flex-1 bg-gradient-to-r ${techCategories[activeTab].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
                 >
                   Explore →
                 </a>

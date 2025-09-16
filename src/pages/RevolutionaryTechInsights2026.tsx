@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -239,7 +239,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
           <div className="absolute top-0 left-0 w-full h-full">
             {[...Array(200)].map((_, i) => (
-              <div
+              <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-20"
                 style={{
@@ -288,13 +288,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 
         {/* Hero Section */}
         <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
             <div className="mb-8">
-              <div
+              <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: isVisible ? 1 : 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -303,7 +303,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             <div className="mb-8">
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
-              </div>
+              </motion.div>
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -316,27 +316,27 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
               >
                 <Play className="w-5 h-5" />
                 <span>Explore Insights</span>
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Learn More
-              </button>
+              </motion.button>
             </div>
 
             {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {breakthroughStats.map((stat, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -346,16 +346,16 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
                   <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Insights Section */}
         <section id="insights" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -369,11 +369,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 Revolutionary Tech Insights 2026 represents the convergence of consciousness, quantum computing, and reality engineering 
                 to create systems that transcend human limitations and open infinite possibilities
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {techInsights.map((insight, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +404,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -413,7 +413,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -426,11 +426,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -467,7 +467,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -476,7 +476,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -489,11 +489,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -519,7 +519,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       <div className="text-xs text-indigo-400">{testimonial.company}</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -528,7 +528,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -542,22 +542,22 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 of consciousness, reality, and intelligence in ways never before imagined
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
                 >
                   Explore Revolutionary Insights
-                </button>
-                <button
+                </motion.button>
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
                 >
                   Schedule Insight Demo
-                </button>
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -586,9 +586,3 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;

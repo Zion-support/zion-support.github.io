@@ -230,54 +230,6 @@
   --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
-/* New Animations for 2027 Components */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
-  }
-}
-
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 }
@@ -334,110 +286,64 @@ body {
   filter: contrast(150%) brightness(120%);
 }
 
-.high-contrast button,
-.high-contrast input,
-.high-contrast select,
-.high-contrast textarea {
-  border: 2px solid currentColor;
-}
-
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-}
-
-/* Mobile optimizations */
-.mobile-optimized {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.mobile-optimized input,
-.mobile-optimized textarea {
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}
-
-/* Tablet optimizations */
-.tablet-optimized {
-  /* Tablet-specific styles */
-}
-
-/* Orientation-specific styles */
-.orientation-portrait {
-  /* Portrait-specific styles */
-}
-
-.orientation-landscape {
-  /* Landscape-specific styles */
-}
-
-/* Performance optimizations */
-.lazy-load {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.lazy-load.loaded {
-  opacity: 1;
-}
-
-/* Focus management */
-.focus-trap {
-  outline: 2px solid #4F46E5;
-  outline-offset: 2px;
-}
-
-/* Skip links */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.8);
   }
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
+
+/* Custom Utility Classes */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive Typography */
+.text-responsive {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Interactive Elements */
+.interactive {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.interactive:active {
+  transform: translateY(0);
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 
 const UltimateContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,90 +6,13 @@ const UltimateContentShowcase2026: React.FC = () => {
 
   const showcaseItems = [
     {
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-            🌟 ULTIMATE TECHNOLOGY SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-            Revolutionary Technology Experience
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore the most advanced technologies ever created, pushing the boundaries of what's possible in 2026
-          </p>
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category, index) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(index)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                activeCategory === index
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-            key={activeCategory}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <div className="grid md:grid-cols-2 gap-8">
-              {currentCategory.content.map((item, index) => (
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                  className={`bg-gradient-to-br ${currentCategory.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300`}
-                >
-                  <div className="text-6xl mb-6 text-center">{currentCategory.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
-                  <p className="text-lg opacity-90 mb-6 text-center">{item.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center space-x-2">
-                          <span className="text-green-400">✓</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400">{item.stats}</div>
-                      <div className="text-sm opacity-75">Performance Metric</div>
-                    </div>
-                  </div>
-                  
-                  <button className={`w-full bg-gradient-to-r ${currentCategory.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                    Explore {item.title} →
-                  </button>
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-purple-900 to-pink-900 rounded-2xl p-12 mb-16"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-6">🎮 Interactive Technology Demo</h3>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Experience our revolutionary technologies through interactive demonstrations
-            </p>
+  return (
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ULTIMATE BREAKTHROUGH 2026 • JANUARY 2026
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -121,9 +43,10 @@ const UltimateContentShowcase2026: React.FC = () => {
               </button>
             </div>
           </div>
+        </motion.div>
 
         {/* Testimonials */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -133,54 +56,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             Hear from leading experts about our revolutionary technologies
           </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
-                  ))}
-                </div>
-                <blockquote className="text-lg italic mb-6 text-center">
-                  "{testimonial.quote}"
-                </blockquote>
-                <div className="text-center">
-                  <div className="font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-sm opacity-75">{testimonial.role}</div>
-                  <div className="text-sm opacity-75">{testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <h3 className="text-5xl font-bold mb-6">🌟 Ready to Experience the Future?</h3>
-          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
-            Join thousands of innovators who are already using our revolutionary technologies to transform their businesses
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl hover:scale-105">
-              🚀 Get Started Today
-            </button>
-            <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-xl hover:scale-105">
-              📞 Schedule Demo
-            </button>
-          </div>
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -310,133 +185,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             <a href="/pages/InterdimensionalTechRevolution2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center mt-6">
               Enter the Portal →
             </a>
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ULTIMATE SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-80 max-w-3xl mx-auto">
-            Experience the most advanced technologies that will reshape our world forever
-          </p>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto">
-          {/* Main Showcase Carousel */}
-          <div className="relative overflow-hidden rounded-3xl">
-            <AnimatePresence mode="wait">
-              <div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
-                className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30"
-              >
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="text-8xl mb-6">{showcaseItems[currentSlide].icon}</div>
-                    <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      {showcaseItems[currentSlide].title}
-                    </h3>
-                    <p className="text-xl opacity-90 mb-8">
-                      {showcaseItems[currentSlide].description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                      {showcaseItems[currentSlide].features.map((feature, index) => (
-                        <div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-center space-x-2"
-                        >
-                          <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></span>
-                          <span className="text-purple-200">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <a
-                      href={showcaseItems[currentSlide].link}
-                      className={`inline-block bg-gradient-to-r ${showcaseItems[currentSlide].gradient} px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
-                    >
-                      Explore Technology →
-                    </a>
-                  </div>
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl"></div>
-                    <div className="relative bg-gradient-to-br from-gray-800/30 to-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-                      <div className="text-center">
-                        <div className="text-6xl mb-4">{showcaseItems[currentSlide].icon}</div>
-                        <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
-                        <p className="text-purple-200 mb-6">
-                          Experience this revolutionary technology in action
-                        </p>
-                        <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-                          Launch Demo
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-3 mt-8">
-            {showcaseItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Auto-play Toggle */}
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                isAutoPlaying
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                  : 'bg-white/20 text-white hover:bg-white/30'
-              }`}
-            >
-              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
-            </button>
           </div>
         </div>
         
@@ -444,44 +192,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           <a href="/pages/UltimateTechBreakthrough2026" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
             🌟 Experience the Ultimate Revolution →
           </a>
-        </div>
-          </div>
-        </div>
-
-        {/* Quick Access Grid */}
-        <div className="mt-20">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-4">Quick Access to All Technologies</h3>
-            <p className="text-lg opacity-80">Explore all our revolutionary technologies at once</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {showcaseItems.map((item, index) => (
-              <div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300`}
-              >
-                <div className="text-6xl mb-4 text-center">{item.icon}</div>
-                <h4 className="text-2xl font-bold mb-4 text-center">{item.title}</h4>
-                <p className="text-center opacity-80 mb-6">{item.description}</p>
-                <a
-                  href={item.link}
-                  className={`block w-full bg-gradient-to-r ${item.gradient} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
-                >
-                  Explore Now →
-                </a>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

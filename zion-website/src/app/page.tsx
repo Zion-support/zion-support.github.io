@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import React from 'react'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/research-article-promo
 =======
@@ -33,34 +7,19 @@ import React from 'react'
 import { getLatestUpdates } from '@/data/updates'
 >>>>>>> origin/feat/updates-content-and-advertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import {
   ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 =======
 import React from 'react'
 >>>>>>> origin/feat/news-and-fixes
@@ -81,10 +40,6 @@ import {
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
-<<<<<<< HEAD
-  ChartBarIcon,
->>>>>>> origin/feat/content-promo
-=======
 >>>>>>> origin/feat/new-updates-and-homepage-promo
   UserGroupIcon
 =======
@@ -109,31 +64,7 @@ import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-import React from 'react'
->>>>>>> origin/feat/news-and-fixes
-import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
->>>>>>> origin/feat/case-studies-content
 =======
 import React from 'react'
 =======
@@ -146,38 +77,11 @@ import {
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ChartBarIcon,
->>>>>>> origin/feat/content-promo
-=======
 >>>>>>> origin/feat/new-updates-and-homepage-promo
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
   UserGroupIcon
 } from '@heroicons/react/24/outline'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
-import { getLatestUpdates } from '../data/updates'
-=======
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 =======
@@ -187,10 +91,13 @@ import { getLatestUpdates } from '../data/updates'
 const features = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
   {
     name: 'AI-Powered Research',
     description:
@@ -199,45 +106,6 @@ const features = [
   },
   {
     name: 'Quantum Computing',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-    description:
-      'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon
-  },
-  {
-    name: 'Global Solutions',
-    description:
-      'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon
-  },
-  {
-    name: 'Enterprise Security',
-    description:
-      'Military-grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
     description: 'Next-generation quantum neural networks for solving complex computational problems.',
     icon: CpuChipIcon,
   },
@@ -251,17 +119,6 @@ const features = [
     description: 'Military-grade security protocols protecting your most valuable digital assets.',
     icon: ShieldCheckIcon,
 >>>>>>> origin/feat/news-and-fixes
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   },
   {
     name: 'Data Analytics',
@@ -274,26 +131,10 @@ const features = [
       'World-class researchers and engineers pushing the boundaries of technology.',
     icon: UserGroupIcon
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
   { name: 'AI-Powered Research', description: 'Cutting-edge AI that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for complex problem solving.', icon: CpuChipIcon },
   { name: 'Global Solutions', description: 'Worldwide deployment of autonomous operations and digital transformation.', icon: GlobeAltIcon },
@@ -311,186 +152,46 @@ const features = [
   { name: 'Enterprise Security', description: 'Military-grade security protocols protecting your most valuable digital assets.', icon: ShieldCheckIcon },
   { name: 'Data Analytics', description: 'Advanced analytics and insights driving informed decision-making.', icon: ChartBarIcon },
   { name: 'Expert Team', description: 'World-class researchers and engineers pushing the boundaries of technology.', icon: UserGroupIcon },
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 ]
 
 const stats = [
   { name: 'Research Papers Published', value: '150+' },
   { name: 'AI Models Deployed', value: '500+' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-  { name: 'Global Clients', value: '1,000+' },
-  { name: 'Patents Filed', value: '25+' },
-]
-
-const solutions = [
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
   { name: 'Global Clients', value: '1000+' },
   { name: 'Patents Filed', value: '25+' }
 ]
 
 const solutions = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-]
-
-const solutions = [
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions/ai-autonomous-research'
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next-generation computing for complex problem solving.',
-    href: '/solutions/quantum-neural-networks'
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for enterprise efficiency.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-    href: '/solutions/autonomous-business'
-=======
     href: '/solutions/autonomous-business',
 >>>>>>> origin/feat/news-and-fixes
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    href: '/solutions/autonomous-business'
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   },
   {
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-    href: '/solutions/it-asset-management'
-  }
-<<<<<<< HEAD
-=======
   { name: 'Global Clients', value: '1,000+' },
   { name: 'Patents Filed', value: '25+' },
 ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 const solutions = [
   { name: 'AI Research Assistant', description: 'Autonomous research platform accelerating discovery.', href: '/solutions/ai-autonomous-research' },
   { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
@@ -509,23 +210,8 @@ const solutions = [
   { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
   { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    href: '/solutions/it-asset-management'
-  }
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 ]
 
 const whatsNew = [
@@ -534,127 +220,54 @@ const whatsNew = [
 ]
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default function HomePage() {
-  return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-    <div className="bg-black min-h-screen">
-<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
     <div className="bg-black">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-export default function HomePage() {
-  const latest = getLatestUpdates(6)
-  return (
-=======
-<<<<<<< HEAD
-    <div className="bg-black">
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-0dce
-=======
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
     <div className="bg-black">
 >>>>>>> cursor/create-and-deploy-new-content-a12c
-<<<<<<< HEAD
-=======
-    <div className="bg-black">
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-0dce
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
     <div className="bg-black">
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
-<<<<<<< HEAD
-=======
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -669,8 +282,6 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
-<<<<<<< HEAD
-=======
 =======
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="text-center">
@@ -701,25 +312,7 @@ export default function HomePage() {
       </div>
       {/* Hero section */}
       <div className="relative isolate px-6 pt-8 lg:px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-<<<<<<< HEAD
-    <div className="bg-black">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 =======
       {/* Hero section with promo for latest research */}
@@ -727,85 +320,22 @@ export default function HomePage() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
 >>>>>>> origin/feat/case-studies-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f175
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Leading the Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI & Technology</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
-              Join the revolution that's reshaping industries worldwide.
-=======
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
 >>>>>>> origin/feat/research-article-promo
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -816,98 +346,31 @@ export default function HomePage() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
               <a
                 href="/contact"
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </a>
-              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
               </a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
                 href="/updates/autonomous-ops-sre-for-agents"
@@ -935,18 +398,6 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/content-promo
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a
-                href="/blog/ai-2026-real-time-retrieval-architectures"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
-              >
-                New: Real‑Time Retrieval Architectures
-                <span aria-hidden>→</span>
-              </a>
-<<<<<<< HEAD
-              <a
-=======
 >>>>>>> origin/feat/new-content-promos
                 href="/blog/ai-2026-sovereign-ai-commerce"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
@@ -991,20 +442,9 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/secure-agent-operations-blueprint-2026"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Blueprint: Secure Agent Ops 2026
@@ -1112,36 +552,14 @@ export default function HomePage() {
               <a
                 href="/updates/autonomous-ops-playbook-2026"
 >>>>>>> origin/feature/autonomous-ops-sre-content
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
-              >
-                Deep Dive: Agent Observability
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/blog/ai-2026-autonomous-business-operations-complete-guide"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
-              >
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Deep Dive: Agent Observability
@@ -1151,63 +569,14 @@ export default function HomePage() {
                 href="/blog/ai-2026-autonomous-business-operations-complete-guide"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                 Guide: Autonomous Business Ops
                 <span aria-hidden>→</span>
               </a>
               <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-                href="/blog/ai-2026-policy-as-code-production-blueprint"
-                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
-              >
-                Blueprint: Policy‑as‑Code
-                <span aria-hidden>→</span>
-              </a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-              <a
-                href="/updates/production-guardrails-playbook"
-                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
-              >
-                New: Production Guardrails Playbook
-                <span aria-hidden>→</span>
-              </a>
-=======
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -1235,137 +604,31 @@ export default function HomePage() {
               <a href="/research" className="font-semibold text-blue-400 hover:text-blue-300">Read now →</a>
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
-=======
-      {/* What's New section */}
-      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">What’s New</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest updates and releases</p>
-        </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-2">
-          {whatsNew.map((item) => (
-            <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <span className="mb-3 inline-flex items-center rounded-full bg-blue-600/20 px-3 py-1 text-xs font-medium text-blue-400">{item.badge}</span>
-              <h3 className="text-lg font-semibold leading-6 text-white">{item.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-gray-300">{item.description}</p>
-              <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">Learn more <span aria-hidden="true">→</span></a>
-            </article>
-          ))}
-        </div>
-      </div>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/content-promo
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
-          </p>
-        </div>
-        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             {latest.map((item) => (
 =======
             {[
@@ -1402,32 +665,14 @@ export default function HomePage() {
               }
             ].map((item) => (
 >>>>>>> origin/feat/updates-and-home-whats-new
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             {latest.map((item) => (
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
 =======
@@ -1459,17 +704,6 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Latest on the blog */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -1477,111 +711,32 @@ export default function HomePage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             New articles on enterprise AI, security, and autonomous systems.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
             Fresh content, announcements, and courses from Zion Academy.
 >>>>>>> origin/feat/content-promo
 =======
             Fresh content, announcements, research drops, and courses from Zion Academy.
 >>>>>>> origin/feat/homepage-content-updates
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
-<<<<<<< HEAD
-                  'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
-                href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
                 title: 'AI 2026: Autonomous Ops and SRE for Agents',
                 summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
                 href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
 >>>>>>> origin/feature/autonomous-ops-sre-content
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-                title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-                summary:
-                  'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
-                href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               },
               {
                 title: 'AI 2026: Autonomous Business Operations — Complete Guide',
@@ -1594,15 +749,6 @@ export default function HomePage() {
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
                 href: '/blog/ai-2026-policy-as-code-production-blueprint'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
                   'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
@@ -1623,20 +769,12 @@ export default function HomePage() {
               {
                 title: 'Community Challenge: Build a DApp',
                 summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-<<<<<<< HEAD
-                href: '/updates/dapp-challenge'
-=======
                 href: '/updates',
 >>>>>>> origin/feat/content-promo
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-                href: '/updates/web3-learning-path'
->>>>>>> origin/feature/updates-content
-=======
                 title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
@@ -1655,9 +793,6 @@ export default function HomePage() {
                 summary:
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
-<<<<<<< HEAD
->>>>>>> origin/feat/content-policy-as-code
-=======
                 href: '/updates'
               },
               {
@@ -1688,20 +823,9 @@ export default function HomePage() {
                 summary: 'Reference architecture, safety gates, and rollout checklist for AI commerce.',
                 href: '/blog/ai-2026-sovereign-ai-commerce'
 >>>>>>> origin/feat/new-content-2025-09-15-b
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               }
 =======
                 href: '/updates',
@@ -1722,18 +846,6 @@ export default function HomePage() {
                 href: '/updates',
               },
 >>>>>>> origin/feat/content-promo
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-              }
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
@@ -1751,16 +863,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> origin/feat/news-and-fixes
 
@@ -1768,79 +870,27 @@ export default function HomePage() {
 
 >>>>>>> origin/feat/research-article-promo
       {/* Features section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to accelerate innovation
-          </p>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-376e
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Everything you need to accelerate innovation</p>
-<<<<<<< HEAD
-          <p className="mt-6 text-lg leading-8 text-gray-300">Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results and maintain competitive advantage in the digital age.</p>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
           <p className="mt-6 text-lg leading-8 text-gray-300">
-<<<<<<< HEAD
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
-            and maintain competitive advantage in the digital age.
-=======
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results and maintain competitive advantage in the digital age.
 >>>>>>> origin/feat/research-article-promo
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -1849,12 +899,6 @@ export default function HomePage() {
           <p className="mt-6 text-lg leading-8 text-gray-300">Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results and maintain competitive advantage.</p>
 >>>>>>> origin/feat/case-studies-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 
       {/* Features section */}
@@ -1870,17 +914,10 @@ export default function HomePage() {
           </p>
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -1892,96 +929,33 @@ export default function HomePage() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{feature.description}</p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-                  <p className="mt-6"><a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a></p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-                  <p className="mt-6"><a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a></p>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn more <span aria-hidden="true">→</span>
                     </a>
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
                   <p className="mt-6"><a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a></p>
 >>>>>>> origin/feat/case-studies-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
                 </dd>
               </div>
             ))}
@@ -1992,44 +966,9 @@ export default function HomePage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by leading organizations worldwide
-            </h2>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by leading organizations worldwide
-            </h2>
-<<<<<<< HEAD
-=======
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
 >>>>>>> origin/feat/case-studies-content
 =======
@@ -2038,29 +977,16 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Trusted by leading organizations worldwide
             </h2>
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             <p className="mt-4 text-lg leading-8 text-gray-300">Our track record speaks for itself</p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
@@ -2074,41 +1000,9 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* CTA section */}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-      {/* CTA section */}
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* CTA section */}
-=======
 =======
       {/* News teaser */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -2177,24 +1071,11 @@ export default function HomePage() {
               <article key={solution.name} className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime="2024" className="text-gray-400">2024</time>
-<<<<<<< HEAD
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">AI Platform</span>
-                </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
-=======
-<<<<<<< HEAD
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300">AI Platform</span>
-=======
                   <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">AI Platform</span>
 >>>>>>> origin/feat/research-article-promo
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-<<<<<<< HEAD
-                    <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
-=======
                     <a href={solution.href}>
                       <span className="absolute inset-0" />
                       {solution.name}
@@ -2206,11 +1087,6 @@ export default function HomePage() {
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <div className="text-sm leading-6">
-<<<<<<< HEAD
-                    <p className="font-semibold text-white">
-                      <a href={solution.href} className="hover:text-blue-400 transition-colors duration-200"><span className="absolute inset-0" />Learn more</a>
-                    </p>
-=======
                     <p className="font-semibold text-white"><a href={solution.href} className="hover:text-blue-400 transition-colors duration-200"><span className="absolute inset-0" />Learn more</a></p>
 >>>>>>> cursor/create-and-deploy-new-content-376e
                   </div>
@@ -2221,41 +1097,16 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
       {/* CTA section */}
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Zion Tech Group</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">AI, automation, and secure infrastructure.</p>
-          <div className="mt-8">
-            <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">See all updates →</a>
-          </div>
-        </div>
-        <div className="mx-auto mt-12 max-w-4xl">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-<<<<<<< HEAD
-=======
 =======
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
             <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
@@ -2273,28 +1124,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-            <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Customer Success</h2>
@@ -2313,33 +1145,16 @@ export default function HomePage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
-<<<<<<< HEAD
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our technology can accelerate your growth and innovation.</p>
-=======
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
 >>>>>>> origin/feat/research-article-promo
           <div className="mt-10 flex items-center justify-center gap-x-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             <a
               href="/contact"
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
@@ -2349,28 +1164,8 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/case-studies-content
@@ -2381,56 +1176,19 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
           </div>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-}
-
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 >>>>>>> origin/feat/case-studies-content
 =======
@@ -2694,29 +1452,12 @@ export default function HomePage() {
 
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 }
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-}
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6

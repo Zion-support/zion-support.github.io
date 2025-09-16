@@ -1,61 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-nocheck
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 import React from 'react';
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
@@ -299,10 +248,6 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-<<<<<<< HEAD
-  ],
->>>>>>> origin/merge-pr-12271
-=======
   ];
 
 >>>>>>> origin/feat/news-content
@@ -325,99 +270,20 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
->>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -428,30 +294,6 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-<<<<<<< HEAD
-              </Link>
 =======
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
@@ -466,113 +308,28 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
-<<<<<<< HEAD
-              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
-                ✅ New: AI Safety & Governance 2025
-              </a>
->>>>>>> origin/feature/blog-content-2025
-=======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
-      {/* Promo Banner - New Articles */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
-          <a
-            href="/blog/agent-safety-red-teaming-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
-          >
-=======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -582,50 +339,14 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f175
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
         <div className="max-w-7xl mx-auto">
           <div className="glass-effect rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -652,8 +373,6 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/feat/news-content
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -830,55 +549,7 @@ export default function HomePage() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
->>>>>>> cursor/create-and-deploy-new-content-376e
-                🚀 Start Building Now
               </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📊 Explore Examples
-<<<<<<< HEAD
-              </a>
-=======
-<<<<<<< HEAD
-              </Link>
-=======
-              </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Operating Systems
-=======
 =======
               <a href="/blog/edge-ai-marketplaces" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Edge AI Marketplaces
@@ -886,9 +557,6 @@ export default function HomePage() {
 >>>>>>> origin/feat/blog-content-ads
               <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
-<<<<<<< HEAD
->>>>>>> origin/feature/new-content-2025-09-15
-=======
               <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
 >>>>>>> origin/feature/new-content-2025
@@ -913,85 +581,32 @@ export default function HomePage() {
               </a>
 >>>>>>> origin/feature/new-content-promotion
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feat/news-content
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -1052,40 +667,12 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -1170,9 +757,6 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-<<<<<<< HEAD
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
-=======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
@@ -1206,8 +790,6 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -1252,16 +834,6 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
-=======
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -1294,11 +866,6 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
@@ -1309,9 +876,6 @@ export default function HomePage() {
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
-<<<<<<< HEAD
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
-=======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             </div>
@@ -1375,24 +939,6 @@ export default function HomePage() {
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
-<<<<<<< HEAD
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">;
@@ -1422,27 +968,7 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
