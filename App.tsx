@@ -46,6 +46,7 @@ import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousness
 import AdvancedRoboticsRevolution2026 from './src/pages/AdvancedRoboticsRevolution2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import TrendingContentSection from './src/components/TrendingContentSection';
+<<<<<<< HEAD
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import AdvancedAIConsciousness2027 from './src/pages/AdvancedAIConsciousness2027';
 import NeuralQuantumFusion2027 from './src/pages/NeuralQuantumFusion2027';
@@ -96,6 +97,9 @@ import RevolutionaryAIConsciousness2025 from './src/pages/RevolutionaryAIConscio
 import QuantumComputingBreakthrough2025 from './src/pages/QuantumComputingBreakthrough2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 >>>>>>> cursor/create-and-deploy-new-content-5075
+=======
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9ed1
 
 export default function App(): JSX.Element {
   return (
@@ -108,6 +112,7 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
                 {/* ULTRA-PROMINENT NEW 2032 CONTENT BANNER */}
                 <RevolutionaryContentBanner2032 />
 
@@ -206,6 +211,13 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
+=======
+                {/* REVOLUTIONARY CONTENT BANNER 2026 */}
+                <RevolutionaryContentBanner2026 />
+
+                {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+                <UltimateContentShowcase2026 />
+>>>>>>> origin/cursor/create-and-deploy-new-content-9ed1
 
 <<<<<<< HEAD
                 {/* Revolutionary New Content Banner */}
