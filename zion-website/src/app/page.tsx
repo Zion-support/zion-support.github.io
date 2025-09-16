@@ -37,6 +37,9 @@ export default function HomePage() {
             New: Zero‑Trust Agent Controllers —
             <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Agent Playbook Library v1.0 —
+            <a href="/updates/agent-playbook-library-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Change Management Runbook (2026) —
             <a href="/updates/agent-change-management-runbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -101,6 +104,9 @@ export default function HomePage() {
           <p className="text-sm sm:text-base font-semibold text-blue-200">
             Fresh: Zero‑Trust Agent Controllers —
             <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Playbook Library v1.0 —
+            <a href="/updates/agent-playbook-library-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Change Management Runbook (2026) —
             <a href="/updates/agent-change-management-runbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
