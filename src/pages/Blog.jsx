@@ -9,6 +9,12 @@ const posts = [
     date: '2025-09-16',
   },
   {
+    slug: 'ai-2026-reliable-agent-deployments',
+    title: 'AI 2026: Reliable Agent Deployments — Canary, Rollback, Scorecards',
+    summary: 'Practical steps to ship agent features safely using canaries, automated rollback, and journey scorecards.',
+    date: '2025-09-16',
+  },
+  {
     slug: 'trustworthy-model-routing',
     title: 'Trustworthy Model Routing: Production Patterns',
     summary: 'Deterministic and probabilistic routing strategies that balance cost, latency, and safety.',
@@ -24,6 +30,12 @@ const posts = [
     slug: 'ai-2026-evidence-hubs-blueprint',
     title: 'AI 2026: Production Evidence Hubs — Blueprint',
     summary: 'Capture traces, artifacts, and policy events for auditable AI.',
+    date: '2025-09-16',
+  },
+  {
+    slug: 'ai-2026-governed-tool-use-starter',
+    title: 'AI 2026: Governed Tool Use — Starter You Can Ship Today',
+    summary: 'Risk-tiered permissions, audit trails, and policy gates to keep tool use safe and compliant.',
     date: '2025-09-16',
   },
 ];
