@@ -1,35 +1,4 @@
 import Head from 'next/head'
-
-export default function EnterpriseArchitectureModernization2026() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <Head>
-        <title>Enterprise Architecture Modernization (2026) | Zion Tech Group</title>
-        <meta name="description" content="Evolve to AI‑ready, event‑driven platforms with SLOs and guardrails." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-enterprise-architecture-modernization" />
-      </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Enterprise Architecture Modernization (2026)</h1>
-        <p>
-          Modernize legacy estates into event‑driven, observable platforms ready for AI workloads. Introduce
-          platform SLOs, paved‑road services, and policy‑driven controls without halting delivery.
-        </p>
-
-        <h2>Modernization Moves</h2>
-        <ul>
-          <li>Strangler patterns and domain‑aligned services</li>
-          <li>Event streams for auditability and decoupling</li>
-          <li>Guardrails for tooling, data, and model access</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
-    </div>
-  )
-}
-
-import Head from 'next/head'
 import Link from 'next/link'
 
 export default function EnterpriseArchitectureModernization2026() {
@@ -101,4 +70,3 @@ export default function EnterpriseArchitectureModernization2026() {
     </div>
   )
 }
-

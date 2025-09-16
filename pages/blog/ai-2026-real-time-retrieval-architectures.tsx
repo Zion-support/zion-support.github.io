@@ -1,38 +1,6 @@
-import Head from 'next/head'
-
-export default function RealTimeRetrievalArchitectures2026() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <Head>
-        <title>AI 2026: Real-Time Retrieval Architectures | Zion Tech Group</title>
-        <meta name="description" content="Low‑latency retrieval with hybrid indexes, caches, and routing." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-real-time-retrieval-architectures" />
-      </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Real‑Time Retrieval Architectures (2026)</h1>
-        <p>
-          Build sub‑200ms perceived latency with hybrid vector + keyword indexes, speculative fetch, and
-          cache‑aware routing. Keep agents grounded while staying fast and cost‑efficient.
-        </p>
-
-        <h2>Key Techniques</h2>
-        <ul>
-          <li>Hybrid search with learned rerankers</li>
-          <li>Proactive caching and TTLs by scenario</li>
-          <li>Latency budgets with fallbacks</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
-    </div>
-  )
-}
-
-import React from 'react';
 import Link from 'next/link';
 
-export default function AI2026RealTimeRetrievalArchitectures() {
+export default function RealTimeRetrievalArchitectures2026() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
@@ -70,4 +38,3 @@ export default function AI2026RealTimeRetrievalArchitectures() {
     </main>
   );
 }
-
