@@ -3055,6 +3055,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Agent FinOps (AI 2026)'
+    , summary: 'Reduce cost-to-value using eval gates, routing policies, and safety budgets.'
+    , href: '/blog/ai-2026-agent-finops-blueprint'
+    , date: '2025-09-16'
+    , tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Evaluation-Driven FinOps (Starter Kit)'
     , summary: 'Reduce LLM cost-to-value with eval gates, routing policies, and safety budgets.'
     , href: '/updates/evaluation-driven-finops'

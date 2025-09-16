@@ -28,6 +28,18 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Promo banner for new content */}
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+          <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Agent FinOps Blueprint —
+            <a href="/blog/ai-2026-agent-finops-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
+          </p>
+        </div>
+      </div>
+
       <div className="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
