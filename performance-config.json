@@ -1,0 +1,152 @@
+{
+  "bundle": {
+    "optimization": {
+      "splitChunks": {
+        "chunks": "all",
+        "cacheGroups": {
+          "vendor": {
+            "test": {},
+            "name": "vendors",
+            "chunks": "all",
+            "priority": 10
+          },
+          "common": {
+            "name": "common",
+            "minChunks": 2,
+            "chunks": "all",
+            "priority": 5,
+            "reuseExistingChunk": true
+          }
+        }
+      }
+    },
+    "performance": {
+      "hints": "warning",
+      "maxEntrypointSize": 512000,
+      "maxAssetSize": 512000
+    }
+  },
+  "images": {
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "quality": 85,
+    "progressive": true,
+    "lazy": true,
+    "responsive": true
+  },
+  "codeSplitting": {
+    "routes": {
+      "/pages/AIRevolutionaryBreakthrough2026": "ai-breakthrough",
+      "/pages/FutureTechInnovations2026": "future-tech",
+      "/pages/BusinessAutomationGuide2025": "automation-guide"
+    },
+    "components": {
+      "RevolutionaryContentBanner": "banner-components",
+      "UltimateTechBreakthroughBanner": "tech-banners",
+      "InteractiveTechShowcase": "interactive-components"
+    }
+  },
+  "caching": {
+    "static": {
+      "maxAge": "1y",
+      "immutable": true
+    },
+    "api": {
+      "maxAge": "1h",
+      "staleWhileRevalidate": "1d"
+    },
+    "pages": {
+      "maxAge": "1d",
+      "revalidate": "1h"
+    }
+  },
+  "monitoring": {
+    "metrics": [
+      "First Contentful Paint",
+      "Largest Contentful Paint",
+      "First Input Delay",
+      "Cumulative Layout Shift",
+      "Time to Interactive"
+    ],
+    "thresholds": {
+      "FCP": 1.8,
+      "LCP": 2.5,
+      "FID": 100,
+      "CLS": 0.1,
+      "TTI": 3.8
+    },
+    "alerts": {
+      "enabled": true,
+      "channels": [
+        "console",
+        "analytics"
+      ]
+    }
+  },
+  "seo": {
+    "meta": {
+      "title": "Zion Tech Group - Revolutionary Technology Solutions",
+      "description": "Leading-edge technology solutions in AI, quantum computing, and cybersecurity",
+      "keywords": "AI, quantum computing, cybersecurity, technology, innovation"
+    },
+    "structured": {
+      "organization": {
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com",
+        "logo": "https://ziontechgroup.com/logo.png"
+      },
+      "website": {
+        "name": "Zion Tech Group",
+        "description": "Revolutionary technology solutions"
+      }
+    },
+    "sitemap": {
+      "enabled": true,
+      "priority": 0.8,
+      "changefreq": "daily"
+    }
+  },
+  "security": {
+    "headers": {
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1; mode=block",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'"
+    },
+    "cors": {
+      "origin": [
+        "https://ziontechgroup.com"
+      ],
+      "credentials": true
+    },
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 100
+    }
+  },
+  "accessibility": {
+    "aria": {
+      "labels": true,
+      "descriptions": true,
+      "landmarks": true
+    },
+    "keyboard": {
+      "navigation": true,
+      "shortcuts": true,
+      "focus": true
+    },
+    "screen": {
+      "reader": true,
+      "contrast": "AA",
+      "text": "resizable"
+    },
+    "testing": {
+      "axe": true,
+      "lighthouse": true,
+      "wcag": "2.1 AA"
+    }
+  }
+}
