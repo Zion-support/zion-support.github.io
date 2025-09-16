@@ -15,6 +15,8 @@ import FeaturedContentSection from './components/FeaturedContentSection';
 import EmbodiedAI2026Banner from './components/EmbodiedAI2026Banner';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryContentPromoBanner2025';
+import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
@@ -44,6 +46,9 @@ import NewContentPromoBannerClean from './components/NewContentPromoBannerClean'
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
+import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
+import QuantumConsciousnessRevolution2025 from './pages/QuantumConsciousnessRevolution2025';
+import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
 import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import AgentOpsControlPlane2026 from './pages/AgentOpsControlPlane2026';
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
@@ -153,6 +158,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* Revolutionary Content Promo Banner 2025 */}
+              <div className="mb-12">
+                <RevolutionaryContentPromoBanner2025 />
+              </div>
+
+              {/* Ultimate Tech Showcase Banner 2025 */}
+              <div className="mb-12">
+                <UltimateTechShowcaseBanner2025 />
+              </div>
 
               {/* Embodied AI 2026 Promo */}
               <div className="mb-12">
@@ -408,6 +423,9 @@ const App: React.FC = () => {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/QuantumConsciousnessRevolution2025" element={<QuantumConsciousnessRevolution2025 />} />
+          <Route path="/pages/SyntheticIntelligenceRevolution2025" element={<SyntheticIntelligenceRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
           <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
