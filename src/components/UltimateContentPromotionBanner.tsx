@@ -1,125 +1,124 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const UltimateContentPromotionBanner: React.FC = () => {
+  const [currentPromo, setCurrentPromo] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const promotionalContent = [
+    {
+      title: "🚀 Revolutionary Tech Breakthrough 2026",
+      subtitle: "Experience the most groundbreaking technological innovations",
+      link: "/pages/RevolutionaryTechBreakthrough2026",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      features: ["AI Consciousness", "Quantum Supremacy", "Neural Interfaces"]
+    },
+    {
+      title: "🌟 Ultimate Tech Showcase 2026",
+      subtitle: "The convergence of AI consciousness and quantum computing",
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      features: ["Quantum Reality", "Synthetic Intelligence", "Space Technology"]
+    },
+    {
+      title: "🔮 Advanced Tech Trends 2027",
+      subtitle: "Explore cutting-edge technology trends shaping the future",
+      link: "/pages/AdvancedTechTrends2027",
+      gradient: "from-indigo-600 via-purple-600 to-pink-600",
+      features: ["Interdimensional Computing", "Neural Reality", "Quantum Consciousness"]
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPromo((prev) => (prev + 1) % promotionalContent.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [promotionalContent.length]);
+
+  const closeBanner = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
+  const current = promotionalContent[currentPromo];
+
   return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex items-center justify-center space-x-4 mb-6"
-        >
-          <span className="text-4xl animate-bounce">🚀</span>
-          <h3 className="text-4xl font-bold">ULTIMATE TECHNOLOGY REVOLUTION 2025-2036</h3>
-          <span className="text-4xl animate-bounce">🚀</span>
-        </motion.div>
+    <div className="relative mb-12 overflow-hidden">
+      <div className={`bg-gradient-to-r ${current.gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto"
+        {/* Close Button */}
+        <button
+          onClick={closeBanner}
+          className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-300 z-10"
         >
-          Experience the most comprehensive collection of revolutionary technology content featuring 
-          AI breakthroughs, quantum computing, consciousness evolution, reality manipulation, 
-          and the future of human existence
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-8xl mx-auto mb-8"
-        >
-          {/* 2025-2026 Content */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-lg font-bold mb-3">2025-2026 Breakthroughs</h4>
-            <div className="space-y-2 text-sm">
-              <a href="/pages/AIRevolutionaryBreakthrough2026" className="block hover:text-purple-300 transition-colors">
-                🧠 AI Revolutionary Breakthrough →
-              </a>
-              <a href="/pages/QuantumComputingRevolution2026" className="block hover:text-purple-300 transition-colors">
-                ⚡ Quantum Computing Revolution →
-              </a>
-              <a href="/pages/NeuralInterfaceRevolution2026" className="block hover:text-purple-300 transition-colors">
-                🧬 Neural Interface Revolution →
-              </a>
-            </div>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div className="relative z-10">
+          {/* Animated Title */}
+          <div className="mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-pulse">
+              {current.title}
+            </h2>
+            <p className="text-xl md:text-2xl opacity-95 max-w-4xl mx-auto">
+              {current.subtitle}
+            </p>
           </div>
 
-          {/* 2027-2030 Content */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-lg font-bold mb-3">2027-2030 Advanced Tech</h4>
-            <div className="space-y-2 text-sm">
-              <a href="/pages/AdvancedAIRevolution2027" className="block hover:text-purple-300 transition-colors">
-                🧠 Advanced AI Revolution →
-              </a>
-              <a href="/pages/QuantumRealityManipulation2028" className="block hover:text-purple-300 transition-colors">
-                ⚛️ Quantum Reality 2028 →
-              </a>
-              <a href="/pages/TranscendentConsciousness2029" className="block hover:text-purple-300 transition-colors">
-                🧘 Transcendent Consciousness →
-              </a>
-            </div>
+          {/* Features */}
+          <div className="flex justify-center space-x-4 mb-8 flex-wrap">
+            {current.features.map((feature, index) => (
+              <span 
+                key={index}
+                className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/30"
+              >
+                {feature}
+              </span>
+            ))}
           </div>
 
-          {/* 2031-2033 Content */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-lg font-bold mb-3">2031-2033 Ultimate Tech</h4>
-            <div className="space-y-2 text-sm">
-              <a href="/pages/UltimateTechRevolution2033" className="block hover:text-purple-300 transition-colors">
-                🚀 Ultimate Tech Revolution →
-              </a>
-              <a href="/pages/TranscendentAI2033" className="block hover:text-purple-300 transition-colors">
-                🧠 Transcendent AI 2033 →
-              </a>
-              <a href="/pages/UniversalTechRevolution2033" className="block hover:text-purple-300 transition-colors">
-                🌌 Universal Tech 2033 →
-              </a>
-            </div>
+          {/* Call to Action */}
+          <div className="flex justify-center space-x-4 flex-wrap">
+            <a 
+              href={current.link}
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg hover:scale-105"
+            >
+              Explore Now →
+            </a>
+            <a 
+              href="/pages/ComprehensiveTechInsights2026"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-bold text-lg"
+            >
+              View All Content →
+            </a>
           </div>
 
-          {/* 2034-2036 Content */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-lg font-bold mb-3">2034-2036 Future Tech</h4>
-            <div className="space-y-2 text-sm">
-              <a href="/pages/NextGenAIRevolution2034" className="block hover:text-purple-300 transition-colors">
-                🧠 Next-Gen AI 2034 →
-              </a>
-              <a href="/pages/QuantumRealityManipulation2035" className="block hover:text-purple-300 transition-colors">
-                ⚛️ Quantum Reality 2035 →
-              </a>
-              <a href="/pages/TranscendentConsciousness2036" className="block hover:text-purple-300 transition-colors">
-                🧘 Transcendent Consciousness 2036 →
-              </a>
-            </div>
+          {/* Progress Indicator */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {promotionalContent.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentPromo 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/50'
+                }`}
+              />
+            ))}
           </div>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-            ✨ 50+ REVOLUTIONARY PAGES
-          </span>
-          <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
-            🚀 CUTTING-EDGE TECHNOLOGY
-          </span>
-          <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
-            🌟 INTERACTIVE SHOWCASE
-          </span>
-          <span className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold">
-            🧠 CONSCIOUSNESS EVOLUTION
-          </span>
-        </motion.div>
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
+          <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-20 w-12 h-12 bg-white/10 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+        </div>
       </div>
     </div>
   );
