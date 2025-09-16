@@ -2,53 +2,35 @@ import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY SHOWCASE • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Tech Showcase 2025
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover the most revolutionary technologies reshaping our world with infinite possibilities
-          </p>
+    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-bounce">🚀</span>
+          <h3 className="text-2xl font-bold">REVOLUTIONARY TECH BREAKTHROUGH 2025</h3>
+          <span className="text-3xl animate-bounce">🚀</span>
         </div>
-        
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-4 border border-blue-400/30 text-center">
-            <div className="text-3xl mb-2">🤖</div>
-            <h3 className="text-lg font-bold mb-1">Autonomous AI</h3>
-            <p className="text-blue-100 text-xs">Self-operating systems</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30 text-center">
-            <div className="text-3xl mb-2">⚛️</div>
-            <h3 className="text-lg font-bold mb-1">Quantum Neural</h3>
-            <p className="text-purple-100 text-xs">Infinite processing</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/30 text-center">
-            <div className="text-3xl mb-2">🧬</div>
-            <h3 className="text-lg font-bold mb-1">Neural Interface</h3>
-            <p className="text-emerald-100 text-xs">Thought control</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-4 border border-orange-400/30 text-center">
-            <div className="text-3xl mb-2">🌌</div>
-            <h3 className="text-lg font-bold mb-1">Interdimensional</h3>
-            <p className="text-orange-100 text-xs">Multi-dimensional</p>
-          </div>
+        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+          Experience the most advanced technological innovations that are reshaping our world. 
+          From AI consciousness to quantum supremacy, discover the future today.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧠 AI Consciousness →
+          </a>
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚡ Quantum Supremacy →
+          </a>
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧬 Neural Interfaces →
+          </a>
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🤖 Synthetic Intelligence →
+          </a>
         </div>
-        
-        <div className="text-center">
-          <a 
-            href="/pages/RevolutionaryTechShowcase2025" 
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
-          >
-            ⚡ Explore Revolutionary Tech →
+        <div className="mt-6">
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
+            🌟 NEW: Revolutionary Tech Breakthrough 2025 →
           </a>
         </div>
       </div>
