@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Evidence‑Driven Evals (2026)',
+    summary: 'Objective rubrics, live canaries, and audit‑ready evidence for production AI.',
+    href: '/blog/ai-2026-evidence-driven-evals-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Blueprint: Secure Tooling Permissions (2026)',
     summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.',
     href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
