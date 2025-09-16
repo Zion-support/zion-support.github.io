@@ -103,7 +103,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #7c3aed, #db2777);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-46a4
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -270,7 +273,10 @@
 .lazy-load.loaded {
   opacity: 1;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-46a4
 /* Focus management */
 .focus-visible {
   outline: 2px solid #3b82f6;
