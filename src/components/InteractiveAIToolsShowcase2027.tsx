@@ -4,7 +4,7 @@ const InteractiveAIToolsShowcase2027: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
       
       {/* Animated Background Elements */}

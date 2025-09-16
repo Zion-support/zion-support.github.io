@@ -6,7 +6,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/500')] bg-cover bg-center opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-purple-900/40"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-transparent to-purple-900/80"></div>
       
       {/* Animated Background Elements */}
@@ -155,7 +155,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
             >
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0 bg-[url('/api/placeholder/600/400')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-purple-900/30"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
               </div>
               
