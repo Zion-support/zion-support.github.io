@@ -2310,6 +2310,55 @@ const latest2025 = [
     imageUrl: "/images/blog/budget-aware-routing-2026.jpg",
     slug: "finops-budget-aware-routing-30-percent-savings"
   }
+  ,
+  {
+    id: 10024,
+    title: "AI 2026: Next‑Gen Real‑Time Guardrails",
+    excerpt: "Runtime checks, approvals, and eval gates that keep autonomy fast and safe.",
+    content:
+      "A practical blueprint for wiring runtime guardrails without adding drag: scoped credentials, human-in-the-loop approvals, groundedness evaluators, and rollback ladders. Includes minimal configs for CI/CD and observability panels.",
+    author: "Casey Morgan",
+    authorRole: "Principal Platform Engineer",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Guardrails", "Approvals", "Evaluators"],
+    featured: true,
+    imageUrl: "/images/blog/next-gen-realtime-guardrails-2026.jpg",
+    slug: "ai-2026-next-gen-realtime-guardrails"
+  },
+  {
+    id: 10025,
+    title: "Governed Model Routing — 2027 Next Stage",
+    excerpt: "Balance quality, latency, and spend with evidence‑driven routing policies.",
+    content:
+      "Deep dive into governed routing for multi-model stacks. Covers budget bands, confidence tiers, latency SLOs, and automatic rollback with scorecards and policy hooks.",
+    author: "Taylor Brooks",
+    authorRole: "Staff Engineer, Applied AI",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["Routing", "SLOs", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/governed-model-routing-2027.jpg",
+    slug: "ai-2026-governed-model-routing-2027"
+  },
+  {
+    id: 10026,
+    title: "Operational Maturity Models for Agentic Systems (2026)",
+    excerpt: "Evidence-first maturity model to safely scale autonomous agents.",
+    content:
+      "A pragmatic maturity model spanning safety, reliability, governance, and cost. Includes scorecard templates, incident readiness checks, and rollout ladders at each level.",
+    author: "Jamie Rivera",
+    authorRole: "Head of Platform Reliability",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Governance",
+    tags: ["Maturity Models", "Scorecards", "Incidents"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-systems-maturity-2026.jpg",
+    slug: "ai-2026-operational-maturity-models-for-agentic-systems"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
