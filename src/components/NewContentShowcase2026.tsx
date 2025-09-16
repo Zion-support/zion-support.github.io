@@ -1,164 +1,323 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Calendar, Clock, User, ArrowRight, Star, BookOpen, Briefcase, Zap } from 'lucide-react';
+import { REVOLUTIONARY_BLOG_POSTS_2026, REVOLUTIONARY_SERVICES_2026 } from '../data/revolutionaryContent2026';
 
 const NewContentShowcase2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const contentItems = [
+  const [activeTab, setActiveTab] = useState<'blog' | 'services' | 'case-studies'>('blog');
+
+  const blogPosts = REVOLUTIONARY_BLOG_POSTS_2026.slice(0, 6);
+  const services = REVOLUTIONARY_SERVICES_2026.slice(0, 6);
+  const caseStudies = [
     {
-      id: 1,
-      title: "Revolutionary Tech Showcase 2026",
-      description: "Experience the convergence of AI consciousness, quantum supremacy, and neural interfaces",
-      image: "🧠",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/RevolutionaryTechShowcase2026",
-      badge: "NEW"
+      id: 'tesla-autonomous-ai',
+      title: 'Tesla\'s Autonomous AI Revolution',
+      company: 'Tesla Inc.',
+      industry: 'Automotive',
+      results: ['$5.8B in cost savings', '25% improvement in production', 'Zero human error'],
+      image: '/images/tesla-case-study.jpg',
+      isNew: true
     },
     {
-      id: 2,
-      title: "AI Business Automation 2026",
-      description: "Transform your business with autonomous AI systems that work 24/7 and deliver unprecedented efficiency",
-      image: "🤖",
-      gradient: "from-emerald-600 to-cyan-600",
-      link: "/pages/AIBusinessAutomation2026",
-      badge: "HOT"
+      id: 'google-quantum-ai',
+      title: 'Google\'s Quantum AI Breakthrough',
+      company: 'Google LLC',
+      industry: 'Technology',
+      results: ['1000x faster problem solving', '50% reduction in energy', 'Revolutionary search'],
+      image: '/images/google-case-study.jpg',
+      isNew: true
     },
     {
-      id: 3,
-      title: "Quantum Computing Revolution",
-      description: "Breakthrough quantum computing solutions solving impossible problems with exponential speed",
-      image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumReality2026",
-      badge: "BREAKTHROUGH"
-    },
-    {
-      id: 4,
-      title: "Neural Interface Evolution",
-      description: "Direct brain-computer communication enabling thought-controlled technology and enhanced cognition",
-      image: "🧬",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/NeuralInterfaceEvolution2026",
-      badge: "FUTURE"
+      id: 'microsoft-ai-transformation',
+      title: 'Microsoft\'s AI-First Transformation',
+      company: 'Microsoft Corporation',
+      industry: 'Enterprise Software',
+      results: ['40% increase in productivity', '90% reduction in manual tasks', 'AI-powered collaboration'],
+      image: '/images/microsoft-case-study.jpg',
+      isNew: true
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentItems.length]);
+  const tabs = [
+    { id: 'blog', label: 'Latest Articles', icon: BookOpen, count: blogPosts.length },
+    { id: 'services', label: 'New Services', icon: Briefcase, count: services.length },
+    { id: 'case-studies', label: 'Case Studies', icon: Star, count: caseStudies.length }
+  ];
 
-  return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 NEW CONTENT 2026 • JANUARY 2026
+  const renderBlogPosts = () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {blogPosts.map((post, index) => (
+        <motion.article
+          key={post.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group"
+        >
+          <div className="relative">
+            <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+              <div className="text-6xl text-white opacity-80">
+                {post.category === 'AI' ? '🤖' : 
+                 post.category === 'Quantum' ? '⚛️' : 
+                 post.category === 'Neural' ? '🧠' : '✨'}
+              </div>
+            </div>
+            {post.isNew && (
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
+                  NEW
+                </span>
+              </div>
+            )}
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+                {post.category}
+              </span>
+            </div>
           </div>
-          <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary Content Showcase 2026</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our latest groundbreaking content featuring cutting-edge technology, 
-            AI innovations, and revolutionary solutions that are reshaping the future
-          </p>
-        </div>
+          
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+              {post.title}
+            </h3>
+            
+            <p className="text-gray-600 mb-4 line-clamp-3">
+              {post.excerpt}
+            </p>
+            
+            <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-1">
+                  <User className="w-4 h-4" />
+                  <span>{post.author}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  <span>{post.publishDate}</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="w-4 h-4" />
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <div className="flex gap-2">
+                {post.tags.slice(0, 2).map((tag, tagIndex) => (
+                  <span
+                    key={tagIndex}
+                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <button className="flex items-center gap-1 text-purple-600 hover:text-purple-700 font-medium transition-colors duration-300">
+                Read More
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  );
 
-        {/* Interactive Carousel */}
-        <div className="relative mb-12">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 mx-4">
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="flex items-center space-x-3 mb-4">
-                          <span className="text-6xl">{item.image}</span>
-                          <div>
-                            <span className={`px-3 py-1 bg-gradient-to-r ${item.gradient} text-white text-xs font-bold rounded-full`}>
-                              {item.badge}
-                            </span>
-                          </div>
-                        </div>
-                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                        <p className="text-lg opacity-90 mb-6">{item.description}</p>
-                        <a 
-                          href={item.link}
-                          className={`inline-block bg-gradient-to-r ${item.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                        >
-                          Explore Now →
-                        </a>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-9xl opacity-20">{item.image}</div>
-                      </div>
-                    </div>
-                  </div>
+  const renderServices = () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service, index) => (
+        <motion.div
+          key={service.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group"
+        >
+          <div className="p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <span className="text-sm text-gray-500">{service.category}</span>
+                </div>
+              </div>
+              {service.isNew && (
+                <span className="px-3 py-1 bg-green-100 text-green-600 text-xs font-medium rounded-full">
+                  NEW
+                </span>
+              )}
+            </div>
+            
+            <p className="text-gray-600 mb-4">
+              {service.description}
+            </p>
+            
+            <div className="space-y-2 mb-4">
+              {service.features.slice(0, 3).map((feature, featureIndex) => (
+                <div key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
+            
+            <div className="flex items-center justify-between">
+              <div className="text-sm">
+                <span className="text-gray-500">Pricing: </span>
+                <span className="font-medium text-gray-800">{service.pricing}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-1 bg-orange-100 text-orange-600 text-xs font-medium rounded-full">
+                  {service.urgency}
+                </span>
+                <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
+        </motion.div>
+      ))}
+    </div>
+  );
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {contentItems.map((_, index) => (
+  const renderCaseStudies = () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {caseStudies.map((study, index) => (
+        <motion.div
+          key={study.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group"
+        >
+          <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+            <div className="text-6xl text-white opacity-80">
+              {study.company === 'Tesla Inc.' ? '🚗' : 
+               study.company === 'Google LLC' ? '🔍' : '💼'}
+            </div>
+            {study.isNew && (
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
+                  NEW
+                </span>
+              </div>
+            )}
+          </div>
+          
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+              {study.title}
+            </h3>
+            
+            <div className="text-sm text-gray-600 mb-4">
+              <div className="font-medium">{study.company}</div>
+              <div>{study.industry}</div>
+            </div>
+            
+            <div className="space-y-2 mb-4">
+              <div className="text-sm font-medium text-gray-700">Key Results:</div>
+              {study.results.map((result, resultIndex) => (
+                <div key={resultIndex} className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full" />
+                  <span>{result}</span>
+                </div>
+              ))}
+            </div>
+            
+            <button className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300">
+              View Case Study
+            </button>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+
+  return (
+    <div className="bg-gray-50 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-4"
+          >
+            <Star className="w-4 h-4 mr-2" />
+            Fresh Content 2026
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
+          >
+            Discover What's New
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+          >
+            Explore our latest articles, revolutionary services, and groundbreaking case studies
+          </motion.p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200">
+            {tabs.map((tab) => (
               <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-white/30'
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-md font-medium transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-purple-600 text-white shadow-md'
+                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
                 }`}
-              />
+              >
+                <tab.icon className="w-5 h-5" />
+                <span>{tab.label}</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                  {tab.count}
+                </span>
+              </button>
             ))}
           </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {contentItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-all duration-300 border border-white/20"
-            >
-              <div className="text-center">
-                <div className="text-4xl mb-3">{item.image}</div>
-                <div className="flex justify-center mb-2">
-                  <span className={`px-2 py-1 bg-gradient-to-r ${item.gradient} text-white text-xs font-bold rounded-full`}>
-                    {item.badge}
-                  </span>
-                </div>
-                <h4 className="text-lg font-bold mb-2">{item.title}</h4>
-                <p className="text-sm opacity-80">{item.description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
+        {/* Content */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {activeTab === 'blog' && renderBlogPosts()}
+            {activeTab === 'services' && renderServices()}
+            {activeTab === 'case-studies' && renderCaseStudies()}
+          </motion.div>
+        </AnimatePresence>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Dive into our revolutionary content and discover how cutting-edge technology can transform your world
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a 
-              href="/pages/RevolutionaryTechShowcase2026"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl"
-            >
-              🌟 Start Exploring →
-            </a>
-            <a 
-              href="/pages/AIBusinessAutomation2026"
-              className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-2xl"
-            >
-              🤖 AI Automation
-            </a>
-          </div>
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+            Explore All Content
+            <ArrowRight className="w-5 h-5 ml-2 inline" />
+          </button>
         </div>
       </div>
     </div>
