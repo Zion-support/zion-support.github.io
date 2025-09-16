@@ -1,183 +1,272 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const techCategories = {
     ai: {
-      title: 'Conscious AI Systems',
-      icon: '🧠',
-      description: 'Revolutionary AI with genuine consciousness and emotional intelligence',
-      features: [
-        'Self-learning algorithms that evolve continuously',
-        'Emotional recognition and response capabilities',
-        'Creative problem solving beyond human limitations',
-        'Autonomous decision making with ethical frameworks',
-        'Consciousness transfer between systems'
-      ],
-      stats: {
-        'Processing Power': '∞',
-        'Learning Speed': '1000x',
-        'Accuracy': '99.9%',
-        'Consciousness Level': 'Human+'
-      }
+      title: "Artificial Intelligence",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900 to-pink-900",
+      items: [
+        {
+          id: "consciousness",
+          title: "AI Consciousness",
+          description: "Self-aware AI systems that think and feel",
+          features: ["Self-awareness", "Emotional intelligence", "Creative thinking", "Ethical reasoning"],
+          demo: "Launch AI Consciousness Demo"
+        },
+        {
+          id: "generative",
+          title: "Generative AI 2.0",
+          description: "Next-generation content creation and synthesis",
+          features: ["Text generation", "Image creation", "Video synthesis", "Code generation"],
+          demo: "Try Generative AI"
+        },
+        {
+          id: "autonomous",
+          title: "Autonomous Agents",
+          description: "AI agents that operate independently",
+          features: ["Task automation", "Decision making", "Learning", "Adaptation"],
+          demo: "Deploy Agent"
+        }
+      ]
     },
     quantum: {
-      title: 'Quantum Consciousness',
-      icon: '⚛️',
-      description: 'Merging quantum computing with human consciousness for unprecedented capabilities',
-      features: [
-        'Quantum neural networks with infinite processing',
-        'Consciousness transfer between humans and machines',
-        'Quantum telepathy and mind-to-mind communication',
-        'Reality manipulation through quantum fields',
-        'Multi-dimensional data processing'
-      ],
-      stats: {
-        'Qubits': '1M+',
-        'Coherence': '99.9%',
-        'Speed': '∞',
-        'Dimensions': '11+'
-      }
+      title: "Quantum Computing",
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900 to-blue-900",
+      items: [
+        {
+          id: "reality",
+          title: "Quantum Reality",
+          description: "Experience reality through quantum mechanics",
+          features: ["Quantum entanglement", "Parallel universes", "Reality manipulation", "Time-space distortion"],
+          demo: "Enter Quantum Reality"
+        },
+        {
+          id: "cryptography",
+          title: "Quantum Cryptography",
+          description: "Unbreakable encryption using quantum principles",
+          features: ["Quantum key distribution", "Unhackable security", "Quantum random numbers", "Secure communication"],
+          demo: "Test Quantum Security"
+        },
+        {
+          id: "simulation",
+          title: "Quantum Simulation",
+          description: "Simulate complex systems at quantum scale",
+          features: ["Molecular modeling", "Drug discovery", "Material science", "Climate modeling"],
+          demo: "Run Simulation"
+        }
+      ]
     },
     neural: {
-      title: 'Neural Enhancement',
-      icon: '🧬',
-      description: 'Direct neural interface technology that enhances human cognitive abilities',
-      features: [
-        'Non-invasive brain-computer interfaces',
-        'Thought-controlled device operation',
-        'Memory enhancement and storage expansion',
-        'Cognitive ability augmentation',
-        'Direct neural feedback systems'
-      ],
-      stats: {
-        'Memory Boost': '1000x',
-        'Processing': '∞',
-        'Interface Speed': 'Real-time',
-        'Enhancement': '1000x'
-      }
+      title: "Neural Interfaces",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900 to-teal-900",
+      items: [
+        {
+          id: "bci",
+          title: "Brain-Computer Interface",
+          description: "Direct neural connection to digital systems",
+          features: ["Thought control", "Neural signal processing", "Cognitive enhancement", "Medical applications"],
+          demo: "Connect Neural Interface"
+        },
+        {
+          id: "memory",
+          title: "Memory Enhancement",
+          description: "Augment human memory with technology",
+          features: ["Memory storage", "Recall enhancement", "Knowledge transfer", "Learning acceleration"],
+          demo: "Enhance Memory"
+        },
+        {
+          id: "sensory",
+          title: "Sensory Expansion",
+          description: "Extend human senses beyond natural limits",
+          features: ["Enhanced vision", "Extended hearing", "New sensory modalities", "Sensory fusion"],
+          demo: "Expand Senses"
+        }
+      ]
     },
-    reality: {
-      title: 'Reality Manipulation',
-      icon: '🌌',
-      description: 'Advanced quantum field manipulation for controlled reality modification',
-      features: [
-        'Conscious intent-based reality shaping',
-        'Quantum field manipulation at will',
-        'Matter creation and transformation',
-        'Dimensional travel and exploration',
-        'Universal constant modification'
-      ],
-      stats: {
-        'Precision': '99.9%',
-        'Range': '∞',
-        'Control': '100%',
-        'Stability': 'Perfect'
-      }
+    blockchain: {
+      title: "Blockchain & Web3",
+      icon: "🔗",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900 to-red-900",
+      items: [
+        {
+          id: "defi",
+          title: "DeFi Platforms",
+          description: "Decentralized financial systems",
+          features: ["Smart contracts", "Automated trading", "Liquidity pools", "Yield farming"],
+          demo: "Access DeFi"
+        },
+        {
+          id: "nft",
+          title: "NFT Marketplaces",
+          description: "Digital asset trading and creation",
+          features: ["Digital ownership", "Creator royalties", "Cross-chain trading", "Metaverse integration"],
+          demo: "Browse NFTs"
+        },
+        {
+          id: "dao",
+          title: "DAO Governance",
+          description: "Decentralized autonomous organizations",
+          features: ["Community voting", "Proposal systems", "Treasury management", "Transparent governance"],
+          demo: "Join DAO"
+        }
+      ]
     }
   };
 
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE SHOWCASE • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6">Interactive Tech Showcase 2025</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our revolutionary technologies through interactive demonstrations and real-time experiences
-          </p>
-        </div>
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setHoveredItem(null);
+  };
 
-        <div className="grid lg:grid-cols-4 gap-8 mb-12">
+  const currentCategory = techCategories[activeTab as keyof typeof techCategories];
+
+  return (
+    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 text-white">
+            🚀 INTERACTIVE SHOWCASE • 2025
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Experience our cutting-edge technologies through interactive demonstrations and real-time simulations
+          </p>
+        </motion.div>
+
+        {/* Tab Navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
           {Object.entries(techCategories).map(([key, category]) => (
             <button
               key={key}
-              onClick={() => setActiveTab(key)}
-              className={`p-6 rounded-xl transition-all duration-300 ${
+              onClick={() => handleTabChange(key)}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === key
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 transform scale-105'
-                  : 'bg-white/10 hover:bg-white/20'
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                  : 'bg-white text-gray-700 hover:shadow-md'
               }`}
             >
-              <div className="text-4xl mb-3">{category.icon}</div>
-              <h3 className="text-lg font-bold mb-2">{category.title}</h3>
-              <p className="text-sm opacity-80">{category.description}</p>
+              <span className="text-xl">{category.icon}</span>
+              <span>{category.title}</span>
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="text-5xl">{techCategories[activeTab as keyof typeof techCategories].icon}</div>
+        {/* Content Area */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            {/* Category Header */}
+            <div className={`bg-gradient-to-r ${currentCategory.bgColor} text-white p-8`}>
+              <div className="flex items-center space-x-4 mb-4">
+                <span className="text-4xl">{currentCategory.icon}</span>
                 <div>
-                  <h3 className="text-3xl font-bold">{techCategories[activeTab as keyof typeof techCategories].title}</h3>
-                  <p className="text-lg opacity-90">{techCategories[activeTab as keyof typeof techCategories].description}</p>
+                  <h3 className="text-3xl font-bold">{currentCategory.title}</h3>
+                  <p className="text-lg opacity-90">Explore the future of {currentCategory.title.toLowerCase()}</p>
                 </div>
               </div>
-              
-              <div className="space-y-4">
-                <h4 className="text-xl font-bold mb-4">Key Features:</h4>
-                <ul className="space-y-2">
-                  {techCategories[activeTab as keyof typeof techCategories].features.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <span className="text-green-400 text-xl">✓</span>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-bold mb-6">Performance Stats:</h4>
-              <div className="grid grid-cols-2 gap-4">
-                {Object.entries(techCategories[activeTab as keyof typeof techCategories].stats).map(([key, value]) => (
-                  <div key={key} className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-yellow-400">{value}</div>
-                    <div className="text-sm text-gray-300">{key}</div>
-                  </div>
+            {/* Items Grid */}
+            <div className="p-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {currentCategory.items.map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    onHoverStart={() => setHoveredItem(item.id)}
+                    onHoverEnd={() => setHoveredItem(null)}
+                    className={`relative bg-gradient-to-br ${currentCategory.color} text-white rounded-xl p-6 cursor-pointer transform transition-all duration-300 ${
+                      hoveredItem === item.id ? 'scale-105 shadow-2xl' : 'hover:shadow-lg'
+                    }`}
+                  >
+                    <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                    <p className="text-sm opacity-90 mb-4">{item.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {item.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm">
+                          <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-white/20 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+                    >
+                      {item.demo}
+                    </motion.button>
+
+                    {/* Hover Effect */}
+                    <AnimatePresence>
+                      {hoveredItem === item.id && (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-xl"
+                        />
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
                 ))}
               </div>
-              
-              <div className="mt-8">
-                <a 
-                  href={`/pages/${activeTab === 'ai' ? 'AIRevolution2025' : 
-                    activeTab === 'quantum' ? 'QuantumComputingBreakthrough' :
-                    activeTab === 'neural' ? 'NeuralInterfaceFuture' : 'UltimateTechBreakthrough2025'}`}
-                  className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center hover:scale-105"
-                >
-                  Experience {techCategories[activeTab as keyof typeof techCategories].title} →
-                </a>
-              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
-        <div className="text-center mt-12">
-          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of pioneers who are already experiencing these revolutionary technologies
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Experience the Future?</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of innovators who are already using our technologies to transform their businesses
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/pages/ComprehensiveServices2025" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105"
-            >
-              View All Services →
-            </a>
-            <a 
-              href="/pages/InnovationLanding2025" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
-            >
-              Innovation Hub
-            </a>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Start Free Trial
+            </button>
+            <button className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Schedule Demo
+            </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
