@@ -10,8 +10,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Real-Time RAG Benchmark Suite v1.0 —
-            <a href="/updates/real-time-rag-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            New: Real-Time Agent Incident Response (2026) —
+            <a href="/updates/real-time-agent-incident-response-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -41,10 +41,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Trustworthy Model Routing (2026) and RAG Evals —
-            <a href="/updates/trustworthy-model-routing-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">routing field guide</a>
+            Fresh: Incident Response Blueprint and RAG Benchmark Suite —
+            <a href="/updates/real-time-agent-incident-response-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">incident response</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/real-time-rag-evals-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">RAG evals</a>
+            <a href="/updates/real-time-rag-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">RAG benchmark</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -112,10 +112,10 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real-Time RAG Benchmark Suite —
-            <a href="/updates/real-time-rag-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Real-Time Agent Incident Response —
+            <a href="/updates/real-time-agent-incident-response-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/trustworthy-model-routing-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Trustworthy Model Routing</a>
+            Also read: <a href="/updates/real-time-rag-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">RAG Benchmark Suite</a>
           </p>
         </div>
       </div>
