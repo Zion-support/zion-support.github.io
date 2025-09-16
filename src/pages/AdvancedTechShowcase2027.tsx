@@ -1,6 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import { motion } from 'framer-motion';
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 import { Helmet } from 'react-helmet-async';
 =======
 import Header from '../Header';
@@ -100,7 +104,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -116,6 +120,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 Explore the most revolutionary technologies that will define the future. 
                 From quantum consciousness to interdimensional computing, discover what's possible.
               </p>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       <Header />
@@ -240,6 +245,9 @@ const AdvancedTechShowcase2027: React.FC = () => {
               </ul>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </div>
+=======
+            </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
         </div>
 
@@ -255,7 +263,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
-              <div
+              <motion.div
                 key={tech.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +298,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   </span>
                   <span className="text-purple-300">{tech.timeline}</span>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -307,7 +315,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -318,7 +326,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   <p className="text-purple-200 mb-4">{story.technology}</p>
                   <div className="text-3xl font-bold text-green-400 mb-4">{story.result}</div>
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
-                </div>
+                </motion.div>
               ))}
 =======
         {/* Performance Metrics */}

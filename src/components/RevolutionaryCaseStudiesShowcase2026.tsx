@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   CheckCircle
@@ -143,7 +143,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -155,10 +155,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Overall Stats */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -173,10 +173,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Case Study Selector */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -200,11 +200,11 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <p className="text-xs text-gray-500 mt-1">{caseStudy.industry}</p>
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Active Case Study Details */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeCase}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -295,11 +295,11 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                 </div>
               </div>
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* CTA Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -324,7 +324,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ const QuantumAIRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,14 +31,14 @@ const QuantumAIRevolution2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Quantum Stats */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -46,11 +46,11 @@ const QuantumAIRevolution2026: React.FC = () => {
           >
             <h2 className="text-4xl font-bold mb-4">Quantum Performance Metrics</h2>
             <p className="text-xl opacity-80">Revolutionary improvements over classical computing</p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {quantumStats.map((stat, index) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -61,7 +61,7 @@ const QuantumAIRevolution2026: React.FC = () => {
                 <div className="text-sm opacity-80 mb-1">{stat.unit}</div>
                 <div className="text-lg font-semibold mb-2">{stat.metric}</div>
                 <div className="text-sm text-green-400 font-semibold">+{stat.improvement}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

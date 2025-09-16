@@ -77,6 +77,7 @@ import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 =======
 <<<<<<< HEAD
@@ -94,6 +95,8 @@ import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -151,6 +154,7 @@ export default function HomePage() {
               <Link href="/content/ai-2026-agent-platform-slos" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
               <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Best Practices</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -174,6 +178,11 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,6 +199,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/feature/content-sept-2025
+=======
+      {/* What's New dynamic section */}
+      <WhatsNew highlightOnly limit={8} />
+<<<<<<< HEAD
+>>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/feat/new-content-sept-15-2025
+>>>>>>> cursor/create-and-deploy-new-content-376e
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
@@ -282,6 +303,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
@@ -296,6 +318,8 @@ export default function HomePage() {
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Promo: Fresh Content */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -597,6 +621,7 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 <<<<<<< HEAD
@@ -610,10 +635,13 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
+>>>>>>> origin/feat/new-content-ads-sept15
         
         {/* New Content Promo: Risk Management & Compliance (2026) */}
         <section className="py-10 bg-white">
@@ -653,6 +681,7 @@ export default function HomePage() {
           </div>
         </section>
 
+>>>>>>> origin/feat/new-content-2026-evals
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
         
@@ -680,6 +709,7 @@ export default function HomePage() {
               <div className="shrink-0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -694,6 +724,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
                 <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
 =======
                 <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
@@ -847,6 +879,7 @@ export default function HomePage() {
 >>>>>>> origin/feature/multimodal-agents-blueprint-2026
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 <<<<<<< HEAD
@@ -860,6 +893,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
                 Read the Blueprint →
               </Link>
             </div>
@@ -901,6 +936,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
@@ -915,6 +951,8 @@ export default function HomePage() {
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1015,6 +1053,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 <<<<<<< HEAD
@@ -1030,6 +1069,8 @@ export default function HomePage() {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, Zap, Shield, 
   Brain, Rocket, Atom, Cloud, Lock, Globe, Target,

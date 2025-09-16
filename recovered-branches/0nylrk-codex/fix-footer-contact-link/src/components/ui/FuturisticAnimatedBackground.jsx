@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import { motion } from 'framer-motion';
 export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
     const canvasRef = useRef(null);
     const particlesRef = useRef([]);

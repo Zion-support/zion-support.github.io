@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Page(props: any) {
             // Check for very short content

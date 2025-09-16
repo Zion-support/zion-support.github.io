@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+import { motion } from 'framer-motion';
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
@@ -10,7 +14,11 @@ const RevolutionaryTechBanner2026: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 backdrop-blur-sm rounded-2xl p-8 mb-8 text-white">
+<<<<<<< HEAD
         <div
+=======
+        <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -69,7 +77,11 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </motion.p>
 
           {/* Feature Highlights */}
+<<<<<<< HEAD
           <div
+=======
+          <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -90,10 +102,17 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
               <p className="text-sm opacity-80">Direct brain-computer communication</p>
             </div>
+<<<<<<< HEAD
           </div>
 
           {/* Call to Action Buttons */}
           <div
+=======
+          </motion.div>
+
+          {/* Call to Action Buttons */}
+          <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -123,10 +142,17 @@ const RevolutionaryTechBanner2026: React.FC = () => {
             >
               🧬 Experience Neural Tech →
             </motion.a>
+<<<<<<< HEAD
           </div>
 
           {/* Animated Progress Bar */}
           <div
+=======
+          </motion.div>
+
+          {/* Animated Progress Bar */}
+          <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -134,7 +160,11 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           >
             <div className="text-sm opacity-80 mb-2">Revolutionary Technology Progress</div>
             <div className="w-full bg-white/20 rounded-full h-2">
+<<<<<<< HEAD
               <div
+=======
+              <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -142,8 +172,13 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               />
             </div>
             <div className="text-xs opacity-60 mt-2">100% Complete - Ready for Launch</div>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+          </motion.div>
+        </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       </div>
     </div>
   );

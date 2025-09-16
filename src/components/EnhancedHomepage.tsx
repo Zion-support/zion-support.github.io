@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   ArrowRight, 
@@ -208,35 +208,35 @@ const EnhancedHomepage: React.FC = () => {
             </motion.p>
 
             {/* CTA Buttons */}
-            <div 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
               <a href="/services">
-                <button
+                <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore Services
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </button>
+                </motion.button>
               </a>
               
               <a href="/quote">
-                <button
+                <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Quote
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
-                </button>
+                </motion.button>
               </a>
-            </div>
+            </motion.div>
 
             {/* Contact Information */}
-            <div 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
               variants={itemVariants}
             >
@@ -252,35 +252,35 @@ const EnhancedHomepage: React.FC = () => {
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Floating Elements */}
-          <div
+          <motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
             variants={floatingVariants}
             animate="animate"
           >
             <Atom className="w-8 h-8" />
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             className="absolute top-40 right-20 text-blue-400/20"
             variants={floatingVariants}
             animate="animate"
             style={{ animationDelay: '1s' }}
           >
             <Brain className="w-6 h-6" />
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
             variants={floatingVariants}
             animate="animate"
             style={{ animationDelay: '2s' }}
           >
             <Rocket className="w-7 h-7" />
-          </div>
+          </motion.div>
         </motion.section>
 
         {/* Category Filter */}
@@ -298,12 +298,12 @@ const EnhancedHomepage: React.FC = () => {
               Explore Our Revolutionary Services
             </motion.h2>
             
-            <div 
+            <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
             >
               {categories.map((category) => (
-                <button
+                <motion.button
                   key={category.id}
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
@@ -316,9 +316,9 @@ const EnhancedHomepage: React.FC = () => {
                 >
                   <category.icon className="inline-block w-5 h-5 mr-2" />
                   {category.name}
-                </button>
+                </motion.button>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -330,7 +330,7 @@ const EnhancedHomepage: React.FC = () => {
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-            <div 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
@@ -353,24 +353,24 @@ const EnhancedHomepage: React.FC = () => {
                   technologies={['AI', 'Cloud', 'Security', 'Automation']}
                 />
               ))}
-            </div>
+            </motion.div>
             
             {getFilteredServices().length > 12 && (
-              <div 
+              <motion.div 
                 className="text-center mt-12"
                 variants={itemVariants}
               >
                 <a href="/services">
-                  <button
+                  <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     View All Services
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                  </button>
+                  </motion.button>
                 </a>
-              </div>
+              </motion.div>
             )}
           </div>
         </motion.section>
@@ -390,12 +390,12 @@ const EnhancedHomepage: React.FC = () => {
               Featured Revolutionary Services
             </motion.h2>
             
-            <div 
+            <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
               <AnimatePresence mode="wait">
-                <div
+                <motion.div
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -421,14 +421,14 @@ const EnhancedHomepage: React.FC = () => {
                     </div>
                     
                     <a href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
-                      <button
+                      <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
-                      </button>
+                      </motion.button>
                     </a>
                   </div>
                   
@@ -442,9 +442,9 @@ const EnhancedHomepage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              
-            </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -471,42 +471,42 @@ const EnhancedHomepage: React.FC = () => {
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
             
-            <div 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
             >
               <a href="/quote">
-                <button
+                <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </button>
+                </motion.button>
               </a>
               
               <a href="/contact">
-                <button
+                <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Contact Us
                   <Phone className="inline-block ml-2 w-5 h-5" />
-                </button>
+                </motion.button>
               </a>
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       </UltraFuturisticBackground>
 
       {/* Performance Monitor */}
-      
+      <AnimatePresence>
         {showPerformanceMonitor && (
           <PerformanceMonitor />
         )}
-      
+      </AnimatePresence>
     </>
   );
 };

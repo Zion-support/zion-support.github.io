@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';

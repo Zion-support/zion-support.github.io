@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
@@ -106,7 +106,7 @@ export default function InnovativeServicesShowcase() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -142,14 +142,14 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-gray-400">{contactInfo.address}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Featured Innovative Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -164,11 +164,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -214,7 +214,7 @@ export default function InnovativeServicesShowcase() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function InnovativeServicesShowcase() {
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -238,11 +238,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the latest technologies that are emerging and transforming industries
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
-                <div
+                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -266,11 +266,11 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div
+            <motion.div
               className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -286,14 +286,14 @@ export default function InnovativeServicesShowcase() {
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
               </motion.a>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -308,11 +308,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of artificial intelligence with our most advanced services
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
-                <div
+                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -336,11 +336,11 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div
+            <motion.div
               className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -356,14 +356,14 @@ export default function InnovativeServicesShowcase() {
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
               </motion.a>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -408,7 +408,7 @@ export default function InnovativeServicesShowcase() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>

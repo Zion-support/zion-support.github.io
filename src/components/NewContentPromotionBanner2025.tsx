@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -54,73 +55,163 @@ const NewContentPromotionBanner2025: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+=======
+"use client";
+'use client';
 
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {promotions.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </motion.div>
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-      {/* Quick Links Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="bg-gradient-to-r from-gray-900 to-gray-800 py-8"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-white mb-2">🚀 Explore Our Latest Innovations</h3>
-            <p className="text-gray-400">Discover cutting-edge technologies and solutions</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {quickLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.link}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-                transition={{ delay: 0.1 * index, duration: 0.5 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 hover:from-purple-600 hover:to-pink-600 rounded-lg p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+const NewContentPromotionBanner2025 = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    {
+      title: 'Interactive Demos',
+      description: 'Experience AI in action with our hands-on demonstrations',
+      icon: '🎮',
+      color: 'from-blue-500 to-purple-500'
+    },
+    {
+      title: 'Success Stories',
+      description: 'Real case studies with measurable ROI results',
+      icon: '📈',
+      color: 'from-green-500 to-blue-500'
+    },
+    {
+      title: 'Expert Insights',
+      description: 'Latest AI trends and industry analysis from our experts',
+      icon: '🧠',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Interactive Tools',
+      description: 'ROI calculators and assessment tools to explore your potential',
+      icon: '🛠️',
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature(prev => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [features.length]);
+
+  return (
+    <div className={`py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Main Content */}
+          <div>
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Discover Our Latest
+              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                AI Content
+              </span>
+            </h2>
+            
+            <p className="text-xl opacity-90 mb-8 leading-relaxed">
+              Explore interactive demos, success stories, expert insights, and powerful tools 
+              that showcase the future of AI in business transformation.
+            </p>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+
+            {/* Feature Highlight */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 mb-8">
+              <div className="flex items-center space-x-4">
+                <div className={`text-4xl bg-gradient-to-r ${features[currentFeature].color} bg-clip-text text-transparent`}>
+                  {features[currentFeature].icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">
+                    {features[currentFeature].title}
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    {features[currentFeature].description}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/content"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
               >
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {link.icon}
+                Explore New Content
+              </a>
+              <a
+                href="/demo"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
+              >
+                Try Interactive Demo
+              </a>
+            </div>
+          </div>
+
+          {/* Right Side - Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className={`group bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 hover:bg-opacity-20 hover:transform hover:scale-105 ${
+                  index === currentFeature ? 'ring-2 ring-white ring-opacity-50' : ''
+                }`}
+                onClick={() => setCurrentFeature(index)}
+              >
+                <div className={`text-3xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
+                  {feature.icon}
                 </div>
-                <div className="text-sm font-semibold text-white group-hover:text-white">
-                  {link.name}
+                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
+                  {feature.description}
+                </p>
+                <div className="mt-4 flex items-center text-sm text-yellow-300 group-hover:text-white transition-colors">
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </div>
-              </motion.a>
+              </div>
             ))}
           </div>
         </div>
-      </motion.div>
 
-      {/* Special Offer Banner */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className="bg-gradient-to-r from-yellow-600 to-orange-600 text-black py-6"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
-            <div className="text-2xl font-bold">🎉 LIMITED TIME OFFER</div>
-            <div className="text-lg">Get 50% off all AI solutions for the first 3 months</div>
-            <button className="bg-black text-yellow-400 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
-              Claim Offer
-            </button>
+        {/* Bottom Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
+            <div className="text-sm opacity-90">New Articles</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
+            <div className="text-sm opacity-90">Case Studies</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
+            <div className="text-sm opacity-90">Interactive Tools</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
+            <div className="text-sm opacity-90">Live Demos</div>
           </div>
         </div>
+<<<<<<< HEAD
       </motion.div>
 
       {/* Technology Highlights */}
@@ -243,6 +334,9 @@ const NewContentPromotionBanner2025: React.FC = () => {
         </div>
       </div>
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+      </div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     </div>
   );
 };

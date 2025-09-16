@@ -33,7 +33,7 @@ import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } fro
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Heart, 
   Shield, 

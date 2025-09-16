@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
   const metrics = [
@@ -77,7 +77,7 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -93,17 +93,17 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             Real-time insights and analytics for AI systems, quantum computing, neural interfaces, 
             and advanced technologies. Monitor performance, track trends, and optimize operations.
           </p>
-        </div>
+        </motion.div>
 
         {/* Key Metrics */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {metrics.map((metric, index) => (
-            <div
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -120,12 +120,12 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               </div>
               <div className="text-3xl font-bold mb-2">{metric.value}</div>
               <div className="text-blue-200 text-sm">{metric.title}</div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Performance Charts */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -180,10 +180,10 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* System Status and Activities */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -242,10 +242,10 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Advanced Analytics Features */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -269,10 +269,10 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               <p className="text-blue-200">Get predictive insights and recommendations for system optimization and improvement.</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -297,7 +297,7 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               View All Insights
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

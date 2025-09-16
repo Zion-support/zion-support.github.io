@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
 const sizeClasses = {
     sm: 'w-8 h-8',

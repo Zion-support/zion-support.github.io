@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
   Truck, Globe, Zap, Shield, BarChart3, 
   TrendingUp, Target, Users, CheckCircle, 

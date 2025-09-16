@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -317,6 +317,11 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
         </motion.div>
       </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+        </div>
+      </section>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     </div>
   );
 };

@@ -11,6 +11,7 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,13 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   // Fresh content added 2025-09-15
   {
 <<<<<<< HEAD
@@ -45,9 +53,12 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
     title: 'Guide: Agent Platform Operations (2026)',
 =======
@@ -172,6 +183,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> origin/feature/content-updates-2025-09-15
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
@@ -186,6 +198,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
 =======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
   // Fresh content added 2025-09-15
   {
 <<<<<<< HEAD
@@ -195,6 +209,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -334,6 +349,10 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -357,6 +376,7 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Blueprint'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -370,6 +390,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 <<<<<<< HEAD
@@ -377,6 +399,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -392,6 +415,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -438,6 +463,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -454,11 +480,14 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -482,10 +511,13 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -499,6 +531,8 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
@@ -513,6 +547,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -529,11 +564,16 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -548,6 +588,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -562,6 +604,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -572,6 +615,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (brand new content)
@@ -603,6 +648,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -616,10 +662,13 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> main
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
 <<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -645,11 +694,14 @@ export const siteUpdates: SiteUpdate[] = [
   {
 =======
 =======
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -659,11 +711,15 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Lab Open Benchmarks Portal',
     summary:
+=======
+<<<<<<< HEAD
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> main
@@ -703,6 +759,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -720,6 +778,9 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -1766,12 +1827,16 @@ export const siteUpdates: SiteUpdate[] = [
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
     date: '2025-09-15',
     tag: 'Launch'
@@ -3093,6 +3158,10 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+    date: '2025-09-15',
+    tag: 'Launch'
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -3347,6 +3416,7 @@ export const siteUpdates: SiteUpdate[] = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3367,6 +3437,12 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3565,6 +3641,7 @@ export const getLatestUpdates = (limit = 6) => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ]
 
@@ -3600,3 +3677,11 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+export function getLatestUpdates(count: number = 6): SiteUpdate[] {
+  return siteUpdates.slice(0, count)
+}
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -268,6 +269,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
 =======
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+import { motion } from 'framer-motion';
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -276,7 +280,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -299,7 +303,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Research Overview
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -311,7 +315,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -327,9 +331,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Real-time gene monitoring</li>
               <li>• Personalized treatments</li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -345,9 +349,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Artificial organs</li>
               <li>• Bio-manufacturing</li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -363,7 +367,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Cognitive enhancement</li>
               <li>• Neural prosthetics</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -497,6 +501,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               Research Partnership
 <<<<<<< HEAD
             </button>
+<<<<<<< HEAD
         <section className="text-center">
           <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Biology?</h2>
@@ -515,8 +520,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </button>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

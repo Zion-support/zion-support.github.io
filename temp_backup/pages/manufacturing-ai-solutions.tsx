@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Settings, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, Factory, Cog, BarChart3 } from 'lucide-react';
 import SEO from '../components/SEO';
 

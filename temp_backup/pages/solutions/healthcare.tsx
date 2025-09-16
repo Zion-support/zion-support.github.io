@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, Activity } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -67,7 +67,7 @@ const HealthcareSolutionsPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-pink-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 import Layout from '../../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
   Heart, Brain, Shield, Zap, Cpu, Globe, 
   Users, Award, TrendingUp, CheckCircle, ArrowRight

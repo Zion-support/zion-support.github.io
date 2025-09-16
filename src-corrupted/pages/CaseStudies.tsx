@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Building, Heart, Coins, Factory, Truck, Globe, 
   Users, TrendingUp, Award, Zap, Brain, Shield, Cloud,

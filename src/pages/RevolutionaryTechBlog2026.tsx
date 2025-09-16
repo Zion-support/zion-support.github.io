@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechBlog2026: React.FC = () => {
@@ -85,6 +90,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const categories = ['All', 'AI & Consciousness', 'Quantum Computing', 'Neural Interfaces', 'Biotechnology', 'Space Technology', 'Future of Work'];
 
@@ -97,12 +103,25 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <meta name="keywords" content="tech blog, AI consciousness, quantum computing, neural interfaces, biotechnology, space technology, 2026 trends" />
       </Helmet>
 
+=======
+    <>
+      <Helmet>
+        <title>Revolutionary Tech Blog 2026 - Zion Tech Group</title>
+        <meta name="description" content="Latest insights on revolutionary technology trends including AI consciousness, quantum computing, neural interfaces, and biotech breakthroughs." />
+        <meta name="keywords" content="tech blog, AI consciousness, quantum computing, neural interfaces, biotechnology, space technology, 2026 trends" />
+      </Helmet>
+
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
+<<<<<<< HEAD
             <div
+=======
+            <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -117,7 +136,11 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.
               </p>
+<<<<<<< HEAD
             </div>
+=======
+            </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
         </div>
 
@@ -132,7 +155,11 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.filter(post => post.featured).map((post) => (
+<<<<<<< HEAD
               <div
+=======
+              <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -144,6 +171,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     {post.category}
                   </span>
                   <span className="text-sm text-gray-400">{post.readTime}</span>
+<<<<<<< HEAD
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white hover:text-blue-400 transition-colors">
                   {post.title}
@@ -156,6 +184,20 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                   <span className="text-sm text-gray-400">{post.date}</span>
                 </div>
               </div>
+=======
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white hover:text-blue-400 transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-blue-100 mb-6">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-400">By {post.author}</span>
+                  <span className="text-sm text-gray-400">{post.date}</span>
+                </div>
+              </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             ))}
           </div>
 
@@ -169,7 +211,11 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
+<<<<<<< HEAD
               <div
+=======
+              <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -199,14 +245,22 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
+<<<<<<< HEAD
               </div>
+=======
+              </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             ))}
           </div>
         </div>
 
         {/* Newsletter Signup */}
         <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
           <div
+=======
+          <motion.div
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -227,6 +281,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
 
       {/* Technology Insights */}
@@ -234,6 +289,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 const RevolutionaryTechBlog2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+=======
+          </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -279,6 +337,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <li>• Custom development</li>
               <li>• Technology consulting</li>
             </ul>
+<<<<<<< HEAD
 
       {/* Technology Insights */}
       <div className="container mx-auto px-4 py-20">
@@ -340,11 +399,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Contact Our Team
             </button>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
         </div>
       </div>
     </div>
     </>
+<<<<<<< HEAD
     </div>
 =======
           </motion.div>
@@ -352,6 +414,8 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       </div>
     </>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   );
 };
 

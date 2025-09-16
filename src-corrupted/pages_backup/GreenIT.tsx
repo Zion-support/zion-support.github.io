@@ -586,7 +586,7 @@ export default function GreenIT(...args: unknown[]): unknown {
                     </h3>;
                     <p className='text - zion - slate - light text - center'>;
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { SEO } from '../components / SEO';
 import {
   Leaf,

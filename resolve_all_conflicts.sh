@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 echo "Resolving all merge conflicts by accepting our version..."
 =======
@@ -62,12 +63,18 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 <<<<<<< HEAD
 echo "🔧 Resolving ALL remaining merge conflicts..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -91,9 +98,12 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
 =======
 echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +157,9 @@ echo "Resolving all merge conflicts by accepting our version..."
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
 # Find all files with merge conflict markers
 files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
@@ -175,6 +188,7 @@ done
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +251,11 @@ done
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 echo "🎉 All conflict resolution complete!"
 =======
 <<<<<<< HEAD
@@ -287,9 +306,8 @@ echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-87a1
 >>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -320,9 +338,12 @@ echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -373,3 +394,6 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120

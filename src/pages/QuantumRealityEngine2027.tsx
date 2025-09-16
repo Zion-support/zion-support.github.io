@@ -1,12 +1,16 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -45,6 +49,8 @@ import React from 'react';
             Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine. 
             Control space, time, matter, and energy at the quantum level to reshape existence.
       <div className="container mx-auto px-4 py-16">
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -65,6 +71,7 @@ import React from 'react';
           </div>
 
             </ul>
+<<<<<<< HEAD
           </div>
 
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -241,16 +248,21 @@ import React from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </ul>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Manipulate Reality →
             </button>
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Control Space-Time →
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             </button>
           </div>
 
@@ -304,6 +316,7 @@ import React from 'react';
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Applications */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
@@ -334,6 +347,8 @@ import React from 'react';
               <li>• Parallel universe access</li>
               <li>• Time travel capabilities</li>
             </ul>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Quantum Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Quantum Applications</h2>
@@ -371,11 +386,15 @@ import React from 'react';
 
         {/* Call to Action */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               Control Reality →
             </button>
+<<<<<<< HEAD
         <div className="text-center">
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -393,6 +412,10 @@ import React from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="text-center">
+=======
+        <div className="text-center">
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               Schedule Demo
             </button>
           </div>

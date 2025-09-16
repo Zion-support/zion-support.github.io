@@ -1,11 +1,12 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react';
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 import { motion } from 'framer-motion';
-import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -74,6 +75,7 @@ const Home: React.FC = () => {
               From machine learning to autonomous systems.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -98,6 +100,8 @@ const Home: React.FC = () => {
                 📚 Tech Blog 2026 →
               </a>
             </div>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -122,6 +126,7 @@ const Home: React.FC = () => {
               Comprehensive cybersecurity solutions to protect your business 
               from evolving threats in the digital landscape.
             </p>
+<<<<<<< HEAD
             <Link 
               to="/pages/ComprehensiveTechInsights2026" 
               className="text-green-400 hover:text-green-300 font-semibold"
@@ -157,6 +162,8 @@ const Home: React.FC = () => {
         {/* Call to Action */}
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026

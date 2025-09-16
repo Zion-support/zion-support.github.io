@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 const TranscendentAI2026: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -58,6 +58,7 @@ const TranscendentAI2026: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -140,6 +141,8 @@ const TranscendentAI2026: React.FC = () => {
                 </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -202,6 +205,7 @@ const TranscendentAI2026: React.FC = () => {
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
 <<<<<<< HEAD
               </div>
+<<<<<<< HEAD
               </div>
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
@@ -401,6 +405,8 @@ const TranscendentAI2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
               </div>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -657,11 +663,14 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </motion.section>
 
+<<<<<<< HEAD
           </div>
         </motion.section>
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Future Vision */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}

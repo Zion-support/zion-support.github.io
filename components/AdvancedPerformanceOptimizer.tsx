@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface PerformanceMetrics {
   loadTime: number;

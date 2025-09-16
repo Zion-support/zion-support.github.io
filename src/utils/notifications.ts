@@ -2,6 +2,7 @@
 interface NotificationOptions {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
@@ -19,6 +20,11 @@ interface NotificationOptions {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling

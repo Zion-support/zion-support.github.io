@@ -1,4 +1,4 @@
-
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -27,7 +27,7 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,

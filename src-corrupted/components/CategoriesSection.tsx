@@ -2,7 +2,7 @@
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight } from "lucide-react";
-
+import { motion } from "framer-motion";
 
 const categories = [
   {

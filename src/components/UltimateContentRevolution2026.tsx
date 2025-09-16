@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -134,7 +134,7 @@ const UltimateContentRevolution2026 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -151,10 +151,10 @@ const UltimateContentRevolution2026 = () => {
             Experience the most advanced AIquantum computingand automation technologies 
             that are reshaping the future of business and technology.
           </p>
-        </div>
+        </motion.div>
 
         {/* Content Tabs */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -179,7 +179,7 @@ const UltimateContentRevolution2026 = () => {
 
           {/* Tab Content */}
           <AnimatePresence mode="wait">
-            <div
+            <motion.div
               key={activeTab}
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
@@ -219,12 +219,12 @@ const UltimateContentRevolution2026 = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Testimonials */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -235,7 +235,7 @@ const UltimateContentRevolution2026 = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -259,13 +259,13 @@ const UltimateContentRevolution2026 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -287,7 +287,7 @@ const UltimateContentRevolution2026 = () => {
               Get Started
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

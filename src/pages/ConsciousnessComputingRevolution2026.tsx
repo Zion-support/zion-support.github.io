@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -101,11 +102,17 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+=======
+import { motion } from 'framer-motion';
+
+const ConsciousnessComputingRevolution2026: React.FC = () => {
+  return (
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -306,6 +313,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -536,6 +544,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
+=======
+          </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         </div>
       </div>
     </div>

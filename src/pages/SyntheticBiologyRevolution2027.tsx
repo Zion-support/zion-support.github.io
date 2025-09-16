@@ -3,6 +3,7 @@ import React from 'react';
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
         {/* Hero Section */}
@@ -22,6 +23,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -80,6 +83,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
+<<<<<<< HEAD
             <p className="text-teal-100 mb-6 text-center">
               Production of pharmaceuticals and materials using living cells
             </p>
@@ -91,6 +95,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Start Manufacturing →
             </a>
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -100,6 +106,23 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
+            <p className="text-purple-100 mb-6 text-center">
+              Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Pollution-eating bacteria</li>
+              <li>• Carbon capture organisms</li>
+              <li>• Ocean cleanup systems</li>
+              <li>• Ecosystem restoration</li>
+            </ul>
+            <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Restoration →
+            </a>
+            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Explore Bio-Energy →
+            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
+              Engineer Life →
+            </a>
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -191,6 +214,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
 =======
             <a href="/pages/SyntheticDNA" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
               Explore DNA Tech →
@@ -308,6 +332,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -320,6 +346,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </a>
@@ -345,6 +372,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Learn More
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+              Learn More
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             </button>
           </div>
         </div>

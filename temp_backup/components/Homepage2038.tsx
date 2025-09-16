@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
