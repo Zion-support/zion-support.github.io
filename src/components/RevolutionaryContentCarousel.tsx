@@ -51,7 +51,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Space Habitats",
         "Interstellar Communication"
       ],
-      impact: "Revolutionary"
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -104,6 +103,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -119,6 +120,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
