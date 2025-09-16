@@ -11,6 +11,34 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: Zero‑Trust Agent Controllers v1.0',
+		summary: 'Runtime approvals, budgets, and adaptive policies for safe tool use.',
+		href: '/updates/zero-trust-agent-controllers-1-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Operational Risk Metrics for Agents (2026)',
+		summary: 'Standardize violations, overrides, groundedness, and MTTR across teams.',
+		href: '/updates/agent-risk-metrics-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Guide: Real‑Time Retrieval Architectures (2026)',
+		summary: 'Reference designs and trade‑offs for low‑latency, high‑quality retrieval.',
+		href: '/updates/real-time-retrieval-architectures-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Enterprise Retrieval Observability (2026)',
+		summary: 'SLIs, traces, and eval overlays for reliable retrieval systems in prod.',
+		href: '/updates/enterprise-retrieval-observability-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
 		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
 		href: '/updates/real-time-agent-cost-optimizer-2-0',
