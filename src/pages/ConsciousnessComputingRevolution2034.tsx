@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import { Helmet } from 'react-helmet-async';
 
 const ConsciousnessComputingRevolution2034: React.FC = () => {
@@ -167,15 +154,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
-=======
-
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -376,37 +354,10 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <div className="text-6xl font-bold text-orange-400 mb-4">∞</div>
               <h3 className="text-2xl font-bold text-white mb-2">Reality Manipulation</h3>
               <p className="text-orange-200">Unlimited reality creation potential</p>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -438,13 +389,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <h4 className="text-xl font-semibold text-white mb-2">Space Exploration</h4>
               <p className="text-cyan-200 text-sm">Consciousness-based space mission control</p>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         {/* Future Predictions */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2034</h2>
@@ -485,39 +429,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Multidimensional existence</li>
                 <li>• Universal creation abilities</li>
               </ul>
-<<<<<<< HEAD
-            </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
             </div>
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Join the Consciousness Revolution</h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
@@ -534,15 +450,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <motion.div
-=======
-=======
-        <div
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -567,20 +474,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     </div>
   );
 };

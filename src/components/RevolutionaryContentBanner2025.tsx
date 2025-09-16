@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -148,16 +130,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             </a>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
 import React, { useState, useEffect } from 'react';
 
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -196,135 +170,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
-<<<<<<< HEAD
-      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-4">
-                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-                <span className="text-2xl font-bold">NEW REVOLUTIONARY CONTENT 2025-2026</span>
-                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-              </div>
-              <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
-              <p className="text-xl opacity-95 mb-6 max-w-3xl">
-                {contentSlides[currentSlide].description}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href={contentSlides[currentSlide].link}
-                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                >
-                  Explore Now →
-                </a>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-=======
-      <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-bounce">
-            🌟 BREAKTHROUGH CONTENT • JANUARY 2025
-          </div>
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover the most groundbreaking technological innovations that will reshape the future
-          </p>
-        </div>
-
-        {/* Content Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-xl">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {bannerContent.map((content, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20`}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <h3 className="text-3xl font-bold mb-2 text-white">{content.title}</h3>
-                        <h4 className="text-xl text-purple-200 mb-4">{content.subtitle}</h4>
-                        <p className="text-lg text-gray-200 mb-6">{content.description}</p>
-                        <a
-                          href={content.link}
-                          className={`inline-block bg-gradient-to-r ${content.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-                        >
-                          Explore Now →
-                        </a>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-8xl mb-4 animate-pulse">
-                          {content.title.split(' ')[0]}
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-2">
-                          {content.title.split(' ').slice(1).join(' ')}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {bannerContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-purple-400 scale-125' : 'bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Quick Access Links */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {bannerContent.map((content, index) => (
-            <motion.a
-              key={index}
-              href={content.link}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`bg-gradient-to-r ${content.color} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center hover:scale-105`}
-            >
-              <div className="text-2xl mb-2">{content.title.split(' ')[0]}</div>
-              <div className="text-sm opacity-90">{content.subtitle}</div>
-            </motion.a>
-          ))}
-        </div>
-      </div>
-
-<<<<<<< HEAD
-      {/* Floating Elements */}
-      <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-20">🚀</div>
-      <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
-      <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (
@@ -353,21 +198,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <p className="text-sm opacity-90">{slide.description}</p>
           </a>
         ))}
->>>>>>> cursor/create-and-deploy-new-content-de2c
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
       </div>
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
       </div>
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     </div>
   );
 };

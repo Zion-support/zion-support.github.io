@@ -213,7 +213,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       <div className="absolute bottom-4 right-8 text-2xl opacity-20 animate-bounce" style={{ animationDelay: '3s' }}>
         📚
       </div>
->>>>>>> 79c31961a12b9ea23a94001d28c47b63ebc74fa0
     </div>
   );
 };
