@@ -34,6 +34,9 @@ const posts = [
   ,{ slug: 'ai-2026-runtime-guardrails-blueprint', title: 'AI 2026: Runtime Guardrails Blueprint', excerpt: 'Runtime checks, policy-as-code, and safe tool envelopes.' }
   ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
   ,{ slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
+  ,{ slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'AI 2026: Secure Multi-Agent Operations Blueprint', excerpt: 'Operate multi-agent systems safely with risk tiers and telemetry.' }
+  ,{ slug: 'ai-2026-agent-observability-scorecards', title: 'Agent Observability Scorecards (2026)', excerpt: 'Scorecards for reliability, safety, quality, and efficiency.' }
+  ,{ slug: 'ai-2026-cost-aware-routing-in-practice', title: 'Cost-Aware Routing in Practice (2026)', excerpt: 'Route by budget, latency, and quality with safe fallbacks.' }
 ]
 
 // Newly added posts (Sept 2025)
