@@ -51,7 +51,23 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+<<<<<<< HEAD
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+=======
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+<<<<<<< HEAD
+=======
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
+import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
 import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
@@ -59,10 +75,19 @@ import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTrac
 import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility2025';
 import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
 import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -86,9 +111,12 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+<<<<<<< HEAD
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import EnhancedContentShowcase2026 from './src/components/EnhancedContentShowcase2026';
 import RevolutionaryContentShowcase2026 from './src/pages/RevolutionaryContentShowcase2026';
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
@@ -104,6 +132,11 @@ import RevolutionaryTech2027 from './src/pages/RevolutionaryTech2027';
 import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
 import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
+<<<<<<< HEAD
+=======
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import UltimateServicesShowcase2026 from './src/components/UltimateServicesShowcase2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
 import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
@@ -135,6 +168,13 @@ import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+<<<<<<< HEAD
+=======
+import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
+import SyntheticIntelligenceRevolution2026 from './src/pages/SyntheticIntelligenceRevolution2026';
+import UltimateTechBanner2026 from './src/components/UltimateTechBanner2026';
+import RevolutionaryTechCarousel2026 from './src/components/RevolutionaryTechCarousel2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
 import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
 import AIBusinessRevolution2028 from './src/pages/AIBusinessRevolution2028';
@@ -174,6 +214,13 @@ import UltimateAIConsciousness2032 from './src/pages/UltimateAIConsciousness2032
 import UltimateTechSolutions2026 from './src/pages/UltimateTechSolutions2026';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
+<<<<<<< HEAD
+=======
+import UltimateAIServicesShowcase2026 from './src/pages/UltimateAIServicesShowcase2026';
+import UltimateContentAdvertisingBanner2026 from './src/components/UltimateContentAdvertisingBanner2026';
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import RevolutionaryCaseStudies2032 from './src/pages/RevolutionaryCaseStudies2032';
 import EnhancedContentCarousel2032 from './src/components/EnhancedContentCarousel2032';
 import RevolutionaryTechBanner2033 from './src/components/RevolutionaryTechBanner2033';
@@ -252,7 +299,27 @@ import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
 import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
 import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+<<<<<<< HEAD
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+=======
+<<<<<<< HEAD
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+=======
+import UltimateContentShowcase2026 from './src/pages/UltimateContentShowcase2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import EnhancedFeaturedContent2026 from './src/components/EnhancedFeaturedContent2026';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import NextGenAIConsciousness2025 from './src/pages/NextGenAIConsciousness2025';
+import QuantumRealityEngine2025 from './src/pages/QuantumRealityEngine2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import QuantumComputingBreakthrough2035 from './src/pages/QuantumComputingBreakthrough2035';
+import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnology2035';
+import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
+import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
+import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
+>>>>>>> cursor/create-and-deploy-new-content-dbfb
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
@@ -260,6 +327,14 @@ import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBrea
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+<<<<<<< HEAD
+=======
+=======
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
 export default function App(): JSX.Element {
   return (
@@ -294,25 +369,57 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
+                {/* Advertising Banner */}
+                <UltimateContentAdvertisingBanner2026 />
+                
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
-                
+=======
                 {/* Advanced Search Component */}
                 <div className="mb-8">
                   <AdvancedSearch />
                 </div>
-                
-                {/* New Content Advertising Banner */}
-                <NewContentAdvertisingBanner2026 />
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
                 
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
+<<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
+=======
+                {/* NEW: New Content Banner 2026 - Latest Content Promotion */}
+                <NewContentBanner2026 />
+                
+                {/* NEW: Ultimate Services Showcase 2026 - Comprehensive Services */}
+                <UltimateServicesShowcase2026 />
+                
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dbfb
+                {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2026 - Latest Revolutionary Content */}
+                <RevolutionaryContentBanner2026 />
+                
+                {/* NEW: Enhanced Featured Content 2026 - Latest Revolutionary Content */}
+                <EnhancedFeaturedContent2026 />
+                
+                {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
+                <UltimateContentBanner2025 />
+                
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
                 
@@ -325,6 +432,15 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
+<<<<<<< HEAD
+=======
+                {/* NEW: Ultimate Tech Banner 2026 */}
+                <UltimateTechBanner2026 />
+                
+                {/* NEW: Revolutionary Tech Carousel 2026 */}
+                <RevolutionaryTechCarousel2026 />
+                
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
                 
@@ -554,12 +670,22 @@ export default function App(): JSX.Element {
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
                 </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* NEW: Revolutionary Content Banner 2036 */}
                 <RevolutionaryContentBanner2036 />
 
                 {/* NEW: Revolutionary Content Carousel 2036 */}
                 <RevolutionaryContentCarousel2036 />
+<<<<<<< HEAD
  
+=======
+
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -699,6 +825,10 @@ export default function App(): JSX.Element {
                     <a href="/pages/RevolutionaryCaseStudies2029" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📊 NEW: Case Studies 2029 →
                     </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                     <a href="/pages/UltimateTechBreakthrough2036" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Ultimate Breakthrough 2036 →
                     </a>
@@ -708,6 +838,11 @@ export default function App(): JSX.Element {
                     <a href="/pages/NextGenInnovationHub2036" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🧠 NEW: Innovation Hub 2036 →
                     </a>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
                     </a>
@@ -804,6 +939,10 @@ export default function App(): JSX.Element {
                     <a href="/pages/NextGenInnovationHub2036" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 NEW: Innovation Hub 2036 →
                     </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                     <a href="/pages/NextGenAIConsciousness2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧠 BREAKTHROUGH: AI Consciousness 2025 →
                     </a>
@@ -893,6 +1032,12 @@ export default function App(): JSX.Element {
                   <SocialProofShowcase2034 />
                 </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* NEW: Ultimate Content Banner 2025 - Revolutionary Technology Showcase */}
                 <div className="mb-12">
                   <UltimateContentBanner2025 />
@@ -1212,6 +1357,17 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
+=======
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 {/* NEW: Interactive Technology Showcase 2025 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2025 />
@@ -1339,6 +1495,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+<<<<<<< HEAD
+=======
+          <Route path="/ultimate-ai-services-showcase-2026" element={<UltimateAIServicesShowcase2026 />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
@@ -1354,7 +1514,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryCaseStudies2026" element={<RevolutionaryCaseStudies2026 />} />
           <Route path="/pages/UltimateTechBlog2026" element={<UltimateTechBlog2026 />} />
           <Route path="/pages/RevolutionaryTech2027" element={<RevolutionaryTech2027 />} />
-          <Route path="/pages/RevolutionaryContentShowcase2026" element={<RevolutionaryContentShowcase2026 />} />
           <Route path="/pages/UltimateInnovation2027" element={<UltimateInnovation2027 />} />
           <Route path="/pages/NextGenTechRevolution2027" element={<NextGenTechRevolution2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
@@ -1414,6 +1573,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
           <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+<<<<<<< HEAD
           <Route path="/pages/UltimateTechBanner2039" element={<UltimateTechBanner2039 />} />
           <Route path="/pages/RevolutionaryTechBanner2040" element={<RevolutionaryTechBanner2040 />} />
           <Route path="/pages/NextGenInnovationBanner2041" element={<NextGenInnovationBanner2041 />} />
@@ -1462,6 +1622,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
+=======
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
@@ -1479,10 +1642,42 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumRealityEngine2025" element={<QuantumRealityEngine2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
+          <Route path="/pages/SyntheticIntelligenceRevolution2026" element={<SyntheticIntelligenceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+<<<<<<< HEAD
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
+=======
+          <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
+          <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+          <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
+          <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
+          <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+          <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+          <Route path="/case-studies" element={<RevolutionaryCaseStudies2026 />} />
+          <Route path="/blog" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
+              </div>
+            </main>
+          } />
+          <Route path="/contact" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+                <p className="text-xl text-gray-600">Get in touch with our team</p>
+              </div>
+            </main>
+          } />
+          <Route path="/improvements" element={<ComprehensiveImprovements2025 />} />
+          <Route path="/ultimate-content-showcase-2026" element={<UltimateContentShowcase2026 />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
