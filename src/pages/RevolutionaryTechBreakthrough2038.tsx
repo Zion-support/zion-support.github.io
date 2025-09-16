@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
 
-const RevolutionaryTechBreakthrough2038: React.FC = () => {
+const RevolutionaryTechBreakthrough2038 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}

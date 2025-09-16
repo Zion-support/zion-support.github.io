@@ -1,9 +1,22 @@
-export default function ServicesSchemaPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const services-schema: React.FC = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold text-white">Services Schema</h1>
-      <p className="text-white/80 mt-2">schema.org JSON-LD is generated to <code className="text-white/90">data/services/schema.json</code>.</p>
-      <p className="text-white/70 mt-2">This runs daily and auto-PRs updates.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>services-schema | Zion Tech Group</title>
+        <meta name="description" content="services-schema - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">services-schema</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default services-schema;

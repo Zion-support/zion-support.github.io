@@ -15,7 +15,7 @@ import {
   Zap
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
@@ -75,30 +75,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
-    {
-      title: 'GenAI for Regulated Industries (2025)',
-      href: '/blog/genai-2025-practical-compliance-patterns',
-      tag: 'Compliance',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
-      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
-      tag: 'RevOps',
-      gradient: 'from-fuchsia-500 to-indigo-500'
-    },
-    {
-      title: 'AI 2026: Real-Time Retrieval Architectures',
-      href: '/blog/ai-2026-real-time-retrieval-architectures',
-      tag: 'Article',
-      gradient: 'from-purple-500 to-blue-500'
-    },
-    {
-      title: 'AI 2026: Autonomous Ops Playbook',
-      href: '/content/ai-2026-autonomous-ops-playbook',
-      tag: 'Playbook',
-      gradient: 'from-cyan-500 to-blue-600'
-    }
+    { title: 'Low-Latency Agent Observability (2026)', href: '/blog/ai-2026-low-latency-agent-observability', tag: 'New', gradient: 'from-emerald-500 to-cyan-500' },
+    { title: 'Governed Real-Time Observability (2026)', href: '/blog/ai-2026-governed-real-time-observability', tag: 'Gov', gradient: 'from-fuchsia-500 to-orange-500' },
+    { title: 'Evidence‑Led Operations — Blueprint (2026)', href: '/blog/ai-2026-evidence-led-operations-blueprint', tag: 'Ops', gradient: 'from-fuchsia-500 to-indigo-500' },
+    { title: 'Production Evidence Hub — Blueprint (2026)', href: '/blog/ai-2026-production-evidence-hub-blueprint', tag: 'Blueprint', gradient: 'from-cyan-500 to-blue-600' },
+    { title: 'Real-Time RAG Architectures (2026)', href: '/blog/ai-2026-real-time-retrieval-architectures', tag: 'RAG', gradient: 'from-emerald-500 to-cyan-500' },
+    { title: 'Safe Agent Rollouts Checklist (2026)', href: '/blog/ai-2026-safe-agent-rollouts-checklist', tag: 'Release', gradient: 'from-rose-500 to-orange-500' },
+    { title: 'Production Evidence Hubs — Blueprint (2026)', href: '/blog/ai-2026-evidence-hubs-blueprint', tag: 'Blueprint', gradient: 'from-teal-500 to-emerald-500' }
   ];
 
   const navigationSections = [
@@ -150,6 +133,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     }
   };
 
+const Homepage2025: React.FC = () => {
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -158,12 +142,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
-                <divdiv
+                <div
                   className="flex items-center space-x-2"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
-                </divdiv>
+                </div>
                 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
@@ -184,7 +168,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </div>
 
                 {/* Contact Info */}
-                <divdiv
+                <div
                   className="hidden md:flex items-center space-x-4"
                 >
                   <a
@@ -199,7 +183,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   >
                     Contact Us
                   </a>
-                </divdiv>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -215,7 +199,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               {/* Mobile Navigation Menu */}
               <div>
                 {isMobileMenuOpen && (
-                  <divdiv
+                  <div
                     className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
@@ -250,7 +234,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                         </a>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 )}
               </div>
             </div>
@@ -261,18 +245,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center max-w-6xl mx-auto relative z-10"
           >
-            <divdiv
+            <div
               className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
-              <divdiv
+              <div
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
               >
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
-              </divdiv>
+              </div>
               
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -282,7 +266,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </p>
               
               {/* Enhanced CTA Section */}
-              <divdiv 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
                 <a href="/comprehensive-services-showcase-2026">
@@ -303,10 +287,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     Get Started
                   </button>
                 </a>
-              </divdiv>
+              </div>
               
               {/* Trust Indicators */}
-              <divdiv
+              <div
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -321,16 +305,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <TrendingUp className="w-4 h-4 text-purple-400" />
                   <span>Proven Results</span>
                 </div>
-              </divdiv>
-            </divdiv>
-          </divdiv>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex items-end justify-between mb-8"
@@ -340,7 +324,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <p className="text-gray-300 mt-2">New guides and blueprints from our experts</p>
             </div>
             <a href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</a>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {latestInsights.map((post, index) => (
@@ -371,7 +355,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-20"
@@ -382,11 +366,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -400,7 +384,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -409,7 +393,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -420,7 +404,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -431,7 +415,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -449,12 +433,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
           {/* Call to Action for Services Showcase */}
-          <divdiv
+          <div
             className="text-center mt-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -467,14 +451,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               View All 2026 Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -485,7 +469,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
@@ -511,7 +495,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </div>
           </div>
 
-          <divdiv
+          <div
             className="text-center"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -530,7 +514,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Call Us
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 

@@ -1,81 +1,12 @@
-
-;
-export default function FiveHundred() {export default function FiveHundred() {ursor/fix-website-loading-errors-and-merge-6662;
-export default function FiveHundred() {return (<div className='min-h-screen flex items-center justify-center'>;
-      Something went wrong.;
-    </div>;
-  )export default function FiveHundred() {return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;}}
-export default function FiveHundred() {return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
-}
-export default /**;
- * FiveHundred - Function description;
- */;
-function FiveHundred() {return (<div className='min - h-screen flex items - center justify - center'>;
-      Something went wrong.;
-    </div>)export default /**;
- * FiveHundred - Function description;
- */;
-function FiveHundred() {return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;
-}}}ursor/fix-website-loading-errors-and-merge-6662;
-}export default function FiveHundred() {import React from 'react';
-interface 500Props  {className?: string;
-}const 500: React.FC<500Props> = ({ className }) => {return (<div className='min-h-screen flex items-center justify-center'>;
-      Something went wrong.;
-
-export default function FiveHundred() {;
-  return (
-    <div className='min-h-screen flex items-center justify-center'>;
-      Something went wrong.;
-    </div>;
-  );export default function FiveHundred() {;
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
-
-}
-export default function FiveHundred(){
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>
-
-}
-export default /**
- * FiveHundred - Function description
- */
-function FiveHundred() {
-  return (
-    <div className='min - h-screen flex items - center justify - center'>;
-      Something went wrong.;
-    </div>);export default /**
- * FiveHundred - Function description
- */
-function FiveHundred() {
-  return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;
-}
-
-}
-
-
-
-
-}
-
-
-
-
-export default function FiveHundred() {
 import React from 'react';
 
-interface 500Props {
-  className?: string;
-}
-
-const 500: React.FC<500Props> = ({ className }) => {
+const 500: React.FC = () => {
   return (
-    <div className='min-h-screen flex items-center justify-center'>
-      Something went wrong.
-    </div>;
-  )export default function FiveHundred() {return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
-}
-}}
-    </div>;
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">500</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-}
+export default 500;

@@ -1,13 +1,12 @@
-
 import React from 'react';
-interface LoginProps  {// Add props here as needed;
-}
-export default function Login() {return (<div>;
-      <h1>Login</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-}}
-}
-}
-}
+
+const Login: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Login</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Login;

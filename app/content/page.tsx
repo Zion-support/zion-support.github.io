@@ -13,7 +13,145 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Added Sept 2025: New content promotions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-reliable-agent-rollouts" className="hover:underline">
+              AI 2026: Reliable Agent Rollouts
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive delivery with eval gates and automated rollback for safe autonomy.
+          </p>
+          <Link href="/content/ai-2026-reliable-agent-rollouts" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Routing</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-governed-model-routing" className="hover:underline">
+              AI 2026: Governed Model Routing
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Align budget, latency, and quality with policy-as-code routing and live evaluations.
+          </p>
+          <Link href="/content/ai-2026-governed-model-routing" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Runbooks</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-rollback-runbooks" className="hover:underline">
+              AI 2026: Agent Rollback Runbooks
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Scorecard-driven rollback patterns to keep autonomy safe and auditable in production.
+          </p>
+          <Link href="/content/ai-2026-agent-rollback-runbooks" className="text-rose-700 font-semibold">Open Runbooks →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-bundles-blueprint" className="hover:underline">
+              AI 2026: Evidence Bundles Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Package traces, evals, and policy events into verifiable bundles for audits and reviews.
+          </p>
+          <Link href="/content/ai-2026-evidence-bundles-blueprint" className="text-emerald-700 font-semibold">Read Blueprint →</Link>
+        </article>
+        {/* New: Sept 2025 additions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Quickstart</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="hover:underline">
+              Evidence‑Driven Operations (Quickstart)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation‑first delivery with policy gates, incident runbooks, and auditable evidence.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="text-purple-700 font-semibold">Start Here →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blog</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-safe-rollouts-in-production" className="hover:underline">
+              Safe Rollouts in Production
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive exposure with eval gates, observability, and automated rollbacks.
+          </p>
+          <Link href="/blog/ai-2026-safe-rollouts-in-production" className="text-indigo-700 font-semibold">Read Article →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Optimization</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-cost-aware-agent-operations" className="hover:underline">
+              AI 2026: Cost‑Aware Agent Operations
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Governed routing, caching, and eval‑driven optimization to cut costs 30–70%.
+          </p>
+          <Link href="/content/ai-2026-cost-aware-agent-operations" className="text-emerald-700 font-semibold">Read Guide →</Link>
+        </article>
         {/* New items added September 2025 */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="hover:underline">
+              AI 2026: Trusted Autonomy Field Manual
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical controls to ship safe, cost-aware agent systems in production.
+          </p>
+          <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="text-fuchsia-700 font-semibold">Read Manual →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Incident Response</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-incident-response-runbook" className="hover:underline">
+              AI 2026: Agent Incident Response Runbook
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Detect, triage, contain, and learn from agent incidents with evidence-first playbooks.
+          </p>
+          <Link href="/content/ai-2026-agent-incident-response-runbook" className="text-rose-700 font-semibold">Open Runbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Incident Response</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-led-incident-review" className="hover:underline">
+              AI 2026: Evidence‑Led Incident Review
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Blameless reviews powered by eval traces, policy events, and action tracking.
+          </p>
+          <Link href="/content/ai-2026-evidence-led-incident-review" className="text-rose-700 font-semibold">Open Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-posture-management" className="hover:underline">
+              AI 2026: Agent Posture Management — Practical Guide
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Continuously assess and harden agents across identity, tools, data, and runtime with evaluation gates and policy-as-code.
+          </p>
+          <Link href="/content/ai-2026-agent-posture-management" className="text-fuchsia-700 font-semibold">Read Guide →</Link>
+        </article>
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">

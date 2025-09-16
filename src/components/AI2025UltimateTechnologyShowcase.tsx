@@ -1,134 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Brain
-  Cpu
-  Zap
-  Shield
-  Globe
-  Rocket
-  Database
-  Cloud,
-  BarChart3,
-  Users,
-  Lock,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Lightbulb,
-  Target,
-  Gauge
-} from 'lucide-react';
-
-const AI2025UltimateTechnologyShowcase = () => {
-  const [activeTabsetActiveTab] = useState('ai-automation');
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const technologies = [
-    {
-      id: 'ai-automation',
-      title: 'AI-Powered Automation',
-      description: 'Revolutionary automation solutions that transform business operations',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        'Intelligent Process Automation',
-        'Predictive Analytics',
-        'Natural Language Processing',
-        'Computer Vision Integration',
-        'Autonomous Decision Making',
-        'Real-time Optimization'
-      ],
-      stats: { value: '95%'label: 'Efficiency Increase' },
-      link: '/ai-2025-advanced-automation-solutions'
-    },
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum solutions for complex problem solving',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500',
-      features: [
-        'Quantum Machine Learning',
-        'Cryptographic Security',
-        'Optimization Algorithms',
-        'Quantum Neural Networks',
-        'Molecular Simulation',
-        'Financial Modeling'
-      ],
-      stats: { value: '1000'x', 'label: 'Processing Speed' },
-      link: '/quantum-computing-2025'
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interface Technology',
-      description: 'Direct brain-computer interfaces for enhanced human capabilities',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Brain-Computer Interfaces',
-        'Neural Signal Processing',
-        'Cognitive Enhancement',
-        'Medical Applications',
-        'Augmented Reality Integration',
-        'Thought-Controlled Systems'
-      ],
-      stats: { value: '99.9%'label: 'Accuracy Rate' },
-      link: '/neural-interface-revolution-2026'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Advanced Cybersecurity',
-      description: 'AI-driven security solutions protecting digital assets',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      features: [
-        'Threat Detection & Prevention',
-        'Behavioral Analysis',
-        'Zero-Trust Architecture',
-        'Encryption Technologies',
-        'Incident Response Automation',
-        'Compliance Management'
-      ],
-      stats: { value: '99.99%'label: 'Threat Detection' },
-      link: '/advanced-security-solutions'
-    }
-  ];
-
-  const successStories = [
-    {
-      company: 'TechCorp Global',
-      industry: 'Manufacturing',
-      improvement: '300%',
-      description: 'Implemented AI automation reducing production costs by 60%',
-      logo: '🏭'
-    },
-    {
-      company: 'FinanceMax',
-      industry: 'Financial Services',
-      improvement: '500%',
-      description: 'Quantum computing solutions increased trading algorithm speed',
-      logo: '💼'
-    },
-    {
-      company: 'HealthTech Solutions',
-      industry: 'Healthcare',
-      improvement: '250%',
-      description: 'Neural interface technology improved patient diagnosis accuracy',
-      logo: '🏥'
-    }
-  ];
-
-  const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0];
-
+const AI2025UltimateTechnologyShowcase: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
@@ -139,7 +11,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -165,10 +37,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               Future-Ready Solutions
             </span>
           </div>
-        </divdiv>
+        </div>
 
         {/* Technology Tabs */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -190,10 +62,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Active Technology Display */}
-        <divdiv
+        <div
           key={activeTab}
           className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 mb-16 border border-white/10"
         >
@@ -241,10 +113,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Success Stories */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -261,10 +133,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -287,7 +159,7 @@ const AI2025UltimateTechnologyShowcase = () => {
               Explore All Technologies
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

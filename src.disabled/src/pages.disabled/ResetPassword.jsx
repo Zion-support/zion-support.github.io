@@ -37,6 +37,8 @@ export default function ResetPassword({ }: ResetPasswordProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ResetPassword.jsx
 }
 }

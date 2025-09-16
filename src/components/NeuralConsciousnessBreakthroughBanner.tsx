@@ -1,77 +1,12 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const breakthroughContent = [
-    {
-      id: 'neural-consciousness',
-      title: 'Neural Consciousness Breakthrough',
-      description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',
-      metrics: '99.8% Decision Accuracy',
-      savings: '$15.8B Annual Savings',
-      roi: '2,400% ROI',
-      url: '/blog/ai-2025-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence',
-      badge: '🧠 NEW BREAKTHROUGH',
-      category: 'Conscious AI Innovation'
-    },
-    {
-      id: 'enterprise-transformation',
-      title: 'Global Enterprise Transformation',
-      description: 'How a Fortune 500 manufacturing giant achieved $15.8 billion ROI in 18 months through comprehensive conscious AI transformation.',
-      metrics: '2,400% Efficiency Improvement',
-      savings: '$15.8B ROI Success',
-      roi: '1,500% Innovation Increase',
-      url: '/case-studies/global-enterprise-conscious-ai-transformation-2025-15-billion-roi',
-      badge: '💰 $15B SUCCESS',
-      category: 'Case Study'
-    },
-    {
-      id: 'autonomous-business-guide',
-      title: 'Autonomous Business Revolution Guide',
-      description: 'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with proven strategies.',
-      metrics: '1,500% ROI Framework',
-      savings: 'Complete Roadmap',
-      roi: 'Zero Error Operations',
-      url: '/resources/ai-2025-autonomous-business-revolution-complete-guide',
-      badge: '📚 COMPLETE GUIDE',
-      category: 'Implementation Guide'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % breakthroughContent.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, [breakthroughContent.length]);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('neural-consciousness-banner-dismissed', 'true');
-  };
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('neural-consciousness-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = breakthroughContent[currentContent];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       </div>
 
       <div className="relative z-10">

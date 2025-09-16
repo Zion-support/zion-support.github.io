@@ -37,6 +37,8 @@ export default function Index({ }: IndexProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/Index.jsx
 }
 }

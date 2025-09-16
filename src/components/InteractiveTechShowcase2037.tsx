@@ -56,15 +56,36 @@ const InteractiveTechShowcase2037: React.FC = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-        setActiveDemo((prev) => (prev + 1) % demos.length);
+        setActiveTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
-      }, 500);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [demos.length]);
+      }, 300);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const getColorClasses = (color: string) => {
+    const colorMap = {
+      purple: 'from-purple-600/30 to-pink-600/30 border-purple-400/30',
+      cyan: 'from-cyan-600/30 to-blue-600/30 border-cyan-400/30',
+      emerald: 'from-emerald-600/30 to-teal-600/30 border-emerald-400/30',
+      violet: 'from-violet-600/30 to-purple-600/30 border-violet-400/30'
+    };
+    return colorMap[color as keyof typeof colorMap] || colorMap.purple;
+  };
+
+  const getStatusColor = (status: string) => {
+    const statusMap = {
+      'Available Now': 'bg-green-500',
+      'Beta Testing': 'bg-yellow-500',
+      'Coming Soon': 'bg-blue-500',
+      'In Development': 'bg-purple-500'
+    };
+    return statusMap[status as keyof typeof statusMap] || 'bg-gray-500';
+  };
 
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white">

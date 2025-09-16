@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
 const NextGenInnovationHub2042: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -231,47 +231,52 @@ const NextGenInnovationHub2042: React.FC = () => {
                 <div className="text-6xl mb-4">{innovation.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{innovation.title}</h3>
                 <p className="text-emerald-100 mb-4">{innovation.description}</p>
-              </div>
+              </button>
+            </div>
+          ))}
+        </div>
 
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm opacity-80">Status:</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    innovation.status === 'Deployed' ? 'bg-green-500/50 text-green-200' :
-                    innovation.status === 'Beta' ? 'bg-blue-500/50 text-blue-200' :
-                    innovation.status === 'Testing' ? 'bg-yellow-500/50 text-yellow-200' :
-                    innovation.status === 'Development' ? 'bg-orange-500/50 text-orange-200' :
-                    'bg-purple-500/50 text-purple-200'
-                  }`}>
-                    {innovation.status}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm opacity-80">Impact:</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    innovation.impact === 'Revolutionary' ? 'bg-red-500/50 text-red-200' :
-                    innovation.impact === 'Breakthrough' ? 'bg-pink-500/50 text-pink-200' :
-                    'bg-cyan-500/50 text-cyan-200'
-                  }`}>
-                    {innovation.impact}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
-                <ul className="space-y-1">
-                  {innovation.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Innovation
+        {/* Statistics Section */}
+        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">Innovation Hub Statistics</h2>
+            <p className="text-xl opacity-90">
+              Our hub has become the epicenter of technological advancement
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">500+</div>
+              <div className="text-lg font-semibold mb-1">Active Innovations</div>
+              <div className="text-sm opacity-80">Currently in development</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-teal-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold mb-1">Success Rate</div>
+              <div className="text-sm opacity-80">Innovation deployment</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-lg font-semibold mb-1">Possibilities</div>
+              <div className="text-sm opacity-80">Future innovations</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
+              <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
+              <div className="text-sm opacity-80">Continuous development</div>
+        {/* Selected Innovation Details */}
+        <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-8xl mb-6">{innovations[selectedInnovation].icon}</div>
+              <h2 className="text-4xl font-bold mb-6">{innovations[selectedInnovation].title}</h2>
+              <p className="text-xl opacity-90 mb-8">{innovations[selectedInnovation].description}</p>
+              
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center space-x-2">
+                  <span className={`px-3 py-1 ${getStatusColor(innovations[selectedInnovation].status)} text-white text-sm rounded-full`}>
+                    {innovations[selectedInnovation].status}
           {innovations.map((innovation, index) => (
             <div
               key={innovation.id}

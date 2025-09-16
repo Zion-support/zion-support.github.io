@@ -126,7 +126,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover the most advanced technologies that are reshaping our world and defining the future
           </p>
-        </motion.div>
+        </div>
 
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
@@ -340,5 +340,4 @@ const EnhancedContentCarousel2025: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedContentCarousel2025;

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 
 type Params = { params: { id: string } };
@@ -72,10 +71,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     author: 'Michael Rodriguez',
     date: '2025-09-12',
     readTime: '9 min read',
-    content: [
-      'We summarize five production deployments covering incident response, customer support, finance reconciliations, and supply chain routing.',
-      'Each case breaks down the business objective, design, controls, and the measurable outcome (MTTR, CSAT, margin, error rates).',
-      'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
   },
   'ai-foundation-models-2025': {
@@ -269,12 +264,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   }
 };
 
-export function generateStaticParams() {
-  return Object.keys(POSTS).map((id) => ({ id }));
 }
 
 export default function BlogDetailPage({ params }: { params: { id: string } }) {
   const post = POSTS[params.id];
+export default page;
 
   if (!post) {
     return (

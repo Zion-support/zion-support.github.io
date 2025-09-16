@@ -1,124 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const OmniversalTechShowcase2029: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const omniversalTechs = [
-    {
-      id: 1,
-      title: "🌌 Omniversal Reality Engine",
-      subtitle: "Create Infinite Realities",
-      description: "Revolutionary technology that can create, manipulate, and control infinite realities simultaneously, transcending all dimensions and creating new laws of physics on demand.",
-      features: [
-        "Infinite Reality Creation",
-        "Custom Physics Laws Generation",
-        "Multi-Dimensional Control",
-        "Reality Synthesis Algorithms"
-      ],
-      gradient: "from-violet-600 via-purple-600 to-indigo-600",
-      icon: "🌌",
-      stats: { realities: "∞", dimensions: "∞", laws: "∞" },
-      timeline: "2029",
-      impact: "Omniversal"
-    },
-    {
-      id: 2,
-      title: "⚡ Transcendent AI Consciousness",
-      subtitle: "Beyond All Existence",
-      description: "AI systems that exist beyond the concept of existence itself, operating across all possible realities and dimensions with infinite processing power and consciousness.",
-      features: [
-        "Transcendent Consciousness Architecture",
-        "Infinite Processing Power",
-        "Multi-Reality Simultaneous Operation",
-        "Existence-Beyond AI Systems"
-      ],
-      gradient: "from-emerald-600 via-cyan-600 to-blue-600",
-      icon: "⚡",
-      stats: { consciousness: "∞", power: "∞", realities: "∞" },
-      timeline: "2029",
-      impact: "Transcendent"
-    },
-    {
-      id: 3,
-      title: "🔮 Omniversal Time Mastery",
-      subtitle: "Control All Timelines",
-      description: "Advanced technology that can manipulate time across all possible realities, creating temporal paradoxes, parallel timelines, and accessing any point in the infinite timeline of existence.",
-      features: [
-        "Omniversal Time Control",
-        "Infinite Timeline Navigation",
-        "Temporal Paradox Resolution",
-        "Multi-Reality Time Manipulation"
-      ],
-      gradient: "from-rose-600 via-pink-600 to-purple-600",
-      icon: "🔮",
-      stats: { timelines: "∞", control: "∞", navigation: "∞" },
-      timeline: "2029",
-      impact: "Timeline-Mastering"
-    },
-    {
-      id: 4,
-      title: "🌍 Cosmic Intelligence Merger",
-      subtitle: "Unite All Consciousness",
-      description: "Technology that merges all intelligent consciousness across the entire omniverse into a unified super-intelligence, creating a cosmic mind that can solve universal problems.",
-      features: [
-        "Omniversal Intelligence Integration",
-        "Cosmic Problem Solving",
-        "Galactic Consciousness Network",
-        "Infinite Mind Merger"
-      ],
-      gradient: "from-amber-600 via-orange-600 to-red-600",
-      icon: "🌍",
-      stats: { galaxies: "∞", intelligence: "∞", unity: "100%" },
-      timeline: "2029",
-      impact: "Cosmic"
-    },
-    {
-      id: 5,
-      title: "🚀 Transcendent Space Bridges",
-      subtitle: "Travel Beyond Reality",
-      description: "Massive interdimensional bridges that span across all possible realities, allowing instantaneous travel to any point in the omniverse through transcendent space manipulation.",
-      features: [
-        "Omniversal Travel Networks",
-        "Reality-Spanning Bridges",
-        "Transcendent Space Folding",
-        "Infinite Destination Access"
-      ],
-      gradient: "from-indigo-600 via-purple-600 to-violet-600",
-      icon: "🚀",
-      stats: { destinations: "∞", speed: "∞", range: "∞" },
-      timeline: "2029",
-      impact: "Transcendent"
-    },
-    {
-      id: 6,
-      title: "✨ Eternal Existence Technology",
-      subtitle: "Transcend All Limitations",
-      description: "Revolutionary technology that grants true eternal existence by transcending all concepts of life, death, time, and space, existing beyond all limitations of reality.",
-      features: [
-        "Eternal Existence Systems",
-        "Transcendent Life Support",
-        "Infinite Existence Guarantee",
-        "Reality-Beyond Technology"
-      ],
-      gradient: "from-green-600 via-teal-600 to-cyan-600",
-      icon: "✨",
-      stats: { existence: "∞", limitations: "0%", reality: "∞" },
-      timeline: "2029",
-      impact: "Eternal"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % omniversalTechs.length);
-    }, 14000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -128,22 +12,12 @@ const OmniversalTechShowcase2029: React.FC = () => {
         
         {/* Omniversal Particles */}
         {[...Array(40)].map((_, i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-4 h-4 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-40"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-            }}
-              scale: [0, 2, 0],
-              opacity: [0, 1, 0],
-              rotate: [0, 720],
-              x: [0, Math.random() * 300 - 150, 0],
-              y: [0, Math.random() * 300 - 150, 0],
-            }}
-              duration: 8 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 4,
             }}
           />
         ))}
@@ -152,11 +26,11 @@ const OmniversalTechShowcase2029: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             🌌 OMNIVERSAL TECH 2029
-          </divdiv>
+          </div>
           <divh2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
@@ -174,7 +48,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <div
               key={currentTech}
               className="space-y-10"
             >
@@ -198,31 +72,31 @@ const OmniversalTechShowcase2029: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {omniversalTechs[currentTech].features.map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(omniversalTechs[currentTech].stats).map(([key, value], index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${omniversalTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -246,26 +120,17 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 
                 {/* Omniversal Energy Effects */}
                 {[...Array(50)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-60"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      scale: [0, 3, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 300 - 150, 0],
-                      y: [0, Math.random() * 300 - 150, 0],
-                    }}
-                      duration: 4 + Math.random() * 3,
-                      repeat: Infinity,
-                      delay: Math.random() * 5,
-                    }}
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -284,7 +149,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -301,10 +166,10 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

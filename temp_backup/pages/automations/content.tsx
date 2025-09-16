@@ -1,33 +1,22 @@
-import Head from 'next/head';
-import content from '../../data/automation/content.json';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-type Item = { source: string; title: string; url: string; tags?: string[]; score?: number };
-
-export default function TechContentCurator() {
-  const items = (content.items as Item[]) || [];
+const content: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Tech Content Curator</title>
-      </Head>
-      <h1 className="text-2xl font-semibold mb-2">Tech Content Curator</h1>
-      <p className="text-sm opacity-80 mb-4">Updated {new Date(content.updatedAt).toLocaleString()}</p>
-      <div className="space-y-3">
-        {items.map((it, idx) => (
-          <a key={idx} href={it.url} target="_blank" rel="noreferrer" className="block enhanced-card enhanced-hover border border-gray-100 dark:border-gray-800">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <div className="font-medium">{it.title}</div>
-                <div className="text-xs opacity-70 mt-1">{it.source} {(it.tags || []).slice(0,4).join(' · ')}</div>
-              </div>
-              {typeof it.score === 'number' && (
-                <div className="text-xs px-2 py-1 rounded bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300">Score {it.score}</div>
-              )}
-            </div>
-          </a>
-        ))}
-        {items.length === 0 && <div className="opacity-60">No content yet.</div>}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>content | Zion Tech Group</title>
+        <meta name="description" content="content - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">content</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default content;

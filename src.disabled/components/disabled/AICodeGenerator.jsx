@@ -1,4 +1,12 @@
-import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
-import React,{ useState,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from\';\';lucide-react\' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState(\'';generate\') const [generatedCode,setGeneratedCode] = useState(\'';\';) const [customCode,setCustomCode] = useState(\'') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) \'';
-const React,{ useState,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from";";lucide-react" const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState("";generate") const [generatedCode,setGeneratedCode] = useState("";";) const [customCode,setCustomCode] = useState("") const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) "";''"
-import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
+import React from 'react';
+
+const AICodeGenerator: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AICodeGenerator</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AICodeGenerator;

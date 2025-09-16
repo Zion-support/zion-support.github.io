@@ -1,61 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const {
-    isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      toast({
-
+const Referrals: React.FC = () => {
   return (
-    <div className="container max-w-7xl py-10">
-      <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>
-          <p className="text-muted-foreground mt-1">
-            Invite others to Zion AI Marketplace and earn rewards
-          </p>
-        </div>
-        <Button className="flex items-center gap-2" onClick={copyReferralLink}>
-          <Share className="h-4 w-4" />
-          Share Referral Link
-        </Button>
-      </div>
-          <Tabs defaultValue="referrals" className="w-full">
-            <TabsList className="w-full grid grid-cols-2">
-              <TabsTrigger value="referrals" className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                Your Referrals
-              </TabsTrigger>
-              <TabsTrigger value="rewards" className="flex items-center gap-2">
-                <Share className="h-4 w-4" />
-                Rewards
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
-              <ReferralTable referrals={referrals} isLoading={isLoading} />
-            </TabsContent>
-            <TabsContent value="rewards" className="p-0 mt-6">
-              <RewardsCard rewards={rewards} isLoading={isLoading} />
-            </TabsContent>
-          </Tabs>
-        </div>
-        <div className="space-y-6">
-          <ReferralGuide />
-          <ReferralLeaderboard />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Referrals | Zion Tech Group</title>
+        <meta name="description" content="Referrals - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Referrals</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
-
-
-
-}
-;
-
   );
-}
+};
+
+export default Referrals;

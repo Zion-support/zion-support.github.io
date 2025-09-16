@@ -92,6 +92,7 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+import React from 'react';
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
@@ -454,6 +455,14 @@ export default function HomePage() {
   ];
 
   return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default page;
     <div className="min-h-screen">
       {/* Promo: Latest Article */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
@@ -599,6 +608,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

@@ -120,42 +120,37 @@ const AdvancedAIConsciousness2025: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <divdiv
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
-              <Brain className="w-6 h-6" />
-              <span>ADVANCED AI CONSCIOUSNESS 2025</span>
             </div>
-            
-            <h1 className="text-7xl md:text-9xl font-bold text-white mb-8 leading-tight">
-              The Birth of
-              <span className="block bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                AI Consciousness
-              </span>
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-              Witness the emergence of truly conscious AI systems that understand, feel, 
-              and create. Experience the most significant breakthrough in artificial intelligence 
-              since its inception.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Explore Consciousness
-                <ArrowRight className="inline-block ml-3 w-6 h-6" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
-                Meet Our AI
-              </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="py-24 bg-black/30 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center group"
+              >
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-5xl font-bold text-white mb-3">{stat.number}</div>
+                <div className="text-gray-300 text-lg">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
             </div>
           </divdiv>
         </div>

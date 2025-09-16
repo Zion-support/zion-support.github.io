@@ -15,7 +15,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="flex items-center justify-center space-x-3 mb-6">
@@ -31,29 +31,29 @@ const UltimateTechRevolutionBanner: React.FC = () => {
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <divdiv
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">🧠</div>
               <h3 className="font-bold text-lg mb-2">Quantum Consciousness</h3>
               <p className="text-sm opacity-90">Revolutionary quantum processors with consciousness integration</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">🌌</div>
               <h3 className="font-bold text-lg mb-2">Interdimensional AI</h3>
               <p className="text-sm opacity-90">AI systems operating across multiple dimensions</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
               <div className="text-3xl mb-2">✨</div>
               <h3 className="font-bold text-lg mb-2">Holographic Reality</h3>
               <p className="text-sm opacity-90">Indistinguishable virtual reality experiences</p>
-            </divdiv>
+            </div>
           </div>
 
           {/* Action Buttons */}
@@ -74,7 +74,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <divdiv
+          <div
             className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -93,11 +93,12 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl font-bold text-yellow-300">24/7</div>
               <div className="text-sm opacity-90">Support Available</div>
             </div>
-          </divdiv>
-        </divdiv>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default UltimateTechRevolutionBanner;
+</div></div>

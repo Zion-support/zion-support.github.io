@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContentShowcase2025: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const contentCategories = [
+    { id: 'all', label: 'All Content', icon: '🌟' },
+    { id: 'ai', label: 'AI Revolution', icon: '🧠' },
+    { id: 'quantum', label: 'Quantum Tech', icon: '⚛️' },
+    { id: 'neural', label: 'Neural Interface', icon: '🧬' },
+    { id: 'autonomous', label: 'Autonomous Systems', icon: '🤖' }
+  ];
 
   const revolutionaryContent = [
     {

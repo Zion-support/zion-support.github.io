@@ -15,41 +15,38 @@ const BlogPost2025 = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-blue-300">Latest Posts</h3>
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Innovation</h3>
             <p className="text-gray-300 mb-4">
-              Discover our most recent articles on cutting-edge technology
+              Explore the latest breakthroughs in artificial intelligence and machine learning
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AI Breakthroughs 2025</li>
-              <li>• Quantum Computing Advances</li>
-              <li>• Neural Interface Developments</li>
-              <li>• Future Tech Predictions</li>
+              <li>• Neural network advancements</li>
+              <li>• Deep learning applications</li>
+              <li>• AI ethics and governance</li>
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Industry Insights</h3>
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Quantum Computing</h3>
             <p className="text-gray-300 mb-4">
-              Expert analysis and commentary on technology trends
+              Discover the future of computing with quantum technologies
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Market Analysis</li>
-              <li>• Technology Reviews</li>
-              <li>• Expert Interviews</li>
-              <li>• Trend Predictions</li>
+              <li>• Quantum algorithms</li>
+              <li>• Quantum cryptography</li>
+              <li>• Quantum machine learning</li>
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Research & Development</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Blockchain</h3>
             <p className="text-gray-300 mb-4">
-              Deep dives into the latest research and development
+              Learn about decentralized technologies and their applications
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research Papers</li>
-              <li>• Development Updates</li>
-              <li>• Technical Deep Dives</li>
-              <li>• Innovation Spotlights</li>
+              <li>• Smart contracts</li>
+              <li>• DeFi protocols</li>
+              <li>• NFT innovations</li>
             </ul>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentCarousel2029: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -160,3 +160,4 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2029;
+</p></p>

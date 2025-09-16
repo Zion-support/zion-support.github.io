@@ -1,79 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Rocket
-  ArrowRight
-  X,
-  BarChart3,
-  Target,
-  Calendar,
-  Star,
-  Users,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
-
-const AITrends2026PredictionsPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentPredictionsetCurrentPrediction] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate predictions
-    const interval = setInterval(() => {
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }4000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const predictions = [
-    {
-      title: 'AGI Breakthrough',
-      probability: 85,
-      timeline: 'Q3 2026',
-      impact: 'Revolutionary',
-      icon: Brain,
-      color: 'from-purple-500 to-blue-500'
-    },
-    {
-      title: 'Quantum Supremacy 2.0',
-      probability: 95,
-      timeline: 'Q1 2026',
-      impact: 'Revolutionary',
-      icon: Zap,
-      color: 'from-cyan-500 to-teal-500'
-    },
-    {
-      title: 'Neural Interfaces',
-      probability: 90,
-      timeline: 'Q2 2026',
-      impact: 'Transformative',
-      icon: Rocket,
-      color: 'from-pink-500 to-rose-500'
-    }
-  ];
-
-  const stats = [
-    { label: ''Predictions', 'value: '50+'icon: Target },
-    { label: 'Expert 'Analysts', 'value: '200+'icon: Users },
-    { label: 'Updated 'Weekly', 'value: '24/7'icon: Clock }
-  ];
-
-  if (isDismissed) return null;
-
+const AITrends2026PredictionsPromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -83,7 +14,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                 style={{
@@ -105,7 +36,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <div
                   className="mb-6"
                 >
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-bold mb-4">
@@ -124,10 +55,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     Expert predictions and probability assessments for the most significant 
                     technological breakthroughs expected in 2026.
                   </p>
-                </divdiv>
+                </div>
 
                 {/* Rotating Predictions */}
-                <divdiv
+                <div
                   key={currentPrediction}
                   className="flex items-center justify-center lg:justify-start mb-6"
                 >
@@ -149,12 +80,12 @@ const AITrends2026PredictionsPromotionBanner = () => {
                       </span>
                     </div>
                   </div>
-                </divdiv>
+                </div>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-8">
                   {stats.map((statindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="text-center"
                     >
@@ -163,7 +94,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
                       </div>
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-sm text-gray-300">{stat.label}</div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
 
@@ -189,12 +120,12 @@ const AITrends2026PredictionsPromotionBanner = () => {
               </div>
 
               {/* Right Content - Prediction Cards */}
-              <divdiv
+              <div
                 className="flex-shrink-0 w-full lg:w-96"
               >
                 <div className="grid grid-cols-1 gap-4">
                   {predictions.map((predictionindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover:border-white/40 transition-all duration-300 ${
                         currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : ''
@@ -223,10 +154,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
                         </div>
                         <Star className="w-4 h-4 text-yellow-400" />
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             </div>
           </div>
 
@@ -237,7 +168,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
           >
             <X className="w-4 h-4 text-white" />
           </button>
-        </divdiv>
+        </div>
       )}
     </div>
   );

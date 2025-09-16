@@ -1,21 +1,4 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Star, 
-  Sparkles, 
-  Rocket, 
-  Brain, 
-  Atom, 
-  Zap,
-  Globe,
-  Shield,
-  Target,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Award,
-  Clock
-} from 'lucide-react';
 
 const EnhancedContentAdvertising: React.FC = () => {
   const featuredContent = [
@@ -45,6 +28,15 @@ const EnhancedContentAdvertising: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       badge: "REVOLUTIONARY",
       features: ["Quantum Propulsion", "Space Colonies", "Asteroid Mining"]
+    },
+    {
+      title: "Latest Articles 2026",
+      description: "Read our newest insights across AI, quantum, biotech, and more",
+      icon: Zap,
+      href: "/pages/Blog",
+      color: "from-cyan-500 to-blue-500",
+      badge: "UPDATED",
+      features: ["Fresh Weekly", "Expert Authors", "Deep Dives"]
     }
   ];
 
@@ -80,8 +72,7 @@ const EnhancedContentAdvertising: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <divdiv
-          whileInView={{ opacity: 1, y: 0 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -96,14 +87,13 @@ const EnhancedContentAdvertising: React.FC = () => {
             Explore our comprehensive collection of cutting-edge technologies, revolutionary solutions, 
             and breakthrough innovations that will define the next decade of human progress.
           </p>
-        </divdiv>
+        </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <divdiv
+            <div
               key={index}
-              whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
@@ -111,16 +101,15 @@ const EnhancedContentAdvertising: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-purple-200 text-sm">{stat.label}</div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {featuredContent.map((content, index) => (
-            <divdiv
+            <div
               key={index}
-              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">
@@ -153,25 +142,23 @@ const EnhancedContentAdvertising: React.FC = () => {
               >
                 Explore Now <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Testimonials Section */}
         <div className="mb-20">
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
+          <div
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">What Our Partners Say</h3>
             <p className="text-xl opacity-90">Real testimonials from industry leaders and innovators</p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <divdiv
+              <div
                 key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
               >
                 <div className="flex items-center mb-4">
@@ -184,14 +171,13 @@ const EnhancedContentAdvertising: React.FC = () => {
                   <div className="font-semibold text-white">{testimonial.author}</div>
                   <div className="text-purple-300 text-sm">{testimonial.role}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
-          whileInView={{ opacity: 1, y: 0 }}
+        <div
           className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30"
         >
           <h3 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h3>
@@ -207,7 +193,7 @@ const EnhancedContentAdvertising: React.FC = () => {
               Schedule Demo
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

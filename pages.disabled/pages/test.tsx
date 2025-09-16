@@ -1,2 +1,22 @@
-import React from \'react\'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
-import _React from 'react'; export default function Test() { return ( <div> <h1>Test Page</h1> <p>This is a test page to check if Next.js is working.</p> </div> )}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const test: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>test | Zion Tech Group</title>
+        <meta name="description" content="test - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">test</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default test;

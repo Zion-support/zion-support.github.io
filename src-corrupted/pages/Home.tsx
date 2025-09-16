@@ -1,22 +1,21 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
   return (
-    <>
-      <SEO
-        title="Home | Zion Tech Group"
-        description="Welcome to Zion Tech Group"
-        keywords="home, welcome, Zion Tech Group"
-        canonical="/"
-      />
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl font-bold mb-4">Home</h1>
-          <p className="text-xl text-slate-300">This page is being updated with new content.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Home | Zion Tech Group</title>
+        <meta name="description" content="Home - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Home</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

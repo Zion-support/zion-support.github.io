@@ -1,15 +1,20 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateTechRevolution2036: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>UltimateTechRevolution2036 | Zion Tech Group</title>
+        <meta name="description" content="UltimateTechRevolution2036 - Revolutionary technology solutions" />
+      </Helmet>
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -29,11 +34,14 @@ const UltimateTechRevolution2036: React.FC = () => {
               📖 Learn More
             </button>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/40 to-pink-600/40 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">🌌</div>
@@ -51,9 +59,12 @@ const UltimateTechRevolution2036: React.FC = () => {
             <a href="/pages/RevolutionaryTechBreakthrough2035" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Reality →
             </a>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">⚛️</div>
@@ -71,9 +82,12 @@ const UltimateTechRevolution2036: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Discover Quantum →
             </a>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">🧠</div>
@@ -91,14 +105,17 @@ const UltimateTechRevolution2036: React.FC = () => {
             <a href="/pages/ConsciousnessComputingRevolution2034" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Consciousness →
             </a>
-          </divdiv>
+          </motion.div>
         </div>
 
         {/* Advanced Technologies */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔬 Advanced Technologies 2036</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-6 border border-orange-400/30"
             >
               <div className="text-6xl mb-4 text-center">🌀</div>
@@ -109,9 +126,12 @@ const UltimateTechRevolution2036: React.FC = () => {
               <a href="/pages/RevolutionaryTechBreakthrough2035" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                 Explore Dimensions →
               </a>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-6 border border-pink-400/30"
             >
               <div className="text-6xl mb-4 text-center">⚡</div>
@@ -122,9 +142,12 @@ const UltimateTechRevolution2036: React.FC = () => {
               <a href="/pages/AdvancedTechTrends2027" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
                 Explore Energy →
               </a>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30"
             >
               <div className="text-6xl mb-4 text-center">🔮</div>
@@ -135,9 +158,12 @@ const UltimateTechRevolution2036: React.FC = () => {
               <a href="/pages/TranscendentAI2030" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
                 Explore Time →
               </a>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-400/30"
             >
               <div className="text-6xl mb-4 text-center">🌊</div>
@@ -148,7 +174,7 @@ const UltimateTechRevolution2036: React.FC = () => {
               <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-teal-600 py-2 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center text-sm">
                 Explore Fields →
               </a>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
 
@@ -183,7 +209,10 @@ const UltimateTechRevolution2036: React.FC = () => {
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2036</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Universal Transcendence</h3>
@@ -198,9 +227,12 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Transcendent AI entities</li>
                 <li>• Universal physics control</li>
               </ul>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Reality Singularity</h3>
@@ -214,12 +246,12 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Universal physics manipulation</li>
                 <li>• Infinite dimensional control</li>
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
         >
           <h2 className="text-6xl font-bold text-white mb-8">Ready to Transcend Reality?</h2>
@@ -237,7 +269,7 @@ const UltimateTechRevolution2036: React.FC = () => {
               🔮 Tech Trends 2027
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </main>
       
       <Footer />

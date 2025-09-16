@@ -1,26 +1,4 @@
-import Link from 'next/link';
 import React from 'react';
-import { getCategoriesWithCounts, getFeaturedPosts, getRecentPosts, tags } from '../../data/blog';
-
-export const metadata = {
-  title: 'Blog & News - Zion Tech Group',
-  description:
-    'Stay updated with the latest insights, news, and thought leadership from Zion Tech Group in AI, quantum computing, and technology innovation.',
-};
-
-type PostListItem = {
-  id: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-  image?: string;
-  featured?: boolean;
-};
-
-export default function BlogPage() {
   const featuredPosts: PostListItem[] = [
     {
       id: 'ai-governance-blueprint-2025',
@@ -384,25 +362,14 @@ export default function BlogPage() {
   const recentPosts = getRecentPosts();
   const categories = [{ name: 'All Posts', count: recentPosts.length, active: true }, ...getCategoriesWithCounts().map(c => ({ ...c, active: false }))];
 
+const page: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog & News</h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Stay updated with the latest insights, breakthroughs, and thought leadership from our team.
-          </p>
-        </div>
-      </section>
-
-      {/* Promo Banner - New Article */}
-      <section className="py-6 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
             href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
+            aria-label="Read: AI 2026: Governance Operating Model — From Policy to Runtime Controls"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
@@ -585,5 +552,6 @@ export default function BlogPage() {
       </section>
     </div>
   );
-}
+};
 
+export default page;

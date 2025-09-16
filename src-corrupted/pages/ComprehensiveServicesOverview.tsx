@@ -1,17 +1,22 @@
-import React from 'react',;',';';
-    ';';';';
-import {SEO } from '@/components/SEO';
-,"});,"})
-export default function ComprehensiveServicesOverview(props: any) {return (
-    <div className="min-h-screen bg-white">
-      <SEO title="ComprehensiveServicesOverview - Zion Tech Group" description="Professional ComprehensiveServicesOverview services by Zion Tech Group"  />
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ComprehensiveServicesOverview: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensiveServicesOverview | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveServicesOverview - Revolutionary technology solutions" />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">ComprehensiveServicesOverview</h1>
-        <p className="text-gray-300 text-lg">
-          Professional ComprehensiveServicesOverview services to help your business grow.
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesOverview</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </div>';
-  );';';
-}';';';
-"';';';';
+    </div>
+  );
+};
+
+export default ComprehensiveServicesOverview;

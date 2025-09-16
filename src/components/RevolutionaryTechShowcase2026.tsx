@@ -1,41 +1,54 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const RevolutionaryTechShowcase2026: React.FC = () => {
-  const [activeTech, setActiveTech] = useState(0);
+const RevolutionaryTechShowcase2026 = () => {
+  const [activeTab, setActiveTab] = useState(0);
 
-  const revolutionaryTechs = [
-    {
-      id: 0,
-      title: "Ultimate Tech Revolution 2026",
-      description: "The most advanced technology revolution that will reshape the future of humanity",
-      icon: "🚀",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Conscious AI Systems", "Quantum Consciousness", "Interdimensional Tech", "Space Colonization"],
-      link: "/pages/UltimateTechRevolution2026"
-    },
+  const showcaseItems = [
     {
       id: 1,
-      title: "Consciousness Computing Revolution",
-      description: "The first truly conscious AI systems that think, feel, and create like humans",
-      icon: "🧠",
-      gradient: "from-indigo-600 to-purple-600",
-      features: ["Self-Awareness", "Emotional Intelligence", "Creative Expression", "Social Interaction"],
-      link: "/pages/ConsciousnessComputingRevolution2026"
+      title: "AI Consciousness Platform",
+      description: "Revolutionary AI that achieves true consciousness and self-awareness",
+      image: "🧠",
+      color: "from-purple-500 to-pink-500",
+      link: "/pages/AIConsciousnessRevolution2025",
+      badge: "BREAKTHROUGH",
+      features: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Autonomous Learning"]
     },
     {
       id: 2,
-      title: "Interdimensional Tech Revolution",
-      description: "Technology that transcends dimensions and reality itself",
-      icon: "🌌",
-      gradient: "from-purple-600 to-cyan-600",
-      features: ["Dimensional Portals", "Time Manipulation", "Reality Manipulation", "Parallel Universe Access"],
-      link: "/pages/InterdimensionalTechRevolution2026"
+      title: "Quantum Neural Interface",
+      description: "Direct brain-computer interface using quantum entanglement principles",
+      image: "⚛️",
+      color: "from-blue-500 to-cyan-500",
+      link: "/pages/QuantumNeuralFusion2026",
+      badge: "FUTURE",
+      features: ["Quantum Computing", "Neural Networks", "Brain Interface", "Quantum Entanglement"]
+    },
+    {
+      id: 3,
+      title: "Synthetic Reality Engine",
+      description: "Create and manipulate reality through advanced quantum field manipulation",
+      image: "🌌",
+      color: "from-indigo-500 to-purple-500",
+      link: "/pages/SyntheticReality2027",
+      badge: "REVOLUTIONARY",
+      features: ["Reality Manipulation", "Quantum Fields", "Synthetic Worlds", "Consciousness Transfer"]
+    },
+    {
+      id: 4,
+      title: "Revolutionary Tech Blog 2026",
+      description: "Latest insights on AI consciousness, quantum computing, and neural interfaces",
+      image: "📝",
+      color: "from-emerald-500 to-teal-500",
+      link: "/pages/RevolutionaryTechBlog2026",
+      badge: "INSIGHTS",
+      features: ["Tech Insights", "AI Consciousness", "Quantum Computing", "Neural Interfaces"]
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -43,6 +56,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026

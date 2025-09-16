@@ -1,36 +1,12 @@
 import React from 'react';
-import Image from 'next/image';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  className?: string;
-  sizes?: string;
-}
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  priority = false,
-  className = '',
-  sizes = '100vw',
-  ...props
-}) => {
+const OptimizedImage: React.FC = () => {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      priority={priority}
-      className={className}
-      sizes={sizes}
-      {...props}
-    />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">OptimizedImage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default OptimizedImage;

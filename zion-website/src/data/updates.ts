@@ -160,6 +160,9 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+export const siteUpdates: SiteUpdate[] = [
+export const updates: UpdateItem[] = [
+  {
   },
   // Newly added 2025-09-15 (to advertise on homepage)
   {

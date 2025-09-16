@@ -37,6 +37,8 @@ export default function CategoryDetail({ }: CategoryDetailProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/CategoryDetail.jsx
 }
 }

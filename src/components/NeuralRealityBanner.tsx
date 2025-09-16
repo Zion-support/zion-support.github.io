@@ -2,7 +2,7 @@ import React from 'react';
 
 const NeuralRealityBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
     >
@@ -40,7 +40,7 @@ const NeuralRealityBanner: React.FC = () => {
           <span className="bg-white/20 px-3 py-1 rounded-full">🚀 Future Technology</span>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

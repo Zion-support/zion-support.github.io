@@ -1,4 +1,8 @@
-import React from 'react';
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const RevolutionaryContentBanner2034: React.FC = () => {
   return (

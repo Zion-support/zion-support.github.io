@@ -1,21 +1,12 @@
 import React from 'react';
 
-export type TokenOption = { symbol: string; label: string; value: string };
-
-export default function TokenSelector({ value, onChange }: { value: string; onChange: (v: string) => void }) {
-  const options: TokenOption[] = [{ symbol: 'ZION$', label: 'ZION$', value: 'ZION' }];
+const TokenSelector: React.FC = () => {
   return (
-    <div className="flex flex-col gap-1">
-      <label className="text-xs text-gray-500">Token</label>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-white dark:bg-black"
-      >
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>{o.label}</option>
-        ))}
-      </select>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TokenSelector</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default TokenSelector;

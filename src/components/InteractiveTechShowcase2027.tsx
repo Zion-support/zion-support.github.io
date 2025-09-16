@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);

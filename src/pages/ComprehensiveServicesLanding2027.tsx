@@ -135,14 +135,12 @@ export default function ComprehensiveServicesLanding2027() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,
     ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027,
     ...EMERGING_TECHNOLOGY_SERVICES_2027
   ];
-
   // Get unique categories with counts
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
@@ -168,7 +166,6 @@ export default function ComprehensiveServicesLanding2027() {
     { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' },
     { id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' }
   ];
-
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
@@ -178,11 +175,9 @@ export default function ComprehensiveServicesLanding2027() {
       service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -209,14 +204,12 @@ export default function ComprehensiveServicesLanding2027() {
     };
     return iconMap[category] || <Star className="w-6 h-6" />;
   };
-
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}K`;
     }
     return `$${price}`;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -224,7 +217,6 @@ export default function ComprehensiveServicesLanding2027() {
         description="Explore our complete portfolio of innovative AI, quantum computing, space technology, and emerging tech services. Transform your business with cutting-edge solutions."
         keywords="AI services, quantum computing, space technology, emerging tech, Zion Tech Group, innovative solutions"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -234,18 +226,13 @@ export default function ComprehensiveServicesLanding2027() {
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Comprehensive Services
-            </span>
             <br />
             <span className="text-white">Landing 2027</span>
-          </divh1>
-          
           <divp 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology services designed to 
             transform your business and drive innovation across every industry.
-          </divp>
-
           {/* Search Bar */}
           <divdiv 
             className="max-w-2xl mx-auto mb-8"
@@ -270,17 +257,14 @@ export default function ComprehensiveServicesLanding2027() {
               <Rocket className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">{allServices.length}</div>
               <div className="text-cyan-400 text-sm">Total Services</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <TargetIconDup className="w-8 h-8 text-green-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">{categories.length - 1}</div>
               <div className="text-green-400 text-sm">Categories</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <TrendingUp className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">800%+</div>
               <div className="text-yellow-400 text-sm">Average ROI</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">24/7</div>
@@ -300,7 +284,6 @@ export default function ComprehensiveServicesLanding2027() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Explore Our Service Categories
-            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
@@ -326,10 +309,6 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
               </divbutton>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -340,7 +319,6 @@ export default function ComprehensiveServicesLanding2027() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               {activeCategory === 'all' ? 'All Services' : `${activeCategory} Services`}
-            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {activeCategory === 'all' 
                 ? 'Explore our complete portfolio of innovative services and solutions.'
@@ -366,36 +344,23 @@ export default function ComprehensiveServicesLanding2027() {
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                         <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
                           {service.category}
-                        </span>
-                      </div>
-                    </div>
                     <div className="text-right">
                       <div className="text-3xl font-bold text-white">{formatPrice(service.price)}</div>
                       <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
-                    </div>
-                  </div>
-
                   <p className="text-gray-300 mb-4">{service.description}</p>
-
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
-                    </div>
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-green-400">{service.roi}</div>
                       <div className="text-xs text-gray-400">ROI</div>
-                    </div>
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-orange-400">{service.setupTime}</div>
                       <div className="text-xs text-gray-400">Setup Time</div>
-                    </div>
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400">{service.aiScore}%</div>
                       <div className="text-xs text-gray-400">AI Score</div>
-                    </div>
-                  </div>
-
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => toggleServiceExpansion(service.id)}
@@ -412,7 +377,6 @@ export default function ComprehensiveServicesLanding2027() {
                           View Details
                         </>
                       )}
-                    </button>
                     <div className="flex items-center gap-3">
                       <Link
                         to={`/services/${service.id}`}
@@ -420,18 +384,12 @@ export default function ComprehensiveServicesLanding2027() {
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
                         Learn More
-                      </Link>
                       <a
                         href={`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`}
                         className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                       >
                         Get Quote
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Expanded Details */}
                 <div>
                   {expandedService === service.id && (
@@ -447,10 +405,7 @@ export default function ComprehensiveServicesLanding2027() {
                                 <div key={tagIndex} className="flex items-center">
                                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                                   <span className="text-gray-300">{tag}</span>
-                                </div>
                               ))}
-                            </div>
-                          </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>
                             <div className="space-y-2">
@@ -458,17 +413,11 @@ export default function ComprehensiveServicesLanding2027() {
                                 <div key={integrationIndex} className="flex items-center">
                                   <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
                                   <span className="text-gray-300">{integration}</span>
-                                </div>
                               ))}
                               {service.integrations && service.integrations.length > 6 && (
                                 <div className="text-gray-400 text-sm">
                                   +{service.integrations.length - 6} more integrations
-                                </div>
                               )}
-                            </div>
-                          </div>
-                        </div>
-                        
                         <div className="mt-6 p-4 bg-white/5 rounded-lg">
                           <h4 className="text-lg font-semibold text-white mb-3">Competitive Analysis</h4>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -478,10 +427,7 @@ export default function ComprehensiveServicesLanding2027() {
                                 {service.competitors?.slice(0, 3).map((competitor, competitorIndex) => (
                                   <div key={competitorIndex} className="text-gray-300 text-sm">
                                     • {competitor}
-                                  </div>
                                 ))}
-                              </div>
-                            </div>
                             <div>
                               <h5 className="text-sm font-medium text-gray-400 mb-2">Our Advantage</h5>
                               <div className="text-gray-300 text-sm">
@@ -499,7 +445,6 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
               </divdiv>
             ))}
-
             {/* No Results Message */}
             {filteredServices.length === 0 && (
               <divdiv 
@@ -510,10 +455,6 @@ export default function ComprehensiveServicesLanding2027() {
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
               </divdiv>
             )}
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -524,27 +465,21 @@ export default function ComprehensiveServicesLanding2027() {
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact our team for a personalized consultation and discover how our 
               innovative services can drive your business forward.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 Get Started Today
-              </Link>
               <a
                 href="tel:+13024640950"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 justify-center"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
-              </a>
-            </div>
-
             {/* Contact Information */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
@@ -552,15 +487,11 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-white font-semibold mb-1">Phone</div>
                 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
-                </a>
-              </div>
               <div className="text-center">
                 <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                 <div className="text-white font-semibold mb-1">Email</div>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
                   kleber@ziontechgroup.com
-                </a>
-              </div>
               <div className="text-center">
                 <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <div className="text-white font-semibold mb-1">Address</div>
@@ -576,12 +507,10 @@ export default function ComprehensiveServicesLanding2027() {
     </div>
   );
 }
-
 // Helper component for DNA icon
 function Dna({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-    </svg>
   );
 }

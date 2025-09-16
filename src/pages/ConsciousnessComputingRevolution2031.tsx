@@ -351,55 +351,15 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Ultimate Call to Action */}
-      <div className="container mx-auto px-4 py-24">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="text-center bg-gradient-to-r from-purple-600/20 via-cyan-600/20 to-blue-600/20 rounded-4xl p-16 border border-purple-400/30"
-        >
-          <motion.div
-            animate={{ 
-              scale: [1, 1.2, 1],
-              rotate: [0, 10, -10, 0]
-            }}
-            transition={{ 
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="text-8xl mb-8"
-          >
-            🧠
-          </motion.div>
-          
-          <h2 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Consciousness Awaits
-          </h2>
-          
-          <p className="text-3xl opacity-90 mb-12 max-w-5xl mx-auto">
-            Join the consciousness revolution and transcend the limitations of physical existence
-          </p>
-          
-          <div className="flex justify-center space-x-8">
-            <motion.button
-              whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(168, 85, 247, 0.6)" }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 px-16 py-6 rounded-2xl font-bold text-2xl hover:shadow-2xl transition-all duration-300"
-            >
-              🧠 Begin Consciousness Integration
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(6, 182, 212, 0.6)" }}
-              whileTap={{ scale: 0.9 }}
-              className="border-3 border-cyan-400 px-16 py-6 rounded-2xl font-bold text-2xl hover:bg-cyan-400/20 transition-all duration-300"
-            >
-              🌌 Explore Mind Universe
-            </motion.button>
+            </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  );
+};
       </div>
     </div>
   );

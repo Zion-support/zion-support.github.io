@@ -37,6 +37,8 @@ export default function MoreProductsPage({ }: MoreProductsPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/MoreProductsPage.jsx
 }
 }

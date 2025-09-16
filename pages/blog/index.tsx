@@ -1,61 +1,25 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { NextPage } from 'next';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import { Helmet } from 'react-helmet-async';
 
-const BlogIndex: NextPage = () => {
-  const blogPosts = [
-    {
-      title: "AI-Powered Marketplaces: The Future of Digital Commerce",
-      slug: "ai-powered-marketplaces-the-future-of-digital-commerce-chat",
-      excerpt: "Explore how AI is revolutionizing digital marketplaces with personalized experiences, intelligent recommendations, and automated operations.",
-      date: "December 15, 2024",
-      readTime: "8 min read",
-      tags: ["AI", "E-commerce", "Digital Transformation"],
-      featured: true
-    },
-    {
-      title: "Blockchain Technology in Modern Business Solutions",
-      slug: "blockchain-technology-in-modern-business-solutions-chat",
-      excerpt: "Discover how blockchain technology is transforming modern business operations with secure transactions, smart contracts, and decentralized solutions.",
-      date: "December 14, 2024",
-      readTime: "10 min read",
-      tags: ["Blockchain", "Business Solutions", "Digital Innovation"]
-    },
-    {
-      title: "5G Technology and Its Impact on IoT",
-      slug: "5g-technology-and-its-impact-on-iot-chat",
-      excerpt: "Understanding how 5G networks are revolutionizing IoT applications and enabling new possibilities for connected devices.",
-      date: "December 13, 2024",
-      readTime: "7 min read",
-      tags: ["5G", "IoT", "Connectivity"]
-    },
-    {
-      title: "Cybersecurity Trends for 2024 and Beyond",
-      slug: "cybersecurity-trends-for-2024-and-beyond-chat",
-      excerpt: "Stay ahead of emerging cybersecurity threats and learn about the latest trends and technologies protecting digital assets.",
-      date: "December 12, 2024",
-      readTime: "9 min read",
-      tags: ["Cybersecurity", "Security", "Technology Trends"]
-    },
-    {
-      title: "Cloud-Native Architecture Best Practices",
-      slug: "cloud-native-architecture-best-practices-chat",
-      excerpt: "Learn the essential best practices for building scalable, resilient cloud-native applications that can adapt to changing demands.",
-      date: "December 11, 2024",
-      readTime: "6 min read",
-      tags: ["Cloud Computing", "Architecture", "Best Practices"]
-    },
-    {
-      title: "Machine Learning Applications in Enterprise Software",
-      slug: "machine-learning-applications-in-enterprise-software-chat",
-      excerpt: "Discover how machine learning is being integrated into enterprise software to drive efficiency and innovation.",
-      date: "December 10, 2024",
-      readTime: "8 min read",
-      tags: ["Machine Learning", "Enterprise", "Software Development"]
-    }
-  ];
+const index: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default index;
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'

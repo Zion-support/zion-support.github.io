@@ -1,22 +1,12 @@
-import Link from 'next/link'
-import { useUser } from '../../providers/UserProvider'
+import React from 'react';
 
-export default function AvatarDropdown() {
-
-  if (!user) return null
-
+const AvatarDropdown: React.FC = () => {
   return (
-    <div className="relative">
-      <button onClick={() => setOpen(o => !o)} className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40">
-      </button>
-      {open && (
-        <div className="absolute right-0 mt-2 w-44 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-lg py-2 text-sm">
-          <div className="px-3 pb-2 text-xs opacity-70">Signed in as<br/><span className="font-medium opacity-100">{user.name}</span></div>
-          <Link href="/settings"><a className="block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Settings</a></Link>
-          <Link href="/onboarding"><a className="block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Onboarding</a></Link>
-          <button onClick={logout} className="w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Logout</button>
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AvatarDropdown</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  )
-}
+  );
+};
+
+export default AvatarDropdown;

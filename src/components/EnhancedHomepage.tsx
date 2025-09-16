@@ -1,158 +1,6 @@
-import React, { useEffect, useState } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  ArrowRight, 
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowUpRight
-} from 'lucide-react';
-import Head from 'next/head';
-
-// Import our enhanced components
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-
-// Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import React from 'react';
 
 const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
-    
-    // Track mouse movement for parallax effects
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    
-    // Show performance monitor after 5 seconds
-    const performanceTimer = setTimeout(() => {
-      setShowPerformanceMonitor(true);
-    }, 5000);
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      clearInterval(interval);
-      clearTimeout(performanceTimer);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [
-    ...revolutionary2044AdvancedMicroSaas,
-    ...revolutionary2044ITServices,
-    ...revolutionary2044AIServices,
-    ...realEnterpriseMicroSaas2025,
-    ...innovativeITServicesExpansion2025V3,
-    ...innovativeAIServicesExpansion2025V3
-    ...innovative2025ITInfrastructureServices,
-    ...innovative2025AIAutonomousServices
-  ];
-
-  // Filter services by category
-  const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
-    return allRevolutionaryServices.filter(service => 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-    );
-  };
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
-  ];
-
-  // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  const floatingVariants = {
-    animate: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        ease: "easeInOut" as const
-      }
-    }
-  };
-
-  const handleCategoryChange = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    const category = categories.find(cat => cat.id === categoryId);
-    if (category) {
-      setColorScheme(category.scheme);
-    }
-  };
-
   return (
     <>
       <Head>
@@ -201,7 +49,7 @@ const EnhancedHomepage: React.FC = () => {
             </divp>
 
             {/* CTA Buttons */}
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
             >
               <a href="/services">
@@ -221,10 +69,10 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-            </divdiv>
+            </div>
 
             {/* Contact Information */}
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
             >
               <div className="flex items-center space-x-2">
@@ -239,29 +87,29 @@ const EnhancedHomepage: React.FC = () => {
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Floating Elements */}
-          <divdiv
+          <div
             className="absolute top-20 left-10 text-cyan-400/20"
           >
             <Atom className="w-8 h-8" />
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="absolute top-40 right-20 text-blue-400/20"
             style={{ animationDelay: '1s' }}
           >
             <Brain className="w-6 h-6" />
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="absolute bottom-40 left-20 text-purple-400/20"
             style={{ animationDelay: '2s' }}
           >
             <Rocket className="w-7 h-7" />
-          </divdiv>
+          </div>
         </divsection>
 
         {/* Category Filter */}
@@ -275,7 +123,7 @@ const EnhancedHomepage: React.FC = () => {
               Explore Our Revolutionary Services
             </divh2>
             
-            <divdiv 
+            <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               {categories.map((category) => (
@@ -292,7 +140,7 @@ const EnhancedHomepage: React.FC = () => {
                   {category.name}
                 </divbutton>
               ))}
-            </divdiv>
+            </div>
           </div>
         </divsection>
 
@@ -301,7 +149,7 @@ const EnhancedHomepage: React.FC = () => {
           className="py-16 px-4 lg:px-8"
         >
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {getFilteredServices().slice(0, 12).map((service, index) => (
@@ -323,10 +171,10 @@ const EnhancedHomepage: React.FC = () => {
                   technologies={['AI', 'Cloud', 'Security', 'Automation']}
                 />
               ))}
-            </divdiv>
+            </div>
             
             {getFilteredServices().length > 12 && (
-              <divdiv 
+              <div 
                 className="text-center mt-12"
               >
                 <a href="/services">
@@ -337,7 +185,7 @@ const EnhancedHomepage: React.FC = () => {
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
                   </divbutton>
                 </a>
-              </divdiv>
+              </div>
             )}
           </div>
         </divsection>
@@ -353,10 +201,10 @@ const EnhancedHomepage: React.FC = () => {
               Featured Revolutionary Services
             </divh2>
             
-            <divdiv 
+            <div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
             >
-                <divdiv
+                <div
                   key={currentServiceIndex}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
                 >
@@ -397,9 +245,9 @@ const EnhancedHomepage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </divsection>
 
@@ -421,7 +269,7 @@ const EnhancedHomepage: React.FC = () => {
               Get started today and experience the power of AI consciousness and quantum computing.
             </divp>
             
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <a href="/quote">
@@ -441,7 +289,7 @@ const EnhancedHomepage: React.FC = () => {
                   <Phone className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-            </divdiv>
+            </div>
           </div>
         </divsection>
       </UltraFuturisticBackground>
