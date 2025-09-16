@@ -1,152 +1,249 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContentShowcase2025: React.FC = () => {
-  const contentItems = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const showcaseItems = [
     {
-      title: "AI 2025 Ultimate Automation Revolution",
-      description: "Transform your business with 50,000% ROI through intelligent automation",
-      category: "AI Automation",
-      readTime: "8 min read",
-      featured: true,
-      href: "/ai-2025-ultimate-automation-revolution"
+      id: 1,
+      title: "Revolutionary AI Content 2025",
+      description: "Experience the most advanced AI technologies reshaping industries",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/RevolutionaryAIContent2025",
+      features: ["Neural Consciousness AI", "Quantum AI Processing", "Autonomous AI Agents"]
     },
     {
-      title: "Quantum Computing 2026 Breakthrough",
-      description: "Discover how quantum computing will revolutionize business operations",
-      category: "Quantum Computing",
-      readTime: "12 min read",
-      featured: true,
-      href: "/quantum-computing-2026-breakthrough"
+      id: 2,
+      title: "Quantum Computing Revolution",
+      description: "Unlock unprecedented computational power with quantum supremacy",
+      image: "⚛️",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumComputingRevolution2025",
+      features: ["Quantum Supremacy", "Quantum Cryptography", "Quantum Optimization"]
     },
     {
-      title: "Fortune 500 AI Transformation Case Study",
-      description: "Real-world success story: 800% ROI in 6 months",
-      category: "Case Study",
-      readTime: "15 min read",
-      featured: true,
-      href: "/fortune-500-ai-transformation"
+      id: 3,
+      title: "Advanced Biotech Solutions",
+      description: "Revolutionary biotechnology transforming healthcare and life sciences",
+      image: "🧬",
+      gradient: "from-green-600 to-emerald-600",
+      link: "/pages/AdvancedBiotechRevolution2026",
+      features: ["Gene Editing", "Personalized Medicine", "Synthetic Biology"]
     },
     {
-      title: "Neural Interface Revolution 2025",
-      description: "Direct brain-computer interfaces for enhanced productivity",
-      category: "Neural Interfaces",
-      readTime: "10 min read",
-      featured: false,
-      href: "/neural-interface-revolution-2025"
+      id: 4,
+      title: "Space Technology Innovation",
+      description: "Cutting-edge space technology enabling interplanetary exploration",
+      image: "🚀",
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/SpaceTechInnovation2026",
+      features: ["Mars Colonization", "Space Mining", "Interstellar Travel"]
     },
     {
-      title: "Autonomous Business Systems 2026",
-      description: "Self-managing business operations with AI oversight",
-      category: "Autonomous Systems",
-      readTime: "9 min read",
-      featured: false,
-      href: "/autonomous-business-systems-2026"
+      id: 5,
+      title: "Advanced Robotics 2026",
+      description: "Next-generation robotics with human-like capabilities and intelligence",
+      image: "🤖",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/AdvancedRobotics2026",
+      features: ["Humanoid Robots", "Autonomous Systems", "AI Integration"]
     },
     {
-      title: "Synthetic Intelligence Breakthrough",
-      description: "Next-generation AI that thinks and learns like humans",
-      category: "Synthetic Intelligence",
-      readTime: "11 min read",
-      featured: false,
-      href: "/synthetic-intelligence-breakthrough"
+      id: 6,
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces revolutionizing human-computer interaction",
+      image: "🧠",
+      gradient: "from-pink-600 to-rose-600",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      features: ["Thought Control", "Memory Enhancement", "Telepathic Communication"]
     }
   ];
 
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, showcaseItems.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
-            🎯 REVOLUTIONARY CONTENT 2025
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT SHOWCASE 2025
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            The Most Comprehensive AI Content Collection
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Explore the Future of Technology
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, real-world case studies, and breakthrough technologies 
-            that are transforming businesses worldwide.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Discover our latest innovations and breakthrough technologies that are 
+            reshaping industries and transforming the way we live and work.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentItems.map((item, index) => (
-            <div
-              key={index}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
-                item.featured ? 'ring-2 ring-purple-500' : ''
-              }`}
+        {/* Main Showcase Carousel */}
+        <div className="relative max-w-6xl mx-auto mb-12">
+          <div className="relative overflow-hidden rounded-3xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {/* Featured Badge */}
-              {item.featured && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
-                  FEATURED
+              {showcaseItems.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${item.gradient} p-12 rounded-3xl relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="relative z-10">
+                      <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                          <div className="text-8xl mb-6 animate-bounce">{item.image}</div>
+                          <h3 className="text-4xl font-bold mb-4">{item.title}</h3>
+                          <p className="text-xl text-white/90 mb-6">{item.description}</p>
+                          <div className="space-y-2 mb-8">
+                            {item.features.map((feature, idx) => (
+                              <div key={idx} className="flex items-center text-white/80">
+                                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                                {feature}
+                              </div>
+                            ))}
+                          </div>
+                          <Link 
+                            to={item.link}
+                            className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                          >
+                            Explore Now →
+                          </Link>
+                        </div>
+                        <div className="hidden md:block">
+                          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+                            <div className="space-y-3">
+                              {item.features.map((feature, idx) => (
+                                <div key={idx} className="flex items-center">
+                                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                                    <span className="text-sm">✓</span>
+                                  </div>
+                                  <span className="text-white/90">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              )}
-              
-              <div className="p-6">
-                {/* Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {item.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{item.readTime}</span>
-                </div>
-                
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  {item.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-gray-600 mb-6 line-clamp-3">
-                  {item.description}
-                </p>
-                
-                {/* CTA */}
-                <a
-                  href={item.href}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                >
-                  Read More
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Play/Pause Button */}
+          <button
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            {isAutoPlaying ? (
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center space-x-3 mb-12">
+          {showcaseItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/40 hover:bg-white/60'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {showcaseItems.map((item, index) => (
+            <div
+              key={item.id}
+              className={`bg-gradient-to-br ${item.gradient} p-6 rounded-2xl cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                index === currentSlide ? 'ring-4 ring-white/50' : ''
+              }`}
+              onClick={() => goToSlide(index)}
+            >
+              <div className="text-4xl mb-4">{item.image}</div>
+              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <p className="text-white/80 text-sm mb-4">{item.description}</p>
+              <div className="flex items-center text-white/60 text-sm">
+                <span className="mr-2">Learn More</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join thousands of businesses already benefiting from our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Explore Services
-              </a>
-            </div>
+          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
+          <p className="text-xl text-gray-300 mb-8">
+            Dive deeper into our revolutionary technologies and discover how they can transform your business.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              View All Technologies
+            </button>
+            <button className="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300">
+              Contact Our Experts
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
