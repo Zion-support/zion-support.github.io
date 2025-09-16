@@ -99,6 +99,8 @@ import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import NewContentAdvertisingBanner2025 from './src/components/NewContentAdvertisingBanner2025';
+import FeaturedContentShowcase2025 from './src/components/FeaturedContentShowcase2025';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
 import RevolutionaryContentPromotionBanner2026 from './src/components/RevolutionaryContentPromotionBanner2026';
@@ -223,6 +225,14 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
+                <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Featured Content Showcase - comprehensive content display */}
+                <div className="mb-12">
+                  <FeaturedContentShowcase2025 />
+                </div>
+                
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
                   <RevolutionaryContentPromotionBanner2026 />
@@ -1289,6 +1299,12 @@ export default function App(): JSX.Element {
           <Route path="/blog/quantum-neural-networks-next-frontier-ai" element={<QuantumNeuralNetworks2026 />} />
           <Route path="/blog/autonomous-ai-systems-self-managing-organizations" element={<AutonomousAISystems2026 />} />
           <Route path="/blog/neural-interface-technology-mind-machine-bridge" element={<NeuralInterfaceTechnology2026 />} />
+          
+          {/* NEW: 2025 Content Routes - Latest Content */}
+          <Route path="/blog/ai-transformation-2025-guide" element={<AITransformationGuide2025 />} />
+          <Route path="/blog/quantum-computing-breakthrough-2025" element={<QuantumComputingRevolution2025 />} />
+          <Route path="/case-studies/autonomous-business-operations-success" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/guides/ai-implementation-checklist-2025" element={<AITransformationGuide2025 />} />
           <Route path="/revolutionary-content-2026" element={<NewContentShowcase2026 />} />
           <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
