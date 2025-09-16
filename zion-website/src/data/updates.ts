@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: AI Security Evidence Vault v1.0',
+		summary: 'Tamper‑evident artifacts, policy mapping, and auditor‑ready exports.',
+		href: '/updates/ai-security-evidence-vault-v1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Evaluation‑Driven FinOps for Agents',
+		summary: 'Cut costs without quality loss using evals‑in‑prod and budget policies.',
+		href: '/updates/evaluation-driven-finops',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Real‑Time Retrieval Architectures (2026 Preview)',
+		summary: 'Latency budgets, caching, and hybrid retrieval at scale.',
+		href: '/updates/real-time-retrieval-architectures-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Launch: Production RAG Observability Suite v1.0',
 		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
 		href: '/updates/production-rag-observability-suite-1-0',
