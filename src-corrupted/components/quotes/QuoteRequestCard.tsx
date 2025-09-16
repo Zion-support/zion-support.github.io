@@ -109,7 +109,6 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   );
 };

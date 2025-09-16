@@ -95,7 +95,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 res.status (200).send (pixel);
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -121,4 +120,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.status(200).send(pixel);
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -30,7 +30,6 @@ import React from 'react';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import type { NextPage } from "next";
@@ -118,7 +117,6 @@ const TalentProfile: NextPage = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
@@ -249,8 +247,6 @@ export default TalentProfile;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 export default TalentProfile;

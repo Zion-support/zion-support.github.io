@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -62,4 +61,3 @@ export interface NewMessageInput {
   attachmentName?: string; // optional filename
   context?: ConversationContext;
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -30,7 +30,6 @@ export const calculateAICost = async (usage: any) => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -46,4 +45,3 @@ export const calculateAICost = async (usage: any) => {
   // Placeholder implementation
   return { cost: 0, success: true };
 };
->>>>>>> origin/auto/autonomy-17186719616

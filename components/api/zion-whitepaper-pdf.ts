@@ -6,7 +6,6 @@ import PDFDocument from 'pdfkit';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -27,7 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -59,7 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`);
->>>>>>> origin/auto/autonomy-17186719616
 
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
@@ -73,16 +70,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.addPage();
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
   doc.end();
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -8,7 +8,6 @@ const iconMap = {;
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react";
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -24,7 +23,6 @@ interface UserBadgesProps {
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 =======
->>>>>>> origin/auto/autonomy-17186719616
 
 const iconMap = {
   Trophy,
@@ -65,4 +63,3 @@ export default UserBadges;
 };
 
 export default UserBadges;
->>>>>>> origin/auto/autonomy-17186719616

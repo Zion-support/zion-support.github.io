@@ -241,4 +241,3 @@ export default function QuantumSecureCloudInfrastructure() {
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
->>>>>>> origin/auto/autonomy-17186719616

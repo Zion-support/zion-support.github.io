@@ -3,7 +3,6 @@ import type { NextRequest } from "next/server";
 
 
   // Security headers
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
@@ -69,10 +68,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return response;
     return response;
 
@@ -90,8 +86,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   return response;
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 return response;
 }
@@ -108,5 +102,4 @@ export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

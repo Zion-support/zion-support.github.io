@@ -3,7 +3,6 @@
     }
     cb(new Error('Not allowed'), false);
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 });
 
@@ -97,7 +96,6 @@ app.post('/jobs/generate', async (req: any, reply: any) => {
 app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
->>>>>>> origin/auto/autonomy-17186719616
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {

@@ -16,12 +16,9 @@
   message: string;
   metric: string;
   threshold: number;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
       return await response.json()
@@ -103,13 +100,9 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
       return await response.json()
@@ -241,7 +234,6 @@ export class PerformanceMonitorService {
     }
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -651,7 +643,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
       }
     ];
 
->>>>>>> origin/auto/autonomy-17186719616
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
@@ -733,7 +724,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Custom dashboards',
       'White-label reporting',
       'Priority support',
->>>>>>> origin/auto/autonomy-17186719616
       'SLA guarantee'
     ]
   }

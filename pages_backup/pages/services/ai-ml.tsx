@@ -268,12 +268,8 @@ export default function AIMLServicesPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
@@ -450,7 +446,6 @@ export default function AIMLServicesPage() {
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             ))}
 
@@ -587,10 +582,7 @@ export default function AIMLServicesPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 </ul>
@@ -598,8 +590,6 @@ export default function AIMLServicesPage() {
 
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started

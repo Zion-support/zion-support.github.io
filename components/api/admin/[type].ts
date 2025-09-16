@@ -49,7 +49,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`);
         return res.status(200).send(toCsv(pageItems));
       }
->>>>>>> origin/auto/autonomy-17186719616
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -81,7 +80,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) || '';
->>>>>>> origin/auto/autonomy-17186719616
     if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
@@ -186,10 +184,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
   if (req.method === 'PATCH') {
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -198,7 +192,8 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
 
 
@@ -217,4 +212,3 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/auto/autonomy-17186719616

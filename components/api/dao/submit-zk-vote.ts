@@ -14,7 +14,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
@@ -55,4 +54,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ error: e?.message || 'internal error' })
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

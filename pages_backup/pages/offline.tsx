@@ -274,7 +274,6 @@ export default function OfflinePage(req, res) {
         <div className='container mx-auto px-4 py-8'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
@@ -303,8 +302,6 @@ export default function OfflinePage(req, res) {
               <motion.div
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 animate={
                   isOnline
                     ? { scale: [1, 1 && 1.1, 1] }
@@ -338,7 +335,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   return (
@@ -357,7 +353,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -425,7 +420,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -468,12 +462,8 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               {isOnline
@@ -537,7 +527,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -669,7 +658,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -824,7 +812,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -893,7 +880,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -943,7 +929,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -955,7 +940,6 @@ export default function OfflinePage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

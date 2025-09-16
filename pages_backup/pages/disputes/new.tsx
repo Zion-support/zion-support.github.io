@@ -160,7 +160,6 @@ export default function NewDisputePage(req, res) {
       const { dispute } = await res && res.json();
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       if (files.length > 0) {;
@@ -282,7 +281,6 @@ const reader = new FileReader();
 
       setSubmitting(false);    }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -317,8 +315,6 @@ function toBase64(file: File): Promise<string> {;
     const reader = new FileReader();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     reader.onload = () => resolve(String(reader.result));
@@ -339,14 +335,11 @@ function toBase64(file: File): Promise<string> {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
 
 

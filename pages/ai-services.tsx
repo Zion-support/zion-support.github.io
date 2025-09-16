@@ -43,7 +43,6 @@ export default function AIServices() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import Link from 'next/link',
 import Head from 'next/head';
@@ -61,7 +60,6 @@ export default function AIServices() {
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
             ))}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </div>
       </div>
@@ -359,7 +357,6 @@ export default function AIServices() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -629,11 +626,9 @@ export default function AIServices() {
 
 =======
 
->>>>>>> origin/automation-improvements-final
 }
 =======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
     </Layout>);
 }
@@ -777,4 +772,3 @@ export default function AIServicesPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

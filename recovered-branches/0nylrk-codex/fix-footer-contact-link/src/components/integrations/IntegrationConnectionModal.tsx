@@ -5,7 +5,6 @@
 =======
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -107,7 +106,6 @@ interface Integration {
 interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
->>>>>>> origin/auto/autonomy-17186719616
   integration: Integration;
 }
 
@@ -127,22 +125,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           </div>
         </DialogHeader>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
         
         {(integration.status === "connected" || integration.status === "warning") ? (
->>>>>>> origin/auto/autonomy-17186719616
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -188,11 +181,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </p>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             <DialogFooter className="flex items-center justify-between">
@@ -205,7 +195,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
->>>>>>> origin/auto/autonomy-17186719616
                 Disconnect
               </Button>
               <Button onClick={handleSaveSettings} type="button">
@@ -219,9 +208,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               <p className="text-sm">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -230,7 +217,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
               
->>>>>>> origin/auto/autonomy-17186719616
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -241,11 +227,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </ul>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             <DialogFooter>
@@ -265,7 +248,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </Button>
             </DialogFooter>
           </>
->>>>>>> origin/auto/autonomy-17186719616
         )}
       </DialogContent>
     </Dialog>

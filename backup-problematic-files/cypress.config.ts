@@ -19,19 +19,14 @@ export default defineConfig({,
   baseUrl: 'http://localhost:3000',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     viewportWidth: 1280,
     viewportHeight: 720,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   base_url: 'http://localhost:3000',
 support_file: cypress / support / e2e.ts',
@@ -55,7 +50,6 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
     },
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     setupNodeEvents(on, config) {,
       // implement node event listeners here
@@ -78,10 +72,7 @@ origin/automation-improvements-final
 
 
 
->>>>>>> origin/automation-improvements-final
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default defineConfig({
   e2e: {
@@ -115,5 +106,4 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 }),
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

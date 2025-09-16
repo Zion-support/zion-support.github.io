@@ -76,7 +76,6 @@ export default function MarketplaceProducts(props: any) {
 =======
         );'      case 'price-low':
         return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'price-high':
         return b.price - a.price;
       case 'rating':

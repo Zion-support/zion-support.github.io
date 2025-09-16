@@ -27,7 +27,6 @@
               )}
               {secondaryAction && (
                 <Button
->>>>>>> origin/auto/autonomy-17186719616
                   href={secondaryAction.href}
                   variant="outline"
                   size="lg"
@@ -39,9 +38,7 @@
                 </Button>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Stats Section */}
@@ -62,7 +59,6 @@
           )}
         </div>
 
->>>>>>> origin/auto/autonomy-17186719616
         {/* Stats Section */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -74,7 +70,6 @@
 
                 </div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             ))}
           </div>;
@@ -98,7 +93,6 @@
         )}
 
         {/* Trust Indicators */}
->>>>>>> origin/auto/autonomy-17186719616
         <div className="mt-16 md:mt-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-400 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
@@ -131,4 +125,3 @@
 };
 
 export default Hero;
->>>>>>> origin/auto/autonomy-17186719616

@@ -9,7 +9,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -29,4 +28,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
 }
->>>>>>> origin/auto/autonomy-17186719616

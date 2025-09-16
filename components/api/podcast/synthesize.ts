@@ -11,16 +11,13 @@ import axios from 'axios';
     episodes[idx] = episode;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -33,4 +30,3 @@ import axios from 'axios';
     return res.status(500).json({ error: error?.message || 'Synthesis failed' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -15,7 +15,6 @@ export default function ContentIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
               Secure Agentic Data Pipelines (2026)

@@ -3,11 +3,9 @@
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 export default function TransportationLogisticsSolutions() {
@@ -35,6 +33,5 @@ export default function TransportationLogisticsSolutions() {
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 

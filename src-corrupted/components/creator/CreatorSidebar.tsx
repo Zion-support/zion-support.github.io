@@ -137,7 +137,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   );
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 }
   );
