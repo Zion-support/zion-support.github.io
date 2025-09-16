@@ -1,5 +1,26 @@
 [
   {
+    "title": "Live Evals with Safe Rollbacks — Operating GenAI in Production",
+    "url": "/reports/ai-lab/articles/new-live-evals-and-rollbacks-1758138000000.md",
+    "createdAt": "2025-09-17T03:00:00.000Z",
+    "tags": ["evals", "reliability", "progressive-delivery"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Zero‑Downtime Agent Releases — A Practical Checklist",
+    "url": "/reports/ai-lab/articles/new-agent-release-checklist-1758141600000.md",
+    "createdAt": "2025-09-17T04:00:00.000Z",
+    "tags": ["release", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Runtime Policy Controls for Safer Tool Use",
+    "url": "/reports/ai-lab/articles/new-runtime-policy-controls-1758145200000.md",
+    "createdAt": "2025-09-17T05:00:00.000Z",
+    "tags": ["safety", "governance", "tooling"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Evals‑in‑Prod: Rollbacks, Canaries, and Safe Iteration",
     "url": "/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md",
     "createdAt": "2025-09-17T02:00:00.000Z",

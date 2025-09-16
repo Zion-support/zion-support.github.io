@@ -524,6 +524,41 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
         </div>
       </section>
 
+      {/* AI Lab Promo Section */}
+      <section className="px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-8 rounded-2xl p-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg border border-white/10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">AI Lab</div>
+                <h3 className="text-2xl font-extrabold">Fresh Insights: Evals, Releases, and Runtime Policy</h3>
+                <p className="opacity-90">New articles on live eval gates, zero‑downtime agent releases, and safer tool use.</p>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <a href="/reports/ai-lab/articles/new-live-evals-and-rollbacks-1758138000000.md" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Live Evals with Safe Rollbacks</div>
+                  <div className="text-xs opacity-90">Ops • Reliability</div>
+                </a>
+                <a href="/reports/ai-lab/articles/new-agent-release-checklist-1758141600000.md" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Zero‑Downtime Agent Releases — Checklist</div>
+                  <div className="text-xs opacity-90">Releases • Evals</div>
+                </a>
+                <a href="/reports/ai-lab/articles/new-runtime-policy-controls-1758145200000.md" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Runtime Policy Controls for Safer Tool Use</div>
+                  <div className="text-xs opacity-90">Safety • Governance</div>
+                </a>
+              </div>
+            </div>
+            <div className="mt-6">
+              <a href="/reports/ai-lab" className="inline-flex items-center px-5 py-2.5 bg-white text-indigo-700 font-semibold rounded-lg hover:bg-white/90 transition">
+                Explore AI Lab
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
