@@ -2022,6 +2022,36 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-intelligence-speed-light.jpg",
     slug: "edge-ai-revolution-intelligence-speed-light"
+  },
+  {
+    id: 9105,
+    title: "Cost-Aware Model Routing: A Copy-Paste Policy",
+    excerpt: "Drop-in routing policy with confidence thresholds and budget caps.",
+    content: "Cut spend without surprises. We provide a copy-paste routing policy that chooses models by confidence, caps token usage by tenant, and shadows risky changes. Comes with scorecard hooks and dashboards to verify quality stays flat while cost drops.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "4 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Costs"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
+    slug: "cost-aware-model-routing-copy-paste-policy"
+  },
+  {
+    id: 9601,
+    title: "Real-Time Evals: Ship Guardrails Without Slowing Teams",
+    excerpt: "Copy‑paste policies, streaming checks, and dashboards teams actually use.",
+    content: "Teams need safety without friction. This playbook shows how to add real-time groundedness and safety checks to production traffic, wire pass/fail to progressive delivery, and keep developers fast with clear dashboards and noisy-channel alerts.",
+    author: "Jordan Kim",
+    authorRole: "Director of Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Evaluations",
+    tags: ["Online Evals", "Guardrails", "Progressive Delivery"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-evals-guardrails-2026.jpg",
+    slug: "real-time-evals-ship-guardrails-fast"
   }
 ];
 
