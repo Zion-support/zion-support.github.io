@@ -30,6 +30,7 @@ export default function BlogPage() {
       featured: true
     },
     {
+<<<<<<< HEAD
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
       excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
@@ -37,6 +38,15 @@ export default function BlogPage() {
       author: 'Dr. Emily Watson',
       date: '2025-09-14',
       readTime: '11 min read',
+=======
+      id: 'ai-governance-operating-systems',
+      title: 'AI Governance Operating Systems: From Policy to Runtime Controls',
+      excerpt: 'How to translate AI policies into executable, auditable runtime controls across your stack.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-14',
+      readTime: '8 min read',
+>>>>>>> origin/feature/new-content-promotion
       image: '/blog/ai-governance.jpg',
       featured: true
     },
@@ -139,11 +149,19 @@ export default function BlogPage() {
       image: '/blog/autonomous-it.jpg'
     },
     {
+<<<<<<< HEAD
       id: 'agent-safety-tooling',
       title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
       excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
       category: 'Cybersecurity',
       author: 'Dr. James Wilson',
+=======
+      id: 'agent-safety-tooling-2025',
+      title: 'Agent Safety Tooling 2025: Sandboxes, Guards, and Runtime Observability',
+      excerpt: 'Practical safety layers for autonomous agents: capability sandboxes, action guards, live monitoring.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+>>>>>>> origin/feature/new-content-promotion
       date: '2025-09-12',
       readTime: '9 min read',
       image: '/blog/agent-safety.jpg'

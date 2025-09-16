@@ -209,6 +209,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+<<<<<<< HEAD
   'ai-safety-red-teaming-2025': {
     id: 'ai-safety-red-teaming-2025',
     title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
@@ -237,6 +238,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
       'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
       'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
+=======
+  'ai-governance-operating-systems': {
+    id: 'ai-governance-operating-systems',
+    title: 'AI Governance Operating Systems: From Policy to Runtime Controls',
+    excerpt:
+      'A practical framework for translating AI policies into enforceable, auditable runtime controls across your stack.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'AI governance must move beyond documents into executable control. Governance Operating Systems (GovOS) provide the missing runtime layer that enforces policy across data, model, and agent actions.',
+      'This article outlines a reference architecture: policy registry, enforcement adapters, audit ledger, and human-in-the-loop gates. We cover mappings from high-level policy to verifiable checks and controls.',
+      'Outcomes include reduced risk, faster approvals, and provable compliance—without blocking innovation.'
+    ]
+  },
+  'agent-safety-tooling-2025': {
+    id: 'agent-safety-tooling-2025',
+    title: 'Agent Safety Tooling 2025: Sandboxes, Guards, and Runtime Observability',
+    excerpt:
+      'Implementing practical safety layers for autonomous agents: capability sandboxes, action guards, and live observability.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'As agents gain more autonomy, safety shifts to runtime. We discuss capability scoping, constrained tools, red-teaming in prod, and policy-aware schedulers.',
+      'We include an implementation checklist and reference configurations to bootstrap safety without stalling delivery.',
+      'The result is safer experimentation and faster iteration with transparent guardrails.'
+>>>>>>> origin/feature/new-content-promotion
     ]
   },
 };

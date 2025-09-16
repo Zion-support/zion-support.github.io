@@ -219,7 +219,14 @@ export default function HomePage() {
               </Link>
               <Link href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
+<<<<<<< HEAD
               </Link>
+=======
+              </a>
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+              </a>
+>>>>>>> origin/feature/new-content-promotion
             </div>
           </div>
         </div>
