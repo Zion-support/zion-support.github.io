@@ -196,6 +196,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
 =======
@@ -210,6 +211,10 @@ export default function HomePage() {
               <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Edge AI Compliance 2025
 >>>>>>> origin/feature/content-sept15-2025
+=======
+              <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Agent Safety Playbook 2025
+>>>>>>> origin/feature/add-ai-agent-safety-post
               </a>
 >>>>>>> origin/feature/new-content-promotion
             </div>

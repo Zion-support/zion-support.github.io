@@ -15,6 +15,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
   'agentic-safety-patterns-2025': {
@@ -22,11 +23,19 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+=======
+  'ai-agent-safety-playbook-2025': {
+    id: 'ai-agent-safety-playbook-2025',
+    title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A concise, engineering-first guide to deploy guardrails, audits, and human-in-the-loop controls for real-world autonomous agents.',
+>>>>>>> origin/feature/add-ai-agent-safety-post
     category: 'AI Safety',
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
+<<<<<<< HEAD
       'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
       'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
     ]
@@ -122,6 +131,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
       'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
 =======
+=======
+      'Enterprises moving to autonomous agents need safety woven into architecture, not bolted on. This playbook outlines pragmatic controls that preserve velocity while containing risk.',
+      'We cover policy engines, capability scoping, red-teaming, incident response, and post-incident learning loops. Templates and reference checklists are included to accelerate implementation.'
+    ]
+  },
+>>>>>>> origin/feature/add-ai-agent-safety-post
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
