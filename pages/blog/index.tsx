@@ -70,6 +70,8 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
+  { slug: 'ai-2026-observable-slo-driven-routing', title: 'Observable, SLO‑Driven Routing (2026)', excerpt: 'Route by latency, quality, cost, and safety with live scorecards.' },
+  { slug: 'ai-2026-governed-runtime-rollback-strategies', title: 'Governed Runtime Rollback Strategies (2026)', excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.' },
   { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
   { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
   { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
