@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New content (2025-09-16 - additional featured additions)
+    {
+        title: 'Launch: Autonomous Knowledge Graph Builder v1.0',
+        summary: 'Automated entity extraction, linking, and provenance with eval-gated updates.',
+        href: '/updates/autonomous-knowledge-graph-builder-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Evidence-First Release Management (2026)',
+        summary: 'Plan, gate, and verify AI releases with signed evidence and rollback triggers.',
+        href: '/updates/evidence-first-release-management-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // Fresh AI Lab content (2025-09-17)
     {
         title: 'Field Guide: Real-Time Agent SLO Blueprints',
