@@ -60,6 +60,10 @@ import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
 import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
+import RevolutionaryTech2027Banner from './src/components/RevolutionaryTech2027Banner';
+import AIConsciousnessEvolution2027 from './src/pages/AIConsciousnessEvolution2027';
+import InterdimensionalComputing2027 from './src/pages/InterdimensionalComputing2027';
+import QuantumRealityControl2027 from './src/pages/QuantumRealityControl2027';
 <<<<<<< HEAD
 import RevolutionaryTechInsights2026 from './src/pages/RevolutionaryTechInsights2026';
 import FutureTechBreakthrough2026 from './src/pages/FutureTechBreakthrough2026';
@@ -942,6 +946,9 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
+          <Route path="/pages/AIConsciousnessEvolution2027" element={<AIConsciousnessEvolution2027 />} />
+          <Route path="/pages/InterdimensionalComputing2027" element={<InterdimensionalComputing2027 />} />
+          <Route path="/pages/QuantumRealityControl2027" element={<QuantumRealityControl2027 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
