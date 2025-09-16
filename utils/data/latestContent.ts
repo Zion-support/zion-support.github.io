@@ -47,6 +47,8 @@ export const latestContent: ContentItem[] = [
     href: "/blog/ai-2026-production-safety-checklist",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -173,6 +175,7 @@ export const latestContent: ContentItem[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+>>>>>>> cursor/create-and-deploy-new-content-011f
     tag: "Blueprint",
     date: "2025-09-15",
   },

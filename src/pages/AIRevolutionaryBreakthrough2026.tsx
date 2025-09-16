@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+import Header from '../Header';
+import Footer from '../Footer';
+=======
 import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/create-and-deploy-new-content-261d
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -253,7 +258,13 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+      </main>
+      
+      <Footer />
+=======
       </div>
+>>>>>>> cursor/create-and-deploy-new-content-261d
     </div>
   );
 };

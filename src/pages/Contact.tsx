@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 <<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
@@ -32,14 +29,11 @@ import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-1912
 
 const Contact: React.FC = () => {
 =======
->>>>>>> cursor/create-and-deploy-new-content-01e2
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -100,7 +94,7 @@ const Contact: React.FC = () => {
     "IoT Solutions"
   ];
 
->>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-1c02
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -460,7 +454,7 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-1c02
           </div>
         </div>
       </section>
