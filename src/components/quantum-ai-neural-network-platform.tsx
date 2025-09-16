@@ -2,11 +2,6 @@ import React from 'react';
 
 const quantum-ai-neural-network-platform: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quantum-ai-neural-network-platform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-black text-white">
       <SEO 
         title="Quantum AI Neural Network Platform 2045 | Zion Tech Group"
@@ -181,14 +176,9 @@ const quantum-ai-neural-network-platform: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default quantum-ai-neural-network-platform;
-=======
 export default QuantumAINeuralNetworkPlatform;
 </div></div></div></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

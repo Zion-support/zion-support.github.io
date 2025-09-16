@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedSearch: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedSearch</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative max-w-2xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +48,6 @@ const EnhancedSearch: React.FC = () => {
         </AnimatePresence>
       </motion.div>
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -104,4 +93,3 @@ import { motion, AnimatePresence } from 'framer-motion';
           </motion.button>
         ))}
       </motion.div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

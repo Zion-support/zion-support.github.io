@@ -9,9 +9,6 @@ const mobile-launch: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default mobile-launch;
-=======
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
@@ -152,4 +149,3 @@ export default function MobileLaunchPage() {
           <a href="/download"><a className="underline">Shareable link: /download</a></a>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

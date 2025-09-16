@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentCarousel2035: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -250,7 +240,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -263,4 +252,3 @@ export default RevolutionaryContentCarousel2035;
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
               className={`w-3 h-3 rounded-full transition-colors ${
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

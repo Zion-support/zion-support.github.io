@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -215,7 +205,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -296,7 +285,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             Experience the most groundbreaking technological content that's reshaping our understanding of what's possible
           </p>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">

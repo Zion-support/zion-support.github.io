@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const trust: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">trust</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -93,7 +83,6 @@ export default function TrustPage() {
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
               )}
         )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

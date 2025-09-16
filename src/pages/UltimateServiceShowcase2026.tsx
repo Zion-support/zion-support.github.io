@@ -3,15 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 const UltimateServiceShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>UltimateServiceShowcase2026 | Zion Tech Group</title>
-        <meta name="description" content="UltimateServiceShowcase2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -613,7 +604,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">UltimateServiceShowcase2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>

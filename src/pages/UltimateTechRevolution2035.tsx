@@ -31,21 +31,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
-const UltimateTechRevolution2035: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>UltimateTechRevolution2035 | Zion Tech Group</title>
-        <meta name="description" content="UltimateTechRevolution2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateTechRevolution2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         </div>
 
@@ -54,7 +39,6 @@ const UltimateTechRevolution2035: React.FC = () => {
 
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -177,7 +161,6 @@ const UltimateTechRevolution2035: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
 
         {/* Call to Action */}

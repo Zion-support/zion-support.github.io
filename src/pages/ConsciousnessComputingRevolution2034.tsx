@@ -9,9 +9,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
         <meta name="description" content="ConsciousnessComputingRevolution2034 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -490,14 +487,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">ConsciousnessComputingRevolution2034</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-<<<<<<< HEAD
-=======
         <motion.div
         <motion.div
         <motion.div
@@ -525,7 +519,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

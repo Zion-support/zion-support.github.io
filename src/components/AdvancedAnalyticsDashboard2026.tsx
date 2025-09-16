@@ -2,11 +2,6 @@ import React from 'react';
 
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsDashboard2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
@@ -142,7 +137,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -43,12 +43,6 @@ const RevolutionaryContentBanner2040: React.FC = () => {
   }, [features.length]);
 
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2040</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.95 }}
@@ -162,7 +156,6 @@ const RevolutionaryContentBanner2040: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

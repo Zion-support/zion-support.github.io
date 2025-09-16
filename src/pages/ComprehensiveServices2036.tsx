@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServices2036: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServices2036 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServices2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 
 const ComprehensiveServices2036: React.FC = () => {
   const services = [
@@ -274,7 +256,6 @@ const ComprehensiveServices2036: React.FC = () => {
               Contact Us
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
@@ -319,4 +300,3 @@ export default ComprehensiveServices2036;
             <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
               View Showcase
             </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

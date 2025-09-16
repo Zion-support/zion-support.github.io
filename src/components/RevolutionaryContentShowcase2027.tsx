@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RevolutionaryContentShowcase2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,11 +43,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-12 text-white relative overflow-hidden mb-16">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -183,7 +174,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

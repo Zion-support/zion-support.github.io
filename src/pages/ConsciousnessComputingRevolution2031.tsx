@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
       {/* Interactive Consciousness Demo */}
       <div className="bg-gradient-to-r from-purple-900/30 to-cyan-900/30 py-20">
@@ -168,20 +162,16 @@ import { Helmet } from 'react-helmet-async';
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
       </div>
 
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
       {/* Ultimate Call to Action */}
       <div className="container mx-auto px-4 py-24">

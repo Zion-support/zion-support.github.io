@@ -90,11 +90,6 @@ const UltimateContentShowcase2030: React.FC = () => {
   const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
 
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2030</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -171,7 +166,6 @@ const UltimateContentShowcase2030: React.FC = () => {
           </button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

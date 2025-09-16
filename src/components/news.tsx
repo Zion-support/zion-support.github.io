@@ -2,16 +2,6 @@ import React from 'react';
 
 const news: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">news</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default news;
-=======
     <UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
@@ -1151,4 +1141,3 @@ export default function News() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

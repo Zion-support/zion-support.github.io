@@ -9,9 +9,6 @@ const quantum-trading-algorithm: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default quantum-trading-algorithm;
-=======
 const features = [
   'Quantum-enhanced market prediction algorithms',
   'Real-time market data processing',
@@ -204,4 +201,3 @@ export default function QuantumTradingAlgorithm() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

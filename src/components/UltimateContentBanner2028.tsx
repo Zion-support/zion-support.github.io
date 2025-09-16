@@ -37,11 +37,6 @@ const UltimateContentBanner2028: React.FC = () => {
   }, [slides.length]);
 
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2028</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
             </p>
           </div>
           
@@ -149,7 +144,6 @@ const UltimateContentBanner2028: React.FC = () => {
           </span>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

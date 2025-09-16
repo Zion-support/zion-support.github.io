@@ -2,11 +2,6 @@ import React from 'react';
 
 const AI2025UltimateContentShowcaseRevolutionaryBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025UltimateContentShowcaseRevolutionaryBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <divsection
@@ -169,7 +164,6 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner: React.FC = () => {
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce" />
         </divsection>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

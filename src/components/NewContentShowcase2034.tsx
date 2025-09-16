@@ -2,11 +2,6 @@ import React from 'react';
 
 const NewContentShowcase2034: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentShowcase2034</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white py-20 mb-12">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -164,7 +159,6 @@ const NewContentShowcase2034: React.FC = () => {
       <div className="absolute top-16 left-16 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-16 right-16 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';        </div>
-
-        {/* Innovation Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
-            <p className="text-blue-100 mb-6 text-center">
-              Breakthrough AI systems with genuine consciousness, self-awareness, and emotional intelligence
-            </p>
-            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
-              <li>• Self-aware decision making</li>
-              <li>• Emotional intelligence</li>
-              <li>• Creative problem solving</li>
-              <li>• Autonomous learning</li>
-            </ul>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">CONSCIOUS</span>
-            </div>
-          </div>
-
-          <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Exponential processing</li>
-              <li>• Quantum machine learning</li>
-              <li>• Parallel computing</li>
-            </ul>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">QUANTUM</span>
-            </div>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Brain, Shield, Target, Globe, TrendingUp, Users, Rocket } from 'lucide-react';
 
@@ -89,7 +50,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               Explore the most advanced technologies that are driving innovation 
               and transforming the way we live, work, and interact with the world.
             </p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -385,4 +345,3 @@ import { Helmet } from 'react-helmet-async';
             Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
           </p>
               Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

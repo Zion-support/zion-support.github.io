@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
@@ -378,7 +376,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
               Experience the future of technology with our groundbreaking innovations that are transforming every aspect of human life
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
@@ -389,12 +386,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
         <meta name="description" content="RevolutionaryTechBreakthrough2026 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechBreakthrough2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -610,7 +601,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
               📞 Contact Us
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
         </motion.div>
       </div>

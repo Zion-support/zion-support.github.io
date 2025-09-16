@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const QuantumNeuralFusion2035: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumNeuralFusion2035 | Zion Tech Group</title>
-        <meta name="description" content="QuantumNeuralFusion2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumNeuralFusion2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -330,7 +314,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               Learn More
             </Button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

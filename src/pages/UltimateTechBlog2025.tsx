@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const UltimateTechBlog2025: React.FC = () => {
-<<<<<<< HEAD
-=======
   const blogPosts = [
     {
       id: 1,
@@ -254,7 +252,6 @@ const UltimateTechBlog2025: React.FC = () => {
 
   const categories = ["All", "AI Consciousness", "Quantum Computing", "Neural Interfaces", "Interdimensional Tech", "Reality Engine", "Predictive AI", "Industry Impact", "AI Ethics"];
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -262,12 +259,6 @@ const UltimateTechBlog2025: React.FC = () => {
         <meta name="description" content="UltimateTechBlog2025 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateTechBlog2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -287,7 +278,6 @@ const UltimateTechBlog2025: React.FC = () => {
             </div>
           </div>
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

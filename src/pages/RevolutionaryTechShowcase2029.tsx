@@ -3,22 +3,12 @@ import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2029: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       <Helmet>
         <title>RevolutionaryTechShowcase2029 | Zion Tech Group</title>
         <meta name="description" content="RevolutionaryTechShowcase2029 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2029</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -159,7 +149,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
               Schedule Demo
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

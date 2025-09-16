@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AdvancedNewsletterSignup: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedNewsletterSignup</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 
@@ -95,7 +85,6 @@ export default function AdvancedNewsletterSignup() {
             <div className="text-white font-bold text-lg">Startups</div>
             <div className="text-white font-bold text-lg">Enterprises</div>
             <div className="text-white font-bold text-lg">Governments</div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

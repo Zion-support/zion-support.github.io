@@ -9,9 +9,6 @@ const cutting-edge-pricing-2025: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default cutting-edge-pricing-2025;
-=======
 const pricingTiers = [
   {
     name: 'Starter',
@@ -388,4 +385,3 @@ export default function CuttingEdgePricing2025() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

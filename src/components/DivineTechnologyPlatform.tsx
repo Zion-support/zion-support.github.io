@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const DivineTechnologyPlatform: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">DivineTechnologyPlatform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -542,7 +532,6 @@ export default function DivineTechnologyPlatform({
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
         >
           View Full Divine Technology Analytics →
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

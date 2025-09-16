@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const QuantumComputingRevolution2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cpu, Atom, Shield, Target, Users, TrendingUp, Globe, Brain } from 'lucide-react';
 
@@ -247,7 +229,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Explore AI Integration
             </Link>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
@@ -256,4 +237,3 @@ const QuantumComputingRevolution2026: React.FC = () => {
 
 export default QuantumComputingRevolution2026;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

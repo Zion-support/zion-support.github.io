@@ -1,20 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AISolutionsComprehensive2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AISolutionsComprehensive2025 | Zion Tech Group</title>
-        <meta name="description" content="AISolutionsComprehensive2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-=======
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -189,7 +177,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
         transition={{ duration: 1, delay: 1.4 }}
         className="container mx-auto px-4 py-16"
       >
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AISolutionsComprehensive2025</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>

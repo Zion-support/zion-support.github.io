@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const 2025-comprehensive-services-showcase-v2: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2025-comprehensive-services-showcase-v2</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import SEO from '../components/SEO';
 import { 
   Brain, Atom, Shield, Target, Rocket,
@@ -261,7 +252,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               Visit Website
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

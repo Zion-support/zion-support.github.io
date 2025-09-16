@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const SEOMetaTags: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SEOMetaTags</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import { Helmet } from 'react-helmet-async';
 
 interface SEOMetaTagsProps {
@@ -81,7 +72,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
         })}
       </script>
     </Helmet>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

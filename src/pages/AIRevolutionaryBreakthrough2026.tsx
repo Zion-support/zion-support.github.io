@@ -4,18 +4,6 @@ import { ArrowRight, Brain, Zap, Globe, Shield, Target, Users, TrendingUp } from
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIRevolutionaryBreakthrough2026 | Zion Tech Group</title>
-        <meta name="description" content="AIRevolutionaryBreakthrough2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIRevolutionaryBreakthrough2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -213,7 +201,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
               Explore More
             </Link>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

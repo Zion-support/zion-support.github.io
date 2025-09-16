@@ -2,12 +2,6 @@ import React from 'react';
 
 const RevolutionaryAdBanner2035: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAdBanner2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -165,7 +159,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

@@ -2,11 +2,6 @@ import React from 'react';
 
 const AI2026ContentPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2026ContentPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -112,7 +107,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
           </a>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

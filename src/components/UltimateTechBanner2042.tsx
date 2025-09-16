@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 const UltimateTechBanner2042: React.FC = () => {
   return (
@@ -72,7 +70,6 @@ const UltimateTechBanner2042: React.FC = () => {
       </div>
     </div>
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltimateTechBanner2042: React.FC = () => {
   return (

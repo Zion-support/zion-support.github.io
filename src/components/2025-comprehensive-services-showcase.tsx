@@ -2,11 +2,6 @@ import React from 'react';
 
 const 2025-comprehensive-services-showcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2025-comprehensive-services-showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEO 
         title="2025 Comprehensive Services Showcase - Zion Tech Group"
@@ -447,13 +442,8 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default 2025-comprehensive-services-showcase;
-=======
 export default ComprehensiveServicesShowcase;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

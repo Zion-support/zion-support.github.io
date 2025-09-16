@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AI2025ContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025ContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
 
@@ -145,7 +135,6 @@ export default function AI2025ContentDiscoveryWidget() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
             Get Started
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

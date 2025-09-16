@@ -1,13 +1,5 @@
         </div>
 
-<<<<<<< HEAD
-const RevolutionaryTechBanner2025: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
           </div>
         </div>
@@ -140,7 +132,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -240,4 +231,3 @@ export default RevolutionaryTechBanner2025;
           </div>
         </div>
       </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

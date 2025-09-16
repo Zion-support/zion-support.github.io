@@ -9,9 +9,6 @@ const innovative-services-showcase-2025: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default innovative-services-showcase-2025;
-=======
 const serviceCategories = [
   {
     id: 'financial-technology',
@@ -325,4 +322,3 @@ export default function InnovativeServicesShowcase2025() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

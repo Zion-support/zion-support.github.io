@@ -58,14 +58,6 @@
           </button>
         </div>
 
-<<<<<<< HEAD
-const RevolutionaryContentCarousel2039: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2039</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -145,7 +137,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
           </div>
 
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -162,7 +153,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             />
           ))}
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* Quick Access Links */}
         <div className="mt-8 text-center">

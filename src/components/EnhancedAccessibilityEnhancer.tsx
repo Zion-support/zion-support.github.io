@@ -2,11 +2,6 @@ import React from 'react';
 
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedAccessibilityEnhancer</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="fixed bottom-4 right-4 z-50">
       {/* Accessibility Toggle Button */}
       <divbutton
@@ -194,7 +189,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           </div>
         )}
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

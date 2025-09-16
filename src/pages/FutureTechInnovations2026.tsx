@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const FutureTechInnovations2026: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>FutureTechInnovations2026 | Zion Tech Group</title>
-        <meta name="description" content="FutureTechInnovations2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">FutureTechInnovations2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Photorealistic VR Environments</li>
@@ -212,7 +193,6 @@ const FutureTechInnovations2026: React.FC = () => {
               Explore Solutions
             </a>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
@@ -232,7 +212,6 @@ const FutureTechInnovations2026: React.FC = () => {
             Explore the cutting-edge technologies that will reshape our world in 2026 and beyond
           </p>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

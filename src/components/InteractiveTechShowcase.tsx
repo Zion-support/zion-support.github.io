@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveTechShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -742,14 +733,10 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default InteractiveTechShowcase;
-=======
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -832,4 +819,3 @@ export default InteractiveTechShowcase;
                 >
                   <span className="mr-2">{currentTech.demo}</span>
                   <span>→</span>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

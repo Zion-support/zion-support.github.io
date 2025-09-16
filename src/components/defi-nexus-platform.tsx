@@ -9,9 +9,6 @@ const defi-nexus-platform: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default defi-nexus-platform;
-=======
 const features = [
   'Multi-chain DeFi aggregation',
   'Automated yield optimization',
@@ -204,4 +201,3 @@ export default function DeFiNexusPlatform() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

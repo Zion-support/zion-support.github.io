@@ -2,11 +2,6 @@ import React from 'react';
 
 const ai-consciousness-evolution-platform: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-consciousness-evolution-platform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <Layout>
       <SEO 
         title="AI Consciousness Evolution Platform | Zion Tech Group" 
@@ -251,14 +246,10 @@ const ai-consciousness-evolution-platform: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ai-consciousness-evolution-platform;
-=======
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -498,4 +489,3 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   );
 };
 export default AIConsciousnessEvolutionPlatform;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

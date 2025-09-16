@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const NewContentShowcase2025_2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentShowcase2025_2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CalendarIconClockIconArrowRightIconStarIcon } from '@heroicons/react/24/outline';
 
@@ -119,7 +110,6 @@ export default function NewContentShowcase2025_2026() {
                 className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Get Free Consultation
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

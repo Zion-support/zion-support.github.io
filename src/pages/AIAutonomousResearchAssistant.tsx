@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   return (
@@ -26,4 +20,3 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 
 export default AIAutonomousResearchAssistant;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

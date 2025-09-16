@@ -9,9 +9,6 @@ const cutting-edge-services-showcase-2025: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default cutting-edge-services-showcase-2025;
-=======
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
@@ -348,4 +345,3 @@ export default function CuttingEdgeServicesShowcase2025() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

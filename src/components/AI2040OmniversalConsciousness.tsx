@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AI2040OmniversalConsciousness: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2040OmniversalConsciousness</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -185,7 +175,6 @@ export default function AI2040OmniversalConsciousness() {
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Singularity
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

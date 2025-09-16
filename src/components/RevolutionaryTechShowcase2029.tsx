@@ -1,12 +1,6 @@
 import React from 'react';
 
 const RevolutionaryTechShowcase2029: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechShowcase2029</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -219,7 +213,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

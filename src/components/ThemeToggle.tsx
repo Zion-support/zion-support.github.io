@@ -2,11 +2,6 @@ import React from 'react';
 
 const ThemeToggle: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ThemeToggle</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="fixed top-32 right-6 z-50">
       <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
         <div className="flex flex-col gap-2">
@@ -48,7 +43,6 @@ const ThemeToggle: React.FC = () => {
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

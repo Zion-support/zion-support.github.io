@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateContentBanner2025: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -376,10 +365,8 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
 export default UltimateContentBanner2025;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

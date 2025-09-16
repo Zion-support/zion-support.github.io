@@ -9,9 +9,6 @@ const revolutionary-2028-pricing: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default revolutionary-2028-pricing;
-=======
 const pricingTiers = [
   {
     name: 'Starter',
@@ -334,4 +331,3 @@ export default function Revolutionary2028Pricing() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

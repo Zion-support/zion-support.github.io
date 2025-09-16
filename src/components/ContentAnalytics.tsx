@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentAnalytics: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContentAnalytics</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
 
@@ -131,7 +121,6 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
                 Engagement Score: {Math.round((metrics.scrollDepth + metrics.clickThroughRate * 10 + metrics.timeOnPage / 10) / 3)}%
       )}
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

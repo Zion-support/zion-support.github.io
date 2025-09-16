@@ -7,12 +7,6 @@ const SignUpForm: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default SignUpForm;
-=======
 }
 
 </p></p></p></p></p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

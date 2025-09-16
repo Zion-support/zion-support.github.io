@@ -10,11 +10,6 @@ const FutureTechTrends2025= () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">FutureTechTrends2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Future Tech Trends 2025
@@ -60,7 +55,6 @@ const FutureTechTrends2025= () => {
               <li>• Thought-controlled systems</li>
             </ul>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
         
         <div className="text-center mt-16">

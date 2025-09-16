@@ -2,12 +2,6 @@ import React from 'react';
 
 const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025UltimateTransformation50000ROIBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -125,7 +119,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-400 rounded-full opacity-20 animate-pulse delay-2000"></div>
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-purple-400 rounded-full opacity-20 animate-pulse delay-500"></div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

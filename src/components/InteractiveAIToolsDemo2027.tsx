@@ -7,8 +7,6 @@ const InteractiveAIToolsDemo2027: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 };`,
         time: 2.3
       }
@@ -321,7 +319,6 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       </div>
     </section>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 };
 
 export default InteractiveAIToolsDemo2027;

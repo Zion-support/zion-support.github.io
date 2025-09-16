@@ -2,11 +2,6 @@ import React from 'react';
 
 const UltimateContentBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
@@ -65,7 +60,6 @@ const UltimateContentBanner2026: React.FC = () => {
           <span className="text-4xl animate-pulse">🚀</span>
           <h3 className="text-3xl font-bold">🚀 ULTIMATE CONTENT 2026 🚀</h3>
           <span className="text-4xl animate-pulse">🚀</span>
->>>>>>> cursor/create-and-deploy-new-content-af01
         </div>
         <p className="text-2xl opacity-95 mb-6 max-w-5xl mx-auto font-semibold">
           🌟 DISCOVER THE MOST REVOLUTIONARY TECHNOLOGIES THAT WILL RESHAPE OUR WORLD 🌟
@@ -153,10 +147,8 @@ const UltimateContentBanner2026: React.FC = () => {
 =======
         <div className="mt-6 text-lg opacity-90">
           🚀 50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities 🚀
->>>>>>> cursor/create-and-deploy-new-content-af01
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

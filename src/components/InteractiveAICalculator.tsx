@@ -2,11 +2,6 @@ import React from 'react';
 
 const InteractiveAICalculator: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveAICalculator</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -169,7 +164,6 @@ const InteractiveAICalculator: React.FC = () => {
           ) : null}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

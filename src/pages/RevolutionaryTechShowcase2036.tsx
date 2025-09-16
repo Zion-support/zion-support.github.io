@@ -27,18 +27,6 @@
     }
   ];
 
-<<<<<<< HEAD
-const RevolutionaryTechShowcase2036: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTechShowcase2036 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTechShowcase2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-=======
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Showcase →
@@ -266,7 +254,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2036</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
@@ -296,7 +283,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
       </div>
 

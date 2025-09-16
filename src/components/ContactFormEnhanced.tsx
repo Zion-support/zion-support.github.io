@@ -2,11 +2,6 @@ import React from 'react';
 
 const ContactFormEnhanced: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContactFormEnhanced</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg"
     >
@@ -114,7 +109,6 @@ const ContactFormEnhanced: React.FC = () => {
           </div>
         )}
       </form>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

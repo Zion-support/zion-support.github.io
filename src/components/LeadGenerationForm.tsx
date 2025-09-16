@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
 
 interface LeadGenerationFormProps {
@@ -94,15 +91,9 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
     : 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8';
 
   const textColor = variant === 'modal' ? 'text-gray-900' : 'text-white';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const LeadGenerationForm: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LeadGenerationForm</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       whileInView={{ opacity: 1, y: 0 }}
       className={containerClasses}
@@ -246,7 +237,6 @@ const LeadGenerationForm: React.FC = () => {
           🔒 Your information is secure and will never be shared
         </p>
       </form>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

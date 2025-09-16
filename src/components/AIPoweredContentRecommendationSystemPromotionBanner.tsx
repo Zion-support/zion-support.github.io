@@ -2,11 +2,6 @@ import React from 'react';
 
 const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIPoweredContentRecommendationSystemPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">
@@ -230,7 +225,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

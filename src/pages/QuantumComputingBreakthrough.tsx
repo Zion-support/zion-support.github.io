@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { 
   Atom, 
@@ -21,7 +18,6 @@ import {
   Star,
   Sparkles
 } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const QuantumComputingBreakthrough: React.FC = () => {
   const breakthroughs = [
@@ -110,18 +106,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingBreakthrough | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingBreakthrough - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingBreakthrough</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -283,7 +267,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
 

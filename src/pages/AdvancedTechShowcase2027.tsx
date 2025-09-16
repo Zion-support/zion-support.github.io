@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedTechShowcase2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedTechShowcase2027 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedTechShowcase2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedTechShowcase2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
           </div>
         </div>
 
@@ -95,7 +74,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
@@ -212,4 +190,3 @@ export default AdvancedTechShowcase2027;
         </div>
       </div>
     </>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

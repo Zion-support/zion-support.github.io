@@ -2,12 +2,6 @@ import React from 'react';
 
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechRevolution2032Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <divsection
       whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden"
@@ -108,7 +102,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
     </divsection>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

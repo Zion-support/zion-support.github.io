@@ -9,9 +9,6 @@ const ai-consciousness-evolution-2025: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ai-consciousness-evolution-2025;
-=======
 const features = [
   'Emotional intelligence training modules',
   'Consciousness expansion exercises',
@@ -469,4 +466,3 @@ export default function AIConsciousnessEvolution2025() {
               ))}
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

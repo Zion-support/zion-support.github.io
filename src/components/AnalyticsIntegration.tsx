@@ -9,9 +9,6 @@ const AnalyticsIntegration: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AnalyticsIntegration;
-=======
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
 }
@@ -169,4 +166,3 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

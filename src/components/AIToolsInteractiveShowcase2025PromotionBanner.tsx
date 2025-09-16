@@ -2,16 +2,6 @@ import React from 'react';
 
 const AIToolsInteractiveShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsInteractiveShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default AIToolsInteractiveShowcase2025PromotionBanner;
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20"></div>
@@ -140,4 +130,3 @@ const liveDemos = [
     complexity: "Advanced"
   }
 ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

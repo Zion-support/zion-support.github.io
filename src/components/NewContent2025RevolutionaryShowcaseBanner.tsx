@@ -2,12 +2,6 @@ import React from 'react';
 
 const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContent2025RevolutionaryShowcaseBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-16 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -79,7 +73,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

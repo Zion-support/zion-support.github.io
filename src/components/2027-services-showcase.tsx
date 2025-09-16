@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const 2027-services-showcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2027-services-showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -318,7 +308,6 @@ export default function ServicesShowcase2027() {
               <a href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</a>
               {' • '}
               <a href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

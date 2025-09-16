@@ -2,11 +2,6 @@ import React from 'react';
 
 const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryCaseStudiesShowcase2027PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
     >
@@ -147,7 +142,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
       >
         <X className="w-3 h-3 text-gray-900" />
       </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

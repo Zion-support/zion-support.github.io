@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import LatestContentPromotion from '@/components/LatestContentPromotion';
 import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Blog: React.FC = () => {
   return (
@@ -16,11 +10,6 @@ const Blog: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Blog</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Blog
@@ -73,7 +62,6 @@ const Blog: React.FC = () => {
               <li>• Technology consulting</li>
             </ul>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
@@ -82,4 +70,3 @@ const Blog: React.FC = () => {
 
 export default Blog;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

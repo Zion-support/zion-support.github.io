@@ -2,12 +2,6 @@ import React from 'react';
 
 const SocialProofMetrics: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SocialProofMetrics</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Main Metrics */}
@@ -79,7 +73,6 @@ const SocialProofMetrics: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 View All Success Stories
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

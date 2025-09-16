@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ConsciousnessComputingRevolution2035: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ConsciousnessComputingRevolution2035 | Zion Tech Group</title>
-        <meta name="description" content="ConsciousnessComputingRevolution2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ConsciousnessComputingRevolution2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -264,7 +243,6 @@ const ConsciousnessComputingRevolution2035: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
@@ -385,4 +363,3 @@ export default ConsciousnessComputingRevolution2035;
             </button>
             <button className="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Download Technical Specifications
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

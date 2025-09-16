@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const NextGenAIRevolution2027: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenAIRevolution2027 | Zion Tech Group</title>
-        <meta name="description" content="NextGenAIRevolution2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -42,7 +28,6 @@ const NextGenAIRevolution2027: React.FC = () => {
             </div>
           </div>
       {/* Revolutionary AI Technologies */}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -131,7 +116,6 @@ const NextGenAIRevolution2027: React.FC = () => {
             </button>
           </div>
         </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
 
       {/* AI Applications Section */}

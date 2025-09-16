@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const api-observability: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">api-observability</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default api-observability;
-=======
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -52,4 +39,3 @@ export default function ApiObservabilityPage() {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

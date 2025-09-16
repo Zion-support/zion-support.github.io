@@ -9,9 +9,6 @@ const 2028-services-showcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default 2028-services-showcase;
-=======
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
@@ -286,4 +283,3 @@ export default function ServicesShowcase2028() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

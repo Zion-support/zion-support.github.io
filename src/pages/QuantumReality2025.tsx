@@ -3,18 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 const QuantumReality2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumReality2025 | Zion Tech Group</title>
-        <meta name="description" content="QuantumReality2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumReality2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -221,7 +209,6 @@ const QuantumReality2025: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

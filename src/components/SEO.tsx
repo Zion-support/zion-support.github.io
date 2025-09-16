@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const SEO: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SEO</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/create-and-deploy-new-content-ec50
 
 export type SEOProps = {
   title?: string;
@@ -30,27 +17,6 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://zion.app',
   type = 'website'
 }) => {
-<<<<<<< HEAD
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Helmet>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-  );
-=======
   React.useEffect(() => {
     // Update document title
     document.title = title;
@@ -134,12 +100,7 @@ const SEO: React.FC<SEOProps> = ({
   }, [title, description, keywords, image, url, type]);
 
   return null; // This component doesn't render anything
->>>>>>> cursor/create-and-deploy-new-content-ec50
 };
 
-<<<<<<< HEAD
-export default SEO;
-=======
 export default SEO;
 export { SEO };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

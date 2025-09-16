@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const FeaturedContent2026Showcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FeaturedContent2026Showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default FeaturedContent2026Showcase;
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarTrendingUpClockAwardSparkles
 
@@ -256,4 +243,3 @@ export default function FeaturedContent2026Showcase({
   );
 }
 export { FeaturedContent2026Showcase };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

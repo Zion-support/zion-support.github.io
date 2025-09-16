@@ -2,12 +2,6 @@ import React from 'react';
 
 const InteractiveAIToolsDemo2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="p-6 space-y-6">
       <h1 className="text-3xl font-bold">User Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -252,7 +246,6 @@ Recommendations:
             <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
               <Settings className="w-5 h-5 mr-2" />
               View API Docs
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 export default InteractiveAIToolsDemo2025;

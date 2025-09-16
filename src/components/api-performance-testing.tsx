@@ -1,17 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const api-performance-testing: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">api-performance-testing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default api-performance-testing;
-=======
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runner',
@@ -43,4 +31,3 @@ export default function ApiPerformanceTestingPage() {
 		</>
 	);
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

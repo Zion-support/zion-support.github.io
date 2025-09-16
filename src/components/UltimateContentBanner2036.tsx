@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap } from 'lucide-react';
-
-const UltimateContentBanner2036: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2036</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -83,7 +70,6 @@ const UltimateContentBanner2036: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
@@ -153,4 +139,3 @@ export default UltimateContentBanner2036;
             Experience Ultimate Breakthrough →
           </a>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

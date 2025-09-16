@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltimateBreakthrough2026Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateBreakthrough2026Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
@@ -158,7 +149,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

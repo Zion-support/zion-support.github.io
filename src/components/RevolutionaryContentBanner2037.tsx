@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentBanner2037: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2037</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -56,7 +46,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -119,4 +108,3 @@ export default RevolutionaryContentBanner2037;
               Enter New Reality →
             </a>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

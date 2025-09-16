@@ -2,12 +2,6 @@ import React from 'react';
 
 const BlogPostLayout: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BlogPostLayout</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
       <header className="mb-8">
@@ -41,7 +35,6 @@ const BlogPostLayout: React.FC = () => {
         className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-purple-600 prose-strong:text-gray-900"
         dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }}
       />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

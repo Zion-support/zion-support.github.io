@@ -2,12 +2,6 @@ import React from 'react';
 
 const AI2026QuantumNeuralBreakthroughBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2026QuantumNeuralBreakthroughBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 text-white py-6 relative overflow-hidden">
       {/* Animated quantum particles */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -57,7 +51,6 @@ const AI2026QuantumNeuralBreakthroughBanner: React.FC = () => {
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

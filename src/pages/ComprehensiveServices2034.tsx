@@ -62,10 +62,6 @@ const ComprehensiveServices2034: React.FC = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2034</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of forward-thinking organizations already using our comprehensive services to achieve unprecedented success.
@@ -196,7 +192,6 @@ const ComprehensiveServices2034: React.FC = () => {
               Schedule Consultation
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

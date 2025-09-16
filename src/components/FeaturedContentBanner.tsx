@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const FeaturedContentBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FeaturedContentBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
 
@@ -145,7 +135,6 @@ export default function FeaturedContentBanner() {
                 <div className="text-xs text-gray-300 mt-1">
                   {content.roi}
             ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

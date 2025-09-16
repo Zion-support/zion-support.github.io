@@ -9,9 +9,5 @@ const ChatAssistant: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ChatAssistant;
-=======
 export { ChatAssistant };
 </p></p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

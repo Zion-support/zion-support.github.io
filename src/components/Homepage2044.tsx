@@ -2,12 +2,6 @@ import React from 'react';
 
 const Homepage2044: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2044</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
@@ -339,7 +333,6 @@ const Homepage2044: React.FC = () => {
         </main>
       </Layout>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

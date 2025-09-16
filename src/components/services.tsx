@@ -9,9 +9,6 @@ const services: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default services;
-=======
 const serviceCategories: Array<{
   id: string;
   title: string;
@@ -584,4 +581,3 @@ export default function ServicesPage() {
       <UltraFuturisticFooter2029 />
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

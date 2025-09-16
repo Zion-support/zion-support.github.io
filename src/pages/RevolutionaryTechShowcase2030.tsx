@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -136,11 +130,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
 
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2030</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
         </div>
       </div>
 
@@ -149,7 +138,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       </div>
 
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
@@ -267,7 +255,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               </div>
             </motion.div>
           ))}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
       </div>
 

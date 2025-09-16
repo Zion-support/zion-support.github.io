@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const request-to-hire: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">request-to-hire</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
@@ -84,7 +74,6 @@ export default function RequestToHirePage() {
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

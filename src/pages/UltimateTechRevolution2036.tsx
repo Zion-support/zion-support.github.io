@@ -9,14 +9,6 @@ const UltimateTechRevolution2036: React.FC = () => {
         <meta name="description" content="UltimateTechRevolution2036 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateTechRevolution2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -281,7 +273,6 @@ const UltimateTechRevolution2036: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

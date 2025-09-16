@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AI2025NewsletterSignup: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025NewsletterSignup</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
 
@@ -168,7 +158,6 @@ export default function AI2025NewsletterSignup() {
               <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
             ))}
             <span className="text-gray-400 text-sm ml-2">4.9/5 rating</span>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

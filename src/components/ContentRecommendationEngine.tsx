@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentRecommendationEngine: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContentRecommendationEngine</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
 
@@ -228,7 +218,6 @@ export default function ContentRecommendationEngine() {
           className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
         >
           Refresh Recommendations
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

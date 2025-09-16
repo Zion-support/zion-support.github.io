@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UserEngagementWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UserEngagementWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 
@@ -151,7 +141,6 @@ export default function UserEngagementWidget() {
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                 Live
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

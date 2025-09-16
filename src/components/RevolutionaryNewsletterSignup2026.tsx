@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryNewsletterSignup2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryNewsletterSignup2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 
@@ -156,7 +146,6 @@ export default function RevolutionaryNewsletterSignup2026() {
               className="px-6 py-3 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
             >
               Exclusive Content
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

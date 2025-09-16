@@ -2,12 +2,6 @@ import React from 'react';
 
 const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessIntelligenceRevolutionBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
       {/* Data Visualization Background */}
       <div className="absolute inset-0 opacity-20">
@@ -140,7 +134,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
       <div className="absolute bottom-20 left-20 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
       <div className="absolute bottom-40 right-10 w-5 h-5 bg-pink-400 rounded-full animate-pulse delay-500"></div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

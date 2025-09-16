@@ -9,9 +9,6 @@ const Homepage2036: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Homepage2036;
-=======
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
   ...real2036SpecializedServices.slice(0, 3)
@@ -334,4 +331,3 @@ export default function Homepage2036() {
                   Call Us Now
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

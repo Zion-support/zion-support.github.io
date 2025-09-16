@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const assistant: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">assistant</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import { useEffect, useMemo, useState } from 'react';
 
 interface Message { role: 'user' | 'assistant'; content: string }
@@ -57,7 +47,6 @@ export default function Assistant() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

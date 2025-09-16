@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const 2026-services-showcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2026-services-showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
@@ -247,7 +237,6 @@ export default function ServicesShowcase2026() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

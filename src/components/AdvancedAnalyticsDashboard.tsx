@@ -1,8 +1,6 @@
 import React from 'react';
 
 const AdvancedAnalyticsDashboard: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [selectedTimeRange, setSelectedTimeRange] = useState<TimeRange>(timeRanges[1]);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     visitors: {
@@ -196,7 +194,6 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     );
   }
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsDashboard</h3>

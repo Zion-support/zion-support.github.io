@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const InterdimensionalTechRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>InterdimensionalTechRevolution2025 | Zion Tech Group</title>
-        <meta name="description" content="InterdimensionalTechRevolution2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">InterdimensionalTechRevolution2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Break through the barriers of our dimension and access infinite parallel realities with our revolutionary interdimensional technology
           </p>
@@ -256,7 +240,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               Schedule Exploration
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

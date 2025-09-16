@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveEngagementWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveEngagementWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
 
@@ -125,7 +115,6 @@ export default function InteractiveEngagementWidget() {
       <div className="mt-3 pt-3 border-t">
         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs py-2 px-3 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

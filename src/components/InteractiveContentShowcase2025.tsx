@@ -57,14 +57,6 @@
           </p>
         </div>
 
-<<<<<<< HEAD
-const InteractiveContentShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeTab, setActiveTab] = useState('breakthrough');
 
     }
@@ -79,7 +71,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
 
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -103,7 +94,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* Content Display */}
         <div className="max-w-4xl mx-auto">

@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const NextGenInnovationHub2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenInnovationHub2025 | Zion Tech Group</title>
-        <meta name="description" content="NextGenInnovationHub2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenInnovationHub2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
@@ -443,7 +427,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             © 2025 Zion Tech Group. All rights reserved. | 
             <Link to="/" className="text-emerald-400 hover:text-emerald-300 ml-2">Back to Home</Link>
           </p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

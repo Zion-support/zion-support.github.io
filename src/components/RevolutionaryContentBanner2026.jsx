@@ -14,14 +14,6 @@ import {
   Award
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const RevolutionaryContentBanner2026= () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 const RevolutionaryContentBanner2026 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -268,7 +260,6 @@ const RevolutionaryContentBanner2026 = () => {
         </motion.div>
       )}
     </AnimatePresence>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

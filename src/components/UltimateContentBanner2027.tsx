@@ -1,12 +1,6 @@
 import React from 'react';
 
 const UltimateContentBanner2027: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentBanner, setCurrentBanner] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -140,7 +134,6 @@ const UltimateContentBanner2027: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

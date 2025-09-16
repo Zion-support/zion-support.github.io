@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
 const NextGenInnovationHub2039: React.FC = () => {
   return (
@@ -21,10 +15,6 @@ const NextGenInnovationHub2039: React.FC = () => {
             Discover and explore the most revolutionary technologies shaping humanity's future in our advanced innovation hub
           </p>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-=======
           </div>
         </div>
 
@@ -104,11 +94,9 @@ const NextGenInnovationHub2039: React.FC = () => {
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

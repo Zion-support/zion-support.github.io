@@ -2,11 +2,6 @@ import React from 'react';
 
 const QuantumComputingSolutions2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">QuantumComputingSolutions2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -238,7 +233,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

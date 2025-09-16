@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const EnhancedContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -278,7 +268,6 @@ export default function EnhancedContentDiscoveryWidget() {
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 Browse All Content
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

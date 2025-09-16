@@ -2,11 +2,6 @@ import React from 'react';
 
 const RevolutionaryCTASection2034: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryCTASection2034</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-20 mb-12">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -188,7 +183,6 @@ const RevolutionaryCTASection2034: React.FC = () => {
       <div className="absolute top-20 left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-48 h-48 bg-pink-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const BlogPost2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>BlogPost2025 | Zion Tech Group</title>
-        <meta name="description" content="BlogPost2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">BlogPost2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -55,7 +37,6 @@ const BlogPost2025= () => {
               Published: January 15, 2025
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -64,7 +45,6 @@ const BlogPost2025= () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Stay updated with the latest insights and trends in revolutionary technology
           </p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

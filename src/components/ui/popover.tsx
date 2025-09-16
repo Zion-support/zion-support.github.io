@@ -9,9 +9,6 @@ const popover: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default popover;
-=======
 export function Popover({ children, className }: PopoverRootProps) {
   return <div className={className}>{children}</div>;
 }
@@ -48,4 +45,3 @@ export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentPro
 PopoverContent.displayName = "PopoverContent";
 
 export default Popover;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

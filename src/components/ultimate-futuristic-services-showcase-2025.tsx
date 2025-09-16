@@ -9,9 +9,6 @@ const ultimate-futuristic-services-showcase-2025: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ultimate-futuristic-services-showcase-2025;
-=======
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -364,4 +361,3 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 View Pricing
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

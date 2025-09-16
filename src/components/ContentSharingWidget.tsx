@@ -1,13 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const ContentSharingWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContentSharingWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 interface ContentSharingWidgetProps {
   title: string;
   url: string;
@@ -79,7 +71,6 @@ export default function ContentSharingWidget({ titleurldescription }: ContentSha
             className="bg-purple-600 text-white px-3 py-2 rounded text-sm hover:bg-purple-700 transition-colors"
           >
             Copy
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

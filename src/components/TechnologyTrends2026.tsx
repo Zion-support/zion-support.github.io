@@ -2,11 +2,6 @@ import React from 'react';
 
 const TechnologyTrends2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TechnologyTrends2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -374,7 +369,6 @@ const TechnologyTrends2026: React.FC = () => {
           </div>
         )}
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

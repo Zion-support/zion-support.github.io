@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const UltimateTechBreakthrough2031: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>UltimateTechBreakthrough2031 | Zion Tech Group</title>
-        <meta name="description" content="UltimateTechBreakthrough2031 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateTechBreakthrough2031</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
                 </div>
               </div>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -168,5 +147,4 @@ const UltimateTechBreakthrough2031: React.FC = () => {
                   <h3 className="text-xl font-semibold mb-2">Consciousness Transfer</h3>
                   <p className="text-orange-100">Transfer human consciousness into digital systems for immortality and enhanced capabilities.</p>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 

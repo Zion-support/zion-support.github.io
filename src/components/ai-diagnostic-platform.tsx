@@ -9,9 +9,6 @@ const ai-diagnostic-platform: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ai-diagnostic-platform;
-=======
 const features = [
   'AI-powered medical image analysis',
   'Symptom assessment algorithms',
@@ -204,4 +201,3 @@ export default function AIDiagnosticPlatform() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

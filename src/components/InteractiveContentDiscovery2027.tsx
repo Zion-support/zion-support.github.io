@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -80,15 +77,9 @@ const InteractiveContentDiscovery2027: React.FC = () => {
     : contentItems.filter(item => item.category === selectedCategory);
 
   const featuredItems = contentItems.filter(item => item.featured);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InteractiveContentDiscovery2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentDiscovery2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       
@@ -253,7 +244,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

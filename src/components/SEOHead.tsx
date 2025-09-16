@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -34,16 +30,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + "..." : description;
   const fullKeywords = Array.isArray(tags) ? [...keywords.split(", "), ...tags].join(", ") : keywords;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const SEOHead: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SEOHead</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -128,7 +117,6 @@ const SEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
@@ -169,4 +157,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

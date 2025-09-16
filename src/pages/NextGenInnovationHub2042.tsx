@@ -1,12 +1,7 @@
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
-const NextGenInnovationHub2042: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   const categories = [
     { id: 'all', name: 'All Innovations', icon: '🌟' },
     { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
@@ -16,11 +11,6 @@ const NextGenInnovationHub2042: React.FC = () => {
     { id: 'bio', name: 'Biotechnology', icon: '🌱' },
     { id: 'energy', name: 'Energy Systems', icon: '⚡' },
     { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
-<<<<<<< HEAD
-  const innovations = [
-    {
-      id: 1,
-=======
   ];
   const [selectedInnovation, setSelectedInnovation] = useState(0);
 
@@ -76,7 +66,6 @@ const NextGenInnovationHub2042: React.FC = () => {
       features: ['Infinite processing', 'Parallel realities', 'Quantum entanglement', 'Zero latency']
     },
     {
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       id: 3,
       title: "Neural Reality Bridge",
       description: "Direct brain-computer interface for seamless digital interaction",
@@ -135,105 +124,6 @@ const NextGenInnovationHub2042: React.FC = () => {
       impact: 'Breakthrough',
       icon: '⏰',
       features: ['Time manipulation', 'Instant processing', 'Future prediction', 'Chronological analysis']
-<<<<<<< HEAD
-    }
-  ];
-
-  const filteredInnovations = selectedCategory === 'all' 
-    ? innovations 
-    : innovations.filter(innovation => innovation.category === selectedCategory);
-      description: "Create and manipulate quantum realities with our advanced quantum computing platform",
-      category: "Quantum Computing",
-      status: "Beta",
-      users: "25,000+",
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      features: [
-        "Quantum entanglement protocols",
-        "Reality manipulation tools",
-        "Parallel universe computing",
-        "Quantum consciousness transfer"
-      ]
-    },
-    {
-      id: 3,
-      title: "Interdimensional Interface",
-      description: "Connect and communicate across multiple dimensions with our breakthrough interface technology",
-      category: "Interdimensional Tech",
-      status: "Alpha",
-      users: "10,000+",
-      icon: "🌌",
-      color: "from-emerald-600 to-teal-600",
-      features: [
-        "Cross-dimensional communication",
-        "Reality synchronization protocols",
-        "Multi-dimensional data processing",
-        "Consciousness dimension bridging"
-      ]
-    },
-    {
-      id: 4,
-      title: "Synthetic Intelligence Factory",
-      description: "Manufacture synthetic intelligence systems that surpass human capabilities",
-      category: "Synthetic Intelligence",
-      status: "Coming Soon",
-      users: "0",
-      icon: "🤖",
-      color: "from-orange-600 to-red-600",
-      features: [
-        "Synthetic consciousness creation",
-        "Superhuman intelligence protocols",
-        "Emotional intelligence synthesis",
-        "Creative problem solving engines"
-      ]
-    },
-    {
-      id: 5,
-      title: "Planetary Computing Network",
-      description: "Global-scale computing infrastructure spanning entire planetary networks",
-      category: "Planetary Computing",
-      status: "Development",
-      users: "0",
-      icon: "🌍",
-      color: "from-indigo-600 to-purple-600",
-      features: [
-        "Global network synchronization",
-        "Planetary-scale data processing",
-        "Distributed consciousness protocols",
-        "Universal computing standards"
-      ]
-    },
-    {
-      id: 6,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless thought-to-action communication",
-      category: "Neural Interfaces",
-      status: "Live",
-      users: "100,000+",
-      icon: "🧬",
-      color: "from-pink-600 to-rose-600",
-      features: [
-        "Non-invasive brain interfaces",
-        "Thought-to-text conversion",
-        "Emotional state monitoring",
-        "Consciousness transfer protocols"
-      ]
-    }
-  ];
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'Live': return 'bg-green-500';
-      case 'Beta': return 'bg-blue-500';
-      case 'Alpha': return 'bg-yellow-500';
-      case 'Coming Soon': return 'bg-purple-500';
-      case 'Development': return 'bg-orange-500';
-      default: return 'bg-gray-500';
-    }
-  };
-<<<<<<< HEAD
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -247,105 +137,16 @@ const NextGenInnovationHub2042: React.FC = () => {
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2042
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧠 NEXT-GEN INNOVATION HUB • JANUARY 2042
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Next-Gen Innovation Hub 2042
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover and explore the most revolutionary technologies shaping humanity's future
-          </p>
-        </div>
-
-        {/* Innovation Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
           {filteredInnovations.map((innovation) => (
             <div key={innovation.id} className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4">{innovation.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{innovation.title}</h3>
                 <p className="text-emerald-100 mb-4">{innovation.description}</p>
-<<<<<<< HEAD
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm opacity-80">Status:</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    innovation.status === 'Deployed' ? 'bg-green-500/50 text-green-200' :
-                    innovation.status === 'Beta' ? 'bg-blue-500/50 text-blue-200' :
-                    innovation.status === 'Testing' ? 'bg-yellow-500/50 text-yellow-200' :
-                    innovation.status === 'Development' ? 'bg-orange-500/50 text-orange-200' :
-                    'bg-purple-500/50 text-purple-200'
-                  }`}>
-                    {innovation.status}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm opacity-80">Impact:</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    innovation.impact === 'Revolutionary' ? 'bg-red-500/50 text-red-200' :
-                    innovation.impact === 'Breakthrough' ? 'bg-pink-500/50 text-pink-200' :
-                    'bg-cyan-500/50 text-cyan-200'
-                  }`}>
-                    {innovation.impact}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
-                <ul className="space-y-1">
-                  {innovation.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Innovation
-          {innovations.map((innovation, index) => (
-            <div
-              key={innovation.id}
-              className={`bg-gradient-to-br ${innovation.color}/20 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                selectedInnovation === index ? 'ring-4 ring-purple-400' : ''
-              }`}
-              onClick={() => setSelectedInnovation(index)}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-4xl">{innovation.icon}</div>
-                <div className="flex items-center space-x-2">
-                  <span className={`px-2 py-1 ${getStatusColor(innovation.status)} text-white text-xs rounded-full`}>
-                    {innovation.status}
-                  </span>
-                </div>
-              </div>
-              
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-              <h3 className="text-2xl font-bold mb-3">{innovation.title}</h3>
-              <p className="text-gray-200 mb-4 text-sm">{innovation.description}</p>
-              
-              <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                <span>{innovation.category}</span>
-                <span>{innovation.users} users</span>
-              </div>
-              
-              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                Explore Innovation →
-<<<<<<< HEAD
-=======
               </button>
             </div>
           ))}
@@ -388,7 +189,6 @@ const NextGenInnovationHub2042: React.FC = () => {
               <h2 className="text-4xl font-bold mb-6">{innovations[selectedInnovation].title}</h2>
               <p className="text-xl opacity-90 mb-8">{innovations[selectedInnovation].description}</p>
               
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
               <div className="flex items-center space-x-4 mb-8">
                 <div className="flex items-center space-x-2">
                   <span className={`px-3 py-1 ${getStatusColor(innovations[selectedInnovation].status)} text-white text-sm rounded-full`}>
@@ -417,7 +217,6 @@ const NextGenInnovationHub2042: React.FC = () => {
                     'bg-cyan-500/50 text-cyan-200'
                   }`}>
                     {innovation.impact}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
                   </span>
                 </div>
               </div>
@@ -462,42 +261,6 @@ const NextGenInnovationHub2042: React.FC = () => {
               <div className="text-sm opacity-80">Future innovations</div>
             </div>
             <div className="text-center">
-<<<<<<< HEAD
-              <div className="text-5xl font-bold mb-2 text-pink-400">∞</div>
-              <div className="text-lg text-gray-300">Possibilities</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Community Showcase */}
-        <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🌟 Community Showcase</h2>
-            <p className="text-xl opacity-90">See what our community is building with our revolutionary technologies</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Conscious AI Art Gallery</h3>
-              <p className="text-gray-200 mb-4">AI-generated artwork that demonstrates true creativity and emotional expression</p>
-              <div className="text-sm text-gray-400">Created by: AI Artist Collective</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-bold mb-2">Quantum Reality Simulator</h3>
-              <p className="text-gray-200 mb-4">Interactive simulation of quantum realities and parallel universes</p>
-              <div className="text-sm text-gray-400">Created by: Quantum Research Lab</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">🌌</div>
-              <h3 className="text-xl font-bold mb-2">Dimension Explorer App</h3>
-              <p className="text-gray-200 mb-4">Mobile app for exploring and communicating across dimensions</p>
-              <div className="text-sm text-gray-400">Created by: Interdimensional Dev Team</div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -508,7 +271,6 @@ const NextGenInnovationHub2042: React.FC = () => {
               <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
               <div className="text-sm opacity-80">Continuous development</div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Be part of the most advanced innovation ecosystem in human history. Contribute to technologies that will shape the future of civilization.
@@ -519,26 +281,3 @@ const NextGenInnovationHub2042: React.FC = () => {
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               Submit Innovation
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join our community of innovators and be part of the most advanced technological revolution in history
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Join Innovation Hub
-            </button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              View All Innovations
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-export default NextGenInnovationHub2042;
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

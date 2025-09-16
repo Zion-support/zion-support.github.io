@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Target, Users, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIInnovationHub2026: React.FC = () => {
   const innovations = [
@@ -43,20 +37,6 @@ const AIInnovationHub2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIInnovationHub2026 | Zion Tech Group</title>
-        <meta name="description" content="AIInnovationHub2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIInnovationHub2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -207,7 +187,6 @@ const AIInnovationHub2026: React.FC = () => {
           </motion.button>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -236,7 +215,6 @@ const AIInnovationHub2026: React.FC = () => {
               </button>
             </div>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">

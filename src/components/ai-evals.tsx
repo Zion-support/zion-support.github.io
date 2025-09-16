@@ -1,17 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const ai-evals: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-evals</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ai-evals;
-=======
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -73,4 +61,3 @@ export default function AIEvalsPage() {
 							<Button href="/services" variant="outline" className="border-cyan-500 text-cyan-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>
 	);
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

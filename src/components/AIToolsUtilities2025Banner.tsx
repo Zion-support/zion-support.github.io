@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const AIToolsUtilities2025Banner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsUtilities2025Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
 
@@ -97,7 +88,6 @@ export default function AIToolsUtilities2025Banner() {
             <div>
               <div className="text-2xl font-bold text-yellow-400 mb-1">24/7</div>
               <div className="text-sm text-gray-400">Support Available</div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

@@ -2,11 +2,6 @@ import React from 'react';
 
 const AI2025UltimateTechnologyShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025UltimateTechnologyShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -166,7 +161,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

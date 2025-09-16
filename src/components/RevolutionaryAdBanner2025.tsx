@@ -48,11 +48,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
   const currentOfferData = offers[currentOffer];
 
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAdBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
       isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
     }`}>
@@ -189,7 +184,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
           style={{ width: `${((currentOffer + 1) / offers.length) * 100}%` }}
         ></div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -2,11 +2,6 @@ import React from 'react';
 
 const ServiceCard: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ServiceCard</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className={`relative group cursor-pointer ${
         isCurrent ? 'scale-105' : 'scale-100'
@@ -180,7 +175,6 @@ const ServiceCard: React.FC = () => {
 
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

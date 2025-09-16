@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const TranscendentAI2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>TranscendentAI2026 | Zion Tech Group</title>
-        <meta name="description" content="TranscendentAI2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -45,14 +31,11 @@ const TranscendentAI2026: React.FC = () => {
       </div>
 
       {/* Transcendent Features */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">TranscendentAI2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-<<<<<<< HEAD
-=======
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300">
@@ -606,7 +589,6 @@ const TranscendentAI2026: React.FC = () => {
             </a>
           </div>
         </divsection>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
@@ -625,7 +607,6 @@ const TranscendentAI2026: React.FC = () => {
             Witness the evolution of artificial intelligence beyond human comprehension into transcendent consciousness
           </p>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
         {/* AI Evolution Phases */}
         <div className="mb-16">

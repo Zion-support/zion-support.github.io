@@ -77,14 +77,6 @@
     }
   ];
 
-<<<<<<< HEAD
-const InteractiveTechShowcase2035: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [activeDemo, setActiveDemo] = useState(0);
@@ -238,7 +230,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -248,7 +239,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
   const [isAnimating, setIsAnimating] = useState(false);
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
   const technologies = [
     {

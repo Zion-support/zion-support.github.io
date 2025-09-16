@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -68,16 +65,9 @@ export function AppHeader() {
     setIsDarkMode(!isDarkMode);
     // Here you would typically update the theme context
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AppHeader= () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AppHeader</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <>
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -264,7 +254,6 @@ const AppHeader= () => {
       {/* Spacer to prevent content from hiding behind fixed header */}
       <div className="h-16 lg:h-20"></div>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

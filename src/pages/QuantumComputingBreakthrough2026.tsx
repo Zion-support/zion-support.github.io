@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { Atom, Cpu, Zap, Infinity, Brain, Network } from 'lucide-react';
 
@@ -74,21 +71,8 @@ const QuantumComputingBreakthrough2026 = () => {
       impact: "Enable interstellar travel"
     }
   ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingBreakthrough2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingBreakthrough2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingBreakthrough2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -241,7 +225,6 @@ const QuantumComputingBreakthrough2026 = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </section>
 

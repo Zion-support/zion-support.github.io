@@ -2,12 +2,6 @@ import React from 'react';
 
 const RevolutionaryTestimonialsShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTestimonialsShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -124,7 +118,6 @@ const RevolutionaryTestimonialsShowcase: React.FC = () => {
             <button className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center">
               <Award className="w-5 h-5 mr-2" />
               View All Case Studies
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

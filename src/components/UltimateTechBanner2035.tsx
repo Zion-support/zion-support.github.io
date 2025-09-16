@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateTechBanner2035: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechBanner2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
       
       <div className="container mx-auto text-center relative z-10">
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -61,7 +51,6 @@ const UltimateTechBanner2035: React.FC = () => {
           <p>🚀 The future of technology starts here • 99.9% accuracy • Infinite possibilities • Revolutionary breakthroughs</p>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -76,4 +65,3 @@ export default UltimateTechBanner2035;
         <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-cyan-500/20 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-indigo-500/20 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const EdgeAIandIoT2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>EdgeAIandIoT2025 | Zion Tech Group</title>
-        <meta name="description" content="EdgeAIandIoT2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">EdgeAIandIoT2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -69,7 +51,6 @@ const EdgeAIandIoT2025= () => {
           <button className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Explore Edge AI
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
@@ -84,4 +65,3 @@ export default EdgeAIandIoT2025;
           <h1 className="text-5xl font-bold mb-6">EdgeAIandIoT2025</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
 export default EdgeAIandIoT2025;
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

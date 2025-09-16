@@ -3,20 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 const TechnologyShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>TechnologyShowcase2025 | Zion Tech Group</title>
-        <meta name="description" content="TechnologyShowcase2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">TechnologyShowcase2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
@@ -266,7 +252,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const whitepaper-builder: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">whitepaper-builder</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useMemo, useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
@@ -48,7 +38,6 @@ export default function WhitepaperBuilderPage() {
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>
         ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentShowcase2030: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2030</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
             </p>
             <ul className="text-violet-200 space-y-3 mb-8 text-base">
               <li>• Omniversal consciousness</li>
@@ -21,7 +11,6 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -92,4 +81,3 @@ export default RevolutionaryContentShowcase2030;
           <a href="/pages/RevolutionaryTech2030" className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-16 py-6 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
             🌟 Experience the Revolutionary Future →
           </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

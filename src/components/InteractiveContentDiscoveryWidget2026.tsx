@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveContentDiscoveryWidget2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentDiscoveryWidget2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useStateuseEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -190,7 +180,6 @@ export default function InteractiveContentDiscoveryWidget2026() {
             View All Solutions
             <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const AI2025RevolutionaryContentPromotionBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025RevolutionaryContentPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapBrainTrendingUpTargetUsersAwardStarGlobe
 
@@ -138,7 +129,6 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
                 className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Explore All Content
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

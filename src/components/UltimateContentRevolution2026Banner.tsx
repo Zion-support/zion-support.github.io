@@ -2,11 +2,6 @@ import React from 'react';
 
 const UltimateContentRevolution2026Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentRevolution2026Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
@@ -131,7 +126,6 @@ const UltimateContentRevolution2026Banner: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
         <div className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 animate-pulse"></div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

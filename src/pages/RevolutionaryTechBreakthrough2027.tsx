@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const RevolutionaryTechBreakthrough2027: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTechBreakthrough2027 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTechBreakthrough2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechBreakthrough2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -155,7 +137,6 @@ const RevolutionaryTechBreakthrough2027: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
@@ -328,4 +309,3 @@ export default RevolutionaryTechBreakthrough2027;
             <a href="/pages/UltimateTechRevolution2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
               🌟 Explore All Content
             </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

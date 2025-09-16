@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const 2025-advanced-services-showcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2025-advanced-services-showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import {
@@ -440,7 +430,6 @@ export default function AdvancedServicesShowcase() {
               >
                 <Phone className="w-5 h-5" />
                 Call Now
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

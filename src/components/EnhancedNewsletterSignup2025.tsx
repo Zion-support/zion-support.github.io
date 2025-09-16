@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const EnhancedNewsletterSignup2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedNewsletterSignup2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState } from 'react';
 
 const EnhancedNewsletterSignup2025: React.FC = () => {
@@ -136,7 +126,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -164,7 +153,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <h3 className="text-xl font-bold mb-2 text-purple-300">AI Consciousness Updates</h3>
               <p className="text-purple-100 text-sm">
                 Be the first to know about breakthroughs in artificial consciousness and self-aware AI systems.
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
           {/* Social Proof */}
           <div className="mt-12">

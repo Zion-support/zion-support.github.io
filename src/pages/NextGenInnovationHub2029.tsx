@@ -121,21 +121,6 @@
     }
   };
 
-<<<<<<< HEAD
-const NextGenInnovationHub2029: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenInnovationHub2029 | Zion Tech Group</title>
-        <meta name="description" content="NextGenInnovationHub2029 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenInnovationHub2029</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -173,7 +158,6 @@ const NextGenInnovationHub2029: React.FC = () => {
             </button>
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
@@ -183,7 +167,6 @@ const NextGenInnovationHub2029: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Discover, explore, and contribute to the most revolutionary technologies that will shape humanity's future
           </p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
 
         {/* Category Filter */}

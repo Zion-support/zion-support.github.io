@@ -2,11 +2,6 @@ import React from 'react';
 
 const EnhancedUI: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedUI</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <divbutton
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
       onClick={onClick}
@@ -135,14 +130,10 @@ export const EnhancedModal: React.FC<ModalProps> = ({
           </div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedUI;
-=======
 interface ProgressBarProps {
   progress: number;
   className?: string;
@@ -215,4 +206,3 @@ export default {
   EnhancedProgressBar,
   EnhancedTooltip
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const NewAIUseCases2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NewAIUseCases2025 | Zion Tech Group</title>
-        <meta name="description" content="NewAIUseCases2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NewAIUseCases2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -69,7 +51,6 @@ const NewAIUseCases2025= () => {
           <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Explore AI Use Cases
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -80,7 +61,6 @@ const NewAIUseCases2025= () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover innovative AI applications transforming industries
           </p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

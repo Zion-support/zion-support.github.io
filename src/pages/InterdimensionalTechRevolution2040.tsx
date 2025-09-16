@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const InterdimensionalTechRevolution2040: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>InterdimensionalTechRevolution2040 | Zion Tech Group</title>
-        <meta name="description" content="InterdimensionalTechRevolution2040 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">InterdimensionalTechRevolution2040</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
             </ul>
           </div>
         </div>
@@ -419,7 +401,6 @@ const InterdimensionalTechRevolution2040: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -435,7 +416,6 @@ const InterdimensionalTechRevolution2040: React.FC = () => {
             Break through the barriers of our dimension and access infinite realities, 
             resources, and possibilities across the multiverse
           </p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
 
         {/* Core Technology Grid */}

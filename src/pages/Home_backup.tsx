@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const Home_backup: React.FC = () => {
-=======
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
 
@@ -17,7 +14,6 @@ const Home: React.FC = () => {
     });
   }, [addNotification]);
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -25,12 +21,6 @@ const Home: React.FC = () => {
         <meta name="description" content="Home_backup - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Home_backup</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -224,15 +214,10 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default Home_backup;
-=======
 export default Home;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

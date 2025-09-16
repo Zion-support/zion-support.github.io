@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ComprehensiveServicesShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ComprehensiveServicesShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState } from 'react';
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
@@ -320,7 +310,6 @@ export default function ComprehensiveServicesShowcase() {
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

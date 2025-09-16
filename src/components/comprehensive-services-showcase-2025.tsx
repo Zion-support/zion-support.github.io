@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const comprehensive-services-showcase-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">comprehensive-services-showcase-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default comprehensive-services-showcase-2025;
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { 
@@ -465,4 +451,3 @@ export default function ComprehensiveServicesShowcase2025() {
                 View Pricing Plans
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

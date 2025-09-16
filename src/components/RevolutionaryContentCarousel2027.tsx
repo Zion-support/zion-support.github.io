@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentCarousel2027: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -400,11 +390,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           </Link>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
 export default RevolutionaryContentCarousel2027;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
