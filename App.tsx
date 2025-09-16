@@ -105,6 +105,9 @@ import InteractiveContentExplorer2027_2030 from './src/components/InteractiveCon
 // Import NEW REVOLUTIONARY CONTENT 2025-2026
 import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import RevolutionaryAIContent2025 from './src/pages/RevolutionaryAIContent2025';
+import QuantumBreakthroughShowcase2025 from './src/pages/QuantumBreakthroughShowcase2025';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -122,6 +125,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Content 2025-2026 Banner */}
                 <RevolutionaryContentBanner2025 />
+
+                {/* NEW: Interactive Content Showcase 2025 */}
+                <InteractiveContentShowcase2025 />
 
                 {/* NEW: 2025 Content Promotional Banner */}
                 <NewContentPromoBanner2025 />
@@ -298,6 +304,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AdvancedBiotechRevolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🧬 Biotech Revolution 2026
+                    </a>
+                    <a href="/pages/RevolutionaryAIContent2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 Revolutionary AI 2025
+                    </a>
+                    <a href="/pages/QuantumBreakthroughShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ Quantum Breakthroughs 2025
                     </a>
                   </div>
                 </div>
@@ -981,6 +993,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenSpaceTech2026" element={<NextGenSpaceTech2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
+          <Route path="/pages/RevolutionaryAIContent2025" element={<RevolutionaryAIContent2025 />} />
+          <Route path="/pages/QuantumBreakthroughShowcase2025" element={<QuantumBreakthroughShowcase2025 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
