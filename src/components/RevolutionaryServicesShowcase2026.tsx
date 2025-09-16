@@ -1,193 +1,225 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Clock, Users, CheckCircle, ExternalLink } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Smartphone, 
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp
+} from 'lucide-react';
 
-const RevolutionaryServicesShowcase2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  const categories = ['All', 'Consciousness AI', 'Space Technology', 'Holographic Technology', 'Biotech AI', 'Autonomous AI'];
-  
-  const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured);
-  const newServices = featuredServices.filter(service => 
-    service.category === 'Consciousness AI' || 
-    service.category === 'Space Technology' || 
-    service.category === 'Holographic Technology' || 
-    service.category === 'Biotech AI' || 
-    service.category === 'Autonomous AI'
-  );
+const RevolutionaryServicesShowcase2026 = () => {
+  const services = [
+    {
+      id: 1,
+      title: "Autonomous AI Agents",
+      description: "Deploy intelligent agents that work autonomously to optimize your business processes and drive innovation.",
+      icon: Brain,
+      features: ["24/7 Autonomous Operation", "Self-Learning Capabilities", "Multi-Task Processing", "Real-time Decision Making"],
+      category: "AI Innovation",
+      price: "Starting at $2,999/month",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Quantum-AI Computing",
+      description: "Harness the power of quantum computing combined with AI for unprecedented computational capabilities.",
+      icon: Zap,
+      features: ["Exponential Speed Increase", "Complex Problem Solving", "Quantum Machine Learning", "Secure Quantum Communication"],
+      category: "Quantum Technology",
+      price: "Custom Pricing",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Neural Interface Systems",
+      description: "Connect human consciousness directly with AI systems for seamless human-machine collaboration.",
+      icon: Cpu,
+      features: ["Thought-to-Computer Control", "Enhanced Cognitive Abilities", "Real-time Data Processing", "Secure Neural Networks"],
+      category: "Neural Technology",
+      price: "Starting at $4,999/month",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Edge AI Solutions",
+      description: "Bring artificial intelligence to the edge of your network for real-time, low-latency processing.",
+      icon: Smartphone,
+      features: ["Real-time Processing", "Offline Capabilities", "Privacy Protection", "Scalable Deployment"],
+      category: "Edge Computing",
+      price: "Starting at $1,999/month",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "AI-Powered Cybersecurity",
+      description: "Advanced AI systems that predict, detect, and neutralize cyber threats in real-time.",
+      icon: Shield,
+      features: ["Threat Prediction", "Real-time Response", "Zero-day Protection", "Continuous Learning"],
+      category: "Cybersecurity",
+      price: "Starting at $3,499/month",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Quantum Data Analytics",
+      description: "Process massive datasets with quantum-enhanced analytics for deeper insights and faster results.",
+      icon: Database,
+      features: ["Quantum Data Processing", "Advanced Pattern Recognition", "Predictive Analytics", "Real-time Insights"],
+      category: "Data Analytics",
+      price: "Starting at $2,499/month",
+      featured: false
+    }
+  ];
 
-  const filteredServices = selectedCategory === 'All' 
-    ? newServices 
-    : newServices.filter(service => service.category === selectedCategory);
+  const stats = [
+    { label: "Clients Served", value: "500+", icon: Globe },
+    { label: "Success Rate", value: "99.8%", icon: CheckCircle },
+    { label: "Cost Reduction", value: "85%", icon: TrendingUp },
+    { label: "Client Satisfaction", value: "4.9/5", icon: Star }
+  ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 mb-6">
-            <Star className="w-4 h-4 text-purple-600 mr-2" />
-            <span className="text-sm font-medium text-purple-800">Revolutionary 2026 Services</span>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200 mb-6">
+            <Star className="w-5 h-5 text-blue-600 mr-2" />
+            <span className="text-sm font-medium text-blue-800">REVOLUTIONARY SERVICES 2026</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Next-Generation AI Solutions
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Transform Your Business with
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Next-Gen AI</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our cutting-edge AI services that are transforming industries and creating 
-            unprecedented opportunities for businesses worldwide.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Our cutting-edge AI services are designed to revolutionize how you do business, 
+            providing unprecedented efficiency, intelligence, and competitive advantage.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* Services Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
-            >
-              {/* Service Image */}
-              <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                    <Star className="w-4 h-4 text-yellow-400" />
-                    <span className="text-white text-sm font-medium">{service.reviews.rating}</span>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                    <span className="text-white text-sm font-medium">AI Score: {service.aiScore}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">
-                    {service.category}
-                  </span>
-                  <div className="text-2xl font-bold text-gray-900">
-                    {service.currency}{service.price.toLocaleString()}
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-2">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <div className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={service.id}
+                className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 ${
+                  service.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+                }`}
+              >
+                {service.featured && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
+                      FEATURED
                     </div>
-                  ))}
-                </div>
-
-                {/* Service Stats */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {service.deliveryTime}
                   </div>
-                  <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-1" />
-                    {service.reviews.count} reviews
+                )}
+                
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
+                  
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {service.description}
+                  </p>
                 </div>
-
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-500">Flexible payment options available</div>
+                </div>
+                
+                <Link
+                  to="/contact"
+                  className="group/btn inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </motion.button>
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </Link>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            );
+          })}
+        </div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join hundreds of companies already using our revolutionary AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started Today
-                <ExternalLink className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Schedule Consultation
-              </motion.button>
-            </div>
+        {/* Call to Action */}
+        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of forward-thinking companies already using our revolutionary AI services 
+            to gain competitive advantage and drive unprecedented growth.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+            >
+              <span>Schedule Consultation</span>
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+            
+            <Link
+              to="/services"
+              className="group inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105"
+            >
+              <span>View All Services</span>
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
