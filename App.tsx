@@ -45,6 +45,10 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
@@ -268,6 +272,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 */}
+                <UltimateContentBanner2025 />
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
 
@@ -416,6 +426,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryCaseStudies2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📊 NEW: Revolutionary Case Studies 2026 →
+                    </a>
+                    <a href="/pages/RevolutionaryCaseStudies2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      📊 NEW: Revolutionary Case Studies 2025 →
                     </a>
                     <a href="/pages/UltimateTechBlog2026" className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📝 NEW: Ultimate Tech Blog 2026 →
@@ -1116,6 +1129,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />
           <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
