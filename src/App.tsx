@@ -15,7 +15,6 @@ import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution20
 import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
 import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
 import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
 import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
@@ -97,9 +96,6 @@ export default function App(): JSX.Element {
                     <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/AdvancedQuantumComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum 2026 →
-                      </a>
-                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural 2026 →
                       </a>
                       <a href="/pages/AdvancedAISystems2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 AI Systems 2026 →
@@ -445,7 +441,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
