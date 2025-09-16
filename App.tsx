@@ -212,6 +212,9 @@ import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
 import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
 import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -229,6 +232,9 @@ export default function App(): JSX.Element {
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
         <Header />
+        
+        {/* NEW: Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
         
         <Routes>
           <Route path="/" element={
@@ -553,6 +559,16 @@ export default function App(): JSX.Element {
                 {/* NEW: Enhanced Content Carousel 2025 */}
                 <div className="mb-12">
                   <EnhancedContentCarousel2025 />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
+                </div>
+
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
