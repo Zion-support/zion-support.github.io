@@ -3933,3 +3933,460 @@ src/pages/RevolutionaryTechShowcase2032.tsx
 [2025-09-16 10:51:39] 🔧 Resolving conflicts in src/pages/RevolutionaryTechShowcase2032.tsx for branch backup-main-20250916-080235...
 [2025-09-16 10:51:40] 🧩 Generic file: prefer main version
 [2025-09-16 10:51:40] ✅ Resolved conflicts in src/pages/RevolutionaryTechShowcase2032.tsx
+[2025-09-16 10:51:41] ✅ Successfully resolved conflicts and merged backup-main-20250916-080235
+[2025-09-16 10:51:41] ✅ Branch backup-main-20250916-080235 processed successfully
+[2025-09-16 10:51:41] 📊 Batch progress: 30 successful, 0 failed
+[2025-09-16 10:51:41] 📊 Overall progress: 30 successful, 0 failed, 915 conflicts resolved
+[2025-09-16 10:51:41] 📋 Processing branch 31: backup-main-20250916-090016
+[2025-09-16 10:51:41] 🔄 Attempting to merge backup-main-20250916-090016...
+[2025-09-16 10:52:05] ⚠️  Merge conflicts detected in backup-main-20250916-090016, resolving...
+[2025-09-16 10:52:06] 📋 Conflicted files: .temp_backup_components/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519
+.temp_backup_components/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519
+.temp_backup_components/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519
+App.tsx
+app/page.tsx
+components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758012860
+components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758019660
+components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758012860
+components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758019660
+components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758012860
+components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758019660
+components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758012861
+components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758019660
+components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758012861
+components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758019660
+components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758012861
+components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758019661
+components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758012861
+components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758019661
+components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758012861
+components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758019661
+components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758012861
+components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758019661
+components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758012861
+components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758019661
+components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758012861
+components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758019661
+components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758012861
+components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758019661
+components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758012862
+components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758019661
+components-disabled/components/products/index.tsx.backup.1757950602.backup.1758012862
+components-disabled/components/products/index.tsx.backup.1757950602.backup.1758019661
+components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758012862
+components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758019661
+components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758012862
+components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758019661
+components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758012862
+components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758019661
+components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758012862
+components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758019661
+components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758012862
+components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758019661
+components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758012862
+components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758019661
+components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758012862
+components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758019661
+components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758012862
+components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758019661
+components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758012862
+components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758019661
+components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758012862
+components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758019661
+components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758012862
+components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758012862
+components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758012862
+components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758012863
+components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758012863
+components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758012863
+components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758019661
+components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758012863
+components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758019661
+components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758012863
+components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758019661
+components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758012863
+components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758019662
+components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758012863
+components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758019662
+components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758012863
+components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758019662
+components/admin/ModerationModal.tsx.backup.1757950583
+components/apps/api/src/openai.ts.backup.1757950589
+components/auth/callback.tsx.backup.1757950590
+components/auth/forgot-password.tsx.backup.1757950590
+components/auth/index.tsx.backup.1757950590
+components/auth/reset-password.tsx.backup.1757950590
+components/auth/verify.tsx.backup.1757950590
+components/broken/Homepage2025.tsx.backup.1757950593
+components/broken/PerformanceMonitor.tsx.backup.1757950593
+components/governance/privacy.tsx.backup.1757950599
+components/grants/apply.tsx.backup.1757950599
+components/grants/index.tsx.backup.1757950600
+components/learn/FilterBar.tsx.backup.1757950601
+components/products/index.tsx.backup.1757950602
+components/reviews/ReviewForm.tsx.backup.1757950676
+components/reviews/ReviewSummary.tsx.backup.1757950676
+components/reviews/StarRating.tsx.backup.1757950677
+components/reviews/index.ts.backup.1757950677
+components/services/[slug].tsx.backup.1757950677
+components/services/ai-model-development-chat.tsx.backup.1757950678
+components/services/api-development-chat.tsx.backup.1757950678
+components/services/business-intelligence-chat.tsx.backup.1757950678
+components/services/cloud-migration-services-chat.tsx.backup.1757950678
+components/services/data-pipeline-engineering-chat.tsx.backup.1757950678
+components/services/database-design-chat.tsx.backup.1757950679
+components/services/instagram-content-scheduler.tsx.backup.1757950679
+components/services/mobile-app-development-chat.tsx.backup.1757950679
+components/services/network-security-chat.tsx.backup.1757950679
+components/services/performance-optimization-chat.tsx.backup.1757950679
+components/services/quality-assurance-testing-chat.tsx.backup.1757950679
+components/services/security-auditing-chat.tsx.backup.1757950680
+components/services/system-administration-chat.tsx.backup.1757950680
+components/services/technical-documentation-chat.tsx.backup.1757950680
+components/services/ui-ux-design-chat.tsx.backup.1757950680
+components/services/web-application-development-chat.tsx.backup.1757950680
+data/whatsNew.ts
+dist/index.html
+package-lock.json
+pages/blog/index.tsx
+src/App.tsx
+src/App.tsx.backup.1758012948
+src/components/InteractiveTechShowcase2025.tsx
+src/components/NewContentPromoBanner.tsx
+src/components/RevolutionaryContentBanner2025.tsx
+src/components/RevolutionaryContentBanner2026.tsx
+src/components/RevolutionaryContentShowcase2026.tsx
+src/data/blog-posts.js
+src/pages/AIConsciousnessRevolution2025.tsx
+src/pages/Blog.tsx
+src/pages/Contact.tsx
+src/pages/Home.tsx
+src/pages/NeuralInterfaceRevolution2025.tsx
+src/pages/QuantumComputingBreakthrough2025.tsx
+src/pages/RevolutionaryTechShowcase2032.tsx
+src/pages/RevolutionaryTechShowcase2042.tsx
+src/pages/UltimateTechBreakthrough2032.tsx
+sync-health-redundancy-report.md
+temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758012961
+temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758019749
+temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758012962
+temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758019750
+temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758012962
+temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758019750
+zion-os/src/app/blog/[id]/page.tsx
+zion-website/src/app/page.tsx
+zion-website/src/data/updates.ts
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in App.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in App.tsx
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in app/page.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in app/page.tsx
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758012860 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758012860
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758019660 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in components-disabled/components/admin/ModerationModal.tsx.backup.1757950583.backup.1758019660
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758012860 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758012860
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758019660 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:06] ✅ Resolved conflicts in components-disabled/components/apps/api/src/openai.ts.backup.1757950589.backup.1758019660
+[2025-09-16 10:52:06] 🔧 Resolving conflicts in components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758012860 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:06] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758012860
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758019660 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/callback.tsx.backup.1757950590.backup.1758019660
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758012861
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758019660 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/forgot-password.tsx.backup.1757950590.backup.1758019660
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758012861
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758019660 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/index.tsx.backup.1757950590.backup.1758019660
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758012861
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/reset-password.tsx.backup.1757950590.backup.1758019661
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:07] ✅ Resolved conflicts in components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758012861
+[2025-09-16 10:52:07] 🔧 Resolving conflicts in components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:07] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/auth/verify.tsx.backup.1757950590.backup.1758019661
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758012861
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/broken/Homepage2025.tsx.backup.1757950593.backup.1758019661
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758012861
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/broken/PerformanceMonitor.tsx.backup.1757950593.backup.1758019661
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758012861
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/governance/privacy.tsx.backup.1757950599.backup.1758019661
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:08] ✅ Resolved conflicts in components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758012861
+[2025-09-16 10:52:08] 🔧 Resolving conflicts in components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:08] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/grants/apply.tsx.backup.1757950599.backup.1758019661
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758012861 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758012861
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/grants/index.tsx.backup.1757950600.backup.1758019661
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758012862
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/learn/FilterBar.tsx.backup.1757950601.backup.1758019661
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/products/index.tsx.backup.1757950602.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/products/index.tsx.backup.1757950602.backup.1758012862
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/products/index.tsx.backup.1757950602.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/products/index.tsx.backup.1757950602.backup.1758019661
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758012862
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/reviews/ReviewForm.tsx.backup.1757950676.backup.1758019661
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:09] ✅ Resolved conflicts in components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758012862
+[2025-09-16 10:52:09] 🔧 Resolving conflicts in components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:09] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/reviews/ReviewSummary.tsx.backup.1757950676.backup.1758019661
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758012862
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/reviews/StarRating.tsx.backup.1757950677.backup.1758019661
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758012862
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/reviews/index.ts.backup.1757950677.backup.1758019661
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758012862
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/services/[slug].tsx.backup.1757950677.backup.1758019661
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:10] ✅ Resolved conflicts in components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758012862
+[2025-09-16 10:52:10] 🔧 Resolving conflicts in components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:10] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/ai-model-development-chat.tsx.backup.1757950678.backup.1758019661
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758012862
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/api-development-chat.tsx.backup.1757950678.backup.1758019661
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758012862
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/business-intelligence-chat.tsx.backup.1757950678.backup.1758019661
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758012862
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/cloud-migration-services-chat.tsx.backup.1757950678.backup.1758019661
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758012862
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/data-pipeline-engineering-chat.tsx.backup.1757950678.backup.1758019661
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:11] ✅ Resolved conflicts in components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758012862
+[2025-09-16 10:52:11] 🔧 Resolving conflicts in components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:11] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/database-design-chat.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758012862
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/instagram-content-scheduler.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758012862 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758012862
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/mobile-app-development-chat.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758012863
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/network-security-chat.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758012863
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/performance-optimization-chat.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:12] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:12] ✅ Resolved conflicts in components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758012863
+[2025-09-16 10:52:12] 🔧 Resolving conflicts in components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/quality-assurance-testing-chat.tsx.backup.1757950679.backup.1758019661
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758012863
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/security-auditing-chat.tsx.backup.1757950680.backup.1758019661
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758012863
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758019661 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/system-administration-chat.tsx.backup.1757950680.backup.1758019661
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758012863
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758019662 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/technical-documentation-chat.tsx.backup.1757950680.backup.1758019662
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:13] ✅ Resolved conflicts in components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758012863
+[2025-09-16 10:52:13] 🔧 Resolving conflicts in components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758019662 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:13] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in components-disabled/components/services/ui-ux-design-chat.tsx.backup.1757950680.backup.1758019662
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758012863 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758012863
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758019662 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in components-disabled/components/services/web-application-development-chat.tsx.backup.1757950680.backup.1758019662
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in data/whatsNew.ts for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in data/whatsNew.ts
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in dist/index.html for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in dist/index.html
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 📦 Package file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in package-lock.json
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in pages/blog/index.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:14] ✅ Resolved conflicts in pages/blog/index.tsx
+[2025-09-16 10:52:14] 🔧 Resolving conflicts in src/App.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:14] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/App.tsx
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/App.tsx.backup.1758012948 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/App.tsx.backup.1758012948
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/components/InteractiveTechShowcase2025.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/components/InteractiveTechShowcase2025.tsx
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/components/NewContentPromoBanner.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/components/NewContentPromoBanner.tsx
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/components/RevolutionaryContentBanner2025.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/components/RevolutionaryContentBanner2025.tsx
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/components/RevolutionaryContentBanner2026.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:15] ✅ Resolved conflicts in src/components/RevolutionaryContentBanner2026.tsx
+[2025-09-16 10:52:15] 🔧 Resolving conflicts in src/components/RevolutionaryContentShowcase2026.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:15] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/components/RevolutionaryContentShowcase2026.tsx
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/data/blog-posts.js for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/data/blog-posts.js
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/pages/AIConsciousnessRevolution2025.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/pages/AIConsciousnessRevolution2025.tsx
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/pages/Blog.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/pages/Blog.tsx
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/pages/Contact.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/pages/Contact.tsx
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/pages/Home.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:16] ✅ Resolved conflicts in src/pages/Home.tsx
+[2025-09-16 10:52:16] 🔧 Resolving conflicts in src/pages/NeuralInterfaceRevolution2025.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:16] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in src/pages/NeuralInterfaceRevolution2025.tsx
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in src/pages/QuantumComputingBreakthrough2025.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in src/pages/QuantumComputingBreakthrough2025.tsx
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in src/pages/RevolutionaryTechShowcase2032.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in src/pages/RevolutionaryTechShowcase2032.tsx
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in src/pages/RevolutionaryTechShowcase2042.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in src/pages/RevolutionaryTechShowcase2042.tsx
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in src/pages/UltimateTechBreakthrough2032.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in src/pages/UltimateTechBreakthrough2032.tsx
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in sync-health-redundancy-report.md for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 📝 Markdown: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in sync-health-redundancy-report.md
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758012961 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:17] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758012961
+[2025-09-16 10:52:17] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758019749 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:17] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-compliance-monitor.tsx.backup.1757950519.backup.1758019749
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758012962 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758012962
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758019750 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-finops-optimizer.tsx.backup.1757950519.backup.1758019750
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758012962 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758012962
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758019750 for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in temp_exclude/pages.disabled_full/services/micro-saas/ai-marketing-studio.tsx.backup.1757950519.backup.1758019750
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in zion-os/src/app/blog/[id]/page.tsx
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in zion-website/src/app/page.tsx for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:18] ✅ Resolved conflicts in zion-website/src/app/page.tsx
+[2025-09-16 10:52:18] 🔧 Resolving conflicts in zion-website/src/data/updates.ts for branch backup-main-20250916-090016...
+[2025-09-16 10:52:18] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:19] ✅ Resolved conflicts in zion-website/src/data/updates.ts
