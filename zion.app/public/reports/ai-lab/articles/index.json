@@ -1,5 +1,19 @@
 [
   {
+    "title": "Agent Guardrails for Synthetic Data: Patterns for Safe Generation",
+    "url": "/reports/ai-lab/articles/new-agent-guardrails-for-synthetic-data-1758139800000.md",
+    "createdAt": "2025-09-17T03:30:00.000Z",
+    "tags": ["guardrails", "data", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Real-Time Agent SLO Blueprints: Latency, Quality, Cost",
+    "url": "/reports/ai-lab/articles/real-time-agent-slo-blueprints-1758141600000.md",
+    "createdAt": "2025-09-17T04:00:00.000Z",
+    "tags": ["slo", "reliability", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Runtime Policy Enforcement for Production Agents",
     "url": "/reports/ai-lab/articles/new-agent-runtime-policy-enforcement-1758138000000.md",
     "createdAt": "2025-09-17T02:40:00.000Z",

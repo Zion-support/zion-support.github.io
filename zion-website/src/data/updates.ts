@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Fresh AI Lab content (2025-09-17)
+    {
+        title: 'Field Guide: Real-Time Agent SLO Blueprints',
+        summary: 'Define and enforce latency, quality, and cost SLOs with eval gates and evidence.',
+        href: '/reports/ai-lab/articles/real-time-agent-slo-blueprints-1758141600000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
+    {
+        title: 'Guide: Agent Guardrails for Synthetic Data',
+        summary: 'Safe generation patterns using policy-as-code, dual eval gates, and evidence.',
+        href: '/reports/ai-lab/articles/new-agent-guardrails-for-synthetic-data-1758139800000.md',
+        date: '2025-09-17',
+        tag: 'Guide',
+    },
     // Fresh blog content (2025-09-16)
     {
         title: 'Guide: Zero‑Downtime Agent Rollouts (2026)',
