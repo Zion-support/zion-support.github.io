@@ -46,6 +46,12 @@ import RevolutionaryContentBanner2025 from './src/components/RevolutionaryConten
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTracker2025';
+import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility2025';
+import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
+import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -239,6 +245,11 @@ export default function App(): JSX.Element {
         <EnhancedAccessibilityPanel />
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
+        <AdvancedPerformanceOptimizer2025 />
+        <AdvancedSEOOptimizer2025 />
+        <AdvancedAnalyticsTracker2025 />
+        <EnhancedAccessibility2025 />
+        <MobileOptimizer2025 />
         <Header />
         
         <Routes>
@@ -1143,6 +1154,7 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
+          <Route path="/improvements" element={<ComprehensiveImprovements2025 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
