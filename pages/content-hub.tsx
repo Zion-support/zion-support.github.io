@@ -19,6 +19,17 @@ const ContentHub: React.FC = () => {
 
   const featuredContent = [
     {
+      id: 10,
+      title: 'Enterprise Automation Strategy 2025',
+      excerpt: 'Practical governance and platform patterns to scale AI automation safely.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '8 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
       id: 1,
       title: 'The Future of AI in Business Automation',
       excerpt: 'Discover how artificial intelligence is revolutionizing business processes and what it means for your organization.',
@@ -54,6 +65,16 @@ const ContentHub: React.FC = () => {
   ];
 
   const recentContent = [
+    {
+      id: 11,
+      title: 'Enterprise Automation Strategy 2025',
+      excerpt: 'Proven playbooks to scale AI automation with guardrails and SLOs.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '8 min read',
+      image: '/api/placeholder/300/200',
+    },
     {
       id: 4,
       title: 'Top 10 Security Best Practices for 2025',
