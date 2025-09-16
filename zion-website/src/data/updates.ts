@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Launch: Autonomous Incident Response Copilot v1.0',
+        summary: 'Real-time triage, evidence bundling, and guided remediation for AI systems.',
+        href: '/updates/autonomous-incident-response-copilot-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Enterprise Retrieval Guardrails (2026)',
+        summary: 'Grounded generation with constraints, eval gates, and policy-as-code checks.',
+        href: '/updates/enterprise-retrieval-guardrails-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
         summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
         href: '/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive',
