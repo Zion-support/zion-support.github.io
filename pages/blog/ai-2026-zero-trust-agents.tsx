@@ -1,4 +1,35 @@
 import Head from 'next/head'
+
+export default function ZeroTrustAgents2026() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <Head>
+        <title>Zero‑Trust Agents (2026) | Zion Tech Group</title>
+        <meta name="description" content="Risk‑tiered tools, scoped credentials, and just‑in‑time approvals for safe autonomy." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-zero-trust-agents" />
+      </Head>
+
+      <article className="prose prose-invert max-w-3xl mx-auto">
+        <h1>Zero‑Trust Agents (2026)</h1>
+        <p>
+          Apply zero‑trust principles to agentic systems: minimize blast radius, scope credentials, and
+          enforce approvals with policy and telemetry.
+        </p>
+
+        <h2>Controls</h2>
+        <ul>
+          <li>Risk tiers and permissions by tool</li>
+          <li>Short‑lived, scoped credentials and vault integration</li>
+          <li>Runtime approvals with evidence capture</li>
+        </ul>
+
+        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
+      </article>
+    </div>
+  )
+}
+
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function ZeroTrustAgents2026() {
