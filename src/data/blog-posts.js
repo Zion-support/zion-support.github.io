@@ -45,6 +45,36 @@ export const blogPosts = [
     slug: "exec-dashboards-evidence-hubs"
   },
   {
+    id: 6004,
+    title: "AI 2026: Reliable Autonomy Operations",
+    excerpt: "Evaluation gates, runtime guardrails, and evidence-led operations for safe scale.",
+    content: "Run autonomy reliably at enterprise scale with lifecycle evaluation gates, runtime guardrails, and evidence-led operations. This guide covers defining SLOs for agent systems, wiring scorecards to releases, implementing rollback contracts, and centralizing evidence for audit-ready ops.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Reliability", "Guardrails", "Evals", "Operations"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-reliable-autonomy-operations.jpg",
+    slug: "ai-2026-reliable-autonomy-operations"
+  },
+  {
+    id: 6005,
+    title: "AI 2026: Agentic Billing Controls",
+    excerpt: "Keep costs predictable with budgets, approvals, and cost-aware routing for agents.",
+    content: "Design agentic billing controls that make spend predictable: per-tenant budgets, approvals for high-risk actions, cost-aware model routing, and automated kill-switches. Includes reference dashboards and policy bundles you can adapt today.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["FinOps", "Budgets", "Approvals", "Routing"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-agentic-billing-controls.jpg",
+    slug: "ai-2026-agentic-billing-controls"
+  },
+  {
     id: 5001,
     title: "AI 2026: Release Scorecards That Prevent Bad Deploys",
     excerpt: "Scorecards that gate merges and rollouts using online evals, cost, and safety.",
@@ -58,6 +88,21 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/ai-2026-release-scorecards.jpg",
     slug: "ai-2026-release-scorecards"
+  },
+  {
+    id: 5003,
+    title: "AI 2026: Agentic Observability Deep Dive",
+    excerpt: "Traces, evals, incidents, and KPIs for reliable autonomous systems.",
+    content: "Deep dive on instrumenting agent systems for production. We cover end-to-end tracing, critical online evals (groundedness, override, violations), incident telemetry, and KPIs wired to release scorecards. Learn dashboards, alerts, and evidence bundles to support safe change and audits.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Observability",
+    tags: ["Observability", "Evals", "Tracing", "Incidents"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-observability-deep-dive-2026.jpg",
+    slug: "ai-2026-agentic-observability-deep-dive"
   },
   {
     id: 5002,

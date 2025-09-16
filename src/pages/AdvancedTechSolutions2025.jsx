@@ -2,7 +2,6 @@ import React from "react";
 
 const AdvancedTechSolutions2025 = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -46,24 +45,9 @@ const AdvancedTechSolutions2025 = () => {
             </ul>
           </div>
         </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Advanced Tech Solutions 2025
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Cutting-edge technology solutions for the future
-          </p>
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedTechSolutions2025;
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
