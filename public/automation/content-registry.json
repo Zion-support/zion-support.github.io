@@ -89,6 +89,48 @@
   ],
   "items": [
     {
+      "title": "Guide — Production Eval Gates: A Zero‑to‑One Starter",
+      "href": "/reports/guides/guide-2025-09-prod-eval-gates-zero-to-one",
+      "desc": "Practical steps to add preflight, canary, and post‑release evaluation gates",
+      "createdAt": "2025-09-16T19:05:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 44% Incident Containment With Guarded Autonomy",
+      "href": "/reports/cases/case-2025-09-guarded-autonomy-containment",
+      "desc": "How policy‑gated actions reduced incident blast radius across 3 teams",
+      "createdAt": "2025-09-16T19:03:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Cost‑Aware Model Routing Patterns",
+      "href": "/reports/briefs/brief-2025-09-cost-aware-routing-patterns",
+      "desc": "Budget and latency sensitive routing with graceful fallbacks",
+      "createdAt": "2025-09-16T19:02:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (v3)",
+      "href": "/reports/blueprints/blueprint-2025-09-agent-ops-control-plane-v3",
+      "desc": "Reference architecture for approvals, rollback, and observability at scale",
+      "createdAt": "2025-09-16T19:01:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Responsible Autonomy: From Policy to Runtime Controls",
+      "href": "/blog/ai-2026-responsible-autonomy-runtime-controls",
+      "desc": "Turning governance policies into live safeguards with evidence",
+      "createdAt": "2025-09-16T19:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Launch Notes — September 2025 Highlights",
+      "href": "/reports/updates/update-2025-09-16-highlights",
+      "desc": "What shipped this month: new content surfaces and reliability upgrades",
+      "createdAt": "2025-09-16T18:59:00.000Z",
+      "source": "release-notes"
+    },
+    {
       "title": "Guide — Shipping Eval-Gated Agents (2026)",
       "href": "/reports/guides/guide-2026-eval-gated-agents",
       "desc": "End-to-end playbook for preflight, canary, and post-release gates",
