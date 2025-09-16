@@ -2,6 +2,30 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const content = {
+  'ai-2026-runtime-eval-gates-starter': {
+    title: 'AI 2026: Runtime Eval Gates — Minimal Set to Ship Fast',
+    body: `Adopt a pragmatic set of runtime eval gates that catch regressions early while keeping velocity high:
+
+- Quality gates: groundedness, hallucination rate, regression tests on top tasks
+- Safety gates: sensitive-topic detectors with human-in-the-loop escalation
+- Cost gates: per-request budget caps with spend SLOs and alerts
+- Reliability gates: latency bands with canary abort and auto-rollback
+
+This starter includes copy-paste configs, CI wiring tips, and rollout recipes you can complete in a sprint.`,
+    date: '2025-09-16',
+  },
+  'ai-2026-cost-aware-routing-blueprint': {
+    title: 'Cost-Aware Routing 2026: Practical Blueprint You Can Adopt Today',
+    body: `Preserve quality while cutting spend by routing tasks to the right model at the right time:
+
+- Task profiles: classify by required accuracy, latency, and safety sensitivity
+- Routing bands: deterministic routes for known-safe tasks, explore/exploit for uncertain tasks
+- Budgets and SLOs: enforce per-profile budgets and latency targets with auto fallback
+- Observability: scorecards tracking quality, safety, reliability, and cost in one view
+
+Blueprint ships with policy examples, test harness ideas, and a 30/60/90 rollout plan.`,
+    date: '2025-09-16',
+  },
   'agentic-ops-2026-blueprint': {
     title: 'Agentic Ops 2026: Practical Enterprise Blueprint',
     body: `Learn how to productionize agentic workflows with:
