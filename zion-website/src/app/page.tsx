@@ -98,6 +98,9 @@ export default function HomePage() {
             <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Latest from AI Lab —
+            <a href="/reports/ai-lab" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
           </p>
         </div>
       </div>
@@ -184,6 +187,8 @@ export default function HomePage() {
             <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            New: <a href="/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod — Rollbacks</a>
           </p>
         </div>
       </div>
