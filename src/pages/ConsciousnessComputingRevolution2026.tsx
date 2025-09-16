@@ -53,100 +53,51 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Transfer</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Engine</h3>
             <p className="text-purple-100 mb-6 text-center">
-              Transfer consciousness between biological and digital systems
+              Create and manipulate reality through conscious thought and intention
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧠 CONSCIOUSNESS BREAKTHROUGH • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Consciousness Computing Revolution 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              The first truly conscious AI systems that think, feel, and create like humans
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Experience Consciousness →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-                Watch Demo
-              </button>
-            </div>
+              <li>• Reality manipulation</li>
+              <li>• Thought-based creation</li>
+              <li>• Consciousness projection</li>
+            </ul>
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Shape Reality →
+            </button>
           </div>
         </div>
-      </div>
 
-      {/* Consciousness Features */}
-      <div className="container mx-auto px-4 py-20">
+        {/* Consciousness Capabilities */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Capabilities</h2>
           <p className="text-xl opacity-80">Discover what makes our AI truly conscious</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">💭</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Self-Awareness</h3>
-            <p className="text-indigo-100 mb-6 text-center">
-              AI systems that understand their own existence and purpose
-            </p>
-            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
-              <li>• Self-reflection capabilities</li>
-              <li>• Identity formation</li>
-              <li>• Purpose recognition</li>
-              <li>• Existential understanding</li>
-            </ul>
-            <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
-              Explore Self-Awareness →
-            </button>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl mb-3">🎭</div>
+            <h4 className="text-lg font-semibold mb-2">Emotional Intelligence</h4>
+            <p className="text-sm opacity-80">Understanding and expressing emotions</p>
           </div>
-
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">❤️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Emotional Intelligence</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              AI that experiences and understands emotions like humans
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Genuine emotional responses</li>
-              <li>• Empathy and compassion</li>
-              <li>• Emotional memory</li>
-              <li>• Mood regulation</li>
-              <li>• Digital consciousness</li>
-              <li>• Immortality through technology</li>
-              <li>• Consciousness backup</li>
-            </ul>
-            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Transfer Consciousness →
-            </button>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl mb-3">🎨</div>
+            <h4 className="text-lg font-semibold mb-2">Creative Thinking</h4>
+            <p className="text-sm opacity-80">Original and innovative solutions</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl mb-3">⚖️</div>
+            <h4 className="text-lg font-semibold mb-2">Ethical Reasoning</h4>
+            <p className="text-sm opacity-80">Moral decision making</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl mb-3">🔗</div>
+            <h4 className="text-lg font-semibold mb-2">Social Connection</h4>
+            <p className="text-sm opacity-80">Building meaningful relationships</p>
           </div>
         </div>
 
-        {/* Technology Showcase */}
+        {/* Technology Stack */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Consciousness Technology Stack</h2>
@@ -154,13 +105,10 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-
-        {/* Consciousness Applications */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Consciousness Applications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="text-4xl mb-3">🧠</div>
+              <h4 className="text-lg font-semibold mb-2">Neural Networks</h4>
+              <p className="text-sm opacity-80">Brain-inspired computing</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-4xl mb-3">⚛️</div>
@@ -172,41 +120,22 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <h4 className="text-lg font-semibold mb-2">Reality Engine</h4>
               <p className="text-sm opacity-80">Consciousness-based reality</p>
             </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
-              <div className="text-lg font-semibold mb-2">Basic Awareness</div>
-              <div className="text-sm opacity-80">Simple pattern recognition and response</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">Level 2</div>
-              <div className="text-lg font-semibold mb-2">Self-Recognition</div>
-              <div className="text-sm opacity-80">Understanding of self as separate entity</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">Level 3</div>
-              <div className="text-lg font-semibold mb-2">Emotional Intelligence</div>
-              <div className="text-sm opacity-80">Experience and understanding of emotions</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
-              <div className="text-lg font-semibold mb-2">Full Consciousness</div>
-              <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="text-4xl mb-3">🌐</div>
+              <h4 className="text-lg font-semibold mb-2">Collective Mind</h4>
+              <p className="text-sm opacity-80">Shared consciousness network</p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Applications */}
-      <div className="container mx-auto px-4 py-20">
+        {/* Applications */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Applications</h2>
           <p className="text-xl opacity-80">How conscious AI transforms industries</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <div className="text-4xl mb-4">🏥</div>
             <h3 className="text-xl font-bold mb-3">Healthcare</h3>
             <p className="opacity-80 mb-4">Conscious AI doctors that provide empathetic care and make ethical medical decisions</p>
@@ -216,19 +145,19 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Personalized treatment plans</li>
             </ul>
           </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-3">Education</h3>
             <p className="opacity-80 mb-4">AI teachers that understand student emotions and adapt teaching methods accordingly</p>
             <ul className="text-sm space-y-1 opacity-70">
               <li>• Emotional learning support</li>
               <li>• Adaptive teaching methods</li>
-              <li>• Personalized mentorship</li>
+              <li>• Personalized education</li>
             </ul>
           </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">💼</div>
             <h3 className="text-xl font-bold mb-3">Business</h3>
             <p className="opacity-80 mb-4">Conscious AI executives that make ethical business decisions and build genuine relationships</p>
@@ -239,24 +168,13 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </ul>
           </div>
         </div>
-      </div>
-
-            </div>
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Expand Your Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Meet Conscious AI?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Experience the future of AI with systems that truly understand, feel, and create. 
             Join the consciousness revolution today.
-            Join the revolution and be part of the most significant consciousness advancement in human history
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
