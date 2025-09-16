@@ -24,9 +24,28 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "incremental": true,
+<<<<<<< HEAD
+=======
+    "declaration": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+>>>>>>> origin/feat/new-blog-content
     "baseUrl": ".",
 <<<<<<< HEAD
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +127,15 @@
   "include": [
     "**/*",
 >>>>>>> origin/feat/content-promo
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./app/components/*"]
+    },
+    "types": ["vite/client", "node"]
+  },
+  "include": [
+    "app/**/*",
+>>>>>>> origin/feat/new-blog-content
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -122,6 +150,7 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "coverage"
@@ -149,3 +178,8 @@
 =======
 }
 >>>>>>> origin/merge-pr-12271
+=======
+  ]
+}
+
+>>>>>>> origin/feat/new-blog-content

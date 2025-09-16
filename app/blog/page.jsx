@@ -11,6 +11,7 @@ const BlogPage = () => {
     {
 <<<<<<< HEAD:app/blog/page.jsx
 <<<<<<< HEAD:app/blog/page.jsx
+<<<<<<< HEAD:app/blog/page.jsx
       title: "AI 2026: Agent Risk Maturity Matrix",
       description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
       slug: "ai-2026-agent-risk-maturity-matrix",
@@ -28,6 +29,15 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
+=======
+      title: "AI 2025: Multimodal AI Agents – Practical Enterprise Guide",
+      description: "A hands-on 2025 playbook to design, deploy, and govern multimodal AI agents that drive measurable outcomes.",
+      slug: "ai-2025-multimodal-agents-practical-guide",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/multimodal-agents-2025.jpg"
+>>>>>>> origin/feat/new-blog-content:app/blog/page.tsx
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
