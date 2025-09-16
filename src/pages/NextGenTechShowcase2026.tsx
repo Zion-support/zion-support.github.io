@@ -1,48 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Lock, 
-  Target,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Play,
-  Award,
-  Gauge,
-  Sparkles,
-  Atom,
-  CircuitBoard,
-  CpuChip,
-  Layers,
-  Lightbulb,
-  Puzzle,
-  Activity,
-  Waves,
-  Hexagon,
-  Network,
-  Eye,
-  Heart,
-  Infinity,
-  Zap as Lightning,
-  Cpu as Processor,
-  Database as Data,
-  Globe as World
-} from 'lucide-react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-d7eb
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);

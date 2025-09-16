@@ -4,30 +4,11 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-=======
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             <div className="flex items-center space-x-2 mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
-<<<<<<< HEAD
-            <p className="text-gray-400">
-              Leading the future of technology with AI, quantum computing, and innovative solutions.
-=======
-            <p className="text-gray-400 mb-4 max-w-md">
-              Leading the future of technology with AI, blockchain, and innovative solutions that transform industries.
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -53,112 +34,11 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/pages/InnovationLanding2025" className="hover:text-white transition-colors">AI Solutions</a></li>
-              <li><a href="/pages/QuantumComputingSolutions2025" className="hover:text-white transition-colors">Quantum Computing</a></li>
-              <li><a href="/pages/CybersecurityFortress2025" className="hover:text-white transition-colors">Cybersecurity</a></li>
-              <li><a href="/pages/ComprehensiveServices2025" className="hover:text-white transition-colors">All Services</a></li>
-=======
-            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
-              Solutions
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="/pages/AdvancedAISystems2026" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Advanced AI Systems
-                </a>
-              </li>
-              <li>
-                <a href="/pages/SpaceTechAI2025" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Space Technology
-                </a>
-              </li>
-              <li>
-                <a href="/pages/BiotechAIRevolution2025" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Biotech Revolution
-                </a>
-              </li>
-              <li>
-                <a href="/pages/QuantumComputingRevolution2026" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Quantum Computing
-                </a>
-              </li>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </ul>
           </div>
 
           {/* Company */}
           <div>
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold mb-4">Innovations</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/pages/SyntheticIntelligence2026" className="hover:text-white transition-colors">Synthetic Intelligence</a></li>
-              <li><a href="/pages/NeuralInterfaceRevolution2025" className="hover:text-white transition-colors">Neural Interfaces</a></li>
-              <li><a href="/pages/NextGenTechShowcase2025" className="hover:text-white transition-colors">Next-Gen Tech</a></li>
-              <li><a href="/pages/RevolutionaryTechBlog2026" className="hover:text-white transition-colors">Tech Blog</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>contact@ziontechgroup.com</li>
-              <li>+1-555-123-4567</li>
-              <li>San Francisco, CA</li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-=======
-            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="/careers" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
         </div>
       </div>
     </footer>
