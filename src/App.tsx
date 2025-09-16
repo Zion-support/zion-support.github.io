@@ -85,6 +85,7 @@ import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
 import NewAIResearchBreakthrough2026 from './pages/NewAIResearchBreakthrough2026';
 import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 
 const App: React.FC = () => {
   return (
@@ -139,6 +140,16 @@ const App: React.FC = () => {
               {/* NEW: Trending Content Section */}
               <div className="mb-12">
                 <TrendingContentSection />
+              </div>
+
+              {/* NEW: Content Promotion Banner 2026 */}
+              <div className="mb-12 px-4">
+                <NewContentPromotionBanner2026 />
+              </div>
+
+              {/* NEW: Services Showcase 2026 */}
+              <div className="mb-12">
+                <NewServicesShowcase2026 />
               </div>
 
               {/* Revolutionary Content Showcase 2026 */}
