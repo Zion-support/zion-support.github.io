@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import Header from '../Header';
+import Footer from '../Footer';
+>>>>>>> cursor/create-and-deploy-new-content-de2c
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
@@ -204,6 +209,7 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* CTA Section */}
@@ -224,6 +230,11 @@ const UltimateTechRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/create-and-deploy-new-content-de2c
     </div>
   );
 };
