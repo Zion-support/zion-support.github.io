@@ -97,6 +97,10 @@ import OmniversalAIConsciousness2035 from './src/pages/OmniversalAIConsciousness
 import RevolutionaryTechBlog2027 from './src/pages/RevolutionaryTechBlog2027';
 import RevolutionaryTechBreakthrough2030 from './src/pages/RevolutionaryTechBreakthrough2030';
 import UltimateAIConsciousness2032 from './src/pages/UltimateAIConsciousness2032';
+import ContentAdvertisingBanner from './src/components/ContentAdvertisingBanner';
+import UltimateServicesShowcase2025 from './src/pages/UltimateServicesShowcase2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import SEOOptimizer2025 from './src/components/SEOOptimizer2025';
 <<<<<<< HEAD
 import RevolutionaryCaseStudies2032 from './src/pages/RevolutionaryCaseStudies2032';
 import EnhancedContentCarousel2032 from './src/components/EnhancedContentCarousel2032';
@@ -224,9 +228,25 @@ export default function App(): JSX.Element {
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              <SEOOptimizer2025 
+                title="Revolutionary Technology Solutions 2025 | AI, Cybersecurity, Cloud & Data Analytics"
+                description="Discover cutting-edge AI solutions, enterprise cybersecurity, cloud migration, and data analytics services. Transform your business with our revolutionary technology solutions in 2025."
+                keywords={[
+                  "AI solutions", "artificial intelligence", "cybersecurity", "cloud computing", 
+                  "data analytics", "business automation", "edge computing", "sustainable technology",
+                  "digital transformation", "enterprise solutions", "technology consulting"
+                ]}
+                type="website"
+              />
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Content Advertising Banner - Latest Content Promotion */}
+                <ContentAdvertisingBanner />
+                
+                {/* NEW: Enhanced Content Carousel 2025 - Interactive Content Showcase */}
+                <EnhancedContentCarousel2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
@@ -1366,6 +1386,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateContentShowcase2031" element={<UltimateContentShowcase2031 />} />
           <Route path="/pages/RevolutionaryTechShowcase2032" element={<RevolutionaryTechShowcase2032 />} />
           <Route path="/pages/UltimateAIConsciousness2032" element={<UltimateAIConsciousness2032 />} />
+          <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+          <Route path="/content-advertising" element={<ContentAdvertisingBanner />} />
           <Route path="/pages/RevolutionaryCaseStudies2032" element={<RevolutionaryCaseStudies2032 />} />
           <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
           <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
