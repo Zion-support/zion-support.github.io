@@ -95,6 +95,7 @@ import UltimateAIConsciousness2025 from './src/pages/UltimateAIConsciousness2025
 import QuantumRealityEngineering2025 from './src/pages/QuantumRealityEngineering2025';
 import UltimateTechRevolution2032 from './src/pages/UltimateTechRevolution2032';
 import TranscendentAI2033 from './src/pages/TranscendentAI2033';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 
 // Import components
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
@@ -164,6 +165,8 @@ import InteractiveContentDiscovery2033 from './src/components/InteractiveContent
 import TrendingContentSection2033 from './src/components/TrendingContentSection2033';
 import NewsletterSignup from './src/components/NewsletterSignup';
 import PromotionalBanner from './src/components/PromotionalBanner';
+import RevolutionaryTechBreakthroughBanner2025 from './src/components/RevolutionaryTechBreakthroughBanner2025';
+import UltimateTechRevolutionBanner2025 from './src/components/UltimateTechRevolutionBanner2025';
 
 // New 2033 Revolutionary Content
 import RevolutionaryContentBanner2033 from './src/components/RevolutionaryContentBanner2033';
@@ -439,6 +442,18 @@ export default function App(): JSX.Element {
                       </a>
                     </div>
 =======
+=======
+              {/* NEW: Revolutionary Tech Breakthrough Banner 2025 */}
+              <div className="mb-12">
+                <RevolutionaryTechBreakthroughBanner2025 />
+              </div>
+
+              {/* NEW: Ultimate Tech Revolution Banner 2025 */}
+              <div className="mb-12">
+                <UltimateTechRevolutionBanner2025 />
+              </div>
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-fa80
               {/* Featured Content Section */}
               <FeaturedContentSection />
               
@@ -813,6 +828,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumRealityEngineering2025" element={<QuantumRealityEngineering2025 />} />
           <Route path="/pages/UltimateTechRevolution2032" element={<UltimateTechRevolution2032 />} />
           <Route path="/pages/TranscendentAI2033" element={<TranscendentAI2033 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           
           {/* 2027-2030 Pages */}
           <Route path="/pages/AdvancedAIRevolution2027" element={
@@ -950,6 +966,9 @@ export default function App(): JSX.Element {
               <Footer />
             </div>
           } />
+=======
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-fa80
         </Routes>
         
         <Footer />
