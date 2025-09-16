@@ -1,5 +1,5 @@
 import React, {useState, useMemo} from 'react';
-
+import {motion} from 'framer-motion';
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle} from "ui/card.tsx";
 import {Button} from "ui/button.tsx";

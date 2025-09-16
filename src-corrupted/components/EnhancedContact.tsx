@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Mail, 
   Phone, 
   MapPin, 

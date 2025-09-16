@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {  import { motion  } from 'framer-motion';
 
 export default function Page(props: any) {
 -${Math.random().toString(36).substr(2, 9)}`}}

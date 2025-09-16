@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Search, BookOpen, MessageCircle, Phone, Mail, 
   Video, FileText, Users, Globe, Zap, Brain, Shield,

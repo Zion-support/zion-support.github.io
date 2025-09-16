@@ -174,7 +174,7 @@ const InteractiveTechDemo2042: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setDemoData(demos[activeDemo as keyof typeof demos].data);
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-9df5
   };
 
   const stopDemo = () => {
@@ -254,7 +254,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title}
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-9df5
               </button>
             ))}
           </div>
@@ -400,7 +400,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                         style={{ width: `${typeof value === 'number' ? value : 100}%` }}
                       ></div>
                     </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-9df5
                   </div>
                 ))}
               </div>
@@ -471,7 +471,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                   }
                 </div>
               </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-9df5
             </div>
           </div>
         </div>
@@ -525,7 +525,7 @@ const InteractiveTechDemo2042: React.FC = () => {
               View Showcase
             </a>
           </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-9df5
         </div>
       </div>
     </div>

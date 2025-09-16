@@ -1,7 +1,7 @@
 import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 
-
+import { motionAnimatePresence } from 'framer-motion';
 SearchCheckCircleArrowRightRocketMailPhoneMapPinMessageSquareGlobe
 
 

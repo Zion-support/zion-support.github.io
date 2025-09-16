@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket } from 'lucide-react';
 
 interface QuantumHolographicCardProps {

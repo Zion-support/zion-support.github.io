@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Rocket, Brain, Sparkles, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
 import Button from '../ui/Button';
 import UltraQuantumHolographicBackground from '../ui/UltraQuantumHolographicBackground';

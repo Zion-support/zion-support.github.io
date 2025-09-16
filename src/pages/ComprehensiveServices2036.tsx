@@ -3,9 +3,12 @@ import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2036: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
   const [activeCategory, setActiveCategory] = useState(0);
 
   const serviceCategories = [
@@ -384,7 +387,10 @@ const ComprehensiveServices2036: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
         </div>
       </div>

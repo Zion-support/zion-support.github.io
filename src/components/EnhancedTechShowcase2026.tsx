@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('breakthrough');
@@ -85,7 +85,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -97,7 +97,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-4xl mx-auto">
             Explore our revolutionary technologies through an interactive showcase featuring the most advanced innovations
           </p>
-        </div>
+        </motion.div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
@@ -121,7 +121,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
 
         {/* Content Display */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {techCategories[activeTab as keyof typeof techCategories].content.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -153,13 +153,13 @@ const EnhancedTechShowcase2026: React.FC = () => {
                 >
                   Explore →
                 </a>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Statistics Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -171,7 +171,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -179,8 +179,8 @@ const EnhancedTechShowcase2026: React.FC = () => {
             >
               <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
               <div className="text-lg opacity-80">Active Projects</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -188,8 +188,8 @@ const EnhancedTechShowcase2026: React.FC = () => {
             >
               <div className="text-4xl font-bold text-pink-400 mb-2">1000+</div>
               <div className="text-lg opacity-80">Researchers</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -197,8 +197,8 @@ const EnhancedTechShowcase2026: React.FC = () => {
             >
               <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-lg opacity-80">Patents Filed</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -206,12 +206,12 @@ const EnhancedTechShowcase2026: React.FC = () => {
             >
               <div className="text-4xl font-bold text-emerald-400 mb-2">99.9%</div>
               <div className="text-lg opacity-80">Success Rate</div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -229,7 +229,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
               Contact Our Experts
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

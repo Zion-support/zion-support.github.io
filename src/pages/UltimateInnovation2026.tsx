@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const UltimateInnovation2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -8,10 +7,7 @@ const UltimateInnovation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/20 to-cyan-500/20 backdrop-blur-3xl"></div>
         <div className="relative z-10 container mx-auto px-6 py-24">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          <divdiv
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -24,31 +20,25 @@ const UltimateInnovation2026: React.FC = () => {
               The most advanced technological breakthroughs that will define the next decade of human progress
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
                 Discover Breakthroughs
-              </button>
-              <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </divbutton>
+              <divbutton
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
               >
                 Experience Future
-              </button>
+              </divbutton>
             </div>
-          </div>
+          </divdiv>
         </div>
       </div>
 
       {/* Innovation Showcase */}
       <div className="container mx-auto px-6 py-20">
-        <div
-          initial={{ opacity: 0 }}
+        <divdiv
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
@@ -57,14 +47,12 @@ const UltimateInnovation2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Experience the most advanced innovations that are reshaping reality itself
           </p>
-        </div>
+        </divdiv>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Consciousness Transfer */}
-          <div
-            initial={{ opacity: 0, x: -50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-fuchsia-600/30 to-purple-600/30 backdrop-blur-sm rounded-3xl p-10 border border-fuchsia-400/30"
           >
             <div className="text-8xl mb-6 text-center">🧠</div>
@@ -94,13 +82,11 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Explore Consciousness Transfer →
             </button>
-          </div>
+          </divdiv>
 
           {/* Quantum Teleportation */}
-          <div
-            initial={{ opacity: 0, x: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-10 border border-cyan-400/30"
           >
             <div className="text-8xl mb-6 text-center">🚀</div>
@@ -130,16 +116,14 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Teleport Now →
             </button>
-          </div>
+          </divdiv>
         </div>
 
         {/* Advanced Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {/* Holographic Reality */}
-          <div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🌌</div>
@@ -156,13 +140,11 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Enter Holographic World →
             </button>
-          </div>
+          </divdiv>
 
           {/* Anti-Gravity Systems */}
-          <div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🛸</div>
@@ -179,13 +161,11 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Experience Anti-Gravity →
             </button>
-          </div>
+          </divdiv>
 
           {/* Mind-Machine Fusion */}
-          <div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
             className="bg-gradient-to-br from-violet-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🔗</div>
@@ -202,15 +182,13 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Fuse Mind & Machine →
             </button>
-          </div>
+          </divdiv>
         </div>
 
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-fuchsia-900/50 to-cyan-900/50 backdrop-blur-sm rounded-3xl p-12 border border-fuchsia-400/30">
-          <div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
             className="text-center"
           >
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
@@ -241,22 +219,18 @@ const UltimateInnovation2026: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6">
-              <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white px-10 py-4 rounded-lg font-semibold text-xl hover:shadow-2xl transition-all duration-300"
               >
                 Join the Innovation Revolution
-              </button>
-              <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </divbutton>
+              <divbutton
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
               >
                 Schedule Innovation Demo
-              </button>
+              </divbutton>
             </div>
-          </div>
+          </divdiv>
         </div>
       </div>
     </div>

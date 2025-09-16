@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { TrendingUp, Zap, Clock, Target, Activity } from 'lucide-react';
 
 interface PerformanceMetricsProps {

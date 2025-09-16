@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Play, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 

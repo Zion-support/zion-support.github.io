@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom';
 export default function Page("props": "any) {;
 "}}}
-
+import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page("props": "any) {;
 ",;

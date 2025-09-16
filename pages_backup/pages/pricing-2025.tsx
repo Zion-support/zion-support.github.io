@@ -6,7 +6,7 @@
 
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import {
   ArrowRight, Check, Star, Users, Zap, Shield, Globe
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
@@ -20,7 +20,7 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
-
+import { motion } from 'framer-motion',;
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
@@ -123,7 +123,7 @@ function Pricing2025() {
 
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import {;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
   TrendingUp, Award, Clock, CheckCircle, ExternalLink;

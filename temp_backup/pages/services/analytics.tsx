@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   BarChart3, Database, Zap, Shield, Rocket, Cpu, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp

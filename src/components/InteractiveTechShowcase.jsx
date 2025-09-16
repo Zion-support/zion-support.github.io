@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const InteractiveTechShowcase = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -65,19 +64,10 @@ const InteractiveTechShowcase = () => {
       </div>
 
       {/* Tab Content */}
-      <div
-        key={activeTab}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="grid md:grid-cols-2 gap-6"
-      >
+      <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
           <div
             key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
             className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-md transition-shadow"
           >
             <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>

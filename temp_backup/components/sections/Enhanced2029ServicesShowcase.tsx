@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { innovativeMicroSaas2029V3 } from '../../data/2029-innovative-micro-saas-v3';

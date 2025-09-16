@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -50,7 +50,7 @@ export default function Careers() {
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Briefcase, 
   Users, 
@@ -124,7 +124,7 @@ export default function Careers() {
     { id: 'full-time', name: 'Full-time', count: 20 },
     { id: 'part-time', name: 'Part-time', count: 2 },
     { id: 'contract', name: 'Contract', count: 2 }
-
+import { motion } from 'framer-motion';
 import { 
   Briefcase, 
   Users, 
