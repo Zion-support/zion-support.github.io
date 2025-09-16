@@ -81,7 +81,16 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+<<<<<<< HEAD
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
+=======
+
+// Import new 2026 breakthrough promotional banners
+import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
+import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
+
+>>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -97,6 +106,12 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* NEW 2026 BREAKTHROUGH CONTENT BANNERS - FEATURED */}
+      <NewContent2026UltimateBreakthroughBanner />
+      <QuantumAI2026RevolutionBanner />
+      <NeuralInterfaceRevolutionBanner2026 />
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
