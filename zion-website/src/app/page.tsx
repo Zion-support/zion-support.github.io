@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
+import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
@@ -33,16 +34,6 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-            New: AI Governance Dashboard v5 —
-            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            State of Real‑Time RAG (2026) —
-            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Agent Reliability Scorecards v1.0 —
-            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see details</a>
-=======
             New: E2E AI Change Evidence Playbook —
             <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -51,7 +42,6 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             AI Security Evidence Vault —
             <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
->>>>>>> cursor/create-and-deploy-new-content-30c4
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -82,14 +72,6 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-            Fresh: AI Governance Dashboard v5 —
-            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">real‑time RAG report</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability scorecards</a>
-=======
             Fresh: E2E AI Change Evidence Playbook —
             <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -98,7 +80,6 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             AI Security Evidence Vault —
             <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
->>>>>>> cursor/create-and-deploy-new-content-30c4
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
