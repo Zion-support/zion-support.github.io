@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -46,20 +40,9 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -89,81 +72,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </div>
-=======
-    <>
-      <Helmet>
-        <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
-        <meta name="description" content="Explore revolutionary technology insights including consciousness computing, quantum reality engineering, and universal mind networks shaping the future in 2026." />
-        <meta name="keywords" content="Revolutionary Tech 2026, Consciousness Computing, Quantum Reality, Universal Mind Network, AI Insights, Future Technology" />
-        <meta property="og:title" content="Revolutionary Tech Insights 2026 | Zion Tech Group" />
-        <meta property="og:description" content="Explore revolutionary technology insights shaping the future" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary Tech Insights 2026" />
-        <meta name="twitter:description" content="Explore revolutionary technology insights shaping the future" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
-          <div className="absolute top-0 left-0 w-full h-full">
-            {[...Array(200)].map((_, i) => (
-                key={i}
-                className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-20"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-                  y: [0, -400, 0],
-                  opacity: [0.2, 1, 0.2],
-                  scale: [1, 4, 1],
-                  rotate: [0, 720, 0],
-                }}
-                  duration: 6 + Math.random() * 4,
-                  repeat: Infinity,
-                  delay: Math.random() * 5,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-xl flex items-center justify-center">
-                <Rocket className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold">Zion Tech Group</h1>
-                <p className="text-sm text-indigo-300">Revolutionary Tech Insights 2026</p>
-              </div>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#insights" className="hover:text-indigo-400 transition-colors">Insights</a>
-              <a href="#applications" className="hover:text-indigo-400 transition-colors">Applications</a>
-              <a href="#testimonials" className="hover:text-indigo-400 transition-colors">Testimonials</a>
-              <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
-            </div>
-            <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
-              Explore Insights
-            </button>
-          </div>
-        </nav>
-
-        {/* Hero Section */}
-        <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
-              >
-=======
-=======
-            <div className="mb-8">
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
             </div>
@@ -240,25 +148,12 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               ))}
             </div>
           </div>
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
         </section>
 
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
-=======
-            <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-            <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
               initial={{ opacity: 0, y: 30 }}
-=======
-            <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -269,27 +164,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
-=======
-            </motion.div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              {revolutionaryApplications.map((application, index) => (
-                <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-            </divdiv>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              {revolutionaryApplications.map((application, index) => (
-                <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
-=======
-            </motion.div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              {revolutionaryApplications.map((application, index) => (
-                <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
                   key={index}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -324,12 +198,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-=======
-                </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
-=======
-                </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
               ))}
             </div>
           </div>
@@ -338,12 +206,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-=======
-                </motion.div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-                </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
               ))}
             </div>
           </div>
@@ -397,17 +259,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
 
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
@@ -445,7 +297,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </footer>
->>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
 
       {/* Featured Insights */}
@@ -584,21 +435,4 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf

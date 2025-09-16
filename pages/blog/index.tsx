@@ -3,6 +3,8 @@ import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-2026-agent-slo-scorecards', title: 'Agent SLO Scorecards (2026)', excerpt: 'Objective gates for safe autonomy rollouts.' },
+  { slug: 'ai-2026-cost-aware-model-routing', title: 'Cost-Aware Model Routing (2026)', excerpt: 'Route by budget, latency, and quality with evals.' },
   { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
   { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
