@@ -1,140 +1,179 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, X, Sparkles, Brain, Zap, Target } from 'lucide-react';
 
-const NewContentPromotionBanner2026: React.FC = () => {
-  const newContent = [
+interface NewContentPromotionBanner2026Props {
+  className?: string;
+}
+
+const NewContentPromotionBanner2026: React.FC<NewContentPromotionBanner2026Props> = ({ className = '' }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentContent, setCurrentContent] = useState(0);
+
+  const featuredContent = [
     {
-      title: "AI Innovation Hub 2026",
-      description: "Revolutionary AI breakthroughs",
+      id: 'autonomous-systems',
+      title: 'Next-Generation Autonomous AI Systems',
+      description: 'Discover the future of enterprise automation with revolutionary autonomous AI systems that learn, adapt, and evolve.',
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      link: "/ai-innovation-hub-2026"
+      gradient: 'from-purple-600 to-blue-600',
+      link: '/blog/ai-2026-next-gen-autonomous-systems',
+      badge: 'NEW'
     },
     {
-      title: "Advanced Tech Solutions",
-      description: "Next-gen technology solutions",
-      icon: Cpu,
-      color: "from-blue-500 to-cyan-500",
-      link: "/advanced-tech-solutions-2026"
-    },
-    {
-      title: "Quantum Computing Guide",
-      description: "Master quantum fundamentals",
+      id: 'quantum-computing',
+      title: 'Quantum Computing Enterprise Solutions',
+      description: 'Harness the power of quantum computing to solve complex business challenges with unprecedented computational speed.',
       icon: Zap,
-      color: "from-green-500 to-emerald-500",
-      link: "/quantum-computing-guide-2026"
+      gradient: 'from-emerald-600 to-cyan-600',
+      link: '/blog/quantum-computing-enterprise-solutions-2026',
+      badge: 'BREAKTHROUGH'
+    },
+    {
+      id: 'ai-consciousness',
+      title: 'AI Consciousness Breakthrough',
+      description: 'Explore the dawn of sentient artificial intelligence and its transformative impact on human-AI collaboration.',
+      icon: Sparkles,
+      gradient: 'from-rose-600 to-pink-600',
+      link: '/blog/ai-consciousness-breakthrough-2026',
+      badge: 'REVOLUTIONARY'
+    },
+    {
+      id: 'transformation-roadmap',
+      title: 'Enterprise AI Transformation 2026',
+      description: 'Your complete implementation roadmap for successful AI transformation with proven strategies and frameworks.',
+      icon: Target,
+      gradient: 'from-orange-600 to-red-600',
+      link: '/blog/enterprise-ai-transformation-2026-roadmap',
+      badge: 'GUIDE'
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [featuredContent.length]);
+
+  if (!isVisible) return null;
+
+  const currentItem = featuredContent[currentContent];
+  const IconComponent = currentItem.icon;
+
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative py-16 px-4 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl"></div>
-        <div className="absolute top-32 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-pink-400/10 rounded-full blur-xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 px-4 py-2 rounded-full border border-cyan-400/30 mb-4">
-            <Sparkles className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold">NEW CONTENT</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Content
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Just Released
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our latest groundbreaking content that's pushing the boundaries of technology and innovation
-          </p>
-        </motion.div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="group cursor-pointer"
-              onClick={() => window.location.href = content.link}
-            >
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 h-full hover:scale-105">
-                <div className="flex items-center mb-6">
-                  <div className={`bg-gradient-to-r ${content.color} p-4 rounded-2xl mr-4`}>
-                    <content.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{content.title}</h3>
-                    <p className="text-gray-300">{content.description}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                    <span className="text-gray-300 text-sm ml-2">5.0</span>
-                  </div>
-                  
-                  <div className="flex items-center text-cyan-400 group-hover:text-white transition-colors duration-300">
-                    <span className="text-sm font-medium mr-2">Explore</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`relative overflow-hidden ${className}`}
+      >
+        {/* Background Gradient */}
+        <div className={`absolute inset-0 bg-gradient-to-r ${currentItem.gradient} opacity-90`} />
+        
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse" />
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl p-8 border border-cyan-400/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Explore the Future?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of innovators who are already leveraging our cutting-edge content to transform their businesses
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
-                Explore All Content
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors duration-300">
-                View Blog
-              </button>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-6">
+            {/* Content Section */}
+            <div className="flex-1 flex items-center space-x-6">
+              {/* Icon */}
+              <motion.div
+                key={currentContent}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="flex-shrink-0"
+              >
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                  <IconComponent className="w-8 h-8 text-white" />
+                </div>
+              </motion.div>
+
+              {/* Text Content */}
+              <motion.div
+                key={`content-${currentContent}`}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex-1"
+              >
+                <div className="flex items-center space-x-3 mb-2">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm">
+                    {currentItem.badge}
+                  </span>
+                  <span className="text-white/80 text-sm font-medium">
+                    Featured Content
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {currentItem.title}
+                </h3>
+                
+                <p className="text-white/90 text-sm max-w-2xl leading-relaxed">
+                  {currentItem.description}
+                </p>
+              </motion.div>
             </div>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex items-center space-x-4"
+            >
+              {/* CTA Button */}
+              <motion.a
+                href={currentItem.link}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+              >
+                Explore Now
+                <ChevronRight className="ml-2 w-4 h-4" />
+              </motion.a>
+
+              {/* Close Button */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsVisible(false)}
+                className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              >
+                <X className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
-    </motion.section>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center space-x-2 pb-4">
+            {featuredContent.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => setCurrentContent(index)}
+                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                  index === currentContent ? 'bg-white' : 'bg-white/40'
+                }`}
+                whileHover={{ scale: 1.2 }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-ping" />
+        <div className="absolute bottom-4 right-4 w-1 h-1 bg-white/40 rounded-full animate-pulse" />
+        <div className="absolute top-1/2 right-8 w-1.5 h-1.5 bg-white/20 rounded-full animate-bounce" />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
