@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Newly added updates (2025-09-16 - set 2)
+    {
+        title: 'Blueprint: Production Agent Safety Runbooks (2026)',
+        summary: 'Incident-ready runbooks with eval gates, rollback plans, and signed evidence.',
+        href: '/updates/production-agent-safety-runbooks-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Report: State of Multimodal RAG (2026 Preview)',
+        summary: 'Benchmarks for groundedness, sync, and latency across image, audio, and text.',
+        href: '/updates/state-of-multimodal-rag-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
     // Newly added updates (2025-09-16 - additional)
     {
         title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',
