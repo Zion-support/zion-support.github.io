@@ -87,7 +87,6 @@ export default function SEOLandingPage(req, res) {
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
@@ -95,7 +94,6 @@ export default function SEOLandingPage(req, res) {
   React && React.useEffect(() => {;
     if (!router && router.isReady || !slug) return;
     const dataParam = (router && router.query?.data as string) || '';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     if (dataParam) {;
       try {;
@@ -154,11 +152,8 @@ export default function SEOLandingPage(req, res) {
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!payload) return null;
 
   return (

@@ -36,7 +36,6 @@
       <SEO 
         title={post.title} 
         description={post.excerpt} 
->>>>>>> origin/auto/autonomy-17186719616
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
@@ -106,12 +105,9 @@
                         <span>LinkedIn</span>
                       </a>
                     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -144,17 +140,13 @@
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
->>>>>>> origin/auto/autonomy-17186719616
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 }}
@@ -211,7 +203,6 @@
             
             <Separator className="my-12 bg-zion-blue-light" />
             
->>>>>>> origin/auto/autonomy-17186719616
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -231,12 +222,9 @@
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
                       </div>
                     </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -263,7 +251,6 @@
               <Button
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->>>>>>> origin/auto/autonomy-17186719616
                 asChild
               >
                 <Link to="/blog">
@@ -278,13 +265,9 @@
     </AppLayout>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

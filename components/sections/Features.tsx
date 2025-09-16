@@ -12,7 +12,6 @@ interface FeaturesProps {
   subtitle: string;
   features: Feature[];
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Features Grid */}
@@ -107,7 +106,6 @@ const Features: React.FC<FeaturesProps> = ({
               className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
             >
->>>>>>> origin/auto/autonomy-17186719616
               <div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
                   {feature.icon}

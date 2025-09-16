@@ -37,9 +37,7 @@ import {
     }
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -493,7 +491,6 @@ if (throw error) {
                       ) : (
                         <span className="text-muted-foreground text-sm">None</span>
                       )}
->>>>>>> origin/auto/autonomy-17186719616
                     </TableCell>
                     <TableCell>
                       <Badge variant={tenant.is_active ? "default" : "destructive"}>
@@ -548,4 +545,3 @@ if (throw error) {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616

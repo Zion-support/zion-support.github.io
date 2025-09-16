@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -24,7 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const key = req.headers['x-admin-key'];
@@ -119,7 +117,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'ID already exists' });
     }
     arr.push({ ...action.person, active: true });
->>>>>>> origin/auto/autonomy-17186719616
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
@@ -137,4 +134,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(400).json({ error: 'Unknown action' });
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -7,7 +7,6 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -24,4 +23,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: 'file_open', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> origin/auto/autonomy-17186719616

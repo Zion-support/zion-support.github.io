@@ -6,9 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 import {
@@ -44,7 +42,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       });
     }

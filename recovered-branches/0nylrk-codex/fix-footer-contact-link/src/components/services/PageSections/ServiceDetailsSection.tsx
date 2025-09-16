@@ -15,4 +15,3 @@
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

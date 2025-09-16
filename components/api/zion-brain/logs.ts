@@ -2,10 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -37,4 +35,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
 }
->>>>>>> origin/auto/autonomy-17186719616

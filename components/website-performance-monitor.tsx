@@ -5,7 +5,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false);
   const [analysisResultsetAnalysisResults] = useState(null);
@@ -19,7 +18,6 @@ import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Moni
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -244,7 +242,6 @@ export default function WebsitePerformanceMonitorPage() {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Metrics Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">

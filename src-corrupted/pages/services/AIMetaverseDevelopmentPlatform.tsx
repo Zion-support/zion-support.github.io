@@ -24,7 +24,6 @@ export default function AIMetaverseDevelopmentPlatform(props: any) {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Enterprise security features';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   

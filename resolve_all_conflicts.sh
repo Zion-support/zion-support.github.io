@@ -2,38 +2,41 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 <<<<<<< HEAD
 echo "🔧 Resolving ALL remaining merge conflicts..."
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
 
-# Find all files with merge conflicts
-conflict_files=$(find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
 
-echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
 
-# For each file, resolve conflicts by keeping the cleaner version
-for file in $conflict_files; do
-    echo "🔧 Resolving conflicts in: $file"
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
     # Create a backup
-    cp "$file" "$file.backup"
+    cp "$file" "$file.backup.$(date +%s)"
     
-    # Use sed to remove conflict markers and keep the first version (HEAD)
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    # Use git checkout --ours to resolve conflicts
+    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
     
-    # Check if conflicts were resolved
-    if ! grep -q "<<<<<<< HEAD" "$file"; then
-        echo "✅ Resolved conflicts in: $file"
-        rm "$file.backup"
-    else
-        echo "⚠️  Still has conflicts: $file (restored backup)"
-        mv "$file.backup" "$file"
+    # If git checkout didn't work, try manual resolution
+    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+        echo "Manual resolution needed for $file"
+        # Remove all conflict markers and keep the first version (HEAD)
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
     fi
 done
 
+<<<<<<< HEAD
 echo "🎉 All conflict resolution complete!"
 =======
 <<<<<<< HEAD
@@ -82,3 +85,7 @@ echo "All merge conflicts resolved!"
 echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-87a1
 >>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+>>>>>>> cursor/create-and-deploy-new-content-a12c

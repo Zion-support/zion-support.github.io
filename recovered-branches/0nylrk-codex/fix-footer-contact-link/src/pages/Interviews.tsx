@@ -13,10 +13,8 @@
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -58,7 +56,6 @@
       <SEO 
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 
->>>>>>> origin/auto/autonomy-17186719616
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -89,7 +86,6 @@
   );
 }
 
->>>>>>> origin/auto/autonomy-17186719616
 export default function Interviews() {
   return (
     <ProtectedRoute>
@@ -101,4 +97,3 @@ export default function Interviews() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

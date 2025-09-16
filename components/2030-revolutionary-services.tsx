@@ -4,7 +4,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -213,7 +212,6 @@ export default function Revolutionary2030ServicesPage() {
   };
 
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
@@ -284,7 +282,6 @@ export default function Revolutionary2030ServicesPage() {
 
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
->>>>>>> origin/auto/autonomy-17186719616
 
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -314,14 +311,12 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 =======
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
             and quantum computing to space mining and DNA computing, we're building the future today.
           </motion.p>
->>>>>>> origin/auto/autonomy-17186719616
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -381,7 +376,6 @@ export default function Revolutionary2030ServicesPage() {
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
 
->>>>>>> origin/auto/autonomy-17186719616
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.slice(0, 6).map((feature, featureIndex) => (
@@ -407,16 +401,13 @@ export default function Revolutionary2030ServicesPage() {
           </div>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -456,8 +447,6 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
           {/* Call to Action */}
@@ -488,7 +477,6 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
->>>>>>> origin/auto/autonomy-17186719616
 
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
@@ -532,11 +520,8 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -546,4 +531,3 @@ export default function Revolutionary2030ServicesPage() {
     </UltraFuturisticBackground2030>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

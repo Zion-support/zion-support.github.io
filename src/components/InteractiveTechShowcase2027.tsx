@@ -100,6 +100,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
   }, [activeTab]);
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
       <Helmet>
         <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
@@ -108,6 +109,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
       
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+=======
+    <div className="space-y-8">
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
+>>>>>>> cursor/create-and-deploy-new-content-a12c
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -250,6 +256,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

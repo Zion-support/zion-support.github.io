@@ -12,7 +12,6 @@ export interface AdminAction {
   id: string;
   case_id: string;
   type: AdminActionType;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   admin_id: string;
@@ -26,7 +25,6 @@ export interface AdminAction {
 
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export interface FraudDetectionResult {
   is_fraud: boolean;
@@ -34,7 +32,6 @@ export interface FraudDetectionResult {
 
 
   isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
 
@@ -44,7 +41,6 @@ export interface FraudDetectionResult {
 export interface FraudDetectionConfig {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   enabled: boolean;
@@ -81,16 +77,10 @@ export interface FraudDetectionConfig {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -165,4 +155,3 @@ export interface MonthlyReport {
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }
->>>>>>> origin/auto/autonomy-17186719616

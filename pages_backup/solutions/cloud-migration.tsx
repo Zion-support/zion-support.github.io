@@ -1,4 +1,3 @@
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -18,7 +17,6 @@ import { Cloud,
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const phases = [;
   {}
     title: 'Assessment & Planning,',
@@ -330,7 +328,6 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

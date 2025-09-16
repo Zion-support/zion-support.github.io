@@ -1,7 +1,39 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
+    {
+      id: 1,
+      name: "Revolutionary AI Consciousness",
+      description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
+      icon: "🧠",
+>>>>>>> cursor/create-and-deploy-new-content-a12c
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AIInnovationHub2026"
+<<<<<<< HEAD
+=======
+    },
+    {
+      id: 2,
+      name: 'Neural Reality Engine 2030',
+      icon: '🌌',
+      description: 'Fully immersive consciousness-driven virtual worlds',
+      color: 'from-cyan-500 to-blue-500',
+      features: ["Virtual Reality", "Consciousness Transfer", "Immersive Worlds", "Neural Interfaces"],
+      demo: "Enter Virtual World",
+      link: "/pages/NeuralRealityEngine2030"
+    },
+    {
+      id: 3,
+>>>>>>> cursor/create-and-deploy-new-content-a12c
       name: "Analytics Dashboard 2026",
       description: "AI-powered analytics with real-time insights and predictive modeling",
       icon: "📊",
@@ -12,6 +44,7 @@
     }
   ];
 
+<<<<<<< HEAD
   return (
     <div className="max-w-7xl mx-auto">
       {/* Technology Selector */}
@@ -241,6 +274,8 @@ const InteractiveTechShowcase: React.FC = () => {
     return () => clearInterval(interval);
   }, [technologies.length]);
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
   const currentTech = technologies[activeTech];
 
   return (
@@ -320,6 +355,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Interactive Demo */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
@@ -379,11 +415,52 @@ const InteractiveTechShowcase: React.FC = () => {
                     <div className="text-sm text-gray-400">Latency</div>
                   </div>
                 </div>
+=======
+          {/* Technology Visual */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className="relative h-full min-h-[400px]">
+              <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <motion.div
+                  key={activeTech}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-9xl"
+                >
+                  {currentTech.icon}
+                </motion.div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                {[...Array(20)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-white rounded-full opacity-30"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                    }}
+                    animate={{
+                      y: [0, -100, 0],
+                      opacity: [0.3, 1, 0.3],
+                      scale: [1, 2, 1],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                    }}
+                  />
+                ))}
+>>>>>>> cursor/create-and-deploy-new-content-a12c
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -516,3 +593,30 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
+=======
+        {/* Technology Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Computational Power</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">0ms</div>
+            <div className="text-gray-300">Processing Latency</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">100%</div>
+            <div className="text-gray-300">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Learning Capacity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InteractiveTechShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-a12c

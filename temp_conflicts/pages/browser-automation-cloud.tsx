@@ -26,4 +26,3 @@
 				</section>
 			</main>
 		</>
->>>>>>> origin/auto/autonomy-17186719616

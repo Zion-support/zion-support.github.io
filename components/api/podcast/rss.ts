@@ -57,7 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
       <link>${siteUrl}/media/podcast/${e.id}</link>
       <guid isPermaLink="false">${e.id}</guid>
->>>>>>> origin/auto/autonomy-17186719616
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`;
@@ -84,17 +83,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 }
->>>>>>> origin/auto/autonomy-17186719616

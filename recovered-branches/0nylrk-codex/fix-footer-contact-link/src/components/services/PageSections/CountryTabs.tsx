@@ -25,10 +25,8 @@
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -62,7 +60,6 @@
         <div className="mb-6 max-w-md mx-auto">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
->>>>>>> origin/auto/autonomy-17186719616
             <Input
               type="text"
               placeholder="Search by country..."

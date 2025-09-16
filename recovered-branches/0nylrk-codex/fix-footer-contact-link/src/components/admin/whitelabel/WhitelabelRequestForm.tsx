@@ -10,9 +10,7 @@
         .select()
         .single();
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -35,7 +33,6 @@
     }
   };
 
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>

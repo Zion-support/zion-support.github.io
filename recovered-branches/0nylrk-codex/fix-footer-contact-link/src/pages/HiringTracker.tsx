@@ -5,7 +5,6 @@
   return (
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -98,9 +97,7 @@ function HiringTrackerContent() {
   const [active_tab, setActiveTab] = useState < string>("kanban");
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -166,4 +163,3 @@ export default function HiringTracker() {
     </ProtectedRoute>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

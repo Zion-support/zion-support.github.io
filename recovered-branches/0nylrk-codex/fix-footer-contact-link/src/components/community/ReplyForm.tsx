@@ -13,7 +13,6 @@ interface ReplyFormValues {
     }
   });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card>;
@@ -41,7 +40,6 @@ interface ReplyFormValues {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -70,7 +68,6 @@ interface ReplyFormValues {
                   <FormControl>
                     <Textarea
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
->>>>>>> origin/auto/autonomy-17186719616
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -88,11 +85,8 @@ interface ReplyFormValues {
         </Form>
       </CardContent>
     </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -100,4 +94,3 @@ interface ReplyFormValues {
 };
 
 export default ReplyForm;
->>>>>>> origin/auto/autonomy-17186719616

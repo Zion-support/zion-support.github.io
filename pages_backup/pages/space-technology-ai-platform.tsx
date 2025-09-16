@@ -13,7 +13,6 @@
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Space Technology
                 </span>
                 <br />
@@ -52,7 +51,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>1-month setup</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -62,7 +60,6 @@
                 <div className="flex items-center space-x-2">
                   <Users className="w-5 h-5 text-blue-400" />
                   <span>120+ customers</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
             </motion.div>
@@ -140,7 +137,6 @@
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -209,7 +205,6 @@ function SpaceTechnologyAIPlatform() {
     'Planet Labs ($1000 - 10000 / month)',
     'Airbus Defence ($10000 - 100000 / month)',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 export default function SpaceTechnologyAIPlatform() {
@@ -307,8 +302,6 @@ import React from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     >
@@ -379,7 +372,6 @@ import React from 'react';
             href='https://ziontechgroup.com / space - technology - ai - platform';
           />        </Head>;
         <EnhancedNavigation2026 />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
@@ -390,8 +382,6 @@ import React from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             >
@@ -409,10 +399,7 @@ import React from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                   Space Technology
@@ -427,7 +414,6 @@ import React from 'react';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                 satellite operations, and space data analysis.
               </p>
@@ -443,10 +429,7 @@ import React from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                 <motion.div
@@ -477,10 +460,7 @@ import React from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                   <span>1-month setup</span>
@@ -546,12 +526,8 @@ import React from 'react';
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             >
@@ -568,7 +544,6 @@ import React from 'react';
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
                 <motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -624,7 +599,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -672,11 +646,8 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -703,7 +674,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -761,9 +731,7 @@ function SpaceTechnologyAIPlatform() {
               </motion && motion.div>;
               <motion&& motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -772,7 +740,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
               >
@@ -825,8 +792,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
               initial={{ opacity: 0, y: 20 }}
@@ -835,9 +800,7 @@ function SpaceTechnologyAIPlatform() {
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -869,11 +832,8 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -918,11 +878,8 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -942,7 +899,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -971,7 +927,6 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1060,13 +1015,11 @@ function SpaceTechnologyAIPlatform() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

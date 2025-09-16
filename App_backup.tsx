@@ -126,13 +126,11 @@ import RevolutionaryContentShowcase from './src/components/RevolutionaryContentS
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import UltimateContentShowcase2027 from './src/components/UltimateContentShowcase2027';
 import UltimateContentShowcase2028 from './src/components/UltimateContentShowcase2028';
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 
 export default function App(): JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
->>>>>>> cursor/create-and-deploy-new-content-f977
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -152,7 +150,6 @@ export default function App(): JSX.Element {
                       <span className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold">
                         ♾️ INFINITE POSSIBILITIES
                       </span>
->>>>>>> cursor/create-and-deploy-new-content-f977
                     </div>
                   </div>
                 </div>
@@ -222,7 +219,6 @@ export default function App(): JSX.Element {
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
                     🚀 NEW: Innovation 2026 Showcase
->>>>>>> cursor/create-and-deploy-new-content-f977
                   </div>
                   <h1 className="text-5xl font-bold text-gray-900 mb-6">
                     Welcome to Zion Tech Group
@@ -261,7 +257,6 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔍 Tech Insights 2026
->>>>>>> cursor/create-and-deploy-new-content-f977
                     </a>
                   </div>
                 </div>
@@ -277,7 +272,6 @@ export default function App(): JSX.Element {
                   <RevolutionaryContentShowcase2026 />
                 </div>
 
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
                 </div>
@@ -314,7 +308,6 @@ export default function App(): JSX.Element {
                 </section>
 
 =======
->>>>>>> cursor/create-and-deploy-new-content-f977
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -337,7 +330,6 @@ export default function App(): JSX.Element {
                     </p>
                     <a href="/pages/QuantumComputingRevolution2026" className="text-blue-600 hover:text-blue-700 font-semibold">
                       Explore Quantum →
->>>>>>> cursor/create-and-deploy-new-content-f977
                     </a>
                   </div>
                   
@@ -446,7 +438,6 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -457,7 +448,6 @@ export default function App(): JSX.Element {
                     to helping you succeed in the digital age.
                   </p>
                   <div className="flex justify-center space-x-4">
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                       Start Your Journey
                     </a>
                     <a href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
@@ -505,7 +495,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumConsciousnessRevolution2028" element={<QuantumConsciousnessRevolution2028 />} />
           <Route path="/pages/InterdimensionalTechRevolution2028" element={<InterdimensionalTechRevolution2028 />} />
           
->>>>>>> cursor/create-and-deploy-new-content-f977
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

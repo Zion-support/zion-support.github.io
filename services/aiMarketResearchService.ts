@@ -21,7 +21,6 @@
   }
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -30,4 +29,3 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
 =======
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
->>>>>>> origin/auto/autonomy-17186719616

@@ -56,7 +56,10 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
@@ -65,7 +68,10 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',

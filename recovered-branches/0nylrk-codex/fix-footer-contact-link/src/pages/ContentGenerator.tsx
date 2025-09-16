@@ -67,7 +67,6 @@
       setIsGenerating(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
@@ -195,7 +194,6 @@
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
->>>>>>> origin/auto/autonomy-17186719616
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -230,7 +228,6 @@
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />

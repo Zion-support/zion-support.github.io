@@ -224,4 +224,3 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
->>>>>>> origin/auto/autonomy-17186719616

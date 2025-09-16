@@ -308,8 +308,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -335,7 +333,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -362,7 +359,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -606,8 +602,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -685,7 +679,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -739,7 +732,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                             <span className="line-clamp-1">{feature}</span>
                           </li>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                         ))}
 
@@ -759,7 +751,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -786,12 +777,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                       <a
@@ -903,7 +890,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -965,12 +951,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 <a

@@ -11,7 +11,6 @@ export { textAnalysisService } from './textAnalysisService';
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -24,7 +23,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -32,7 +30,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -45,7 +42,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -53,7 +49,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -67,7 +62,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -75,7 +69,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -121,7 +114,6 @@ export const SERVICES_METADATA = {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -330,7 +322,6 @@ export const getServiceStats = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -505,4 +496,3 @@ export const getServiceStats = () => {
     }
   };
 };
->>>>>>> origin/auto/autonomy-17186719616

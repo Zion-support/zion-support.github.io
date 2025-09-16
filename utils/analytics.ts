@@ -7,7 +7,6 @@ export type TrackEventPayload = {
   properties?: Record<string, any>;
   at?: string;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -25,4 +24,3 @@ export async function trackEvent(payload: TrackEventPayload) {
     // swallow
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

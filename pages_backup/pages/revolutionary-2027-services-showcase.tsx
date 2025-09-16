@@ -239,7 +239,6 @@ export default function Revolutionary2027ServicesShowcase() {
 
   const sortOptions = [
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
@@ -590,7 +589,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -646,8 +644,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -726,8 +722,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -811,7 +805,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {priceRanges.map((range) => (
@@ -819,7 +812,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                       {range.name}
                     </option>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                   ))}
 
@@ -900,13 +892,9 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1005,8 +993,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1199,7 +1185,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1467,7 +1452,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1498,13 +1482,9 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1572,7 +1552,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

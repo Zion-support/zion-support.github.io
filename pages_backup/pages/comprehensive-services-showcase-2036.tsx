@@ -14,7 +14,6 @@ import Layout from '../components/layout/Layout';
 import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
 import {real2036ITServices} from '../data/real-2036-it-services';
 import {real2036AIServices} from '../data/real-2036-ai-services';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {motion} from 'framer-motion';
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {
@@ -70,8 +69,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             <motion.h1
@@ -186,7 +183,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               ))}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               className="text-center mb-16"
             >
@@ -241,12 +237,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 >
@@ -316,10 +308,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             >
@@ -453,7 +443,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -548,12 +537,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                       >
@@ -600,12 +585,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                         </div>
