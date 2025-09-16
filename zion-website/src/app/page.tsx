@@ -37,11 +37,14 @@ export default function HomePage() {
             New: Agent Observability Blueprint (2026) —
             <a href="/updates/agent-observability-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Agent Reliability — 2026 Blueprint —
-            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read blueprint</a>
+            Agent Safety Evidence Bundles —
+            <a href="/blog/ai-2026-agent-safety-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Cost Optimizer v2.0 Deep Dive —
-            <a href="/updates/real-time-agent-cost-optimizer-2-0-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">architecture & KPIs</a>
+            Production Evals Control Plane —
+            <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Multimodal Guardrails —
+            <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">patterns</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -72,13 +75,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Agent Reliability — 2026 Blueprint —
-            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Fresh: Agent Safety Evidence Bundles —
+            <a href="/blog/ai-2026-agent-safety-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Continuous Agent Evidence Bundles —
-            <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Production Evals Control Plane —
+            <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">multimodal guardrails</a>
+            Multimodal Guardrails —
+            <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
