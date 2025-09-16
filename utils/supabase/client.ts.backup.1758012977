@@ -1,0 +1,170 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { createClient } from "@supabase/supabase-js";
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "https://placeholder.supabase.co";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "placeholder-key";
+=======
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+const supabaseAnonKey =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+>>>>>>> origin/auto/autonomy-17186719616
+
+<<<<<<< HEAD
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+=======
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+})
+
+})
+
+
+};
+
+};
+
+})
+
+}
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+}
+    sign_in: () => Promise.resolve ({ data: null, error: null }),
+    sign_out: () => Promise.resolve ({ error: null }),
+    get_user: () => Promise.resolve ({ data: { user: null }, error: null });
+  },
+  from: (_table: string) => ({
+<<<<<<< HEAD
+=======
+    select: () => Promise.resolve({ data: [], error: null })
+    insert: () => Promise.resolve({ data: null, error: null })
+    update: () => Promise.resolve({ data: null, error: null })
+    delete: () => Promise.resolve({ data: null, error: null })
+})
+};
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) };
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) };
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) };
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) };
+,
+export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ data: null,error: null }),signOut: () => Promise && Promise.resolve({ error: null }),getUser: () => Promise && Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise && Promise.resolve({ data: [],error: null }),insert: () => Promise && Promise.resolve({ data: null,error: null }),update: () => Promise && Promise.resolve({ data: null,error: null }),delete: () => Promise && Promise.resolve({ data: null,error: null }) }) };
+export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ data: null,error: null }),signOut: () => Promise && Promise.resolve({ error: null }),getUser: () => Promise && Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise && Promise.resolve({ data: [],error: null }),insert: () => Promise && Promise.resolve({ data: null,error: null }),update: () => Promise && Promise.resolve({ data: null,error: null }),delete: () => Promise && Promise.resolve({ data: null,error: null }) }) };
+};
+  })
+};
+export const supabase = {
+  "auth": {
+    signIn: () => Promise.resolve({ data: null, "error": null }),
+    "signOut": () => Promise.resolve({ error: null }),
+    "getUser": () => Promise.resolve({ data: { user: null }, "error": null })
+  },
+  "from": (_table: string) => ({
+    select: () => Promise.resolve({ data: [], "error": null }),
+    "insert": () => Promise.resolve({ data: null, "error": null }),
+    "update": () => Promise.resolve({ data: null, "error": null }),
+    "delete": () => Promise.resolve({ data: null, "error": null })
+  })
+}
+export const supabase = {
+  auth: {
+,
+export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ data: null,error: null }),signOut: () => Promise && Promise.resolve({ error: null }),getUser: () => Promise && Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise && Promise.resolve({ data: [],error: null }),insert: () => Promise && Promise.resolve({ data: null,error: null }),update: () => Promise && Promise.resolve({ data: null,error: null }),delete: () => Promise && Promise.resolve({ data: null,error: null }) }) };
+export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ data: null,error: null }),signOut: () => Promise && Promise.resolve({ error: null }),getUser: () => Promise && Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise && Promise.resolve({ data: [],error: null }),insert: () => Promise && Promise.resolve({ data: null,error: null }),update: () => Promise && Promise.resolve({ data: null,error: null }),delete: () => Promise && Promise.resolve({ data: null,error: null }) }) };
+};
+  })
+};
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+})
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+})
+
+
+};
+
+=======
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+})
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    sign_in: () => Promise.resolve ({ data: null, error: null }),
+    sign_out: () => Promise.resolve ({ error: null }),
+    get_user: () => Promise.resolve ({ data: { user: null }, error: null });
+  },
+  from: (_table: string) => ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    select: () => Promise.resolve ({ data: [], error: null }),
+    insert: () => Promise.resolve ({ data: null, error: null }),
+    update: () => Promise.resolve ({ data: null, error: null }),
+    delete: () => Promise.resolve ({ data: null, error: null });
+});
+}
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+,
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

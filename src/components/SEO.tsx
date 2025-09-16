@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 export type SEOProps = {
   title?: string;
@@ -10,16 +10,16 @@ export type SEOProps = {
   type?: string;
 };
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
-  image = '/og-image.jpg',
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion App - Revolutionary AI Solutions',
+  description = 'Revolutionary AI solutions for enterprise transformation',
+  keywords = 'AI, artificial intelligence, enterprise solutions, automation',
+  image = 'https://zion.app/og-image.jpg',
   url = 'https://zion.app',
   type = 'website'
 }) => {
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -32,11 +32,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
+    </Helmet>
   );
 };
 
 export default SEO;
-
