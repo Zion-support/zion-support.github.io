@@ -4,6 +4,8 @@ import SEO from './components/SEO';
 
 import StructuredData from './components/StructuredData';
 
+<<<<<<< HEAD
+=======
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('./components/ROICalculator'));
 const StructuredData = lazy(() => import('./components/StructuredData'));
@@ -74,6 +76,7 @@ import NewContent2026UltimateBanner from './components/NewContent2026UltimateBan
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
 import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-7b20
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
