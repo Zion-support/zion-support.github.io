@@ -55,6 +55,7 @@ import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase202
 import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
+import FeaturedContentShowcase from './components/FeaturedContentShowcase';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
@@ -195,6 +196,11 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
+
+              {/* Blog Showcase from data/blog-posts */}
+              <div className="mb-12">
+                <FeaturedContentShowcase />
+              </div>
 
               {/* Latest Content Spotlight */}
               <ContentSpotlight />

@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from './components/Layout';
+const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
 const Home = () => {
   return (
@@ -27,6 +29,8 @@ const Home = () => {
               </Link>
             </div>
             
+            <ContentShowcaseBanner2026 />
+
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
@@ -57,7 +61,7 @@ const Home = () => {
             {/* Latest Insights Promo */}
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Link href="/blog/ai-2026-agent-safety-playbook" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Safety • 9 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">AI 2026: Agent Safety Playbook</h3>
@@ -67,6 +71,11 @@ const Home = () => {
                   <div className="text-sm text-blue-200 mb-2">Observability • 8 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">AI 2026: Production Evidence Hub Blueprint</h3>
                   <p className="text-white/80">Unify traces, evals, policy events, and incidents for audit-ready AI.</p>
+                </Link>
+                <Link href="/blog/ai-2026-agentic-systems-risk-matrix" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Agentic Systems Risk Matrix</h3>
+                  <p className="text-white/80">Assess risk by capability, scope, and impact to guide safe rollout.</p>
                 </Link>
               </div>
               <div className="mt-6">

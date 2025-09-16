@@ -11,9 +11,23 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-		title: 'Launch: AI Security Evidence Vault v1.0',
-		summary: 'Signed artifacts, lineage tracking, and audit-ready bundles for AI changes.',
-		href: '/updates/ai-security-evidence-vault-v1',
+		title: 'Launch: Production RAG Observability Suite v1.0',
+		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
+		href: '/updates/production-rag-observability-suite-1-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Agentic Change Management in Production (2026 Preview)',
+		summary: 'Safe rollout strategies with canaries, eval gates, and policy‑as‑code.',
+		href: '/updates/agentic-change-management-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
+		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
+		href: '/updates/real-time-agent-cost-optimizer-2-0',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
