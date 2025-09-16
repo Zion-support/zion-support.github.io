@@ -404,6 +404,42 @@
     }
     ,
     {
+      "title": "Guide — Real‑Time Guardrail Metrics (2026)",
+      "href": "/reports/guides/guide-2026-real-time-guardrail-metrics",
+      "desc": "Operational metrics to monitor safety and reliability live in prod",
+      "createdAt": "2025-09-16T22:59:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Reliable Autonomy & Billing Controls",
+      "href": "/reports/briefs/brief-2025-09-reliable-autonomy-billing-controls",
+      "desc": "Align agent behavior with budget and compliance constraints",
+      "createdAt": "2025-09-16T22:58:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Case Study — Real‑World Eval Gates Impact",
+      "href": "/reports/cases/case-2025-09-real-world-eval-gates-impact",
+      "desc": "How evaluation gates reduced incidents and improved MTTR",
+      "createdAt": "2025-09-16T22:57:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Playbook — Agent Governance Checklist (2026)",
+      "href": "/reports/playbooks/playbook-2026-agent-governance-checklist",
+      "desc": "Approvals, audit trails, and rollback as first‑class controls",
+      "createdAt": "2025-09-16T22:56:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Continuous Eval‑Driven SLOs",
+      "href": "/reports/guides/guide-2025-09-continuous-eval-driven-slos",
+      "desc": "Instrument SLIs that matter and tie them to SLOs",
+      "createdAt": "2025-09-16T22:55:00.000Z",
+      "source": "ai-content-factory"
+    }
+    ,
+    {
       "title": "Guide — Agent SLO Blueprints for Reliable Autonomy",
       "href": "/reports/guides/guide-2025-09-agent-slo-blueprints",
       "desc": "Evidence-first SLIs/SLOs wired to preflight, canary, and post-release gates",
