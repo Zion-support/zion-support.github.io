@@ -187,8 +187,13 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </AnimatePresence>
+=======
+          </divdiv>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
       </div>
 
       {/* Additional Features */}
