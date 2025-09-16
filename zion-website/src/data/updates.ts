@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Guide: Evals‑in‑Prod Control Plane (2026)',
+        summary: 'Blueprint for live evals, policy gates, and evidence bundles across environments.',
+        href: '/updates/evals-in-prod-control-plane-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Report: Autonomous Failure Analysis Toolkit (2026)',
+        summary: 'Trace diffs, lineage captures, and reproducible post‑mortems for agent incidents.',
+        href: '/updates/autonomous-failure-analysis-toolkit-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    {
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
         summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
         href: '/updates/real-time-agent-finops-dashboard-1-0',
