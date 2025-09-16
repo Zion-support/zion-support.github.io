@@ -13,6 +13,45 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Added Sept 2025: New content promotions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Routing</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-governed-model-routing" className="hover:underline">
+              AI 2026: Governed Model Routing
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Align budget, latency, and quality with policy-as-code routing and live evaluations.
+          </p>
+          <Link href="/content/ai-2026-governed-model-routing" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Runbooks</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-rollback-runbooks" className="hover:underline">
+              AI 2026: Agent Rollback Runbooks
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Scorecard-driven rollback patterns to keep autonomy safe and auditable in production.
+          </p>
+          <Link href="/content/ai-2026-agent-rollback-runbooks" className="text-rose-700 font-semibold">Open Runbooks →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-bundles-blueprint" className="hover:underline">
+              AI 2026: Evidence Bundles Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Package traces, evals, and policy events into verifiable bundles for audits and reviews.
+          </p>
+          <Link href="/content/ai-2026-evidence-bundles-blueprint" className="text-emerald-700 font-semibold">Read Blueprint →</Link>
+        </article>
         {/* New: Sept 2025 additions */}
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-purple-700 mb-2">Quickstart</div>
