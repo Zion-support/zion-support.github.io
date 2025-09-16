@@ -559,7 +559,6 @@ const App: React.FC = () => {
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
           
-<<<<<<< HEAD
           {/* NEW: Next Gen Content Routes 2026 */}
           <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
           <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
