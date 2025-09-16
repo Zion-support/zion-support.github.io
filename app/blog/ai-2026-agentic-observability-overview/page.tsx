@@ -1,56 +1,37 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI 2026: Agentic Observability — Executive Overview',
-	description: 'Overview of traces, evals, incidents, and KPIs for agentic systems to ship reliable autonomy.',
-};
+  title: 'Agentic Observability — Executive Overview (2026) | Zion Tech Group',
+  description: 'Traces, evals, incidents, and KPIs to operate agent platforms with confidence.',
+}
 
-export default function AgenticObservabilityOverviewPage() {
-	return (
-		<article className="min-h-screen bg-white">
-			<header className="bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white">
-				<div className="max-w-4xl mx-auto px-6 py-14">
-					<p className="text-pink-100/90 text-sm font-semibold">New • 2026</p>
-					<h1 className="text-3xl md:text-5xl font-bold leading-tight">Agentic Observability — Executive Overview</h1>
-					<p className="mt-4 text-pink-100/90 max-w-2xl">
-						Gain deep visibility with traces, evaluation gates, incident timelines, and release scorecards to
-						operate agent platforms with confidence.
-					</p>
-				</div>
-			</header>
+export default function AgenticObservabilityOverview() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-pink-50 to-rose-100">
+      <article className="mx-auto max-w-3xl px-6 py-16">
+        <header className="mb-10">
+          <p className="text-sm text-gray-600">Observability • September 2025 • 6 min read</p>
+          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">Agentic Observability — Executive Overview</h1>
+          <p className="mt-3 text-gray-700">What to measure, how to trace, and where to place gates to keep autonomy safe and reliable.</p>
+        </header>
 
-			<main className="max-w-4xl mx-auto px-6 py-10">
-				<section className="prose prose-lg max-w-none">
-					<h2>Key Telemetry</h2>
-					<ul>
-						<li><strong>Spans & Traces:</strong> End‑to‑end flow visibility across tools, models, and services.</li>
-						<li><strong>Live Evals:</strong> Policy‑gated checks on safety, quality, reliability, and cost.</li>
-						<li><strong>Incidents:</strong> Structured timelines with detection, mitigation, and prevention signals.</li>
-						<li><strong>KPIs:</strong> SLO‑aligned scorecards powering change decisions and rollbacks.</li>
-					</ul>
+        <section className="prose prose-slate max-w-none">
+          <h2>Core pillars</h2>
+          <ul>
+            <li>Decision traces and tool outcome telemetry</li>
+            <li>Evaluation suites wired to scorecards and release gates</li>
+            <li>Incident hooks and rollback contracts</li>
+          </ul>
+          <h2>Dashboards that matter</h2>
+          <p>Track success rates, override frequency, cost per outcome, and policy exceptions. Link anomalies to changes and owners.</p>
+        </section>
 
-					<h2>Operating Model</h2>
-					<ol>
-						<li>Instrument agent workflows with standardized spans and attributes.</li>
-						<li>Wire evaluation gates to releases and runtime, backed by scenario suites.</li>
-						<li>Adopt evidence hubs for audits and post‑incident reviews.</li>
-						<li>Use scorecards and rollback contracts to ship faster and safer.</li>
-					</ol>
-				</section>
-
-				<div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-					<Link href="/blog/ai-2026-agentic-observability-deep-dive" className="block p-5 rounded-lg border hover:shadow-sm">
-						<div className="text-sm font-semibold text-purple-700">Deep Dive</div>
-						<div className="text-lg font-bold text-gray-900">Agentic Observability</div>
-					</Link>
-					<Link href="/blog/ai-2026-release-scorecards" className="block p-5 rounded-lg border hover:shadow-sm">
-						<div className="text-sm font-semibold text-purple-700">Scorecards</div>
-						<div className="text-lg font-bold text-gray-900">Release Scorecards</div>
-					</Link>
-				</div>
-			</main>
-		</article>
-	);
+        <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-600 flex items-center gap-4">
+          <Link href="/blog" className="text-pink-700 hover:text-pink-800">← Back to Blog</Link>
+          <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="text-gray-600 hover:text-gray-800">Deep Dive →</Link>
+        </footer>
+      </article>
+    </main>
+  )
 }
 
