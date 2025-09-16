@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "title": "AI 2026: Next‑Gen Real‑Time Guardrails",
+      "href": "/blog/ai-2026-next-gen-realtime-guardrails",
+      "desc": "Runtime checks, approvals, and eval gates that keep autonomy fast and safe.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "2027: Governed Model Routing — Next Stage",
+      "href": "/blog/ai-2026-governed-model-routing-2027",
+      "desc": "Balance quality, latency, and spend with evidence‑driven routing policies.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
       "title": "Operational Maturity Models for Agentic Systems (2026)",
       "href": "/blog/ai-2026-operational-maturity-models-for-agentic-systems.md",
       "desc": "Evidence-first maturity model to safely scale autonomous agents.",
