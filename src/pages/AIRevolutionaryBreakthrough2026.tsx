@@ -1,52 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
+    
+    
+    
+    
+    
+    
 import Header from '../Header';
 import Footer from '../Footer';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-import Header from '../Header';
-import Footer from '../Footer';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-261d
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
+    
+    
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -300,51 +263,17 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-      </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
+    
+    
+    
+    
+    
       </main>
       
       <Footer />
-<<<<<<< HEAD
-=======
       </div>
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-      </main>
-      
-      <Footer />
-=======
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-261d
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
+    
+    
     </div>
   );
 };

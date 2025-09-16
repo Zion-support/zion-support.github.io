@@ -195,7 +195,6 @@ const UltimateTechShowcase2027: React.FC = () => {
             </button>
           </div>
         </div>
-        </AnimatePresence>
       </div>
     </div>
   );
