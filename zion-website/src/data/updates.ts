@@ -11,30 +11,29 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-		title: 'Launch: Autonomous Analytics Copilot v1.1',
-		summary: 'Upgraded insights with eval-gated dashboards, anomaly detection, and KPI copilots.',
-		href: '/updates/autonomous-analytics-copilot-1-1',
+<<<<<<< HEAD
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
+=======
+		title: 'Launch: Agentic SLO Dashboards (2026 Preview)',
+		summary: 'Define and operate SLOs for agents with drill‑downs to traces, evals, and incidents.',
+		href: '/updates/agentic-slo-dashboards-2026',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
 	{
-		title: 'Report: Agent Benchmark Suite v3',
-		summary: 'Expanded real-world tasks, safety gates, and cost-quality curves for agents.',
-		href: '/updates/agent-benchmark-suite-v3',
+		title: 'Guide: Grounded Generation Blueprint (2026 Preview)',
+		summary: 'Techniques to ensure factual, traceable outputs with retrieval, constraints, and eval gates.',
+		href: '/updates/grounded-generation-blueprint-2026',
 		date: '2025-09-16',
-		tag: 'Report',
-	},
-	{
-		title: 'Launch: AI Security Evidence Vault v1.0',
-		summary: 'Centralized evidence collection for audits with cryptographic integrity and guardrails.',
-		href: '/updates/ai-security-evidence-vault-v1',
-		date: '2025-09-16',
-		tag: 'Launch',
+		tag: 'Guide',
 	},
 	{
 		title: 'Launch: Production RAG Observability Suite v1.0',
 		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
 		href: '/updates/production-rag-observability-suite-1-0',
+>>>>>>> feat/new-updates-2025-09-16
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
