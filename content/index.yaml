@@ -519,11 +519,49 @@ content_index:
         review_time: "-50%"
         coverage: "100% gated"
 
+<<<<<<< HEAD
     - id: "ai-2026-agent-evidence-hub-starter"
       type: "resource"
       title: "AI 2026: Agent Evidence Hub — Starter Kit"
       file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
       url: "/resources/ai-2026-agent-evidence-hub-starter"
+=======
+    - id: "ai-2026-generative-ai-risk-register"
+      type: "blog"
+      title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
+      file_path: "/content/blog/ai-2026-generative-ai-risk-register.md"
+      url: "/blog/ai-2026-generative-ai-risk-register"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI Governance", "Risk Management", "Compliance", "Audit"]
+      featured: true
+      is_new: true
+      metrics:
+        approval_speed: "2x"
+        exceptions: "-35%"
+        audit_ready: true
+
+    - id: "ai-2026-agent-cost-optimization"
+      type: "blog"
+      title: "AI 2026: Agent Cost Optimization — Routing, Caching, and Benchmarks"
+      file_path: "/content/blog/ai-2026-agent-cost-optimization.md"
+      url: "/blog/ai-2026-agent-cost-optimization"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Cost Optimization", "Routing", "Benchmarks", "Observability"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        quality: "+/="
+
+    - id: "ai-2026-secure-agent-routing-strategies"
+      type: "blog"
+      title: "AI 2026: Secure Agent Routing Strategies"
+      file_path: "/content/blog/ai-2026-secure-agent-routing-strategies.md"
+      url: "/blog/ai-2026-secure-agent-routing-strategies"
+>>>>>>> origin/feat/new-content-2025-09-15-b
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]

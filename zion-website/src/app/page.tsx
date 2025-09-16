@@ -456,6 +456,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
 <<<<<<< HEAD
@@ -523,10 +524,13 @@ export default function HomePage() {
                 href: '/blog/ai-2026-real-time-retrieval-architectures'
               },
               {
+=======
+>>>>>>> origin/feat/new-content-2025-09-15-b
                 title: 'AI 2026: Generative AI Risk Register',
                 summary:
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
+<<<<<<< HEAD
 >>>>>>> origin/feat/content-policy-as-code
 =======
                 href: '/updates'
@@ -546,6 +550,19 @@ export default function HomePage() {
                 summary: 'Improved performance, new analytics dashboards, and security updates.',
                 href: '/about'
 >>>>>>> origin/feat/homepage-content-updates
+=======
+              },
+              {
+                title: 'AI 2026: Agent Cost Optimization',
+                summary:
+                  'Reduce spend 20–40% with routing, caching, batching, and benchmark‑driven choices.',
+                href: '/blog/ai-2026-agent-cost-optimization'
+              },
+              {
+                title: 'Sovereign AI Commerce (2026): Autonomous Marketplaces',
+                summary: 'Reference architecture, safety gates, and rollout checklist for AI commerce.',
+                href: '/blog/ai-2026-sovereign-ai-commerce'
+>>>>>>> origin/feat/new-content-2025-09-15-b
               }
 =======
                 href: '/updates',
