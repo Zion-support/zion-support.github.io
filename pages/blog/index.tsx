@@ -52,6 +52,13 @@ posts.unshift(
   { slug: 'ai-2026-enterprise-agent-risk-mitigation', title: 'Enterprise Agent Risk Mitigation (2026)', excerpt: 'Practical patterns to reduce safety, reliability, cost, and compliance risks.' }
 )
 
+// New articles (Sept 2025) — Real-time Evals, Edge Agents, Trustworthy Routing
+posts.unshift(
+  { slug: 'ai-2026-real-time-evals-inference-guardrails', title: 'Real-Time Evals & Inference Guardrails (2026)', excerpt: 'Enforce quality, safety, and budget at inference time with runtime signals.' },
+  { slug: 'ai-2026-edge-agents-production-guide', title: 'Edge Agents in Production — 2026 Guide', excerpt: 'Design, secure, and observe low-latency agents at the edge.' },
+  { slug: 'ai-2026-trustworthy-model-routing-starter', title: 'Trustworthy Model Routing — Starter Kit (2026)', excerpt: 'Budget-, latency-, and quality-aware routing with safety gates.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
