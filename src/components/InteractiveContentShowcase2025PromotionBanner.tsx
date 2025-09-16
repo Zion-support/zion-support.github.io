@@ -1,40 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  ArrowRight
-  Star
-  Zap
-  Brain
-  TrendingUp,
-  X,
-  CheckCircle
-} from 'lucide-react';
-
-const InteractiveContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  const features = [
-    "Interactive AI Demos",
-    "Real-time Analytics",
-    "Smart Automation",
-    "Live Performance Metrics"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
+const InteractiveContentShowcase2025PromotionBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -54,11 +22,11 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
+                <div
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Zap className="w-3 h-3" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
                   NEW: Interactive Content Showcase 2025
                 </span>
@@ -124,13 +92,14 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
 
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
-          <divdiv
+          <div
             className="h-full bg-white"
           />
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
 export default InteractiveContentShowcase2025PromotionBanner;
+</div></div></div></div></div></div></div></div></div></div>

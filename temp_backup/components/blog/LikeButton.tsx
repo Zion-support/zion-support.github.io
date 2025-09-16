@@ -1,26 +1,12 @@
-import { useState } from 'react';
+import React from 'react';
 
-export default function LikeButton({ postId, initialLikes = 0 }: { postId: string; initialLikes?: number }) {
-  const [likes, setLikes] = useState(initialLikes);
-  const [busy, setBusy] = useState(false);
-
-  const like = async () => {
-    if (busy) return;
-    setBusy(true);
-    try {
-      const res = await fetch(`/api/blog/metrics/${postId}/likes`, { method: 'POST' });
-      if (res.ok) {
-        const data = await res.json();
-        setLikes(data.metrics?.likes ?? likes + 1);
-      }
-    } finally {
-      setBusy(false);
-    }
-  };
-
+const LikeButton: React.FC = () => {
   return (
-    <button onClick={like} disabled={busy} className="px-3 py-2 rounded border">
-      👍 Like {likes > 0 ? `(${likes})` : ''}
-    </button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LikeButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default LikeButton;

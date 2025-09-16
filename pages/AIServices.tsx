@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+
+const AIServices: React.FC = () => {
+=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -263,173 +268,22 @@ const stats = [
 ];
 
 export default function AIServices() {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <Layout
-      title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Services & Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions. 
-                From machine learning to quantum AI, we deliver innovative results.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </Link>
-                <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Pricing
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our AI Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to accelerate your digital transformation
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.name}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-lg font-semibold text-blue-600">
-                        {service.price}
-                      </span>
-                      <span className="text-sm text-gray-500 line-through">
-                        {service.marketPrice}
-                      </span>
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Setup: {service.setupTime}
-                    </div>
-                  </div>
-
-                  <div className="flex space-x-2">
-                    <Link 
-                      href="/contact" 
-                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
-                    >
-                      Get Quote
-                    </Link>
-                    <Link 
-                      href={`/ai-services#${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-center hover:bg-blue-50 transition-colors"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Transform Your Business with AI?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Contact our AI experts today for a free consultation and discover how our solutions can accelerate your success.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Your AI Journey
-                </Link>
-                <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View All Pricing
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AIServices | Zion Tech Group</title>
+        <meta name="description" content="AIServices - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AIServices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
-}
+};
+
+export default AIServices;

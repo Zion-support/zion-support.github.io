@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
 
 import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
@@ -37,16 +40,15 @@ const FloatingActionButton = ({ className = '' }) => {
               </motion.div>))}
           </motion.div>)}
       </AnimatePresence>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-      <motion.button onClick={toggleMenu} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}>
-        <AnimatePresence mode="wait">
-          {isOpen ? (<motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <XMarkIcon className="w-6 h-6"/>
-            </motion.div>) : (<motion.div key="open" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <PlusIcon className="w-6 h-6"/>
-            </motion.div>)}
-        </AnimatePresence>
-      </motion.button>
-    </div>);
+const FloatingActionButton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FloatingActionButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
+
 export default FloatingActionButton;

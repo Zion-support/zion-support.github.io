@@ -1,28 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-	return (
-		<>
-			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">Browser Automation Cloud</h1>
-					<p className="mt-4 text-lg text-gray-300">Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
-						{features.map((f) => (
-							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
-								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
-							</div>
-						))}
-					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Playwright
-							</a>
-						<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Puppeteer
-							</a>
-					</div>
-				</section>
-			</main>
-		</>
+const browser-automation-cloud: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>browser-automation-cloud | Zion Tech Group</title>
+        <meta name="description" content="browser-automation-cloud - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">browser-automation-cloud</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default browser-automation-cloud;

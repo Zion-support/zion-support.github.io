@@ -38,4 +38,3 @@ export default function Helpdesk() {
       color: "from-red-500 to-pink-500"
     }
   ];
-

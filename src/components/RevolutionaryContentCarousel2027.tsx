@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
-const RevolutionaryContentCarousel2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -398,3 +395,4 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2027;
+=======

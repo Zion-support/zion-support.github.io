@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Cpu, Atom, Sparkles, Star } from 'lucide-react';
@@ -51,8 +54,16 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 
   const currentContent = revolutionaryContent[currentSlide];
   const IconComponent = currentContent.icon;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const RevolutionaryContentBanner2025: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <AnimatePresence>
       {isVisible && (
         <motion.div
@@ -283,6 +294,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         </motion.div>
       )}
     </AnimatePresence>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

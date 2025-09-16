@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
   return (
@@ -201,3 +201,4 @@ const RevolutionaryContentBanner: React.FC = () => {
 };
 
 export default RevolutionaryContentBanner;
+</div></div></div>

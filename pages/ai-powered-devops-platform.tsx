@@ -1,33 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIPoweredDevOpsPlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
-			</Head>
-			<ServiceLanding
-				title="AI-Powered DevOps Platform"
-				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
-				subtitle="Ship faster with higher reliability"
-				pricePerMonthUSD={2499}
-				implementationWeeks="2-4 weeks"
-				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-				features={[
-					"Autonomous CI/CD optimization and caching",
-					"Flaky test detection and auto quarantine",
-					"Change-risk scoring before deploy",
-					"Automated canary and feature flags",
-					"Rollback orchestration with blast radius limits",
-					"Incident prediction, runbooks, and guardrails"
-				]}
-				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
-			/>
-		</>
-	)
-}
+const ai-powered-devops-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-powered-devops-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-powered-devops-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-powered-devops-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-powered-devops-platform;

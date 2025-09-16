@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateServiceShowcase2026: React.FC = () => {
   return (
@@ -604,18 +605,8 @@ const UltimateServiceShowcase2026: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies that have already transformed their operations with our revolutionary services. Let's build the future together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation →
-            </a>
-            <a href="/pages/TranscendentAI2026" className="border border-slate-600 text-slate-600 px-8 py-4 rounded-lg hover:bg-slate-50 transition-colors font-semibold text-lg">
-              Explore Transcendent AI →
-            </a>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">UltimateServiceShowcase2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

@@ -1,48 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const AI2026ContentPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: "🧠",
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces for unprecedented control",
-      link: "/ai-2026-neural-interface-revolution"
-    },
-    {
-      icon: "⚡",
-      title: "Quantum Neural Fusion",
-      description: "Quantum-enhanced AI for exponential processing power",
-      link: "/ai-2026-quantum-neural-fusion-revolution"
-    },
-    {
-      icon: "🚀",
-      title: "Next-Gen Automation",
-      description: "Autonomous systems that think and adapt independently",
-      link: "/ai-2026-next-generation-business-automation"
-    },
-    {
-      icon: "🔮",
-      title: "Future Predictions",
-      description: "AI-powered forecasting with 99.9% accuracy",
-      link: "/ai-2026-future-predictions-breakthrough"
-    }
-  ];
-
+const AI2026ContentPromotionBanner: React.FC = () => {
   return (
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Animated Background */}

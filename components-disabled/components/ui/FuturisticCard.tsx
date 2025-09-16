@@ -1,9 +1,12 @@
-export default function FuturisticCard({ title, description, cta }: Props) {
+import React from 'react';
+
+const FuturisticCard: React.FC = () => {
   return (
-    <div className="futuristic-card">
-      <div className="futuristic-card-glow" />
-      <div className="relative z-10">
-        <h3 className="font-semibold text-gray-100">{title}</h3>
-        <p className="text-sm text-gray-300 mt-1">{description}</p>
-        {cta && <div className="mt-3">{cta}</div>}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default FuturisticCard;

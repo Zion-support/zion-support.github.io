@@ -1,39 +1,22 @@
 import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIHRRecruitmentPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'));
-  if (!service) return null;
-
+const ai-hr-recruitment: React.FC = () => {
   return (
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-hr-recruitment" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-teal-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">Hiring outcomes</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-hr-recruitment | Zion Tech Group</title>
+        <meta name="description" content="ai-hr-recruitment - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-hr-recruitment</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
+    </div>
   );
-}
+};
+
+export default ai-hr-recruitment;

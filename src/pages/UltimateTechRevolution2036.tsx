@@ -1,11 +1,13 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateTechRevolution2036: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>UltimateTechRevolution2036 | Zion Tech Group</title>
+        <meta name="description" content="UltimateTechRevolution2036 - Revolutionary technology solutions" />
+      </Helmet>
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -244,12 +246,12 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Universal physics manipulation</li>
                 <li>• Infinite dimensional control</li>
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
         >
           <h2 className="text-6xl font-bold text-white mb-8">Ready to Transcend Reality?</h2>

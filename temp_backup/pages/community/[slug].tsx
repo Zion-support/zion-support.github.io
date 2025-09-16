@@ -1,101 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { MessageSquare } from 'lucide-react';
-import PostCard from '@/components/community/PostCard';
-import { EmptyState } from '@/components/ui/empty-state';
-import type { ForumPost } from '@/types/community';
-import { fetchPostsByCategory } from '@/services/forumPostService';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const POSTS_PER_PAGE = 20; // Or any other limit you prefer
-
-const POSTS_QUERY = `
-  query Posts($slug: String!, $cursor: String) {
-    Posts(where: { category: $slug }, after: $cursor) {
-      edges {
-        node {
-          id
-          title
-          excerpt
-        }
-        cursor
-      }
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-    }
-  }
-`;
-
-export default function CategoryPage() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const [posts, setPosts] = useState<ForumPost[]>([]);
-  const [cursor, setCursor] = useState<string | null>(null);
-  const [hasMore, setHasMore] = useState(true);
-  const [loading, setLoading] = useState(false);
-
-  const loadPosts = async (after: string | null = null) => {
-    if (!slug) return;
-    setLoading(true);
-    const res = await fetch('/api/graphql', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } }),
-    });
-    const json = await res.json();
-    const result = json.data?.Posts;
-    if (result) {
-      const newPosts = result.edges.map((e: any) => e.node) as ForumPost[];
-      setPosts((prev) => (after ? [...prev, ...newPosts] : newPosts));
-      setCursor(result.pageInfo.endCursor);
-      setHasMore(result.pageInfo.hasNextPage);
-    }
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    setPosts([]);
-    setCursor(null);
-    if (slug) {
-      loadPosts(null);
-    }
-  }, [slug]);
-
+const [slug]: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>{`${slug} Forum – ZionAI`}</title>
-      </Head>
-      <main className="container py-8">
-        {posts.length > 0 ? (
-          <div className="space-y-4">
-            {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
-            ))}
-            {hasMore && (
-              <div className="text-center mt-6">
-                <button
-                  className="text-zion-purple underline"
-                  onClick={() => loadPosts(cursor)}
-                  disabled={loading}
-                >
-                  {loading ? 'Loading...' : 'Load More'}
-                </button>
-              </div>
-            )}
-          </div>
-        ) : !loading ? (
-          <EmptyState
-            icon={<MessageSquare className="h-10 w-10 text-zion-purple" />}
-            title="No posts yet"
-            description="Be the first to post"
-          />
-        ) : null}
-      </main>
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>[slug] | Zion Tech Group</title>
+        <meta name="description" content="[slug] - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">[slug]</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default [slug];

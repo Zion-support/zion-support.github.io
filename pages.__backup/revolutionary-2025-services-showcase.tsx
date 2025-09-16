@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -11,20 +14,20 @@ import {
   PhoneMailMapPinExternalLinkChevronDown,
   AwardTargetZap as ZapIconGlobe as GlobeIcon
 } from 'lucide-react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-// Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-
-const allServices = [...revolutionary2025Services...revolutionary2025ITServices];
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+const revolutionary-2025-services-showcase: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">revolutionary-2025-services-showcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
+<<<<<<< HEAD
+export default revolutionary-2025-services-showcase;
+=======
 const serviceCategories = [
   {
     id: 'ai-consciousness',
@@ -600,3 +603,4 @@ export default function Revolutionary2025ServicesShowcase() {
     </>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

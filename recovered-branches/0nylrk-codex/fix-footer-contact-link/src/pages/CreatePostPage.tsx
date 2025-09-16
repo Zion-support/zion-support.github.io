@@ -1,18 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
-      // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
-        title="Create New Post | Community Forum | Zion AI Marketplace"
-        description="Create a new discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, create post, new thread"
-      />
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium">Create Post</span>
+const CreatePostPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>CreatePostPage | Zion Tech Group</title>
+        <meta name="description" content="CreatePostPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">CreatePostPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
+      </div>
+    </div>
+  );
+};
+
+export default CreatePostPage;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 'use client';
 
@@ -49,8 +52,15 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
     { value: '500+'label: 'Research Papers' },
     { value: '1M+'label: 'Global Impact' }
   ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FutureTechnologyShowcase2026PromotionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -222,6 +232,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
           </div>
         </div>
       </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

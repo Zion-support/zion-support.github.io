@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
@@ -159,9 +158,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             </Link>
           </div>
         </div>
+=======
       </div>
-    </div>
-  );
-};
-
-export default RevolutionaryTechShowcase2025;
+    </>

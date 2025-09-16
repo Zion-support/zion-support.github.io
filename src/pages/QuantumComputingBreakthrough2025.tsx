@@ -1,4 +1,3 @@
-import React from 'react';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
@@ -51,6 +50,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Protein Folding Simulation</li>
               <li>• Drug Interaction Modeling</li>
               <li>• Molecular Design</li>
+=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -87,39 +87,42 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
             <p className="text-cyan-100 mb-6 text-center">
+              Achieve computational power that exceeds classical computers by orders of magnitude
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• 1,000,000x faster processing</li>
+              <li>• Parallel universe computing</li>
+              <li>• Instant problem solving</li>
+            </ul>
+          </div>
+          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔐</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Cryptography</h3>
             <p className="text-purple-100 mb-6 text-center">
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              Unbreakable encryption that ensures absolute security for your data
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum key distribution</li>
+              <li>• Unhackable communications</li>
+              <li>• Future-proof security</li>
             </ul>
           </div>
-        </div>
-      </div>
-
-            <div className="text-6xl mb-4 text-center">🎯</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Optimization Problems</h3>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Solve complex optimization problems in logistics, finance, and resource allocation
+              Simulate complex molecular interactions for drug discovery and materials science
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Supply chain optimization</li>
-              <li>• Portfolio management</li>
-              <li>• Route optimization</li>
-              <li>• Resource allocation</li>
+              <li>• Drug discovery acceleration</li>
+              <li>• Materials design</li>
+              <li>• Climate solutions</li>
             </ul>
-            <div className="text-center">
-              <div className="inline-block bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold">
-                Coming Soon
-          </div>
-        </div>
-      </div>
-
       {/* Quantum Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -149,10 +152,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <div className="text-lg opacity-80">Uptime</div>
               <div className="text-sm text-emerald-200">Continuous operation</div>
             </div>
-          </div>
-        </div>
-      </div>
-
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -247,10 +246,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 <span className="text-purple-400">99%</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
       {/* Quantum Demo */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -302,34 +297,17 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         </div>
       </div>
 
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-            </button>
-          <h2 className="text-4xl font-bold mb-6">Unlock Quantum Computing Power</h2>
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
+          <h2 className="text-4xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and harness the power of quantum computing to solve your most complex challenges.
+            Join the quantum revolution and discover how quantum computing can solve your most complex problems
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/pages/RevolutionaryTechShowcase2025" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105"
-            >
-              Access Quantum Cloud →
-            </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default QuantumComputingBreakthrough2025;
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Quantum Journey
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              Schedule Demo
+            </button>

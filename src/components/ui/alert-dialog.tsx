@@ -88,4 +88,3 @@ export const AlertDialogTrigger = React.forwardRef<HTMLButtonElement, ButtonProp
 AlertDialogTrigger.displayName = "AlertDialogTrigger";
 
 export default AlertDialog;
-

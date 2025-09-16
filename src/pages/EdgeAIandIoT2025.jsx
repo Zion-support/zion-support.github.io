@@ -1,7 +1,3 @@
-import React from "react";
-
-const EdgeAIandIoT2025 = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -61,4 +57,11 @@ const EdgeAIandIoT2025 = () => {
   );
 };
 
+export default EdgeAIandIoT2025;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">EdgeAIandIoT2025</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
 export default EdgeAIandIoT2025;

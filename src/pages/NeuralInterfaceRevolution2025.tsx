@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -23,7 +22,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          <divdiv
+          <div
             className="text-center text-white"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-semibold mb-6">
@@ -102,10 +101,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-8"
             >
@@ -152,9 +151,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </li>
                 </ul>
               </div>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-8"
             >
@@ -221,7 +220,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>
@@ -313,7 +312,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center"
           >
@@ -324,7 +323,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -1612,10 +1611,21 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+=======
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default NeuralInterfaceRevolution2025;
+        {/* Call to Action */}
+        <div
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
+          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
+            Experience the next evolution of human-computer interaction with our revolutionary neural interface technology.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Neural Journey
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
+              Learn More
+            </button>

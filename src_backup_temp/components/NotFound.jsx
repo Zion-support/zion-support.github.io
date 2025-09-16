@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const NotFound: React.FC = () => {
+=======
 import React from 'react';'''';';
 import {Link} from 'react-router-dom';'''';';
 
@@ -369,10 +374,13 @@ interface NotFound.jsProps {
   // Add props here as needed
 }
 export default function NotFound.js({ }: NotFound.jsProps) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <div>
-      <h1>NotFound.js</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotFound</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default NotFound;

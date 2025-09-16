@@ -1,7 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-const BusinessIntelligenceRevolutionBanner2025 = () => {
+const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
       {/* Data Visualization Background */}

@@ -1,4 +1,12 @@
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''";
-import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
+import React from 'react';
+
+const _app: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_app</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default _app;

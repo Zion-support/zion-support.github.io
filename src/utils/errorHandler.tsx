@@ -382,7 +382,6 @@ const errorHandler = new ErrorHandler();
 
 // Export for use in components
 export default errorHandler;
-
 // React Error Boundary
 export class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
@@ -392,11 +391,9 @@ export class ErrorBoundary extends React.Component<
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     errorHandler.handleError({
       type: 'ReactErrorBoundary',
@@ -408,17 +405,14 @@ export class ErrorBoundary extends React.Component<
       }
     });
   }
-
   render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
       return <FallbackComponent error={this.state.error || new Error('Unknown error')} />;
     }
-
     return this.props.children;
   }
 }
-
 // Default error fallback component
 function DefaultErrorFallback({ error }: { error: Error }) {
   return (
@@ -431,12 +425,8 @@ function DefaultErrorFallback({ error }: { error: Error }) {
           <pre style={{ textAlign: 'left', marginTop: '10px' }}>
             {error.message}
             {error.stack}
-          </pre>
-        </details>
       )}
       <button onClick={() => window.location.reload()}>
         Reload Page
-      </button>
-    </div>
   );
 }

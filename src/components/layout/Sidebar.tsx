@@ -38,7 +38,6 @@ const Sidebar: React.FC = () => {;
 };
 
 export default Sidebar;
-
 >>>>>>> origin/merged-prs
   };
 ,
@@ -104,12 +103,10 @@ export default Sidebar;
 ,
   return (,
     <motion.aside,
-
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duratio: n: 0.3, eas: e: 'easeInOut' }};
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
-
     >,
       <div className="p-6">,
         {/* Header */};

@@ -1,18 +1,12 @@
-}
-}
-import _React,{ useState } from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; import {} Table,TableHead,TableHeader,TableRow,TableBody,'; TableCell} from '@/components/ui/table';'; import { Input } from '@/components/ui/input';'; import { Switch } from '@/components/ui/switch';'; const initialProducts = [''; { "id": '1',"name": 'Alpha',"category": 'Software',"status": 'pending' },'; { "id": '2',"name": 'Beta',"category": 'Hardware',"status": 'approved' },'; { "id": '3',"name": 'Gamma',"category": 'Service',"status": 'rejected' } ]; export {}return null} '; ''; '''; const [search,setSearch] = useState('')const [products,setProducts] = useState(initialProducts)const filtered = products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()))const toggleApproval = id => {} setProducts(prev => prev.map(p => p.id === id; ? {} ...p,'; "status": p.status === 'approved' ? 'rejected' : 'approved'} : p; ))}return()<AdminLayout> <div className="space-y-4"> <div className="flex items-center justify-between"> <h1 className="text-2xl font-bold">Products</h1>"; <div>Broken JSX</div> onChange={e => setSearch(e.target.value)}className="max-w-xs"; />"; </div> <div className="rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>ID></div> <TableHead>Name></div> <TableHead>Category</TableHead>"; <TableHead>Status</TableHead> <TableHead className="text-center">Approve></div> ></div> ></div> <TableBody> {filtered.map(p => (<TableRow key={p.id}> <TableCell>{p.id}></div> <TableCell>{p.name}></div> <TableCell>{p.category}</TableCell>"; <TableCell>{p.status}</TableCell> <TableCell className="text-center">'; <div>Broken JSX</div> onCheckedChange={ () => toggleApproval(p.id) } /> ></div> </TableRow>) ) } ></div> ></div> ></div> ></div> </AdminLayout>)}export { ProductsAdminPage }export { ProductsAdminPage }export { ProductsAdminPage }export { ProductsAdminPage }export { ProductsAdminPage }
 import React from 'react';
-interface ProductsAdminPageProps {
-  // Add props here as needed
-}
-export default function ProductsAdminPage({}: ProductsAdminPageProps) {
+
+const ProductsAdminPage: React.FC = () => {
   return (
-    <div>
-      <h1>ProductsAdminPage</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ProductsAdminPage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
-import _React,{ useState } from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; import {} Table,; TableHead,; TableHeader,; TableRow,; TableBody,'; TableCell} from '@/components/ui/table';'; import { Input } from '@/components/ui/input';'; import { Switch } from '@/components/ui/switch';'; const initialProducts = [''; { "id": '1',"name": 'Alpha',"category": 'Software',"status": 'pending' },'; { "id": '2',"name": 'Beta',"category": 'Hardware',"status": 'approved' },'; { "id": '3',"name": 'Gamma',"category": 'Service',"status": 'rejected' } ]; export {}; return null} '; ''; '''; const [search,setSearch] = useState(''); const [products,setProducts] = useState(initialProducts); const filtered = products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()); ); const toggleApproval = id => {} setProducts(prev => prev.map(p => p.id === id; ? {} ...p,'; "status": p.status === 'approved' ? 'rejected' : 'approved'} : p; ); );}; return(); <AdminLayout> <div className="space-y-4"> <div className="flex items-center justify-between"> <h1 className="text-2xl font-bold">Products</h1>"; <div>Broken JSX</div> onChange={e => setSearch(e.target.value)}; className="max-w-xs"; />"; </div> <div className="rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>ID></div> <TableHead>Name></div> <TableHead>Category</TableHead>"; <TableHead>Status</TableHead> <TableHead className="text-center">Approve></div> ></div> ></div> <TableBody> {filtered.map(p => (<TableRow key={p.id}> <TableCell>{p.id}></div> <TableCell>{p.name}></div> <TableCell>{p.category}</TableCell>"; <TableCell>{p.status}</TableCell> <TableCell className="text-center">'; <div>Broken JSX</div> onCheckedChange={ () => toggleApproval(p.id) } /> ></div> </TableRow>) ) } ></div> ></div> ></div> ></div> </AdminLayout>)} ; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage };
+};
+
+export default ProductsAdminPage;

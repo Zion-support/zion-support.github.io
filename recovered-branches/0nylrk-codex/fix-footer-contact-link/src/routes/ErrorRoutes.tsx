@@ -1,15 +1,11 @@
+import React from 'react';
 
-import { Fragment } from "react";
-import NotFound from "@/pages/NotFound";
-import Unauthorized from "@/pages/Unauthorized";
-
-const ErrorRoutes = () => {
+const ErrorRoutes: React.FC = () => {
   return (
-    <Routes>
-      {/* Error Routes */}
-      <Route path="/unauthorized" element={<Unauthorized />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ErrorRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

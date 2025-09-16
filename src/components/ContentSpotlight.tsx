@@ -103,4 +103,3 @@ const ContentSpotlight: React.FC = () => {
 };
 
 export default ContentSpotlight;
-

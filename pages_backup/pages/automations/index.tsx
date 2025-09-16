@@ -1,56 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const AutomationsIndex: NextPage = () => {
-  const items = [
-
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-
+const index: React.FC = () => {
   return (
-    <main className="space-y-6">
-      <h1 className="text-3xl font-bold">Autonomous Automations</h1>
-      <p className="text-gray-600">These run in the cloud on a schedule, with no human interaction.</p>
-      <div className="grid md:grid-cols-2 gap-4">
-        {items.map((it) => (
-          <Link key={it.href} href={it.href}>
-            <div className="enhanced-card hover:shadow-lg cursor-pointer">
-              <h2 className="text-xl font-semibold">{it.title}</h2>
-              <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
-            </div>
-          </Link>
-
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </main>
-  )
-}
-export default AutomationsIndex;
-
-
-export default AutomationsIndex,;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-      </div>;
-
-    </main>;
+    </div>
   );
-},;
-export default AutomationsIndex;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
+export default index;

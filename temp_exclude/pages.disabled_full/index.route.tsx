@@ -1,4 +1,12 @@
-import React from \'react\'; import Link from \'next/link\'; export default function HomeRoute() { return ( <main style={{ \"padding\": \'24\',\"fontFamily\": \'ui-sans-serif,system-ui\' }}> <h1 style={{ \"fontSize\": \'28\',\"fontWeight\": \'700\' }}>Zion Tech Group</h1> <p style={{ \"marginTop\": \'8\' }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ \"marginTop\": \'16\',\"display\": \'flex\',\"gap\": \'12\' }}> <Link href=\"/services/comprehensive-micro-saas-showcase\" legacyBehavior> <a style={{ \"color\": \'#4f46e5\' }}>Explore Services</a> </Link> <Link href=\"/services\" legacyBehavior> <a style={{ \"color\": \'#4f46e5\' }}>Services Overview</a> </Link> <a href=\""https\": </div> </main> )}
-const React from "react"; import Link from "next/link"; export default function HomeRoute() { return ( <main style={{ padding: "24",fontFamily: "ui-sans-serif,system-ui" }}> <h1 style={{ fontSize: "28",fontWeight: "700" }}>Zion Tech Group</h1> <p style={{ marginTop: "8" }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ marginTop: "16",display: "flex",gap: "12" }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ color: "#4f46e5" }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ color: "#4f46e5" }}>Services Overview</a> </Link> <a href="https: </div> </main> )}'"'";
-import _React from 'react'; import Link from 'next/link'; export default function HomeRoute() { return ( <main style={{ "padding": '24',"fontFamily": 'ui-sans-serif,system-ui' }}> <h1 style={{ "fontSize": '28',"fontWeight": '700' }}>Zion Tech Group</h1> <p style={{ "marginTop": '8' }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ "marginTop": '16',"display": 'flex',"gap": '12' }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Services Overview</a> </Link> <a href=""https": </div> </main> )}
-const React from "react"; import Link from "next/link"; export default function HomeRoute() { return ( <main style={{ padding: "24",fontFamily: "ui-sans-serif,system-ui" }}> <h1 style={{ fontSize: "28",fontWeight: "700" }}>Zion Tech Group</h1> <p style={{ marginTop: "8" }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ marginTop: "16",display: "flex",gap: "12" }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ color: "#4f46e5" }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ color: "#4f46e5" }}>Services Overview</a> </Link> <a href="https: </div> </main> )}'"'"
+import React from 'react';
+
+const index.route: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index.route</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default index.route;

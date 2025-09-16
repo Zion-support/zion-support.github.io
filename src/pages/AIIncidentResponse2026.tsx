@@ -30,4 +30,3 @@ const AIIncidentResponse2026: React.FC = () => {
 };
 
 export default AIIncidentResponse2026;
-

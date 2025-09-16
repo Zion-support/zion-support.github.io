@@ -95,3 +95,6 @@ export function SocialLogin() {
   );
 >>>>>>> origin/merged-prs
 }
+
+</div>
+</p></p></p></p></p></p></p></p>

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 'use client';
 
@@ -45,8 +48,16 @@ const RevolutionaryTechBanner2026 = () => {
     { number: "10x"label: "Performance Boost" },
     { number: "24/7"label: "AI Monitoring" }
   ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const RevolutionaryTechBanner2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RevolutionaryTechBanner2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -209,6 +220,7 @@ const RevolutionaryTechBanner2026 = () => {
         </motion.div>
       </div>
     </motion.section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

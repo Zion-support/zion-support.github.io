@@ -1,8 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-ArrowRightTrendingUpDollarSignClockUsersAwardTargetCheckCircle
 
-const AI2026GlobalTransformation800ROISuccessBanner = () => {
+const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}

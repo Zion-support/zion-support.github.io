@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const MachineLearningDashboard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MachineLearningDashboard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default MachineLearningDashboard;
+=======
 import React, {useState, useCallback} from 'react';';
 
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
@@ -2077,3 +2091,4 @@ export default Component;
 </div>;
 </div>;
 </Brain>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

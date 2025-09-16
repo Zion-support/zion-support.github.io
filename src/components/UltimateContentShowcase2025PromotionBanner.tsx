@@ -1,70 +1,9 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  ArrowRight,
-  Play,
-  X,
-  ChevronRight,
-  Clock
-} from 'lucide-react';
-
-const UltimateContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'Neural Interface Revolution',
-      description: '500% efficiency boost',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Quantum AI Fusion',
-      description: '1000x faster processing',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Enterprise Automation',
-      description: '90% cost reduction',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Star,
-      title: 'Future Predictions',
-      description: '95% accuracy rate',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  if (isDismissed || !isVisible) return null;
-
+const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-purple-900 via-slate-900 to-blue-900 border-b border-purple-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -77,7 +16,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <div
                 className="flex items-center gap-3"
               >
                 <div className="relative">
@@ -97,13 +36,13 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                     Revolutionary AI Innovation & Future Predictions
                   </p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Rotating Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-purple-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                    <div
                       key={currentFeature}
                       className="flex items-center gap-2"
                     >
@@ -118,7 +57,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                           {features[currentFeature].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,7 +102,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           {/* Mobile Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+                <div
                   key={currentFeature}
                   className="flex items-center gap-2"
                 >
@@ -178,7 +117,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                       {features[currentFeature].description}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -186,10 +125,10 @@ const UltimateContentShowcase2025PromotionBanner = () => {
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
-        <divdiv
+        <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
+        ></div>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { ArrowRightIcon, SparklesIcon, CpuChipIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 
-const AI2026QuantumNeuralFusionRevolutionBanner = () => {
+const AI2026QuantumNeuralFusionRevolutionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}

@@ -13,9 +13,7 @@ export default function UltraFuturistic2029InnovationsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
-
   return (
     <>
       <Head>
@@ -27,42 +25,31 @@ export default function UltraFuturistic2029InnovationsPage() {
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
-      </Head>
-
       {/* Background */}
       <UltraFuturisticBackground2029 />
-      
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
               className="mb-8"
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-full px-6 py-3 mb-8">
                 <Rocket className="w-5 h-5 text-purple-400" />
                 <span className="text-purple-400 font-medium">2029 Technology Preview</span>
-              </div>
-            </divdiv>
-
             <divh1
               className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight"
             >
               2029 Ultra-Futuristic
               <br />
               <span className="text-white">Innovations</span>
-            </divh1>
-
             <divp
               className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
               Experience the future of technology with our revolutionary services that push the boundaries 
               of what's possible. From AI consciousness simulation to Mars colonization automation.
-            </divp>
-
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <a
@@ -70,32 +57,22 @@ export default function UltraFuturistic2029InnovationsPage() {
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
               >
                 Explore Innovations
-              </a>
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
               >
                 Get Started
-              </a>
-            </divdiv>
-          </div>
-        </section>
-
         {/* Innovation Categories Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation Categories
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 2029 innovations span across multiple cutting-edge technology domains
-              </p>
-            </divdiv>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -141,14 +118,13 @@ export default function UltraFuturistic2029InnovationsPage() {
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Time'))
                 }
               ].map((category, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-gray-300 mb-6">{category.description}</p>
                   <div className="space-y-2">
@@ -156,20 +132,11 @@ export default function UltraFuturistic2029InnovationsPage() {
                       <div key={serviceIndex} className="flex items-center justify-between text-sm">
                         <span className="text-gray-400">{service.name}</span>
                         <span className="text-purple-400 font-semibold">{service.price}</span>
-                      </div>
                     ))}
-                  </div>
                   <div className="mt-4 pt-4 border-t border-gray-700/50">
                     <span className="text-xs text-gray-500">
                       {category.services.length} innovation{category.services.length !== 1 ? 's' : ''} available
-                    </span>
-                  </div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Services Showcase */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <UltraFuturistic2029ServiceShowcase 
@@ -178,23 +145,17 @@ export default function UltraFuturistic2029InnovationsPage() {
             subtitle="Explore our complete portfolio of revolutionary 2029 technology solutions"
             maxServices={20}
           />
-        </section>
-
         {/* Innovation Stats */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation Impact
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 2029 innovations are already transforming industries and creating new possibilities
-              </p>
-            </divdiv>
-
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 { label: 'Revolutionary Services', value: all2029Services.filter(s => (s as any).innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
@@ -202,54 +163,39 @@ export default function UltraFuturistic2029InnovationsPage() {
                 { label: 'Total Customers', value: all2029Services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
                 { label: 'Average Rating', value: (all2029Services.reduce((sum, s) => sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
               ].map((stat, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="text-center"
                 >
                   <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}>
                     <stat.icon className="w-10 h-10 text-white" />
-                  </div>
                   <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Contact CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience 2029?
-              </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the future of technology with our revolutionary 2029 innovations. 
                 Contact us today to discover how we can transform your business.
-              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
                 >
                   Get Started Today
-                </a>
                 <a
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
                 >
                   Call Now
-                </a>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-
         {/* Footer */}
         <UltraFuturisticFooter2029 />
     </>

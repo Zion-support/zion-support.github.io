@@ -62,9 +62,7 @@ export default function Services() {
   const [sortBy, setSortBy] = useState('rating');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
-
   ];
-
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -73,7 +71,6 @@ export default function Services() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
@@ -88,13 +85,11 @@ export default function Services() {
         return 0;
     }
   });
-
   // Pagination logic
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,37 +99,30 @@ export default function Services() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 }
   };
-
   const getCategoryIcon = (categoryName: string) => {
     const category = categories.find(cat => cat.id === categoryName);
     return category ? category.icon : '🚀';
   };
-
   const getCategoryColor = (categoryName: string) => {
     const category = categories.find(cat => cat.id === categoryName);
     return category ? category.color : 'from-cyan-500 to-blue-500';
   };
-
   const handleCategoryChange = (categoryId: string) => {
     setActiveCategory(categoryId);
     setCurrentPage(1);
   };
-
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
     setCurrentPage(1);
   };
-
   const handleSortChange = (value: string) => {
     setSortBy(value);
     setCurrentPage(1);
   };
-
   return (
     <>
       <SEO 
@@ -142,7 +130,6 @@ export default function Services() {
         description="Discover our comprehensive suite of AI-powered micro SAAS services, cutting-edge technology solutions, and innovative platforms that transform businesses across industries."
         keywords="AI services, micro SAAS, technology solutions, business intelligence, cybersecurity, cloud computing, blockchain, IoT, quantum computing"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -154,7 +141,6 @@ export default function Services() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
@@ -163,28 +149,17 @@ export default function Services() {
                           className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border border-white/20"
                         >
                           {tag}
-                        </span>
                       ))}
                       {service.tags.length > 3 && (
                         <span className="px-2 py-1 bg-white/10 text-gray-400 text-xs rounded-full border border-white/20">
                           +{service.tags.length - 3} more
-                        </span>
                       )}
-                    </div>
-
                     {/* Service Details */}
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="text-center p-3 bg-white/5 rounded-lg">
                         <div className="text-lg font-bold text-cyan-400">{service.aiScore}%</div>
                         <div className="text-xs text-gray-400">AI Score</div>
-                      </div>
                       <div className="text-center p-3 bg-white/5 rounded-lg">
                         <div className="text-lg font-bold text-emerald-400">{service.setupTime}</div>
                         <div className="text-xs text-gray-400">Setup Time</div>
-                      </div>
-                    </div>
-
-          </div>
-        </motion.div>
-
         {/* CTA Section */}

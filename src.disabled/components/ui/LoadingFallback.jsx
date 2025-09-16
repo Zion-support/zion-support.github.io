@@ -1,14 +1,12 @@
-' import { Loader2 export function LoadingFallback({ message = \'Loading...\',size = \'md\',className = \' }) {} const sizeClasses = {} \' \"sm\": \'w-6: h-6,\',\' \"md\": \'w-8: h-8,\',\' \"lg\": \'w-12: h-12\'} const textSizes = {} \' \"sm\": \'text-sm,\',\' \"md\": \'text-base,\',\' \"lg\": \'text-lg\'} \"return\": (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}> <motion.div animate={{ \"rotate\": \'360\'}} \"transition\": = { { duration: 1,\"repeat\": \'Infinit\',y,\' \"ease\": \'linear\'}}>\" <\"Loader2\": className={\"${sizeClasses[size]} text-zion-cyan\"}/> </motion.div> \''\';\'"\"";
-" import { Loader2 export function LoadingFallback({ message = "Loading.",size = "md",className = " }) {} const sizeClasses = {} " sm: "w-6: h-6,"," md: "w-8: h-8,"," lg: "w-12: h-12"} const textSizes = {} " sm: "text-sm,"," md: "text-base,"," lg: "text-lg"} return: (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}> <motion.div animate={{ rotate: "360"}} transition: = { { duration: 1,repeat: "Infinit",y," ease: "linear"}}>" <Loader2: className={"${sizeClasses[size]} text-zion-cyan"}/> </motion.div> """;"""";""`"`
 import React from 'react';
-interface LoadingFallbackProps {
-  // Add props here as needed
-}
-export default function LoadingFallback({ }: LoadingFallbackProps) {
+
+const LoadingFallback: React.FC = () => {
   return (
-    <div>
-      <h1>LoadingFallback</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LoadingFallback</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default LoadingFallback;

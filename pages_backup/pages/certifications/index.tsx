@@ -1,120 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { useEffect, useState  } from 'react';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-export default function Certifications() {
-  const [leaderboard, setLeaderboard] = useState<any[]>([]);
-  useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r;
-import {useEffect, useState} from 'react';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-        </div>
-      </div>
-      <div>
-        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
-        <ol className='list-decimal pl-6 space-y-1 text-sm'>
-          {leaderboard.map(u => (
-            <li key={u.userId}>
-              {u.name} — {u.points} pts
-            </li>          ))}
-        </ol>
-      </div>
-    </div>
-);
-
-import { useEffect, useState } from 'react',
-import CertificatePreview from '../../components/learn/CertificatePreview'
-export default function Certifications() {
-  const [leaderboard, setLeaderboard] = useState<any[]>([]),
-  useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []))
-  }, []),
-
-
+const index: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold">Certifications</h1>
-        <div className="text-gray-500 text-sm">Your achievements and top learners</div>
-      </div>
-
-      <div>
-        <div className="font-medium mb-2">Your Certificates</div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-          {/* Demo: show a sample preview for one course to illustrate */}
-          {/* Demo: show a sample preview for one course to illustrate */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-          <CertificatePreview courseId="ai-dev-foundations" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-      <div>
-
-
-
-
-
-
-
-
-      <div>;
-        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;
-        <ol className='list-decimal pl-6 space-y-1 text-sm'>;
-          {leaderboard && leaderboard.map(u => (;
-            <li key={u && u.userId}>;
-              {u && u.name} — {u && u.points} pts;
-            </li>          ))}
-
-
-
-
-        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
-        <ol className="list-decimal pl-6 space-y-1 text-sm">
-          {leaderboard.map((u) => (
-            <li key={u.userId}>{u.name} — {u.points} pts</li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ol>;
-      </div>;
-    </div>;
-  );
-
-
-
-        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
-        <ol className="list-decimal pl-6 space-y-1 text-sm">
-          {leaderboard.map((u) => (
-            <li key={u.userId}>{u.name} — {u.points} pts</li>
-          ))}
-        </ol>
-      </div>
     </div>
-  )
-}
-import {useEffect, useState} from 'react';
-import CertificatePreview from '../../components / learn / CertificatePreview';
-        </div>;
-      </div>;
-      <div>;
-        <div className='font - medium mb - 2'>Leaderboard (Top Learners)</div>;
-        <ol className='list - decimal pl - 6 space - y-1 text - sm'>;
-          {leaderboard.map (u => (
-            <li key={u.user_id}>;
-              {u.name}  {u.points} pts;
-            </li>          ))}
-        </ol>;
-      </div>;
-    </div>);
-;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+  );
+};
 
+export default index;
