@@ -1,236 +1,305 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
-        <div className="relative container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              ⚛️ QUANTUM COMPUTING REVOLUTION 2025
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Quantum Supremacy Achieved
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the power of quantum computing that solves problems 
-              in minutes that would take classical computers millennia to complete.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Explore Quantum Solutions
-              </button>
-              <button className="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all duration-300">
-                Watch Quantum Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Quantum Capabilities */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Quantum Computing Capabilities</h2>
-          <p className="text-xl text-gray-300">Unlock unprecedented computational power</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Supremacy</h3>
-            <p className="text-gray-300 mb-6">
-              Achieve computational tasks that are impossible for classical computers, 
-              solving complex problems in seconds instead of years.
-            </p>
-            <div className="flex items-center text-sm text-cyan-300">
-              <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
-              Exponential speed advantage
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">🔐</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
-            <p className="text-gray-300 mb-6">
-              Unbreakable encryption using quantum principles, 
-              ensuring absolute security for your most sensitive data.
-            </p>
-            <div className="flex items-center text-sm text-blue-300">
-              <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-              Unbreakable security
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Biology</h3>
-            <p className="text-gray-300 mb-6">
-              Simulate complex biological processes at the molecular level, 
-              accelerating drug discovery and medical research.
-            </p>
-            <div className="flex items-center text-sm text-indigo-300">
-              <span className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
-              Molecular-level simulation
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Simulation</h3>
-            <p className="text-gray-300 mb-6">
-              Model complex quantum systems and materials, 
-              enabling breakthroughs in physics and chemistry.
-            </p>
-            <div className="flex items-center text-sm text-purple-300">
-              <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-              Accurate quantum modeling
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-pink-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/30 hover:border-pink-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Optimization</h3>
-            <p className="text-gray-300 mb-6">
-              Solve complex optimization problems across logistics, 
-              finance, and resource allocation with quantum algorithms.
-            </p>
-            <div className="flex items-center text-sm text-pink-300">
-              <span className="w-2 h-2 bg-pink-400 rounded-full mr-2"></span>
-              Optimal solutions guaranteed
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/60 transition-all duration-300">
-            <div className="text-5xl mb-4">🌍</div>
-            <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced climate simulation using quantum computing 
-              to predict and mitigate climate change effects.
-            </p>
-            <div className="flex items-center text-sm text-green-300">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-              Precise climate prediction
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Quantum Applications */}
-      <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Real-World Quantum Applications</h2>
-            <p className="text-xl text-gray-300">See quantum computing in action</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-4xl mb-4">💊</div>
-                <h3 className="text-2xl font-bold mb-4">Drug Discovery</h3>
-                <p className="text-gray-300 mb-4">
-                  Quantum computing accelerates drug discovery by simulating 
-                  molecular interactions at unprecedented speed and accuracy.
-                </p>
-                <div className="text-3xl font-bold text-cyan-400">10x</div>
-                <div className="text-sm text-gray-400">Faster Drug Development</div>
+    <>
+      <Helmet>
+        <title>Quantum Computing Revolution 2025 | Zion Tech Group</title>
+        <meta name="description" content="Experience the quantum computing revolution of 2025 with breakthrough technologies that are solving impossible problems and creating new possibilities." />
+        <meta name="keywords" content="quantum computing 2025, quantum supremacy, quantum algorithms, quantum cryptography, quantum AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+                ⚡ QUANTUM REVOLUTION • JANUARY 2025
               </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-4xl mb-4">🏦</div>
-                <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>
-                <p className="text-gray-300 mb-4">
-                  Quantum algorithms optimize portfolio management, 
-                  risk assessment, and fraud detection in real-time.
-                </p>
-                <div className="text-3xl font-bold text-blue-400">99.9%</div>
-                <div className="text-sm text-gray-400">Risk Prediction Accuracy</div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-4xl mb-4">🔬</div>
-                <h3 className="text-2xl font-bold mb-4">Scientific Research</h3>
-                <p className="text-gray-300 mb-4">
-                  Quantum simulation enables breakthrough discoveries 
-                  in physics, chemistry, and materials science.
-                </p>
-                <div className="text-3xl font-bold text-indigo-400">1000x</div>
-                <div className="text-sm text-gray-400">Faster Scientific Discovery</div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-4xl mb-4">🌐</div>
-                <h3 className="text-2xl font-bold mb-4">Supply Chain</h3>
-                <p className="text-gray-300 mb-4">
-                  Quantum optimization revolutionizes logistics, 
-                  reducing costs and improving efficiency across global supply chains.
-                </p>
-                <div className="text-3xl font-bold text-purple-400">-50%</div>
-                <div className="text-sm text-gray-400">Supply Chain Costs</div>
+              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Quantum Computing Revolution 2025
+              </h1>
+              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+                Witness the dawn of quantum supremacy as we solve problems that were impossible 
+                for classical computers and unlock new frontiers in science, technology, and business
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a href="#quantum-breakthroughs" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                  Explore Quantum Tech →
+                </a>
+                <a href="#applications" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
+                  View Applications
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Quantum Technology Stack */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Quantum Technology Stack</h2>
-          <p className="text-xl text-gray-300">Complete quantum computing infrastructure</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center">
-            <div className="text-3xl mb-3">🔧</div>
-            <h3 className="text-lg font-bold mb-2">Quantum Hardware</h3>
-            <p className="text-sm text-gray-300">Advanced quantum processors and cooling systems</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-800/30 to-indigo-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 text-center">
-            <div className="text-3xl mb-3">💻</div>
-            <h3 className="text-lg font-bold mb-2">Quantum Software</h3>
-            <p className="text-sm text-gray-300">Programming frameworks and development tools</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/20 text-center">
-            <div className="text-3xl mb-3">🌐</div>
-            <h3 className="text-lg font-bold mb-2">Quantum Cloud</h3>
-            <p className="text-sm text-gray-300">Scalable quantum computing as a service</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center">
-            <div className="text-3xl mb-3">🔒</div>
-            <h3 className="text-lg font-bold mb-2">Quantum Security</h3>
-            <p className="text-sm text-gray-300">Quantum-safe encryption and authentication</p>
-          </div>
-        </div>
-      </div>
+        {/* Quantum Breakthroughs Section */}
+        <section id="quantum-breakthroughs" className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6">⚡ Quantum Computing Breakthroughs</h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Revolutionary quantum technologies that are reshaping the future of computing
+              </p>
+            </div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-5xl font-bold mb-6">Ready for Quantum Computing?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and unlock computational power 
-            that was previously impossible to achieve.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-10 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Start Quantum Journey
-            </button>
-            <button className="border-2 border-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-cyan-900 transition-all duration-300">
-              Request Quantum Demo
-            </button>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Breakthrough 1 */}
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">🔬</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">1000+ Qubit Processors</h3>
+                <p className="text-cyan-100 mb-6 text-center">
+                  First quantum processors with over 1000 logical qubits, achieving true quantum supremacy
+                </p>
+                <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+                  <li>• 1000+ logical qubits</li>
+                  <li>• Quantum error correction</li>
+                  <li>• Coherence times > 1 second</li>
+                  <li>• Scalable architecture</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    QUANTUM SUPREMACY
+                  </span>
+                </div>
+              </div>
+
+              {/* Breakthrough 2 */}
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">🧠</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI Integration</h3>
+                <p className="text-purple-100 mb-6 text-center">
+                  Revolutionary fusion of quantum computing with artificial intelligence for exponential capabilities
+                </p>
+                <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+                  <li>• Quantum neural networks</li>
+                  <li>• Quantum machine learning</li>
+                  <li>• Quantum optimization algorithms</li>
+                  <li>• Quantum pattern recognition</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    QUANTUM AI
+                  </span>
+                </div>
+              </div>
+
+              {/* Breakthrough 3 */}
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">🔐</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Quantum Cryptography</h3>
+                <p className="text-emerald-100 mb-6 text-center">
+                  Unbreakable encryption systems powered by quantum mechanics and quantum key distribution
+                </p>
+                <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+                  <li>• Quantum key distribution</li>
+                  <li>• Unbreakable encryption</li>
+                  <li>• Quantum secure communication</li>
+                  <li>• Post-quantum cryptography</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    QUANTUM SECURITY
+                  </span>
+                </div>
+              </div>
+
+              {/* Breakthrough 4 */}
+              <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">⚛️</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
+                <p className="text-orange-100 mb-6 text-center">
+                  Accurate simulation of complex molecular systems for drug discovery and materials science
+                </p>
+                <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+                  <li>• Protein folding simulation</li>
+                  <li>• Drug discovery acceleration</li>
+                  <li>• Materials design optimization</li>
+                  <li>• Chemical reaction modeling</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    MOLECULAR QUANTUM
+                  </span>
+                </div>
+              </div>
+
+              {/* Breakthrough 5 */}
+              <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">🌌</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Quantum Internet</h3>
+                <p className="text-violet-100 mb-6 text-center">
+                  Global quantum communication network enabling secure, instant information transfer
+                </p>
+                <ul className="text-violet-200 space-y-2 mb-6 text-sm">
+                  <li>• Quantum entanglement networks</li>
+                  <li>• Instant global communication</li>
+                  <li>• Quantum teleportation</li>
+                  <li>• Secure quantum channels</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    QUANTUM INTERNET
+                  </span>
+                </div>
+              </div>
+
+              {/* Breakthrough 6 */}
+              <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 text-center">🎯</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Quantum Optimization</h3>
+                <p className="text-rose-100 mb-6 text-center">
+                  Revolutionary optimization algorithms solving complex problems in seconds instead of years
+                </p>
+                <ul className="text-rose-200 space-y-2 mb-6 text-sm">
+                  <li>• Supply chain optimization</li>
+                  <li>• Financial portfolio optimization</li>
+                  <li>• Traffic flow optimization</li>
+                  <li>• Resource allocation optimization</li>
+                </ul>
+                <div className="text-center">
+                  <span className="inline-block bg-gradient-to-r from-rose-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    QUANTUM OPTIMIZATION
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Applications Section */}
+        <section id="applications" className="py-20 bg-gradient-to-br from-blue-900 to-indigo-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6">🚀 Quantum Applications</h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Real-world applications of quantum computing that are transforming industries
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Financial Services */}
+              <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
+                <div className="text-5xl mb-4">💰</div>
+                <h3 className="text-3xl font-bold mb-4">Financial Revolution</h3>
+                <p className="text-green-100 mb-6 text-lg">
+                  Quantum computing revolutionizing financial modeling, risk assessment, and trading algorithms
+                </p>
+                <ul className="text-green-200 space-y-3 text-base">
+                  <li>• Real-time risk assessment and modeling</li>
+                  <li>• High-frequency trading optimization</li>
+                  <li>• Portfolio optimization with quantum algorithms</li>
+                  <li>• Fraud detection and prevention</li>
+                </ul>
+              </div>
+
+              {/* Healthcare & Drug Discovery */}
+              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
+                <div className="text-5xl mb-4">💊</div>
+                <h3 className="text-3xl font-bold mb-4">Drug Discovery</h3>
+                <p className="text-blue-100 mb-6 text-lg">
+                  Accelerating drug discovery and development through quantum molecular simulation
+                </p>
+                <ul className="text-blue-200 space-y-3 text-base">
+                  <li>• Protein folding prediction and analysis</li>
+                  <li>• Drug-target interaction modeling</li>
+                  <li>• Molecular design optimization</li>
+                  <li>• Personalized medicine development</li>
+                </ul>
+              </div>
+
+              {/* Climate & Energy */}
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <div className="text-5xl mb-4">🌍</div>
+                <h3 className="text-3xl font-bold mb-4">Climate Solutions</h3>
+                <p className="text-purple-100 mb-6 text-lg">
+                  Quantum computing for climate modeling, renewable energy optimization, and carbon capture
+                </p>
+                <ul className="text-purple-200 space-y-3 text-base">
+                  <li>• Climate change modeling and prediction</li>
+                  <li>• Renewable energy grid optimization</li>
+                  <li>• Carbon capture material design</li>
+                  <li>• Environmental impact assessment</li>
+                </ul>
+              </div>
+
+              {/* Logistics & Transportation */}
+              <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
+                <div className="text-5xl mb-4">🚛</div>
+                <h3 className="text-3xl font-bold mb-4">Logistics Optimization</h3>
+                <p className="text-orange-100 mb-6 text-lg">
+                  Revolutionary supply chain and transportation optimization using quantum algorithms
+                </p>
+                <ul className="text-orange-200 space-y-3 text-base">
+                  <li>• Supply chain optimization</li>
+                  <li>• Route planning and optimization</li>
+                  <li>• Inventory management</li>
+                  <li>• Demand forecasting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quantum Performance Comparison */}
+        <section className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6">⚡ Quantum vs Classical Performance</h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                See the incredible performance advantages of quantum computing over classical systems
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 text-center">
+                <div className="text-6xl mb-4">🐌</div>
+                <h3 className="text-2xl font-bold mb-4">Classical Computing</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">1,000,000 years</div>
+                <p className="text-cyan-200">Time to factor 2048-bit number</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
+                <div className="text-6xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+                <div className="text-4xl font-bold text-purple-400 mb-2">8 hours</div>
+                <p className="text-purple-200">Time to factor 2048-bit number</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 text-center">
+                <div className="text-6xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold mb-4">Speed Improvement</h3>
+                <div className="text-4xl font-bold text-emerald-400 mb-2">1,000,000x</div>
+                <p className="text-emerald-200">Faster than classical computers</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 bg-gradient-to-br from-cyan-900 to-blue-900">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-5xl font-bold mb-6">Ready for the Quantum Revolution?</h2>
+            <p className="text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join the quantum computing revolution and unlock unprecedented computational power for your organization
+            </p>
+            <div className="flex justify-center space-x-6">
+              <a href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+                Start Quantum Journey
+              </a>
+              <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
+                Explore All Services
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 
