@@ -10,6 +10,7 @@ export type ContentItem = {
 export const latestContent: ContentItem[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
     title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
     summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
@@ -46,10 +47,17 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
+=======
+    id: "autonomous-support-agents-2026-new",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+>>>>>>> origin/feat/new-content-2025-09-15
     tag: "Guide",
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
     summary: "Safety, quality, reliability, and economics SLOs for agent platforms.",
@@ -150,12 +158,21 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
+=======
+    id: "evaluation-harness-blueprint-2026-new",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+>>>>>>> origin/feat/new-content-2025-09-15
     tag: "Blueprint",
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/latest-content-home
+=======
+>>>>>>> origin/feat/new-content-2025-09-15
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",

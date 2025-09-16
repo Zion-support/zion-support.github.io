@@ -12,8 +12,35 @@ export type WhatsNewItem = {
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
+=======
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    description:
+      "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    emoji: "🤖",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-blueprint-2026-new",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    description:
+      "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-evals-blueprint-2026",
+    title: "AI 2026: Autonomous Evals Blueprint",
+>>>>>>> origin/feat/new-content-2025-09-15
     description:
       "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
     ctaLabel: "Read Architecture",
