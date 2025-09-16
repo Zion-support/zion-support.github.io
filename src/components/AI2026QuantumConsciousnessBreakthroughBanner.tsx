@@ -6,7 +6,7 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M50 50c0-27.614 22.386-50 50-50v100c-27.614 0-50-22.386-50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M50%2050c0-27.614%2022.386-50%2050-50v100c-27.614%200-50-22.386-50-50z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse"></div>
       </div>
       
       {/* Quantum Particles Animation */}

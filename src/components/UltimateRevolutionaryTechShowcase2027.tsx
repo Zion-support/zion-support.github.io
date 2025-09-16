@@ -84,7 +84,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   }, []);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -98,11 +98,11 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-4"
           >
             🌟 ULTIMATE REVOLUTIONARY TECH 2027
-          </divdiv>
+          </div>
           <divh2
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
@@ -119,7 +119,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <div
               key={currentTech}
               className="space-y-8"
             >
@@ -143,31 +143,31 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {revolutionaryTechs[currentTech].features.map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center space-x-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                     <span className="text-white font-medium">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-6">
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`h-96 rounded-3xl bg-gradient-to-br ${revolutionaryTechs[currentTech].gradient} p-8 relative overflow-hidden`}>
@@ -191,16 +191,18 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 
                 {/* Floating Elements */}
                 {[...Array(20)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+                    animate={{
                       y: [0, -20, 0],
                       opacity: [0.3, 0.8, 0.3],
                     }}
+                    transition={{
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 2,
@@ -208,7 +210,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -227,7 +229,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             className="text-center mt-12"
           >
             <div className="inline-flex space-x-4">
@@ -244,10 +246,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 🚀 Ultimate Tech Showcase →
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
