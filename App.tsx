@@ -94,6 +94,8 @@ import './src/styles/optimizations.css';
 import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import NewServicesShowcase2026 from './src/components/NewServicesShowcase2026';
 import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
@@ -227,10 +229,17 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <FeaturedContentShowcase2026 />
                 </div>
+                {/* New Content Promotion Banner 2026 */}
+                <div className="mb-12">
+                  <NewContentPromotionBanner2026 />
+                </div>
                 {/* New Content Advertising Banner */}
                 <div className="mb-12">
                   <NewContentAdvertisingBanner2026 />
                 </div>
+                
+                {/* New Services Showcase 2026 */}
+                <NewServicesShowcase2026 />
                 
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
