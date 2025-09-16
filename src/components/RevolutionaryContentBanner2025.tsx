@@ -2,113 +2,137 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const bannerContent = [
+  const [isVisible, setIsVisible] = useState(true);
+
+  const slides = [
     {
-      title: "🚀 NEW: AI Innovation Hub 2025",
-      subtitle: "Discover Revolutionary AI Technologies",
-      description: "Explore cutting-edge AI solutions that are reshaping industries",
-      link: "/pages/AIInnovationHub2025",
-      gradient: "from-purple-600 to-pink-600",
-      bgGradient: "from-purple-900/90 to-pink-900/90"
+      title: "🚀 NEW: Revolutionary AI Solutions 2025",
+      subtitle: "Experience the future of artificial intelligence",
+      cta: "Explore Now",
+      link: "/pages/RevolutionaryAISolutions2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900 to-pink-900"
     },
     {
-      title: "⚡ BREAKTHROUGH: Quantum Computing Solutions",
-      subtitle: "Experience the Future of Computing",
-      description: "Quantum-powered solutions for exponential computational power",
-      link: "/pages/QuantumComputingSolutions2025",
-      gradient: "from-cyan-600 to-blue-600",
-      bgGradient: "from-cyan-900/90 to-blue-900/90"
+      title: "⚡ Quantum Computing Breakthrough",
+      subtitle: "Unprecedented processing power for complex problems",
+      cta: "Learn More",
+      link: "/pages/QuantumComputingBreakthrough",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900 to-blue-900"
     },
     {
-      title: "🧠 ULTIMATE: Neural Interface Revolution",
-      subtitle: "Connect Mind and Machine",
-      description: "Direct brain-computer interfaces for seamless human-AI collaboration",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-900/90 to-teal-900/90"
+      title: "🧠 Neural Interface Technology",
+      subtitle: "Direct brain-computer interaction is here",
+      cta: "Experience It",
+      link: "/pages/NeuralInterfaceFuture",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900 to-teal-900"
     },
     {
-      title: "🌟 REVOLUTIONARY: Tech Showcase 2025",
-      subtitle: "Interactive Technology Experience",
-      description: "Explore our most advanced technologies with immersive demos",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      gradient: "from-orange-600 to-red-600",
-      bgGradient: "from-orange-900/90 to-red-900/90"
+      title: "🌟 Interactive Tech Showcase",
+      subtitle: "Hands-on demonstrations of cutting-edge tech",
+      cta: "Try Demo",
+      link: "/pages/InteractiveTechShowcase2025",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900 to-red-900"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
 
-  const currentBanner = bannerContent[currentSlide];
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
 
   return (
-    <div className="relative overflow-hidden mb-12">
-      <div className={`bg-gradient-to-r ${currentBanner.bgGradient} backdrop-blur-sm rounded-2xl p-8 text-white relative`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4 animate-pulse">
-                🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-              </div>
-              <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
-                {currentBanner.title}
-              </h2>
-              <h3 className="text-2xl font-semibold mb-3 text-yellow-200">
-                {currentBanner.subtitle}
-              </h3>
-              <p className="text-lg opacity-90 mb-6 max-w-2xl">
-                {currentBanner.description}
-              </p>
-              <div className="flex space-x-4">
-                <a 
-                  href={currentBanner.link}
-                  className={`bg-gradient-to-r ${currentBanner.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400`}
-                >
-                  Explore Now →
-                </a>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                  Watch Demo
-                </button>
-              </div>
-            </div>
-            <div className="hidden lg:block ml-8">
-              <div className="text-8xl opacity-20">
-                {currentSlide === 0 && "🤖"}
-                {currentSlide === 1 && "⚛️"}
-                {currentSlide === 2 && "🧬"}
-                {currentSlide === 3 && "🌟"}
-              </div>
-            </div>
+    <div className="relative overflow-hidden mb-8">
+      {/* Animated Background */}
+      <div className={`absolute inset-0 bg-gradient-to-r ${slides[currentSlide].bgColor} opacity-90`}>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+            <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute bottom-10 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-3000"></div>
           </div>
         </div>
-        
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-sm font-bold rounded-full animate-pulse">
+                🔥 HOT
+              </div>
+              <div className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full">
+                NEW CONTENT
+              </div>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              {slides[currentSlide].title}
+            </h2>
+            
+            <p className="text-xl text-white/90 mb-6 max-w-2xl">
+              {slides[currentSlide].subtitle}
+            </p>
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href={slides[currentSlide].link}
+                className={`bg-gradient-to-r ${slides[currentSlide].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
+              >
+                {slides[currentSlide].cta} →
+              </a>
+              <button className="text-white/80 hover:text-white transition-colors duration-300 underline">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* Close Button */}
+          <button
+            onClick={handleClose}
+            className="text-white/60 hover:text-white transition-colors duration-300 p-2 hover:bg-white/10 rounded-full"
+            aria-label="Close banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
         {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {bannerContent.map((_, index) => (
+        <div className="flex justify-center mt-8 space-x-2">
+          {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/50'
+                currentSlide === index ? 'bg-white' : 'bg-white/30'
               }`}
             />
           ))}
         </div>
       </div>
-      
+
       {/* Floating Elements */}
-      <div className="absolute top-4 right-4 text-6xl opacity-10 animate-bounce">
-        ✨
-      </div>
-      <div className="absolute bottom-4 right-4 text-4xl opacity-10 animate-pulse">
-        🚀
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-white/20 rounded-full animate-ping delay-2000"></div>
       </div>
     </div>
   );
