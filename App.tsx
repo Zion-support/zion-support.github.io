@@ -65,6 +65,8 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
@@ -181,6 +183,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -762,6 +767,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
                   </div>
                   <InteractiveTechShowcase />
+                </div>
+
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* Interactive Technology Showcase 2026 */}

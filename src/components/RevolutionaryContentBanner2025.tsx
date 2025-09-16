@@ -1,92 +1,89 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const banners = [
-    {
-      title: "🚀 Revolutionary Tech Breakthrough 2025",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape our world",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🧠"
-    },
-    {
-      title: "🌟 Ultimate Tech Revolution 2025",
-      description: "Witness the ultimate technological revolution that will transform every aspect of human existence",
-      link: "/pages/UltimateTechRevolution2025",
-      color: "from-indigo-600 to-purple-600",
-      icon: "⚡"
-    },
-    {
-      title: "🧠 Next-Gen Innovation Hub 2025",
-      description: "Discover and explore the most revolutionary innovations that will shape the future of humanity",
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-emerald-600 to-teal-600",
-      icon: "🔮"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentBanner((prev) => (prev + 1) % banners.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [banners.length]);
-
   return (
-    <div className="mb-12">
-      <div className={`bg-gradient-to-r ${banners[currentBanner].color} rounded-2xl p-8 text-white relative overflow-hidden transition-all duration-500 ${
-        isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
-      }`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl animate-bounce">{banners[currentBanner].icon}</div>
-                <div>
-                  <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-2 animate-pulse">
-                    🌟 NEW REVOLUTIONARY CONTENT • JANUARY 2025
-                  </div>
-                  <h2 className="text-3xl font-bold mb-2">{banners[currentBanner].title}</h2>
-                  <p className="text-lg opacity-90 max-w-2xl">
-                    {banners[currentBanner].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex space-x-4">
-              <a
-                href={banners[currentBanner].link}
-                className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-              >
-                Explore Now →
-              </a>
-              <button className="border-2 border-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
-                Learn More
-              </button>
-            </div>
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+      
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 NEW: Revolutionary Content 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Experience the Future of Technology
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Discover groundbreaking innovations that are reshaping industries and creating new possibilities. 
+            From conscious AI to quantum neural interfaces and interdimensional computing.
+          </p>
+        </div>
+
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Breakthrough</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Witness the most groundbreaking technological innovations that are reshaping industries
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Advanced AI Consciousness</li>
+              <li>• Quantum Neural Interfaces</li>
+              <li>• Interdimensional Computing</li>
+            </ul>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Breakthrough →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Next-Gen Innovation Hub</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Discover and explore the most revolutionary technologies shaping humanity's future
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Synthetic Intelligence</li>
+              <li>• Quantum Neural Fusion</li>
+              <li>• Consciousness Computing</li>
+            </ul>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Enter Innovation Hub →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI Transformation</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Transform your business with cutting-edge AI solutions and automation
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Autonomous AI Agents</li>
+              <li>• Edge AI Computing</li>
+              <li>• Generative AI 2.0</li>
+            </ul>
+            <a href="/pages/AdvancedAITransformation2025" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              Start Transformation →
+            </a>
           </div>
         </div>
-        
-        {/* Banner Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentBanner(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentBanner ? 'bg-white' : 'bg-white/50'
-              }`}
-            />
-          ))}
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All Innovations
+            </a>
+            <a href="/pages/NextGenInnovationHub2025" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+              Join Innovation Community
+            </a>
+          </div>
         </div>
       </div>
     </div>
