@@ -139,6 +139,30 @@ export const latestContent: ContentItem[] = [
   },
   // New content (2025-09-16)
   {
+    id: "ai-2026-agent-safety-evidence-bundles",
+    title: "AI 2026: Agent Safety Evidence Bundles — Practical Guide",
+    summary: "Design evidence bundles with evals, lineage, and policy checks for audits.",
+    href: "/blog/ai-2026-agent-safety-evidence-bundles",
+    tag: "Safety",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-production-evals-control-plane",
+    title: "AI 2026: Production Evals Control Plane — Blueprint",
+    summary: "Centralize rubrics, thresholds, and rollout gates with live scorecards.",
+    href: "/blog/ai-2026-production-evals-control-plane",
+    tag: "Blueprint",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-multimodal-guardrails-blueprint",
+    title: "AI 2026: Multimodal Guardrails — Blueprint",
+    summary: "Layered guardrails for image/audio/video agents with risk tiers and eval gates.",
+    href: "/blog/ai-2026-multimodal-guardrails-blueprint",
+    tag: "Guide",
+    date: "2025-09-16",
+  },
+  {
     id: "ai-2026-agent-reliability-blueprint",
     title: "AI 2026: Agent Reliability — Blueprint",
     summary: "Standardize SLOs, eval gates, and evidence bundles for reliable autonomy.",

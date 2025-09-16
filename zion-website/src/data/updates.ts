@@ -18,6 +18,27 @@ export const updates: UpdateItem[] = [
         tag: 'Guide',
     },
     {
+        title: 'Guide: Agent Safety Evidence Bundles',
+        summary: 'Design evidence bundles with evals, lineage, and policy checks for audits.',
+        href: '/blog/ai-2026-agent-safety-evidence-bundles',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Production Evals Control Plane',
+        summary: 'Centralize rubrics, thresholds, and rollout gates with live scorecards.',
+        href: '/blog/ai-2026-production-evals-control-plane',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Multimodal Guardrails — 2026',
+        summary: 'Layered guardrails for image/audio/video agents with risk tiers and eval gates.',
+        href: '/blog/ai-2026-multimodal-guardrails-blueprint',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
         summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
         href: '/updates/real-time-agent-finops-dashboard-1-0',
