@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Brain
@@ -114,7 +114,7 @@ const AI2025TrendsInnovationShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -134,7 +134,7 @@ const AI2025TrendsInnovationShowcase = () => {
             Discover the revolutionary AI trends and innovations that will transform your business in 2025 and beyond. 
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Trends Carousel */}
         <div className="mb-16">
@@ -143,7 +143,7 @@ const AI2025TrendsInnovationShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 2025</h3>
               {trends.map((trendindex) => (
-                <motion.div
+                <div
                   key={trend.id}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeTrend === index
@@ -164,14 +164,14 @@ const AI2025TrendsInnovationShowcase = () => {
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400" />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Trend Display */}
             <div className="relative">
               <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={activeTrend}
                   initial={{ opacity: 0x: 50 }}
                   animate={{ opacity: 1x: 0 }}
@@ -201,8 +201,8 @@ const AI2025TrendsInnovationShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Innovations</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {innovations.map((innovationindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -235,7 +235,7 @@ const AI2025TrendsInnovationShowcase = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {innovation.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -245,7 +245,7 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {benefits.map((benefitindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -257,13 +257,13 @@ const AI2025TrendsInnovationShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
                 <div className="text-gray-300">{benefit.text}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -278,7 +278,7 @@ const AI2025TrendsInnovationShowcase = () => {
               Download Report
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const NeuralInterfaceTechnology2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('mind-control');
@@ -123,7 +123,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -148,13 +148,13 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 Try Neural Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Connection Status */}
       {isConnected && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-4 px-4 text-center"
@@ -163,7 +163,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
             <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
             <span className="font-semibold">Neural Interface Connected - Ready for Mind Control</span>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Technology Showcase */}
@@ -178,7 +178,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {neuralTechnologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -226,7 +226,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                     Learn More
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -310,7 +310,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -342,7 +342,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 <div className="bg-white/10 rounded-lg p-4">
                   <p className="text-sm italic text-teal-200">"{useCase.testimonial}"</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -360,7 +360,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technicalSpecs.map((spec, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -376,7 +376,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -394,7 +394,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((tier, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -436,7 +436,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 }`}>
                   Get Started
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -445,7 +445,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -463,7 +463,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 Contact Neural Experts
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

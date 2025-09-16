@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
@@ -103,7 +103,7 @@ const EnhancedHome: React.FC = () => {
               Empowering businesses to thrive in the digital age.
             </motion.p>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -120,10 +120,10 @@ const EnhancedHome: React.FC = () => {
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
-            </motion.div>
+            </div>
             
             {/* Stats */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -141,7 +141,7 @@ const EnhancedHome: React.FC = () => {
                   </div>
                 );
               })}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -161,7 +161,7 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -184,7 +184,7 @@ const EnhancedHome: React.FC = () => {
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -204,7 +204,7 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -230,7 +230,7 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

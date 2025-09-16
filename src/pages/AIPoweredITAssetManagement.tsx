@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
@@ -430,7 +430,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
   return (
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-import { motion } from 'framer-motion';
+
 import { Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database } from 'lucide-react';
 
 const AIPoweredITAssetManagement: React.FC = () => {
@@ -440,7 +440,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20" />
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1073,14 +1073,14 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 View Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Key Features */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1227,7 +1227,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
       {/* Asset Types Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1260,7 +1260,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Leverage AI to gain complete visibility and control over your IT infrastructure
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -1295,7 +1295,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 description: "Manage assets across multiple locations and cloud environments"
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1307,7 +1307,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </div>
       {/* Benefits Section */}
       <section className="py-16 bg-gray-800/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1336,11 +1336,11 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Manage all types of IT assets from a single, intelligent platform.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {assetTypes.map((assetType, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1349,11 +1349,11 @@ const AIPoweredITAssetManagement: React.FC = () => {
               >
                 <h3 className="text-2xl font-semibold mb-4 text-blue-400">{assetType.title}</h3>
                 <p className="text-gray-300 text-lg">{assetType.description}</p>
-              </motion.div>
+              </div>
       {/* Benefits Section */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1365,7 +1365,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your IT operations with intelligent automation and insights
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -1374,7 +1374,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
               { metric: "60%", description: "Faster incident response time" },
               { metric: "40%", description: "Cost savings on IT operations" }
             ].map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1383,7 +1383,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
               >
                 <div className="text-6xl font-bold text-green-400 mb-4">{benefit.metric}</div>
                 <p className="text-xl text-gray-300">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
       {/* Benefits Section */}
       <section className="py-20">
@@ -1567,7 +1567,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 Download Whitepaper
               </button>
             </div>
-          </motion.div>
+          </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Management?
             </h2>
@@ -1582,7 +1582,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Calendar
@@ -184,7 +184,7 @@ const AITrendsPredictions2025 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -201,10 +201,10 @@ const AITrendsPredictions2025 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive predictions for the future of artificial intelligencefrom quantum breakthroughs to synthetic consciousness.
           </p>
-        </motion.div>
+        </div>
 
         {/* Year Selector */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -223,11 +223,11 @@ const AITrendsPredictions2025 = () => {
               {year}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Content */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeYear}
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
@@ -249,7 +249,7 @@ const AITrendsPredictions2025 = () => {
               {trendsData[activeYear].trends.map((trendindex) => {
                 const Icon = trend.icon;
                 return (
-                  <motion.div
+                  <div
                     key={trend.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -279,13 +279,13 @@ const AITrendsPredictions2025 = () => {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
 
             {/* Predictions */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
@@ -296,7 +296,7 @@ const AITrendsPredictions2025 = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {trendsData[activeYear].predictions.map((predictionindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0x: -20 }}
                     animate={{ opacity: 1x: 0 }}
@@ -305,15 +305,15 @@ const AITrendsPredictions2025 = () => {
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <p className="text-gray-300">{prediction}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+            </div>
+          </div>
+        
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -343,7 +343,7 @@ const AITrendsPredictions2025 = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

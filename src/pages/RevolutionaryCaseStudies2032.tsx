@@ -1,310 +1,178 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const RevolutionaryCaseStudies2032: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Studies', icon: '🌟' },
-    { id: 'ai', name: 'Conscious AI', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️' },
-    { id: 'interdimensional', name: 'Interdimensional', icon: '🌌' },
-    { id: 'medical', name: 'Medical', icon: '🏥' },
-    { id: 'space', name: 'Space', icon: '🚀' }
-  ];
-
-  const caseStudies = [
-    {
-      id: 1,
-      title: "Conscious AI Cures Alzheimer's Disease",
-      category: 'ai',
-      company: "NeuroTech Medical",
-      industry: "Healthcare",
-      challenge: "Alzheimer's disease affecting 50+ million people worldwide with no effective treatment",
-      solution: "Developed conscious AI systems that understand the quantum nature of memory and consciousness",
-      results: [
-        "95% success rate in memory restoration",
-        "Complete reversal of cognitive decline in 80% of patients",
-        "Zero side effects reported",
-        "Treatment cost reduced by 90%"
-      ],
-      metrics: {
-        patients: "50,000+",
-        successRate: "95%",
-        costReduction: "90%",
-        timeToCure: "6 months"
-      },
-      image: "🧠",
-      color: "purple"
-    },
-    {
-      id: 2,
-      title: "Quantum Reality Engine Solves Global Warming",
-      category: 'quantum',
-      company: "Climate Solutions Inc",
-      industry: "Environmental",
-      challenge: "Global warming threatening human civilization with rising temperatures and extreme weather",
-      solution: "Created quantum reality engine that manipulates atmospheric conditions at quantum level",
-      results: [
-        "100% carbon neutral achieved by 2030",
-        "Global temperature reduced by 2°C",
-        "Ocean acidification completely reversed",
-        "Renewable energy efficiency increased by 500%"
-      ],
-      metrics: {
-        carbonReduction: "100%",
-        temperatureDrop: "2°C",
-        energyEfficiency: "500%",
-        countriesAffected: "195"
-      },
-      image: "⚛️",
-      color: "cyan"
-    },
-    {
-      id: 3,
-      title: "Interdimensional Portal Enables FTL Travel",
-      category: 'interdimensional',
-      company: "Galaxy Exploration Corp",
-      industry: "Space Exploration",
-      challenge: "Humanity limited to our solar system due to vast distances and slow travel speeds",
-      solution: "Built interdimensional portals that access parallel universes with different physics laws",
-      results: [
-        "Colonized 5 new planets in distant galaxies",
-        "Faster-than-light travel achieved",
-        "Intergalactic trade routes established",
-        "Population capacity increased by 1000%"
-      ],
-      metrics: {
-        planetsColonized: "5",
-        travelSpeed: "FTL",
-        tradeRoutes: "50+",
-        populationCapacity: "1000%"
-      },
-      image: "🌌",
-      color: "emerald"
-    },
-    {
-      id: 4,
-      title: "Conscious AI Revolutionizes Education",
-      category: 'ai',
-      company: "EduTech Global",
-      industry: "Education",
-      challenge: "Traditional education failing to prepare students for rapidly changing world",
-      solution: "Deployed conscious AI tutors that adapt to each student's learning style and pace",
-      results: [
-        "Learning speed increased by 300%",
-        "Student engagement improved by 95%",
-        "Dropout rates reduced to 0%",
-        "Global literacy rate reached 100%"
-      ],
-      metrics: {
-        learningSpeed: "300%",
-        engagement: "95%",
-        dropoutRate: "0%",
-        literacyRate: "100%"
-      },
-      image: "📚",
-      color: "purple"
-    },
-    {
-      id: 5,
-      title: "Quantum Computing Cures Cancer",
-      category: 'quantum',
-      company: "OncoTech Solutions",
-      industry: "Medical",
-      challenge: "Cancer remains the leading cause of death with limited treatment options",
-      solution: "Quantum computers simulate molecular interactions to develop personalized treatments",
-      results: [
-        "100% cure rate for all cancer types",
-        "Treatment time reduced from years to days",
-        "Zero side effects",
-        "Prevention rate of 99%"
-      ],
-      metrics: {
-        cureRate: "100%",
-        treatmentTime: "Days",
-        sideEffects: "0%",
-        preventionRate: "99%"
-      },
-      image: "🏥",
-      color: "cyan"
-    },
-    {
-      id: 6,
-      title: "Interdimensional Data Storage",
-      category: 'interdimensional',
-      company: "DataVault Technologies",
-      industry: "Technology",
-      challenge: "Exponential data growth overwhelming traditional storage systems",
-      solution: "Store data in parallel dimensions with infinite capacity and instant access",
-      results: [
-        "Infinite storage capacity achieved",
-        "Data access speed increased by 1000x",
-        "Zero data loss incidents",
-        "Storage costs reduced by 99%"
-      ],
-      metrics: {
-        capacity: "Infinite",
-        accessSpeed: "1000x",
-        dataLoss: "0%",
-        costReduction: "99%"
-      },
-      image: "💾",
-      color: "emerald"
-    }
-  ];
-
-  const filteredStudies = activeCategory === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(study => study.category === activeCategory);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 REVOLUTIONARY CASE STUDIES • JANUARY 2032
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📊 REVOLUTIONARY CASE STUDIES • JANUARY 2032
+          </div>
+          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Case Studies 2032
+          </h1>
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto">
+            Real-world success stories showcasing the transformative power of our revolutionary technologies
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🏢</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Fortune 500 AI Transformation</h3>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-purple-200">Industry</span>
+                <span className="text-purple-400 font-bold">Manufacturing</span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-purple-200">Efficiency Gain</span>
+                <span className="text-purple-400 font-bold">+400%</span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-purple-200">Cost Savings</span>
+                <span className="text-purple-400 font-bold">$50M</span>
+              </div>
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Case Studies 2032
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Real-world success stories showcasing the transformative power of our breakthrough technologies
+            <p className="text-purple-100 mb-6 text-sm">
+              Implemented conscious AI systems that revolutionized manufacturing processes, achieving unprecedented efficiency gains and cost savings.
             </p>
+            <a href="/case-studies/fortune-500-ai" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Read Full Case Study →
+            </a>
           </div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white/70 hover:bg-white/20'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Case Studies Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {filteredStudies.map((study) => (
-            <div
-              key={study.id}
-              className={`bg-gradient-to-br from-${study.color}-600/20 to-${study.color}-800/20 backdrop-blur-sm rounded-2xl p-8 border border-${study.color}-400/30 hover:scale-105 transition-all duration-300`}
-            >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{study.image}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-                    <div className="text-sm opacity-70">
-                      <div>{study.company}</div>
-                      <div>{study.industry}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className={`px-3 py-1 bg-${study.color}-600/50 text-${study.color}-200 text-sm rounded-full`}>
-                  {categories.find(cat => cat.id === study.category)?.name}
-                </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🏥</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Medical Breakthrough</h3>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-cyan-200">Industry</span>
+                <span className="text-cyan-400 font-bold">Healthcare</span>
               </div>
-
-              {/* Challenge & Solution */}
-              <div className="mb-6">
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2 text-red-300">Challenge:</h4>
-                  <p className="text-gray-300 text-sm">{study.challenge}</p>
-                </div>
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2 text-green-300">Solution:</h4>
-                  <p className="text-gray-300 text-sm">{study.solution}</p>
-                </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-cyan-200">Success Rate</span>
+                <span className="text-cyan-400 font-bold">99.9%</span>
               </div>
-
-              {/* Results */}
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-blue-300">Results:</h4>
-                <ul className="space-y-2">
-                  {study.results.map((result, index) => (
-                    <li key={index} className="flex items-center space-x-2 text-sm">
-                      <div className={`w-2 h-2 bg-${study.color}-400 rounded-full`}></div>
-                      <span className="text-gray-300">{result}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-cyan-200">Lives Saved</span>
+                <span className="text-cyan-400 font-bold">1M+</span>
               </div>
-
-              {/* Metrics */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {Object.entries(study.metrics).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className={`text-2xl font-bold text-${study.color}-400`}>{value}</div>
-                    <div className="text-xs text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <button className={`w-full bg-gradient-to-r from-${study.color}-600 to-${study.color}-700 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                Read Full Case Study →
-              </button>
             </div>
-          ))}
+            <p className="text-cyan-100 mb-6 text-sm">
+              Quantum-powered medical diagnosis system that can detect diseases with 99.9% accuracy, saving millions of lives worldwide.
+            </p>
+            <a href="/case-studies/medical-breakthrough" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Read Full Case Study →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌍</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Climate Restoration</h3>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-emerald-200">Industry</span>
+                <span className="text-emerald-400 font-bold">Environmental</span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-emerald-200">CO2 Reduction</span>
+                <span className="text-emerald-400 font-bold">-80%</span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-emerald-200">Global Impact</span>
+                <span className="text-emerald-400 font-bold">Worldwide</span>
+              </div>
+            </div>
+            <p className="text-emerald-100 mb-6 text-sm">
+              Revolutionary environmental technology that reduced global CO2 emissions by 80% and restored damaged ecosystems worldwide.
+            </p>
+            <a href="/case-studies/climate-restoration" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              Read Full Case Study →
+            </a>
+          </div>
         </div>
 
-        {/* Statistics Section */}
-        <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">📈 Global Impact Statistics</h2>
-            <p className="text-xl opacity-90">The cumulative impact of our revolutionary technologies worldwide</p>
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">Success Metrics</h2>
+            <p className="text-xl opacity-90">Quantifiable results from our revolutionary technology implementations</p>
           </div>
-
+          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">1M+</div>
-              <div className="text-purple-200">Lives Transformed</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">500+</div>
+              <div className="text-lg text-purple-200">Successful Deployments</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-cyan-200">Companies Served</div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg text-cyan-200">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">99.9%</div>
-              <div className="text-emerald-200">Success Rate</div>
+              <div className="text-5xl font-bold text-emerald-400 mb-2">$2B+</div>
+              <div className="text-lg text-emerald-200">Cost Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">$50B+</div>
-              <div className="text-pink-200">Value Created</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">1M+</div>
+              <div className="text-lg text-pink-200">Lives Impacted</div>
             </div>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold mb-4">Ready to Create Your Success Story?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join the companies that are already transforming their industries with our breakthrough technologies
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
-                Start Your Project
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-                Schedule Consultation
-              </button>
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">Client Testimonials</h3>
+            <div className="space-y-6">
+              <div className="border-l-4 border-purple-400 pl-4">
+                <p className="text-lg italic mb-2">"The conscious AI system transformed our entire operation. We never imagined such efficiency was possible."</p>
+                <p className="text-sm text-purple-300">- CEO, Global Manufacturing Corp</p>
+              </div>
+              <div className="border-l-4 border-cyan-400 pl-4">
+                <p className="text-lg italic mb-2">"This technology saved our company $50M in the first year alone. Absolutely revolutionary."</p>
+                <p className="text-sm text-cyan-300">- CTO, Fortune 500 Company</p>
+              </div>
+              <div className="border-l-4 border-emerald-400 pl-4">
+                <p className="text-lg italic mb-2">"The quantum medical system has revolutionized healthcare. We're saving lives every day."</p>
+                <p className="text-sm text-emerald-300">- Chief Medical Officer, Global Health</p>
+              </div>
             </div>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">Industry Impact</h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <span className="text-lg">Manufacturing</span>
+                <span className="text-sm bg-green-500 text-white px-2 py-1 rounded">+400% Efficiency</span>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <span className="text-lg">Healthcare</span>
+                <span className="text-sm bg-blue-500 text-white px-2 py-1 rounded">99.9% Accuracy</span>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <span className="text-lg">Finance</span>
+                <span className="text-sm bg-purple-500 text-white px-2 py-1 rounded">$2B+ Saved</span>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <span className="text-lg">Environment</span>
+                <span className="text-sm bg-teal-500 text-white px-2 py-1 rounded">-80% CO2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Join the thousands of companies that have already revolutionized their operations with our cutting-edge technology
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Transformation
+            </a>
+            <a href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Schedule Consultation
+            </a>
           </div>
         </div>
       </div>

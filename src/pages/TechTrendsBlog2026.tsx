@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const TechTrendsBlog2026: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const TechTrendsBlog2026: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const TechTrendsBlog2026: React.FC = () => {
               <span>•</span>
               <span>15 min read</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -38,7 +38,7 @@ const TechTrendsBlog2026: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Introduction */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -50,10 +50,10 @@ const TechTrendsBlog2026: React.FC = () => {
               new possibilities that were once considered science fiction. In this comprehensive analysis, 
               we explore the key trends that will shape our digital future.
             </p>
-          </motion.div>
+          </div>
 
           {/* Table of Contents */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -69,7 +69,7 @@ const TechTrendsBlog2026: React.FC = () => {
               <li><a href="#edge-computing" className="text-blue-600 hover:text-blue-800 font-medium">6. Edge AI Computing: Intelligence at the Periphery</a></li>
               <li><a href="#future-implications" className="text-blue-600 hover:text-blue-800 font-medium">7. Future Implications and Predictions</a></li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Section 1: Synthetic Intelligence */}
           <motion.section
@@ -643,7 +643,7 @@ const TechTrendsBlog2026: React.FC = () => {
           </motion.section>
 
           {/* Conclusion */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -665,10 +665,10 @@ const TechTrendsBlog2026: React.FC = () => {
               and preparing for their impact, we can ensure that the technological revolution of 2026 benefits 
               all of humanity.
             </p>
-          </motion.div>
+          </div>
 
           {/* Author Bio */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
@@ -692,7 +692,7 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

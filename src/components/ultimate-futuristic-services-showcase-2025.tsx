@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, 
@@ -173,7 +173,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -193,7 +193,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -205,10 +205,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -288,14 +288,14 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {sortedServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative ${
@@ -421,9 +421,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
@@ -448,7 +448,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -475,7 +475,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 View Pricing
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

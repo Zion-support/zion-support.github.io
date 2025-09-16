@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 interface ContentType {
   id: string;
@@ -511,7 +511,7 @@ MIT License - see LICENSE file for details.`,
           
           <div className="space-y-3 mb-6">
             {contentTypes.map((type) => (
-              <motion.div
+              <div
                 key={type.id}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -543,7 +543,7 @@ MIT License - see LICENSE file for details.`,
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -578,7 +578,7 @@ MIT License - see LICENSE file for details.`,
                 <span>{Math.round(generationProgress)}%</span>
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <motion.div
+                <div
                   className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${generationProgress}%` }}
@@ -608,7 +608,7 @@ MIT License - see LICENSE file for details.`,
           ) : (
             <div className="space-y-4">
               {generatedContent.map((content) => (
-                <motion.div
+                <div
                   key={content.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -671,7 +671,7 @@ MIT License - see LICENSE file for details.`,
                       </div>
                     </div>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           )}

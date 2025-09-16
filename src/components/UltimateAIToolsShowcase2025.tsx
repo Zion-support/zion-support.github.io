@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -159,7 +159,7 @@ const UltimateAIToolsShowcase2025 = () => {
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -179,10 +179,10 @@ const UltimateAIToolsShowcase2025 = () => {
             Discover the most advanced AI tools and solutions that are reshaping how we work
             createand innovate in 2025.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -222,18 +222,18 @@ const UltimateAIToolsShowcase2025 = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tools Grid */}
-        <motion.div
+        <div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <AnimatePresence>
+          
             {filteredTools.map((tool) => (
-              <motion.div
+              <div
                 key={tool.id}
                 variants={itemVariants}
                 layout
@@ -317,13 +317,13 @@ const UltimateAIToolsShowcase2025 = () => {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -347,7 +347,7 @@ const UltimateAIToolsShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

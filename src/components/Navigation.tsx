@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Menu, 
   X, 
@@ -16,11 +16,11 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+
 
 import React, { useState } from './react';
 import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
+
 
 import {
   Menu,
@@ -65,7 +65,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+
 import {
 origin/automation-improvements-final
 
@@ -567,7 +567,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isServicesOpen && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -598,9 +598,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isServicesOpen && (
-                    <motion.div;
+                    <div;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
@@ -615,7 +615,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <a;
                               key={index}
 
-                </AnimatePresence>;
+                ;
               </div>;
 
 
@@ -629,7 +629,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isSolutionsOpen && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -666,8 +666,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                ;
               </div>;
               {/* Solutions Dropdown */}
               <div className="relative group">;
@@ -679,9 +679,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isSolutionsOpen && (
-                    <motion.div;
+                    <div;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
@@ -696,7 +696,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <a;
                               key={index}
 
-                </AnimatePresence>;
+                ;
               </div>;
 
 
@@ -710,7 +710,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Industries;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isIndustriesOpen && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -738,7 +738,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </motion && motion.div>;
                   )}
 
-                </AnimatePresence>;
+                ;
               </div>;
 
 
@@ -752,7 +752,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Resources;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isResourcesOpen && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -780,7 +780,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </motion && motion.div>;
                   )}
 
-                </AnimatePresence>
+                
               </div>
               <a
                 href="/pricing"
@@ -789,7 +789,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </a>
             </div>
-                </AnimatePresence>;
+                ;
               </div>;
 
 
@@ -852,7 +852,7 @@ origin/automation-improvements-final
 
 
           {/* Mobile Menu */}
-          <AnimatePresence>;
+          ;
             {isMenuOpen && (;
               <motion&& motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -999,8 +999,8 @@ origin/automation-improvements-final
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                ;
               </div>;
               {/* Industries Dropdown */}
               <div className="relative group">;
@@ -1012,9 +1012,9 @@ origin/automation-improvements-final
                   Industries;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isIndustriesOpen && (
-                    <motion.div;
+                    <div;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
@@ -1037,8 +1037,8 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                ;
               </div>;
               {/* Resources Dropdown */}
               <div className="relative group">;
@@ -1050,9 +1050,9 @@ origin/automation-improvements-final
                   Resources;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                ;
                   {isResourcesOpen && (
-                    <motion.div;
+                    <div;
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: 10 }}
@@ -1075,8 +1075,8 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                ;
               </div>;
               <a;
                 href="/pricing";
@@ -1118,9 +1118,9 @@ origin/automation-improvements-final
             </button>;
           </div>;
           {/* Mobile Menu */}
-          <AnimatePresence>;
+          ;
             {isMenuOpen && (
-              <motion.div;
+              <div;
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
@@ -1227,7 +1227,7 @@ origin/automation-improvements-final
                   </div>;
                 </div>;
 
-          </AnimatePresence>;
+          ;
         </div>;
       </nav>;
 
@@ -1239,8 +1239,8 @@ origin/automation-improvements-final
       />;
     </>;
   );
-              </motion.div>)}
-          </AnimatePresence>;
+              </div>)}
+          ;
         </div>;
       </nav>;
       {/* Search Modal */}

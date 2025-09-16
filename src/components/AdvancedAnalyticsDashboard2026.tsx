@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   BarChart3
   TrendingUp
@@ -198,9 +198,9 @@ const AdvancedAnalyticsDashboard2026 = () => {
 
       {/* Analytics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <AnimatePresence>
+        
           {analyticsData.map((itemindex) => (
-            <motion.div
+            <div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -232,9 +232,9 @@ const AdvancedAnalyticsDashboard2026 = () => {
               <div className="text-xs text-gray-500">
                 {item.description}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
+        
       </div>
 
       {/* Performance Insights */}

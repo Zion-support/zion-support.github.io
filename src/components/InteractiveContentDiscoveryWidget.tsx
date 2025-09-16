@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search,
   Filter,
@@ -181,7 +181,7 @@ const InteractiveContentDiscoveryWidget = () => {
   return (
     <>
       {/* Floating Action Button */}
-      <motion.button
+      <button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
@@ -190,19 +190,19 @@ const InteractiveContentDiscoveryWidget = () => {
         className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       >
         <Search className="w-6 h-6" />
-      </motion.button>
+      </button>
 
       {/* Modal Overlay */}
-      <AnimatePresence>
+      
         {isOpen && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -330,7 +330,7 @@ const InteractiveContentDiscoveryWidget = () => {
                   {/* Content Grid/List */}
                   <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                     {filteredContent.map((item) => (
-                      <motion.div
+                      <div
                         key={item.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -412,7 +412,7 @@ const InteractiveContentDiscoveryWidget = () => {
                             </button>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -429,10 +429,10 @@ const InteractiveContentDiscoveryWidget = () => {
                   )}
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </>
   );
 };

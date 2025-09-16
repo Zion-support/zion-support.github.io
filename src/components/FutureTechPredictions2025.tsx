@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Rocket
   Brain
@@ -403,7 +403,7 @@ const FutureTechPredictions2025 = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -420,10 +420,10 @@ const FutureTechPredictions2025 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Explore our predictions for the next 5 years of technological advancement and prepare for the revolutionary changes ahead.
           </p>
-        </motion.div>
+        </div>
 
         {/* Year Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -448,7 +448,7 @@ const FutureTechPredictions2025 = () => {
 
           {/* Active Prediction Display */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeYear}
               initial={{ opacity: 0x: 50 }}
               animate={{ opacity: 1x: 0 }}
@@ -478,7 +478,7 @@ const FutureTechPredictions2025 = () => {
                       <span className="text-white font-bold">{predictions[activeYear].probability}%</span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-3">
-                      <motion.div
+                      <div
                         initial={{ width: 0 }}
                         animate={{ width: `${predictions[activeYear].probability}%` }}
                         transition={{ duration: 1delay: 0.5 }}
@@ -496,7 +496,7 @@ const FutureTechPredictions2025 = () => {
                   <h4 className="text-2xl font-bold text-white mb-6">Key Predictions</h4>
                   <div className="space-y-4">
                     {predictions[activeYear].predictions.map((predictionindex) => (
-                      <motion.div
+                      <div
                         key={prediction}
                         initial={{ opacity: 0x: 20 }}
                         animate={{ opacity: 1x: 0 }}
@@ -505,17 +505,17 @@ const FutureTechPredictions2025 = () => {
                       >
                         <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{prediction}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          
+        </div>
 
         {/* Technology Progress */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -527,7 +527,7 @@ const FutureTechPredictions2025 = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {technologies.map((techindex) => (
-                <motion.div
+                <div
                   key={tech.name}
                   initial={{ opacity: 0x: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
@@ -539,21 +539,21 @@ const FutureTechPredictions2025 = () => {
                     <span className="text-gray-400">{tech.progress}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-3">
-                    <motion.div
+                    <div
                       initial={{ width: 0 }}
                       animate={{ width: `${tech.progress}%` }}
                       transition={{ duration: 1delay: 0.8 + index * 0.1 }}
                       className={`h-3 rounded-full bg-gradient-to-r ${tech.color}`}
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Timeline */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -568,7 +568,7 @@ const FutureTechPredictions2025 = () => {
             
             <div className="space-y-12">
               {milestones.map((milestoneindex) => (
-                <motion.div
+                <div
                   key={milestone.year}
                   initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
                   animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : (index % 2 === 0 ? -50 : 50) }}
@@ -596,14 +596,14 @@ const FutureTechPredictions2025 = () => {
                   <div className="relative z-10 w-4 h-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-4 border-slate-900"></div>
                   
                   <div className="w-1/2"></div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
@@ -625,7 +625,7 @@ const FutureTechPredictions2025 = () => {
               Schedule Consultation
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

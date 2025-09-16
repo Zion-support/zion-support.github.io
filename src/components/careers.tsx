@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
@@ -147,7 +147,7 @@ export default function Careers() {
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <motion.div 
+        <div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -160,10 +160,10 @@ export default function Careers() {
             Be part of a team that's revolutionizing technology through AI, quantum computing, 
             and space technology. Help us build the future.
           </p>
-        </motion.div>
+        </div>
 
         {/* Company Culture */}
-        <motion.div 
+        <div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -181,10 +181,10 @@ export default function Careers() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Benefits */}
-        <motion.div 
+        <div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -201,10 +201,10 @@ export default function Careers() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Job Openings */}
-        <motion.div 
+        <div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -232,7 +232,7 @@ export default function Careers() {
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
-              <motion.div
+              <div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -278,7 +278,7 @@ export default function Careers() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -292,10 +292,10 @@ export default function Careers() {
               </p>
             </div>
           )}
-        </motion.div>
+        </div>
 
         {/* General Application */}
-        <motion.div 
+        <div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -323,7 +323,7 @@ export default function Careers() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </Layout>
   );

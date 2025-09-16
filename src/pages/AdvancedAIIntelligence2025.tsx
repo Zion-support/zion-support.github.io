@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedAIIntelligence2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -17,7 +17,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -41,7 +41,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 Try AI Assistant
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
       {/* Tab Content */}
       <div className="container mx-auto px-4 py-12">
         {activeTab === 'overview' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -142,11 +142,11 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'capabilities' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -235,11 +235,11 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 <li>• Skill refinement</li>
               </ul>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'applications' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -295,11 +295,11 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'future' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -334,7 +334,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 

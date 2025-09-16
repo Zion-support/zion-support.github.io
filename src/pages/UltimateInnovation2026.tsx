@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateInnovation2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const UltimateInnovation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/20 to-cyan-500/20 backdrop-blur-3xl"></div>
         <div className="relative z-10 container mx-auto px-6 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -24,28 +24,28 @@ const UltimateInnovation2026: React.FC = () => {
               The most advanced technological breakthroughs that will define the next decade of human progress
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
                 Discover Breakthroughs
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
               >
                 Experience Future
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Innovation Showcase */}
       <div className="container mx-auto px-6 py-20">
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -57,11 +57,11 @@ const UltimateInnovation2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Experience the most advanced innovations that are reshaping reality itself
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Consciousness Transfer */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -94,10 +94,10 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Explore Consciousness Transfer →
             </button>
-          </motion.div>
+          </div>
 
           {/* Quantum Teleportation */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -130,13 +130,13 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Teleport Now →
             </button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Advanced Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {/* Holographic Reality */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -156,10 +156,10 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Enter Holographic World →
             </button>
-          </motion.div>
+          </div>
 
           {/* Anti-Gravity Systems */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -179,10 +179,10 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Experience Anti-Gravity →
             </button>
-          </motion.div>
+          </div>
 
           {/* Mind-Machine Fusion */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -202,12 +202,12 @@ const UltimateInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Fuse Mind & Machine →
             </button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-fuchsia-900/50 to-cyan-900/50 backdrop-blur-sm rounded-3xl p-12 border border-fuchsia-400/30">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -241,22 +241,22 @@ const UltimateInnovation2026: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white px-10 py-4 rounded-lg font-semibold text-xl hover:shadow-2xl transition-all duration-300"
               >
                 Join the Innovation Revolution
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
               >
                 Schedule Innovation Demo
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

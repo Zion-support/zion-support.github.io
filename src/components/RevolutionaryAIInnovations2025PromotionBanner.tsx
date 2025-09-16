@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   Sparkles
   ArrowRight
@@ -55,7 +55,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
   const currentInnovationData = innovations[currentInnovation];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: -100 }}
       animate={{ 
         opacity: isVisible ? 1 : 0
@@ -66,7 +66,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
+        <div
           animate={{ 
             x: [0100],
             y: [0-50],
@@ -79,7 +79,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-3xl"
         />
-        <motion.div
+        <div
           animate={{ 
             x: [0-100],
             y: [050],
@@ -97,7 +97,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
       {/* Floating Innovation Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {innovations.map((innovationindex) => (
-          <motion.div
+          <div
             key={index}
             animate={{ 
               x: [0Math.random() * 100 - 50],
@@ -118,7 +118,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             }}
           >
             <innovation.icon className="w-8 h-8 text-white opacity-50" />
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -126,7 +126,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ delay: 0.3duration: 0.8 }}
@@ -134,7 +134,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             >
               <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
               Revolutionary AI Innovations 2025
-            </motion.div>
+            </div>
 
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -155,7 +155,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </motion.p>
 
             {/* Current Innovation Highlight */}
-            <motion.div
+            <div
               key={currentInnovation}
               initial={{ opacity: 0scale: 0.9 }}
               animate={{ opacity: 1scale: 1 }}
@@ -178,7 +178,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               <p className="text-gray-300">
                 Revolutionary breakthrough transforming how we approach complex problems and decision-making
               </p>
-            </motion.div>
+            </div>
 
             {/* Innovation Dots */}
             <div className="flex justify-center lg:justify-start space-x-2 mb-8">
@@ -196,7 +196,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </div>
 
             {/* Action Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1duration: 0.8 }}
@@ -217,11 +217,11 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 <BookOpen className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Learn More
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Visual Showcase */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 50 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ delay: 0.4duration: 1 }}
@@ -231,7 +231,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               {/* Main Visual Container */}
               <div className="w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 flex flex-col items-center justify-center relative overflow-hidden">
                 {/* Animated Background Elements */}
-                <motion.div
+                <div
                   animate={{ 
                     scale: [1.21],
                     rotate: [0180360],
@@ -245,7 +245,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl"
                 />
                 
-                <motion.div
+                <div
                   animate={{ 
                     scale: [1.1],
                     rotate: [05-50]
@@ -258,10 +258,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   className="w-32 h-32 bg-white bg-opacity-30 rounded-full flex items-center justify-center relative z-10"
                 >
                   <currentInnovationData.icon className="w-16 h-16 text-white" />
-                </motion.div>
+                </div>
 
                 {/* Innovation Stats */}
-                <motion.div
+                <div
                   key={currentInnovation}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -276,12 +276,12 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                       {currentInnovationData.title}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Floating Innovation Icons */}
               {innovations.slice(04).map((innovationindex) => (
-                <motion.div
+                <div
                   key={index}
                   animate={{ 
                     y: [0-20],
@@ -304,10 +304,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   }}
                 >
                   <innovation.icon className="w-6 h-6 text-white" />
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -319,7 +319,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
       >
         <X className="w-6 h-6" />
       </button>
-    </motion.div>
+    </div>
   );
 };
 

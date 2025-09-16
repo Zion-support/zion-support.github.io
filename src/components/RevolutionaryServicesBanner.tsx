@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryServicesBanner: React.FC = () => {
   const services = [
@@ -56,7 +56,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -72,12 +72,12 @@ const RevolutionaryServicesBanner: React.FC = () => {
             Transform your business with our comprehensive range of cutting-edge technology services. 
             From AI and quantum computing to space technology and neural interfaces.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={service.title}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -95,12 +95,12 @@ const RevolutionaryServicesBanner: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -123,7 +123,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

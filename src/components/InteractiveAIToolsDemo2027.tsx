@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Play
   Pause
@@ -204,7 +204,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -221,11 +221,11 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
             Experience the power of our AI tools with interactive demonstrations. 
             See how artificial intelligence can transform your workflow in real-time.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tool Selection */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -259,10 +259,10 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Demo Interface */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
@@ -311,7 +311,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                   <span>{Math.round(progress)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <motion.div
+                  <div
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                     style={{ width: `${progress}%` }}
                     transition={{ duration: 0.1 }}
@@ -326,9 +326,9 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 AI Output
               </label>
               <div className="bg-gray-900 rounded-lg p-4 border min-h-[200px]">
-                <AnimatePresence>
+                
                   {results.length > 0 ? (
-                    <motion.div
+                    <div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
@@ -351,21 +351,21 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                           Share
                         </button>
                       </div>
-                    </motion.div>
+                    </div>
                   ) : (
                     <div className="text-gray-500 text-center py-8">
                       <Brain className="w-12 h-12 mx-auto mb-4 opacity-50" />
                       <p>Click "Run Demo" to see AI magic in action</p>
                     </div>
                   )}
-                </AnimatePresence>
+                
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -389,7 +389,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

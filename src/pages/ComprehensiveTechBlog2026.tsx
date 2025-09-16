@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const ComprehensiveTechBlog2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -93,7 +93,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto relative z-10">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -108,7 +108,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Stay ahead of the curve with the latest insights, breakthroughs, and innovations in technology
             </p>
-          </motion.div>
+          </div>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -129,7 +129,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
           </div>
 
           {/* Featured Posts */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -161,10 +161,10 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                 </motion.article>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* All Posts */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -199,10 +199,10 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                 </motion.article>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Newsletter Signup */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -222,7 +222,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

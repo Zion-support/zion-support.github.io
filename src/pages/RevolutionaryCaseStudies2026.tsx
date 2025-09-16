@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
@@ -100,7 +100,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -124,13 +124,13 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
                 Download Report
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Featured Case Study */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -161,7 +161,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-6">Results Achieved:</h3>
                 <div className="space-y-4">
                   {caseStudies[0].results.map((result, index) => (
-                    <motion.div
+                    <div
                       key={index}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -170,7 +170,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
                     >
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                       <span className="text-lg">{result}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
                 <button className="mt-8 bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
@@ -179,10 +179,10 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Case Studies Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -191,7 +191,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-12">All Case Studies</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.slice(1).map((study, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -230,13 +230,13 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
                     View Details →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Success Metrics */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -265,10 +265,10 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
               <div className="text-sm opacity-60">Rate</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -287,7 +287,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
               Schedule Consultation
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -83,9 +83,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -94,7 +94,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <motion.div
+            <div
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
@@ -138,7 +138,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                 {/* Rotating Success Stories */}
                 <div className="flex items-center gap-4 mb-4">
                   <AnimatePresence mode="wait">
-                    <motion.div
+                    <div
                       key={currentStory}
                       initial={{ opacity: 0x: 20 }}
                       animate={{ opacity: 1x: 0 }}
@@ -157,8 +157,8 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                           {stories[currentStory].industry} • {stories[currentStory].roi} ROI • {stories[currentStory].savings} saved
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
+                  
                 </div>
 
                 {/* Features */}
@@ -226,9 +226,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

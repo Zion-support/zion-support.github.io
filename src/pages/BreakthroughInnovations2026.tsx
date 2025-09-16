@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const BreakthroughInnovations2026: React.FC = () => {
   const [activeInnovation, setActiveInnovation] = useState(0);
@@ -102,7 +102,7 @@ const BreakthroughInnovations2026: React.FC = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 1 }}
@@ -117,7 +117,7 @@ const BreakthroughInnovations2026: React.FC = () => {
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Discover the most groundbreaking innovations that will fundamentally change how we understand technology, consciousness, and reality itself.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -126,7 +126,7 @@ const BreakthroughInnovations2026: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Innovation Details */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
               transition={{ duration: 1, delay: 0.3 }}
@@ -181,10 +181,10 @@ const BreakthroughInnovations2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Visual Representation */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -197,7 +197,7 @@ const BreakthroughInnovations2026: React.FC = () => {
                 <div className="text-3xl font-bold mb-4">2026 Innovation</div>
                 <div className="text-xl text-white/70">Revolutionary Technology</div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Innovation Navigation */}
@@ -222,7 +222,7 @@ const BreakthroughInnovations2026: React.FC = () => {
       {/* Innovation Grid */}
       <section className="py-20 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 1, delay: 0.7 }}
@@ -232,11 +232,11 @@ const BreakthroughInnovations2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our complete portfolio of revolutionary technologies that are reshaping the future.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {innovations.map((innovation, index) => (
-              <motion.div
+              <div
                 key={innovation.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
@@ -252,7 +252,7 @@ const BreakthroughInnovations2026: React.FC = () => {
                     Breakthrough
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -261,7 +261,7 @@ const BreakthroughInnovations2026: React.FC = () => {
       {/* Impact Statistics */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 1, delay: 1.2 }}
@@ -269,10 +269,10 @@ const BreakthroughInnovations2026: React.FC = () => {
           >
             <h2 className="text-5xl font-bold mb-6">Innovation Impact</h2>
             <p className="text-xl text-gray-300">Measurable impact of our breakthrough technologies</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
               transition={{ duration: 1, delay: 1.3 }}
@@ -281,9 +281,9 @@ const BreakthroughInnovations2026: React.FC = () => {
               <div className="text-6xl font-bold text-emerald-400 mb-4">10,000x</div>
               <div className="text-xl text-gray-300 mb-2">Performance Boost</div>
               <div className="text-sm text-gray-400">Exponential improvement in processing capabilities</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
               transition={{ duration: 1, delay: 1.4 }}
@@ -292,9 +292,9 @@ const BreakthroughInnovations2026: React.FC = () => {
               <div className="text-6xl font-bold text-purple-400 mb-4">∞</div>
               <div className="text-xl text-gray-300 mb-2">Possibilities</div>
               <div className="text-sm text-gray-400">Unlimited potential for innovation</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -303,9 +303,9 @@ const BreakthroughInnovations2026: React.FC = () => {
               <div className="text-6xl font-bold text-cyan-400 mb-4">100%</div>
               <div className="text-xl text-gray-300 mb-2">Revolutionary</div>
               <div className="text-sm text-gray-400">Complete paradigm shift in technology</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
               transition={{ duration: 1, delay: 1.6 }}
@@ -314,7 +314,7 @@ const BreakthroughInnovations2026: React.FC = () => {
               <div className="text-6xl font-bold text-orange-400 mb-4">2026</div>
               <div className="text-xl text-gray-300 mb-2">Future Ready</div>
               <div className="text-sm text-gray-400">Next-generation technology today</div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -322,7 +322,7 @@ const BreakthroughInnovations2026: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 1, delay: 1.8 }}
@@ -345,7 +345,7 @@ const BreakthroughInnovations2026: React.FC = () => {
                 Start Your Journey →
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

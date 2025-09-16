@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search
   Filter
@@ -209,7 +209,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -231,10 +231,10 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             AI-powered content discovery that learns your preferences and recommends the most relevant 
             articlestutorialsand insights tailored to your interests.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -305,10 +305,10 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -318,9 +318,9 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               : 'grid-cols-1'
           }`}
         >
-          <AnimatePresence>
+          
             {filteredContent.map((itemindex) => (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -422,14 +422,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-12"
@@ -448,11 +448,11 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             >
               Clear Filters
             </button>
-          </motion.div>
+          </div>
         )}
 
         {/* Bottom CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -483,7 +483,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

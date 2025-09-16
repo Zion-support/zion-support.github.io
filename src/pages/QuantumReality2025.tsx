@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Atom, 
   Zap, 
@@ -135,7 +135,7 @@ const QuantumReality2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -168,7 +168,7 @@ const QuantumReality2025: React.FC = () => {
                 Quantum Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -177,7 +177,7 @@ const QuantumReality2025: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {quantumStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ const QuantumReality2025: React.FC = () => {
                 </div>
                 <div className={`text-5xl font-bold mb-3 ${stat.color}`}>{stat.number}</div>
                 <div className="text-gray-300 text-lg">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -200,7 +200,7 @@ const QuantumReality2025: React.FC = () => {
       {/* Quantum Technologies */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -213,11 +213,11 @@ const QuantumReality2025: React.FC = () => {
               Discover the revolutionary quantum technologies that are transforming 
               every aspect of human existence and opening infinite possibilities.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {quantumTechnologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -250,7 +250,7 @@ const QuantumReality2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ const QuantumReality2025: React.FC = () => {
       {/* Quantum Principles */}
       <div className="py-24 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -272,11 +272,11 @@ const QuantumReality2025: React.FC = () => {
               Understanding the fundamental principles that make quantum technology 
               so revolutionary and powerful.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {quantumPrinciples.map((principle, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -288,7 +288,7 @@ const QuantumReality2025: React.FC = () => {
                 <div className="bg-cyan-500/20 text-cyan-300 p-4 rounded-lg">
                   <strong>Example:</strong> {principle.example}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -297,7 +297,7 @@ const QuantumReality2025: React.FC = () => {
       {/* Applications */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -310,11 +310,11 @@ const QuantumReality2025: React.FC = () => {
               See how quantum technology is already revolutionizing industries 
               and solving previously impossible problems.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumApplications.map((app, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -329,7 +329,7 @@ const QuantumReality2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="text-green-400 font-semibold">{app.impact}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -338,7 +338,7 @@ const QuantumReality2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -360,7 +360,7 @@ const QuantumReality2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

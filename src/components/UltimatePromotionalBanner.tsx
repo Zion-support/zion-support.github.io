@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 
 export default function UltimatePromotionalBanner() {
@@ -21,7 +21,7 @@ export default function UltimatePromotionalBanner() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2type: "spring"stiffness: 200 }}
@@ -29,7 +29,7 @@ export default function UltimatePromotionalBanner() {
           >
             <Star className="w-4 h-4 mr-2" />
             <span className="text-sm font-semibold">LIMITED TIME OFFER - ENDS SOON</span>
-          </motion.div>
+          </div>
 
           {/* Main heading */}
           <motion.h2
@@ -55,7 +55,7 @@ export default function UltimatePromotionalBanner() {
           </motion.p>
 
           {/* Benefits Grid */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -77,10 +77,10 @@ export default function UltimatePromotionalBanner() {
               <div className="text-3xl md:text-4xl font-bold text-pink-300 mb-2">24/7</div>
               <div className="text-sm text-blue-100">Support</div>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
@@ -102,10 +102,10 @@ export default function UltimatePromotionalBanner() {
               <TrendingUp className="w-5 h-5 mr-2" />
               Learn More
             </a>
-          </motion.div>
+          </div>
 
           {/* Trust indicators */}
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
@@ -127,10 +127,10 @@ export default function UltimatePromotionalBanner() {
               <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
               Cancel Anytime
             </div>
-          </motion.div>
+          </div>
 
           {/* Countdown Timer */}
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
@@ -153,7 +153,7 @@ export default function UltimatePromotionalBanner() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { SEO } from '@/components/SEO';
 import { 
   Rocket, 
@@ -127,7 +127,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function About() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-slate-300">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function About() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -173,9 +173,9 @@ export default function About() {
                     <p className="text-slate-300">Every solution we build is designed to deliver measurable business outcomes.</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -200,7 +200,7 @@ export default function About() {
                     <span className="text-slate-300">Creating sustainable technology</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -208,7 +208,7 @@ export default function About() {
         {/* Values Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -218,11 +218,11 @@ export default function About() {
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 These principles guide everything we do, from developing solutions to serving our clients.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <motion.div
+                <div
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-slate-300">{value.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function About() {
         {/* Timeline Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -253,14 +253,14 @@ export default function About() {
               <p className="text-xl text-slate-300">
                 From humble beginnings to industry leadership, here's how we've grown and evolved.
               </p>
-            </motion.div>
+            </div>
 
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
               
               {timeline.map((item, index) => (
-                <motion.div
+                <div
                   key={item.year}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -280,7 +280,7 @@ export default function About() {
                       <p className="text-slate-300">{item.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -289,7 +289,7 @@ export default function About() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -310,7 +310,7 @@ export default function About() {
                   View Careers
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

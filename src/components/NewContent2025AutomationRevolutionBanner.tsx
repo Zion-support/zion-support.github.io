@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
@@ -17,14 +17,14 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
-          <motion.div
+          <div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
-          </motion.div>
+          </div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Content Card */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -83,10 +83,10 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Read Complete Guide
               <span className="ml-2">→</span>
             </a>
-          </motion.div>
+          </div>
 
           {/* Case Study Card */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -126,11 +126,11 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               View Case Study
               <span className="ml-2">→</span>
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Key Statistics */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -152,10 +152,10 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -175,7 +175,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Get Implementation Consultation
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 interface CalculatorInputs {
   currentRevenue: number;
@@ -196,8 +196,8 @@ const InteractiveAICalculator: React.FC = () => {
               <span className="ml-3 text-gray-600 dark:text-gray-400">Calculating...</span>
             </div>
           ) : result ? (
-            <AnimatePresence>
-              <motion.div
+            
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -256,8 +256,8 @@ const InteractiveAICalculator: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           ) : null}
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -111,7 +111,7 @@ const AISuccessStoriesShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -119,7 +119,7 @@ const AISuccessStoriesShowcase = () => {
           >
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
-          </motion.div>
+          </div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ const AISuccessStoriesShowcase = () => {
         </div>
 
         {/* Metrics Overview */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
@@ -160,7 +160,7 @@ const AISuccessStoriesShowcase = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -185,7 +185,7 @@ const AISuccessStoriesShowcase = () => {
 
         {/* Active Story Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeStory}
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
@@ -253,11 +253,11 @@ const AISuccessStoriesShowcase = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -287,7 +287,7 @@ const AISuccessStoriesShowcase = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

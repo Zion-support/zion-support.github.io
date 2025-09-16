@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -83,8 +83,8 @@ const NewContentPromotionalBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -105,7 +105,7 @@ const NewContentPromotionalBanner: React.FC = () => {
 
               {/* Slide Content */}
               <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={currentSlide}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -136,8 +136,8 @@ const NewContentPromotionalBanner: React.FC = () => {
                     <span>{promotionalContent[currentSlide].linkText}</span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              
 
               {/* Navigation Arrow */}
               <button
@@ -175,7 +175,7 @@ const NewContentPromotionalBanner: React.FC = () => {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
+          <div
             animate={{
               y: [0, -10, 0],
               rotate: [0, 5, 0],
@@ -188,8 +188,8 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-2 left-10"
           >
             <Star className="w-4 h-4 text-yellow-400 opacity-60" />
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             animate={{
               y: [0, 10, 0],
               rotate: [0, -5, 0],
@@ -203,8 +203,8 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-3 right-20"
           >
             <Zap className="w-3 h-3 text-purple-400 opacity-60" />
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             animate={{
               y: [0, -8, 0],
               x: [0, 5, 0],
@@ -218,10 +218,10 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-1 right-32"
           >
             <TrendingUp className="w-3 h-3 text-green-400 opacity-60" />
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

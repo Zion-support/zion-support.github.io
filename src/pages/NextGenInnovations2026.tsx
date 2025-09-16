@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const NextGenInnovations2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const NextGenInnovations2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ const NextGenInnovations2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const NextGenInnovations2026: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -66,10 +66,10 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
               Explore AI Solutions →
             </button>
-          </motion.div>
+          </div>
 
           {/* Quantum Technologies */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -90,10 +90,10 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Discover Quantum →
             </button>
-          </motion.div>
+          </div>
 
           {/* Neural Interfaces */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -114,10 +114,10 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold">
               Connect Neural →
             </button>
-          </motion.div>
+          </div>
 
           {/* Blockchain & Web3 */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -138,10 +138,10 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Explore Web3 →
             </button>
-          </motion.div>
+          </div>
 
           {/* IoT & Edge Computing */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -162,10 +162,10 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold">
               Discover IoT →
             </button>
-          </motion.div>
+          </div>
 
           {/* Biotechnology */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -186,7 +186,7 @@ const NextGenInnovations2026: React.FC = () => {
             <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
               Explore BioTech →
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 

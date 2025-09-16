@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const LatestInnovationShowcase: React.FC = () => {
   const [currentInnovation, setCurrentInnovation] = useState(0);
@@ -66,7 +66,7 @@ const LatestInnovationShowcase: React.FC = () => {
         {/* Innovation Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={currentInnovation}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -102,8 +102,8 @@ const LatestInnovationShowcase: React.FC = () => {
                   Try Demo →
                 </button>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">

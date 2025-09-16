@@ -1,6 +1,17 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
 import { Helmet } from 'react-helmet-async';
@@ -283,7 +294,19 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               Explore Applications
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import { motion } from 'framer-motion';
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -292,7 +315,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -315,7 +338,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Research Overview
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -327,7 +350,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -343,9 +366,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Real-time gene monitoring</li>
               <li>• Personalized treatments</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -361,9 +384,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Artificial organs</li>
               <li>• Bio-manufacturing</li>
             </ul>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -379,7 +402,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               <li>• Cognitive enhancement</li>
               <li>• Neural prosthetics</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -511,9 +534,25 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             </button>
 =======
         <section className="text-center">
@@ -532,6 +571,13 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               </a>
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+            </button>
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </section>
       </div>

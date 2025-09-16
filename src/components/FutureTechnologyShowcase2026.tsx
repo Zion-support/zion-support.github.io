@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Rocket
   Brain
@@ -197,7 +197,7 @@ const FutureTechnologyShowcase2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -221,10 +221,10 @@ const FutureTechnologyShowcase2026 = () => {
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -239,10 +239,10 @@ const FutureTechnologyShowcase2026 = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -269,7 +269,7 @@ const FutureTechnologyShowcase2026 = () => {
 
           {/* Category Content */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeCategory}
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
@@ -288,7 +288,7 @@ const FutureTechnologyShowcase2026 = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {categories[activeCategory].technologies.map((techindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -332,15 +332,15 @@ const FutureTechnologyShowcase2026 = () => {
                         Learn More
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          
+        </div>
 
         {/* Testimonials */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -351,7 +351,7 @@ const FutureTechnologyShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -369,13 +369,13 @@ const FutureTechnologyShowcase2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-indigo-400 text-sm">{testimonial.company}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -403,7 +403,7 @@ const FutureTechnologyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

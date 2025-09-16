@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 StarQuoteTrendingUpUsersAwardZap
 
 const testimonials = [
@@ -89,7 +89,7 @@ export default function RevolutionaryTestimonialsShowcase() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -109,10 +109,10 @@ export default function RevolutionaryTestimonialsShowcase() {
             'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses 
             with our AI solutions and achieved extraordinary results.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -120,7 +120,7 @@ export default function RevolutionaryTestimonialsShowcase() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {stats.map((statindex) => (
-            <motion.div
+            <div
               key={stat.label}
               initial={{ opacity: 0scale: 0.8 }}
               whileInView={{ opacity: 1scale: 1 }}
@@ -131,14 +131,14 @@ export default function RevolutionaryTestimonialsShowcase() {
               <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
               <div className="text-sm text-gray-600">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Featured Testimonials */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
-            <motion.div
+            <div
               key={testimonial.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -178,12 +178,12 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="text-xs text-blue-600">{testimonial.industry}</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Additional Testimonials Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -191,7 +191,7 @@ export default function RevolutionaryTestimonialsShowcase() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {testimonials.filter(testimonial => !testimonial.featured).map((testimonialindex) => (
-            <motion.div
+            <div
               key={testimonial.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -227,12 +227,12 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="text-xs text-blue-600">{testimonial.company}</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -258,7 +258,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               View All Case Studies
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

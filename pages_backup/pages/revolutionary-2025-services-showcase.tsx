@@ -5,7 +5,7 @@
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-import { motion, AnimatePresence } from 'framer-motion',;
+
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -121,7 +121,7 @@ const serviceCategories = [
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 import {
   Search, Filter, Star, Users, TrendingUp

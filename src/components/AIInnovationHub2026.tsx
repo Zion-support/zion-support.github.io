@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Cpu
@@ -224,7 +224,7 @@ const AIInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -255,13 +255,13 @@ const AIInnovationHub2026: React.FC = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Featured Innovations */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -275,7 +275,7 @@ const AIInnovationHub2026: React.FC = () => {
             {featuredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
-                <motion.div
+                <div
                   key={innovation.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -322,14 +322,14 @@ const AIInnovationHub2026: React.FC = () => {
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -358,10 +358,10 @@ const AIInnovationHub2026: React.FC = () => {
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Innovation Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -370,7 +370,7 @@ const AIInnovationHub2026: React.FC = () => {
             {filteredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
-                <motion.div
+                <div
                   key={innovation.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -414,24 +414,24 @@ const AIInnovationHub2026: React.FC = () => {
                       <ChevronRight className="h-4 w-4 group-hover:text-blue-400 transition-colors" />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Innovation Detail Modal */}
-      <AnimatePresence>
+      
         {selectedInnovation && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedInnovation(null)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -503,10 +503,10 @@ const AIInnovationHub2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 };

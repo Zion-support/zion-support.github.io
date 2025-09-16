@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 BrainZapTrendingUpUsersArrowRightXCheckCircleStar
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -37,9 +37,9 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -58,7 +58,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   {/* Icon with animation */}
-                  <motion.div
+                  <div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20repeat: Infinityease: "linear" }}
                     className="flex-shrink-0"
@@ -66,7 +66,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
                       <Brain className="w-6 h-6 text-white" />
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Main content */}
                   <div className="flex-1">
@@ -112,25 +112,25 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                 {/* Action buttons */}
                 <div className="flex items-center space-x-3">
                   <a href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
-                    <motion.button
+                    <button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       Read Case Study
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </motion.button>
+                    </button>
                   </a>
 
                   <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
-                    <motion.button
+                    <button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       View ROI Results
                       <TrendingUp className="w-4 h-4 ml-2" />
-                    </motion.button>
+                    </button>
                   </a>
 
                   <button
@@ -146,7 +146,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
 
             {/* Progress bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
-              <motion.div
+              <div
                 className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
@@ -154,9 +154,9 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

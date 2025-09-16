@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -227,7 +227,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
           <div className="space-y-4">
             {Object.entries(recommendations).map(([key, recommended]) => (
-              <motion.div
+              <div
                 key={key}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -258,7 +258,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                     {recommended ? 'Recommended' : 'Optimized'}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -279,7 +279,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                   <span>{Math.round(optimizationProgress)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                  <motion.div
+                  <div
                     className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${optimizationProgress}%` }}

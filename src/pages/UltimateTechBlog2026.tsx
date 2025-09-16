@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechBlog2026: React.FC = () => {
   const [expandedArticle, setExpandedArticle] = useState<string | null>(null);
@@ -147,7 +147,7 @@ The future of consciousness computing is not just about creating more powerful m
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -162,13 +162,13 @@ The future of consciousness computing is not just about creating more powerful m
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Deep insights into the revolutionary technologies shaping our future
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Blog Posts */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -176,11 +176,11 @@ The future of consciousness computing is not just about creating more powerful m
         >
           <h2 className="text-4xl font-bold mb-4">📚 Latest Articles</h2>
           <p className="text-xl opacity-80">Click on any article to read the full content</p>
-        </motion.div>
+        </div>
 
         <div className="space-y-8">
           {blogPosts.map((post, index) => (
-            <motion.div
+            <div
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -219,7 +219,7 @@ The future of consciousness computing is not just about creating more powerful m
                   </div>
 
                   {expandedArticle === post.id && (
-                    <motion.div
+                    <div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -229,18 +229,18 @@ The future of consciousness computing is not just about creating more powerful m
                       <div className="prose prose-invert max-w-none">
                         <p className="text-lg leading-relaxed whitespace-pre-line">{post.content}</p>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Newsletter Signup */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -260,7 +260,7 @@ The future of consciousness computing is not just about creating more powerful m
               Subscribe
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Calendar
   TrendingUp
@@ -135,7 +135,7 @@ const FuturePredictionsShowcase2025 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -149,10 +149,10 @@ const FuturePredictionsShowcase2025 = () => {
             Explore our expert predictions for the future of AItechnologyand human civilization 
             from 2025 to 2030 and beyond.
           </p>
-        </motion.div>
+        </div>
 
         {/* Year Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -177,11 +177,11 @@ const FuturePredictionsShowcase2025 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Predictions Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeYear}
             initial={{ opacity: 0x: 50 }}
             animate={{ opacity: 1x: 0 }}
@@ -192,7 +192,7 @@ const FuturePredictionsShowcase2025 = () => {
             {predictions[activeYear].predictions.map((predictionindex) => {
               const Icon = prediction.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -232,14 +232,14 @@ const FuturePredictionsShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Timeline Visualization */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -269,10 +269,10 @@ const FuturePredictionsShowcase2025 = () => {
               })}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -283,7 +283,7 @@ const FuturePredictionsShowcase2025 = () => {
             Explore Full Predictions
             <ArrowRight className="w-5 h-5" />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

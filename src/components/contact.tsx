@@ -2,7 +2,7 @@ export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { 
   Phone, Mail, MapPin, Globe, Clock, Users, 
   MessageSquare, Send, CheckCircle, Star, 
@@ -105,7 +105,7 @@ export default function ContactPage() {
         {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -118,17 +118,17 @@ export default function ContactPage() {
               Ready to leverage the power of AI, quantum computing, and cutting-edge technology? 
               Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth.
             </p>
-          </motion.div>
+          </div>
 
           {/* Stats Grid */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -148,9 +148,9 @@ export default function ContactPage() {
                     {stat.label}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 </h2>
                 
                 {isSubmitted ? (
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
@@ -201,7 +201,7 @@ export default function ContactPage() {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -218,7 +218,7 @@ export default function ContactPage() {
               Ready to revolutionize your business with cutting-edge 2029 technology? 
               Our team of experts is here to help you implement the future today.
             </p>
-          </motion.div>
+          </div>
         </section>
 
         {/* Contact Information Grid */}
@@ -226,7 +226,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -242,10 +242,10 @@ export default function ContactPage() {
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{contactInfo.mobile}</div>
                   <p className="text-sm text-gray-400">{contactInfo.hours}</p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Email Contact */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -261,10 +261,10 @@ export default function ContactPage() {
                   <div className="text-lg font-semibold text-purple-400 mb-2 break-all">{contactInfo.email}</div>
                   <p className="text-sm text-gray-400">Response time: &lt;2 hours</p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Address Contact */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -280,11 +280,11 @@ export default function ContactPage() {
                   <div className="text-sm font-semibold text-pink-400 mb-2 leading-relaxed">{contactInfo.address}</div>
                   <p className="text-sm text-gray-400">{contactInfo.timezone}</p>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Contact Form */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -302,7 +302,7 @@ export default function ContactPage() {
 
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
@@ -312,7 +312,7 @@ export default function ContactPage() {
                     <p className="text-gray-300 text-lg">
                       Thank you for reaching out. Our team will get back to you within 2 hours with a personalized solution.
                     </p>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -440,14 +440,14 @@ export default function ContactPage() {
                   </form>
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -460,11 +460,11 @@ export default function ContactPage() {
               <p className="text-xl text-gray-300">
                 Explore some of our most sought-after 2029 technology solutions
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -509,7 +509,7 @@ export default function ContactPage() {
                       <span className="text-sm text-gray-400">Trial: {service.trialDays} days</span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -518,7 +518,7 @@ export default function ContactPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -557,7 +557,7 @@ export default function ContactPage() {
                   <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

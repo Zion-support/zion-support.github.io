@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const NewsletterSignup: React.FC = () => {
 
   if (isSubscribed) {
     return (
-      <motion.div
+      <div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white"
@@ -30,12 +30,12 @@ const NewsletterSignup: React.FC = () => {
         <p className="text-lg opacity-90">
           You're now subscribed to our exclusive newsletter. Get ready for the latest breakthroughs in AI, quantum computing, and neural interfaces.
         </p>
-      </motion.div>
+      </div>
     );
   }
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -102,7 +102,7 @@ const NewsletterSignup: React.FC = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

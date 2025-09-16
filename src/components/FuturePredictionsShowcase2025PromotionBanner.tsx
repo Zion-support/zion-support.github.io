@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Calendar
   TrendingUp
@@ -59,7 +59,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
@@ -76,7 +76,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             {/* Badge */}
-            <motion.div
+            <div
               initial={{ opacity: 0scale: 0.8 }}
               animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -85,7 +85,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               <Calendar className="w-4 h-4" />
               FUTURE PREDICTIONS
               <Sparkles className="w-4 h-4" />
-            </motion.div>
+            </div>
 
             {/* Main Heading */}
             <motion.h2
@@ -112,7 +112,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
             </motion.p>
 
             {/* Features */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.5 }}
@@ -128,10 +128,10 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   <span className="text-white text-sm font-medium">{feature.text}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.6 }}
@@ -147,11 +147,11 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 <ChevronRight className="w-5 h-5" />
                 View Timeline
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Visual - Rotating Predictions */}
-          <motion.div
+          <div
             initial={{ opacity: 0scale: 0.8 }}
             animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
             transition={{ duration: 0.8delay: 0.4 }}
@@ -166,7 +166,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               
               {/* Center Content */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
+                <div
                   key={currentPrediction}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -179,12 +179,12 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   </div>
                   <div className="text-white font-bold text-lg">{predictions[currentPrediction].title}</div>
                   <div className="text-gray-300 text-sm">{predictions[currentPrediction].year}</div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Floating Prediction Icons */}
               {predictions.map((predictionindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0scale: 0 }}
                   animate={{ 
@@ -201,7 +201,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                   <div className={`w-12 h-12 bg-gradient-to-r ${prediction.color} rounded-full flex items-center justify-center shadow-lg`}>
                     <prediction.icon className="w-6 h-6 text-white" />
                   </div>
-                </motion.div>
+                </div>
               ))}
 
               {/* Timeline Dots */}
@@ -217,10 +217,10 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 ></div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2027: React.FC = () => {
@@ -181,7 +181,7 @@ const ComprehensiveServices2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -196,14 +196,14 @@ const ComprehensiveServices2027: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Complete technology solutions for the future. From AI and quantum computing to space technology and neural interfaces.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Services by Category */}
         <div className="container mx-auto px-4 py-20">
           {services.map((category, categoryIndex) => (
-            <motion.div
+            <div
               key={category.category}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ const ComprehensiveServices2027: React.FC = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <motion.div
+                  <div
                     key={service.name}
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -245,10 +245,10 @@ const ComprehensiveServices2027: React.FC = () => {
                         Get Quote
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -264,7 +264,7 @@ const ComprehensiveServices2027: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -281,7 +281,7 @@ const ComprehensiveServices2027: React.FC = () => {
                     <div className="font-bold">{testimonial.name}</div>
                     <div className="text-blue-300">{testimonial.role}, {testimonial.company}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
