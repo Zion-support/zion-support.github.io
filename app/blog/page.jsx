@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -13,6 +13,15 @@ export const metadata = {
 
 const BlogPage = () => {
   const featuredPosts = [
+    {
+      title: "AI 2026: Real‑Time Agent Routing — Best Practices",
+      description: "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+      slug: "ai-2026-realtime-agent-routing-best-practices",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/realtime-agent-routing-2026.jpg"
+    },
     {
       title: "AI 2026: Safe Rollouts in Production",
       description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",

@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "realtime-agent-routing-2026",
+    title: "AI 2026: Real‑Time Agent Routing — Best Practices",
+    description:
+      "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+    ctaLabel: "Read Best Practices",
+    href: "/blog/ai-2026-realtime-agent-routing-best-practices",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "safe-rollouts-2026",
     title: "AI 2026: Safe Rollouts in Production",
     description:
@@ -120,4 +131,5 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     highlight: true,
     date: "2025-09-16",
   },
-  {
+];
+
