@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -119,6 +120,9 @@ const NewContentPromotionBanner2025: React.FC = () => {
           </div>
         </div>
       </motion.div>
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-8449
 
       {/* Quick Links Section */}
       <motion.div
@@ -171,6 +175,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
       </motion.div>
 
       {/* Technology Highlights */}
@@ -207,6 +212,9 @@ const NewContentPromotionBanner2025: React.FC = () => {
           </div>
         </div>
       </motion.div>
+=======
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-8449
     </div>
   );
 };

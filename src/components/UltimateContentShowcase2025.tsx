@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
 
 const UltimateContentShowcase2025: React.FC = () => {
   const contentCategories = [
@@ -233,6 +236,7 @@ const UltimateContentShowcase2025: React.FC = () => {
             <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
+<<<<<<< HEAD
 =======
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -364,8 +368,12 @@ const UltimateContentShowcase2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e495
           </div>
         </motion.div>
+=======
+          </div>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-8449
       </div>
-    </motion.div>
+    </div>
   );
 };
 
