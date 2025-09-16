@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Launch: Autonomous Ops Control Center v2.4',
+        summary: 'New playbooks, real-time eval gates, and risk scorecards for safer ops.',
+        href: '/updates/autonomous-ops-control-center-2-4',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
         title: 'Guide: Agent Observability Blueprint (2026)',
         summary: 'End-to-end traces, SLIs/SLOs, eval overlays, and evidence bundles for agents.',
         href: '/updates/agent-observability-blueprint-2026',

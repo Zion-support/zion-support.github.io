@@ -34,11 +34,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Agent Observability Blueprint (2026) —
-            <a href="/updates/agent-observability-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
+            New: Autonomous Ops Control Center v2.4 —
+            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Agent Safety Evidence Bundles —
-            <a href="/blog/ai-2026-agent-safety-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
+            Agent Observability Blueprint (2026) —
+            <a href="/updates/agent-observability-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Production Evals Control Plane —
             <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
@@ -75,8 +75,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Agent Safety Evidence Bundles —
-            <a href="/blog/ai-2026-agent-safety-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Fresh: Autonomous Ops Control Center v2.4 —
+            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Production Evals Control Plane —
             <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
@@ -148,8 +148,8 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent FinOps Dashboard v1.0 —
-            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Autonomous Ops Control Center v2.4 —
+            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
