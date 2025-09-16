@@ -9,6 +9,14 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "ai-2026-trusted-evidence-pipeline",
+    title: "AI 2026: Trusted Evidence Pipeline",
+    summary: "Blueprint for audit‑ready evals, traces, and policy evidence in production.",
+    href: "/blog/ai-2026-trusted-evidence-pipeline",
+    tag: "Blueprint",
+    date: "2025-09-16",
+  },
+  {
     id: "agentic-product-playbooks",
     title: "Agentic Product Playbooks",
     summary: "Blueprints to ship agentic workflows with eval gates and observability.",

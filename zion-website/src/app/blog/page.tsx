@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-trusted-evidence-pipeline',
+    title: 'AI 2026: Trusted Evidence Pipeline',
+    summary:
+      'Blueprint for audit‑ready evals, traces, and policy evidence in production.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:
