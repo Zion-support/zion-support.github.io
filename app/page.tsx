@@ -137,6 +137,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Eval‑Gated CI/CD + Agentic Observability (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-pink-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
+            <div>
+              <p className="text-sm font-semibold text-pink-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Eval‑Gated CI/CD + Agentic Observability</h2>
+              <p className="text-gray-600 mt-2">Ship faster with evaluation gates and gain deep visibility into agent systems.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-eval-gated-ci-cd-blueprint" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Eval‑Gated CI/CD</Link>
+              <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Observability Deep Dive</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Reliable Upgrades + Release Scorecards (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
