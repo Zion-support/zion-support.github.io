@@ -120,6 +120,8 @@ import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import QuantumNeuralNetworks2026 from './src/pages/QuantumNeuralNetworks2026';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
+import AITrends2026Insights from './src/pages/AITrends2026Insights';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import RevolutionaryServices2026 from './src/pages/RevolutionaryServices2026';
 import RevolutionaryTech2027 from './src/pages/RevolutionaryTech2027';
@@ -1234,6 +1236,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2027" element={<RevolutionaryTechShowcase2027 />} />
           <Route path="/pages/UltimateTechTrends2026" element={<UltimateTechTrends2026 />} />
           <Route path="/pages/RevolutionaryCaseStudies2026" element={<RevolutionaryCaseStudies2026 />} />
+          <Route path="/pages/AITrends2026Insights" element={<AITrends2026Insights />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/UltimateTechBlog2026" element={<UltimateTechBlog2026 />} />
           <Route path="/pages/RevolutionaryTech2027" element={<RevolutionaryTech2027 />} />
           <Route path="/pages/RevolutionaryContentShowcase2026" element={<RevolutionaryContentShowcase2026 />} />
