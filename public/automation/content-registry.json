@@ -89,6 +89,27 @@
   ],
   "items": [
     {
+      "title": "AI 2026: Agent Release Control Plane — Blueprint",
+      "href": "/blog/ai-2026-agent-release-control-plane-blueprint",
+      "desc": "Approvals, canary, rollback, and evidence capture wired to SLOs.",
+      "createdAt": "2025-09-16T23:59:30.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Incident Response Runbooks for Agentic Systems",
+      "href": "/blog/ai-2026-incident-response-runbooks",
+      "desc": "Scorecard-driven containment, evidence-first postmortems, and MTTR reduction.",
+      "createdAt": "2025-09-16T23:59:20.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence Bundles in Practice",
+      "href": "/blog/ai-2026-evidence-bundles-in-practice",
+      "desc": "Bundle evals, traces, policy events, and incidents per release.",
+      "createdAt": "2025-09-16T23:59:10.000Z",
+      "source": "blog"
+    },
+    {
       "title": "AI 2026: Safe Agent Rollouts Checklist",
       "href": "/blog/ai-2026-safe-agent-rollouts-checklist",
       "desc": "Practical preflight, canary, and rollback steps to ship safely",
