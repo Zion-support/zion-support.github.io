@@ -17,10 +17,10 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
-import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
-import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
-import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
 import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
+import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
+import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -50,6 +50,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    {
+      title: 'Reliable Autonomy Operations (2026)',
+      href: '/blog/ai-2026-reliable-autonomy-operations',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Agentic Observability — Deep Dive (2026)',
+      href: '/blog/ai-2026-agentic-observability-deep-dive',
+      tag: 'New',
+      gradient: 'from-purple-500 to-fuchsia-500'
+    },
     {
       title: 'Agent Platform SLO Blueprint (2026)',
       href: '/blog/ai-2026-agent-slo-blueprint',
