@@ -162,6 +162,10 @@ import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
 import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechBanner2038 from './src/components/UltimateTechBanner2038';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -186,6 +190,12 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -454,6 +464,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
@@ -784,6 +799,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2026 />
@@ -949,6 +969,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={

@@ -1,92 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const banners = [
-    {
-      title: "🚀 Revolutionary Tech Breakthrough 2025",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape our world",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🧠"
-    },
-    {
-      title: "🌟 Ultimate Tech Revolution 2025",
-      description: "Witness the ultimate technological revolution that will transform every aspect of human existence",
-      link: "/pages/UltimateTechRevolution2025",
-      color: "from-indigo-600 to-purple-600",
-      icon: "⚡"
-    },
-    {
-      title: "🧠 Next-Gen Innovation Hub 2025",
-      description: "Discover and explore the most revolutionary innovations that will shape the future of humanity",
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-emerald-600 to-teal-600",
-      icon: "🔮"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentBanner((prev) => (prev + 1) % banners.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [banners.length]);
-
   return (
-    <div className="mb-12">
-      <div className={`bg-gradient-to-r ${banners[currentBanner].color} rounded-2xl p-8 text-white relative overflow-hidden transition-all duration-500 ${
-        isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
-      }`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl animate-bounce">{banners[currentBanner].icon}</div>
-                <div>
-                  <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-2 animate-pulse">
-                    🌟 NEW REVOLUTIONARY CONTENT • JANUARY 2025
-                  </div>
-                  <h2 className="text-3xl font-bold mb-2">{banners[currentBanner].title}</h2>
-                  <p className="text-lg opacity-90 max-w-2xl">
-                    {banners[currentBanner].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex space-x-4">
-              <a
-                href={banners[currentBanner].link}
-                className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-              >
-                Explore Now →
-              </a>
-              <button className="border-2 border-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
-                Learn More
-              </button>
-            </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white mb-12">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 NEW: Revolutionary Content 2025
+          </div>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Experience the Future of Technology
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+            Discover our latest breakthrough technologies including conscious AI, quantum computing, and interdimensional technology
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🧠</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              The world's first truly conscious artificial intelligence
+            </p>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore AI →
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">⚛️</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-4 text-center text-sm">
+              Revolutionary quantum processors solving impossible problems
+            </p>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Go Quantum →
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-emerald-100 mb-4 text-center text-sm">
+              Technology that transcends dimensional boundaries
+            </p>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Enter Dimensions →
+            </a>
           </div>
         </div>
-        
-        {/* Banner Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentBanner(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentBanner ? 'bg-white' : 'bg-white/50'
-              }`}
-            />
-          ))}
+
+        <div className="text-center">
+          <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4">
+            Explore All Breakthroughs →
+          </a>
+          <a href="/pages/NextGenInnovationHub2025" className="inline-block border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
+            Innovation Hub
+          </a>
         </div>
       </div>
     </div>
