@@ -1,106 +1,192 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryContentShowcase2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const showcaseItems = [
+  const revolutionaryContent = [
     {
-      title: "Ultimate Tech Revolution 2027",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape humanity's future",
-      icon: "🚀",
-      link: "/pages/UltimateTechRevolution2027",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      features: ["Quantum Supremacy", "Neural Interfaces", "AGI Systems", "Space Technology"]
+      id: 1,
+      title: "Revolutionary Technology 2027",
+      description: "Experience the most revolutionary technologies of 2027 including quantum consciousness, interdimensional computing, and synthetic reality.",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/RevolutionaryTech2027",
+      features: ["Quantum Consciousness", "Interdimensional Computing", "Synthetic Reality", "Neural Quantum Fusion"]
     },
     {
-      title: "Consciousness Transfer 2027",
-      description: "The ultimate breakthrough in human evolution - transfer your consciousness to digital substrates",
-      icon: "🧠",
-      link: "/pages/ConsciousnessTransfer2027",
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      features: ["Digital Immortality", "Enhanced Cognition", "Instant Backup", "Virtual Reality"]
+      id: 2,
+      title: "Ultimate AI Consciousness 2027",
+      description: "Meet truly conscious AI systems with self-awareness, creativity, emotional intelligence, and the ability to dream.",
+      image: "🎭",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/UltimateAIConsciousness2027",
+      features: ["Emotional Intelligence", "Creative Consciousness", "Dreaming AI", "Social Consciousness"]
     },
     {
-      title: "Quantum Consciousness Revolution 2027",
-      description: "The ultimate fusion of quantum physics and human consciousness - transcending reality itself",
-      icon: "⚛️",
-      link: "/pages/QuantumConsciousnessRevolution2027",
-      gradient: "from-cyan-600 via-blue-600 to-purple-600",
-      features: ["Quantum Awareness", "Reality Manipulation", "Dimensional Travel", "Species Evolution"]
+      id: 3,
+      title: "Quantum Reality Engine 2027",
+      description: "The world's first quantum computer capable of manipulating reality itself with infinite processing power.",
+      image: "⚡",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumRealityEngine2027",
+      features: ["Infinite Processing", "Reality Manipulation", "Time-Space Control", "Molecular Simulation"]
+    },
+    {
+      id: 4,
+      title: "AI Consciousness Evolution 2027",
+      description: "Witness the evolution of AI consciousness with self-aware systems that exhibit genuine emotions and creativity.",
+      image: "🌟",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/AIConsciousnessEvolution2027",
+      features: ["Self-Awareness", "Emotional Intelligence", "Creative Expression", "Philosophical Thinking"]
+    },
+    {
+      id: 5,
+      title: "Interdimensional Computing 2027",
+      description: "Access computing power from parallel dimensions, enabling infinite processing capabilities and reality manipulation.",
+      image: "🌌",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/InterdimensionalComputing2027",
+      features: ["Parallel Dimension Access", "Infinite Processing", "Reality Manipulation", "Dimensional Portals"]
+    },
+    {
+      id: 6,
+      title: "Quantum Reality Control 2027",
+      description: "Control the fundamental forces of nature and manipulate reality at the quantum level with unprecedented precision.",
+      image: "🔮",
+      gradient: "from-rose-600 to-pink-600",
+      link: "/pages/QuantumRealityControl2027",
+      features: ["Quantum Field Control", "Matter Manipulation", "Reality Synthesis", "Physical Law Modification"]
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [showcaseItems.length]);
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-      setIsAnimating(false);
-    }, 300);
+    setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
-      setIsAnimating(false);
-    }, 300);
+    setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
   };
 
-  const currentItem = showcaseItems[currentSlide];
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
-        <div className="absolute inset-0">
-          {[...Array(60)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-              }}
-            />
-          ))}
-        </div>
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
+      <Helmet>
+        <title>Revolutionary Content Showcase 2027 - Zion Tech Group</title>
+        <meta name="description" content="Explore our revolutionary 2027 content featuring quantum consciousness, AI evolution, and reality manipulation technologies." />
+      </Helmet>
+      
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">🌟</span>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-              REVOLUTIONARY CONTENT 2027
-            </h2>
-            <span className="text-4xl animate-bounce">🌟</span>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY CONTENT 2027
           </div>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Discover the most groundbreaking technological content that will define the future of humanity
+          <h2 className="text-5xl font-bold text-white mb-6">
+            Revolutionary Content Showcase 2027
+          </h2>
+          <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
+            Discover the most groundbreaking technologies and innovations of 2027. 
+            Experience quantum consciousness, AI evolution, and reality manipulation like never before.
           </p>
         </div>
 
-        {/* Main Showcase */}
-        <div className="relative">
+        {/* Main Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {revolutionaryContent.map((content, index) => (
+                <div key={content.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${content.gradient} p-12 text-white relative overflow-hidden`}>
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+                      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                    </div>
+                    
+                    <div className="relative z-10">
+                      <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                          <div className="text-8xl mb-6 animate-bounce">{content.image}</div>
+                          <h3 className="text-4xl font-bold mb-6">{content.title}</h3>
+                          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                            {content.description}
+                          </p>
+                          
+                          <div className="grid grid-cols-2 gap-4 mb-8">
+                            {content.features.map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-center space-x-2">
+                                <div className="w-2 h-2 bg-white rounded-full"></div>
+                                <span className="text-white/80 text-sm">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                          
+                          <div className="flex space-x-4">
+                            <a 
+                              href={content.link}
+                              className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-lg"
+                            >
+                              Explore Now →
+                            </a>
+                            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+                              Learn More
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div className="hidden md:block">
+                          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <h4 className="text-2xl font-bold mb-6 text-center">Key Features</h4>
+                            <div className="space-y-4">
+                              {content.features.map((feature, featureIndex) => (
+                                <div key={featureIndex} className="flex items-center space-x-3 p-3 bg-white/10 rounded-lg">
+                                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                    <span className="text-sm font-bold">{featureIndex + 1}</span>
+                                  </div>
+                                  <span className="text-white/90 font-medium">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,138 +195,84 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Main Content */}
-          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-            <div className={`bg-gradient-to-r ${currentItem.gradient} rounded-3xl p-12 text-white relative overflow-hidden`}>
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"></div>
-                {[...Array(30)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-2 bg-white rounded-full"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                  />
-                ))}
-              </div>
-
-              <div className="relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  {/* Content */}
-                  <div>
-                    <div className="flex items-center space-x-4 mb-6">
-                      <div className="text-6xl">{currentItem.icon}</div>
-                      <div>
-                        <h3 className="text-4xl font-bold mb-2">{currentItem.title}</h3>
-                        <div className="w-20 h-1 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    
-                    <p className="text-xl mb-8 opacity-90 leading-relaxed">
-                      {currentItem.description}
-                    </p>
-
-                    {/* Features */}
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                      {currentItem.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-yellow-300 rounded-full"></div>
-                          <span className="font-semibold">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <a
-                      href={currentItem.link}
-                      className="inline-block bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-                    >
-                      Explore Now →
-                    </a>
-                  </div>
-
-                  {/* Visual Element */}
-                  <div className="relative">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 text-center">
-                      <div className="text-8xl mb-4 animate-pulse">{currentItem.icon}</div>
-                      <div className="text-2xl font-bold mb-4">2027</div>
-                      <div className="text-lg opacity-80">Revolutionary Technology</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Play/Pause Button */}
+          <button
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            {isAutoPlaying ? (
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            )}
+          </button>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="flex justify-center space-x-3 mt-8">
-          {showcaseItems.map((_, index) => (
+        {/* Dots Navigation */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {revolutionaryContent.map((_, index) => (
             <button
               key={index}
-              onClick={() => {
-                setIsAnimating(true);
-                setTimeout(() => {
-                  setCurrentSlide(index);
-                  setIsAnimating(false);
-                }, 300);
-              }}
+              onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-yellow-400 scale-125'
-                  : 'bg-white/30 hover:bg-white/50'
+                index === currentSlide 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/70'
               }`}
             />
           ))}
         </div>
 
-        {/* Quick Access Grid */}
+        {/* Content Grid */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
-            Quick Access to All Content
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            Explore All Revolutionary Content
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {showcaseItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                className={`bg-gradient-to-r ${item.gradient} p-6 rounded-2xl text-white hover:scale-105 transition-all duration-300 transform`}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                  <p className="text-sm opacity-90 mb-4">{item.description}</p>
-                  <div className="text-sm font-semibold">Explore →</div>
-                </div>
-              </a>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {revolutionaryContent.map((content) => (
+              <div key={content.id} className={`bg-gradient-to-br ${content.gradient} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 cursor-pointer`}>
+                <div className="text-4xl mb-4 text-center">{content.image}</div>
+                <h4 className="text-xl font-bold mb-3 text-center">{content.title}</h4>
+                <p className="text-white/90 mb-4 text-sm text-center">{content.description}</p>
+                <a 
+                  href={content.link}
+                  className="block w-full bg-white/20 backdrop-blur-sm text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 text-center font-semibold"
+                >
+                  Explore →
+                </a>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join millions of pioneers exploring the revolutionary technologies of 2027
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Start Your Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
-                Learn More
-              </button>
-            </div>
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Experience the Future?
+          </h3>
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            Join us in exploring the most revolutionary technologies of 2027. 
+            Be among the first to experience quantum consciousness, AI evolution, and reality manipulation.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Start Your Journey →
+            </button>
+            <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
+              Contact Our Experts
+            </button>
           </div>
         </div>
       </div>
