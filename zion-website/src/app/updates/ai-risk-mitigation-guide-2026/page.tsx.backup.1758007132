@@ -5,6 +5,9 @@ export const metadata = {
   description: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
 }
 
+<<<<<<< HEAD
+ 
+=======
 export default function AIRiskMitigationGuide2026() {
   return (
     <div className="min-h-screen bg-white">
@@ -31,4 +34,5 @@ export default function AIRiskMitigationGuide2026() {
     </div>
   )
 }
+>>>>>>> origin/cursor/create-and-deploy-new-content-e791
 
