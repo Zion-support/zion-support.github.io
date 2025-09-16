@@ -176,6 +176,10 @@ import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcas
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import RevolutionaryAdBanner2025 from './src/components/RevolutionaryAdBanner2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import InteractiveTechDemo2025 from './src/components/InteractiveTechDemo2025';
+import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
+import UltimatePromoBanner2025 from './src/components/UltimatePromoBanner2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
@@ -286,6 +290,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 - Exclusive Offers */}
+                <RevolutionaryAdBanner2025 />
+                
+                {/* NEW: Ultimate Promo Banner 2025 - Ultimate Package Offer */}
+                <UltimatePromoBanner2025 />
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
@@ -1068,6 +1078,16 @@ export default function App(): JSX.Element {
                 {/* Interactive Technology Showcase 2036 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2036 />
+                </div>
+
+                {/* NEW: Interactive Tech Demo 2025 - Latest Interactive Features */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2025 />
+                </div>
+
+                {/* NEW: Revolutionary Content Showcase 2025 - Latest Content Display */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2025 />
                 </div>
                 {/* Revolutionary Tech Showcase 2029 */}
                 <div className="mb-12">
