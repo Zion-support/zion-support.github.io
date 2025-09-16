@@ -82,7 +82,7 @@ import {
 } from '@heroicons/react/24/outline'
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
-import { getLatestUpdates } from '../data/updates'
+import { getLatestUpdates } from '@/data/updates'
 =======
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
@@ -118,7 +118,7 @@ import {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
-import { getLatestUpdates } from '../data/updates'
+import { getLatestUpdates } from '@/data/updates'
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -129,7 +129,7 @@ import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-import { getLatestUpdates } from '../data/updates'
+import { getLatestUpdates } from '@/data/updates'
 >>>>>>> cursor/create-and-deploy-new-content-1912
 
 const features = [
@@ -1180,7 +1180,7 @@ export default function HomePage() {
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
 =======
-            {getLatestUpdates(6).map((item) => (
+            {latest.map((item) => (
               <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
 =======
             {latest.map((item) => (
