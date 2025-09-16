@@ -2,10 +2,14 @@
 export default {
   content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/latest-content-home
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
 =======
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,12 +18,17 @@ export default {
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 >>>>>>> origin/merge-pr-12271
+=======
+>>>>>>> origin/feat/latest-content-home
   ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/latest-content-home
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -31,6 +40,7 @@ export default {
         'zion-slate-dark': '#0b1220',
         'zion-slate': '#111827',
         'zion-slate-light': '#1f2937',
+<<<<<<< HEAD
 =======
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -74,12 +84,15 @@ export default {
           950: '#030712'
         }
 >>>>>>> origin/merge-pr-12271
+=======
+>>>>>>> origin/feat/latest-content-home
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   plugins: [],
 }
@@ -93,3 +106,7 @@ export default {
 };
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 >>>>>>> origin/merge-pr-12271
+=======
+  plugins: [],
+}
+>>>>>>> origin/feat/latest-content-home

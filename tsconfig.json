@@ -30,6 +30,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/latest-content-home
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
@@ -79,11 +82,15 @@
       ]
 >>>>>>> origin/merge-pr-12271
     },
+<<<<<<< HEAD
     "types": ["vite/client", "node"],
     "plugins": [
       { "name": "typescript-plugin-css-modules" }
     ]
 >>>>>>> origin/feature/new-content-2026
+=======
+    "types": ["vite/client", "node"]
+>>>>>>> origin/feat/latest-content-home
   },
   "include": [
     "**/*.ts",
@@ -115,6 +122,7 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
 =======
     "coverage"
 >>>>>>> origin/feature/new-content-and-promotions
@@ -124,6 +132,12 @@
     "coverage"
   ]
 >>>>>>> origin/feat/content-promo
+=======
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
+>>>>>>> origin/feat/latest-content-home
 }
 =======
     "types": ["vite/client", "node"]

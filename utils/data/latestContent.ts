@@ -9,6 +9,7 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+<<<<<<< HEAD
     id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
     title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
     summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
@@ -153,6 +154,8 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/feat/latest-content-home
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",
@@ -161,6 +164,7 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-10",
   },
   {
+<<<<<<< HEAD
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -193,6 +197,8 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/feat/latest-content-home
     id: "quantum-edge-report",
     title: "Quantum + Edge: 2026 Readiness Report",
     summary: "Where quantum acceleration meets edge workloads—benchmarks and ROI models.",
@@ -208,6 +214,7 @@ export const latestContent: ContentItem[] = [
     tag: "Blueprint",
     date: "2025-09-14",
   },
+<<<<<<< HEAD
   {
     id: "agentic-risk-safety-2026",
     title: "AI 2026: Agentic Risk and Safety Playbook",
@@ -240,5 +247,7 @@ export const latestContent: ContentItem[] = [
     tag: "Guide",
     date: "2025-09-15",
   },
+=======
+>>>>>>> origin/feat/latest-content-home
 ];
 
