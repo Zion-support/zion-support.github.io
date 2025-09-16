@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react'
+import Link from 'next/link'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
 
