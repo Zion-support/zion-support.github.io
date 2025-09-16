@@ -2205,6 +2205,61 @@ export const blogPosts = [
   }
 ];
 
+// Fresh promoted content (2025-09-16)
+export const newPromoted2025 = [
+  {
+    id: 9915,
+    title: "Agentic Systems 2026: Release Gates You Can Trust",
+    excerpt:
+      "Wire evals, policy, and rollback contracts to every merge for safer autonomy.",
+    content:
+      "This hands-on guide shows how to couple evaluation scorecards, policy-as-code, and deterministic rollback ladders to your CI/CD so every change ships with guardrails and auditable evidence. Includes JSON templates and GitHub checks you can copy today.",
+    author: "Jordan Lee",
+    authorRole: "Platform Engineering Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Evals", "Policy", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-release-gates-2026.jpg",
+    slug: "ai-2026-agentic-release-gates-trust"
+  },
+  {
+    id: 9916,
+    title: "Real-Time Model Routing: Cost Meets Quality",
+    excerpt:
+      "Balance quality targets and budget bands with policy-routed inference in production.",
+    content:
+      "Learn a pragmatic approach to multi-model routing that respects quality thresholds, latency SLOs, and spend budgets. We provide example policies, evaluation hooks, and dashboards for transparent decisions and rapid rollback.",
+    author: "Taylor Morgan",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Architecture",
+    tags: ["Routing", "Budgets", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-model-routing-2026.jpg",
+    slug: "ai-2026-real-time-model-routing"
+  },
+  {
+    id: 9917,
+    title: "Evidence-Driven AI Governance: Scorecards That Ship",
+    excerpt:
+      "Turn raw evals into exec-ready scorecards connected to release approvals.",
+    content:
+      "We translate evaluation outputs into governance-grade scorecards with clear pass/fail gates, ownership, and audit trails. Includes schema, example panels, and integration notes for common CI platforms.",
+    author: "Amira Hassan",
+    authorRole: "Head of AI Governance",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Governance",
+    tags: ["Scorecards", "Approvals", "Audit"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-driven-ai-governance-2026.jpg",
+    slug: "ai-2026-evidence-driven-ai-governance"
+  }
+];
+
 // Latest additions (2025-09-16)
 const latest2025 = [
   {
@@ -2266,11 +2321,11 @@ export const getBlogPostsByCategory = (category) => {
 };
 
 export const getFeaturedBlogPosts = () => {
-  return blogPosts.filter(post => post.featured);
+  return BLOG_POSTS.filter(post => post.featured);
 };
 
 export const getRecentBlogPosts = (limit = 3) => {
-  return blogPosts
+  return [...BLOG_POSTS]
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit);
 };
@@ -3012,19 +3067,11 @@ export const extraContent2029 = [
 ];
 
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025];
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
 
 // Helpers for UI components
-export function getFeaturedBlogPosts() {
-  return BLOG_POSTS.filter(p => p.featured === true);
-}
-
-export function getRecentBlogPosts(limit = 5) {
-  return [...BLOG_POSTS]
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
-    .slice(0, limit);
-}
+// (kept earlier helper versions; remove duplicates below)
