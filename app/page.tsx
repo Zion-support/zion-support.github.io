@@ -410,6 +410,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Post‑Incident Learning Loops (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-fuchsia-100">
+            <div>
+              <p className="text-sm font-semibold text-fuchsia-700">New article</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Post‑Incident Learning Loops — Operational Excellence</h2>
+              <p className="text-gray-600 mt-2">Turn incidents into durable improvements with evidence‑led loops, scorecards, and release gates.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-post-incident-learning-loops" className="inline-block bg-fuchsia-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-700">Read Article</Link>
+              <Link href="/blog" className="inline-block border border-fuchsia-600 text-fuchsia-700 px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-50">More on the Blog</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Governed Tool Use Case Studies (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-rose-50 to-red-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
