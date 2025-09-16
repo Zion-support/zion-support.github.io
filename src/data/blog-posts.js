@@ -1,5 +1,6 @@
 export const blogPosts = [
   {
+<<<<<<< HEAD
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
     excerpt: "Revolutionary AI technologies including conscious systems, quantum computing, and neural interfaces are transforming every aspect of business and human experience in 2027.",
@@ -209,6 +210,51 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/synthetic-intelligence-2026.jpg",
     slug: "synthetic-intelligence-2026"
+=======
+    id: 10001,
+    title: "AI Ethics Framework 2026: Building Responsible AI Systems",
+    excerpt: "Comprehensive guide to implementing ethical AI frameworks that ensure fairness, transparency, and accountability in artificial intelligence systems.",
+    content: "As AI systems become increasingly sophisticated and integrated into critical decision-making processes, the need for robust ethical frameworks has never been more urgent. This comprehensive guide outlines the essential components of a modern AI ethics framework, providing practical implementation strategies for organizations looking to build responsible AI systems in 2026.",
+    author: "Dr. Elena Rodriguez",
+    authorRole: "Chief AI Ethics Officer",
+    publishDate: "2026-01-15",
+    readTime: "12 min read",
+    category: "AI Ethics",
+    tags: ["AI Ethics", "Responsible AI", "AI Governance", "Bias Mitigation"],
+    featured: true,
+    imageUrl: "/images/blog/ai-ethics-framework-2026.jpg",
+    slug: "ai-ethics-framework-2026"
+  },
+  {
+    id: 10002,
+    title: "Quantum Computing Breakthrough 2026: The Next Frontier",
+    excerpt: "Revolutionary quantum computing advances in 2026. Explore the latest breakthroughs in quantum algorithms, error correction, and practical applications.",
+    content: "The year 2026 marks a pivotal moment in quantum computing history. Recent breakthroughs in quantum error correction, algorithm optimization, and hardware stability have brought us closer than ever to practical quantum advantage across multiple industries.",
+    author: "Dr. Marcus Chen",
+    authorRole: "Quantum Computing Research Director",
+    publishDate: "2026-01-15",
+    readTime: "15 min read",
+    category: "Quantum Computing",
+    tags: ["Quantum Computing", "Quantum Algorithms", "Quantum Error Correction", "Quantum Applications"],
+    featured: true,
+    imageUrl: "/images/blog/quantum-computing-breakthrough-2026.jpg",
+    slug: "quantum-computing-breakthrough-2026"
+  },
+  {
+    id: 10003,
+    title: "Edge AI Revolution 2026: Intelligence at the Edge",
+    excerpt: "Discover how Edge AI is transforming industries in 2026. Learn about real-time processing, privacy-preserving AI, and edge computing applications.",
+    content: "Edge AI represents a fundamental shift in how we deploy and utilize artificial intelligence. By moving AI processing closer to data sources, we're enabling real-time decision-making, reducing latency, and enhancing privacy while opening new possibilities for intelligent applications.",
+    author: "Dr. Priya Patel",
+    authorRole: "Edge AI Research Lead",
+    publishDate: "2026-01-15",
+    readTime: "10 min read",
+    category: "Edge AI",
+    tags: ["Edge AI", "Edge Computing", "Real-time AI", "Privacy-preserving AI"],
+    featured: true,
+    imageUrl: "/images/blog/edge-ai-revolution-2026.jpg",
+    slug: "edge-ai-revolution-2026"
+>>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
   },
   {
     id: 9901,

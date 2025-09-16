@@ -8,6 +8,9 @@ import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import UltimateTechShowcaseBanner2026 from './components/UltimateTechShowcaseBanner2026';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
 import ContentPromotionBanner from './components/ContentPromotionBanner';
 import ContentSpotlight from './components/ContentSpotlight';
@@ -81,6 +84,10 @@ import NextGenAIContentHub2026 from './pages/NextGenAIContentHub2026';
 import AITrendsInsights2026 from './pages/AITrendsInsights2026';
 import AIBusinessAutomation2026 from './pages/AIBusinessAutomation2026';
 import QuantumComputingEnterprise2026 from './pages/QuantumComputingEnterprise2026';
+import AdvancedAIServices2026 from './pages/AdvancedAIServices2026';
+import BlogPost_Jan2026_AIEthicsFramework from './pages/BlogPost_Jan2026_AIEthicsFramework';
+import BlogPost_Jan2026_QuantumComputingBreakthrough from './pages/BlogPost_Jan2026_QuantumComputingBreakthrough';
+import BlogPost_Jan2026_EdgeAIRevolution from './pages/BlogPost_Jan2026_EdgeAIRevolution';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -146,6 +153,7 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
 
+<<<<<<< HEAD
               {/* New Content 2026 Promotion Banner */}
               <div className="mb-12">
                 <NewContent2026PromotionBanner />
@@ -159,6 +167,16 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Tech Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryTechBanner2026 />
+=======
+              {/* NEW: Ultimate Tech Showcase Banner 2026 */}
+              <div className="mb-12">
+                <UltimateTechShowcaseBanner2026 />
+              </div>
+
+              {/* NEW: Revolutionary Content Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryContentBanner2026 />
+>>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
               </div>
 
               {/* NEW: New Content Showcase 2026 */}
@@ -533,6 +551,7 @@ const App: React.FC = () => {
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
           
+<<<<<<< HEAD
           {/* NEW: Ultimate Content Routes 2026 */}
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
@@ -555,6 +574,13 @@ const App: React.FC = () => {
           <Route path="/ai-2027-breakthrough-innovations" element={<AI2027BreakthroughInnovations />} />
           <Route path="/quantum-computing-revolution-2027" element={<QuantumComputingRevolution2027 />} />
           <Route path="/neural-interface-breakthrough-2027" element={<NeuralInterfaceBreakthrough2027 />} />
+=======
+          {/* NEW: January 2026 Content Routes */}
+          <Route path="/advanced-ai-services-2026" element={<AdvancedAIServices2026 />} />
+          <Route path="/blog/ai-ethics-framework-2026" element={<BlogPost_Jan2026_AIEthicsFramework />} />
+          <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
+          <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
         </Routes>
         
         <Footer />
