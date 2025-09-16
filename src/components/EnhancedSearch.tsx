@@ -214,6 +214,48 @@ const EnhancedSearch: React.FC = () => {
     return icons[category] || <Cloud className="w-4 h-4" />;
   };
 
+  return (
+    <div className="w-full max-w-4xl mx-auto">
+      <form onSubmit={handleSearch} className="relative">
+        <div className="flex items-center space-x-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onFocus={() => setShowSuggestions(true)}
+              placeholder="Search for AI services, solutions, or insights..."
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => setQuery('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowFilters(!showFilters)}
+            className="px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex items-center space-x-2"
+          >
+            <Filter className="w-4 h-4" />
+            <span>Filters</span>
+          </button>
+          <button
+            type="submit"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
+          >
+            <Search className="w-4 h-4" />
+            <span>Search</span>
+          </button>
+        </div>
+      </form>
+
       <AnimatePresence>
         {showFilters && (
           <motion.div
@@ -339,7 +381,10 @@ const EnhancedSearch: React.FC = () => {
                   </button>
                 ))}
               </div>
-      )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

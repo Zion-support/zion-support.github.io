@@ -210,9 +210,6 @@ export default function AnalyticsDashboard() {
             </div>
           </div>
 
-            </div>
-          </div>
-
           {/* Performance Metrics */}
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
