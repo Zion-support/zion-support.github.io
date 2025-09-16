@@ -2,7 +2,6 @@ import React from 'react';
 
 const NextGenInnovationHub2036: React.FC = () => {
 <<<<<<< HEAD
-<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,8 +145,6 @@ const NextGenInnovationHub2036: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -156,7 +153,6 @@ const NextGenInnovationHub2036: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2036
           </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2036
           </h1>
@@ -500,21 +496,6 @@ const NextGenInnovationHub2036: React.FC = () => {
             </div>
             <button className="w-full bg-pink-500 text-white py-3 rounded-lg hover:bg-pink-600 transition-colors font-semibold">
               Explore Category
-=======
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Next-Gen Innovation Hub 2036
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            The world's most advanced innovation laboratory featuring cutting-edge research, 
-            development, and deployment of revolutionary technologies that will shape the future
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Hub →
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-semibold text-lg">
-              Join Research
->>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
           </div>
         </div>

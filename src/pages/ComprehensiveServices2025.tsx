@@ -1,22 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-173f
 
 const ComprehensiveServices2025: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
 <<<<<<< HEAD
       name: "Dr. Sarah Chen",
       role: "CTO, TechCorp",
@@ -46,8 +40,6 @@ const ComprehensiveServices2025: React.FC = () => {
     {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       category: "AI & Machine Learning",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
@@ -155,17 +147,13 @@ const ComprehensiveServices2025: React.FC = () => {
         }
       ]
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     }
   ];
 
   return (
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -244,8 +232,6 @@ const ComprehensiveServices2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <Helmet>
         <title>Comprehensive Services 2025 | Zion Tech Group</title>
@@ -420,15 +406,11 @@ const ComprehensiveServices2025: React.FC = () => {
               <div className="text-3xl font-bold text-green-400 mb-2">-95%</div>
               <div className="text-sm opacity-75">CO2 Reduction</div>
             </div>
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA Section */}
       <div className="py-20">
@@ -504,8 +486,6 @@ const ComprehensiveServices2025: React.FC = () => {
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -523,7 +503,6 @@ const ComprehensiveServices2025: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -537,8 +516,6 @@ const ComprehensiveServices2025: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
         </div>
       </div>
     </div>

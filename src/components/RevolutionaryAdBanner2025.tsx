@@ -48,7 +48,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
   const currentOfferData = offers[currentOffer];
 
   return (
-<<<<<<< HEAD
     <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
       isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
     }`}>
@@ -83,14 +82,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 }`}
               />
             ))}
-=======
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2025
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
 
           {/* Main Offer Content */}
@@ -150,7 +141,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 <div className="text-xs text-white/70">30-day guarantee</div>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Countdown Timer */}
             <div className="mt-8 bg-black/20 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto">
@@ -176,11 +166,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
-            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Revolution →
-            </a>
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>

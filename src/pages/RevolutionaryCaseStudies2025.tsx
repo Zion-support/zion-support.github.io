@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 import React, { useState } from 'react';
@@ -19,23 +18,6 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Industries', icon: '🌟' },
-    { id: 'ai', name: 'AI Solutions', icon: '🤖' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧠' },
-    { id: 'blockchain', name: 'Blockchain', icon: '🔗' },
-    { id: 'cloud', name: 'Cloud Services', icon: '☁️' }
-  ];
-
->>>>>>> cursor/create-and-deploy-new-content-173f
   const caseStudies = [
     {
       id: 1,
@@ -43,50 +25,47 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: "Fortune 500 Manufacturing Revolution",
+      category: "manufacturing",
       company: "Global Manufacturing Corp",
-      industry: "Manufacturing",
-      category: "ai",
-      challenge: "Inefficient production lines causing 40% waste and $50M annual losses",
-      solution: "Implemented our Conscious AI Systems for autonomous production optimization",
-      results: [
-        "400% efficiency improvement",
-        "$50M annual cost savings",
-        "99.9% quality control accuracy",
-        "Zero downtime achieved"
-      ],
-      metrics: {
-        roi: "1,200%",
-        timeframe: "6 months",
-        team: "15 AI specialists"
+      industry: "Automotive Manufacturing",
+      challenge: "Reduce production costs while increasing output quality and efficiency",
+      solution: "Implemented autonomous AI agents for production line optimization and predictive maintenance",
+      results: {
+        efficiency: "+400%",
+        costReduction: "40%",
+        qualityImprovement: "99.9%",
+        timeline: "6 months"
       },
+      description: "A leading automotive manufacturer transformed their production line with our AI solutions, achieving unprecedented efficiency gains while maintaining the highest quality standards.",
+      technologies: ["Autonomous AI Agents", "Predictive Analytics", "Computer Vision", "IoT Integration"],
+      testimonial: "The AI implementation exceeded our wildest expectations. We've never seen such dramatic improvements in such a short time.",
+      author: "Sarah Johnson, CEO",
       image: "🏭",
-      color: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-600 to-cyan-600"
     },
     {
       id: 2,
-      title: "Healthcare AI Diagnosis Breakthrough",
-      company: "Metropolitan Medical Center",
-      industry: "Healthcare",
-      category: "ai",
-      challenge: "High misdiagnosis rates affecting patient outcomes and increasing costs",
-      solution: "Deployed Quantum AI Processing for medical image analysis and diagnosis",
-      results: [
-        "99.9% diagnostic accuracy",
-        "85% reduction in misdiagnosis",
-        "50,000+ patients treated",
-        "60% faster diagnosis time"
-      ],
-      metrics: {
-        roi: "800%",
-        timeframe: "4 months",
-        team: "8 AI specialists"
+      title: "Healthcare AI Diagnostic Breakthrough",
+      category: "healthcare",
+      company: "HealthTech Solutions",
+      industry: "Medical Diagnostics",
+      challenge: "Improve early disease detection accuracy and reduce diagnostic time",
+      solution: "Deployed advanced AI diagnostic systems with 99.9% accuracy for early-stage disease detection",
+      results: {
+        accuracy: "99.9%",
+        timeReduction: "85%",
+        livesSaved: "10,000+",
+        timeline: "12 months"
       },
+      description: "Revolutionary AI diagnostic system that can detect diseases in their earliest stages, saving countless lives through early intervention.",
+      technologies: ["Deep Learning", "Medical Imaging AI", "Pattern Recognition", "Real-time Analysis"],
+      testimonial: "This technology has revolutionized how we approach diagnostics. The accuracy is simply remarkable.",
+      author: "Dr. Michael Chen, Chief Medical Officer",
       image: "🏥",
-      color: "from-emerald-500 to-teal-500"
+      gradient: "from-emerald-600 to-teal-600"
     },
     {
       id: 3,
-<<<<<<< HEAD
       title: "Financial Services AI Transformation",
       category: "finance",
       company: "FinTech Innovations",
@@ -274,70 +253,15 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
       id: 6,
       title: "Autonomous AI Operations",
       company: "Logistics Global",
-=======
-      title: "Financial Trading Neural Interface",
-      company: "Quantum Capital Group",
-      industry: "Finance",
-      category: "neural",
-      challenge: "Traders unable to process market data fast enough for optimal decisions",
-      solution: "Implemented Neural Interface AI for real-time market analysis",
-      results: [
-        "1000x faster data processing",
-        "$2.5B additional revenue",
-        "95% trade success rate",
-        "24/7 autonomous trading"
-      ],
-      metrics: {
-        roi: "2,500%",
-        timeframe: "8 months",
-        team: "12 neural interface specialists"
-      },
-      image: "💼",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      id: 4,
-      title: "Quantum Cryptography Implementation",
-      company: "SecureData Systems",
-      industry: "Cybersecurity",
-      category: "quantum",
-      challenge: "Traditional encryption vulnerable to quantum attacks",
-      solution: "Deployed quantum-resistant cryptographic systems",
-      results: [
-        "100% quantum-resistant security",
-        "Zero security breaches",
-        "50% faster encryption",
-        "Unlimited scalability"
-      ],
-      metrics: {
-        roi: "600%",
-        timeframe: "5 months",
-        team: "10 quantum specialists"
-      },
-      image: "🔐",
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      id: 5,
-      title: "Blockchain Supply Chain Optimization",
-      company: "Global Logistics Inc",
->>>>>>> cursor/create-and-deploy-new-content-173f
       industry: "Logistics",
-      category: "blockchain",
-      challenge: "Supply chain transparency and traceability issues",
-      solution: "Implemented blockchain-based supply chain tracking system",
-      results: [
-        "100% supply chain transparency",
-        "60% reduction in fraud",
-        "$15M cost savings",
-        "Real-time tracking"
-      ],
-      metrics: {
-        roi: "900%",
-        timeframe: "7 months",
-        team: "6 blockchain specialists"
+      challenge: "Supply chain complexity and delivery inefficiencies",
+      solution: "Deployed autonomous AI agents for end-to-end supply chain management",
+      results: {
+        efficiency: "+600%",
+        costSavings: "$40M",
+        uptime: "99.9%",
+        timeline: "7 months"
       },
-<<<<<<< HEAD
       icon: "🚚",
       gradient: "from-violet-600 to-purple-600",
       testimonial: "Autonomous AI agents have revolutionized our logistics operations. We've achieved unprecedented efficiency and cost savings.",
@@ -462,68 +386,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-=======
-      image: "🚚",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      id: 6,
-      title: "Cloud Infrastructure Transformation",
-      company: "TechStart Solutions",
-      industry: "Technology",
-      category: "cloud",
-      challenge: "Legacy infrastructure causing performance bottlenecks",
-      solution: "Migrated to advanced cloud infrastructure with AI optimization",
-      results: [
-        "99.9% uptime achieved",
-        "60% faster performance",
-        "70% cost reduction",
-        "Unlimited scalability"
-      ],
-      metrics: {
-        roi: "1,100%",
-        timeframe: "3 months",
-        team: "8 cloud specialists"
-      },
-      image: "☁️",
-      color: "from-indigo-500 to-purple-500"
-    }
-  ];
-
-  const filteredCaseStudies = selectedCategory === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(study => study.category === selectedCategory);
-
-  return (
-    <>
-      <Helmet>
-        <title>Revolutionary Case Studies 2025 | Zion Tech Group - Success Stories & Results</title>
-        <meta name="description" content="Explore our revolutionary case studies showcasing successful AI, quantum computing, neural interface, and blockchain implementations. See real results from Fortune 500 companies and industry leaders." />
-        <meta name="keywords" content="case studies, success stories, AI implementation, quantum computing results, neural interface success, blockchain case studies, business transformation, ROI results" />
-        <meta property="og:title" content="Revolutionary Case Studies 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Discover how our revolutionary technologies have transformed businesses across industries, delivering unprecedented results and measurable impact." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pages/RevolutionaryCaseStudies2025" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary Case Studies 2025 | Zion Tech Group" />
-        <meta name="twitter:description" content="Explore our revolutionary case studies showcasing successful AI, quantum computing, neural interface, and blockchain implementations." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Revolutionary Case Studies 2025",
-            "description": "Explore our revolutionary case studies showcasing successful AI, quantum computing, neural interface, and blockchain implementations.",
-            "url": "https://ziontechgroup.com/pages/RevolutionaryCaseStudies2025",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "description": "Leading provider of revolutionary technology solutions with proven results"
-            }
-          })}
-        </script>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-173f
       {/* Hero Section */}
       <div className="relative overflow-hidden">
 <<<<<<< HEAD
@@ -532,17 +394,12 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-<<<<<<< HEAD
               🏆 REVOLUTIONARY SUCCESS STORIES • 2025
-=======
-              📊 REVOLUTIONARY CASE STUDIES • 2025
->>>>>>> cursor/create-and-deploy-new-content-173f
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Success Stories
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              Revolutionary Case Studies 2025
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-<<<<<<< HEAD
               Discover how leading companies are transforming their businesses with our cutting-edge AI and technology solutions
 =======
 =======
@@ -568,40 +425,31 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-              Discover how our revolutionary technologies have transformed businesses across industries, delivering unprecedented results and measurable impact.
->>>>>>> cursor/create-and-deploy-new-content-173f
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Category Filter */}
-=======
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
->>>>>>> cursor/create-and-deploy-new-content-173f
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                  : 'bg-white/10 text-white hover:bg-white/20'
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
+              <span className="text-xl mr-2">{category.icon}</span>
               {category.name}
             </button>
           ))}
         </div>
-<<<<<<< HEAD
 
         {/* Case Study Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -847,58 +695,17 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                 <span className="inline-block px-3 py-1 bg-gray-700 rounded-full text-sm mt-2">
                   {study.industry}
                 </span>
-=======
-      </div>
-
-      {/* Case Studies Grid */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {filteredCaseStudies.map((study) => (
-            <div
-              key={study.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{study.image}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm opacity-75">{study.company}</span>
-                      <span className="text-sm opacity-50">•</span>
-                      <span className="text-sm opacity-75">{study.industry}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className={`px-3 py-1 bg-gradient-to-r ${study.color} text-white text-xs font-bold rounded-full`}>
-                  {study.industry}
-                </div>
->>>>>>> cursor/create-and-deploy-new-content-173f
               </div>
 
-              {/* Challenge & Solution */}
               <div className="mb-6">
-<<<<<<< HEAD
                 <h4 className="text-lg font-semibold mb-2 text-blue-300">Challenge</h4>
                 <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
                 
                 <h4 className="text-lg font-semibold mb-2 text-purple-300">Solution</h4>
                 <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
-=======
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2 text-red-300">Challenge:</h4>
-                  <p className="text-sm opacity-80">{study.challenge}</p>
-                </div>
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2 text-green-300">Solution:</h4>
-                  <p className="text-sm opacity-80">{study.solution}</p>
-                </div>
->>>>>>> cursor/create-and-deploy-new-content-173f
               </div>
 
               <div className="mb-6">
-<<<<<<< HEAD
                 <h4 className="text-lg font-semibold mb-3 text-green-300">Results</h4>
                 <ul className="space-y-2">
                   {study.results.map((result, index) => (
@@ -906,15 +713,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
                       {result}
                     </li>
-=======
-                <h4 className="text-lg font-semibold mb-3 text-blue-300">Results:</h4>
-                <div className="grid grid-cols-2 gap-2">
-                  {study.results.map((result, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <span className="text-green-400">✓</span>
-                      <span className="text-sm opacity-80">{result}</span>
-                    </div>
->>>>>>> cursor/create-and-deploy-new-content-173f
                   ))}
                 </ul>
               </div>
@@ -933,35 +731,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <div className="text-xs text-gray-400">Success</div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">{study.metrics.roi}</div>
-                  <div className="text-xs opacity-75">ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{study.metrics.timeframe}</div>
-                  <div className="text-xs opacity-75">Duration</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-emerald-400">{study.metrics.team}</div>
-                  <div className="text-xs opacity-75">Team Size</div>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                View Full Case Study →
-              </button>
->>>>>>> cursor/create-and-deploy-new-content-173f
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Statistics Section */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Global Impact Statistics</h2>
@@ -1062,36 +835,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 =======
           </div>
         </motion.div>
-=======
-      {/* Statistics Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Impact in Numbers</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-lg opacity-90">Successful Projects</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">$2.5B+</div>
-              <div className="text-lg opacity-90">Client Savings</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">99.9%</div>
-              <div className="text-lg opacity-90">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-lg opacity-90">Industries Served</div>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-173f
       </div>
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -1109,23 +856,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
               Download Case Studies
-=======
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies that have transformed their businesses with our revolutionary technologies.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Project
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Schedule Consultation
->>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* CTA Section */}
@@ -1155,7 +889,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 

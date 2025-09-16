@@ -6,7 +6,6 @@ const UltimateContentBanner2036: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -264,8 +263,6 @@ const UltimateContentBanner2036: React.FC = () => {
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 =======
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -336,11 +333,8 @@ const UltimateContentBanner2036: React.FC = () => {
             Experience Ultimate Breakthrough →
           </a>
         </div>
-<<<<<<< HEAD
 >>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       </div>
     </div>
   );

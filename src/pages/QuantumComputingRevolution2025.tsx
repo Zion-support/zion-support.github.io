@@ -10,24 +10,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
 =======
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Quantum Computing Revolution 2025
-          </h1>
-          <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
-            Enter the quantum realm where impossible problems become solvable. Experience computing power that defies classical limitations.
-          </p>
-
-const QuantumComputingRevolution2025: React.FC = () => {
-  return (
->>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -449,7 +433,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <button className="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all duration-300">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
               <button className="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all duration-300">
@@ -458,8 +441,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
                 Watch Quantum Demo
               </button>
             </div>
@@ -467,7 +448,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -531,8 +511,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       {/* Quantum Capabilities */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -622,7 +600,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -630,14 +607,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>
 
       {/* Quantum Applications */}
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -711,8 +685,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -771,7 +743,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -779,15 +750,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
               </div>
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -829,8 +797,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       {/* Quantum Technology Stack */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -866,7 +832,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -874,13 +839,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -909,8 +871,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -926,7 +886,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Learn More
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
             <button className="border-2 border-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-cyan-900 transition-all duration-300">
@@ -936,8 +895,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
           </div>
         </div>

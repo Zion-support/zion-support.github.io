@@ -9,7 +9,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       id: 'conscious-ai',
       name: 'Conscious AI Systems',
       icon: '🧠',
@@ -69,8 +68,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
       id: 1,
       title: "Conscious AI Systems",
       description: "Self-aware artificial intelligence with emotional intelligence and creative problem-solving capabilities",
@@ -154,12 +151,9 @@ const InteractiveTechShowcase2034: React.FC = () => {
       },
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
     }
   ];
 
@@ -180,7 +174,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
     return () => clearInterval(interval);
   }, [technologies.length]);
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const currentTech = technologies[activeTech];
@@ -357,8 +350,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -513,7 +504,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   >
                     <div className="text-2xl mb-2">✨</div>
                     <h4 className="font-bold text-sm">{feature}</h4>
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
@@ -524,15 +514,12 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     <div className="text-2xl font-bold text-cyan-300">{value}</div>
                     <div className="text-sm text-cyan-200">{key}</div>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,8 +530,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
               {/* Metrics */}
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
@@ -574,7 +559,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     🔬 Deep Dive
                   </button>
                 </div>
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           <div className="space-y-8">
@@ -643,14 +627,11 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     <span className="text-sm font-semibold">99%</span>
                   </div>
                 </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
               </div>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Interactive Demo Section */}
@@ -684,8 +665,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
               </div>
             </div>
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
         {/* Live Demo Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <h3 className="text-4xl font-bold text-center mb-12">🎮 Live Interactive Demos</h3>
@@ -743,7 +722,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
               Contact Us →
             </a>
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6">
@@ -783,8 +761,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
               Schedule Demo
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>

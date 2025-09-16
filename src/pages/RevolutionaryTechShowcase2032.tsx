@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,9 +17,6 @@ import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-173f
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -138,7 +134,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 <<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,8 +367,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
 =======
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -733,7 +726,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-<<<<<<< HEAD
 >>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
@@ -749,8 +741,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation
 >>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
           </div>
         </div>

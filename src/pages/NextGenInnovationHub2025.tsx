@@ -4,7 +4,6 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -433,8 +432,6 @@ const NextGenInnovationHub2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
 
 const NextGenInnovationHub2025: React.FC = () => {
   return (
@@ -451,7 +448,6 @@ const NextGenInnovationHub2025: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
 <<<<<<< HEAD
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION • JANUARY 2025
           </div>
@@ -461,8 +457,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Discover and explore the most revolutionary technologies shaping humanity's future in our comprehensive innovation hub
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 NEXT-GEN INNOVATION • JANUARY 2025
           </div>
@@ -481,15 +475,11 @@ const NextGenInnovationHub2025: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 =======
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
             <p className="text-emerald-100 mb-6 text-center">
-<<<<<<< HEAD
 <<<<<<< HEAD
               Advanced artificial intelligence systems and machine learning algorithms
             </p>
@@ -580,8 +570,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-teal-500/30 rounded-full text-sm">Infinite Power</span>
                   <span className="px-3 py-1 bg-teal-500/30 rounded-full text-sm">Reality Control</span>
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
               Revolutionary space exploration and colonization technologies
 =======
           <h1 className="text-6xl font-bold mb-6">Next-Gen Innovation Hub 2025</h1>
@@ -682,15 +670,11 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <div className="w-32 bg-gray-700 rounded-full h-2">
                     <div className="bg-teal-500 h-2 rounded-full" style={{width: '60%'}}></div>
                   </div>
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -723,8 +707,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Physics Control</span>
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Infinite Worlds</span>
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold mb-4 text-cyan-400">Project Neptune</h3>
@@ -763,14 +745,10 @@ const NextGenInnovationHub2025: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">50+</div>
 <<<<<<< HEAD
-<<<<<<< HEAD
             <div className="text-gray-300">Active Innovations</div>
 =======
             <div className="text-gray-300">Active Projects</div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
-            <div className="text-gray-300">Active Projects</div>
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-teal-400 mb-2">99.9%</div>
@@ -783,7 +761,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
             <div className="text-gray-300">Innovation</div>
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -800,39 +777,11 @@ const NextGenInnovationHub2025: React.FC = () => {
               <li>• Cryptography Research</li>
               <li>• Simulation Capabilities</li>
             </ul>
-=======
-          </div>
-        </div>
-
-        {/* Innovation Labs */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Innovation Laboratories</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
->>>>>>> cursor/create-and-deploy-new-content-173f
             <div className="text-center">
               <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">BREAKTHROUGH</span>
             </div>
-<<<<<<< HEAD
-=======
-            <div className="text-center">
-              <div className="text-5xl mb-4">🧪</div>
-              <h3 className="text-xl font-bold mb-4 text-teal-400">Bio Lab</h3>
-              <p className="text-gray-300 text-sm">
-                Biotechnology and genetic engineering research center
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold mb-4 text-cyan-400">Space Lab</h3>
-              <p className="text-gray-300 text-sm">
-                Space technology and exploration development facility
-              </p>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
 
-<<<<<<< HEAD
           {/* Neural Interface Lab */}
           <div className="bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🧬</div>
@@ -981,11 +930,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             <button className="border-2 border-teal-400 text-teal-400 px-8 py-4 rounded-lg hover:bg-teal-400/10 transition-all duration-300 font-semibold text-lg">
               📚 Learn More
 =======
-=======
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
->>>>>>> cursor/create-and-deploy-new-content-173f
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the most advanced innovation hub in the world. Collaborate with leading scientists, 
             engineers, and visionaries to create the future.
@@ -1035,14 +979,11 @@ const NextGenInnovationHub2025: React.FC = () => {
 <<<<<<< HEAD
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               Explore Labs
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Visit Our Labs
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
           </div>
         </div>
