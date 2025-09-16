@@ -1,30 +1,21 @@
-export default function AiRiskMitigationGuide2026() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Guide: AI Risk Mitigation in Production (2026)</h1>
-          <p className="text-gray-600 mb-8">Practical controls, eval gates, and incident playbooks for safe AI operations.</p>
-          <div className="prose prose-gray max-w-none">
-            <h2>Overview</h2>
-            <p>
-              This guide outlines actionable practices to mitigate AI risk in production: objective evaluations, policy-as-code
-              guardrails, runtime observability, and incident response.
-            </p>
-            <h3>Key Controls</h3>
+    <div className="min-h-screen bg-black text-white">
+      <section className="px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm text-blue-300">Guide • 2026</p>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">AI Risk Mitigation in Production (2026)</h1>
+          <p className="mt-4 text-lg text-gray-300">Practical controls, eval gates, and incident playbooks for safe AI operations.</p>
+          <hr className="my-8 border-white/10" />
+          <div className="prose prose-invert max-w-none">
+            <p>Deploying AI systems safely at scale requires a layered approach to risk mitigation. This guide covers:</p>
             <ul>
-              <li>Pre-deploy eval gates with measurable rubrics</li>
-              <li>Runtime policy checks and budget guardrails</li>
-              <li>Tracing, metrics, and safety telemetry</li>
-              <li>Post-incident analysis with causal graphs</li>
+              <li>Eval gates for prompts, tools, and model changes</li>
+              <li>Policy-as-code for enforceable guardrails</li>
+              <li>Incident response and evidence capture</li>
+              <li>Runbooks and rollback strategies</li>
             </ul>
-            <h3>Rollout Checklist</h3>
-            <ol>
-              <li>Define SLIs/SLOs for quality, latency, and cost</li>
-              <li>Integrate eval suites into CI/CD</li>
-              <li>Enable runtime guardrails and alerts</li>
-              <li>Establish incident runbooks and evidence capture</li>
-            </ol>
+            <p>Use this as a baseline to harden production AI systems and ensure reliable outcomes.</p>
           </div>
         </div>
       </section>
