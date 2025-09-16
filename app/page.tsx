@@ -81,16 +81,11 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
-<<<<<<< HEAD
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-=======
-
 // Import new 2026 breakthrough promotional banners
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
 import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
-
->>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -142,6 +137,38 @@ export default function HomePage() {
               <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Reliable Autonomy</Link>
               <Link href="/blog/ai-2026-agentic-billing-controls" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Billing Controls</Link>
             </div>
+      {/* New Promo: Policy-as-Code Blueprint (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
+            <div>
+              <p className="text-sm font-semibold text-indigo-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy‑as‑Code Blueprint</h2>
+              <p className="text-gray-600 mt-2">Encode approvals, risk tiers, and evaluation gates as versioned policy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Agentic Observability — Executive Overview (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-pink-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
+            <div>
+              <p className="text-sm font-semibold text-pink-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Observability — Executive Overview</h2>
+              <p className="text-gray-600 mt-2">Traces, evals, incidents, and KPIs to operate agent platforms.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Deep Dive</Link>
+            </div>
+          </div>
+        </div>
+      </section>
           </div>
         </div>
       </section>
