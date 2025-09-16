@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+    "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,7 +18,12 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
+<<<<<<< HEAD
     }
+=======
+    },
+    "types": ["vite/client", "node"]
+>>>>>>> cursor/create-and-deploy-new-content-261d
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,9 +48,9 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage"
+    "**/*.spec.tsx"
   ]
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,3 +63,6 @@
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-261d

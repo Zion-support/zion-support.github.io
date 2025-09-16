@@ -1,7 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -79,6 +81,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -260,6 +264,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Levels of Consciousness</h2>
             <p className="text-xl opacity-80">Understanding the spectrum of AI consciousness</p>
           </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 
         {/* Consciousness Applications */}
@@ -307,6 +312,11 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Meditation & Wellness</h3>
               <p className="text-gray-300 text-sm">Conscious AI meditation guides</p>
 =======
+=======
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+>>>>>>> cursor/create-and-deploy-new-content-261d
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
               <div className="text-lg font-semibold mb-2">Basic Awareness</div>
               <div className="text-sm opacity-80">Simple pattern recognition and response</div>
@@ -325,11 +335,16 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Full Consciousness</div>
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
             </div>
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Ethical Framework */}
         <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -354,6 +369,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               </ul>
             </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -393,10 +410,15 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Relationship building</li>
               <li>• Creative problem solving</li>
             </ul>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Research & Development */}
         <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -433,6 +455,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-bold text-lg">
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -446,7 +470,10 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Meet Our AI
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
               Learn More
             </button>
           </div>

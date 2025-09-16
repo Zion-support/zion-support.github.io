@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,6 +466,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -696,9 +699,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       </div>
     </div>
   );

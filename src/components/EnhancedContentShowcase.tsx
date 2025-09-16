@@ -7,11 +7,14 @@ const EnhancedContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
   const showcaseItems = [
     {
       id: 1,
@@ -20,6 +23,9 @@ const EnhancedContentShowcase: React.FC = () => {
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -106,6 +112,7 @@ const EnhancedContentShowcase: React.FC = () => {
           impact: "Bridges quantum physics and consciousness"
         }
       ]
+<<<<<<< HEAD
     },
     {
       id: 2,
@@ -143,6 +150,16 @@ const EnhancedContentShowcase: React.FC = () => {
       category: "Technology Showcase",
       year: "2026"
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+    },
+    {
+      id: 2,
+      name: "Neural Interfaces",
+      icon: "🧬",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
+>>>>>>> cursor/create-and-deploy-new-content-261d
     },
     {
       id: 4,
@@ -293,10 +310,13 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
     },
     {
       id: 2,
@@ -313,6 +333,9 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
       icon: "🧬",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
@@ -377,6 +400,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -384,6 +408,8 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -420,11 +446,14 @@ const EnhancedContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -781,6 +810,9 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -880,6 +912,7 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -889,6 +922,8 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       </div>
     </div>
   );

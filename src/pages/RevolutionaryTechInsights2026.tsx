@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -44,6 +47,7 @@ import {
   Globe as World
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -53,6 +57,8 @@ import {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -316,12 +322,16 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="mb-8">
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
             <div className="mb-8">
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+            <div className="mb-8">
+>>>>>>> cursor/create-and-deploy-new-content-261d
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -431,8 +441,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
         </section>
 
         {/* Applications Section */}
@@ -550,6 +563,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -559,6 +573,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
 
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
@@ -623,6 +639,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 export default RevolutionaryTechInsights2026;
@@ -636,3 +653,7 @@ export default RevolutionaryTechInsights2026;
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+export default RevolutionaryTechInsights2026;
+export default RevolutionaryTechInsights2026;
+>>>>>>> cursor/create-and-deploy-new-content-261d

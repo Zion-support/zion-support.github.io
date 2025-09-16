@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -62,10 +63,13 @@
 }
 
 /* Custom CSS Variables */
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -156,13 +160,27 @@
 }
 
 /* Base styles */
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+=======
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
+>>>>>>> cursor/create-and-deploy-new-content-261d
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-261d
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
@@ -258,10 +276,22 @@ body {
     transform: translateY(0);
   }
 }
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+=======
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+>>>>>>> cursor/create-and-deploy-new-content-376e
 }

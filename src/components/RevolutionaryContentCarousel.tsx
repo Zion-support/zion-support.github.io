@@ -92,6 +92,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +101,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -127,9 +130,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
       color: "from-cyan-600 to-blue-600"
       impact: "Revolutionary"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
     },
     {
       id: 4,
@@ -153,6 +159,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
 <<<<<<< HEAD
+<<<<<<< HEAD
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
 =======
@@ -167,11 +174,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+>>>>>>> cursor/create-and-deploy-new-content-261d
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,10 +191,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -190,6 +205,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -198,6 +215,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 6,
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
@@ -215,10 +233,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+>>>>>>> cursor/create-and-deploy-new-content-261d
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -227,6 +251,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
@@ -234,12 +260,15 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/SyntheticIntelligence2026",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
       status: "Live Now",
       impact: "Transformative"
     }
@@ -805,6 +834,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
         ))}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -850,6 +880,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
     </div>
   );
 };

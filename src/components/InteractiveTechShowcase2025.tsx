@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
 =======
   const [activeTab, setActiveTab] = useState(0);
@@ -65,16 +66,23 @@ const InteractiveTechShowcase2025: React.FC = () => {
         }
       ]
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+  const [activeTab, setActiveTab] = useState('ai');
+>>>>>>> cursor/create-and-deploy-new-content-261d
     }
   };
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </div>
 
               Schedule Demo
             </button>
+<<<<<<< HEAD
 =======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
@@ -178,15 +186,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
           </div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="text-center mt-8">
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-          Experience All Technologies →
-        </button>
       </div>
     </div>
   );
