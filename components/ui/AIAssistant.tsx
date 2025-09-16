@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useCallbackuseEffectuseMemouseState } from 'react';
-=======
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export type AIAssistantProps = {
   buttonLabel?: string;
@@ -20,42 +14,11 @@ export default function AIAssistant({
   defaultPrompt,
   systemPrompt,
   onAccept,
-<<<<<<< HEAD
-  authorizationToken}: AIAssistantProps) {
-  const [isOpensetIsOpen] = useState(false);
-  const [promptsetPrompt] = useState(defaultPrompt);
-  const [outputsetOutput] = useState('');
-  const [loadingsetLoading] = useState(false);
-  const [isEditingsetIsEditing] = useState(false);
-  const [errorsetError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setPrompt(defaultPrompt);
-  }[defaultPrompt]);
-=======
-  authorizationToken,
-}: AIAssistantProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [prompt, setPrompt] = useState(defaultPrompt);
-  const [output, setOutput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setPrompt(defaultPrompt);
-  }, [defaultPrompt]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/ai/operator'{
-=======
-      const res = await fetch('/api/ai/operator', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,68 +26,22 @@ export default function AIAssistant({
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
-<<<<<<< HEAD
-            : {})},
-        body: JSON.stringify({ promptsystem: systemPrompt })
-=======
-            : {}),
-        },
-        body: JSON.stringify({ prompt, system: systemPrompt })
->>>>>>> origin/auto/autonomy-17186719616
       });
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data?.error || 'Failed to generate');
       }
-<<<<<<< HEAD
-      setOutput(String(data.text || ', '));
-=======
-      setOutput(String(data.text || ''));
->>>>>>> origin/auto/autonomy-17186719616
       setIsEditing(false);
     } catch (e: any) {
       setError(e.message || 'Request failed');
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
-  }[authorizationTokenpromptsystemPrompt]);
-=======
-  }, [authorizationToken, prompt, systemPrompt]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output);
     } catch {}
-<<<<<<< HEAD
-  }[output]);
-
-  const onOpen = useCallback(() => {
-
-    setIsOpen(true);
-    setOutput(', ');
-    setIsEditing(false);
-    setError(null);
-  }[]);
-
-  const onClose = useCallback(() => setIsOpen(false)[]);
-
-  const canAccept = useMemo(() => (output && output.trim().length > 0)[output]);
-=======
-  }, [output]);
-
-  const onOpen = useCallback(() => {
-    setIsOpen(true);
-    setOutput('');
-    setIsEditing(false);
-    setError(null);
-  }, []);
-
-  const onClose = useCallback(() => setIsOpen(false), []);
-
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>

@@ -13,17 +13,9 @@ interface BlogPostMeta {
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  'ai-governance-framework-2025': {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-=======
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
->>>>>>> 1f7620a0edd89cd971bd6e6ace7dea7c2db60693
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
     category: 'AI Safety',
@@ -64,10 +56,9 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
->>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     ]
   },
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',

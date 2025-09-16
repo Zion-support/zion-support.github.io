@@ -5,34 +5,10 @@ import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 
 export function ChatAssistantTrigger() {
-<<<<<<< HEAD
-  const [isOpensetIsOpen] = useState(false);
-=======
-  const [isOpen, setIsOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-<<<<<<< HEAD
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user"content: message }] 
-        })});
-=======
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
-        }),
-      });
->>>>>>> origin/auto/autonomy-17186719616
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant");
@@ -40,11 +16,6 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve();
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error in AI chat:"error);
-=======
-      console.error("Error in AI chat:", error);
->>>>>>> origin/auto/autonomy-17186719616
       return Promise.resolve();
     }
   };

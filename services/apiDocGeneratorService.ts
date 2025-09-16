@@ -15,10 +15,6 @@ export interface APIDocumentation {
     frameworks: string[];
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIEndpoint {
   id: string;
   path: string;
@@ -33,10 +29,6 @@ export interface APIEndpoint {
   rateLimit?: RateLimit;
   authentication?: AuthenticationRequirement;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIParameter {
   name: string;
   in: 'path' | 'query' | 'header' | 'cookie';
@@ -46,47 +38,27 @@ export interface APIParameter {
   example?: any;
   deprecated?: boolean;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIRequestBody {
   required: boolean;
   content: Record<string, APIContent>;
   description?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIContent {
   schema: APISchema;
   example?: any;
   examples?: Record<string, APIExample>;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIResponse {
   code: string;
   description: string;
   content?: Record<string, APIContent>;
   headers?: Record<string, APIHeader>;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIHeader {
   description: string;
   schema: APISchema;
   required: boolean;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APISchema {
   type?: string;
   format?: string;
@@ -108,10 +80,6 @@ export interface APISchema {
   nullable?: boolean;
   $ref?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface APIExample {
   id: string;
   name: string;
@@ -121,47 +89,27 @@ export interface APIExample {
   response: ExampleResponse;
   tags: string[];
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface ExampleRequest {
   method: string;
   url: string;
   headers: Record<string, string>;
   body?: any;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface ExampleResponse {
   status: number;
   headers: Record<string, string>;
   body: any;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface RateLimit {
   requests: number;
   window: string;
   description?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface AuthenticationRequirement {
   type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
   description: string;
   required: boolean;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface DocumentationConfig {
   outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
   includeExamples: boolean;
@@ -175,25 +123,10 @@ export interface DocumentationConfig {
     companyName?: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export class APIDocGeneratorService {
   private supportedFrameworks = [
     'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
   ];
-<<<<<<< HEAD
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
-  ];
-=======
-
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
-  ];
-
->>>>>>> origin/auto/autonomy-17186719616
   async generateDocumentation(
     sourcePath: string,
     config: DocumentationConfig
@@ -215,10 +148,6 @@ export class APIDocGeneratorService {
         frameworks: []
       }
     };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
     try {
       // Analyze source code
       const analysis = await this.analyzeSourceCode(sourcePath);
@@ -227,38 +156,16 @@ export class APIDocGeneratorService {
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
       documentation.metadata.languages = analysis.languages;
       documentation.metadata.frameworks = analysis.frameworks;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
       // Generate examples if requested
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints);
       }
-<<<<<<< HEAD
-      // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
-=======
-
-      // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
-
->>>>>>> origin/auto/autonomy-17186719616
     } catch (error) {
       console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
     }
-<<<<<<< HEAD
-    return documentation;
-  }
-=======
-
-    return documentation;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   private async analyzeSourceCode(sourcePath: string): Promise<{
     endpoints: APIEndpoint[];
     schemas: APISchema[];
@@ -269,10 +176,6 @@ export class APIDocGeneratorService {
     const schemas: APISchema[] = [];
     const languages: string[] = [];
     const frameworks: string[] = [];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
     
@@ -293,17 +196,6 @@ export class APIDocGeneratorService {
         endpoints.push(...this.analyzeJavaFile(file));
       }
     }
-<<<<<<< HEAD
-    // Remove duplicates
-    const uniqueLanguages = [...new Set(languages)];
-    const uniqueFrameworks = [...new Set(frameworks)];
-=======
-
-    // Remove duplicates
-    const uniqueLanguages = [...new Set(languages)];
-    const uniqueFrameworks = [...new Set(frameworks)];
-
->>>>>>> origin/auto/autonomy-17186719616
     return {
       endpoints,
       schemas: this.generateSchemas(endpoints),
@@ -311,10 +203,6 @@ export class APIDocGeneratorService {
       frameworks: uniqueFrameworks
     };
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
     return [
@@ -327,10 +215,6 @@ export class APIDocGeneratorService {
       'src/config/database.js'
     ];
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     
@@ -430,15 +314,6 @@ export class APIDocGeneratorService {
         }
       );
     }
-<<<<<<< HEAD
-    return endpoints;
-  }
-=======
-
-    return endpoints;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     
@@ -478,15 +353,6 @@ export class APIDocGeneratorService {
         deprecated: false
       });
     }
-<<<<<<< HEAD
-    return endpoints;
-  }
-=======
-
-    return endpoints;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     
@@ -526,15 +392,6 @@ export class APIDocGeneratorService {
         deprecated: false
       });
     }
-<<<<<<< HEAD
-    return endpoints;
-  }
-=======
-
-    return endpoints;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
     const schemas: APISchema[] = [
       {
@@ -596,20 +453,6 @@ export class APIDocGeneratorService {
         description: 'Pagination metadata schema'
       }
     ];
-<<<<<<< HEAD
-    return schemas;
-  }
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
-    const examples: APIExample[] = [];
-=======
-
-    return schemas;
-  }
-
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
-    const examples: APIExample[] = [];
-
->>>>>>> origin/auto/autonomy-17186719616
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints
       examples.push({
         id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -635,15 +478,6 @@ export class APIDocGeneratorService {
         tags: endpoint.tags
       });
     }
-<<<<<<< HEAD
-    return examples;
-  }
-=======
-
-    return examples;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   private generateExampleBody(requestBody: APIRequestBody): any {
     // Generate example request body based on schema
     return {
@@ -652,10 +486,6 @@ export class APIDocGeneratorService {
       description: "This is an example description"
     };
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private generateExampleResponse(response: APIResponse): any {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
@@ -667,10 +497,6 @@ export class APIDocGeneratorService {
     }
     return null;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private generateFallbackEndpoints(): APIEndpoint[] {
     return [
       {
@@ -692,43 +518,23 @@ export class APIDocGeneratorService {
       }
     ];
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
     const parts = sourcePath.split('/');
     return parts[parts.length - 1] || 'API Documentation';
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.
     return '1.0.0';
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private async extractDescription(sourcePath: string): Promise<string> {
     // Simulate description extraction from README, package.json, etc.
     return 'Comprehensive API documentation automatically generated from source code';
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate base URL extraction from configuration files
     return 'https://api.example.com';
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
@@ -742,10 +548,6 @@ export class APIDocGeneratorService {
     
     return Math.round((documentedEndpoints / endpoints.length) * 100);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
@@ -754,10 +556,6 @@ export class APIDocGeneratorService {
     const timestamp = new Date().toISOString();
     return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   async updateDocumentation(
     documentationId: string,
     changes: Partial<APIDocumentation>
@@ -773,8 +571,4 @@ export class APIDocGeneratorService {
     } as APIDocumentation;
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const apiDocGeneratorService = new APIDocGeneratorService();

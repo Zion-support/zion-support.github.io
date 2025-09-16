@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const ApiDevelopmentChat = () => {
   return (
@@ -21,14 +14,3 @@ const ApiDevelopmentChat = () => {
         <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default ApiDevelopmentChat,
-=======
-  );
-};
-
-export default ApiDevelopmentChat;
->>>>>>> origin/auto/autonomy-17186719616
