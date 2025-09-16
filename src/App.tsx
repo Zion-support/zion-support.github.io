@@ -137,6 +137,9 @@ import InnovationShowcase2025 from './pages/InnovationShowcase2025';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
+import Blog from './pages/Blog';
+import BlogPost_Sep2025_AIExecGuide from './pages/BlogPost_Sep2025_AIExecGuide';
+import BlogPost_Sep2025_CaseStudy from './pages/BlogPost_Sep2025_CaseStudy';
 
 const App: React.FC = () => {
   return (
@@ -366,6 +369,9 @@ const App: React.FC = () => {
           } />
           
           {/* Routes for all pages */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/sep-2025-exec-guide-evals-guardrails" element={<BlogPost_Sep2025_AIExecGuide />} />
+          <Route path="/blog/sep-2025-finserv-model-routing-case-study" element={<BlogPost_Sep2025_CaseStudy />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
           <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
