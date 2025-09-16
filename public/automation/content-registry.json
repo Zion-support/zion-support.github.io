@@ -89,6 +89,27 @@
   ],
   "items": [
     {
+      "title": "AI 2026: Agentic Observability Deep Dive",
+      "href": "/blog/ai-2026-agentic-observability-deep-dive",
+      "desc": "Traces, metrics, and evidence that keep agents reliable in prod",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Trustworthy Model Routing",
+      "href": "/blog/ai-2026-trustworthy-model-routing",
+      "desc": "Policy-driven routing with budgets, evals, and fallbacks",
+      "createdAt": "2025-09-16T00:01:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Operational Evals Starter Kit",
+      "href": "/blog/ai-2026-operational-evals-starter-kit",
+      "desc": "Minimal suite to measure groundedness, utility, and violations",
+      "createdAt": "2025-09-16T00:02:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Reference Architecture — Autonomous Content Mesh",
       "href": "/reports/blueprints/blueprint-2025-08-15-000055",
       "desc": "New autonomous content",
