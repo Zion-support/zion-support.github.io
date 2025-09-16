@@ -72,6 +72,7 @@ import QuantumRealityControl2027 from './src/pages/QuantumRealityControl2027.tsx
 import FutureTechBreakthrough2026 from './src/pages/FutureTechBreakthrough2026.tsx';
 import InterdimensionalComputing2027 from './src/pages/InterdimensionalComputing2027.tsx';
 import AIConsciousnessEvolution2027 from './src/pages/AIConsciousnessEvolution2027.tsx';
+import AIPlaybook2025 from './src/pages/AIPlaybook2025';
 
 export default function App(): JSX.Element {
   return (
@@ -703,7 +704,8 @@ export default function App(): JSX.Element {
 <Route path="/pages/AIConsciousnessEvolution2027" element={<AIConsciousnessEvolution2027 />} />
 <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
 <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
-<Route path="/pages/ComprehensiveBlog2026" element={<ComprehensiveBlog2026 />} />
+          <Route path="/pages/ComprehensiveBlog2026" element={<ComprehensiveBlog2026 />} />
+          <Route path="/pages/AIPlaybook2025" element={<AIPlaybook2025 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
