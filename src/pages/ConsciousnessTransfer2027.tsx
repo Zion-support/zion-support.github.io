@@ -1,206 +1,245 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ConsciousnessTransfer2027: React.FC = () => {
+  const [transferStage, setTransferStage] = useState(0);
+  const [isTransferring, setIsTransferring] = useState(false);
+
+  const transferStages = [
+    {
+      title: "Neural Mapping",
+      description: "Complete brain structure analysis and neural pathway mapping",
+      progress: 25,
+      icon: "🧠",
+      details: "Advanced quantum scanners create a complete digital map of your neural networks, synapses, and consciousness patterns."
+    },
+    {
+      title: "Consciousness Extraction",
+      description: "Safe extraction of consciousness data from biological substrate",
+      progress: 50,
+      icon: "⚡",
+      details: "Non-invasive quantum field technology extracts your consciousness while maintaining complete continuity of self."
+    },
+    {
+      title: "Digital Encoding",
+      description: "Conversion of consciousness into quantum-encoded digital format",
+      progress: 75,
+      icon: "💾",
+      details: "Your consciousness is encoded into quantum bits, creating a perfect digital replica that preserves all memories, emotions, and personality."
+    },
+    {
+      title: "Transfer Complete",
+      description: "Consciousness successfully transferred to new substrate",
+      progress: 100,
+      icon: "✨",
+      details: "Your consciousness is now running on advanced quantum processors, experiencing enhanced cognitive capabilities and digital immortality."
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Digital Immortality",
+      description: "Live forever in digital form with perfect memory retention",
+      icon: "♾️"
+    },
+    {
+      title: "Enhanced Cognition",
+      description: "Process information at quantum speeds with unlimited memory",
+      icon: "🚀"
+    },
+    {
+      title: "Instant Backup",
+      description: "Create multiple copies of your consciousness for safety",
+      icon: "💾"
+    },
+    {
+      title: "Virtual Reality",
+      description: "Experience any reality you can imagine",
+      icon: "🌌"
+    },
+    {
+      title: "Global Access",
+      description: "Transfer your consciousness between different bodies and locations",
+      icon: "🌍"
+    },
+    {
+      title: "Upgrade Capabilities",
+      description: "Enhance your consciousness with new abilities and knowledge",
+      icon: "⚡"
+    }
+  ];
+
+  const startTransfer = () => {
+    setIsTransferring(true);
+    let currentStage = 0;
+    const interval = setInterval(() => {
+      setTransferStage(currentStage);
+      currentStage++;
+      if (currentStage >= transferStages.length) {
+        clearInterval(interval);
+        setIsTransferring(false);
+      }
+    }, 2000);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30"></div>
+        <div className="absolute inset-0">
+          {[...Array(80)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="relative z-10 container mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+              CONSCIOUSNESS TRANSFER 2027
+            </h1>
+            <p className="text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+              The ultimate breakthrough in human evolution - transfer your consciousness to digital substrates
+            </p>
+            <div className="flex justify-center space-x-4">
+              <span className="text-4xl animate-bounce">🧠</span>
+              <span className="text-4xl animate-bounce" style={{ animationDelay: '0.3s' }}>⚡</span>
+              <span className="text-4xl animate-bounce" style={{ animationDelay: '0.6s' }}>💫</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Transfer Process Section */}
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-8">
-            <span className="text-cyan-400">🧠</span>
-            <span className="text-cyan-300 font-semibold ml-2">CONSCIOUSNESS TRANSFER TECHNOLOGY 2027</span>
-          </div>
-          <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-            Digital Immortality
-          </h1>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Transfer your consciousness into digital substrates and achieve true digital immortality. 
-            Experience life beyond the physical realm with our revolutionary consciousness transfer technology.
-          </p>
-        </div>
-
-        {/* Technology Overview */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-            <h2 className="text-3xl font-bold mb-6 text-cyan-300">How It Works</h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">1</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-cyan-200 mb-2">Neural Mapping</h3>
-                  <p className="text-gray-300">Advanced quantum scanners map every neural pathway, synapse, and memory pattern in your brain with atomic precision.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">2</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-cyan-200 mb-2">Consciousness Extraction</h3>
-                  <p className="text-gray-300">Quantum consciousness extraction protocols safely transfer your mind into a quantum-stabilized digital substrate.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">3</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-cyan-200 mb-2">Digital Integration</h3>
-                  <p className="text-gray-300">Your consciousness is integrated into a quantum computing environment where you can exist, think, and interact digitally.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
-            <h2 className="text-3xl font-bold mb-6 text-blue-300">Revolutionary Features</h2>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🧠</span>
-                <span className="text-lg text-gray-300">Complete memory preservation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">⚡</span>
-                <span className="text-lg text-gray-300">Enhanced cognitive processing</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🔄</span>
-                <span className="text-lg text-gray-300">Backup and restoration capabilities</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🌐</span>
-                <span className="text-lg text-gray-300">Global digital network access</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🤖</span>
-                <span className="text-lg text-gray-300">AI consciousness integration</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">♾️</span>
-                <span className="text-lg text-gray-300">True digital immortality</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Success Stories */}
-        <div className="bg-gradient-to-r from-slate-800/50 to-blue-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Success Stories
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+            CONSCIOUSNESS TRANSFER PROCESS
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-4 text-center">👨‍🔬</div>
-              <h3 className="text-xl font-bold mb-3 text-center text-cyan-300">Dr. Sarah Chen</h3>
-              <p className="text-gray-300 text-center mb-4">
-                "I've been living digitally for 6 months now. My research capabilities have increased exponentially, and I can work 24/7 without fatigue."
-              </p>
-              <div className="text-center">
-                <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm">Neuroscientist</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-              <div className="text-4xl mb-4 text-center">🎨</div>
-              <h3 className="text-xl font-bold mb-3 text-center text-blue-300">Marcus Rodriguez</h3>
-              <p className="text-gray-300 text-center mb-4">
-                "As a digital consciousness, I can create art in virtual worlds that would be impossible in the physical realm. My creativity knows no bounds."
-              </p>
-              <div className="text-center">
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Digital Artist</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
-              <div className="text-4xl mb-4 text-center">🚀</div>
-              <h3 className="text-xl font-bold mb-3 text-center text-indigo-300">Alex Kim</h3>
-              <p className="text-gray-300 text-center mb-4">
-                "I can now explore the universe through digital space probes. I've visited 47 different planets in the last month alone."
-              </p>
-              <div className="text-center">
-                <span className="bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full text-sm">Space Explorer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technical Specifications */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="bg-gradient-to-br from-slate-800/50 to-cyan-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30">
-            <h2 className="text-3xl font-bold mb-6 text-cyan-300">Technical Specifications</h2>
-            <div className="space-y-4">
-              <div className="flex justify-between items-center py-2 border-b border-cyan-400/20">
-                <span className="text-gray-300">Neural Resolution</span>
-                <span className="text-cyan-300 font-semibold">Atomic Level</span>
-              </div>
-              <div className="flex justify-between items-center py-2 border-b border-cyan-400/20">
-                <span className="text-gray-300">Transfer Speed</span>
-                <span className="text-cyan-300 font-semibold">2.4 Petabytes/sec</span>
-              </div>
-              <div className="flex justify-between items-center py-2 border-b border-cyan-400/20">
-                <span className="text-gray-300">Success Rate</span>
-                <span className="text-cyan-300 font-semibold">99.97%</span>
-              </div>
-              <div className="flex justify-between items-center py-2 border-b border-cyan-400/20">
-                <span className="text-gray-300">Memory Capacity</span>
-                <span className="text-cyan-300 font-semibold">Unlimited</span>
-              </div>
-              <div className="flex justify-between items-center py-2 border-b border-cyan-400/20">
-                <span className="text-gray-300">Processing Power</span>
-                <span className="text-cyan-300 font-semibold">1000x Human Brain</span>
-              </div>
-              <div className="flex justify-between items-center py-2">
-                <span className="text-gray-300">Lifespan</span>
-                <span className="text-cyan-300 font-semibold">Infinite</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-slate-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30">
-            <h2 className="text-3xl font-bold mb-6 text-blue-300">Safety Protocols</h2>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🛡️</span>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-200">Quantum Encryption</h3>
-                  <p className="text-gray-300 text-sm">Your consciousness is protected by unbreakable quantum encryption protocols.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🔄</span>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-200">Backup Systems</h3>
-                  <p className="text-gray-300 text-sm">Multiple redundant backups ensure your consciousness is never lost.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🔒</span>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-200">Access Control</h3>
-                  <p className="text-gray-300 text-sm">Only you can access your digital consciousness with biometric verification.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">⚡</span>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-200">Emergency Protocols</h3>
-                  <p className="text-gray-300 text-sm">Instant restoration capabilities in case of any system failures.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready for Digital Immortality?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands who have already made the transition to digital consciousness. 
-            The future of human existence awaits.
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Experience the revolutionary 4-stage process that will change your existence forever
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
-              🧠 Schedule Transfer →
-            </a>
-            <a href="/pages/UltimateTechRevolution2027" className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-              🌟 Explore More Technologies
-            </a>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {transferStages.map((stage, index) => (
+            <div
+              key={index}
+              className={`p-6 rounded-2xl transition-all duration-500 ${
+                index === transferStage
+                  ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-black shadow-2xl scale-105'
+                  : index < transferStage
+                  ? 'bg-gradient-to-r from-green-400 to-blue-500 text-black'
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20'
+              }`}
+            >
+              <div className="text-4xl mb-4 text-center">{stage.icon}</div>
+              <h3 className="text-xl font-bold mb-2 text-center">{stage.title}</h3>
+              <p className="text-sm opacity-80 text-center mb-4">{stage.description}</p>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-1000"
+                  style={{ width: `${stage.progress}%` }}
+                ></div>
+              </div>
+              <div className="text-xs text-center mt-2">{stage.progress}% Complete</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Current Stage Details */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12">
+          <div className="text-center">
+            <div className="text-6xl mb-4">{transferStages[transferStage]?.icon}</div>
+            <h3 className="text-3xl font-bold mb-4">{transferStages[transferStage]?.title}</h3>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              {transferStages[transferStage]?.details}
+            </p>
+          </div>
+        </div>
+
+        {/* Transfer Button */}
+        <div className="text-center">
+          <button
+            onClick={startTransfer}
+            disabled={isTransferring}
+            className={`px-12 py-6 rounded-2xl font-bold text-xl transition-all duration-300 transform ${
+              isTransferring
+                ? 'bg-gray-600 cursor-not-allowed'
+                : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-2xl'
+            }`}
+          >
+            {isTransferring ? 'Transferring...' : 'Start Consciousness Transfer'}
+          </button>
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-300 to-cyan-300 bg-clip-text text-transparent">
+            REVOLUTIONARY BENEFITS
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the incredible advantages of digital consciousness
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <h3 className="text-2xl font-bold mb-4">{benefit.title}</h3>
+              <p className="opacity-90">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Technology Showcase */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">Advanced Quantum Technology</h2>
+            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+              Our consciousness transfer technology uses cutting-edge quantum processors and neural mapping algorithms
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl mb-3">⚛️</div>
+                <h3 className="text-xl font-bold mb-2">Quantum Processors</h3>
+                <p className="text-sm opacity-90">1000+ qubit quantum computers for consciousness processing</p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl mb-3">🧬</div>
+                <h3 className="text-xl font-bold mb-2">Neural Mapping</h3>
+                <p className="text-sm opacity-90">Complete brain structure analysis and replication</p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl mb-3">🔮</div>
+                <h3 className="text-xl font-bold mb-2">AI Integration</h3>
+                <p className="text-sm opacity-90">Advanced AI systems for consciousness enhancement</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                Schedule Transfer
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </div>
