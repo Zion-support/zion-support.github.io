@@ -439,6 +439,50 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
   newly_added_september_2025:
+    - id: "ai-2026-reliable-agent-rollouts-checklist"
+      type: "blog"
+      title: "AI 2026: Reliable Agent Rollouts — Practical Checklist"
+      file_path: "/content/blog/ai-2026-reliable-agent-rollouts-checklist.md"
+      url: "/blog/ai-2026-reliable-agent-rollouts-checklist"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Agents", "Reliability", "Evals", "Progressive Delivery", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "8 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
+    - id: "ai-2026-agent-billing-controls-blueprint"
+      type: "blog"
+      title: "AI 2026: Agentic Billing Controls — Budgets, Approvals, and Guardrails"
+      file_path: "/content/blog/ai-2026-agent-billing-controls-blueprint.md"
+      url: "/blog/ai-2026-agent-billing-controls-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["AI", "Cost", "Governance", "Budgets", "Approvals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        budget_breaches: "-60%"
+        approval_lead_time: "-50%"
+        cost_slo_coverage: "100% gated"
+    - id: "ai-2026-agent-postmortems-field-guide"
+      type: "blog"
+      title: "AI 2026: Agent Postmortems — Field Guide to Fewer Repeat Incidents"
+      file_path: "/content/blog/ai-2026-agent-postmortems-field-guide.md"
+      url: "/blog/ai-2026-agent-postmortems-field-guide"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Incidents", "Postmortems", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "10 min read"
+      metrics:
+        repeat_incidents: "-40%"
+        remediation_lead_time: "-50%"
+        verification_evals: "wired"
     - id: "ai-2026-real-world-eval-gates-case-studies"
       type: "blog"
       title: "AI 2026: Real-World Eval Gates — Case Studies from Production"

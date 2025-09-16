@@ -1449,27 +1449,29 @@ export default function HomePage() {
         {/* Promos: New Articles (Sept 2025) */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-between">
-                <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Framework</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: LLM Evals Maturity Model</h3>
-                  <p className="text-gray-600">Evaluation-first roadmap with metrics, harnesses, and governance.</p>
-                </div>
-                <div className="mt-4">
-                  <Link href="/blog/ai-2026-llm-evals-maturity-model" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-between">
-                <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Governance Blueprint</h3>
-                  <p className="text-gray-600">Policy-as-code, risk tiers, and continuous monitoring at scale.</p>
-                </div>
-                <div className="mt-4">
-                  <Link href="/blog/ai-2026-enterprise-ai-governance-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
-                </div>
-              </div>
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900">Fresh this week</h2>
+              <p className="mt-2 text-gray-600">Agent reliability, billing controls, and incident learning.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/blog/ai-2026-reliable-agent-rollouts-checklist" className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+                <div className="text-sm text-indigo-600 font-semibold">Checklist</div>
+                <h3 className="mt-1 text-lg font-medium text-gray-900 group-hover:text-indigo-700">Reliable Agent Rollouts</h3>
+                <p className="mt-2 text-sm text-gray-600">Gate releases, canary, and auto‑rollback.</p>
+                <div className="mt-3 text-xs text-gray-500">Gate pass rate >95% · Rollback < 5 min</div>
+              </a>
+              <a href="/blog/ai-2026-agent-billing-controls-blueprint" className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+                <div className="text-sm text-green-600 font-semibold">Blueprint</div>
+                <h3 className="mt-1 text-lg font-medium text-gray-900 group-hover:text-green-700">Agentic Billing Controls</h3>
+                <p className="mt-2 text-sm text-gray-600">Budgets, approvals, and cost SLOs.</p>
+                <div className="mt-3 text-xs text-gray-500">Breaches −60% · Approvals −50%</div>
+              </a>
+              <a href="/blog/ai-2026-agent-postmortems-field-guide" className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+                <div className="text-sm text-rose-600 font-semibold">Field Guide</div>
+                <h3 className="mt-1 text-lg font-medium text-gray-900 group-hover:text-rose-700">Agent Postmortems</h3>
+                <p className="mt-2 text-sm text-gray-600">Blameless templates and verification evals.</p>
+                <div className="mt-3 text-xs text-gray-500">Repeat incidents −40% · Lead time −50%</div>
+              </a>
             </div>
           </div>
         </section>
