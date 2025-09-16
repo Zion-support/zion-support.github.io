@@ -81,7 +81,16 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+<<<<<<< HEAD
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
+=======
+
+// Import new 2026 breakthrough promotional banners
+import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
+import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
+
+>>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -97,6 +106,12 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* NEW 2026 BREAKTHROUGH CONTENT BANNERS - FEATURED */}
+      <NewContent2026UltimateBreakthroughBanner />
+      <QuantumAI2026RevolutionBanner />
+      <NeuralInterfaceRevolutionBanner2026 />
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
@@ -338,6 +353,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Runtime Guardrails + Eval Runbook (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Runtime Guardrails + Evaluation Runbook</h2>
+              <p className="text-gray-600 mt-2">Safe tool use at scale and a production‑ready SOP to add eval gates.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Guardrails Blueprint</Link>
+              <Link href="/resources/ai-2026-evaluation-runbook-starter" className="inline-block border border-cyan-600 text-cyan-700 px-5 py-3 rounded-lg font-semibold hover:bg-cyan-50">Eval Runbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -348,8 +379,8 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">A concise SLO set for safety, quality, reliability, and cost—ready to adopt.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
-              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Best Practices</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">SLO Blueprint</Link>
             </div>
           </div>
         </div>
