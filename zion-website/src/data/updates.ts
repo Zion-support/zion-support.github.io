@@ -10,6 +10,28 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // AI Lab fresh articles (2025-09-17)
+    {
+        title: 'Guide: Evals‑in‑Prod — Rollbacks and Safe Iteration',
+        summary: 'Shadow, canary, and progressive delivery with objective gates and clear rollbacks.',
+        href: '/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md',
+        date: '2025-09-17',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Agent Evidence Bundles',
+        summary: 'Standardize capture for incidents and audits with signed provenance and eval metrics.',
+        href: '/reports/ai-lab/articles/new-ai-lab-content-agent-evidence-bundles-1758132600000.md',
+        date: '2025-09-17',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Field Guide: Grounded RAG Guardrails',
+        summary: 'Layered retrieval and answer constraints with objective eval gates in production.',
+        href: '/reports/ai-lab/articles/new-ai-lab-content-guardrails-for-rag-1758130800000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
     // Newly added updates (2025-09-16 - additional)
     {
         title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',

@@ -1,5 +1,26 @@
 [
   {
+    "title": "Evals‑in‑Prod: Rollbacks, Canaries, and Safe Iteration",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md",
+    "createdAt": "2025-09-17T02:00:00.000Z",
+    "tags": ["evals", "reliability", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Evidence Bundles: Designing for Audits and Incidents",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-agent-evidence-bundles-1758132600000.md",
+    "createdAt": "2025-09-17T01:30:00.000Z",
+    "tags": ["governance", "evidence", "agents"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Grounded RAG Guardrails: From Patterns to Production",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-guardrails-for-rag-1758130800000.md",
+    "createdAt": "2025-09-17T01:00:00.000Z",
+    "tags": ["retrieval", "guardrails", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Incident Triage with Evaluation Gates — A Field Guide (2026)",
     "url": "/reports/ai-lab/articles/incident-triage-eval-gates-field-guide-1758127200000.md",
     "createdAt": "2025-09-16T18:00:00.000Z",
