@@ -60,6 +60,10 @@ import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
 import RevolutionaryTechInsights2026 from './src/pages/RevolutionaryTechInsights2026';
 import FutureTechBreakthrough2026 from './src/pages/FutureTechBreakthrough2026';
 import RevolutionaryContentCarousel from './src/components/RevolutionaryContentCarousel';
+import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import UltimateBreakthroughShowcase from './src/components/UltimateBreakthroughShowcase';
+import RevolutionaryTech2026 from './src/pages/RevolutionaryTech2026';
+import UltimateInnovation2026 from './src/pages/UltimateInnovation2026';
 
 export default function App(): JSX.Element {
   return (
@@ -73,6 +77,8 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
+                <RevolutionaryContentBanner />
+                
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                   <div className="relative z-10">
@@ -312,6 +318,11 @@ export default function App(): JSX.Element {
                 {/* Innovation Showcase 2026 */}
                 <div className="mb-12">
                   <InnovationShowcase2026 />
+                </div>
+
+                {/* Ultimate Breakthrough Showcase */}
+                <div className="mb-12">
+                  <UltimateBreakthroughShowcase />
                 </div>
 
                 {/* Enhanced Content Showcase */}
@@ -743,6 +754,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2026" element={<RevolutionaryTechInsights2026 />} />
           <Route path="/pages/FutureTechBreakthrough2026" element={<FutureTechBreakthrough2026 />} />
+          <Route path="/pages/RevolutionaryTech2026" element={<RevolutionaryTech2026 />} />
+          <Route path="/pages/UltimateInnovation2026" element={<UltimateInnovation2026 />} />
           <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
           <Route path="/pages/AIContentGenerator" element={<AIContentGenerator />} />
           <Route path="/pages/AIMatcher" element={<AIMatcher />} />
