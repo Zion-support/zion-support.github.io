@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Field Guide: Evidence‑Driven Operations (2026)',
+    summary: 'Objective signals, eval gates, and evidence bundles for reliable AI operations.',
+    href: '/updates/evidence-driven-operations-2026',
+    date: '2025-09-16',
+    tag: 'Field Guide'
+  },
+  {
+    title: 'Field Guide: Evidence‑Driven Operations — Blog',
+    summary: 'How to run safer, cheaper, faster AI ops with measurable evidence.',
+    href: '/blog/ai-2026-evidence-driven-operations',
+    date: '2025-09-16',
+    tag: 'Blog'
+  },
+  {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
     summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
     href: '/updates/grounded-generation-guardrails-2026',

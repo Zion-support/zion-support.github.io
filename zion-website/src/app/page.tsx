@@ -10,11 +10,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Grounded Generation Guardrails (2026) —
-            <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            New: Evidence‑Driven Operations (2026) —
+            <a href="/updates/evidence-driven-operations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Agent Guardrails v1.0 —
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the release</a>
+            Blog Deep Dive —
+            <a href="/blog/ai-2026-evidence-driven-operations" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">learn more</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -44,10 +44,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Evidence‑Driven Routing Case Studies (2026) —
-            <a href="/updates/evidence-driven-routing-case-studies-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Evidence‑Driven Operations —
+            <a href="/blog/ai-2026-evidence-driven-operations" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the field guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">routing playbook</a>
+            <a href="/updates/evidence-driven-operations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">update details</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails release</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -117,10 +117,10 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Agent Guardrails v1.0 —
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Evidence‑Driven Operations —
+            <a href="/updates/evidence-driven-operations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Grounded Generation Guardrails</a>
+            Also read: <a href="/blog/ai-2026-evidence-driven-operations" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Field Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/evidence-driven-routing-case-studies-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Routing Case Studies</a>
           </p>
