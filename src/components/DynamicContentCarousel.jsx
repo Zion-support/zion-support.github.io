@@ -93,7 +93,7 @@ const DynamicContentCarousel = () => {
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> cursor/create-and-deploy-new-content-7a01
+>>>>>>> cursor/create-and-deploy-new-content-8069
             }`}
           />
         ))}

@@ -73,7 +73,7 @@ const RevolutionaryTech2027: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Enter Interdimensional Space →
 =======
->>>>>>> cursor/create-and-deploy-new-content-7a01
+>>>>>>> cursor/create-and-deploy-new-content-8069
             </button>
           </div>
         </div>
@@ -86,7 +86,7 @@ const RevolutionaryTech2027: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most advanced technological capabilities that are redefining what's possible
 =======
->>>>>>> cursor/create-and-deploy-new-content-7a01
+>>>>>>> cursor/create-and-deploy-new-content-8069
             </p>
           </div>
           
@@ -172,7 +172,7 @@ const RevolutionaryTech2027: React.FC = () => {
               <div className="text-lg font-semibold mb-2">Consciousness</div>
               <div className="text-indigo-200 text-sm">AI self-awareness level</div>
 =======
->>>>>>> cursor/create-and-deploy-new-content-7a01
+>>>>>>> cursor/create-and-deploy-new-content-8069
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ const RevolutionaryTech2027: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Learn More
 =======
->>>>>>> cursor/create-and-deploy-new-content-7a01
+>>>>>>> cursor/create-and-deploy-new-content-8069
             </button>
           </div>
         </div>

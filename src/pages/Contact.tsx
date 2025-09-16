@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -20,8 +19,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
   const { showToast: toast } = useToast();
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
