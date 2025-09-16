@@ -35,11 +35,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: State of Agent Reliability (2026 Preview) —
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            New: Real‑Time Model Routing Playbook (2026) —
+            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the playbook</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            Production RAG Observability (2026) —
+            <a href="/updates/production-rag-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -70,12 +70,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Case Study — RAG Agents in the Enterprise (2026) —
+            <a href="/updates/rag-agents-case-study" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read case study</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability report</a>
+            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">routing playbook</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails release</a>
+            <a href="/updates/production-rag-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">RAG observability</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -141,12 +141,12 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Real‑Time Model Routing Playbook (2026) —
+            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Reliability 2026</a>
+            Also read: <a href="/updates/production-rag-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Production RAG Observability</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Guardrails v1.0</a>
+            <a href="/updates/rag-agents-case-study" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">RAG Agents Case Study</a>
           </p>
         </div>
       </div>

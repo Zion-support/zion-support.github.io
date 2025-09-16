@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Release: Real‑Time Model Routing Playbook (2026)',
+		summary: 'Practical strategies for latency, cost, and quality‑aware model selection.',
+		href: '/updates/real-time-model-routing-playbook-2026',
+		date: '2025-09-16',
+		tag: 'Release',
+	},
+	{
+		title: 'Guide: Production RAG Observability (2026)',
+		summary: 'End‑to‑end tracing, drift detection, and retrieval quality monitoring in prod.',
+		href: '/updates/production-rag-observability-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: RAG Agents in the Enterprise (2026)',
+		summary: 'Design patterns, evals, and ROI from production RAG agent deployments.',
+		href: '/updates/rag-agents-case-study',
+		date: '2025-09-16',
+		tag: 'Case Study',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
