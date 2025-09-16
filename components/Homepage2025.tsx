@@ -83,6 +83,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-cyan-500 to-fuchsia-500'
     },
     {
+      title: 'AI Ops 2025: Autonomous Platforms',
+      href: '/blog/ai-ops-autonomous-platforms-2025',
+      tag: 'AI Ops',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
       title: 'Foundation Model Quality Engineering (2026)',
       href: '/blog/ai-2026-foundation-model-quality-engineering',
       tag: 'Quality',
