@@ -64,10 +64,10 @@ import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRev
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
 
 // Import new revolutionary components
-import AdvancedPerformanceOptimizer2026 from './components/AdvancedPerformanceOptimizer2026';
-import RevolutionaryTech2026Showcase from './components/RevolutionaryTech2026Showcase';
 import AdvancedAI2026Dashboard from './components/AdvancedAI2026Dashboard';
+import AdvancedPerformanceOptimizer2026 from './components/AdvancedPerformanceOptimizer2026';
 import QuantumConsciousnessShowcase2026 from './components/QuantumConsciousnessShowcase2026';
+import RevolutionaryTech2026Showcase from './components/RevolutionaryTech2026Showcase';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -466,9 +466,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

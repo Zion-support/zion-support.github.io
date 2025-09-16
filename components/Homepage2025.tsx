@@ -18,6 +18,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
+import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
+import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -567,6 +570,15 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
           </motion.div>
         </div>
       </section>
+
+      {/* Revolutionary Content Banner 2026 */}
+      <RevolutionaryContentBanner2026 />
+
+      {/* Innovative Services Showcase 2026 */}
+      <InnovativeServicesShowcase2026 />
+
+      {/* Advanced Automation Banner 2026 */}
+      <AdvancedAutomationBanner2026 />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
