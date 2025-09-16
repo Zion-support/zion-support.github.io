@@ -145,5 +145,19 @@
     "createdAt": "2025-09-16T16:00:00.000Z",
     "tags": ["safety", "observability", "metrics"],
     "source": "Zion AI Lab"
+  },
+  {
+    "title": "Real‑Time Agent Posture Management — Continuous Controls for Live AI Systems",
+    "url": "/reports/ai-lab/articles/new-real-time-agent-posture-management-1758063600000.md",
+    "createdAt": "2025-09-16T17:00:00.000Z",
+    "tags": ["agents", "governance", "reliability"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Continuous Eval‑Driven SLO Management for GenAI Products",
+    "url": "/reports/ai-lab/articles/new-continuous-eval-slo-management-1758067200000.md",
+    "createdAt": "2025-09-16T18:00:00.000Z",
+    "tags": ["evals", "reliability", "product"],
+    "source": "Zion AI Lab"
   }
 ]

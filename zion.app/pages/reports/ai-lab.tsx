@@ -11,7 +11,9 @@ interface ArticleEntry {
 export default function AILabPage() {
   const [items, setItems] = useState<ArticleEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const featured = items.find(it => it.title.startsWith('The Agentic Observability Blueprint')) || items.find(it => it.title.startsWith('Enterprise Agent Safety Playbook'));
+  const featured = items
+    .slice()
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
 
   useEffect(() => {
     async function load() {
