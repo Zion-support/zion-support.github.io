@@ -51,6 +51,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
+      href: '/reports/guides/guide-2025-09-agent-slo-blueprints',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      title: 'Case Study — 2x Faster Agent Onboarding',
+      href: '/reports/cases/case-2025-09-agent-onboarding-velocity',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-fuchsia-500'
+    },
+    {
       title: 'Safe Autonomy in Production (2026)',
       href: '/blog/ai-2026-safe-autonomy-in-production',
       tag: 'New',
