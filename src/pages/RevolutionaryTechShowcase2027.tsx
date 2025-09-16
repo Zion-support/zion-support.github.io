@@ -37,15 +37,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                   🧬 Neural Interfaces
                 </button>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             </div>
           </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-0cca
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <Helmet>
         <title>Revolutionary Tech Showcase 2027 - Zion Tech Group</title>
@@ -168,7 +161,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </ul>
             <div className="text-center">
               <span className="px-3 py-1 bg-pink-500/50 rounded-full text-xs font-semibold">LIFE</span>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             </div>
           </div>
         </div>
@@ -303,11 +295,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-0cca
   );
 };
 

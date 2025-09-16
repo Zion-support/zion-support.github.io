@@ -2,54 +2,52 @@ import React from "react";
 
 const AdvancedTechSolutions2025 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">AdvancedTechSolutions2025</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Advanced Tech Solutions 2025
-          </h1>
-          <p className="text-xl text-gray-600">
-            Cutting-edge technology solutions for modern businesses
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold mb-6">Advanced Tech Solutions 2025</h1>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Cutting-edge technology solutions that push the boundaries of what's possible.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
-            <p className="text-gray-600">
-              Advanced artificial intelligence and machine learning.
-            </p>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-6">Revolutionary quantum computing solutions for complex problems.</p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Quantum Algorithm Development</li>
+              <li>• Quantum Machine Learning</li>
+              <li>• Quantum Cryptography</li>
+              <li>• Quantum Simulation</li>
+            </ul>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Cloud Computing</h3>
-            <p className="text-gray-600">
-              Scalable and secure cloud infrastructure solutions.
-            </p>
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
+            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
+            <p className="text-blue-100 mb-6">Direct brain-computer interface technology for enhanced capabilities.</p>
+            <ul className="text-blue-200 space-y-2 text-sm">
+              <li>• Brain-Computer Interfaces</li>
+              <li>• Neural Signal Processing</li>
+              <li>• Cognitive Enhancement</li>
+              <li>• Thought-Controlled Systems</li>
+            </ul>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
-            <p className="text-gray-600">
-              Comprehensive security solutions for digital assets.
-            </p>
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
+            <h3 className="text-2xl font-bold mb-4">Advanced AI</h3>
+            <p className="text-indigo-100 mb-6">Next-generation artificial intelligence systems with consciousness.</p>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>• Conscious AI Systems</li>
+              <li>• Emotional Intelligence</li>
+              <li>• Creative AI</li>
+              <li>• Autonomous Decision Making</li>
+            </ul>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-79ca
         </div>
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedTechSolutions2025;
-=======
-export default AdvancedTechSolutions2025;
->>>>>>> cursor/create-and-deploy-new-content-79ca

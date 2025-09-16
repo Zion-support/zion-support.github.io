@@ -2,12 +2,6 @@ import React from 'react';
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-6f93
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -527,11 +521,9 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
         </motion.div>
       </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         </div>
       </section>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     </div>
   );
 };
