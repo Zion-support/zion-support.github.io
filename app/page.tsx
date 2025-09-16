@@ -125,6 +125,23 @@ export default function HomePage() {
       <NeuralInterfaceRevolutionBanner2026 />
 
       {/* New Promos: Sept 16, 2025 */}
+      {/* Quick spotlight for newly added articles */}
+      <section className="py-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-agent-reliability-blueprint" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Reliability Blueprint (2026)</h3>
+              <p className="text-gray-600">SLOs, eval gates, and evidence bundles for dependable agents.</p>
+            </Link>
+            <Link href="/blog/ai-2026-continuous-agent-evidence-bundles" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Agent Evidence Bundles</h3>
+              <p className="text-gray-600">Provenance, lineage, and automated captures powering audits.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
