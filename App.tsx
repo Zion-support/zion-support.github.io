@@ -137,6 +137,11 @@ import RevolutionaryTechBreakthrough2036 from './src/pages/RevolutionaryTechBrea
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import UltimateTechRevolution2037 from './src/pages/UltimateTechRevolution2037';
 import UltimateContentBanner2037 from './src/components/UltimateContentBanner2037';
+import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
+import RevolutionaryContentCarousel2040 from './src/components/RevolutionaryContentCarousel2040';
+import RevolutionaryTechBreakthrough2038 from './src/pages/RevolutionaryTechBreakthrough2038';
+import UltimateTechEvolution2039 from './src/pages/UltimateTechEvolution2039';
+import TranscendentTechRevolution2040 from './src/pages/TranscendentTechRevolution2040';
 
 export default function App(): JSX.Element {
   return (
@@ -228,10 +233,16 @@ export default function App(): JSX.Element {
                 {/* NEW: Ultimate Content Banner 2037 */}
                 <UltimateContentBanner2037 />
 
+                {/* NEW: Revolutionary Content Banner 2040 */}
+                <RevolutionaryContentBanner2040 />
+
+                {/* NEW: Revolutionary Content Carousel 2040 */}
+                <RevolutionaryContentCarousel2040 />
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-lg font-bold mb-4 animate-pulse">
-                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2037 - Transcendent Evolution, Interdimensional Technology, Ultimate Revolution & Conscious Universes
+                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2040 - Transcendent Evolution, Interdimensional Technology, Ultimate Revolution, Conscious Universes & Infinite Consciousness
                   </div>
                   <h1 className="text-5xl font-bold text-gray-900 mb-6">
                     Welcome to Zion Tech Group
@@ -374,6 +385,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateTechEvolution2038" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Ultimate Evolution 2038 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2038" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Revolutionary Breakthrough 2038 →
+                    </a>
+                    <a href="/pages/UltimateTechEvolution2039" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Ultimate Evolution 2039 →
+                    </a>
+                    <a href="/pages/TranscendentTechRevolution2040" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌌 NEW: Transcendent Revolution 2040 →
                     </a>
                     <a href="/pages/RevolutionaryTechBreakthrough2036" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Revolutionary Breakthrough 2036 →
@@ -932,6 +952,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechEvolution2038" element={<UltimateTechEvolution2038 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2036" element={<RevolutionaryTechBreakthrough2036 />} />
           <Route path="/pages/UltimateTechRevolution2037" element={<UltimateTechRevolution2037 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2038" element={<RevolutionaryTechBreakthrough2038 />} />
+          <Route path="/pages/UltimateTechEvolution2039" element={<UltimateTechEvolution2039 />} />
+          <Route path="/pages/TranscendentTechRevolution2040" element={<TranscendentTechRevolution2040 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
