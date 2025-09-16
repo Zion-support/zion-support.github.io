@@ -1,158 +1,141 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const UltimateContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
+  
   const slides = [
     {
-      title: "Revolutionary AI Breakthrough 2025",
-      description: "Experience the most advanced artificial intelligence systems that are reshaping the future",
-      link: "/pages/RevolutionaryAIBreakthrough2025",
-      icon: "🤖",
+      title: "🌟 Ultimate Tech Breakthrough 2025",
+      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Technology",
+      description: "Experience the most revolutionary technological advances that will reshape our world in 2025",
+      link: "/pages/UltimateTechBreakthrough2025",
       color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/80 to-pink-900/80"
+      icon: "🚀"
     },
     {
-      title: "Ultimate Tech Trends 2025",
-      description: "Discover the most transformative technology trends that will reshape our world",
-      link: "/pages/UltimateTechTrends2025",
-      icon: "📈",
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/80 to-cyan-900/80"
+      title: "⚡ Revolutionary Tech Showcase 2025",
+      subtitle: "Interactive Demos • Live Technology • Future Experience",
+      description: "Interactive showcase of cutting-edge technologies with live demonstrations and real-time demos",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      color: "from-cyan-600 to-blue-600",
+      icon: "🔬"
     },
     {
-      title: "Revolutionary Case Studies 2025",
-      description: "See how we've transformed businesses across industries with cutting-edge solutions",
-      link: "/pages/RevolutionaryCaseStudies2025",
-      icon: "🏆",
+      title: "🧠 Advanced AI Transformation 2025",
+      subtitle: "Conscious AI • Neural Networks • Human-AI Collaboration",
+      description: "Transform your organization with conscious AI systems that think, feel, and create like humans",
+      link: "/pages/AdvancedAITransformation2025",
       color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900/80 to-teal-900/80"
+      icon: "🤖"
+    },
+    {
+      title: "🌌 Quantum Computing Revolution 2025",
+      subtitle: "Quantum Consciousness • Reality Manipulation • Time-Space Control",
+      description: "Direct neural interface with quantum computing for enhanced cognitive processing and reality control",
+      link: "/pages/QuantumComputingRevolution2025",
+      color: "from-violet-600 to-purple-600",
+      icon: "⚡"
     }
   ];
 
-  const features = [
-    { icon: "⚡", text: "Lightning Fast" },
-    { icon: "🔒", text: "Secure" },
-    { icon: "🌍", text: "Global Scale" },
-    { icon: "🚀", text: "Future Ready" }
-  ];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
-    <div className="relative overflow-hidden mb-12">
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-blue-900 to-emerald-900 opacity-90"></div>
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
       
-      {/* Animated Particles */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute top-20 right-20 w-32 h-32 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-10 left-1/4 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
+      <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-emerald-500/20 rounded-full blur-xl animate-pulse delay-3000"></div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 1 }}
-          className="text-center mb-12"
-        >
+      <div className="relative z-10 p-12">
+        {/* Header */}
+        <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 NEW CONTENT AVAILABLE • JANUARY 2025
+            🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Ultimate Technology Content 2025
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Ultimate Content Showcase 2025
           </h2>
-          <p className="text-2xl text-gray-200 max-w-4xl mx-auto mb-8">
-            Explore our revolutionary new content showcasing the most advanced technologies and innovations
+          <p className="text-xl text-white/90 max-w-4xl mx-auto">
+            Discover our revolutionary new content featuring the most advanced technologies that will define the future
           </p>
-        </motion.div>
+        </div>
 
         {/* Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden rounded-2xl">
-            <motion.div
-              className="flex"
-              animate={{ x: `-${currentSlide * 100}%` }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+        <div className="relative">
+          <div className="overflow-hidden rounded-xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${slide.bgColor} p-12 rounded-2xl relative overflow-hidden`}>
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute inset-0" style={{
-                        backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px)`,
-                        backgroundSize: '50px 50px'
-                      }}></div>
-                    </div>
-                    
-                    <div className="relative z-10 flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="text-6xl mb-4">{slide.icon}</div>
-                        <h3 className="text-4xl font-bold mb-4 text-white">{slide.title}</h3>
-                        <p className="text-xl text-gray-200 mb-8 max-w-2xl">{slide.description}</p>
-                        <div className="flex flex-wrap gap-4 mb-8">
-                          {features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
-                              <span className="text-lg">{feature.icon}</span>
-                              <span className="text-sm text-white">{feature.text}</span>
-                            </div>
-                          ))}
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="flex items-center space-x-4 mb-4">
+                          <span className="text-6xl">{slide.icon}</span>
+                          <div>
+                            <h3 className="text-3xl font-bold text-white mb-2">{slide.title}</h3>
+                            <p className="text-lg text-purple-200">{slide.subtitle}</p>
+                          </div>
                         </div>
-                        <a
-                          href={slide.link}
-                          className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
-                        >
-                          Explore Now →
-                        </a>
+                        <p className="text-lg text-white/90 mb-6">{slide.description}</p>
+                        <div className="flex space-x-4">
+                          <Link
+                            to={slide.link}
+                            className={`bg-gradient-to-r ${slide.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+                          >
+                            Explore Now →
+                          </Link>
+                          <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
+                            Learn More
+                          </button>
+                        </div>
                       </div>
-                      <div className="hidden lg:block">
-                        <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center">
-                          <div className="text-8xl">{slide.icon}</div>
+                      
+                      <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-xl p-6 border border-purple-400/30">
+                        <h4 className="text-xl font-bold mb-4 text-center">🎮 Interactive Preview</h4>
+                        <div className="bg-black/50 rounded-lg p-4 mb-4">
+                          <div className="text-green-400 font-mono text-sm">
+                            <div className="mb-2">$ Loading {slide.title}...</div>
+                            <div className="text-gray-400">Initializing breakthrough technology...</div>
+                            <div className="text-gray-400">Connecting to quantum networks...</div>
+                            <div className="text-green-400">✓ Ready for exploration</div>
+                          </div>
                         </div>
+                        <p className="text-center text-sm text-white/80">
+                          Click "Explore Now" to experience the full interactive demonstration
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center space-x-3 mt-8">
+          <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  index === currentSlide 
+                    ? 'bg-purple-400 scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
             ))}
@@ -160,62 +143,45 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
 
         {/* Quick Access Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-16"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">Quick Access</h3>
-            <p className="text-gray-200">Jump directly to our latest content</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-center mb-6 text-white">🚀 Quick Access to New Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {slides.map((slide, index) => (
-              <motion.a
+              <Link
                 key={index}
-                href={slide.link}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
-                transition={{ duration: 0.8, delay: 0.7 + index * 0.2 }}
-                className={`bg-gradient-to-br ${slide.bgColor} p-6 rounded-xl hover:scale-105 transition-all duration-300 border border-white/20`}
+                to={slide.link}
+                className={`bg-gradient-to-r ${slide.color} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 text-center group`}
               >
-                <div className="text-4xl mb-4">{slide.icon}</div>
-                <h4 className="text-xl font-bold text-white mb-2">{slide.title}</h4>
-                <p className="text-gray-200 text-sm mb-4">{slide.description}</p>
-                <div className="flex items-center text-white font-semibold">
-                  Explore →
+                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {slide.icon}
                 </div>
-              </motion.a>
+                <div className="font-semibold text-sm">{slide.title.split(' ').slice(0, 3).join(' ')}</div>
+              </Link>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4">Stay Updated</h3>
-            <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and be the first to know about new content, features, and technological breakthroughs
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Subscribe
-              </button>
+        {/* Stats */}
+        <div className="mt-12 bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-xl p-8">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-sm text-white/80">New Content Pages</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">100%</div>
+              <div className="text-sm text-white/80">Interactive Demos</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-sm text-white/80">Live Technology</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">∞</div>
+              <div className="text-sm text-white/80">Possibilities</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
