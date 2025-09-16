@@ -66,6 +66,11 @@ import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
+import RevolutionaryTechShowcase2027 from './pages/RevolutionaryTechShowcase2027';
+import UltimateContentShowcase2027 from './components/UltimateContentShowcase2027';
+import RevolutionaryTechBanner2027 from './components/RevolutionaryTechBanner2027';
+import InteractiveTechDemo2027 from './components/InteractiveTechDemo2027';
+import ClientSuccessStories2027 from './components/ClientSuccessStories2027';
 
 const App: React.FC = () => {
   return (
@@ -193,6 +198,26 @@ const App: React.FC = () => {
                 <AbsoluteTechShowcase2031 />
               </div>
 
+              {/* NEW: Ultimate Content Showcase 2027 */}
+              <div className="mb-12">
+                <UltimateContentShowcase2027 />
+              </div>
+
+              {/* NEW: Revolutionary Tech Banner 2027 */}
+              <div className="mb-12">
+                <RevolutionaryTechBanner2027 />
+              </div>
+
+              {/* NEW: Interactive Tech Demo 2027 */}
+              <div className="mb-12">
+                <InteractiveTechDemo2027 />
+              </div>
+
+              {/* NEW: Client Success Stories 2027 */}
+              <div className="mb-12">
+                <ClientSuccessStories2027 />
+              </div>
+
               {/* Newsletter Signup */}
               <div className="mb-12">
                 <NewsletterSignup />
@@ -236,6 +261,7 @@ const App: React.FC = () => {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2027" element={<RevolutionaryTechShowcase2027 />} />
         </Routes>
         
         <Footer />
