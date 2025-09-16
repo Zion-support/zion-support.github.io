@@ -66,6 +66,8 @@ import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
 import NewsletterSignup from './components/NewsletterSignup';
 import PromotionalBanner from './components/PromotionalBanner';
+import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
+import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServicesShowcase';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
@@ -173,6 +175,16 @@ const App: React.FC = () => {
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* Revolutionary Content Showcase */}
+              <div className="mb-12">
+                <RevolutionaryContentShowcase />
+              </div>
+
+              {/* New Revolutionary Services Showcase */}
+              <div className="mb-12">
+                <NewRevolutionaryServicesShowcase />
               </div>
 
               {/* New Services Showcase 2026 */}

@@ -1315,7 +1315,10 @@ export const newContent2026 = [
   }
 ];
 
+// Import new revolutionary content
+import { newBlogPosts2026 } from './newBlogPosts2026.js';
+
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026];
-// Keep compatibility export; prefer BLOG_POSTS as unified list
-export const BLOG_POSTS_ALL = allBlogPosts;
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...newBlogPosts2026];
+
+export const BLOG_POSTS = allBlogPosts;
