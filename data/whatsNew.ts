@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "safe-rollouts-2026",
+    title: "AI 2026: Safe Rollouts in Production",
+    description:
+      "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-safe-rollouts-in-production",
+    emoji: "🚦",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "evidence-led-ops-2026",
+    title: "AI 2026: Autonomous Evidence‑Led Operations",
+    description:
+      "Operate with auditable evaluation evidence driving safe, compliant decisions.",
+    ctaLabel: "Read Overview",
+    href: "/blog/ai-2026-autonomous-evidence-led-operations",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "agent-platform-slos-best-practices-2026",
     title: "AI 2026: Agent Platform SLOs — Best Practices",
     description:
