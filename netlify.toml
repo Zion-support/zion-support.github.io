@@ -165,7 +165,6 @@
   to = "/browser-automation-cloud"
   status = 301
 
-# Additional redirects from the other branch
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -206,7 +205,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA (this is also in _redirects file)
+# Handle client-side routing for SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"

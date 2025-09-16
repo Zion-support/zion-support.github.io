@@ -118,32 +118,22 @@ const InfiniteTechShowcase2030: React.FC = () => {
   }, []);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
         
         {/* Infinite Particles */}
         {[...Array(50)].map((_, i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-5 h-5 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-50"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-            }}
-              scale: [0, 3, 0],
-              opacity: [0, 1, 0],
-              rotate: [0, 720],
-              x: [0, Math.random() * 400 - 200, 0],
-              y: [0, Math.random() * 400 - 200, 0],
-            }}
-              duration: 10 + Math.random() * 5,
-              repeat: Infinity,
-              delay: Math.random() * 5,
             }}
           />
         ))}
@@ -152,11 +142,11 @@ const InfiniteTechShowcase2030: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             ♾️ INFINITE TECH 2030
-          </divdiv>
+          </div>
           <divh2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
@@ -174,7 +164,7 @@ const InfiniteTechShowcase2030: React.FC = () => {
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <div
               key={currentTech}
               className="space-y-10"
             >
@@ -198,31 +188,31 @@ const InfiniteTechShowcase2030: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {infiniteTechs[currentTech].features.map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(infiniteTechs[currentTech].stats).map(([key, value], index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${infiniteTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -246,26 +236,17 @@ const InfiniteTechShowcase2030: React.FC = () => {
                 
                 {/* Infinite Energy Effects */}
                 {[...Array(60)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-70"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      scale: [0, 4, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 400 - 200, 0],
-                      y: [0, Math.random() * 400 - 200, 0],
-                    }}
-                      duration: 5 + Math.random() * 4,
-                      repeat: Infinity,
-                      delay: Math.random() * 6,
-                    }}
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -284,7 +265,7 @@ const InfiniteTechShowcase2030: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -301,10 +282,10 @@ const InfiniteTechShowcase2030: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
