@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-84c4
 import React from 'react';
 
 const UltimatePromotionalBanner: React.FC = () => {
@@ -138,6 +141,7 @@ const UltimatePromotionalBanner: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-orange-200 text-lg">Availability</div>
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 
@@ -287,6 +291,8 @@ const UltimatePromotionalBanner: React.FC = () => {
                 Enter Innovation Hub →
               </a>
 >>>>>>> cursor/create-and-deploy-new-content-97b0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-84c4
             </div>
           </div>
         </div>
