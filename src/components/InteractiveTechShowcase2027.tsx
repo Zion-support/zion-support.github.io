@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const techCategories = [
     {
@@ -16,6 +18,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
         "Autonomous Decision Making"
       ],
       gradient: "from-purple-600 to-pink-600",
+      color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
     },
     {
@@ -30,31 +33,39 @@ const InteractiveTechShowcase2027: React.FC = () => {
         "Molecular Simulation"
       ],
       gradient: "from-cyan-600 to-blue-600",
+      color: "from-cyan-600 to-blue-600",
       link: "/pages/RevolutionaryTechTrends2027"
     },
     {
       id: 2,
       title: "Holographic Technology",
       icon: "🔮",
+      description: "Immersive holographic interfaces that blur the line between reality and virtuality",
+      features: [
+        "3D Holographic Displays",
+        "Touchless Interaction",
+        "Spatial Computing",
+        "Augmented Reality"
+      ],
+      gradient: "from-emerald-600 to-teal-600",
+      color: "from-emerald-600 to-teal-600",
+      link: "/pages/RevolutionaryTechTrends2027"
     }
   ];
 
   useEffect(() => {
-  return (
-    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
   }, [activeTab]);
 
   return (
+    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2027
           </h2>
@@ -64,14 +75,38 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
+        <div className="flex justify-center space-x-4 mb-12">
+          {techCategories.map((category, index) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === index
+                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              <span className="text-2xl mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Technology Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {techCategories.map((tech, index) => (
+            <div
+              key={index}
+              className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
+                isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
+                <div className="text-6xl mb-4 animate-bounce">{tech.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-2">{tech.title}</h3>
                 <p className="text-white/80 text-sm">{tech.description}</p>
               </div>
               
@@ -87,7 +122,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
               <div className="flex space-x-3">
                 <a
                   href={tech.link}
-                  className={`flex-1 bg-gradient-to-r ${techCategories[activeTab].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
+                  className={`flex-1 bg-gradient-to-r ${tech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
                 >
                   Explore →
                 </a>
@@ -137,21 +172,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
               <p className="text-purple-200 text-sm">Witness quantum phenomena and reality manipulation in real-time simulations</p>
             </div>
           </div>
-        </div>
-
-            <button
-              key={category.id}
-              onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === index
-                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-            >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
         </div>
 
         {/* Call to Action */}
