@@ -38,6 +38,8 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-low-latency-agent-observability': require('../../blog/ai-2026-low-latency-agent-observability').default,
   'ai-2026-agent-safety-evidence-integration': require('../../blog/ai-2026-agent-safety-evidence-integration').default,
   'ai-2026-cost-aware-real-time-routing': require('../../blog/ai-2026-cost-aware-real-time-routing').default,
+  // New: Governed Agent Operations Checklist (2026)
+  'ai-2026-governed-agent-operations-checklist': require('../../blog/ai-2026-governed-agent-operations-checklist').default,
 }
 
 export default function BlogPostRouter() {
