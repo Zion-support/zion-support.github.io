@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   const demos = [
@@ -18,6 +19,11 @@
       link: '/pages/ConsciousAIBreakthrough2026'
     },
     {
+=======
+import React, { useState, useEffect } from 'react';
+
+const InteractiveTechShowcase2026 = () => {
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 =======
@@ -74,6 +80,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
   const showcases = [
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'ai-systems',
       name: 'Advanced AI Systems',
@@ -262,6 +269,48 @@ const InteractiveTechShowcase2026: React.FC = () => {
     setTimeout(() => setIsRunning(false), 3000);
   };
 
+=======
+      id: 'conscious-ai',
+      title: 'Conscious AI Systems',
+      icon: '🧠',
+      description: 'Revolutionary AI with self-awareness and emotional intelligence',
+      features: [
+        'Self-aware decision making',
+        'Emotional intelligence',
+        'Creative problem solving',
+        'Ethical reasoning'
+      ],
+      link: '/pages/ConsciousAIBreakthrough2026'
+    },
+    {
+      id: 'quantum-neural',
+      title: 'Quantum Neural Networks',
+      icon: '⚡',
+      description: 'Quantum-enhanced neural networks for unprecedented processing power',
+      features: [
+        'Quantum superposition learning',
+        'Exponential speedup',
+        'Complex pattern recognition',
+        'Quantum error correction'
+      ],
+      link: '/pages/QuantumNeuralNetworks2026'
+    },
+    {
+      id: 'reality-synthesis',
+      title: 'Reality Synthesis Engine',
+      icon: '🌌',
+      description: 'Create and manipulate virtual realities with perfect fidelity',
+      features: [
+        'Photorealistic rendering',
+        'Physics-accurate simulation',
+        'Real-time world generation',
+        'Consciousness integration'
+      ],
+      link: '/pages/RealitySynthesis2026'
+    }
+  ];
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
   return (
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 =======
@@ -513,6 +562,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
             Experience the Future
           </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }`}
                 onClick={() => setActiveDemo(demo.id)}
@@ -891,6 +941,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p>
                 </div>
+=======
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Experience the future of technology through interactive demonstrations
+          </p>
+        </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 
                 {/* Demo Features */}
                 <div className="space-y-4 mb-8">
@@ -1174,8 +1230,46 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 </button>
               ))}
             </div>
+<<<<<<< HEAD
           </motion.div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+          </div>
+
+          <div className="p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-4 text-gray-800">
+                  {technologies[activeTab].title}
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  {technologies[activeTab].description}
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {technologies[activeTab].features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-700">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                  Try Interactive Demo
+                </button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-8 text-center">
+                <div className="text-6xl mb-4">{technologies[activeTab].icon}</div>
+                <div className="text-2xl font-bold text-gray-800 mb-2">
+                  {technologies[activeTab].title}
+                </div>
+                <div className="text-gray-600">
+                  Interactive demonstration available
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
 
         {/* Call to Action */}

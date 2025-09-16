@@ -45,6 +45,7 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+<<<<<<< HEAD
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
@@ -335,6 +336,16 @@ import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcas
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
+=======
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import NewContentBanner2025 from './src/components/NewContentBanner2025';
+import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
+import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 
 export default function App(): JSX.Element {
   return (
@@ -342,6 +353,7 @@ export default function App(): JSX.Element {
       <Router>
         <div className="min-h-screen bg-white">
         <ScrollToTop />
+<<<<<<< HEAD
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
         <SEOOptimizer />
@@ -1106,6 +1118,17 @@ export default function App(): JSX.Element {
                       View AI Services →
                     </a>
                   </div>
+=======
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+          <Header />
+          
+          <Routes>
+            <Route path="/" element={
+              <div>
+                <main className="container mx-auto px-4 py-8">
+                  {/* Hero Section */}
+                  <EnhancedHeroSection />
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
                   
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">🔗</div>
@@ -1118,6 +1141,7 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                   
+<<<<<<< HEAD
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">☁️</div>
                     <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
@@ -1689,6 +1713,58 @@ export default function App(): JSX.Element {
         <Footer />
       </div>
     </Router>
+=======
+                  {/* New Content Banners */}
+                  <NewContentBanner2025 />
+                  <EnhancedContentShowcase2025 />
+                  <RevolutionaryAdBanner2036 />
+                  <UltimateContentShowcase2025 />
+                  
+                  {/* Interactive Showcases */}
+                  <InteractiveTechShowcase />
+                  <InteractiveTechShowcase2026 />
+                  
+                  {/* Content Carousels */}
+                  <DynamicContentCarousel />
+                  
+                  {/* Revolutionary Content */}
+                  <RevolutionaryContentBanner2026 />
+                  <RevolutionaryServicesShowcase2026 />
+                </main>
+              </div>
+            } />
+            
+            {/* Page Routes */}
+            <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
+            <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
+            <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+            <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
+            <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
+            <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
+            <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
+            <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
+            <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
+            <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
+            <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
+            <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+            <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+            <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
+            <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
+            <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
+            <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
+            <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
+            <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
+            <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
+            <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+            
+            {/* Case Study Route */}
+            <Route path="/case-study/:id" element={<CaseStudyPage />} />
+          </Routes>
+          
+          <Footer />
+        </div>
+      </Router>
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
     </ErrorBoundary>
   );
 }

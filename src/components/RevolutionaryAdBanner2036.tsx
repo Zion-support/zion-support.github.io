@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
@@ -26,6 +27,8 @@
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 import React, { useState, useEffect } from 'react';
 =======
 import React from 'react';
@@ -45,6 +48,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             Discover the most advanced technologies that will reshape our world in 2036
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
@@ -173,6 +177,45 @@ const RevolutionaryAdBanner2036: React.FC = () => {
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 >>>>>>> cursor/create-and-deploy-new-content-370d
 =======
+=======
+
+        {/* Rotating Ad Display */}
+        <div className="relative">
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 min-h-[400px] flex items-center">
+            <div className="w-full text-center">
+              <div className="text-8xl mb-6 animate-bounce">
+                {ads[currentAd].icon}
+              </div>
+              <h3 className="text-4xl font-bold mb-4">
+                {ads[currentAd].title}
+              </h3>
+              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                {ads[currentAd].subtitle}
+              </p>
+              <a 
+                href={ads[currentAd].link}
+                className={`inline-block bg-gradient-to-r ${ads[currentAd].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+              >
+                {ads[currentAd].cta} →
+              </a>
+            </div>
+          </div>
+
+          {/* Ad Indicators */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {ads.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentAd(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentAd 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
@@ -198,6 +241,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,6 +273,8 @@ const RevolutionaryAdBanner2036: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
       </div>
     </div>
