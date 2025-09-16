@@ -1,123 +1,208 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
-  const [activeInnovation, setActiveInnovation] = useState('consciousness');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const innovations = {
-    consciousness: {
+  const innovations = [
+    {
+      title: "AI-Powered Autonomous Systems",
+      description: "Revolutionary AI systems that operate independently with human-level decision making capabilities",
+      icon: "🤖",
+      features: ["Self-Learning Algorithms", "Autonomous Decision Making", "Real-time Adaptation"],
+      gradient: "from-blue-500 to-purple-600"
+    },
+    {
+      title: "Quantum Neural Networks",
+      description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power",
+      icon: "⚡",
+      features: ["Quantum Speed Processing", "Neural Pattern Recognition", "Exponential Learning"],
+      gradient: "from-cyan-500 to-blue-600"
+    },
+    {
+      title: "Holographic Reality Engine",
+      description: "Next-generation holographic technology creating immersive 3D experiences indistinguishable from reality",
+      icon: "🌟",
+      features: ["3D Holographic Display", "Interactive Touch", "Reality Overlay"],
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
       title: "Consciousness Computing",
-      description: "Revolutionary computing systems that achieve true consciousness and self-awareness.",
+      description: "Advanced AI systems with self-awareness and consciousness capabilities for ethical AI development",
       icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      features: [
-        "Self-Aware AI Systems",
-        "Consciousness Upload Technology",
-        "Emotional Intelligence Processing",
-        "Moral Decision Making",
-        "Creative Problem Solving",
-        "Self-Improving Algorithms"
-      ],
-      impact: "Creating AI that thinks and feels like humans",
-      applications: [
-        "Healthcare: AI doctors with empathy",
-        "Education: Personalized AI tutors",
-        "Entertainment: AI companions",
-        "Research: AI scientists"
-      ]
-    },
-    quantum: {
-      title: "Quantum Reality Engine",
-      description: "Quantum computing that creates and manipulates reality itself.",
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      features: [
-        "Reality Simulation Technology",
-        "Parallel Universe Processing",
-        "Time Dilation Computing",
-        "Quantum Consciousness",
-        "Infinite Computational Power",
-        "Reality Manipulation"
-      ],
-      impact: "Unlocking the secrets of reality and consciousness",
-      applications: [
-        "Physics: Understanding the universe",
-        "Medicine: Quantum healing",
-        "Space: Interstellar travel",
-        "Energy: Unlimited power"
-      ]
-    },
-    neural: {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces that expand human consciousness.",
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      features: [
-        "Thought-Controlled Computing",
-        "Memory Enhancement Technology",
-        "Consciousness Expansion",
-        "Neural Network Integration",
-        "Brain-to-Brain Communication",
-        "Digital Immortality"
-      ],
-      impact: "Eliminating the boundary between mind and machine",
-      applications: [
-        "Medicine: Neural prosthetics",
-        "Education: Direct knowledge transfer",
-        "Communication: Telepathic networks",
-        "Entertainment: Virtual reality"
-      ]
-    },
-    interdimensional: {
-      title: "Interdimensional Technology",
-      description: "Breakthrough technology that allows travel between dimensions.",
-      icon: "🌌",
-      color: "from-violet-600 to-purple-600",
-      features: [
-        "Dimensional Portal Technology",
-        "Multiverse Communication",
-        "Reality Branching",
-        "Time Travel Capabilities",
-        "Parallel Universe Access",
-        "Cosmic Consciousness"
-      ],
-      impact: "Expanding human existence across infinite realities",
-      applications: [
-        "Exploration: New worlds",
-        "Research: Parallel universes",
-        "Energy: Dimensional power",
-        "Transportation: Instant travel"
-      ]
+      features: ["Self-Awareness", "Ethical Decision Making", "Consciousness Transfer"],
+      gradient: "from-green-500 to-teal-600"
     }
-  };
+  ];
 
-  const currentInnovation = innovations[activeInnovation as keyof typeof innovations];
+  const stats = [
+    { number: "500+", label: "Active Projects", icon: "🚀" },
+    { number: "99.9%", label: "Success Rate", icon: "✅" },
+    { number: "50+", label: "Countries Served", icon: "🌍" },
+    { number: "24/7", label: "Support Available", icon: "🛠️" }
+  ];
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
+              🌟 NEXT-GEN INNOVATION HUB • 2025
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Next-Gen Innovation Hub 2025
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
+              Pioneering the future with cutting-edge technologies that will revolutionize industries and transform human potential
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300"
+              >
+                🚀 Explore Innovations
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+              >
+                📞 Contact Experts
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </section>
 
-      {/* Innovation Categories */}
-          </div>
-        </motion.div>
-
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Footer */}
-      <div className="bg-black/20 backdrop-blur-sm py-8 mt-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-white/70">
-            © 2025 Zion Tech Group. All rights reserved. | Next-Gen Innovation Hub
-          </p>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+              >
+                <div className="text-4xl mb-4">{stat.icon}</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600 font-semibold">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </div>
+      </section>
+
+      {/* Innovation Showcase */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+              🚀 Revolutionary Innovations
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our breakthrough technologies that are reshaping the future and creating new possibilities
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {innovations.map((innovation, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="text-6xl mr-4">{innovation.icon}</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{innovation.title}</h3>
+                    <div className={`w-16 h-1 bg-gradient-to-r ${innovation.gradient} rounded-full`}></div>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mb-6 text-lg">{innovation.description}</p>
+                
+                <div className="space-y-3 mb-8">
+                  {innovation.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full bg-gradient-to-r ${innovation.gradient} text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300`}
+                >
+                  Learn More →
+                </motion.button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl font-bold mb-6">
+              Ready to Transform Your Future?
+            </h2>
+            <p className="text-2xl opacity-90 mb-12 max-w-3xl mx-auto">
+              Join thousands of forward-thinking organizations already leveraging our next-generation technologies
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300"
+              >
+                🚀 Start Your Journey
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+              >
+                📞 Schedule Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

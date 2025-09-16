@@ -1,12 +1,7 @@
 import React from 'react';
 import React from 'react';
 import React from 'react';
-import React from 'react';
-import React from 'react';
-import React from 'react';
 import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
-
 
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -289,7 +284,6 @@ const RevolutionaryTech2026: React.FC = () => {
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               Contact Our Experts
-            </button>
             </button>
           </div>
         </div>

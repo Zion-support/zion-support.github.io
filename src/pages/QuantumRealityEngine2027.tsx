@@ -4,11 +4,10 @@ import React from 'react';
         {/* Hero Section */}
         <div className="text-center mb-16">
       <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
       <div className="container mx-auto px-4 py-16">
@@ -37,14 +36,10 @@ import React from 'react';
               <li>• Light speed manipulation</li>
               <li>• Matter-energy conversion</li>
               <li>• Time-space distortion</li>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine. 
-            Control space, time, matter, and energy at the quantum level to reshape existence.
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine. 
             Control space, time, matter, and energy at the quantum level to reshape existence.
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -357,19 +352,11 @@ import React from 'react';
         </div>
 
         {/* Call to Action */}
-          <h2 className="text-4xl font-bold mb-6">Ready to Control Reality Itself?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and become a master of reality manipulation
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               Control Reality →
             </button>
-            <button className="border-2 border-violet-400 text-violet-400 px-10 py-5 rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300 font-bold text-xl">
-              Learn More
-            </button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-10 py-5 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-bold text-xl">
-              Get Started
         <div className="text-center">
           </p>
           <div className="flex flex-wrap justify-center gap-6">

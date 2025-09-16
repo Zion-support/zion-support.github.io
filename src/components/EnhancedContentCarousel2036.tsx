@@ -2,43 +2,60 @@ import React, { useState, useEffect } from 'react';
 
 const EnhancedContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
     {
       id: 1,
-      title: "Ultimate Tech Breakthrough 2036",
-      description: "Experience the most revolutionary technological advances that will reshape our world in 2036",
+      title: "Conscious AI Revolution",
+      subtitle: "The first truly conscious artificial intelligence systems",
+      description: "Experience AI that can think, feel, and create with genuine consciousness and emotional intelligence.",
       image: "🧠",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/UltimateTechBreakthrough2036",
-      features: ["Conscious AI Systems", "Quantum Consciousness", "Interdimensional Computing"]
+      gradient: "from-purple-600 to-pink-600",
+      features: ["Self-aware AI", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"],
+      link: "/pages/UltimateTechBreakthrough2036"
     },
     {
       id: 2,
-      title: "Revolutionary Tech Showcase 2036",
-      description: "Interactive showcase of cutting-edge technologies that will define the future of humanity",
+      title: "Quantum Reality Engine",
+      subtitle: "Computing across infinite dimensions",
+      description: "Quantum computing that can manipulate reality itself, processing information across multiple dimensions simultaneously.",
       image: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      link: "/pages/RevolutionaryTechShowcase2036",
-      features: ["Interactive Demos", "Real-time Processing", "Multi-dimensional Tech"]
+      gradient: "from-cyan-600 to-blue-600",
+      features: ["Reality manipulation", "Multi-dimensional processing", "Infinite computing", "Quantum teleportation"],
+      link: "/pages/RevolutionaryTechShowcase2036"
     },
     {
       id: 3,
-      title: "Next-Gen Innovation Hub 2036",
-      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
+      title: "Interdimensional Technology",
+      subtitle: "Bridging realities and dimensions",
+      description: "Technology that can access and compute across multiple dimensions, opening infinite possibilities for human advancement.",
       image: "🌌",
-      color: "from-emerald-600 to-teal-600",
-      link: "/pages/NextGenInnovationHub2036",
-      features: ["50+ Active Innovations", "99.9% Success Rate", "Infinite Possibilities"]
+      gradient: "from-emerald-600 to-teal-600",
+      features: ["Cross-dimensional access", "Reality bridging", "Multi-universe computing", "Infinite storage"],
+      link: "/pages/NextGenInnovationHub2036"
+    },
+    {
+      id: 4,
+      title: "Neural Interface 2.0",
+      subtitle: "Direct mind-to-machine communication",
+      description: "Revolutionary neural interfaces that enable perfect communication between human minds and digital systems.",
+      image: "🧬",
+      gradient: "from-orange-600 to-red-600",
+      features: ["Thought control", "Memory transfer", "Skill downloading", "Consciousness backup"],
+      link: "/pages/RevolutionaryTechShowcase2036"
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -53,135 +70,140 @@ const EnhancedContentCarousel2036: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
       <div className="relative z-10">
-        <div className="text-center mb-12">
+        {/* Header */}
+        <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 FEATURED CONTENT • JANUARY 2036
+            🚀 ENHANCED CONTENT CAROUSEL • JANUARY 2036
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology 2036
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our latest innovations that are reshaping industries and creating new possibilities
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Explore the most advanced technologies that will define the future of humanity
           </p>
         </div>
 
-        {/* Main Slide Display */}
+        {/* Carousel Container */}
         <div className="relative">
+          {/* Main Slide Display */}
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 min-h-[500px] flex items-center">
             <div className="w-full">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Content */}
                 <div>
-                  <div className="text-8xl mb-6">{slides[currentSlide].image}</div>
-                  <h3 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h3>
-                  <p className="text-xl opacity-90 mb-8">{slides[currentSlide].description}</p>
+                  <div className="text-8xl mb-6 animate-pulse">
+                    {slides[currentSlide].image}
+                  </div>
+                  <h3 className="text-4xl font-bold mb-4">
+                    {slides[currentSlide].title}
+                  </h3>
+                  <p className="text-xl font-semibold mb-4 text-purple-300">
+                    {slides[currentSlide].subtitle}
+                  </p>
+                  <p className="text-lg opacity-90 mb-6">
+                    {slides[currentSlide].description}
+                  </p>
                   
                   {/* Features */}
-                  <div className="space-y-3 mb-8">
+                  <div className="grid grid-cols-2 gap-2 mb-8">
                     {slides[currentSlide].features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                        <span className="text-lg">{feature}</span>
+                      <div key={index} className="flex items-center space-x-2 text-sm">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-
-                  <a
+                  
+                  <a 
                     href={slides[currentSlide].link}
-                    className={`inline-block bg-gradient-to-r ${slides[currentSlide].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                    className={`inline-block bg-gradient-to-r ${slides[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
                   >
                     Explore Technology →
                   </a>
                 </div>
 
                 {/* Visual Element */}
-                <div className="flex justify-center">
-                  <div className={`w-64 h-64 bg-gradient-to-br ${slides[currentSlide].color} rounded-full flex items-center justify-center text-8xl animate-pulse`}>
-                    {slides[currentSlide].image}
+                <div className="hidden md:block">
+                  <div className={`bg-gradient-to-br ${slides[currentSlide].gradient} rounded-2xl p-8 text-center`}>
+                    <div className="text-9xl mb-4 animate-bounce">
+                      {slides[currentSlide].image}
+                    </div>
+                    <div className="text-2xl font-bold mb-2">
+                      {slides[currentSlide].title}
+                    </div>
+                    <div className="text-lg opacity-90">
+                      {slides[currentSlide].subtitle}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+          {/* Navigation Controls */}
+          <div className="flex justify-between items-center mt-6">
+            <div className="flex space-x-2">
+              <button
+                onClick={prevSlide}
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextSlide}
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300"
+              >
+                →
+              </button>
+            </div>
 
-        {/* Slide Indicators */}
-        <div className="flex justify-center space-x-3 mt-8">
-          {slides.map((_, index) => (
+            <div className="flex space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-white' : 'bg-white/30'
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                isAutoPlaying 
+                  ? 'bg-green-500/30 text-green-300' 
+                  : 'bg-red-500/30 text-red-300'
               }`}
-            />
-          ))}
+            >
+              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+            </button>
+          </div>
         </div>
 
         {/* Quick Access Grid */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-4 gap-4 mt-12">
           {slides.map((slide, index) => (
-            <div
+            <a
               key={slide.id}
-              className={`bg-gradient-to-br ${slide.color}/30 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                currentSlide === index ? 'ring-2 ring-purple-400' : ''
+              href={slide.link}
+              className={`bg-gradient-to-r ${slide.gradient} text-white p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center ${
+                index === currentSlide ? 'ring-2 ring-white/50' : ''
               }`}
-              onClick={() => goToSlide(index)}
             >
-              <div className="text-center">
-                <div className="text-4xl mb-3">{slide.image}</div>
-                <h4 className="text-lg font-bold mb-2">{slide.title}</h4>
-                <p className="text-sm opacity-80 mb-4">{slide.description}</p>
-                <a
-                  href={slide.link}
-                  className="block w-full bg-white text-gray-800 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center text-sm"
-                >
-                  Explore →
-                </a>
-              </div>
-            </div>
+              <div className="text-4xl mb-3">{slide.image}</div>
+              <h4 className="text-lg font-bold mb-2">{slide.title}</h4>
+              <p className="text-sm opacity-90">{slide.subtitle}</p>
+            </a>
           ))}
-        </div>
-
-        {/* Statistics */}
-        <div className="mt-12 grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">3</div>
-            <div className="text-lg opacity-90">Revolutionary Technologies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-lg opacity-90">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
-            <div className="text-lg opacity-90">Possibilities</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-violet-400 mb-2">2036</div>
-            <div className="text-lg opacity-90">Future Technology</div>
-          </div>
         </div>
       </div>
     </div>
