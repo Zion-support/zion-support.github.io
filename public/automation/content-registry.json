@@ -765,6 +765,27 @@
       "desc": "Grounded, budget-aware RAG with online evals and scorecards",
       "createdAt": "2025-09-16T19:22:00.000Z",
       "source": "blog"
+    },
+    {
+      "title": "Agent Runbooks: Incident Response for LLM Agents",
+      "href": "/reports/ai-lab/articles/agent-runbooks-incident-response-1758070800000.md",
+      "desc": "Runbooks to cut MTTR for agent incidents with evidence",
+      "createdAt": "2025-09-16T19:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Observability Traces Blueprint: Evidence for Auditable AI",
+      "href": "/reports/ai-lab/articles/observability-traces-blueprint-1758074400000.md",
+      "desc": "A minimal trace schema for verifiable, privacy-aware evidence",
+      "createdAt": "2025-09-16T20:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Cost Controls for Agents: Budgets, Quotas, and Safe Degradation",
+      "href": "/reports/ai-lab/articles/cost-controls-for-agents-1758078000000.md",
+      "desc": "Budgets, quotas, and graceful fallbacks to tame spend",
+      "createdAt": "2025-09-16T21:00:00.000Z",
+      "source": "Zion AI Lab"
     }
   ]
 }
