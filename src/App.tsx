@@ -53,6 +53,8 @@ import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
+import AI2027RevolutionaryBreakthroughBanner from './components/AI2027RevolutionaryBreakthroughBanner';
+import SpaceTechInnovation2027Banner from './components/SpaceTechInnovation2027Banner';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
@@ -99,6 +101,8 @@ import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthr
 import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
+import AI2027RevolutionaryBreakthrough from './pages/AI2027RevolutionaryBreakthrough';
+import SpaceTechInnovation2027 from './pages/SpaceTechInnovation2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
@@ -119,6 +123,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* NEW: AI 2027 Revolutionary Breakthrough Banner */}
+              <div className="mb-12">
+                <AI2027RevolutionaryBreakthroughBanner />
+              </div>
+
+              {/* NEW: Space Tech Innovation 2027 Banner */}
+              <div className="mb-12">
+                <SpaceTechInnovation2027Banner />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -434,6 +448,10 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
+          
+          {/* NEW: 2027 Revolutionary Content Routes */}
+          <Route path="/ai-2027-revolutionary-breakthrough" element={<AI2027RevolutionaryBreakthrough />} />
+          <Route path="/space-tech-innovation-2027" element={<SpaceTechInnovation2027 />} />
         </Routes>
         
         <Footer />
