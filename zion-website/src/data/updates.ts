@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Blog: Continuous Agent Evidence Bundles',
+        summary: 'Designing continuous evidence capture for autonomous agents with policy gates and provenance.',
+        href: '/blog/ai-2026-continuous-agent-evidence-bundles',
+        date: '2025-09-16',
+        tag: 'Announcement',
+    },
+    {
         title: 'Launch: Autonomous Experimentation Toolkit v1.0',
         summary: 'Safe A/Bs and shadow tests with eval gates, policy checks, and audit evidence.',
         href: '/updates/autonomous-experimentation-toolkit-1-0',
