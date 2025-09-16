@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // @ts-nocheck
+=======
+>>>>>>> origin/feat/news-content
 import Link from "next/link";
 import React from "react";
 
@@ -125,4 +128,7 @@ export default function NewsPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/feat/news-content

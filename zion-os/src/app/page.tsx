@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
@@ -171,6 +172,17 @@ export default function HomePage() {
         &quot;Blog + Roadmap Setup & quot;
       ],
       gradient: &quot;bg - gradient - to - r from - indigo - 600 to - blue - 600 & quot;
+=======
+import FeatureCard from './components/FeatureCard';
+import Link from 'next/link';
+
+export default function HomePage() {
+  const features = [
+    {
+      icon: "🤖",
+      title: "AI-Powered Intelligence",
+      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
+>>>>>>> origin/feat/news-content
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -239,8 +251,13 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
+<<<<<<< HEAD
   ],
 >>>>>>> origin/merge-pr-12271
+=======
+  ];
+
+>>>>>>> origin/feat/news-content
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -261,6 +278,7 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </Link>
@@ -274,18 +292,26 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
 >>>>>>> origin/feature/new-blog-content-and-promo
 =======
+=======
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+                🚀 Launch Your Economy
+>>>>>>> origin/feat/news-content
               </a>
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
+<<<<<<< HEAD
               <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
                 ✅ New: AI Safety & Governance 2025
               </a>
 >>>>>>> origin/feature/blog-content-2025
+=======
+>>>>>>> origin/feat/news-content
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       {/* Latest Blog Content */}
@@ -354,6 +380,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/feat/news-content
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -367,6 +395,10 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/news-content
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
@@ -455,6 +487,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest News Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold">Latest News</h2>
+            <Link href="/news" className="text-blue-400 hover:text-blue-300">View all →</Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/news/ai-business-intelligence-platform-launch" className="card group">
+              <div className="w-full h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center">
+                <span className="text-blue-400 text-4xl">BI</span>
+              </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-blue-500/20 text-blue-400 text-xs font-bold px-2 py-1 rounded-full">LAUNCH</span>
+                <span className="text-gray-400 text-sm">Dec 15, 2024</span>
+              </div>
+              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                AI-Powered Business Intelligence Platform Launch
+              </h3>
+              <p className="text-gray-400 mt-2 line-clamp-2">
+                Real-time insights, predictive analytics, and automated decision support for enterprises.
+              </p>
+            </Link>
+
+            <Link href="/news/quantum-error-correction-breakthrough" className="card group">
+              <div className="w-full h-40 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl mb-4 flex items-center justify-center">
+                <span className="text-purple-400 text-4xl">QC</span>
+              </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-purple-500/20 text-purple-400 text-xs font-bold px-2 py-1 rounded-full">QUANTUM</span>
+                <span className="text-gray-400 text-sm">Dec 12, 2024</span>
+              </div>
+              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                Quantum Error Correction Breakthrough
+              </h3>
+              <p className="text-gray-400 mt-2 line-clamp-2">
+                New algorithm cuts logical error rates by up to 60% across NISQ devices.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -466,6 +541,7 @@ export default function HomePage() {
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -519,6 +595,14 @@ export default function HomePage() {
 >>>>>>> origin/feat/content-promo
               </a>
 >>>>>>> origin/feature/new-content-promotion
+=======
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+                🚀 Start Building Now
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📊 Explore Examples
+              </a>
+>>>>>>> origin/feat/news-content
             </div>
           </div>
         </div>
@@ -526,6 +610,9 @@ export default function HomePage() {
 
       {/* Stats Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/news-content
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -585,6 +672,7 @@ export default function HomePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">;
@@ -611,3 +699,5 @@ export default function HomePage() {
     </div>;
   )}}
 >>>>>>> origin/merge-pr-12271
+=======
+>>>>>>> origin/feat/news-content
