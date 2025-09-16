@@ -2,208 +2,136 @@ import React from 'react';
 
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full text-sm font-semibold mb-6">
-            🌌 NEW: Interdimensional Tech 2030
+          <div className="inline-block px-8 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+            🌌 INTERDIMENSIONAL TECH REVOLUTION 2030
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-            Interdimensional Technology Revolution
+          <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Interdimensional Technology Revolution 2030
           </h1>
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Breakthrough technology that transcends dimensional barriers, 
-            enabling communication and travel across parallel universes and alternate realities.
+          <p className="text-3xl opacity-90 max-w-5xl mx-auto mb-12">
+            Break through dimensional barriers and access infinite parallel universes with revolutionary interdimensional technology
           </p>
-          <div className="flex justify-center space-x-4">
-            <span className="bg-violet-500/20 text-violet-300 px-4 py-2 rounded-full text-sm font-semibold">
-              🌌 Dimensional Travel
-            </span>
-            <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
-              ⚡ Quantum Tunneling
-            </span>
-            <span className="bg-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-semibold">
-              🔮 Reality Manipulation
-            </span>
+          <div className="flex justify-center space-x-6">
+            <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+              Enter Dimensions
+            </button>
+            <button className="px-8 py-4 border-2 border-violet-400 text-violet-400 font-bold rounded-full hover:bg-violet-400 hover:text-white transition-all duration-300">
+              Explore Now
+            </button>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        {/* Dimensional Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-violet-800/30 to-fuchsia-800/30 p-8 rounded-2xl border border-violet-400/20 hover:border-violet-400/40 transition-all duration-300">
             <div className="text-4xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-4">Dimensional Portals</h3>
-            <p className="text-gray-300 mb-6">
-              Create stable portals between dimensions, enabling instant travel 
-              to parallel universes and alternate realities.
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Dimensional Portals</h3>
+            <p className="text-gray-300">
+              Create stable portals between dimensions for instant travel and communication
             </p>
-            <div className="bg-violet-500/20 text-violet-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Instant Dimensional Travel
-            </div>
           </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Tunneling</h3>
-            <p className="text-gray-300 mb-6">
-              Harness quantum tunneling effects to pass through dimensional barriers 
-              and access previously unreachable realities.
-            </p>
-            <div className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Quantum Dimensional Access
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div className="bg-gradient-to-br from-violet-800/30 to-fuchsia-800/30 p-8 rounded-2xl border border-violet-400/20 hover:border-violet-400/40 transition-all duration-300">
             <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-2xl font-bold mb-4">Reality Manipulation</h3>
-            <p className="text-gray-300 mb-6">
-              Manipulate the fundamental forces of reality to create new dimensions 
-              and modify existing physical laws.
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Reality Manipulation</h3>
+            <p className="text-gray-300">
+              Manipulate the fundamental laws of physics across multiple dimensions
             </p>
-            <div className="bg-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Reality Engineering
-            </div>
           </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🌀</div>
-            <h3 className="text-2xl font-bold mb-4">Parallel Universe Communication</h3>
-            <p className="text-gray-300 mb-6">
-              Establish communication networks across parallel universes, 
-              enabling knowledge sharing and collaboration across realities.
+          <div className="bg-gradient-to-br from-violet-800/30 to-fuchsia-800/30 p-8 rounded-2xl border border-violet-400/20 hover:border-violet-400/40 transition-all duration-300">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Quantum Tunneling</h3>
+            <p className="text-gray-300">
+              Instantaneous matter and energy transfer across dimensional boundaries
             </p>
-            <div className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Cross-Reality Communication
-            </div>
           </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🌍</div>
-            <h3 className="text-2xl font-bold mb-4">Dimensional Resources</h3>
-            <p className="text-gray-300 mb-6">
-              Access unlimited resources from parallel universes, 
-              solving scarcity and enabling infinite growth.
+          <div className="bg-gradient-to-br from-violet-800/30 to-fuchsia-800/30 p-8 rounded-2xl border border-violet-400/20 hover:border-violet-400/40 transition-all duration-300">
+            <div className="text-4xl mb-4">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Infinite Resources</h3>
+            <p className="text-gray-300">
+              Access unlimited resources from parallel universes and alternate realities
             </p>
-            <div className="bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Infinite Resources
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Dimensional Computing</h3>
-            <p className="text-gray-300 mb-6">
-              Computing systems that operate across multiple dimensions simultaneously, 
-              achieving infinite processing power.
-            </p>
-            <div className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
-              Multi-Dimensional Processing
-            </div>
           </div>
         </div>
 
-        {/* Technology Showcase */}
-        <div className="bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-8">Interdimensional Technology</h2>
+        {/* Revolutionary Capabilities */}
+        <div className="bg-gradient-to-r from-violet-800/20 to-fuchsia-800/20 p-12 rounded-3xl border border-violet-400/30 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12 text-violet-300">
+            Revolutionary Interdimensional Capabilities
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Core Technologies</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-violet-400 mr-3">🌌</span>
-                  Dimensional Portal Generators
-                </li>
-                <li className="flex items-center">
-                  <span className="text-violet-400 mr-3">⚡</span>
-                  Quantum Tunneling Devices
-                </li>
-                <li className="flex items-center">
-                  <span className="text-violet-400 mr-3">🔮</span>
-                  Reality Manipulation Fields
-                </li>
-                <li className="flex items-center">
-                  <span className="text-violet-400 mr-3">🌀</span>
-                  Cross-Dimensional Communication Arrays
-                </li>
-                <li className="flex items-center">
-                  <span className="text-violet-400 mr-3">⚛️</span>
-                  Multi-Dimensional Quantum Computers
-                </li>
+              <h3 className="text-2xl font-bold mb-4 text-fuchsia-300">Dimensional Communication</h3>
+              <p className="text-gray-300 mb-6">
+                Communicate with versions of yourself and others across infinite parallel universes
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Real-time cross-dimensional chat</li>
+                <li>• Collective intelligence from all dimensions</li>
+                <li>• Shared memory and experience transfer</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-4">Applications</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🚀</span>
-                  Interdimensional Space Exploration
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🏥</span>
-                  Parallel Universe Medical Research
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🌍</span>
-                  Climate Change Solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🔬</span>
-                  Scientific Discovery Acceleration
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🎨</span>
-                  Creative Dimensional Art
-                </li>
+              <h3 className="text-2xl font-bold mb-4 text-fuchsia-300">Reality Engineering</h3>
+              <p className="text-gray-300 mb-6">
+                Design and create custom realities with specific physical laws and properties
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Custom physics engines</li>
+                <li>• Personalized reality bubbles</li>
+                <li>• Infinite creative possibilities</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Dimensional Exploration */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-blue-600/20 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-8">Explore Infinite Dimensions</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🌌</div>
-              <h3 className="text-2xl font-bold mb-4">Parallel Earths</h3>
-              <p className="text-gray-300">
-                Visit alternate versions of Earth where history took different paths, 
-                experiencing countless possibilities.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">⚛️</div>
-              <h3 className="text-2xl font-bold mb-4">Quantum Dimensions</h3>
-              <p className="text-gray-300">
-                Explore dimensions where quantum mechanics behave differently, 
-                discovering new laws of physics.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🔮</div>
-              <h3 className="text-2xl font-bold mb-4">Consciousness Realms</h3>
-              <p className="text-gray-300">
-                Enter dimensions of pure consciousness, where thought creates reality 
-                and imagination becomes tangible.
-              </p>
-            </div>
+        {/* Dimensional Showcase */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-violet-800/20 to-fuchsia-800/20 p-8 rounded-2xl border border-violet-400/30">
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Dimension Alpha</h3>
+            <p className="text-gray-300 mb-4">
+              A dimension where time flows backwards, allowing you to experience the future before it happens
+            </p>
+            <button className="px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+              Enter Alpha
+            </button>
+          </div>
+          <div className="bg-gradient-to-br from-violet-800/20 to-fuchsia-800/20 p-8 rounded-2xl border border-violet-400/30">
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Dimension Beta</h3>
+            <p className="text-gray-300 mb-4">
+              A dimension where gravity is optional and you can fly through space like a bird
+            </p>
+            <button className="px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+              Enter Beta
+            </button>
+          </div>
+          <div className="bg-gradient-to-br from-violet-800/20 to-fuchsia-800/20 p-8 rounded-2xl border border-violet-400/30">
+            <h3 className="text-2xl font-bold mb-4 text-violet-300">Dimension Gamma</h3>
+            <p className="text-gray-300 mb-4">
+              A dimension where thoughts become reality instantly, limited only by imagination
+            </p>
+            <button className="px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+              Enter Gamma
+            </button>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Transcend Dimensional Boundaries</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the revolution in interdimensional technology. 
-            Explore infinite realities and unlock the secrets of the multiverse.
+          <h2 className="text-5xl font-bold mb-8 text-violet-300">
+            Enter the Interdimensional Revolution
+          </h2>
+          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
+            Break free from the limitations of our dimension and explore infinite possibilities across the multiverse
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300">
-              Explore Dimensions →
+          <div className="flex justify-center space-x-6">
+            <button className="px-12 py-6 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold text-xl rounded-full hover:scale-105 transition-transform duration-300">
+              Start Dimensional Journey
             </button>
-            <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300">
+            <button className="px-12 py-6 border-2 border-violet-400 text-violet-400 font-bold text-xl rounded-full hover:bg-violet-400 hover:text-white transition-all duration-300">
               Learn More
             </button>
           </div>
