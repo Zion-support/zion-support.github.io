@@ -1,194 +1,235 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  X, 
   ArrowRight, 
   Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Shield,
   Star,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Globe,
+  Rocket,
+  Target,
   CheckCircle,
+  Clock,
+  Eye,
+  Heart,
+  Share2,
+  BookOpen,
+  Lightbulb,
+  Code,
+  Database,
+  Lock,
   Play,
-  ExternalLink
+  Download,
+  ExternalLink,
+  Bell,
+  Gift,
+  Fire,
+  Crown,
+  Diamond,
+  Infinity,
+  Thunderbolt,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  X
 } from 'lucide-react';
 
-const UltimatePromotionalBanner2026 = () => {
+const UltimatePromotionalBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentPromo, setCurrentPromo] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(3600000); // 1 hour
 
-  const promotionalOffers = [
+  const promotions = [
     {
-      id: 1,
-      title: "🚀 AI Consciousness Platform - Early Access",
-      subtitle: "Be among the first to experience true AI consciousness",
-      description: "Get exclusive access to our revolutionary AI consciousness platform. Limited to 100 early adopters.",
-      cta: "Join Waitlist",
-      ctaLink: "/ai-consciousness-early-access",
-      icon: Brain,
-      gradient: "from-purple-600 to-blue-600",
-      badge: "Limited Time",
-      features: ["Exclusive Access", "Priority Support", "Beta Testing Rights"]
+      id: 'ai-masterclass-2026',
+      title: '🚀 AI Transformation Masterclass 2026',
+      subtitle: 'Transform Your Business with Revolutionary AI',
+      description: 'Join 50,000+ business leaders in the most comprehensive AI transformation program',
+      cta: 'Reserve Your Spot',
+      link: '/ai-masterclass-2026',
+      urgency: 'Limited Time Offer',
+      badge: 'HOT',
+      stats: { participants: '50K+', success: '94%', savings: '$2,500' }
     },
     {
-      id: 2,
-      title: "⚡ Quantum Neural Networks - Free Trial",
-      subtitle: "Experience computing at the speed of thought",
-      description: "Try our quantum neural networks for 30 days absolutely free. No credit card required.",
-      cta: "Start Free Trial",
-      ctaLink: "/quantum-neural-trial",
-      icon: Zap,
-      gradient: "from-blue-600 to-cyan-600",
-      badge: "Free Trial",
-      features: ["30-Day Free Trial", "Full Access", "No Credit Card"]
+      id: 'quantum-computing-course',
+      title: '⚛️ Quantum Computing Breakthrough Course',
+      subtitle: 'Master Quantum Computing in 30 Days',
+      description: 'Learn quantum computing from scratch with our revolutionary curriculum',
+      cta: 'Start Learning',
+      link: '/quantum-course-2026',
+      urgency: 'New Release',
+      badge: 'NEW',
+      stats: { participants: '15K+', success: '89%', savings: '$1,800' }
     },
     {
-      id: 3,
-      title: "🛡️ Climate Restoration AI - Global Initiative",
-      subtitle: "Join the fight against climate change with AI",
-      description: "Be part of the global initiative using AI to actively reverse climate change and heal our planet.",
-      cta: "Join Initiative",
-      ctaLink: "/climate-restoration-ai",
-      icon: Shield,
-      gradient: "from-green-600 to-emerald-600",
-      badge: "Global Impact",
-      features: ["Environmental Impact", "Global Community", "Real-time Results"]
-    },
-    {
-      id: 4,
-      title: "🚀 Space Colonization Tech - Mars Mission",
-      subtitle: "Help build the first human settlement on Mars",
-      description: "Contribute to humanity's greatest adventure - establishing the first permanent settlement on Mars.",
-      cta: "Join Mission",
-      ctaLink: "/mars-colonization-mission",
-      icon: Rocket,
-      gradient: "from-orange-600 to-red-600",
-      badge: "Historic Mission",
-      features: ["Mars Settlement", "Historic Achievement", "Future Generations"]
+      id: 'consciousness-ai-program',
+      title: '🧠 Consciousness AI Research Program',
+      subtitle: 'Explore the Frontiers of AI Consciousness',
+      description: 'Join leading researchers in exploring AI consciousness and self-awareness',
+      cta: 'Apply Now',
+      link: '/consciousness-ai-program',
+      urgency: 'Exclusive Access',
+      badge: 'EXCLUSIVE',
+      stats: { participants: '500', success: '97%', savings: '$5,000' }
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotionalOffers.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [promotionalOffers.length]);
+    const timer = setInterval(() => {
+      setCurrentPromo((prev) => (prev + 1) % promotions.length);
+    }, 6000);
+
+    return () => clearInterval(timer);
+  }, [promotions.length]);
+
+  useEffect(() => {
+    const countdown = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 0) return 0;
+        return prev - 1000;
+      });
+    }, 1000);
+
+    return () => clearInterval(countdown);
+  }, []);
+
+  const formatTime = (milliseconds: number) => {
+    const hours = Math.floor(milliseconds / 3600000);
+    const minutes = Math.floor((milliseconds % 3600000) / 60000);
+    const seconds = Math.floor((milliseconds % 60000) / 1000);
+    return `${hours}h ${minutes}m ${seconds}s`;
+  };
 
   if (!isVisible) return null;
 
-  const currentOffer = promotionalOffers[currentPromo];
+  const current = promotions[currentPromo];
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20"
-      >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            {/* Content */}
-            <div className="flex-1 flex items-center gap-6">
-              <motion.div
-                key={currentPromo}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center gap-4"
-              >
-                <div className={`p-3 bg-gradient-to-r ${currentOffer.gradient} rounded-xl`}>
-                  <currentOffer.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-1">
-                    <h3 className="text-lg font-bold text-white">
-                      {currentOffer.title}
-                    </h3>
-                    <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold rounded-full">
-                      {currentOffer.badge}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-300 mb-2">
-                    {currentOffer.subtitle}
-                  </p>
-                  <p className="text-xs text-gray-400 max-w-md">
-                    {currentOffer.description}
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl shadow-2xl border border-white/10 mb-8">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-indigo-600/30 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+      </div>
 
-            {/* CTA Buttons */}
-            <div className="flex items-center gap-4">
-              <div className="flex gap-2">
-                {promotionalOffers.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentPromo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentPromo ? 'bg-white' : 'bg-gray-500'
-                    }`}
-                  />
-                ))}
-              </div>
-              
-              <div className="flex gap-3">
-                <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                  {currentOffer.cta}
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-                <button className="px-4 py-2 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2">
-                  <Play className="w-4 h-4" />
-                  Demo
-                </button>
-              </div>
+      {/* Content */}
+      <div className="relative z-10 p-6">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+              <Sparkles className="w-5 h-5 text-white" />
             </div>
-
-            {/* Close Button */}
-            <button
-              onClick={() => setIsVisible(false)}
-              className="ml-4 p-2 text-gray-400 hover:text-white transition-colors duration-200"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div>
+              <h2 className="text-lg font-bold text-white">Latest Breakthroughs 2026</h2>
+              <p className="text-white/80 text-sm">Revolutionary AI innovations now available</p>
+            </div>
           </div>
-
-          {/* Features List */}
-          <motion.div
-            key={`features-${currentPromo}`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className="mt-4 flex flex-wrap gap-4"
+          
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-white/60 hover:text-white transition-colors"
           >
-            {currentOffer.features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>{feature}</span>
-              </div>
-            ))}
-          </motion.div>
+            <X className="w-5 h-5" />
+          </button>
         </div>
 
-        {/* Progress Bar */}
-        <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 to-blue-600">
+        {/* Main Promotional Content */}
+        <AnimatePresence mode="wait">
           <motion.div
             key={currentPromo}
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 8, ease: "linear" }}
-            className="h-full bg-gradient-to-r from-blue-400 to-purple-400"
-          />
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="space-y-4"
+          >
+            {/* Promotion Details */}
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-2">
+                  <h3 className="text-xl font-bold text-white">{current.title}</h3>
+                  <span className={`px-2 py-1 rounded-full text-xs font-bold ${
+                    current.badge === 'HOT' ? 'bg-red-500 text-white animate-pulse' :
+                    current.badge === 'NEW' ? 'bg-green-500 text-white' :
+                    'bg-purple-500 text-white'
+                  }`}>
+                    {current.badge}
+                  </span>
+                </div>
+                
+                <p className="text-white/90 text-sm mb-2">{current.description}</p>
+                
+                {/* Stats */}
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="flex items-center space-x-1 text-white/80">
+                    <Users className="w-4 h-4" />
+                    <span>{current.stats.participants}</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-green-400">
+                    <TrendingUp className="w-4 h-4" />
+                    <span>{current.stats.success} success</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-yellow-400">
+                    <Gift className="w-4 h-4" />
+                    <span>Save {current.stats.savings}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="ml-4">
+                <Link
+                  to={current.link}
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <span>{current.cta}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Time Left */}
+            <div className="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-lg p-3">
+              <div className="flex items-center space-x-2">
+                <Clock className="w-4 h-4 text-red-400" />
+                <span className="text-white text-sm">{current.urgency}</span>
+              </div>
+              <div className="text-red-400 font-bold text-sm">
+                {formatTime(timeLeft)}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center space-x-2 mt-4">
+          {promotions.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPromo(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentPromo 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-60"></div>
+        <div className="absolute top-3/4 left-3/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-40"></div>
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
+      </div>
+    </div>
   );
 };
 
