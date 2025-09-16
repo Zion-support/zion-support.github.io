@@ -33,14 +33,11 @@
     "dist",
     "build",
     "coverage",
+    "App.tsx",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "coverage"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/create-and-deploy-new-content-a7bf

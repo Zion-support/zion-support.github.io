@@ -22,6 +22,17 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "evidence-driven-release-checklists-2026",
+    title: "AI 2026: Evidence‑Driven Release Checklists",
+    description:
+      "Make evals operational with runtime gates, progressive delivery, and audit‑ready rollbacks.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-evidence-driven-release-checklists",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "privacy-preserving-agents-2026",
     title: "AI 2026: Privacy-Preserving Agents",
     description:
