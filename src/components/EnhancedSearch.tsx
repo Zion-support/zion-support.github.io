@@ -1,68 +1,109 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSearching(true);
-    // Simulate search
-    setTimeout(() => {
-      setIsSearching(false);
-      // In a real app, this would navigate to search results
-      console.log('Searching for:', searchTerm);
-    }, 1000);
-  };
-
-  const popularSearches = [
-    'AI Consciousness',
-    'Quantum Computing',
-    'Neural Interfaces',
-    'Blockchain Solutions',
-    'Cloud Services',
-    'Cybersecurity'
+  const searchSuggestions = [
+    { title: "Consciousness Computing", category: "AI", icon: "🧠" },
+    { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
+    { title: "Holographic Reality", category: "Reality", icon: "🌟" },
+    { title: "Interdimensional Tech", category: "Advanced", icon: "🌌" },
+    { title: "Neural Interface Matrix", category: "Neural", icon: "🔗" },
+    { title: "Revolutionary Breakthrough", category: "Featured", icon: "🚀" }
   ];
 
+  const filteredSuggestions = searchSuggestions.filter(item =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="max-w-4xl mx-auto">
-      <form onSubmit={handleSearch} className="relative mb-8">
+    <div className="relative max-w-2xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative"
+      >
         <div className="relative">
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search for AI solutions, technologies, or services..."
-            className="w-full px-6 py-4 pr-16 text-lg border-2 border-gray-300 rounded-full focus:border-purple-500 focus:outline-none transition-colors"
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setTimeout(() => setIsFocused(false), 200)}
+            placeholder="Search revolutionary technologies..."
+            className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-full focus:border-purple-500 focus:outline-none transition-all duration-300 shadow-lg"
           />
-          <button
-            type="submit"
-            disabled={isSearching}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 disabled:opacity-50"
-          >
-            {isSearching ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-            ) : (
-              'Search'
-            )}
-          </button>
+          <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+            <span className="text-2xl">🔍</span>
+          </div>
         </div>
-      </form>
 
-      <div className="text-center">
-        <p className="text-gray-600 mb-4">Popular searches:</p>
-        <div className="flex flex-wrap justify-center gap-2">
-          {popularSearches.map((search, index) => (
-            <button
-              key={index}
-              onClick={() => setSearchTerm(search)}
-              className="px-4 py-2 bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-700 rounded-full text-sm font-medium transition-colors"
+        <AnimatePresence>
+          {isFocused && searchTerm && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 max-h-80 overflow-y-auto"
             >
-              {search}
-            </button>
-          ))}
-        </div>
-      </div>
+              {filteredSuggestions.length > 0 ? (
+                <div className="p-2">
+                  {filteredSuggestions.map((suggestion, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.05 }}
+                      className="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors"
+                    >
+                      <span className="text-2xl mr-3">{suggestion.icon}</span>
+                      <div className="flex-1">
+                        <div className="font-semibold text-gray-900">{suggestion.title}</div>
+                        <div className="text-sm text-gray-500">{suggestion.category}</div>
+                      </div>
+                      <span className="text-gray-400">→</span>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <div className="p-4 text-center text-gray-500">
+                  No results found for "{searchTerm}"
+                </div>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Quick Access Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex flex-wrap justify-center gap-3 mt-6"
+      >
+        {[
+          { label: "AI Revolution", icon: "🤖", color: "from-purple-600 to-pink-600" },
+          { label: "Quantum Computing", icon: "⚡", color: "from-cyan-600 to-blue-600" },
+          { label: "Neural Interfaces", icon: "🧠", color: "from-emerald-600 to-teal-600" },
+          { label: "Reality Tech", icon: "🌟", color: "from-orange-600 to-red-600" }
+        ].map((button, index) => (
+          <motion.button
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`bg-gradient-to-r ${button.color} text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-300`}
+          >
+            <span className="mr-2">{button.icon}</span>
+            {button.label}
+          </motion.button>
+        ))}
+      </motion.div>
     </div>
   );
 };
