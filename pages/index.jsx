@@ -62,6 +62,21 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/blog/ai-2026-runtime-evidence-bundles" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Runtime Evidence Bundles</h3>
+                  <p className="text-white/80">Bundle evals, traces, policy events, and incidents per release.</p>
+                </Link>
+                <Link href="/blog/ai-2026-eval-scorecards-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">AI Quality • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Evaluation Scorecards in Practice</h3>
+                  <p className="text-white/80">Translate raw evals into executive‑friendly scorecards wired to gates.</p>
+                </Link>
+                <Link href="/blog/ai-2026-governed-tool-approvals" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 5 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Governed Tool Approvals</h3>
+                  <p className="text-white/80">Risk‑tiered adapters, budgets, and just‑in‑time approvals for safety.</p>
+                </Link>
                 <Link href="/blog/ai-2026-safe-autonomy-in-production" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Safety • 9 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Safe Autonomy in Production</h3>

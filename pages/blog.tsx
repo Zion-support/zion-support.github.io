@@ -5,6 +5,42 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-runtime-evidence-bundles',
+      title: 'Runtime Evidence Bundles (2026)',
+      excerpt: 'Bundle evals, traces, policy events, and incidents per release for audits.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'Operations',
+      tags: ['Evals', 'Observability', 'Governance'],
+      featured: true,
+      image: '/blog/runtime-evidence-bundles-2026.jpg'
+    },
+    {
+      id: 'ai-2026-eval-scorecards-in-practice',
+      title: 'Evaluation Scorecards in Practice (2026)',
+      excerpt: 'Translate raw evals into executive‑friendly scorecards wired to gates.',
+      author: 'AI Reliability Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'AI Quality',
+      tags: ['Evals', 'SLOs', 'Reporting'],
+      featured: false,
+      image: '/blog/eval-scorecards-2026.jpg'
+    },
+    {
+      id: 'ai-2026-governed-tool-approvals',
+      title: 'Governed Tool Approvals (2026)',
+      excerpt: 'Risk‑tiered adapters, budgets, and JIT approvals for safe tool use.',
+      author: 'Platform Engineering',
+      date: '2025-09-16',
+      readTime: '5 min read',
+      category: 'Governance',
+      tags: ['Tooling', 'Governance', 'Policy'],
+      featured: false,
+      image: '/blog/governed-tool-approvals-2026.jpg'
+    },
+    {
       id: 'ai-2026-trusted-rag-guardrailed-retrieval',
       title: 'Trusted RAG — Guardrailed Retrieval That Ships',
       excerpt: 'Groundedness evals, freshness windows, and rollback contracts wired to scorecards for safe, reliable RAG in production.',
