@@ -212,6 +212,9 @@ import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
 import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
 import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 
 export default function App(): JSX.Element {
   return (
@@ -245,6 +248,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2034 - Latest Revolutionary Content */}
                 <UltimateContentBanner2034 />
+                
+                {/* NEW: Ultimate Content Banner 2025 - Revolutionary Technologies */}
+                <UltimateContentBanner2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 - Breakthrough Technologies */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
@@ -348,6 +357,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateTechBreakthrough2034" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌟 ULTIMATE: Tech Breakthrough 2034 →
+                    </a>
+                    <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Ultimate Tech Revolution 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Revolutionary Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 NEW: Innovation Hub 2025 →
                     </a>
                     <a href="/pages/RevolutionaryTechShowcase2034" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       ⚡ REVOLUTIONARY: Tech Showcase 2034 →
@@ -1092,6 +1110,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
           <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
