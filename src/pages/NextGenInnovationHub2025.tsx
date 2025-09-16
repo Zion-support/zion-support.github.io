@@ -246,6 +246,7 @@ const NextGenInnovationHub2025: React.FC = () => {
                 Join Innovation Lab
               </button>
 =======
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2025: React.FC = () => {
@@ -313,6 +314,8 @@ const NextGenInnovationHub2025: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
       {/* Innovation Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -321,6 +324,10 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
@@ -436,6 +443,7 @@ const NextGenInnovationHub2025: React.FC = () => {
               Go Quantum →
             </button>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -477,6 +485,8 @@ const NextGenInnovationHub2025: React.FC = () => {
               </span>
             </div>
           </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 
           {/* Quantum Computing */}
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
@@ -906,6 +916,7 @@ const NextGenInnovationHub2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
     </div>
+<<<<<<< HEAD
 =======
         {/* Innovation Categories */}
         <div className="container mx-auto px-4 py-16">
@@ -1124,6 +1135,8 @@ const NextGenInnovationHub2025: React.FC = () => {
       </div>
     </>
 >>>>>>> origin/cursor/create-and-deploy-new-content-1fc3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   );
 };
 

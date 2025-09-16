@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentShowcase2025: React.FC = () => {
@@ -352,6 +355,7 @@ const UltimateContentShowcase2025: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -714,6 +718,8 @@ const UltimateContentShowcase2025 = () => {
       </div>
     </>
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   );
 };
 

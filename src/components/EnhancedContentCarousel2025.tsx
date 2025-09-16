@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -82,6 +83,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const contentSlides = [
 <<<<<<< HEAD
 =======
+
+  const contentSlides = [
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
+=======
 import { motion } from 'framer-motion';
 
 const EnhancedContentCarousel2025: React.FC = () => {
@@ -98,9 +103,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const slides = [
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
     {
       id: 1,
       title: "Conscious AI Revolution",
@@ -115,6 +123,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       stats: { performance: "99.9%", accuracy: "98.7%", efficiency: "300%" },
       image: "🧠",
       color: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,6 +215,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
   ];
 
   const nextSlide = () => {
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,9 +306,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -315,6 +332,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       rating: 5
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
@@ -348,12 +366,32 @@ const EnhancedContentCarousel2025: React.FC = () => {
     setIsPlaying(!isPlaying);
   };
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ed0b
+
+<<<<<<< HEAD
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const currentItem = contentItems[currentIndex];
+
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -363,6 +401,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       </div>
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -377,6 +416,27 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
 <<<<<<< HEAD
+=======
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
+<<<<<<< HEAD
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ENHANCED CONTENT CAROUSEL • 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
             Discover the most advanced technologies that are reshaping our world and defining the future
 =======
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
@@ -397,10 +457,17 @@ const EnhancedContentCarousel2025: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Discover the most advanced technologies that are reshaping our world. 
             From conscious AI to interdimensional computing, experience the future today.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
             Explore our most advanced technologies with interactive demonstrations and real-time features
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+<<<<<<< HEAD
           </p>
         </motion.div>
 
@@ -445,12 +512,21 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+          </p>
+        </motion.div>
+
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 =======
         {/* Main Carousel */}
         <div className="relative mb-16">
@@ -460,9 +536,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
               animate={{ x: `-${currentSlide * 100}%` }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
             >
               {slides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
@@ -487,6 +566,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
@@ -736,6 +816,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           <TrendingUp className="w-12 h-12 text-white" />
                         </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
+=======
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
                       </div>
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
@@ -770,10 +853,130 @@ const EnhancedContentCarousel2025: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+                      </div>
+                      <span className="text-lg">{feature}</span>
+=======
+
+                        <p className="text-lg opacity-90 leading-relaxed">
+                          {slide.description}
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-4">
+                          {Object.entries(slide.stats).map(([key, value], idx) => (
+                            <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                              <div className="text-2xl font-bold">{value}</div>
+                              <div className="text-sm opacity-70 capitalize">{key}</div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <motion.a
+                            href={slide.link}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
+                          >
+                            Explore Technology →
+                          </motion.a>
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
+                          >
+                            Watch Demo
+                          </motion.button>
+                        </div>
+                      </motion.div>
+
+                      {/* Visual */}
+                      <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="relative"
+                      >
+                        <div className="relative w-full h-80 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20 overflow-hidden">
+                          {/* Animated Background Elements */}
+                          <motion.div
+                            animate={{
+                              y: [0, -20, 0],
+                              rotate: [0, 5, 0]
+                            }}
+                            transition={{
+                              duration: 4,
+                              repeat: Infinity,
+                              ease: "easeInOut"
+                            }}
+                            className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl"
+                          >
+                            {slide.image}
+                          </motion.div>
+
+                          <motion.div
+                            animate={{
+                              y: [0, 20, 0],
+                              rotate: [0, -5, 0]
+                            }}
+                            transition={{
+                              duration: 3,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                              delay: 1
+                            }}
+                            className="absolute top-16 right-12 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xl"
+                          >
+                            ⚡
+                          </motion.div>
+
+                          <motion.div
+                            animate={{
+                              y: [0, -15, 0],
+                              x: [0, 10, 0]
+                            }}
+                            transition={{
+                              duration: 5,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                              delay: 2
+                            }}
+                            className="absolute bottom-20 left-16 w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-xl"
+                          >
+                            🚀
+                          </motion.div>
+
+                          {/* Central Hub */}
+                          <motion.div
+                            animate={{
+                              scale: [1, 1.1, 1],
+                              rotate: [0, 360]
+                            }}
+                            transition={{
+                              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                              rotate: { duration: 20, repeat: Infinity, ease: "linear" }
+                            }}
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl"
+                          >
+                            ⚡
+                          </motion.div>
+                        </div>
+                      </motion.div>
+<<<<<<< HEAD
+                    </div>
+>>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ed0b
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
                   </div>
@@ -843,6 +1046,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
         </motion.div>
 
+=======
+                    </div>
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -950,6 +1156,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 />
               ))}
             </div>
+<<<<<<< HEAD
             
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1062,6 +1269,22 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
+=======
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
 <<<<<<< HEAD
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
@@ -1222,8 +1445,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
               Download Whitepaper
             </motion.button>
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
         </motion.div>
       </div>
     </div>

@@ -4,6 +4,7 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-eb8d
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -131,6 +132,8 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3887
 =======
 >>>>>>> cursor/create-and-deploy-new-content-eb8d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
       </div>
     </div>
   );
