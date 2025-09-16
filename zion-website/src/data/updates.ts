@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New content (2025-09-16)
+    {
+        title: 'Launch: Real‑Time Agent Posture Monitor v1.0',
+        summary: 'Continuous policy posture checks, alerts, and remediation guidance for agents.',
+        href: '/updates/real-time-agent-posture-monitor-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Evidence‑Driven Rollback Playbook (2026)',
+        summary: 'How to trigger, execute, and verify safe rollbacks with signed evidence.',
+        href: '/updates/evidence-driven-rollback-playbook-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // New blog (2025-09-16)
     {
         title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
