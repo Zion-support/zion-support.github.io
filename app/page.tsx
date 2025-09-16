@@ -169,7 +169,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Blueprint</Link>
+              <Link href="/content/ai-2026-production-evidence-hub-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Blueprint</Link>
             </div>
           </div>
         </div>
