@@ -139,6 +139,14 @@ export const latestContent: ContentItem[] = [
   },
   // New content (2025-09-16)
   {
+    id: "ai-2026-agent-reliability-blueprint",
+    title: "AI 2026: Agent Reliability — Blueprint",
+    summary: "Standardize SLOs, eval gates, and evidence bundles for reliable autonomy.",
+    href: "/blog/ai-2026-agent-reliability-blueprint",
+    tag: "Reliability",
+    date: "2025-09-16",
+  },
+  {
     id: "ai-2026-agentic-evidence-hub-overview",
     title: "Agentic Evidence Hub — Executive Overview",
     summary: "Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.",
