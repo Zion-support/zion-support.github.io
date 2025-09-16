@@ -432,9 +432,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
+      
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -447,6 +445,7 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-causal-evals-for-autonomous-agents" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Harness</Link>
+              <Link href="/blog/ai-2026-eval-gated-release-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Release Checklists</Link>
             </div>
           </div>
         </div>
