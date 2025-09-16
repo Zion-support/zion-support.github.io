@@ -2,11 +2,7 @@ import React from 'react';
 
 const NextGenInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-f2a8
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm"></div>
@@ -293,23 +289,6 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-5xl font-bold mb-8">Join the Innovation Revolution</h2>
-          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
-            Be part of the most advanced innovation hub in the world. 
-            Collaborate with leading researchers and shape the future of technology.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-12 py-6 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl hover:scale-105">
-              Join the Hub
-            </button>
-            <button className="border-2 border-white text-white px-12 py-6 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-2xl hover:scale-105">
-              View Research
-            </button>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl hover:scale-105">
-              Start Collaboration
-=======
         <div className="text-center bg-gradient-to-r from-indigo-800/50 to-purple-800/50 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
@@ -321,7 +300,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
               View All Technologies
->>>>>>> cursor/create-and-deploy-new-content-f2a8
             </button>
           </div>
         </div>
