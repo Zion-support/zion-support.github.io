@@ -2,8 +2,11 @@ import React from 'react';
 
 const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 =======
@@ -13,8 +16,13 @@ const UltimateContentShowcase2026: React.FC = () => {
 =======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
 >>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
 
   const showcaseItems = [
     {
@@ -331,7 +339,11 @@ const UltimateContentShowcase2026: React.FC = () => {
           </div>
         </motion.div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -453,8 +465,13 @@ const UltimateContentShowcase2026: React.FC = () => {
         </div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
 >>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
       </div>
     </div>
   );

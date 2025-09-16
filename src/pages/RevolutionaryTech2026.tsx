@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
 import React from 'react';
 <<<<<<< HEAD
 import React from 'react';
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -13,6 +17,11 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-07de
 >>>>>>> cursor/create-and-deploy-new-content-f420
 >>>>>>> cursor/create-and-deploy-new-content-9601
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -297,6 +306,9 @@ const RevolutionaryTech2026: React.FC = () => {
               Contact Our Experts
             </motion.button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
           </div>
         </motion.div>
       </div>
@@ -305,6 +317,13 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
 export default RevolutionaryTech2026;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
