@@ -92,6 +92,11 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
 import UltimateTechShowcase2028 from './src/pages/UltimateTechShowcase2028';
 import NextGenInnovationHub2028 from './src/pages/NextGenInnovationHub2028';
+import NextGenTechRevolution2029 from './src/pages/NextGenTechRevolution2029';
+import RevolutionaryTechBreakthrough2030 from './src/pages/RevolutionaryTechBreakthrough2030';
+import RevolutionaryContentBanner2029 from './src/components/RevolutionaryContentBanner2029';
+import UltimateTechShowcase2029 from './src/components/UltimateTechShowcase2029';
+import SuperPromotionalBanner from './src/components/SuperPromotionalBanner';
 
 export default function App(): JSX.Element {
   return (
@@ -109,6 +114,9 @@ export default function App(): JSX.Element {
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
         <Header />
+        
+        {/* Super Promotional Banner */}
+        <SuperPromotionalBanner />
         
         <Routes>
           <Route path="/" element={
@@ -131,6 +139,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2028 */}
                 <RevolutionaryContentBanner2028 />
+
+                {/* Revolutionary Content Banner 2029 */}
+                <RevolutionaryContentBanner2029 />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -215,6 +226,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NextGenInnovationHub2028" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌌 NEW: Innovation Hub 2028 →
+                    </a>
+                    <a href="/pages/NextGenTechRevolution2029" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Tech Revolution 2029 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2030" className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Tech Breakthrough 2030 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -590,6 +607,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2028 />
                 </div>
 
+                {/* Ultimate Tech Showcase 2029 */}
+                <div className="mb-12">
+                  <UltimateTechShowcase2029 />
+                </div>
+
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -679,6 +701,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
           <Route path="/pages/UltimateTechShowcase2028" element={<UltimateTechShowcase2028 />} />
           <Route path="/pages/NextGenInnovationHub2028" element={<NextGenInnovationHub2028 />} />
+          <Route path="/pages/NextGenTechRevolution2029" element={<NextGenTechRevolution2029 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2030" element={<RevolutionaryTechBreakthrough2030 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
