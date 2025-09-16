@@ -1,63 +1,5 @@
-<<<<<<< HEAD
 
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-
-import { motion } from 'framer-motion';
-
-import {
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Star
-  TrendingUp
-  Eye
-  Timer;
-
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Star,
-  TrendingUp,
-  Eye,;
-  Timer,;
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
@@ -141,63 +83,24 @@ export default function UltraFuturistic2029InnovationsPage() {
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
 
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <>
       <Head>
         <title>2029 Ultra-Futuristic Innovations | Zion Tech Group</title>
         <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
         <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       </Head>
 
       {/* Background */}
       <UltraFuturisticBackground2029 />
-<<<<<<< HEAD
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />
-          href='https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations'
-        />      </Head>;
-      {/* Background */}
-      <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />;
-        <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />;
-        <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />;
-        <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-      {/* Background */}
-      <UltraFuturisticBackground2029 />;
-
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />;
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -622,16 +525,11 @@ export default function UltraFuturistic2029InnovationsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
 =======
@@ -881,4 +779,3 @@ export default function UltraFuturistic2029InnovationsPage() {
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

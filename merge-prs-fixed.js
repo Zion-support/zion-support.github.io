@@ -52,8 +52,6 @@ try {
                         exec_sync (`git checkout --theirs "${file}"`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -89,7 +87,6 @@ try {// Ensure clean working directory;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             // Resolve conflicts by accepting our version;

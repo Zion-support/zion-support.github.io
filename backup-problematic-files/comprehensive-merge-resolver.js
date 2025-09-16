@@ -1,9 +1,6 @@
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -89,7 +86,6 @@ origin/automation-improvements-final
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     this && this.log(`📊 Found ${conflictFiles && conflictFiles.length} files with potential conflicts`);
 
@@ -688,20 +684,15 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Run the merge resolver
 if (require && require.main === module) {
   const resolver = new ComprehensiveMergeResolver();
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
->>>>>>> origin/automation-improvements-final
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

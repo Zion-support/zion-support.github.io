@@ -27,7 +27,6 @@
         'Standard reporting','
         'Team collaboration (up to 5 users)','        'Basic integrations'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: fals e
     },

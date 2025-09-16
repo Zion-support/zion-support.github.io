@@ -53,7 +53,6 @@ interface ContentItem {
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 interface ContentCategory {id: string;
@@ -404,7 +403,6 @@ filtered.sort((a, b) => {
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
       return sortOrder === 'asc' ? comparison : -comparison;
@@ -478,7 +476,6 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
@@ -506,7 +503,6 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
@@ -543,7 +539,6 @@ value={selectedSubcategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
@@ -576,7 +571,6 @@ value={selectedType}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
@@ -600,7 +594,6 @@ value={selectedRelevance}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
@@ -645,7 +638,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             Clear All Filters
           </button>
@@ -704,7 +696,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
@@ -719,10 +710,8 @@ onClick={clearAllFilters}
 :components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                   {item.type}
                 </div>;
@@ -771,7 +760,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
@@ -789,7 +777,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
@@ -822,7 +809,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
@@ -877,7 +863,6 @@ href={item.href}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* No Results */}
 {filteredItems.length === 0 && (

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseMemouseRefuseState } from 'react';
-X
-=======
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { X } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system';
@@ -14,81 +6,19 @@ type ChatMessage = {
 };
 
 function generateSessionId(): string {
-<<<<<<< HEAD
-  if (typeof window === 'undefined') return ', ';
-  const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem(', 'zion_support_session_id', 'id);
-=======
-  if (typeof window === 'undefined') return '';
-  const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem('zion_support_session_id', id);
->>>>>>> origin/auto/autonomy-17186719616
   return id;
 }
 
 export default function ChatWidget() {
-<<<<<<< HEAD
-  const [isOpensetIsOpen] = useState(false);
-  const [messagesetMessages] = useState<ChatMessage[]>([]);
-  const [inputsetInput] = useState('');
-  const [isLoadingsetIsLoading] = useState(false);
-  const [failedIntentsetFailedIntents] = useState(0);
-  const [showEscalationsetShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>(', ');
-=======
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
->>>>>>> origin/auto/autonomy-17186719616
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     sessionIdRef.current = generateSessionId();
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-<<<<<<< HEAD
-        { role: ''assistant', 'content: 'Hi! How can I help you?'timestamp: Date.now() }]);
-    }
-  }[isOpenmessages.length]);
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }[messages]);
-
-  const quickReplies = useMemo(
-    () => ['How do I hire?'How do I get matched?'Billing help'],
-    []
-  );
-
-  async function logEvent(eventType: stringpayload: any) {
-    try {
-      await fetch('/api/support/session'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.currenteventTypepayload })});
-    } catch {}
-  }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate'{
@@ -127,7 +57,6 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       setShowEscalation(true);
     } catch {}
   }
@@ -136,52 +65,16 @@ export default function ChatWidget() {
     const text = (messageText ?? input).trim();
     if (!text) return;
 
-<<<<<<< HEAD
-    const newUserMessage: ChatMessage = { role: ''user', 'content: textimestamp: Date.now() };
-    setMessages((prev) => [...prevnewUserMessage]);
-    setInput(', ');
-    setIsLoading(true);
-    await logEvent('message/user'{ content: text });
-
-    try {
-      const res = await fetch('/api/support/chat'{
-=======
-    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() };
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text });
-
-    try {
-      const res = await fetch('/api/support/chat', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-<<<<<<< HEAD
-          messages: [...messagesnewUserMessage].map(({ rolecontent }) => ({ rolecontent }))})});
-=======
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content })),
-        }),
-      });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
 
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
           content: data.assistantMessage,
-<<<<<<< HEAD
-          timestamp: Date.now()};
-        setMessages((prev) => [...prevassistantMessage]);
-        await logEvent('message/assistant'{ content: assistantMessage.contentmeta: data.meta });
-=======
-          timestamp: Date.now(),
-        };
-        setMessages((prev) => [...prev, assistantMessage]);
-        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta });
->>>>>>> origin/auto/autonomy-17186719616
       }
 
       if (data?.meta?.intentMatched === false) {
@@ -198,12 +91,6 @@ export default function ChatWidget() {
     } catch (e) {
       setMessages((prev) => [
         ...prev,
-<<<<<<< HEAD
-        { role: ''assistant', 'content: 'Sorrysomething went wrong. Please try again or contact support.'timestamp: Date.now() }]);
-=======
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() },
-      ]);
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }
@@ -231,11 +118,6 @@ export default function ChatWidget() {
           </div>
 
           <div className="flex-1 overflow-y-auto p-3 space-y-3">
-<<<<<<< HEAD
-            {messages.map((midx) => (
-=======
-            {messages.map((m, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
                 <div
                   className={
@@ -281,10 +163,6 @@ export default function ChatWidget() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       onSend();
                     }
                   }}

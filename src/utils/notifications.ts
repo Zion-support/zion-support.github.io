@@ -1,30 +1,31 @@
-// Notification utilities
-interface NotificationOptions {
-  title: string;
-  body?: string;
-  icon?: string;
-  badge?: string;
-  tag?: string;
-  data?: any;
-  requireInteraction?: boolean;
-  silent?: boolean;
-  timestamp?: number;
-  actions?: NotificationAction[];
-}
-
 interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
 }
 
+interface NotificationOptions {
+  title: string;
+  body?: string;
+  icon?: string;
+  badge?: string;
+  tag?: string;
+  requireInteraction?: boolean;
+  silent?: boolean;
+  timestamp?: number;
+  actions?: NotificationAction[];
+}
+
 class NotificationManager {
   private permission: NotificationPermission = 'default';
 
   async requestPermission(): Promise<NotificationPermission> {
-    if ('Notification' in window) {
-      this.permission = await Notification.requestPermission();
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return 'denied';
     }
+
+    this.permission = await Notification.requestPermission();
     return this.permission;
   }
 
@@ -35,11 +36,8 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
-      this.permission = await this.requestPermission();
-      if (this.permission !== 'granted') {
-        console.warn('Notification permission denied');
-        return null;
-      }
+      console.warn('Notification permission not granted');
+      return null;
     }
 
     try {
@@ -48,11 +46,10 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
-        data: options.data,
-        requireInteraction: options.requireInteraction || false,
-        silent: options.silent || false,
-        timestamp: options.timestamp || Date.now(),
-        actions: options.actions || [],
+        requireInteraction: options.requireInteraction,
+        silent: options.silent,
+        timestamp: options.timestamp,
+        actions: options.actions
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -69,43 +66,34 @@ class NotificationManager {
     }
   }
 
-  showSuccess(title: string, body?: string): Promise<Notification | null> {
+  async showSuccessNotification(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
       body,
       icon: '/icons/success.png',
-      tag: 'success',
+      tag: 'success'
     });
   }
 
-  showError(title: string, body?: string): Promise<Notification | null> {
+  async showErrorNotification(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
-      requireInteraction: true,
+      requireInteraction: true
     });
   }
 
-  showInfo(title: string, body?: string): Promise<Notification | null> {
+  async showInfoNotification(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
       body,
       icon: '/icons/info.png',
-      tag: 'info',
-    });
-  }
-
-  showWarning(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/warning.png',
-      tag: 'warning',
+      tag: 'info'
     });
   }
 }
 
 export const notificationManager = new NotificationManager();
-export default notificationManager;
+export default NotificationManager;

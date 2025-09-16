@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SeverityDisplayProps {
   severity: string
 }
@@ -94,7 +89,6 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface SeverityDisplayProps {
   severity: string
@@ -126,4 +120,3 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

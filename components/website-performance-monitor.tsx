@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-ActivityZapTrendingUpAlertTriangleCheckCircleArrowRightMonitorGaugeBarChart3Clock
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -15,7 +5,6 @@ ActivityZapTrendingUpAlertTriangleCheckCircleArrowRightMonitorGaugeBarChart3Cloc
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false);
   const [analysisResultsetAnalysisResults] = useState(null);
@@ -29,7 +18,6 @@ import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Moni
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -37,59 +25,15 @@ export default function WebsitePerformanceMonitorPage() {
       title: 'Real-Time Monitoring',
       description: '24/7 monitoring of your website performance with instant alerts and notifications.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-blue-400 to-cyan-500'},
-    {
-      icon: <Gauge className="w-8 h-8 text-white" />,
-      title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitalspage load timesand user experience scores.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />,
-      title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issuesdowntimeand bottlenecks.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'},
-=======
-      gradient: 'from-blue-400 to-cyan-500',
-    },
-    {
-      icon: <Gauge className="w-8 h-8 text-white" />,
-      title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
-    {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />,
-      title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
       title: 'Performance Optimization',
       description: 'AI-powered recommendations to improve your website speed and user experience.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'}];
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const metrics = [
     {
       name: 'Core Web Vitals',
-<<<<<<< HEAD
-      description: 'LCPFIDand CLS metrics that directly impact user experience and SEO rankings.',
-=======
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
->>>>>>> origin/auto/autonomy-17186719616
       icon: '⚡',
       color: 'text-blue-400'
     },
@@ -196,22 +140,12 @@ export default function WebsitePerformanceMonitorPage() {
         ]
       });
       setIsAnalyzing(false);
-<<<<<<< HEAD
-    }4000);
-=======
-    }, 4000);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
     <>
       <Head>
         <title>Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool</title>
-<<<<<<< HEAD
-        <meta name="description" content="Monitor your website performance in real-time with comprehensive metricsCore Web Vitals trackingand AI-powered optimization recommendations." />
-=======
-        <meta name="description" content="Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Website Performance Monitor - Zion Tech Group" />
         <meta property="og:description" content="Real-time website performance monitoring with Core Web Vitals tracking and optimization recommendations." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -232,11 +166,6 @@ export default function WebsitePerformanceMonitorPage() {
             Website Performance Monitor
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-<<<<<<< HEAD
-            Monitor your website performance in real-time with comprehensive metricsCore Web Vitals tracking
-=======
-            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, 
->>>>>>> origin/auto/autonomy-17186719616
             and AI-powered optimization recommendations. Never let performance issues impact your users again.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -283,11 +212,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (
-=======
-            {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
@@ -315,16 +239,9 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Metrics Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -333,20 +250,10 @@ export default function WebsitePerformanceMonitorPage() {
               Comprehensive Performance Metrics
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Track all the metrics that matter for your 'website', 's performance and user experience.
-=======
-              Track all the metrics that matter for your website's performance and user experience.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {metrics.map((metricindex) => (
-=======
-            {metrics.map((metric, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -370,11 +277,6 @@ export default function WebsitePerformanceMonitorPage() {
                 Performance Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                'Here', 's a sample analysis of a website. Get real-time insights for your own website.
-=======
-                Here's a sample analysis of a website. Get real-time insights for your own website.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </div>
             
@@ -390,11 +292,6 @@ export default function WebsitePerformanceMonitorPage() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-<<<<<<< HEAD
-                      strokeDasharray={`${(analysisResults.overallScore / 100) * 100}100`}
-=======
-                      strokeDasharray={`${(analysisResults.overallScore / 100) * 100}, 100`}
->>>>>>> origin/auto/autonomy-17186719616
                       className="text-blue-500"
                     />
                   </svg>
@@ -438,11 +335,6 @@ export default function WebsitePerformanceMonitorPage() {
             <Card className="border-gradient-blue mt-8">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-                {analysisResults.recommendations.map((recindex) => (
-=======
-                {analysisResults.recommendations.map((rec, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
@@ -467,11 +359,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {pricing.map((planindex) => (
-=======
-            {pricing.map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
@@ -495,11 +382,6 @@ export default function WebsitePerformanceMonitorPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                  {plan.features.map((featureIndex) => (
-=======
-                  {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}

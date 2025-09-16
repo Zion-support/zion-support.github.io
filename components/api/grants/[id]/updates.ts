@@ -1,57 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-import {v4, as, uuidv4} from 'uuid';
-
-
-
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {
-
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  const p = grantPath(id);
-
-
-
-  if (!fs && fs.existsSync(p)) return null;
-  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-}
-
-
-function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs && fs.writeFileSync(
-    grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
-    'utf8'
-  );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-}
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-
-
-
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query as { id: string };
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -229,4 +178,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

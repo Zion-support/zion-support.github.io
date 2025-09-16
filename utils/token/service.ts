@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  };
-export interface TokenTransaction {;
-
-  id: string;
-  userId: string;
-
-
-  amount: number;
-  type: 'issue' | 'redeem' | 'transfer';
-  reason: string;
-  timestamp: number;
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -251,4 +224,3 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
->>>>>>> origin/auto/autonomy-17186719616

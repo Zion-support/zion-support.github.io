@@ -1,8 +1,3 @@
-/**
- * React hook for managing webhooks
- */
-
-import { useState, useEffect, useCallback, useRef } from 'react';
 
 export interface Webhook {
   id: string;
@@ -10,11 +5,6 @@ export interface Webhook {
   url: string;
   events: string[];
   secret?: string;
-  active: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-  lastTriggered?: Date;
-  successCount: number;
   failureCount: number;
 }
 
@@ -25,60 +15,32 @@ export interface WebhookEvent {
   payload: any;
   status: 'pending' | 'success' | 'failed';
   attempts: number;
-  maxAttempts: number;
-  nextRetry?: Date;
-  createdAt: Date;
-  completedAt?: Date;
+  createdAt: string;
+  lastAttempt?: string;
   error?: string;
 }
 
-export interface WebhookOptions {
-  retryAttempts?: number;
-  retryDelay?: number;
-  timeout?: number;
-  headers?: Record<string, string>;
+interface UseWebhooksOptions {
+  autoRefresh?: boolean;
+  refreshInterval?: number;
 }
 
-export interface UseWebhooksReturn {
-  webhooks: Webhook[];
-  events: WebhookEvent[];
-  loading: boolean;
-  error: string | null;
-  createWebhook: (webhook: Omit<Webhook, 'id' | 'createdAt' | 'updatedAt' | 'successCount' | 'failureCount'>) => Promise<Webhook>;
-  updateWebhook: (id: string, updates: Partial<Webhook>) => Promise<Webhook>;
-  deleteWebhook: (id: string) => Promise<void>;
-  triggerWebhook: (webhookId: string, event: string, payload: any) => Promise<WebhookEvent>;
-  getWebhook: (id: string) => Webhook | undefined;
-  getWebhookEvents: (webhookId: string) => WebhookEvent[];
-  retryEvent: (eventId: string) => Promise<WebhookEvent>;
-  clearEventHistory: (webhookId?: string) => Promise<void>;
-  refreshWebhooks: () => Promise<void>;
-  refreshEvents: () => Promise<void>;
-}
-
-export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => {
+export const useWebhooks = (options: UseWebhooksOptions = {}) => {
+  const { autoRefresh = true, refreshInterval = 30000 } = options;
+  
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
-  const optionsRef = useRef(options);
-  const pollIntervalRef = useRef<NodeJS.Timeout>();
-
-  // Update options ref when options change
-  useEffect(() => {
-    optionsRef.current = options;
-  }, [options]);
-
-  // Fetch webhooks from API
   const fetchWebhooks = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
       
+      // Simulate API call - replace with actual API endpoint
       const response = await fetch('/api/webhooks');
       if (!response.ok) {
-        throw new Error(`Failed to fetch webhooks: ${response.statusText}`);
+        throw new Error('Failed to fetch webhooks');
       }
       
       const data = await response.json();
@@ -90,24 +52,31 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
     }
   }, []);
 
-  // Fetch webhook events from API
-  const fetchEvents = useCallback(async () => {
+  // Fetch webhook events
+  const fetchEvents = useCallback(async (webhookId?: string) => {
     try {
-      const response = await fetch('/api/webhooks/events');
+      setLoading(true);
+      setError(null);
+      
+      const url = webhookId ? `/api/webhooks/${webhookId}/events` : '/api/webhook-events';
+      const response = await fetch(url);
       if (!response.ok) {
-        throw new Error(`Failed to fetch events: ${response.statusText}`);
+        throw new Error('Failed to fetch webhook events');
       }
       
       const data = await response.json();
       setEvents(data.events || []);
     } catch (err) {
-      console.error('Failed to fetch webhook events:', err);
+      setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Create a new webhook
-  const createWebhook = useCallback(async (webhookData: Omit<Webhook, 'id' | 'createdAt' | 'updatedAt' | 'successCount' | 'failureCount'>): Promise<Webhook> => {
+  // Create webhook
+  const createWebhook = useCallback(async (webhookData: Omit<Webhook, 'id' | 'createdAt' | 'failureCount'>) => {
     try {
+      setLoading(true);
       setError(null);
       
       const response = await fetch('/api/webhooks', {
@@ -119,22 +88,24 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
       });
       
       if (!response.ok) {
-        throw new Error(`Failed to create webhook: ${response.statusText}`);
+        throw new Error('Failed to create webhook');
       }
       
       const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to create webhook';
-      setError(errorMessage);
-      throw new Error(errorMessage);
+      setError(err instanceof Error ? err.message : 'Failed to create webhook');
+      throw err;
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Update an existing webhook
-  const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>): Promise<Webhook> => {
+  // Update webhook
+  const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>) => {
     try {
+      setLoading(true);
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -146,22 +117,26 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
       });
       
       if (!response.ok) {
-        throw new Error(`Failed to update webhook: ${response.statusText}`);
+        throw new Error('Failed to update webhook');
       }
       
       const updatedWebhook = await response.json();
-      setWebhooks(prev => prev.map(w => w.id === id ? updatedWebhook : w));
+      setWebhooks(prev => prev.map(webhook => 
+        webhook.id === id ? updatedWebhook : webhook
+      ));
       return updatedWebhook;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to update webhook';
-      setError(errorMessage);
-      throw new Error(errorMessage);
+      setError(err instanceof Error ? err.message : 'Failed to update webhook');
+      throw err;
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Delete a webhook
-  const deleteWebhook = useCallback(async (id: string): Promise<void> => {
+  // Delete webhook
+  const deleteWebhook = useCallback(async (id: string) => {
     try {
+      setLoading(true);
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -169,151 +144,96 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
       });
       
       if (!response.ok) {
-        throw new Error(`Failed to delete webhook: ${response.statusText}`);
+        throw new Error('Failed to delete webhook');
       }
       
-      setWebhooks(prev => prev.filter(w => w.id !== id));
-      setEvents(prev => prev.filter(e => e.webhookId !== id));
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to delete webhook';
-      setError(errorMessage);
-      throw new Error(errorMessage);
+      setError(err instanceof Error ? err.message : 'Failed to delete webhook');
+      throw err;
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Trigger a webhook
-  const triggerWebhook = useCallback(async (webhookId: string, event: string, payload: any): Promise<WebhookEvent> => {
+  // Test webhook
+  const testWebhook = useCallback(async (id: string) => {
     try {
+      setLoading(true);
       setError(null);
       
-      const response = await fetch(`/api/webhooks/${webhookId}/trigger`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ event, payload }),
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Failed to trigger webhook: ${response.statusText}`);
-      }
-      
-      const webhookEvent = await response.json();
-      setEvents(prev => [webhookEvent, ...prev]);
-      return webhookEvent;
-    } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to trigger webhook';
-      setError(errorMessage);
-      throw new Error(errorMessage);
-    }
-  }, []);
-
-  // Get a specific webhook by ID
-  const getWebhook = useCallback((id: string): Webhook | undefined => {
-    return webhooks.find(w => w.id === id);
-  }, [webhooks]);
-
-  // Get events for a specific webhook
-  const getWebhookEvents = useCallback((webhookId: string): WebhookEvent[] => {
-    return events.filter(e => e.webhookId === webhookId);
-  }, [events]);
-
-  // Retry a failed webhook event
-  const retryEvent = useCallback(async (eventId: string): Promise<WebhookEvent> => {
-    try {
-      setError(null);
-      
-      const response = await fetch(`/api/webhooks/events/${eventId}/retry`, {
+      const response = await fetch(`/api/webhooks/${id}/test`, {
         method: 'POST',
       });
       
       if (!response.ok) {
-        throw new Error(`Failed to retry event: ${response.statusText}`);
+        throw new Error('Failed to test webhook');
       }
       
-      const updatedEvent = await response.json();
-      setEvents(prev => prev.map(e => e.id === eventId ? updatedEvent : e));
-      return updatedEvent;
+      const result = await response.json();
+      return result;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to retry event';
-      setError(errorMessage);
-      throw new Error(errorMessage);
+      setError(err instanceof Error ? err.message : 'Failed to test webhook');
+      throw err;
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Clear event history
-  const clearEventHistory = useCallback(async (webhookId?: string): Promise<void> => {
+  // Retry failed event
+  const retryEvent = useCallback(async (eventId: string) => {
     try {
+      setLoading(true);
       setError(null);
       
-      const url = webhookId ? `/api/webhooks/${webhookId}/events` : '/api/webhooks/events';
-      const response = await fetch(url, {
-        method: 'DELETE',
+      const response = await fetch(`/api/webhook-events/${eventId}/retry`, {
+        method: 'POST',
       });
       
       if (!response.ok) {
-        throw new Error(`Failed to clear event history: ${response.statusText}`);
+        throw new Error('Failed to retry webhook event');
       }
       
-      if (webhookId) {
-        setEvents(prev => prev.filter(e => e.webhookId !== webhookId));
-      } else {
-        setEvents([]);
-      }
+      const result = await response.json();
+      return result;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to clear event history';
-      setError(errorMessage);
-      throw new Error(errorMessage);
+      setError(err instanceof Error ? err.message : 'Failed to retry webhook event');
+      throw err;
+    } finally {
+      setLoading(false);
     }
   }, []);
 
-  // Refresh webhooks data
-  const refreshWebhooks = useCallback(async () => {
-    await fetchWebhooks();
-  }, [fetchWebhooks]);
+  // Auto-refresh effect
+  useEffect(() => {
+    if (autoRefresh) {
+      const interval = setInterval(() => {
+        fetchWebhooks();
+        fetchEvents();
+      }, refreshInterval);
 
-  // Refresh events data
-  const refreshEvents = useCallback(async () => {
-    await fetchEvents();
-  }, [fetchEvents]);
+      return () => clearInterval(interval);
+    }
+  }, [autoRefresh, refreshInterval, fetchWebhooks, fetchEvents]);
 
-  // Initial data fetch
+  // Initial load
   useEffect(() => {
     fetchWebhooks();
     fetchEvents();
   }, [fetchWebhooks, fetchEvents]);
-
-  // Poll for updates
-  useEffect(() => {
-    const pollInterval = 30000; // 30 seconds
-    
-    pollIntervalRef.current = setInterval(() => {
-      fetchEvents();
-    }, pollInterval);
-    
-    return () => {
-      if (pollIntervalRef.current) {
-        clearInterval(pollIntervalRef.current);
-      }
-    };
-  }, [fetchEvents]);
 
   return {
     webhooks,
     events,
     loading,
     error,
+    fetchWebhooks,
+    fetchEvents,
     createWebhook,
     updateWebhook,
     deleteWebhook,
-    triggerWebhook,
-    getWebhook,
-    getWebhookEvents,
+    testWebhook,
     retryEvent,
-    clearEventHistory,
-    refreshWebhooks,
-    refreshEvents,
   };
 };
 
-export default useWebhooks;

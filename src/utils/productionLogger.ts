@@ -1,53 +1,163 @@
-// Production logger utility
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
+/**
+ * Production-safe logging utility
+ * Provides different logging levels and formats for production environments
+ */
+
+export enum LogLevel {
+  ERROR = 0,
+  WARN = 1,
+  INFO = 2,
+  DEBUG = 3,
+  TRACE = 4
 }
 
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
-};
+export interface LogEntry {
+  timestamp: string;
+  level: LogLevel;
+  message: string;
+  data?: any;
+  context?: string;
+}
 
 class ProductionLogger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private logLevel = this.isDevelopment ? 'debug' : 'info';
+  private logLevel: LogLevel;
+  private isProduction: boolean;
+  private context?: string;
 
-  private shouldLog(level: string): boolean {
-    const levels = ['error', 'warn', 'info', 'debug'];
-    const currentLevelIndex = levels.indexOf(this.logLevel);
-    const messageLevelIndex = levels.indexOf(level);
-    return messageLevelIndex <= currentLevelIndex;
+  constructor(logLevel: LogLevel = LogLevel.INFO, context?: string) {
+    this.logLevel = logLevel;
+    this.isProduction = process.env.NODE_ENV === 'production';
+    this.context = context;
   }
 
-  error(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.ERROR)) {
-      console.error(`[ERROR] ${message}`, ...args);
+  private shouldLog(level: LogLevel): boolean {
+    return level <= this.logLevel;
+  }
+
+  private formatMessage(level: LogLevel, message: string, data?: any): LogEntry {
+    return {
+      timestamp: new Date().toISOString(),
+      level,
+      message,
+      data,
+      context: this.context
+    };
+  }
+
+  private log(level: LogLevel, message: string, data?: any): void {
+    if (!this.shouldLog(level)) return;
+
+    const logEntry = this.formatMessage(level, message, data);
+    
+    if (this.isProduction) {
+      // In production, only log to console for errors and warnings
+      if (level <= LogLevel.WARN) {
+        console.error(JSON.stringify(logEntry));
+      }
+      // Send to external logging service if available
+      this.sendToExternalLogger(logEntry);
+    } else {
+      // In development, use console methods with colors
+      this.logToConsole(level, message, data);
     }
   }
 
-  warn(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.WARN)) {
-      console.warn(`[WARN] ${message}`, ...args);
+  private logToConsole(level: LogLevel, message: string, data?: any): void {
+    const timestamp = new Date().toLocaleTimeString();
+    const contextStr = this.context ? `[${this.context}]` : '';
+    
+    switch (level) {
+      case LogLevel.ERROR:
+        console.error(`🔴 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.WARN:
+        console.warn(`🟡 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.INFO:
+        console.info(`🔵 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.DEBUG:
+        console.debug(`🟢 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.TRACE:
+        console.trace(`⚪ ${timestamp} ${contextStr}`, message, data || '');
+        break;
     }
   }
 
-  info(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.INFO)) {
-      console.info(`[INFO] ${message}`, ...args);
+  private sendToExternalLogger(logEntry: LogEntry): void {
+    // In a real application, you would send this to your logging service
+    // For now, we'll just store it in memory or localStorage for debugging
+    try {
+      const logs = JSON.parse(localStorage.getItem('app_logs') || '[]');
+      logs.push(logEntry);
+      
+      // Keep only the last 100 logs
+      if (logs.length > 100) {
+        logs.splice(0, logs.length - 100);
+      }
+      
+      localStorage.setItem('app_logs', JSON.stringify(logs));
+    } catch (error) {
+      // If localStorage fails, just ignore
     }
   }
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
-      console.debug(`[DEBUG] ${message}`, ...args);
+  error(message: string, data?: any): void {
+    this.log(LogLevel.ERROR, message, data);
+  }
+
+  warn(message: string, data?: any): void {
+    this.log(LogLevel.WARN, message, data);
+  }
+
+  info(message: string, data?: any): void {
+    this.log(LogLevel.INFO, message, data);
+  }
+
+  debug(message: string, data?: any): void {
+    this.log(LogLevel.DEBUG, message, data);
+  }
+
+  trace(message: string, data?: any): void {
+    this.log(LogLevel.TRACE, message, data);
+  }
+
+  setContext(context: string): void {
+    this.context = context;
+  }
+
+  setLogLevel(level: LogLevel): void {
+    this.logLevel = level;
+  }
+
+  getLogs(): LogEntry[] {
+    try {
+      return JSON.parse(localStorage.getItem('app_logs') || '[]');
+    } catch (error) {
+      return [];
     }
+  }
+
+  clearLogs(): void {
+    localStorage.removeItem('app_logs');
   }
 }
 
-export const productionLogger = new ProductionLogger();
-export default productionLogger;
+// Create default logger instance
+const logger = new ProductionLogger();
+
+// Export convenience functions
+export const log = {
+  error: (message: string, data?: any) => logger.error(message, data),
+  warn: (message: string, data?: any) => logger.warn(message, data),
+  info: (message: string, data?: any) => logger.info(message, data),
+  debug: (message: string, data?: any) => logger.debug(message, data),
+  trace: (message: string, data?: any) => logger.trace(message, data),
+  setContext: (context: string) => logger.setContext(context),
+  setLogLevel: (level: LogLevel) => logger.setLogLevel(level),
+  getLogs: () => logger.getLogs(),
+  clearLogs: () => logger.clearLogs()
+};
+
+export default ProductionLogger;

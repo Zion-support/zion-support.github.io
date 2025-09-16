@@ -19,7 +19,6 @@
         'Advanced integrations',;'
         'Custom workflows',;'        'On-premise deployment';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: fals e};
   ] {;

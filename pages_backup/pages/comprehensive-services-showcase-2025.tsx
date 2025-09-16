@@ -240,7 +240,6 @@ export default function ComprehensiveServicesShowcase2025() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -294,7 +293,6 @@ export default function ComprehensiveServicesShowcase2025() {
         return 0;    }
   });
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -321,7 +319,6 @@ export default function ComprehensiveServicesShowcase2025() {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
@@ -404,7 +401,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   {contactInfo.mobile}
                 </Link>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </motion.div>
           </div>

@@ -1,108 +1,9 @@
 
-<<<<<<< HEAD
-
-
-
-
-
-
-import {useEffect, useState} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
-import {SearchSuggestion} from "@/types/search";
-import {useAISearch} from "@/hooks/useAISearch";
-import {AppLayout} from "@/layout/AppLayout";
-export default function SearchPage() {;
-
-=======
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import { useAISearch } from "@/hooks/useAISearch";
-import { AppLayout } from "@/layout/AppLayout";
-
-export default function SearchPage() {
->>>>>>> origin/auto/autonomy-17186719616
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const initial = params.get("q") || "";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
-<<<<<<< HEAD
-import { useEffect, useState } from "react",
-import { useNavigate, useSearchParams } from "react-router-dom",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import { useAISearch } from "@/hooks/useAISearch";
-import { AppLayout } from "@/layout/AppLayout";
-export default function SearchPage() {
-  const [params] = useSearchParams();
-
-  const navigate = useNavigate();
-  const initial = params.get("q") |"";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
-import { useAISearch } from "@/hooks/useAISearch",
-import { AppLayout } from "@/layout/AppLayout",
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") || "",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
-  useEffect(() => {
-    if (initial) {
-      search(initial)
-    }
-
-  }, [initial]);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault(),;
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)
-  }
-  }, [initial]),
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)
-  },
-
-
-  return (
-    <AppLayout>;
-      <main className="container mx-auto px-4 py-8">;
-        <form onSubmit={handleSubmit} className="mb-6">;
-=======
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
-
-  useEffect(() => {
-    if (initial) {
-      search(initial);
-    }
-  }, [initial]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query);
-  };
-
-  return (
-    <AppLayout>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
->>>>>>> origin/auto/autonomy-17186719616
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -111,55 +12,10 @@ export default function SearchPage() {
           />
         </form>
 
-<<<<<<< HEAD
-
-
-import { useEffect, useState } from "react",;
-import { useNavigate, useSearchParams } from "react-router-dom",;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions } from "@/data/marketplaceData",;
-import { SearchSuggestion } from "@/types/search",;
-import { useAISearch } from "@/hooks/useAISearch",;
-import { AppLayout } from "@/layout/AppLayout",;
-export default function SearchPage() {;
-  const [params] = useSearchParams(),;
-  const navigate = useNavigate(),;
-  const initial = params.get("q") || "",;
-  const [query, setQuery] = useState(initial),;
-  const { results, loading, search } = useAISearch(),;
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
-  useEffect(() => {;
-    if (initial) {;
-      search(initial);
-    }
-  }, [initial]),;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query);
-  };
-  return (;
-    <AppLayout>;
-      <main className="container mx-auto px-4 py-8">;
-        <form onSubmit={handleSubmit} className="mb-6">;
-          <EnhancedSearchInput;
-            value={query}
-            onChange={setQuery}
-            searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects...";
-          />;
-        </form>;
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {loading && <p className="text-zion-slate-light">Searching...</p>}
@@ -277,4 +133,3 @@ if ( {) {
     </AppLayout>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

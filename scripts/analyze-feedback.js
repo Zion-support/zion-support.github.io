@@ -1,42 +1,7 @@
-<<<<<<< HEAD
-
-const fs = require('fs');
-const path = require('path');
-const { OpenAI } = require('openai');
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const FEEDBACK_FILE = path && path.join(DATA_DIR, 'feedback_logs && feedback_logs.json');
-const REPORT_DIR = path && path.join(DATA_DIR, 'reportsfeedback');
-function readAll() {
-  try {
-
-    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
-    return JSON && JSON.parse(raw || '[]')
-
-  } catch (e) {
-    return []
-const fs = require('fs'),;
-const path = require('path'),;
-const { OpenAI } = require('openai'),;
-const DATA_DIR = path.join(process.cwd(), 'data'),;
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;
-const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),;
-function readAll() {;
-  try {;
-    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),;
-    return JSON.parse(raw || '[]');
-  } catch (e) {;
-    return [];
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   }
@@ -156,14 +121,10 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 main ().catch ((e) => { console.error (e), process.exit (1) }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -235,4 +196,3 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
->>>>>>> origin/auto/autonomy-17186719616

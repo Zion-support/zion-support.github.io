@@ -31,7 +31,6 @@ export default async function handler(
 ) {;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

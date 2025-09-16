@@ -1,7 +1,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware'];
 const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
@@ -18,6 +17,4 @@ const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for c
 const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console && _console.log('Performance optimizations "applied": ',optimizations && optimizations.length);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

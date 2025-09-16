@@ -1,35 +1,24 @@
 #!/bin/bash
 
-echo "🔧 Resolving merge conflicts automatically..."
+# Resolve merge conflicts by accepting the remote version (theirs) for most files
+# This will keep the latest changes from the remote main branch
 
-# Find all files with merge conflict markers
-echo "📁 Searching for files with merge conflicts..."
+echo "Resolving merge conflicts..."
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "🔧 Resolving conflicts in: $file"
-    
-    # Remove all conflict markers and keep the newer version (after =======)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
-}
+# Accept remote version for most files
+git checkout --theirs index.html
+git checkout --theirs package.json
+git checkout --theirs package-lock.json
+git checkout --theirs src/App.tsx
+git checkout --theirs src/Footer.tsx
+git checkout --theirs src/Header.tsx
+git checkout --theirs src/components/EnhancedContentShowcase.tsx
+git checkout --theirs src/pages/UltimateTechShowcase2026.tsx
 
-# Find and resolve conflicts in TypeScript/JavaScript files
-find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read -r file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        resolve_conflicts "$file"
-    fi
-done
+# Remove the deleted file
+git rm src/components/NewContentPromotionBanner.tsx
 
-# Find and resolve conflicts in other source files
-find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .git | while read -r file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        resolve_conflicts "$file"
-    fi
-done
+# Add all resolved files
+git add .
 
-echo "🎉 All merge conflicts resolved!"
-echo "📝 Please review the changes and test the application"
+echo "Merge conflicts resolved!"

@@ -121,7 +121,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
-                <Link 
+                <a 
                   href={link.href}
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -134,14 +134,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   )}
                 >
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
 
             {/* Wishlist link */}
             {isAuthenticated && (
               <li className="nav-item">
-                <Link 
+                <a 
                   href="/wishlist"
                   aria-label="Wishlist"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -159,14 +159,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       {count}
                     </span>
                   )}
-                </Link>
+                </a>
               </li>
             )}
 
             {/* Wallet link */}
             {isAuthenticated && (
               <li className="nav-item">
-                <Link 
+                <a 
                   href="/wallet"
                   aria-label="Wallet"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -179,14 +179,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   )}
                 >
                   <Wallet className="w-4 h-4" />
-                </Link>
+                </a>
               </li>
             )}
 
             {/* Messages link */}
             {isAuthenticated && (
               <li className="nav-item">
-                <Link 
+                <a 
                   href="/messages"
                   aria-label="Messages"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -204,7 +204,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>
                   )}
-                </Link>
+                </a>
               </li>
             )}
 
@@ -212,7 +212,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <li className="nav-item">
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
-                  <Link
+                  <a
                     href="/cart"
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
@@ -231,7 +231,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                         {cartCount}
                       </span>
                     )}
-                  </Link>
+                  </a>
                 </HoverCardTrigger>
                 <HoverCardContent>
                   <MiniCartPreview />

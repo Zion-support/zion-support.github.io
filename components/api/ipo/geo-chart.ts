@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-
-
-
-
-
-
-
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
@@ -29,4 +17,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', 'image/svg+xml');
   res.send(svg);
 }
->>>>>>> origin/auto/autonomy-17186719616

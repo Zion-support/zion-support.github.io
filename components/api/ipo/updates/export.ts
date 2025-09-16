@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import PDFDocument from "pdfkit";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-import PDFDocument from 'pdfkit';
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -80,12 +63,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -115,4 +95,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-const user = [ `Operator Prompt: $ {
-  operatorPrompt
-}`;
-context ? `Context: $ {
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-
-
-
-
-
-  role: 'system', content: system
-}
-export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string
-  context?: Record<string, unknown>
-}
-export type AnalyzeResponse = {
-  analysis: string
-
-
-
-
-
-
-
-  role: 'system', content: system 
-};
-
-export type AnalyzeResponse = {;
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string,
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-
-export type AnalyzeRequestBody = {
-  operatorPrompt: string;
->>>>>>> origin/auto/autonomy-17186719616
   context?: Record<string, unknown>;
 };
 
@@ -57,16 +5,8 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -242,4 +182,3 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

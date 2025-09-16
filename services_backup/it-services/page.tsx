@@ -683,5 +683,4 @@ function Pricing() {
   );
 
 
->>>>>>> origin/final-merged-improvements
 
