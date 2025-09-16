@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-governed-eval-gates-architecture', title: 'Governed Eval Gates Architecture (2026)', tag: 'New' },
   { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },
   { href: '/blog/ai-2026-release-scorecards', title: 'Release Scorecards for Reliable Agent Upgrades (2026)', tag: 'New' },
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
