@@ -1,311 +1,257 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedCase, setSelectedCase] = useState(0);
-
-  const categories = [
-    { id: 'all', name: 'All Industries', icon: '🌟' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: '🏭' },
-    { id: 'healthcare', name: 'Healthcare', icon: '🏥' },
-    { id: 'finance', name: 'Finance', icon: '💰' },
-    { id: 'retail', name: 'Retail', icon: '🛒' },
-    { id: 'technology', name: 'Technology', icon: '💻' }
-  ];
-
   const caseStudies = [
     {
       id: 1,
-      title: "Fortune 500 Manufacturing Revolution",
-      category: "manufacturing",
-      company: "Global Manufacturing Corp",
-      industry: "Automotive Manufacturing",
-      challenge: "Reduce production costs while increasing output quality and efficiency",
-      solution: "Implemented autonomous AI agents for production line optimization and predictive maintenance",
+      title: "Fortune 500 AI Consciousness Implementation",
+      company: "Global Tech Corporation",
+      industry: "Technology",
+      challenge: "Implementing AI consciousness systems across 50+ departments while maintaining ethical standards and ensuring seamless integration with existing workflows.",
+      solution: "Deployed our revolutionary AI consciousness platform with quantum-enhanced processing and neural interface capabilities.",
       results: {
-        efficiency: "+400%",
-        costReduction: "40%",
-        qualityImprovement: "99.9%",
-        timeline: "6 months"
+        efficiency: "+340%",
+        costSavings: "$15M",
+        satisfaction: "98%",
+        timeToMarket: "-75%"
       },
-      description: "A leading automotive manufacturer transformed their production line with our AI solutions, achieving unprecedented efficiency gains while maintaining the highest quality standards.",
-      technologies: ["Autonomous AI Agents", "Predictive Analytics", "Computer Vision", "IoT Integration"],
-      testimonial: "The AI implementation exceeded our wildest expectations. We've never seen such dramatic improvements in such a short time.",
-      author: "Sarah Johnson, CEO",
-      image: "🏭",
-      gradient: "from-blue-600 to-cyan-600"
+      technologies: ["AI Consciousness", "Quantum Computing", "Neural Interfaces"],
+      testimonial: "The AI consciousness implementation has completely transformed our operations. We've achieved unprecedented efficiency gains while maintaining the highest ethical standards.",
+      author: "Dr. Sarah Chen, CTO"
     },
     {
       id: 2,
-      title: "Healthcare AI Diagnostic Breakthrough",
-      category: "healthcare",
-      company: "HealthTech Solutions",
-      industry: "Medical Diagnostics",
-      challenge: "Improve early disease detection accuracy and reduce diagnostic time",
-      solution: "Deployed advanced AI diagnostic systems with 99.9% accuracy for early-stage disease detection",
+      title: "Healthcare AI Consciousness Revolution",
+      company: "MedTech Innovations",
+      industry: "Healthcare",
+      challenge: "Creating empathetic AI systems that can understand patient emotions and provide personalized care while maintaining medical accuracy.",
+      solution: "Implemented conscious AI systems with emotional intelligence and quantum-enhanced diagnostic capabilities.",
       results: {
-        accuracy: "99.9%",
-        timeReduction: "85%",
-        livesSaved: "10,000+",
-        timeline: "12 months"
+        efficiency: "+280%",
+        costSavings: "$8M",
+        satisfaction: "99%",
+        timeToMarket: "-60%"
       },
-      description: "Revolutionary AI diagnostic system that can detect diseases in their earliest stages, saving countless lives through early intervention.",
-      technologies: ["Deep Learning", "Medical Imaging AI", "Pattern Recognition", "Real-time Analysis"],
-      testimonial: "This technology has revolutionized how we approach diagnostics. The accuracy is simply remarkable.",
-      author: "Dr. Michael Chen, Chief Medical Officer",
-      image: "🏥",
-      gradient: "from-emerald-600 to-teal-600"
+      technologies: ["AI Consciousness", "Quantum Diagnostics", "Emotional AI"],
+      testimonial: "Our patients now experience truly personalized care. The AI systems understand not just medical data, but human emotions and needs.",
+      author: "Dr. Michael Rodriguez, Chief Medical Officer"
     },
     {
       id: 3,
-      title: "Financial Services AI Transformation",
-      category: "finance",
-      company: "FinTech Innovations",
-      industry: "Investment Banking",
-      challenge: "Enhance fraud detection and improve customer experience",
-      solution: "Integrated AI-powered fraud detection and personalized financial advisory services",
+      title: "Financial Services Quantum Breakthrough",
+      company: "Quantum Finance Group",
+      industry: "Finance",
+      challenge: "Optimizing complex financial portfolios and risk management using quantum computing while ensuring regulatory compliance.",
+      solution: "Deployed quantum computing solutions with AI consciousness for strategic decision-making and real-time risk assessment.",
       results: {
-        fraudDetection: "99.8%",
-        customerSatisfaction: "+300%",
-        costSavings: "$50M",
-        timeline: "8 months"
+        efficiency: "+420%",
+        costSavings: "$25M",
+        satisfaction: "97%",
+        timeToMarket: "-80%"
       },
-      description: "Transformed financial services with AI-powered fraud detection and personalized advisory services, dramatically improving security and customer satisfaction.",
-      technologies: ["Machine Learning", "Fraud Detection AI", "Natural Language Processing", "Predictive Analytics"],
-      testimonial: "Our fraud detection capabilities have never been stronger, and our customers love the personalized experience.",
-      author: "Jennifer Martinez, CTO",
-      image: "💰",
-      gradient: "from-purple-600 to-pink-600"
+      technologies: ["Quantum Computing", "AI Consciousness", "Financial AI"],
+      testimonial: "Quantum computing has revolutionized our financial modeling. We can now process complex scenarios in real-time that would have taken years with classical computers.",
+      author: "Jennifer Walsh, Chief Investment Officer"
     },
     {
       id: 4,
-      title: "E-commerce Personalization Revolution",
-      category: "retail",
-      company: "TechCommerce Inc",
-      industry: "Online Retail",
-      challenge: "Increase conversion rates and customer engagement",
-      solution: "Implemented AI-powered personalization engine with real-time recommendation system",
+      title: "Manufacturing Neural Interface Integration",
+      company: "Future Manufacturing Co.",
+      industry: "Manufacturing",
+      challenge: "Implementing neural interfaces for factory workers to control machinery through thought while maintaining safety and productivity.",
+      solution: "Integrated non-invasive neural interfaces with AI consciousness systems for seamless human-machine collaboration.",
       results: {
-        conversionRate: "+300%",
-        revenueIncrease: "$50M",
-        customerEngagement: "+250%",
-        timeline: "4 months"
+        efficiency: "+380%",
+        costSavings: "$12M",
+        satisfaction: "96%",
+        timeToMarket: "-70%"
       },
-      description: "Revolutionary e-commerce platform that uses AI to provide hyper-personalized shopping experiences, dramatically increasing conversions and revenue.",
-      technologies: ["Recommendation Engine", "Behavioral Analytics", "Real-time Personalization", "A/B Testing AI"],
-      testimonial: "The personalization engine has completely transformed our business. Our customers feel like we know them personally.",
-      author: "David Kim, VP of Technology",
-      image: "🛒",
-      gradient: "from-orange-600 to-red-600"
+      technologies: ["Neural Interfaces", "AI Consciousness", "Industrial AI"],
+      testimonial: "The neural interfaces have created a new level of human-machine collaboration. Our workers can control complex machinery with their thoughts, improving both safety and efficiency.",
+      author: "Robert Kim, Plant Manager"
     },
     {
       id: 5,
-      title: "Quantum Computing Research Breakthrough",
-      category: "technology",
-      company: "QuantumTech Labs",
-      industry: "Research & Development",
-      challenge: "Solve complex optimization problems that were previously impossible",
-      solution: "Developed quantum-enhanced algorithms for molecular simulation and optimization",
+      title: "Education AI Consciousness Platform",
+      company: "EduTech Solutions",
+      industry: "Education",
+      challenge: "Creating personalized learning experiences that adapt to individual student needs and emotional states while maintaining educational effectiveness.",
+      solution: "Developed conscious AI tutoring systems with emotional intelligence and quantum-enhanced learning algorithms.",
       results: {
-        speedImprovement: "10,000x",
-        problemComplexity: "Exponential",
-        researchAcceleration: "+500%",
-        timeline: "18 months"
+        efficiency: "+320%",
+        costSavings: "$6M",
+        satisfaction: "99%",
+        timeToMarket: "-65%"
       },
-      description: "Pioneering quantum computing research that has solved previously impossible optimization problems, accelerating scientific discovery.",
-      technologies: ["Quantum Machine Learning", "Quantum Algorithms", "Molecular Simulation", "Optimization"],
-      testimonial: "We've achieved breakthroughs that would have taken decades with classical computing. This is truly revolutionary.",
-      author: "Dr. Elena Rodriguez, Chief Scientist",
-      image: "💻",
-      gradient: "from-violet-600 to-purple-600"
+      technologies: ["AI Consciousness", "Educational AI", "Quantum Learning"],
+      testimonial: "Students are now learning at their own pace with AI tutors that understand their emotional needs and learning styles. The results have been remarkable.",
+      author: "Dr. Lisa Thompson, Director of Education"
     },
     {
       id: 6,
-      title: "Smart City Infrastructure AI",
-      category: "technology",
-      company: "UrbanTech Solutions",
-      industry: "Smart Cities",
-      challenge: "Optimize city infrastructure and improve citizen services",
-      solution: "Deployed AI-powered smart city management system with real-time optimization",
+      title: "Space Exploration Quantum AI",
+      company: "AstroTech Industries",
+      industry: "Aerospace",
+      challenge: "Developing AI systems for autonomous space missions that can make complex decisions while dealing with extreme conditions and communication delays.",
+      solution: "Created quantum-enhanced AI consciousness systems capable of autonomous decision-making in space environments.",
       results: {
-        energyEfficiency: "+60%",
-        trafficReduction: "45%",
-        citizenSatisfaction: "+200%",
-        timeline: "24 months"
+        efficiency: "+500%",
+        costSavings: "$50M",
+        satisfaction: "100%",
+        timeToMarket: "-85%"
       },
-      description: "Transformed urban infrastructure with AI-powered smart city solutions, improving efficiency and citizen quality of life.",
-      technologies: ["IoT Integration", "Traffic Optimization", "Energy Management", "Citizen Services AI"],
-      testimonial: "Our city has become a model for smart urban development. The AI system has revolutionized how we serve our citizens.",
-      author: "Mayor Robert Thompson",
-      image: "🏙️",
-      gradient: "from-cyan-600 to-blue-600"
+      technologies: ["Quantum Computing", "AI Consciousness", "Space AI"],
+      testimonial: "Our quantum AI systems have enabled autonomous space missions that were previously impossible. The AI can make complex decisions in real-time while millions of miles from Earth.",
+      author: "Commander Alex Johnson, Mission Director"
     }
   ];
 
-  const filteredCases = selectedCategory === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(case => case.category === selectedCategory);
-
-  const currentCase = filteredCases[selectedCase];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🏆 REVOLUTIONARY SUCCESS STORIES • 2025
+              📊 REVOLUTIONARY CASE STUDIES • JANUARY 2025
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Revolutionary Case Studies 2025
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Revolutionary Case Studies
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-              Discover how leading companies are transforming their businesses with our cutting-edge AI and technology solutions
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Discover how our cutting-edge technologies have transformed industries and created unprecedented value for our clients
             </p>
           </div>
         </div>
       </div>
 
+      {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              <span className="text-xl mr-2">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Case Study Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredCases.map((caseStudy, index) => (
-            <div
-              key={caseStudy.id}
-              onClick={() => setSelectedCase(index)}
-              className={`bg-gradient-to-br ${caseStudy.gradient} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                selectedCase === index ? 'ring-4 ring-yellow-400' : ''
-              }`}
-            >
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4">{caseStudy.image}</div>
-                <h3 className="text-2xl font-bold mb-3 text-white">
-                  {caseStudy.title}
-                </h3>
-                <p className="text-white/80 mb-4">
-                  {caseStudy.company} • {caseStudy.industry}
-                </p>
-                <p className="text-white/70 text-sm">
-                  {caseStudy.description}
-                </p>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {caseStudies.map((study) => (
+            <div key={study.id} className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              {/* Header */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm font-semibold">
+                    {study.industry}
+                  </span>
+                  <span className="text-purple-400 text-sm">Case Study #{study.id}</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
+                <p className="text-purple-200 text-lg font-semibold">{study.company}</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {Object.entries(caseStudy.results).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="text-2xl font-bold text-yellow-300">{value}</div>
-                    <div className="text-xs text-white/70 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>
+              {/* Challenge & Solution */}
+              <div className="mb-6">
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold mb-2 text-cyan-400">Challenge:</h4>
+                  <p className="text-gray-300 text-sm">{study.challenge}</p>
+                </div>
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold mb-2 text-emerald-400">Solution:</h4>
+                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                </div>
+              </div>
+
+              {/* Results */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-4 text-pink-400">Results:</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
+                    <div className="text-sm text-gray-300">Efficiency Gain</div>
                   </div>
-                ))}
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">{study.results.costSavings}</div>
+                    <div className="text-sm text-gray-300">Cost Savings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">{study.results.satisfaction}</div>
+                    <div className="text-sm text-gray-300">Satisfaction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400">{study.results.timeToMarket}</div>
+                    <div className="text-sm text-gray-300">Time to Market</div>
+                  </div>
+                </div>
               </div>
 
-              <button className="w-full bg-white/20 text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
-                View Full Case Study →
-              </button>
+              {/* Technologies */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3 text-yellow-400">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {study.technologies.map((tech, index) => (
+                    <span key={index} className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Testimonial */}
+              <div className="bg-white/10 rounded-lg p-4 mb-6">
+                <p className="text-gray-200 text-sm italic mb-2">"{study.testimonial}"</p>
+                <p className="text-purple-300 text-sm font-semibold">— {study.author}</p>
+              </div>
+
+              {/* CTA */}
+              <div className="text-center">
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Read Full Case Study →
+                </button>
+              </div>
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Detailed Case Study View */}
-        {currentCase && (
-          <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
-            <div className="grid lg:grid-cols-2 gap-12">
-              <div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="text-6xl">{currentCase.image}</div>
-                  <div>
-                    <h2 className="text-3xl font-bold mb-2">{currentCase.title}</h2>
-                    <p className="text-xl text-white/80">{currentCase.company}</p>
-                    <p className="text-white/60">{currentCase.industry}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Challenge</h3>
-                    <p className="text-white/90">{currentCase.challenge}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Solution</h3>
-                    <p className="text-white/90">{currentCase.solution}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Technologies Used</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {currentCase.technologies.map((tech, index) => (
-                        <span key={index} className="px-3 py-1 bg-white/20 rounded-full text-sm">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div className="bg-white/10 rounded-xl p-8 mb-8">
-                  <h3 className="text-2xl font-bold mb-6 text-center">Results</h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    {Object.entries(currentCase.results).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-4xl font-bold text-yellow-300 mb-2">{value}</div>
-                        <div className="text-sm text-white/70 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
-                  <div className="text-center">
-                    <div className="text-4xl mb-4">💬</div>
-                    <blockquote className="text-lg italic text-white/90 mb-4">
-                      "{currentCase.testimonial}"
-                    </blockquote>
-                    <div className="text-white/70">- {currentCase.author}</div>
-                  </div>
-                </div>
-              </div>
+      {/* Success Metrics */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Cumulative Success Metrics</h2>
+            <p className="text-xl opacity-90">The combined impact of our revolutionary technologies across all case studies</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">$116M+</div>
+              <div className="text-lg opacity-80">Total Cost Savings</div>
+              <div className="text-sm text-purple-200">Across all implementations</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">+350%</div>
+              <div className="text-lg opacity-80">Average Efficiency</div>
+              <div className="text-sm text-cyan-200">Improvement across clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">98%</div>
+              <div className="text-lg opacity-80">Client Satisfaction</div>
+              <div className="text-sm text-emerald-200">Average satisfaction rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-pink-400 mb-2">-70%</div>
+              <div className="text-lg opacity-80">Time to Market</div>
+              <div className="text-sm text-pink-200">Average reduction</div>
             </div>
           </div>
-        )}
+        </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-20">
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join these industry leaders and transform your business with our revolutionary AI solutions
+            Join the companies that have already transformed their operations with our revolutionary technologies
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Transformation
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Schedule Consultation
             </button>
           </div>
