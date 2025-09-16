@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const featuredContent = [
   {
@@ -146,18 +146,18 @@ export default function FeaturedContentCarousel() {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link 
+                    <a 
                       href={currentContent.href}
                       className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                     >
                       Explore Now
-                    </Link>
-                    <Link 
+                    </a>
+                    <a 
                       href="/contact"
                       className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                     >
                       Get Started
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 
@@ -218,7 +218,7 @@ export default function FeaturedContentCarousel() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredContent.map((content) => (
-              <Link
+              <a
                 key={content.id}
                 href={content.href}
                 className={`bg-gradient-to-r ${content.gradient} rounded-2xl p-6 text-white hover:scale-105 transition-all duration-300 transform`}
@@ -236,7 +236,7 @@ export default function FeaturedContentCarousel() {
                     </span>
                   ))}
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

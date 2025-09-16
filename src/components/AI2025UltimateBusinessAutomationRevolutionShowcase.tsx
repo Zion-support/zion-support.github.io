@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
   const featuredContent = [
@@ -86,13 +86,13 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {content.description}
                 </p>
-                <Link
+                <a
                   href={content.href}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
                   Read More
                   <span className="ml-2">→</span>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -173,18 +173,18 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
             Join hundreds of companies already achieving extraordinary results with our proven AI automation framework.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Free Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources/ai-2025-implementation-ultimate-master-guide-2500-roi"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Download Master Guide
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapTargetTrendingUpUsersGlobeAward
 
 const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
@@ -164,37 +164,37 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center"
             >
               Read the Complete Guide
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-readiness-assessment"
               className="bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center"
             >
               Free AI Readiness Assessment
               <Brain className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/tools/ai-roi-calculator"
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               Calculate Your AI ROI
               <TrendingUp className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
             >
               Schedule Consultation
               <Users className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
 

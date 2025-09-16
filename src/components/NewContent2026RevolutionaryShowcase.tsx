@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2026RevolutionaryShowcase: React.FC = () => {
   const newContent = [
@@ -120,12 +120,12 @@ const NewContent2026RevolutionaryShowcase: React.FC = () => {
                   </div>
 
                   {/* CTA button */}
-                  <Link
+                  <a
                     href={`/blog/${content.slug}`}
                     className={`block w-full bg-gradient-to-r ${content.gradient} text-white text-center py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity`}
                   >
                     Read Full Guide →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -141,18 +141,18 @@ const NewContent2026RevolutionaryShowcase: React.FC = () => {
             'Don', 't just read about the future - start building it today. Our comprehensive AI transformation services will help you implement these revolutionary technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services/ai-transformation"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start AI Transformation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
               Get Expert Consultation
-            </Link>
+            </a>
           </div>
         </div>
 

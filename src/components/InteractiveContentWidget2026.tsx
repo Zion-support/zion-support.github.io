@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -173,7 +173,7 @@ const InteractiveContentWidget2026: React.FC = () => {
             </h4>
             <div className="space-y-3">
               {featuredContent.map((item) => (
-                <Link
+                <a
                   key={item.id}
                   href={`/content/${item.id}`}
                   className="block p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border border-yellow-200 hover:shadow-md transition-all duration-300"
@@ -197,7 +197,7 @@ const InteractiveContentWidget2026: React.FC = () => {
                     </div>
                     <div className="ml-4 text-blue-600">→</div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -211,7 +211,7 @@ const InteractiveContentWidget2026: React.FC = () => {
             </h4>
             <div className="space-y-2">
               {regularContent.map((item) => (
-                <Link
+                <a
                   key={item.id}
                   href={`/content/${item.id}`}
                   className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300"
@@ -228,7 +228,7 @@ const InteractiveContentWidget2026: React.FC = () => {
                     </div>
                     <div className="ml-4 text-blue-600">→</div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -259,12 +259,12 @@ const InteractiveContentWidget2026: React.FC = () => {
           <p className="text-sm text-gray-600">
             💡 <strong>Pro Tip:</strong> Use tags to find related content
           </p>
-          <Link
+          <a
             href="/content-showcase"
             className="text-blue-600 font-medium hover:text-blue-800 transition-colors text-sm"
           >
             View All Content →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

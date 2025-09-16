@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025SingularityBreakthroughPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -149,21 +149,21 @@ const AI2025SingularityBreakthroughPromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-purple-900 font-bold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 <span className="mr-2">📖</span>
                 Read {currentItem.type === 'blog' ? 'Article' : currentItem.type === 'case-study' ? 'Case Study' : 'Guide'}
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 <span className="mr-2">🚀</span>
                 Start Your Singularity Journey
-              </Link>
+              </a>
             </div>
           </div>
 

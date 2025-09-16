@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
@@ -109,23 +109,23 @@ const UltimateContentRevolution2025Banner = () => {
 
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 items-center">
-              <Link
+              <a
                 href="/ultimate-content-revolution-2025"
                 className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <span className="relative z-10">Explore Now</span>
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="/ai-2025-ultimate-breakthrough"
                 className="group inline-flex items-center px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <Brain className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                 View Breakthroughs
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+              </a>
             </div>
 
             {/* Close Button */}

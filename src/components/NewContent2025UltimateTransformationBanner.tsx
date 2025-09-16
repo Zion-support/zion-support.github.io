@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersShield
 
 export default function NewContent2025UltimateTransformationBanner() {
@@ -70,13 +70,13 @@ export default function NewContent2025UltimateTransformationBanner() {
                   </div>
                 ))}
               </div>
-              <Link 
+              <a 
                 href={content.link}
                 className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Content
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -106,19 +106,19 @@ export default function NewContent2025UltimateTransformationBanner() {
               Join thousands of companies already using our AI solutions to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/ai-2025-ultimate-breakthrough" 
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 View All Content
-              </Link>
+              </a>
             </div>
           </div>
         </div>

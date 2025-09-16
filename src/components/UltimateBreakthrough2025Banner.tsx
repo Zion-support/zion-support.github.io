@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthrough2025Banner = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -152,12 +152,12 @@ const UltimateBreakthrough2025Banner = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <Link
+                <a
                   href={currentContent.url}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Read Now →
-                </Link>
+                </a>
                 <span className="text-sm opacity-80">{currentContent.readingTime}</span>
               </div>
             </div>
@@ -193,18 +193,18 @@ const UltimateBreakthrough2025Banner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
-            <Link
+            <a
               href="/resources/ai-2025-2026-ultimate-breakthrough-implementation-guide"
               className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Implementation Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
         </div>
 

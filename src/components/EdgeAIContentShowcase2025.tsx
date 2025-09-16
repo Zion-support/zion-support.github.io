@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const EdgeAIContentShowcase2025 = () => {
   const edgeAIContent = [
@@ -223,12 +223,12 @@ const EdgeAIContentShowcase2025 = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={content.url}
                   className={`w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg font-semibold text-center block hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                 >
                   {content.type === 'Tool' ? 'Use Tool' : 'Read More'} →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -269,18 +269,18 @@ const EdgeAIContentShowcase2025 = () => {
               Join hundreds of companies achieving 450% ROI with our proven edge AI implementation strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

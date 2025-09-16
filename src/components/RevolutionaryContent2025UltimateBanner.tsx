@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2025UltimateBanner = () => {
   return (
@@ -82,18 +82,18 @@ const RevolutionaryContent2025UltimateBanner = () => {
               case studies, and implementation guides.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/blog"
                 className="bg-black text-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
               >
                 Explore All Content
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/case-studies"
                 className="border-2 border-black text-black px-8 py-3 rounded-lg font-semibold hover:bg-black hover:text-yellow-400 transition-colors"
               >
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

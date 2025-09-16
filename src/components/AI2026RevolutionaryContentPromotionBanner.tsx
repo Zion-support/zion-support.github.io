@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026RevolutionaryContentPromotionBanner() {
   return (
@@ -56,46 +56,46 @@ export default function AI2026RevolutionaryContentPromotionBanner() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-breakthrough-revolutionary-content"
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
             >
               🌌 Explore Revolutionary Content
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2026-quantum-neural-fusion-success"
               className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-white/10"
             >
               🏆 View 15,000% ROI Success
-            </Link>
+            </a>
           </div>
           
           {/* Additional links */}
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
+            <a 
               href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
               className="text-pink-400 hover:text-pink-300 transition-colors"
             >
               ⚛️ Quantum-Neural Fusion →
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog/ai-2026-consciousness-integration-breakthrough"
               className="text-indigo-400 hover:text-indigo-300 transition-colors"
             >
               🧠 Consciousness Integration →
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog/ai-2026-transcendent-intelligence-breakthrough"
               className="text-purple-400 hover:text-purple-300 transition-colors"
             >
               🌟 Transcendent Intelligence →
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources/ai-2026-ultimate-implementation-master-guide"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               📚 Implementation Guide →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

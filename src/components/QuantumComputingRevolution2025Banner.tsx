@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingRevolution2025Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -88,18 +88,18 @@ const QuantumComputingRevolution2025Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/quantum-computing-2025"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Quantum AI
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-demo"
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
             >
               Try Quantum Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

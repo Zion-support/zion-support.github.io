@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026BreakthroughRevolutionaryContentBanner() {
   return (
@@ -54,42 +54,42 @@ export default function AI2026BreakthroughRevolutionaryContentBanner() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-breakthrough-revolutionary-content"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🌌 Explore Revolutionary Content
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2026-quantum-neural-fusion-success"
               className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg"
             >
               📊 View 15,000% ROI Success
-            </Link>
+            </a>
           </div>
 
           {/* Additional links */}
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
+            <a 
               href="/resources/ai-2026-ultimate-implementation-master-guide"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               📚 Master Implementation Guide
-            </Link>
+            </a>
             <span className="text-gray-500">•</span>
-            <Link 
+            <a 
               href="/tools/ai-2026-predictive-calculator"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               🧮 Predictive Calculator
-            </Link>
+            </a>
             <span className="text-gray-500">•</span>
-            <Link 
+            <a 
               href="/webinars/ai-2026-revolutionary-breakthroughs"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               🔥 Revolutionary Webinar
-            </Link>
+            </a>
           </div>
         </div>
       </div>

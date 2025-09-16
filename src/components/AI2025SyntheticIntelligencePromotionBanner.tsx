@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025SyntheticIntelligencePromotionBanner() {
   return (
@@ -45,18 +45,18 @@ export default function AI2025SyntheticIntelligencePromotionBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
+            <a 
               href="/blog/ai-2025-synthetic-intelligence-revolution"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🧠 Explore the Technology
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough"
               className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
             >
               🏆 View 50,000% ROI Success
-            </Link>
+            </a>
           </div>
           
           {/* Implementation Guide CTA */}
@@ -67,7 +67,7 @@ export default function AI2025SyntheticIntelligencePromotionBanner() {
             <p className="text-gray-200 mb-4">
               Get your comprehensive blueprint for implementing synthetic intelligence and achieving unprecedented ROI.
             </p>
-            <Link 
+            <a 
               href="/resources/ai-2025-synthetic-intelligence-implementation-guide"
               className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300"
             >
@@ -75,7 +75,7 @@ export default function AI2025SyntheticIntelligencePromotionBanner() {
               <svg className="w-5 h-5 ml-2" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </a>
           </div>
           
           {/* Trust Indicators */}

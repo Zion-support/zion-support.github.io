@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 
@@ -86,22 +86,22 @@ export default function UltimatePromotionalBanner() {
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
-            <Link
+            <a
               href="/contact"
               className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center"
             >
               <Zap className="w-5 h-5 mr-2" />
               Claim 50% Discount Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/ai-automation-services"
               className="group border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 flex items-center"
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               Learn More
-            </Link>
+            </a>
           </motion.div>
 
           {/* Trust indicators */}

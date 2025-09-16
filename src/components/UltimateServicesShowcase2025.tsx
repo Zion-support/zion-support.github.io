@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
 
@@ -204,13 +204,13 @@ export default function UltimateServicesShowcase2025() {
                 </div>
 
                 {/* CTA */}
-                <Link
+                <a
                   href={`/services/${service.id}`}
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 rounded-xl font-semibold transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center"
                 >
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -266,21 +266,21 @@ export default function UltimateServicesShowcase2025() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               <Zap className="w-5 h-5 mr-2" />
               Get Free Consultation
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/case-studies"
               className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

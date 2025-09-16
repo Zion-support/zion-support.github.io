@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
@@ -327,14 +327,14 @@ export default function PricingPage() {
 
                         {/* CTA */}
                         <div className="flex items-center justify-between">
-                          <Link href={service.link || `/services/${service.id}`}>
+                          <a href={service.link || `/services/${service.id}`}>
                             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                               <span className="flex items-center">
                                 Learn More
                                 <ArrowRight className="w-4 h-4 ml-2" />
                               </span>
                             </button>
-                          </Link>
+                          </a>
                           <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                         </div>
                       </div>
@@ -364,12 +364,12 @@ export default function PricingPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Link href="/contact">
+                <a href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                     <Phone className="inline-block w-5 h-5 mr-2" />
                     Schedule Consultation
                   </button>
-                </Link>
+                </a>
                 <a href={`mailto:${contactInfo.email}`}>
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105">
                     <Mail className="inline-block w-5 h-5 mr-2" />

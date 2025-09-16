@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
@@ -167,21 +167,21 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
+                      <a
                         href="/showcase/ultimate-2025"
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
                       >
                         Explore Showcase
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      </a>
                       
-                      <Link
+                      <a
                         href="/demo"
                         className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
                       >
                         <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                         Watch Demo
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </motion.div>

@@ -30,7 +30,7 @@ import {
   Heart,
   Bookmark
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentDiscoveryWidget2026 = () => {
   const [searchQuerysetSearchQuery] = useState('');
@@ -449,13 +449,13 @@ const UltimateContentDiscoveryWidget2026 = () => {
                       </button>
                     </div>
                     
-                    <Link
+                    <a
                       href={`/content/${item.id}`}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                     >
                       Explore
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>

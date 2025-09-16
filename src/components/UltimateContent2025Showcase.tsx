@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import Image from 'next/image';
 
 const UltimateContent2025Showcase = () => {
@@ -151,12 +151,12 @@ const UltimateContent2025Showcase = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <a
                   href={item.href}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center block hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Read Now →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -206,18 +206,18 @@ const UltimateContent2025Showcase = () => {
             Get personalized AI transformation consultation and implementation roadmap
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Free Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Browse All Resources
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
   return (
@@ -105,24 +105,24 @@ export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
+          <a 
             href="/blog/ai-2026-neural-consciousness-breakthrough"
             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             🧠 Explore Neural Consciousness
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/case-studies/ai-2026-neural-consciousness-healthcare-breakthrough"
             className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
           >
             🏥 View Healthcare Case Study
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/resources/ai-2026-neural-consciousness-implementation-guide"
             className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
           >
             📚 Implementation Guide
-          </Link>
+          </a>
         </div>
         
         {/* Trust Indicators */}

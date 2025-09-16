@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpZapBrainCpuGlobeShieldRocket
 
 const RevolutionaryTechTrends2026PromotionBanner = () => {
@@ -169,13 +169,13 @@ const RevolutionaryTechTrends2026PromotionBanner = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <Link
+            <a
               href="/revolutionary-tech-trends-2026"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
             >
               Explore All Trends
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

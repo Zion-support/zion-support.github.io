@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateAutomationRevolution2025Showcase = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -223,7 +223,7 @@ const UltimateAutomationRevolution2025Showcase = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <a
                   href={item.url}
                   className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
@@ -235,7 +235,7 @@ const UltimateAutomationRevolution2025Showcase = () => {
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -251,18 +251,18 @@ const UltimateAutomationRevolution2025Showcase = () => {
               Get expert implementation help and transform your business with revolutionary AI automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="inline-flex items-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get Implementation Help
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

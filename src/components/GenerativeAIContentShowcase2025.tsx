@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const GenerativeAIContentShowcase2025 = () => {
   const [activeFiltersetActiveFilter] = useState('all');
@@ -251,12 +251,12 @@ const GenerativeAIContentShowcase2025 = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={item.url}
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r ${getTypeColor(item.type)} text-white hover:shadow-lg transform hover:scale-105`}
                 >
                   Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'} →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -272,18 +272,18 @@ const GenerativeAIContentShowcase2025 = () => {
               Join the Fortune 500 companies achieving 2,500% ROI with our proven generative AI implementation framework.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get AI Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

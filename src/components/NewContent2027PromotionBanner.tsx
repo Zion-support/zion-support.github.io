@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2027PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -73,18 +73,18 @@ const NewContent2027PromotionBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="#new-content-showcase"
                   className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Explore New Content →
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/resources"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
                   View All Resources
-                </Link>
+                </a>
               </div>
             </div>
 

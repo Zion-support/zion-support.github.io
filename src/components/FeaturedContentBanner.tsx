@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface FeaturedContent {
   id: string;
@@ -118,7 +118,7 @@ export default function FeaturedContentBanner() {
                   <p className="text-gray-200 mb-4 text-lg">
                     {currentContent.description}
                   </p>
-                  <Link
+                  <a
                     href={currentContent.link}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                   >
@@ -126,7 +126,7 @@ export default function FeaturedContentBanner() {
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function FeaturedContentBanner() {
           {/* Quick Links */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
             {featuredContent.slice(04).map((content) => (
-              <Link
+              <a
                 key={content.id}
                 href={content.link}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
@@ -161,7 +161,7 @@ export default function FeaturedContentBanner() {
                 <div className="text-xs text-gray-300 mt-1">
                   {content.roi}
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

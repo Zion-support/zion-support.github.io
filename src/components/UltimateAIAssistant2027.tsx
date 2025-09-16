@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateAIAssistant2027() {
   const [currentCapabilitysetCurrentCapability] = useState(0);
@@ -248,18 +248,18 @@ export default function UltimateAIAssistant2027() {
             Join thousands of users already experiencing the power of transcendent AI assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2027-2030-future-predictions" 
               className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Try AI Assistant
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Expert Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

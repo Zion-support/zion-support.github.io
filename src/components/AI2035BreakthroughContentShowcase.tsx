@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2035BreakthroughContentShowcase = () => {
   const breakthroughContent = [
@@ -207,7 +207,7 @@ const AI2035BreakthroughContentShowcase = () => {
                   <span>{content.readTime}</span>
                   <span>{content.publishDate}</span>
                 </div>
-                <Link
+                <a
                   to={`/blog/${content.id}`}
                   className="mt-4 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                 >
@@ -215,7 +215,7 @@ const AI2035BreakthroughContentShowcase = () => {
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -248,12 +248,12 @@ const AI2035BreakthroughContentShowcase = () => {
                   <div className="text-2xl font-bold text-green-600">
                     {content.roi} ROI
                   </div>
-                  <Link
+                  <a
                     to={content.link}
                     className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Explore →
-                  </Link>
+                  </a>
                 </div>
     <div className="py-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -301,7 +301,7 @@ const AI2035BreakthroughContentShowcase = () => {
                   <span>{content.readTime}</span>
                   <span>{content.publishDate}</span>
                 </div>
-                <Link
+                <a
                   to={`/blog/${content.id}`}
                   className="mt-4 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                 >
@@ -309,7 +309,7 @@ const AI2035BreakthroughContentShowcase = () => {
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -324,18 +324,18 @@ const AI2035BreakthroughContentShowcase = () => {
             Join thousands of enterprises already leveraging AI 2035 breakthrough technologies for unprecedented success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2035-implementation-guide"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               📚 Get Implementation Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white hover:bg-gray-50 text-purple-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 border-2 border-purple-600"
             >
               💬 Contact Our Experts
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -373,7 +373,7 @@ const AI2035BreakthroughContentShowcase = () => {
                 <h4 className="text-lg font-bold mb-3 text-white">{study.title}</h4>
                 <p className="text-purple-100 text-sm mb-4">{study.description}</p>
                 <div className="text-purple-200 text-sm font-semibold">{study.company}</div>
-                <Link
+                <a
                   to={`/case-studies/${study.id}`}
                   className="mt-4 inline-flex items-center text-purple-300 hover:text-white transition-colors text-sm font-semibold"
                 >
@@ -381,7 +381,7 @@ const AI2035BreakthroughContentShowcase = () => {
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -397,18 +397,18 @@ const AI2035BreakthroughContentShowcase = () => {
               Join thousands of forward-thinking organizations already implementing AI 2035 breakthrough technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ai-2035-implementation-guide"
                 className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Get Implementation Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

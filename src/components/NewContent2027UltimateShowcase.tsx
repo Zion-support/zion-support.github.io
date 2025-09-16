@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2027UltimateShowcase = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -117,18 +117,18 @@ const NewContent2027UltimateShowcase = () => {
               that will transform your business in 2027 and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="#featured-content"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Featured Content
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 View All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -182,12 +182,12 @@ const NewContent2027UltimateShowcase = () => {
                               <span>🔥 Trending</span>
                             </div>
                           </div>
-                          <Link
+                          <a
                             href={item.link}
                             className={`px-6 py-3 bg-gradient-to-r ${item.color} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                           >
                             Read More →
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -254,12 +254,12 @@ const NewContent2027UltimateShowcase = () => {
                     )}
                   </div>
                   
-                  <Link
+                  <a
                     href={item.link}
                     className={`mt-4 block w-full text-center px-4 py-2 bg-gradient-to-r ${item.color} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Explore Content
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -275,18 +275,18 @@ const NewContent2027UltimateShowcase = () => {
             Join thousands of businesses already leveraging our revolutionary AI technologies and content insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Browse All Resources
-            </Link>
+            </a>
           </div>
         </div>
       </section>

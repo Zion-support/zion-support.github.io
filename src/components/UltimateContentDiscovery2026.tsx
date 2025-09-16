@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentDiscovery2026 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -162,7 +162,7 @@ const UltimateContentDiscovery2026 = () => {
                   {item.description}
                 </p>
                 
-                <Link
+                <a
                   href={item.href}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1 transform duration-200"
                 >
@@ -170,7 +170,7 @@ const UltimateContentDiscovery2026 = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -179,12 +179,12 @@ const UltimateContentDiscovery2026 = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-1 rounded-2xl inline-block">
-            <Link
+            <a
               href="/ai-2026-revolutionary-content"
               className="block bg-white text-gray-900 px-12 py-6 rounded-xl font-bold text-xl hover:bg-gray-50 transition-colors"
             >
               🚀 Explore All 2026 Content
-            </Link>
+            </a>
           </div>
         </div>
       </div>
