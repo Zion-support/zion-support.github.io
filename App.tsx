@@ -95,6 +95,11 @@ import ConsciousnessComputingRevolution2035 from './src/pages/ConsciousnessCompu
 import InterdimensionalTechRevolution2040 from './src/pages/InterdimensionalTechRevolution2040';
 import UltimateTechShowcase2030 from './src/components/UltimateTechShowcase2030';
 import RevolutionaryContentBanner2030 from './src/components/RevolutionaryContentBanner2030';
+import UltimateTechShowcase2035 from './src/pages/UltimateTechShowcase2035';
+import NeuralConsciousnessRevolution2035 from './src/pages/NeuralConsciousnessRevolution2035';
+import InteractiveTechDemo2035 from './src/components/InteractiveTechDemo2035';
+import RevolutionaryContentBanner2035 from './src/components/RevolutionaryContentBanner2035';
+import CaseStudyGalacticCorp2035 from './src/pages/CaseStudyGalacticCorp2035';
 
 export default function App(): JSX.Element {
   return (
@@ -129,6 +134,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* Revolutionary Content Banner 2035 - NEW */}
+                <RevolutionaryContentBanner2035 />
 
                 {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -260,6 +268,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/InterdimensionalTechRevolution2040" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 Interdimensional 2040 →
+                    </a>
+                    <a href="/pages/UltimateTechShowcase2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 Ultimate Tech 2035 →
+                    </a>
+                    <a href="/pages/NeuralConsciousnessRevolution2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 Neural Consciousness 2035 →
+                    </a>
+                    <a href="/interactive-demo-2035" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ Interactive Demo 2035 →
                     </a>
                   </div>
                 </div>
@@ -540,6 +557,11 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <UltimateTechShowcase2030 />
                 </div>
+
+                {/* Interactive Tech Demo 2035 - NEW */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2035 />
+                </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -634,6 +656,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/InterdimensionalTechRevolution2040" element={<InterdimensionalTechRevolution2040 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/revolutionary-showcase-2030" element={<UltimateTechShowcase2030 />} />
+          <Route path="/pages/UltimateTechShowcase2035" element={<UltimateTechShowcase2035 />} />
+          <Route path="/pages/NeuralConsciousnessRevolution2035" element={<NeuralConsciousnessRevolution2035 />} />
+          <Route path="/interactive-demo-2035" element={<InteractiveTechDemo2035 />} />
+          <Route path="/case-studies/galactic-corp" element={<CaseStudyGalacticCorp2035 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
           <Route path="/contact" element={
