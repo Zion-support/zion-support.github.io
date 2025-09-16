@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,12 +19,16 @@ import React from 'react'
 import { getLatestUpdates } from '@/data/updates'
 >>>>>>> origin/feat/updates-content-and-advertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+import React from 'react'
+import { getLatestUpdates } from '../data/updates'
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 import {
-  ChartBarIcon,
+  LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
-  LightBulbIcon,
   ShieldCheckIcon,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -51,6 +56,9 @@ import {
 >>>>>>> origin/feat/content-promo
 =======
 >>>>>>> origin/feat/new-updates-and-homepage-promo
+=======
+  ChartBarIcon,
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
   UserGroupIcon
 =======
 import React from 'react'
@@ -66,12 +74,15 @@ import {
   UserGroupIcon,
 >>>>>>> origin/feat/research-article-promo
 } from '@heroicons/react/24/outline'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
 import { getLatestUpdates } from '../data/updates'
 =======
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 
 const features = [
 <<<<<<< HEAD
@@ -236,6 +247,7 @@ const whatsNew = [
 export default function HomePage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-black min-h-screen">
 <<<<<<< HEAD
 =======
@@ -331,6 +343,11 @@ export default function HomePage() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
 >>>>>>> origin/feat/case-studies-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
 <<<<<<< HEAD
@@ -367,8 +384,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
               </a>
-              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                Learn More <span aria-hidden="true">→</span>
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
@@ -377,8 +394,11 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
                 href="/updates/autonomous-ops-sre-for-agents"
 =======
                 href="/blog/ai-2026-policy-as-code-production-blueprint"
@@ -566,16 +586,20 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/autonomous-ops-playbook-2026"
+<<<<<<< HEAD
 >>>>>>> origin/feature/autonomous-ops-sre-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Deep Dive: Agent Observability
+                Launch: Autonomous Ops Playbook
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-autonomous-business-operations-complete-guide"
+                href="/updates/rag-production-patterns"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
+<<<<<<< HEAD
                 Guide: Autonomous Business Ops
                 <span aria-hidden>→</span>
               </a>
@@ -585,6 +609,9 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
                 Blueprint: Policy‑as‑Code
+=======
+                Guide: RAG Production Patterns
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -667,6 +694,7 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {latest.map((item) => (
 =======
             {[
@@ -703,6 +731,9 @@ export default function HomePage() {
               }
             ].map((item) => (
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+            {getLatestUpdates(3).map((item) => (
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
 =======
@@ -758,6 +789,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
 <<<<<<< HEAD
@@ -768,14 +800,19 @@ export default function HomePage() {
                 summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
                 href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
 >>>>>>> origin/feature/autonomous-ops-sre-content
+=======
+                title: 'AI 2026: Autonomous Ops and SRE for Agents',
+                summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
+                href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               },
               {
-                title: 'AI 2026: Autonomous Business Operations — Complete Guide',
-                summary:
-                  'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
-                href: '/blog/ai-2026-autonomous-business-operations-complete-guide'
+                title: 'AI 2026: LLM Evals Maturity Model',
+                summary: 'Evaluation-first framework with quality gates and policy-as-code.',
+                href: '/blog/ai-2026-llm-evals-maturity-model'
               },
               {
+<<<<<<< HEAD
                 title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
@@ -864,6 +901,11 @@ export default function HomePage() {
                 summary: 'Reference architecture, safety gates, and rollout checklist for AI commerce.',
                 href: '/blog/ai-2026-sovereign-ai-commerce'
 >>>>>>> origin/feat/new-content-2025-09-15-b
+=======
+                title: 'Enterprise AI Security Blueprint (2025)',
+                summary: 'Layered controls across model, data, runtime, and supply chain.',
+                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               }
 =======
                 href: '/updates',
@@ -1205,6 +1247,7 @@ export default function HomePage() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -1477,3 +1520,7 @@ export default function HomePage() {
 
 >>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
