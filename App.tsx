@@ -98,6 +98,8 @@ import './src/styles/optimizations.css';
 import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import AI2026EnterpriseAutomation from './src/pages/AI2026EnterpriseAutomation';
 import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
@@ -220,6 +222,7 @@ export default function App(): JSX.Element {
         <SEOAnalyzer />
         <ErrorMonitoringSystem />
         <NewContentBanner2026 />
+        <NewContentPromotionBanner2026 />
         <AdvancedPerformanceOptimizer2025 />
         <AdvancedSEOOptimizer2025 />
         <AdvancedAnalyticsTracker2025 />
@@ -1384,6 +1387,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/AIExecutiveStrategy2026" element={<AIExecutiveStrategy2026 />} />
+          <Route path="/pages/AI2026EnterpriseAutomation" element={<AI2026EnterpriseAutomation />} />
           
           {/* New Revolutionary Content 2026 Routes */}
           <Route path="/blog/quantum-neural-networks-next-frontier-ai" element={<QuantumNeuralNetworks2026 />} />
