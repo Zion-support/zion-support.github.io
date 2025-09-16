@@ -40,6 +40,8 @@ import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryTechBanner2026 from './src/components/RevolutionaryTechBanner2026';
+import TrendingTopicsWidget2026 from './src/components/TrendingTopicsWidget2026';
+import RevolutionaryServicesShowcase2026 from './src/pages/RevolutionaryServicesShowcase2026';
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
@@ -543,6 +545,14 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2026 */}
+                <RevolutionaryContentBanner2026 />
+                
+                {/* NEW: Trending Topics Widget */}
+                <div className="max-w-7xl mx-auto px-4 py-8">
+                  <TrendingTopicsWidget2026 />
+                </div>
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2606,6 +2616,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
           <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
+          <Route path="/pages/RevolutionaryServicesShowcase2026" element={<RevolutionaryServicesShowcase2026 />} />
+          <Route path="/trending-topics" element={<TrendingTopicsWidget2026 />} />
+          <Route path="/revolutionary-content-banner" element={<RevolutionaryContentBanner2026 />} />
 <<<<<<< HEAD
 <<<<<<< HEAD
           <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
