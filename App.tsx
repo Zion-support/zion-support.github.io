@@ -122,6 +122,9 @@ import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
 import RevolutionaryTechInsights2027 from './src/pages/RevolutionaryTechInsights2027';
 import UltimateContentBanner from './src/components/UltimateContentBanner';
+import RevolutionaryAdvertisingBanner2026 from './src/components/RevolutionaryAdvertisingBanner2026';
+import UltimateServicesShowcase2026 from './src/components/UltimateServicesShowcase2026';
+import RevolutionaryBlogShowcase2026 from './src/components/RevolutionaryBlogShowcase2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2175,6 +2178,15 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
+                
+                {/* NEW: Revolutionary Advertising Banner 2026 */}
+                <RevolutionaryAdvertisingBanner2026 />
+                
+                {/* NEW: Ultimate Services Showcase 2026 */}
+                <UltimateServicesShowcase2026 />
+                
+                {/* NEW: Revolutionary Blog Showcase 2026 */}
+                <RevolutionaryBlogShowcase2026 />
               </main>
             </div>
           } />
