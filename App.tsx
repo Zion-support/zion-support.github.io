@@ -70,6 +70,10 @@ import UltimateContentShowcase from './src/components/UltimateContentShowcase';
 import UltimateTechShowcase2029 from './src/pages/UltimateTechShowcase2029';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
+import NewContentAdBanner2026 from './src/components/NewContentAdBanner2026';
+import InteractiveNewContentShowcase from './src/components/InteractiveNewContentShowcase';
+import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
+import AIInnovationHub2026 from './src/pages/AIInnovationHub2026';
 
 export default function App(): JSX.Element {
   return (
@@ -87,6 +91,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* NEW: 2026 Content Ad Banner */}
+                <NewContentAdBanner2026 />
 
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -199,6 +206,12 @@ export default function App(): JSX.Element {
                     <a href="/pages/ConsciousnessComputing2026" className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       💭 Consciousness Computing 2026
                     </a>
+                    <a href="/pages/RevolutionaryTechShowcase2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 NEW: Revolutionary Tech Showcase 2026
+                    </a>
+                    <a href="/pages/AIInnovationHub2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🤖 NEW: AI Innovation Hub 2026
+                    </a>
                     <a href="/pages/AdvancedAISystems2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧠 Advanced AI Systems
                     </a>
@@ -233,6 +246,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Interactive New Content Showcase */}
+                <div className="mb-12">
+                  <InteractiveNewContentShowcase />
                 </div>
 
                 {/* Revolutionary Content Showcase */}
@@ -772,6 +790,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechShowcase2029" element={<UltimateTechShowcase2029 />} />
           <Route path="/pages/ConsciousnessComputing2026" element={<ConsciousnessComputing2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
+          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
           <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
           <Route path="/pages/AIContentGenerator" element={<AIContentGenerator />} />
           <Route path="/pages/AIMatcher" element={<AIMatcher />} />
