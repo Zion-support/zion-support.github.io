@@ -227,8 +227,6 @@ const QuantumConsciousness2027: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
-      </div>
     </div>
   );
 };
