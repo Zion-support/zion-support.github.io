@@ -123,11 +123,18 @@ export default function BlogIndexPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* New: Reliable Real-Time Agents (2026) */}
-          <div key="ai-2026-reliable-real-time-agents" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
-            <h2 className="text-white text-xl font-semibold mb-2">Reliable Real‑Time Agents (2026)</h2>
-            <p className="text-gray-400 mb-4">Design sub‑200ms perceived latency with streaming, speculation, and safe fallbacks.</p>
-            <Link href={`/blog/ai-2026-reliable-real-time-agents`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+          {/* New: Agentic Evidence Graphs */}
+          <div key="ai-2026-agentic-evidence-graphs" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
+            <h2 className="text-white text-xl font-semibold mb-2">Agentic Evidence Graphs</h2>
+            <p className="text-gray-400 mb-4">Connect evals, traces, policy events, and incidents into an auditable graph.</p>
+            <Link href={`/blog/ai-2026-agentic-evidence-graphs`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+          </div>
+
+          {/* New: Reliable Agent Change Windows */}
+          <div key="ai-2026-reliable-agent-change-windows" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
+            <h2 className="text-white text-xl font-semibold mb-2">Reliable Agent Change Windows</h2>
+            <p className="text-gray-400 mb-4">Define and enforce safe change windows tied to SLOs and eval gates.</p>
+            <Link href={`/blog/ai-2026-reliable-agent-change-windows`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
           </div>
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
