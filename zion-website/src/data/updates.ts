@@ -9,6 +9,27 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Launch: Autonomous Incident Simulator v1.2',
+    summary: 'Run realistic incident drills with eval gates, rollback playbooks, and telemetry.',
+    href: '/updates/incident-simulation-toolkit-1-2',
+    date: '2025-09-16',
+    tag: 'Release'
+  },
+  {
+    title: 'Playbook: Real-Time Model Routing (2026)',
+    summary: 'Evidence-driven routing patterns balancing cost, latency, and risk with objective evals.',
+    href: '/updates/real-time-model-routing-playbook-2026',
+    date: '2025-09-16',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Showcase: Production Agent Reliability Dashboards',
+    summary: 'Unified SLO scorecards with override rates, groundedness, and incident MTTR trends.',
+    href: '/updates/agent-reliability-dashboards-showcase',
+    date: '2025-09-16',
+    tag: 'Showcase'
+  },
+  {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
     summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
     href: '/updates/grounded-generation-guardrails-2026',

@@ -10,8 +10,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Grounded Generation Guardrails (2026) —
-            <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            New: Autonomous Incident Simulator v1.2 —
+            <a href="/updates/incident-simulation-toolkit-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -41,10 +41,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Evidence‑Driven Routing Case Studies (2026) —
-            <a href="/updates/evidence-driven-routing-case-studies-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Real‑Time Model Routing Playbook (2026) —
+            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the playbook</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">routing playbook</a>
+            <a href="/updates/agent-reliability-dashboards-showcase" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability dashboards</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -65,11 +65,11 @@ export default function HomePage() {
             <p className="mt-2 text-sm text-gray-300">Run realistic drills with eval gates and automated rollbacks.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Discover →</span>
           </a>
-          <a href="/updates/real-time-rag-benchmark-suite-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Guide</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Real-Time RAG Benchmark Suite</h3>
-            <p className="mt-2 text-sm text-gray-300">Standardized tasks, datasets, and rubrics under latency budgets.</p>
-            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Read more →</span>
+          <a href="/updates/agent-reliability-dashboards-showcase" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Showcase</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Agent Reliability Dashboards</h3>
+            <p className="mt-2 text-sm text-gray-300">Unified SLO scorecards with override rates and groundedness.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">See dashboards →</span>
           </a>
           <a href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
             <div className="text-xs text-blue-300">Deep Dive</div>
@@ -112,10 +112,10 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Grounded Generation Guardrails —
-            <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Autonomous Incident Simulator v1.2 —
+            <a href="/updates/incident-simulation-toolkit-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/evidence-driven-routing-case-studies-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Routing Case Studies</a>
+            Also read: <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Routing Playbook</a>
           </p>
         </div>
       </div>
