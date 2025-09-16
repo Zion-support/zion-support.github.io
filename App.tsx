@@ -88,6 +88,10 @@ import CosmicAIConsciousness2029 from './src/pages/CosmicAIConsciousness2029';
 import TranscendentTech2030 from './src/pages/TranscendentTech2030';
 import UltimateRevolutionaryBanner from './src/components/UltimateRevolutionaryBanner';
 import UltimateInteractiveShowcase from './src/components/UltimateInteractiveShowcase';
+import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
+import EnhancedSearch from './src/components/EnhancedSearch';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import RevolutionaryContentShowcase2025 from './src/pages/RevolutionaryContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -222,6 +226,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 Revolutionary Tech 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryContentShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 Content Showcase 2025 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ Ultimate Breakthrough →
                     </a>
                   </div>
                 </div>
@@ -599,6 +612,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2028" element={<UltimateTechRevolution2028 />} />
           <Route path="/pages/CosmicAIConsciousness2029" element={<CosmicAIConsciousness2029 />} />
           <Route path="/pages/TranscendentTech2030" element={<TranscendentTech2030 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/RevolutionaryContentShowcase2025" element={<RevolutionaryContentShowcase2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
           <Route path="/contact" element={
