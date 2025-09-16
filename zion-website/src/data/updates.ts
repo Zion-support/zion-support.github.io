@@ -25,6 +25,36 @@ export const updates: UpdateItem[] = [
         date: '2025-09-16',
         tag: 'Guide',
     },
+=======
+    // Fresh content (2025-09-16)
+    {
+        title: 'Blueprint: Agent Posture Management — Continuous Controls',
+        summary: 'Live posture checks, policy gates, and evidence logs for production agents.',
+        href: '/updates/agent-posture-management-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Guide: Real‑Time Guardrail Metrics',
+        summary: 'Operational metrics to monitor tool‑use safety, violations, and remediation speed.',
+        href: '/updates/real-time-guardrail-metrics-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Report: Evidence‑First Incident Postmortems',
+        summary: 'Trace diffs, lineage, and policy exception trails for reproducible analysis.',
+        href: '/updates/evidence-first-incident-postmortems-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    {
+        title: 'Launch: Agent Billing Controls v1.0',
+        summary: 'Budgets, quotas, and safe degradation with policy‑aware cost routing.',
+        href: '/updates/agent-billing-controls-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
     // Newly added updates (2025-09-16)
     {
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',

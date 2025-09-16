@@ -73,11 +73,20 @@ export default function HomePage() {
             New: Production Evidence Bundles (2026) —
             <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Agent Posture Management —
+            <a href="/updates/agent-posture-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Evidence Bundles —
+            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Canary + Shadow Testing for Agents —
             <a href="/updates/canary-and-shadow-testing-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">field guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Grounded Generation Guardrails —
             <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Real‑Time Guardrail Metrics —
+            <a href="/updates/real-time-guardrail-metrics-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Failure Analysis Toolkit (2026) —
             <a href="/updates/autonomous-failure-analysis-toolkit-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">report</a>
@@ -147,6 +156,9 @@ export default function HomePage() {
             Evals‑in‑Prod Control Plane (2026) —
             <a href="/updates/evals-in-prod-control-plane-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Agent Posture Management —
+            <a href="/updates/agent-posture-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -158,6 +170,15 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Evidence Bundles —
             <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑First Postmortems —
+            <a href="/updates/evidence-first-incident-postmortems-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">report</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Billing Controls —
+            <a href="/updates/agent-billing-controls-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evaluating Multimodal RAG —
+            <a href="/updates/field-guide-evaluating-multimodal-rag" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">field guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Grounded Generation Guardrails —
             <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
