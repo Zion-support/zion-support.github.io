@@ -91,11 +91,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-hydrogen production</li>
               <li>• Self-repairing energy infrastructure</li>
             </ul>
-<<<<<<< HEAD
-            <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
-              Start Bio-Manufacturing →
-            </button>
-=======
             <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Explore Bio-Energy →
             </a>
@@ -165,14 +160,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
-          <h2 className="text-6xl font-bold text-white mb-8">
-            Ready for the Bio Revolution?
-          </h2>
-          <p className="text-3xl text-gray-300 mb-16 max-w-6xl mx-auto">
-            Join the transformation that's redefining life itself through synthetic biology
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Join the Bio Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto text-gray-300">
