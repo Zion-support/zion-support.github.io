@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New blog content (2025-09-16)
+    {
+        title: 'Blueprint: Agent Posture Scorecards (2026)',
+        summary: 'Define SLIs/SLOs, thresholds, and alerts for live agent posture.',
+        href: '/blog/ai-2026-agent-posture-scorecards-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Blueprint: Evidence‑Led Operations (2026)',
+        summary: 'Operate with eval gates, policy‑as‑code, and signed evidence bundles.',
+        href: '/blog/ai-2026-evidence-led-operations-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
     // Added new blog posts (2025-09-16)
     {
         title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
