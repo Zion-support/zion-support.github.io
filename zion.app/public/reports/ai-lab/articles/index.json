@@ -1,5 +1,26 @@
 [
   {
+    "title": "Real-Time Agent Metrics: Best Practices for 2026",
+    "url": "/reports/ai-lab/articles/real-time-agent-metrics-best-practices-2025-09-16.md",
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "tags": ["observability", "agents", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Secure Prompt Engineering: A 2026 Field Guide",
+    "url": "/reports/ai-lab/articles/secure-prompt-engineering-field-guide-2025-09-16.md",
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "tags": ["security", "prompts", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Cost-Aware Model Routing: A 2026 Checklist",
+    "url": "/reports/ai-lab/articles/cost-aware-model-routing-checklist-2025-09-16.md",
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "tags": ["finops", "routing", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",
     "url": "/reports/ai-lab/articles/abduct-act-predict-scaffolding-causal-inference-for-automated-failure-attributio-1757920034174.md",
     "createdAt": "2025-09-15T07:07:14.174Z",
