@@ -237,6 +237,12 @@ export default function HomePage() {
             Incident Simulation Toolkit v1.1 —
             <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Knowledge Graph Builder —
+            <a href="/updates/autonomous-knowledge-graph-builder-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑First Release Management —
+            <a href="/updates/evidence-first-release-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
             <span className="mx-2 text-blue-300/60">|</span>
             New: <a href="/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod — Rollbacks</a>
