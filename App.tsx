@@ -13,6 +13,7 @@ import CaseStudyPage from './src/CaseStudyPage';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+<<<<<<< HEAD
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
@@ -33,6 +34,9 @@ import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+=======
+import AIPlaybook2025 from './src/pages/AIPlaybook2025';
+>>>>>>> origin/feature/ai-playbook-2025
 import './src/index.css';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
@@ -453,6 +457,7 @@ export default function App(): JSX.Element {
                       🧭 Enterprise Copilot 2025
                     </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
 =======
@@ -490,10 +495,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/UltimateAIRevolution2030" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Ultimate AI 2030
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
+=======
+                    <a href="/pages/AIPlaybook2025" className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                      Download AI Playbook 2025
+>>>>>>> origin/feature/ai-playbook-2025
                     </a>
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
 <<<<<<< HEAD
@@ -591,6 +601,10 @@ export default function App(): JSX.Element {
                     <a href="/pages/ComprehensiveServices2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">View all services</a>
                   </div>
                 </section>
+=======
+                {/* Featured Content Section */}
+                <FeaturedContentSection />
+>>>>>>> origin/feature/ai-playbook-2025
 
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -942,6 +956,7 @@ export default function App(): JSX.Element {
               </main>
             </div>
           } />
+<<<<<<< HEAD
         </Routes>
 =======
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
@@ -979,6 +994,12 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIPoweredITAssetManagement" element={<AIPoweredITAssetManagement />} />
           <Route path="/pages/AIServicesPage" element={<AIServicesPage />} />
           <Route path="/pages/AIServicesShowcase" element={<AIServicesShowcase />} />
+=======
+          <Route path="/pages/AIPlaybook2025" element={<AIPlaybook2025 />} />
+          <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
+          <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
+          <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+>>>>>>> origin/feature/ai-playbook-2025
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
 =======
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
