@@ -89,6 +89,34 @@
   ],
   "items": [
     {
+      "title": "Guide — Trusted RAG Playbook (2026)",
+      "href": "/pages/TrustedRAGPlaybook2026",
+      "desc": "Evidence-first patterns to ship grounded Retrieval-Augmented Generation",
+      "createdAt": "2025-09-16T22:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (2026)",
+      "href": "/pages/AgentOpsControlPlane2026",
+      "desc": "Approvals, observability, rollback, and policy-aware permissions",
+      "createdAt": "2025-09-16T22:28:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Guide — Responsible Autonomy (2026)",
+      "href": "/pages/ResponsibleAutonomyGuide2026",
+      "desc": "Practical steps to translate policy into runtime safeguards",
+      "createdAt": "2025-09-16T22:26:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Starter — Operational Evaluation Gates (2026)",
+      "href": "/pages/OperationalEvalGates2026",
+      "desc": "Preflight, canary, and post-release gates that keep AI reliable",
+      "createdAt": "2025-09-16T22:24:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
       "title": "Guide — Shipping Trustworthy RAG in 48 Hours",
       "href": "/pages/EdgeAICompliance2026",
       "desc": "A rapid, practical path to grounded retrieval with eval gates",
