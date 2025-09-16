@@ -315,6 +315,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+<<<<<<< HEAD
 =======
 /* Error States */
 .error {
@@ -346,6 +347,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-12a7
 }
 
 #root {
@@ -354,7 +357,11 @@ body {
   padding: 2rem;
   text-align: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-12a7
