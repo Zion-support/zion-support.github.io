@@ -35,6 +35,8 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+import ComprehensiveContentCarousel from './src/components/ComprehensiveContentCarousel';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
@@ -57,6 +59,13 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
+import EnhancedSearch from './src/components/EnhancedSearch';
+import AdvancedAIConsciousness2030 from './src/pages/AdvancedAIConsciousness2030';
+import QuantumRealityEngine2035 from './src/pages/QuantumRealityEngine2035';
+import NeuralRealityInterface2032 from './src/pages/NeuralRealityInterface2032';
+import FutureTechBreakthroughs2028 from './src/pages/FutureTechBreakthroughs2028';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
@@ -490,6 +499,15 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2026 />
                 </div>
 
+                {/* Interactive Technology Showcase 2028 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2028 />
+                </div>
+
+                {/* Comprehensive Content Carousel */}
+                <div className="mb-12">
+                  <ComprehensiveContentCarousel />
+                </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -570,6 +588,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/enhanced-content-showcase" element={<EnhancedContentShowcase />} />
+          <Route path="/pages/AdvancedAIConsciousness2030" element={<AdvancedAIConsciousness2030 />} />
+          <Route path="/pages/QuantumRealityEngine2035" element={<QuantumRealityEngine2035 />} />
+          <Route path="/pages/NeuralRealityInterface2032" element={<NeuralRealityInterface2032 />} />
+          <Route path="/pages/FutureTechBreakthroughs2028" element={<FutureTechBreakthroughs2028 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
