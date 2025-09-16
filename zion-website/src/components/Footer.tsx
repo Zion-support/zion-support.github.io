@@ -25,70 +25,13 @@ const navigation = {
 }
 
 export default function Footer() {
-  const links = [
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Research', href: '/research' },
-    { name: 'Contact', href: '/contact' },
+  return (
     <footer className="bg-gray-900 border-t border-white/10">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  <li><a href="/solutions/ai-autonomous-research" className="text-base text-gray-300 hover:text-white transition-colors duration-200">AI Research Assistant</a></li>
-                  <li><a href="/solutions/quantum-neural-networks" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Quantum Neural Networks</a></li>
-                  <li><a href="/solutions/autonomous-business" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Autonomous Business Ops</a></li>
-                  <li><a href="/solutions/it-asset-management" className="text-base text-gray-300 hover:text-white transition-colors duration-200">IT Asset Management</a></li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  <li><a href="/about" className="text-base text-gray-300 hover:text-white transition-colors duration-200">About Us</a></li>
-                  <li><a href="/research" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Research</a></li>
-                  <li><a href="/careers" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Careers</a></li>
-                  <li><a href="/contact" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  <li><a href="/support" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Help Center</a></li>
-                  <li><a href="/documentation" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Documentation</a></li>
-                  <li><a href="/api" className="text-base text-gray-300 hover:text-white transition-colors duration-200">API Reference</a></li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  <li><a href="/privacy" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
-                  <li><a href="/terms" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Terms of Service</a></li>
-                  <li><a href="/cookies" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Cookie Policy</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div className="text-center">
+          <p className="text-base text-gray-400">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
         </div>
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
       </div>
-      <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group</p>
     </footer>
   )
+}

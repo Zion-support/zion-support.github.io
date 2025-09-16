@@ -6,14 +6,13 @@ const posts = [
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
-      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.',
+  },
+  {
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
     summary:
-      'Reference architecture, safety gates, and rollout checklist for AI commerce.'
+      'Reference architecture, safety gates, and rollout checklist for AI commerce.',
   },
   {
     slug: 'ai-2026-realtime-evals-at-scale',
@@ -75,11 +74,13 @@ const posts = [
     slug: 'ai-2026-real-time-model-routing-playbook',
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
-      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.',
+  },
+  {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.',
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
