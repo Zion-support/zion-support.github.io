@@ -66,6 +66,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       gradient: 'from-cyan-500 to-violet-500'
     },
     {
+      title: 'Trustworthy Model Routing — Starter Kit (2026)',
+      href: '/blog/ai-2026-trustworthy-model-routing-starter',
+      tag: 'Starter Kit',
+      gradient: 'from-sky-500 to-blue-600'
+    },
+    {
       title: 'Enterprise Automation Strategy 2025',
       href: '/blog/ai-2025-enterprise-automation-strategy',
       tag: 'Automation',
@@ -374,9 +380,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
                   <div className="text-xs opacity-90">7 min • Observability</div>
                 </a>
-                <a href="/blog/ai-customer-agents-2025" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Customer-Facing AI Agents in 2025</div>
-                  <div className="text-xs opacity-90">6 min • Customer AI</div>
+                <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
+                  <div className="text-xs opacity-90">6 min • Routing</div>
                 </a>
               </div>
             </div>
