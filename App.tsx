@@ -58,6 +58,9 @@ import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility202
 import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
 import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
 import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import RevolutionaryContentCarousel2026 from './src/components/RevolutionaryContentCarousel2026';
+import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
@@ -287,6 +290,15 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: Revolutionary Content Promotion Banner 2026 */}
+                <NewContentPromotionBanner2026 />
+                
+                {/* NEW: Revolutionary Content Carousel 2026 */}
+                <RevolutionaryContentCarousel2026 />
+                
+                {/* NEW: Revolutionary Services Showcase 2026 */}
+                <RevolutionaryServicesShowcase2026 />
+                
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 

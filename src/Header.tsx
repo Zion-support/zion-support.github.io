@@ -1,5 +1,6 @@
 import React from 'react';
 import NotificationSystem from './components/NotificationSystem';
+import NewContentNavigation2026 from './components/NewContentNavigation2026';
 
 const Header: React.FC = () => {
   return (
@@ -30,7 +31,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </a>
@@ -46,6 +47,8 @@ const Header: React.FC = () => {
             <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Contact
             </a>
+            {/* New Content Navigation */}
+            <NewContentNavigation2026 />
           </nav>
 
           {/* Right side actions */}
