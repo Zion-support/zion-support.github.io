@@ -34,7 +34,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Evidence Vault v1.2 —
+            New: Zero‑Trust Agent Controllers —
+            <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Change Management Runbook (2026) —
+            <a href="/updates/agent-change-management-runbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence Vault v1.2 —
             <a href="/updates/evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Autonomous Incident Response Copilot —
@@ -45,8 +51,6 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Evals‑in‑Prod Control Plane (2026) —
             <a href="/updates/evals-in-prod-control-plane-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
-            <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
->>>>>>> 792015d920fee648b542fa39972db1e00bbfedab
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
@@ -92,7 +96,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Evidence Vault v1.2 —
+            Fresh: Zero‑Trust Agent Controllers —
+            <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Change Management Runbook (2026) —
+            <a href="/updates/agent-change-management-runbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence Vault v1.2 —
             <a href="/updates/evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Observability Blueprint (2026) —
@@ -103,14 +113,12 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
-            <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Secure Tool Access —
             <a href="/updates/secure-tool-access-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Evaluating Multimodal RAG —
             <a href="/updates/field-guide-evaluating-multimodal-rag" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">field guide</a>
->>>>>>> 792015d920fee648b542fa39972db1e00bbfedab
             <span className="mx-2 text-blue-300/60">|</span>
             Safer Agent Rollouts —
             <a href="/blog/ai-2026-canary-shadow-for-agent-rollouts" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blog</a>

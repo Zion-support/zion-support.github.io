@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Newly added updates (2025-09-16)
+    {
+        title: 'Launch: Zero‑Trust Agent Controllers v1.0',
+        summary: 'Scoped permissions, runtime enforcement, and evidence capture for tool use.',
+        href: '/updates/zero-trust-agent-controllers-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Agent Change Management Runbook (2026)',
+        summary: 'Approval workflows, eval gates, and rollback patterns for safe agent changes.',
+        href: '/updates/agent-change-management-runbook-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     {
         title: 'Launch: Trustworthy AI Evidence Vault v1.2',
         summary: 'Faster evidence bundling, expanded policy checks, and auditor-ready exports.',
@@ -60,7 +75,6 @@ export const updates: UpdateItem[] = [
         tag: 'Blog',
     },
     {
->>>>>>> 792015d920fee648b542fa39972db1e00bbfedab
         title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
         summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
         href: '/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive',
