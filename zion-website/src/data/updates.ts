@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: Agent Governance Checklist (2026 Preview)',
+		summary: 'Practical controls for safe, auditable agents with eval gates and evidence.',
+		href: '/updates/agent-governance-checklist-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Announcement: AI Lab Content Drop — Observability & Safety',
+		summary: 'New articles on agentic observability, safety playbooks, and governance checklists.',
+		href: '/updates/ai-lab-content-drop-2025-09-16',
+		date: '2025-09-16',
+		tag: 'Announcement',
+	},
+	{
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
