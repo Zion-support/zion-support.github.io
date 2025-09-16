@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -57,10 +61,14 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -212,18 +220,27 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     }
   ];
 
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -327,12 +344,17 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           </div>
           <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Content Showcase 2026</h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
@@ -356,10 +378,15 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
@@ -411,11 +438,16 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               {tab.title}
             </button>
 =======
@@ -477,6 +509,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -627,6 +660,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -870,10 +905,14 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -982,9 +1021,12 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </a>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -997,12 +1039,18 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       </div>
     </div>
   );

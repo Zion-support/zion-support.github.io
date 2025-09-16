@@ -5,6 +5,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -89,6 +90,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -272,6 +275,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -330,6 +334,11 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
               <div className="text-lg font-semibold mb-2">Basic Awareness</div>
               <div className="text-sm opacity-80">Simple pattern recognition and response</div>
@@ -350,17 +359,21 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -394,6 +407,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -435,16 +450,20 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </ul>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -490,6 +509,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -505,12 +526,15 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               Learn More
             </button>
           </div>

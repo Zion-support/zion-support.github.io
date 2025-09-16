@@ -10,6 +10,7 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +148,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -292,7 +295,10 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -316,10 +322,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Blueprint'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
@@ -329,9 +338,12 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -378,8 +390,11 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,6 +439,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -432,6 +448,11 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -493,6 +514,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {
@@ -521,6 +543,9 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   },
   {
 >>>>>>> main
@@ -3150,15 +3175,21 @@ export const siteUpdates: SiteUpdate[] = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
@@ -3356,6 +3387,7 @@ export const getLatestUpdates = (limit = 6) => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   }
 ]
 
@@ -3367,12 +3399,17 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
+=======
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e

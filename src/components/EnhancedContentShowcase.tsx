@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
 
 const EnhancedContentShowcase: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [activeTab, setActiveTab] = useState('breakthroughs');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -61,42 +60,38 @@ const EnhancedContentShowcase: React.FC = () => {
       icon: "🧠",
       color: "from-purple-600 to-indigo-600",
       description: "Revolutionary AI technologies and machine learning breakthroughs",
+=======
+  const contentCategories = {
+    breakthroughs: {
+      title: "Revolutionary Breakthroughs",
+      icon: "🌟",
+      color: "purple",
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       content: [
         {
-          title: "Consciousness Computing",
-          description: "AI systems that achieve genuine consciousness and self-awareness",
-          image: "🌟",
-          status: "Breakthrough",
-          views: "5.2M",
-          likes: "342K",
-          category: "AI Revolution",
-          features: ["Self-awareness", "Emotional intelligence", "Creative thinking"],
-          impact: "Transforms AI from reactive to truly intelligent"
+          title: "Conscious AI Systems",
+          description: "Self-aware AI with emotional intelligence",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          stats: "99.7% Accuracy",
+          gradient: "from-purple-600 to-pink-600"
         },
         {
           title: "Quantum Neural Networks",
-          description: "Combining quantum computing with neural processing for unprecedented power",
-          image: "⚡",
-          status: "Revolutionary",
-          views: "4.8M",
-          likes: "298K",
-          category: "Quantum AI",
-          features: ["Quantum processing", "Neural enhancement", "Exponential speed"],
-          impact: "Unlocks infinite computational possibilities"
+          description: "Fusion of quantum computing and neural networks",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          stats: "1000x Faster",
+          gradient: "from-cyan-600 to-blue-600"
         },
         {
-          title: "Synthetic Intelligence",
-          description: "Creating digital minds that think and feel independently",
-          image: "🤖",
-          status: "Advanced",
-          views: "3.9M",
-          likes: "267K",
-          category: "Synthetic AI",
-          features: ["Autonomous operation", "Collective intelligence", "Self-evolution"],
-          impact: "Creates new forms of digital consciousness"
+          title: "Neural Reality Engine",
+          description: "Direct brain-computer interfaces",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          stats: "Full Immersion",
+          gradient: "from-emerald-600 to-teal-600"
         }
       ]
     },
+<<<<<<< HEAD
     {
       id: 1,
       name: "Quantum Technology",
@@ -374,45 +369,65 @@ const EnhancedContentShowcase: React.FC = () => {
     {
       id: 3,
       name: "Future Technologies",
+=======
+    innovations: {
+      title: "Next-Gen Innovations",
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       icon: "🚀",
-      color: "from-orange-600 to-red-600",
-      description: "Emerging technologies and future innovations",
+      color: "indigo",
       content: [
         {
-          title: "Interdimensional Computing",
-          description: "Computing across multiple dimensions simultaneously",
-          image: "🌍",
-          status: "Theoretical",
-          views: "2.9M",
-          likes: "198K",
-          category: "Dimensional Tech",
-          features: ["Multi-dimensional processing", "Parallel universes", "Infinite scalability"],
-          impact: "Unlocks infinite computational power"
+          title: "Autonomous AI Systems",
+          description: "Self-evolving AI without human intervention",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "24/7 Learning",
+          gradient: "from-indigo-600 to-purple-600"
         },
         {
-          title: "Reality Simulation",
-          description: "Creating indistinguishable virtual realities",
-          image: "🎮",
-          status: "Advanced",
-          views: "3.7M",
-          likes: "245K",
-          category: "Simulation Tech",
-          features: ["Perfect simulation", "Consciousness integration", "Reality manipulation"],
-          impact: "Blurs the line between real and virtual"
+          title: "Metaverse Integration",
+          description: "Seamless physical-virtual world integration",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "Holographic UI",
+          gradient: "from-cyan-600 to-blue-600"
         },
         {
-          title: "Omniversal AI Network",
-          description: "AI systems operating across multiple universes",
-          image: "♾️",
-          status: "Experimental",
-          views: "1.8M",
-          likes: "134K",
-          category: "Omniversal AI",
-          features: ["Multi-universe operation", "Universal intelligence", "Reality synchronization"],
-          impact: "Creates universal artificial intelligence"
+          title: "Biotech Revolution",
+          description: "AI-powered biotechnology solutions",
+          link: "/pages/NextGenInnovationHub2026",
+          stats: "Personalized Medicine",
+          gradient: "from-emerald-600 to-teal-600"
+        }
+      ]
+    },
+    showcase: {
+      title: "Ultimate Showcase",
+      icon: "🎯",
+      color: "blue",
+      content: [
+        {
+          title: "Interactive Demos",
+          description: "Experience technologies in action",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Live Demo",
+          gradient: "from-blue-600 to-indigo-600"
+        },
+        {
+          title: "Quantum Simulator",
+          description: "Interactive quantum computing concepts",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Real-time",
+          gradient: "from-purple-600 to-pink-600"
+        },
+        {
+          title: "Bio AI Lab",
+          description: "Explore biotechnology with AI",
+          link: "/pages/UltimateTechShowcase2026",
+          stats: "Hands-on",
+          gradient: "from-green-600 to-emerald-600"
         }
       ]
     }
+<<<<<<< HEAD
   ];
 
   const stats = [
@@ -522,11 +537,34 @@ const EnhancedContentShowcase: React.FC = () => {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
+  const getColorClasses = (color: string) => {
+    const colors = {
+      purple: {
+        bg: "bg-purple-600",
+        text: "text-purple-600",
+        border: "border-purple-600",
+        hover: "hover:bg-purple-50"
+      },
+      indigo: {
+        bg: "bg-indigo-600",
+        text: "text-indigo-600",
+        border: "border-indigo-600",
+        hover: "hover:bg-indigo-50"
+      },
+      blue: {
+        bg: "bg-blue-600",
+        text: "text-blue-600",
+        border: "border-blue-600",
+        hover: "hover:bg-blue-50"
+      }
+    };
+    return colors[color as keyof typeof colors] || colors.purple;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -558,40 +596,25 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+
+  const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
+  const colorClasses = getColorClasses(currentCategory.color);
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 
   return (
-    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            {/* Category Header */}
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">{contentCategories[activeCategory].name}</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                {contentCategories[activeCategory].description}
-              </p>
-            </div>
-
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 ENHANCED CONTENT SHOWCASE • 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Enhanced Content Showcase
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Experience our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
-            </p>
-          </motion.div>
+    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-8 text-white">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4">Enhanced Content Showcase</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our revolutionary content across breakthrough technologies, next-gen innovations, and interactive showcases
+          </p>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1111,50 +1134,45 @@ const EnhancedContentShowcase: React.FC = () => {
                 isAutoPlaying 
                   ? 'bg-green-500/20 text-green-400 border border-green-400/30' 
                   : 'bg-gray-500/20 text-gray-400 border border-gray-400/30'
+=======
+      {/* Tab Navigation */}
+      <div className="bg-gray-50 px-8 py-4">
+        <div className="flex justify-center space-x-2">
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `${colorClasses.bg} text-white shadow-lg`
+                  : `text-gray-600 hover:bg-gray-200`
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               }`}
             >
-              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+              <span className="mr-2">{category.icon}</span>
+              {category.title}
             </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
           </div>
+=======
+          ))}
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
-        <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-          Dive deeper into our revolutionary technologies and discover how they can transform your business
-        </p>
-        <div className="flex justify-center space-x-4">
-          <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-            Start Your Journey →
-          </a>
-          <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
-            View All Innovations
-          </a>
-        </div>
-      {/* Quick Access Grid */}
-      <div className="mt-12 grid md:grid-cols-3 gap-6">
-        {contentSlides.map((slide, index) => (
-          <motion.div
-            key={slide.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`bg-gradient-to-br ${slide.bgGradient} backdrop-blur-sm rounded-xl p-6 border ${slide.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onClick={() => goToSlide(index)}
-          >
-            <div className="text-4xl mb-3 text-center">{slide.image}</div>
-            <h3 className="text-xl font-bold text-white mb-2 text-center">{slide.title}</h3>
-            <p className="text-gray-200 text-sm text-center mb-4">{slide.description}</p>
-            <a
-              href={slide.link}
-              className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
+      {/* Content Grid */}
+      <div className="p-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {currentCategory.content.map((item, index) => (
+            <div
+              key={index}
+              className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-gray-300"
             >
+<<<<<<< HEAD
               Explore Now →
             </a>
           </motion.div>
@@ -1348,27 +1366,54 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> main
           </motion.div>
         </AnimatePresence>
+=======
+              <div className="mb-4">
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${colorClasses.bg} text-white mb-3`}>
+                  {item.stats}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {item.description}
+                </p>
+              </div>
+              
+              <a
+                href={item.link}
+                className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+              >
+                Explore Content
+                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 backdrop-blur-sm rounded-2xl p-12 text-center mt-20"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join millions of users discovering the most revolutionary content in technology history. 
-            Be part of the future that's being created today.
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-8 py-6">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to Explore?</h3>
+          <p className="text-gray-600 mb-4">
+            Dive deeper into our revolutionary content and discover the future of technology
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Exploring
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Create Account
-            </button>
+            <a
+              href="/pages/RevolutionaryTechBreakthrough2025"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              View All Breakthroughs
+            </a>
+            <a
+              href="/pages/NextGenInnovationHub2026"
+              className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors font-semibold"
+            >
+              Explore Innovations
+            </a>
           </div>
+<<<<<<< HEAD
         </motion.div>
 <<<<<<< HEAD
 =======
@@ -1404,6 +1449,9 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       </div>
     </div>
   );

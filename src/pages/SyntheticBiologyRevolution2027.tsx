@@ -2,9 +2,9 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -55,6 +55,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -166,6 +168,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
+<<<<<<< HEAD
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
 =======
@@ -386,11 +389,17 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
+              Engineer Life →
+            </a>
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           </div>
         </div>
 
 <<<<<<< HEAD
         {/* Call to Action */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,6 +410,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -413,6 +424,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               Learn More
@@ -507,6 +519,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> main
+=======
+              Learn More
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </button>
           </div>
         </div>

@@ -225,10 +225,14 @@ export default function ComprehensiveServicesLanding2027() {
     return `$${price}`;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

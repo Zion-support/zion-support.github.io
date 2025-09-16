@@ -14,10 +14,14 @@ import React from 'react';
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
@@ -298,10 +302,14 @@ export default function HomePage() {
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
@@ -310,10 +318,14 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -352,10 +364,14 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </div>
           </div>
         </div>
@@ -367,10 +383,14 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -419,10 +439,14 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         <div className="max-w-7xl mx-auto">
           <div className="glass-effect rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -692,10 +716,14 @@ export default function HomePage() {
 >>>>>>> origin/feature/new-content-promotion
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
@@ -707,10 +735,14 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </div>
           </div>
         </div>
@@ -784,10 +816,14 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -1111,7 +1147,11 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e

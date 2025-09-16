@@ -42,6 +42,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -51,9 +54,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
       id: 0,
       title: "Quantum Technologies",
       icon: "⚡",
@@ -148,9 +154,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     }
   ];
 
@@ -206,6 +215,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -215,9 +227,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
@@ -298,9 +313,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
@@ -351,6 +369,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -360,9 +381,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -441,9 +465,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
             </div>
           </div>
         </div>
@@ -490,6 +517,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 <<<<<<< HEAD
@@ -498,9 +528,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -522,6 +555,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -531,9 +567,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           </div>
         </div>
       </div>

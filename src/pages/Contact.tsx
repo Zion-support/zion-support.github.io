@@ -1,16 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 <<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
@@ -40,18 +46,27 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lu
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-1912
 
 const Contact: React.FC = () => {
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -113,10 +128,14 @@ const Contact: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -477,10 +496,14 @@ const Contact: React.FC = () => {
               </motion.div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
           </div>
         </div>
       </section>

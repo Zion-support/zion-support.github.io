@@ -4,6 +4,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -143,6 +146,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,10 +171,13 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,6 +201,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -373,6 +382,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             ))}
                           </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -397,11 +407,14 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -425,6 +438,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
               </div>
             ))}
           </div>
@@ -530,6 +545,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             </a>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -554,6 +570,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7f8e
         </div>
       </div>
     </div>
