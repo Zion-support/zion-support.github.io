@@ -133,7 +133,6 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-violet-600 to-purple-600",
       link: "/pages/QuantumNeuralFusion2026",
       features: ["Quantum-neural networks", "Enhanced cognition", "Parallel processing", "Synaptic acceleration"]
-<<<<<<< HEAD
       title: "Advanced AI Transformation 2026",
       description: "Experience the next evolution of artificial intelligence with autonomous reasoning, quantum-enhanced processing, and self-evolving neural architectures.",
       image: "🧠",
@@ -199,11 +198,6 @@ const EnhancedContentShowcase: React.FC = () => {
       year: "2026"
 cursor/create-and-deploy-new-content-3afb
 cursor/create-and-deploy-new-content-f175
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
   const contentSlides = [
     {
       id: 1,
@@ -237,13 +231,8 @@ cursor/create-and-deploy-new-content-f175
       borderColor: "border-purple-400/30",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
@@ -252,11 +241,8 @@ cursor/create-and-deploy-new-content-f175
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
       }, 5000);
-<<<<<<< HEAD
       }, 6000);
 cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, showcaseItems.length]);
@@ -267,10 +253,7 @@ cursor/create-and-deploy-new-content-3afb
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
-<<<<<<< HEAD
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (
@@ -295,10 +278,7 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
         <div className="relative max-w-7xl mx-auto">
           {/* Main Showcase Display */}
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
       }, 5000);
       return () => clearInterval(interval);
@@ -311,13 +291,8 @@ cursor/create-and-deploy-new-content-f175
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   const goToSlide = (index: number) => {
@@ -343,14 +318,8 @@ cursor/create-and-deploy-new-content-f175
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-3afb
 cursor/create-and-deploy-new-content-f175
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Showcase Container */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8">
@@ -374,13 +343,8 @@ cursor/create-and-deploy-new-content-f175
         {/* Carousel Container */}
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -414,7 +378,6 @@ cursor/create-and-deploy-new-content-f175
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
-<<<<<<< HEAD
                 className="relative"
               >
                 <div className={`bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 rounded-2xl`}>
@@ -437,8 +400,6 @@ cursor/create-and-deploy-new-content-f175
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                             <span className="text-sm font-semibold">{feature}</span>
 cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
               >
@@ -458,13 +419,8 @@ cursor/create-and-deploy-new-content-f175
                           <div key={index} className="flex items-center space-x-2">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                             <span className="text-sm text-gray-200">{feature}</span>
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
                           </div>
                         ))}
                       </div>
@@ -505,14 +461,8 @@ cursor/create-and-deploy-new-content-f175
                         </ul>
                       </div>
                     </div>
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-3afb
 cursor/create-and-deploy-new-content-f175
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
                       <a
                         href={contentSlides[currentSlide].link}
                         className={`inline-block bg-gradient-to-r ${contentSlides[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
@@ -527,13 +477,8 @@ cursor/create-and-deploy-new-content-f175
                         {contentSlides[currentSlide].image}
                       </div>
                     </div>
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
                   </div>
                 </div>
               </motion.div>
@@ -592,10 +537,7 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
           <div className="flex justify-center items-center mt-6 space-x-4">
             <button
               onClick={prevSlide}
@@ -613,13 +555,8 @@ cursor/create-and-deploy-new-content-f175
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
@@ -639,7 +576,6 @@ cursor/create-and-deploy-new-content-f175
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
-<<<<<<< HEAD
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -709,8 +645,6 @@ cursor/create-and-deploy-new-content-f175
               </motion.div>
             ))}
 cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
 
           {/* Quick Access Grid */}
@@ -770,28 +704,10 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
     </section>
 cursor/create-and-deploy-new-content-f175
-=======
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-5xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>
-            <p className="text-purple-200 text-center">
-              Stay current with the latest breakthroughs and technology advancements as they happen
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-5xl mb-4 text-center">🌟</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Immersive Design</h3>
-            <p className="text-purple-200 text-center">
-              Experience stunning visual design with gradient backgrounds and smooth transitions
-            </p>
->>>>>>> cursor/create-and-deploy-new-content-c963
             
             <button
               onClick={nextSlide}
@@ -815,13 +731,8 @@ cursor/create-and-deploy-new-content-f175
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>
@@ -840,7 +751,6 @@ cursor/create-and-deploy-new-content-f175
             View All Innovations
           </a>
         </div>
-<<<<<<< HEAD
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
@@ -877,11 +787,6 @@ cursor/create-and-deploy-new-content-f175
         </div>
 cursor/create-and-deploy-new-content-3afb
 cursor/create-and-deploy-new-content-f175
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
@@ -904,13 +809,8 @@ cursor/create-and-deploy-new-content-f175
             </a>
           </motion.div>
         ))}
-<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7

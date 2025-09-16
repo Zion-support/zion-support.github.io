@@ -26,7 +26,6 @@ import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026
 import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
@@ -139,7 +138,6 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Enhanced Content Showcase 2026 */}
                 <div className="mb-12">
-                  <NewContentShowcase2026 />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}

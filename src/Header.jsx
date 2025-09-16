@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -87,9 +84,6 @@ const Header = () => {
             </nav>
           </div>
         )}
->>>>>>> cursor/create-and-deploy-new-content-c963
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
       </div>
     </header>
   );

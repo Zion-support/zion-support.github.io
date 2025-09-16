@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-<<<<<<< HEAD
   const carouselItems = [
     {
       id: 1,
@@ -40,14 +36,11 @@ const DynamicContentCarousel = () => {
       image: "📚",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AITransformationGuide2026"
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -88,16 +81,11 @@ const DynamicContentCarousel = () => {
       {/* Navigation Dots */}
       <div className="flex justify-center space-x-3 mt-8">
         {carouselItems.map((_, index) => (
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-<<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-=======
->>>>>>> cursor/create-and-deploy-new-content-4d2c
             }`}
           />
         ))}
