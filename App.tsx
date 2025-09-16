@@ -16,6 +16,13 @@ import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
 import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ErrorBoundary from './src/components/ErrorBoundary';
+import PerformanceEnhancer from './src/components/PerformanceEnhancer';
+import AdvancedSearch from './src/components/AdvancedSearch';
+import AnalyticsDashboard from './src/components/AnalyticsDashboard';
+import NotificationSystem from './src/components/NotificationSystem';
+import ContentManagementSystem from './src/components/ContentManagementSystem';
+import SEOAnalyzer from './src/components/SEOAnalyzer';
+import ErrorMonitoringSystem from './src/components/ErrorMonitoringSystem';
 import LoadingSpinner from './src/components/LoadingSpinner';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
@@ -261,6 +268,12 @@ export default function App(): JSX.Element {
         <EnhancedAccessibilityPanel />
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
+        <PerformanceEnhancer />
+        <AnalyticsDashboard />
+        <NotificationSystem />
+        <ContentManagementSystem />
+        <SEOAnalyzer />
+        <ErrorMonitoringSystem />
         <AdvancedPerformanceOptimizer2025 />
         <AdvancedSEOOptimizer2025 />
         <AdvancedAnalyticsTracker2025 />
@@ -272,6 +285,11 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Advanced Search Component */}
+                <div className="mb-8">
+                  <AdvancedSearch />
+                </div>
+                
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
