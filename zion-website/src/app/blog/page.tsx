@@ -9,6 +9,18 @@ const posts = [
       'Design evidence bundles with provenance, policy checks, eval signals, and approvals.'
   },
   {
+    slug: 'ai-2026-evidence-first-postmortems',
+    title: 'AI 2026: Evidence‑First Postmortems — Traces, Lineage, Exceptions',
+    summary:
+      'Run reproducible incident analyses with trace diffs, prompt lineage, and policy exception trails.'
+  },
+  {
+    slug: 'ai-2026-agent-posture-management',
+    title: 'AI 2026: Agent Posture Management — Continuous Controls',
+    summary:
+      'Live posture checks, policy gates, and evidence logs to keep production agents safe.'
+  },
+  {
     slug: 'ai-2026-enterprise-agent-risk-scorecards',
     title: 'AI 2026: Enterprise Agent Risk Scorecards — Field Guide',
     summary:
