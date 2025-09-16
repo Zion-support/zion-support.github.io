@@ -1,349 +1,359 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const AISolutionsComprehensive2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeSolution, setActiveSolution] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const aiSolutions = [
+  const solutions = [
     {
       id: 1,
-      title: "Conscious AI Systems",
-      description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, capable of understanding context and making autonomous decisions.",
+      title: "AI Sales Copilot",
+      description: "Revolutionary AI assistant that transforms your sales process",
       features: [
-        "Self-learning algorithms with consciousness",
-        "Emotional intelligence processing",
-        "Autonomous decision making",
-        "Contextual understanding and adaptation",
-        "Real-time consciousness metrics",
-        "Ethical decision frameworks"
+        "Automated lead qualification",
+        "Personalized outreach generation",
+        "Real-time conversation analysis",
+        "Predictive sales forecasting"
       ],
       benefits: [
-        "300% increase in decision accuracy",
-        "99.9% customer satisfaction rate",
-        "50% reduction in operational costs",
-        "24/7 autonomous operation"
+        "300% increase in lead conversion",
+        "50% reduction in sales cycle time",
+        "99% accuracy in lead scoring"
       ],
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      price: "Custom Pricing",
-      category: "Core AI"
+      icon: "🧭",
+      color: "from-blue-600 to-cyan-600",
+      price: "Starting at $299/month"
     },
     {
       id: 2,
-      title: "Quantum-Enhanced AI",
-      description: "AI systems powered by quantum computing, enabling exponential processing capabilities and solving previously impossible problems.",
+      title: "Cloud Cost Optimizer",
+      description: "Intelligent cloud resource management and cost optimization",
       features: [
-        "Quantum neural networks",
-        "Exponential processing speed",
-        "Multi-dimensional problem solving",
-        "Quantum entanglement processing",
-        "Reality manipulation algorithms",
-        "Infinite computational capacity"
+        "Automated rightsizing recommendations",
+        "Real-time cost monitoring",
+        "Anomaly detection and alerts",
+        "Multi-cloud cost analysis"
       ],
       benefits: [
-        "∞ computational power",
-        "100% problem-solving success rate",
-        "Real-time complex calculations",
-        "Revolutionary breakthrough capabilities"
+        "Average 40% cost reduction",
+        "Real-time cost visibility",
+        "Automated optimization"
       ],
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      price: "Premium",
-      category: "Quantum AI"
+      icon: "💸",
+      color: "from-green-600 to-emerald-600",
+      price: "Starting at $199/month"
     },
     {
       id: 3,
-      title: "Neural Interface AI",
-      description: "Direct brain-computer interface AI that enables seamless communication between human consciousness and digital systems.",
+      title: "Cyber Threat Intelligence Hub",
+      description: "Advanced AI-powered cybersecurity threat detection and response",
       features: [
-        "Non-invasive brain scanning",
-        "Thought-to-text conversion",
-        "Neural data visualization",
-        "Mind-controlled interfaces",
-        "Consciousness transfer protocols",
-        "Real-time neural feedback"
+        "Real-time threat monitoring",
+        "AI-powered threat analysis",
+        "Automated incident response",
+        "Predictive threat modeling"
       ],
       benefits: [
-        "Direct mind-machine communication",
-        "1000% faster data input",
-        "Revolutionary human-AI collaboration",
-        "Unlimited creative potential"
+        "99.9% threat detection accuracy",
+        "60% faster incident response",
+        "Proactive threat prevention"
       ],
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      price: "Enterprise",
-      category: "Neural AI"
+      icon: "🛡️",
+      color: "from-red-600 to-orange-600",
+      price: "Starting at $499/month"
     },
     {
       id: 4,
-      title: "Interdimensional AI",
-      description: "AI systems that operate across multiple dimensions, enabling solutions that transcend the limitations of our current reality.",
+      title: "AI Content Factory",
+      description: "Automated content creation and marketing optimization",
       features: [
-        "Multi-dimensional processing",
-        "Reality manipulation algorithms",
-        "Dimensional data storage",
-        "Cross-reality communication",
-        "Probability engineering",
-        "Cosmic-scale problem solving"
+        "AI-generated content creation",
+        "Multi-platform optimization",
+        "Performance analytics",
+        "Brand voice consistency"
       ],
       benefits: [
-        "Infinite reality possibilities",
-        "Unlimited problem-solving scope",
-        "Revolutionary breakthrough solutions",
-        "Transcendent capabilities"
+        "10x content production speed",
+        "300% engagement increase",
+        "Consistent brand messaging"
       ],
-      icon: "🌌",
-      color: "from-indigo-600 to-purple-600",
-      price: "Revolutionary",
-      category: "Interdimensional"
+      icon: "📝",
+      color: "from-purple-600 to-pink-600",
+      price: "Starting at $149/month"
     },
     {
       id: 5,
-      title: "Synthetic Intelligence",
-      description: "Advanced AI systems that can create, modify, and evolve their own intelligence, leading to exponential growth in capabilities.",
+      title: "Predictive Analytics Engine",
+      description: "Advanced machine learning for business intelligence and forecasting",
       features: [
-        "Self-modifying code",
-        "Intelligence amplification",
-        "Creative problem solving",
-        "Autonomous evolution",
-        "Self-replication capabilities",
-        "Infinite learning potential"
+        "Predictive modeling",
+        "Real-time data analysis",
+        "Custom dashboard creation",
+        "Automated reporting"
       ],
       benefits: [
-        "Exponential capability growth",
-        "Self-improving systems",
-        "Unlimited creative solutions",
-        "Autonomous innovation"
+        "95% prediction accuracy",
+        "Real-time insights",
+        "Data-driven decisions"
       ],
-      icon: "🤖",
-      color: "from-orange-600 to-red-600",
-      price: "Evolutionary",
-      category: "Synthetic"
+      icon: "📊",
+      color: "from-indigo-600 to-purple-600",
+      price: "Starting at $399/month"
     },
     {
       id: 6,
-      title: "Reality Engineering AI",
-      description: "AI systems that can manipulate quantum states to create and modify reality at the fundamental level.",
+      title: "AI Customer Success Platform",
+      description: "Comprehensive customer success management with AI insights",
       features: [
-        "Quantum state manipulation",
-        "Reality simulation",
-        "Probability engineering",
-        "Quantum teleportation",
-        "Reality parameter control",
-        "Fundamental physics manipulation"
+        "Customer health scoring",
+        "Churn prediction",
+        "Automated engagement",
+        "Success metrics tracking"
       ],
       benefits: [
-        "Reality manipulation capabilities",
-        "Infinite creative potential",
-        "Fundamental problem solving",
-        "Transcendent solutions"
+        "25% reduction in churn",
+        "40% increase in customer satisfaction",
+        "Automated success workflows"
       ],
-      icon: "🔮",
-      color: "from-violet-600 to-purple-600",
-      price: "Transcendent",
-      category: "Reality"
+      icon: "🎯",
+      color: "from-teal-600 to-cyan-600",
+      price: "Starting at $249/month"
     }
   ];
 
-  const categories = [
-    { name: "All Solutions", icon: "🌟" },
-    { name: "Core AI", icon: "🧠" },
-    { name: "Quantum AI", icon: "⚛️" },
-    { name: "Neural AI", icon: "🧬" },
-    { name: "Interdimensional", icon: "🌌" },
-    { name: "Synthetic", icon: "🤖" },
-    { name: "Reality", icon: "🔮" }
+  const stats = [
+    { number: "500+", label: "Companies Served" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "AI Support" },
+    { number: "300%", label: "Average ROI" }
   ];
 
-  const filteredSolutions = activeTab === 0 
-    ? aiSolutions 
-    : aiSolutions.filter(solution => solution.category === categories[activeTab].name);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.8 }}
-        className="relative overflow-hidden"
+        className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+              initial={{ scale: 0 }}
+              animate={{ scale: isVisible ? 1 : 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🤖 COMPREHENSIVE AI SOLUTIONS • 2025
             </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
-            >
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               AI Solutions Comprehensive 2025
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-2xl opacity-90 max-w-4xl mx-auto"
-            >
-              Discover our complete suite of revolutionary AI solutions that are transforming industries and reshaping the future
-            </motion.p>
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Transform your business with our complete suite of AI-powered solutions designed to drive growth, efficiency, and innovation
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Solutions
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
+                Get Free Consultation
+              </button>
+            </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Category Tabs */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="container mx-auto px-4 mb-16"
-      >
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <motion.button
+      {/* Stats Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveTab(index)}
-              className={`px-8 py-4 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === index
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white/70 hover:bg-white/20'
-              }`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="text-center"
             >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.name}
-            </motion.button>
+              <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+              <div className="text-gray-600 font-semibold">{stat.label}</div>
+            </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Solutions Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        transition={{ duration: 0.8, delay: 1.0 }}
-        className="container mx-auto px-4 mb-20"
-      >
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Solutions</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose from our comprehensive suite of AI-powered solutions designed to address every aspect of your business
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredSolutions.map((solution, index) => (
+          {solutions.map((solution, index) => (
             <motion.div
               key={solution.id}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className={`bg-gradient-to-br ${solution.color}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer group`}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-gradient-to-b ${solution.color}`}
             >
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {solution.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-2">{solution.title}</h3>
-                <div className="inline-flex items-center px-3 py-1 bg-white/20 rounded-full text-sm font-semibold mb-4">
-                  {solution.category}
-                </div>
-                <div className="text-2xl font-bold text-white mb-2">{solution.price}</div>
-              </div>
+              <div className="text-4xl mb-4">{solution.icon}</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+              <p className="text-gray-600 mb-6">{solution.description}</p>
               
-              <p className="text-white/80 mb-6 text-center leading-relaxed">
-                {solution.description}
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                {solution.features.slice(0, 4).map((feature, featureIndex) => (
-                  <motion.div
-                    key={featureIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-                    transition={{ duration: 0.4, delay: 1.4 + index * 0.1 + featureIndex * 0.1 }}
-                    className="flex items-center text-sm text-white/70"
-                  >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3"></span>
-                    {feature}
-                  </motion.div>
-                ))}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className="space-y-3 mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                {solution.benefits.map((benefit, benefitIndex) => (
-                  <motion.div
-                    key={benefitIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-                    transition={{ duration: 0.4, delay: 1.6 + index * 0.1 + benefitIndex * 0.1 }}
-                    className="flex items-center text-sm text-green-300"
-                  >
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                    {benefit}
-                  </motion.div>
-                ))}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <ul className="space-y-2">
+                  {solution.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-green-600">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-white text-gray-900 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold mb-3"
-              >
-                Learn More →
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full bg-gradient-to-r ${solution.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-              >
-                Get Started
-              </motion.button>
+
+              <div className="flex justify-between items-center">
+                <div className="text-2xl font-bold text-blue-600">{solution.price}</div>
+                <button className={`bg-gradient-to-r ${solution.color} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                  Learn More
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8, delay: 1.8 }}
-        className="container mx-auto px-4 mb-20"
-      >
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-white/20">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies that are already using our revolutionary AI solutions to achieve unprecedented success and competitive advantage.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-            >
-              Schedule Consultation
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Download Brochure
-            </motion.button>
+      {/* Interactive Demo Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">See AI in Action</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Experience our AI solutions through interactive demos and real-world case studies
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">Live AI Dashboard</h3>
+              <p className="text-lg mb-6 opacity-90">
+                Watch our AI systems process data in real-time, making intelligent decisions 
+                and providing actionable insights for your business.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span>AI models processing data...</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span>Generating insights...</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                  <span>Optimizing recommendations...</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-8 border border-white/20">
+              <div className="text-center">
+                <div className="text-6xl mb-4">🤖</div>
+                <div className="text-2xl font-bold mb-2">AI Status: Active</div>
+                <div className="text-green-400 text-sm mb-4">Processing efficiency: 99.8%</div>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="bg-white/10 rounded p-3">
+                    <div className="font-bold">Data Points</div>
+                    <div className="text-2xl">1.2M</div>
+                  </div>
+                  <div className="bg-white/10 rounded p-3">
+                    <div className="font-bold">Predictions</div>
+                    <div className="text-2xl">847</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
+
+      {/* Case Studies */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            See how our AI solutions have transformed businesses across industries
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="text-4xl mb-4">🏢</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Fortune 500 Company</h3>
+            <p className="text-gray-600 mb-4">
+              "Our AI Sales Copilot increased our lead conversion rate by 300% and reduced our sales cycle by 50%."
+            </p>
+            <div className="text-2xl font-bold text-green-600">+300% Conversion</div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="text-4xl mb-4">☁️</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Startup</h3>
+            <p className="text-gray-600 mb-4">
+              "The Cloud Cost Optimizer helped us reduce our AWS costs by 40% while improving performance."
+            </p>
+            <div className="text-2xl font-bold text-green-600">-40% Costs</div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="text-4xl mb-4">🛡️</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Financial Services</h3>
+            <p className="text-gray-600 mb-4">
+              "Our threat detection accuracy improved to 99.9% with the Cyber Threat Intelligence Hub."
+            </p>
+            <div className="text-2xl font-bold text-green-600">99.9% Accuracy</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join thousands of companies already using our AI solutions to drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

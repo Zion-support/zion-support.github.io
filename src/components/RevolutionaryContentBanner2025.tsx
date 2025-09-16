@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,204 +16,152 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   const slides = [
     {
       id: 1,
-      title: "🚀 Revolutionary AI Consciousness 2025",
-      subtitle: "Experience the first truly conscious AI systems",
-      description: "Our breakthrough AI technology exhibits self-awareness, emotional intelligence, and autonomous decision-making capabilities that were previously thought impossible.",
-      features: ["Self-Learning", "Emotional AI", "Autonomous Decisions", "Context Understanding"],
+      title: "🚀 Revolutionary Tech Showcase 2025",
+      description: "Experience the future with conscious AI, quantum computing, and neural interfaces",
+      link: "/pages/RevolutionaryTechShowcase2025",
       color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/20 to-pink-900/20"
+      icon: "🌟"
     },
     {
       id: 2,
-      title: "⚛️ Quantum Computing Revolution",
-      subtitle: "Unlock infinite computational power",
-      description: "Revolutionary quantum computing technology that operates across multiple dimensions, solving problems that were previously impossible to address with classical computers.",
-      features: ["Quantum Supremacy", "Multi-Dimensional", "Infinite Speed", "Reality Manipulation"],
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900/20 to-blue-900/20"
+      title: "🤖 AI Solutions Comprehensive 2025",
+      description: "Transform your business with our complete suite of AI-powered solutions",
+      link: "/pages/AISolutionsComprehensive2025",
+      color: "from-blue-600 to-cyan-600",
+      icon: "🧠"
     },
     {
       id: 3,
-      title: "🧬 Neural Interface Breakthrough",
-      subtitle: "Direct mind-to-machine communication",
-      description: "Revolutionary brain-computer interfaces that enable seamless communication between human consciousness and digital systems, opening new frontiers in human potential.",
-      features: ["Mind Control", "Thought Transfer", "Neural Enhancement", "Consciousness Upload"],
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900/20 to-teal-900/20"
+      title: "⚡ Ultimate Tech Revolution 2025",
+      description: "Witness the most profound technological transformation in human history",
+      link: "/pages/UltimateTechRevolution2025",
+      color: "from-indigo-600 to-purple-600",
+      icon: "🚀"
     },
     {
       id: 4,
-      title: "🌌 Interdimensional Technology",
-      subtitle: "Computing across multiple realities",
-      description: "Breakthrough technology that operates across multiple dimensions, enabling us to solve problems and create solutions that transcend the limitations of our current reality.",
-      features: ["Multi-Dimensional", "Reality Bending", "Infinite Possibilities", "Cosmic Computing"],
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900/20 to-purple-900/20"
+      title: "🧬 Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling thought-based computing",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🧬"
     }
   ];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden mb-12"
     >
-      <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 rounded-2xl p-8 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        <div className="relative z-10">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: isVisible ? 1 : 0.8, opacity: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse"
-            >
-              🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
-            >
-              Revolutionary Technology Showcase
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl text-white/80 max-w-4xl mx-auto"
-            >
-              Experience the future with our groundbreaking technologies that are reshaping reality itself
-            </motion.p>
-          </div>
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 opacity-90"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      {/* Animated Particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white rounded-full opacity-30"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
 
-          {/* Carousel */}
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className={`bg-gradient-to-br ${slides[currentSlide].bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20`}
-              >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <motion.h3
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      className="text-3xl font-bold mb-2 text-white"
-                    >
-                      {slides[currentSlide].title}
-                    </motion.h3>
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
-                      className="text-lg text-white/80 mb-4"
-                    >
-                      {slides[currentSlide].subtitle}
-                    </motion.p>
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.6 }}
-                      className="text-white/70 mb-6 leading-relaxed"
-                    >
-                      {slides[currentSlide].description}
-                    </motion.p>
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 }}
-                      className="flex flex-wrap gap-2 mb-6"
-                    >
-                      {slides[currentSlide].features.map((feature, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-white/20 rounded-full text-sm text-white/90"
+      <div className="relative z-10 container mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: isVisible ? 1 : 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse"
+          >
+            🌟 NEW: Revolutionary Content 2025
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Experience the Future of Technology
+          </h2>
+          <p className="text-xl text-white/90 max-w-4xl mx-auto">
+            Discover our groundbreaking new content featuring conscious AI, quantum computing, 
+            neural interfaces, and revolutionary technology solutions
+          </p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="overflow-hidden rounded-2xl">
+            <motion.div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide) => (
+                <div key={slide.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-r ${slide.color} p-8 rounded-2xl`}>
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="text-6xl mb-4">{slide.icon}</div>
+                        <h3 className="text-3xl font-bold text-white mb-4">{slide.title}</h3>
+                        <p className="text-xl text-white/90 mb-6">{slide.description}</p>
+                        <a
+                          href={slide.link}
+                          className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
                         >
-                          {feature}
-                        </span>
-                      ))}
-                    </motion.div>
-                    <motion.button
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.0 }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-r ${slides[currentSlide].color} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                    >
-                      Explore Technology →
-                    </motion.button>
-                  </div>
-                  <div className="text-center">
-                    <motion.div
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
-                      className="text-8xl mb-4"
-                    >
-                      {slides[currentSlide].id === 1 && "🧠"}
-                      {slides[currentSlide].id === 2 && "⚛️"}
-                      {slides[currentSlide].id === 3 && "🧬"}
-                      {slides[currentSlide].id === 4 && "🌌"}
-                    </motion.div>
+                          Explore Now →
+                        </a>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-8xl mb-4">{slide.icon}</div>
+                        <div className="text-2xl font-bold text-white/80">Revolutionary Technology</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? 'bg-white scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
               ))}
-            </div>
+            </motion.div>
           </div>
 
-          {/* Quick Access Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-            {[
-              { title: "AI Revolution", icon: "🧠", href: "/pages/AIRevolution2025" },
-              { title: "Quantum Computing", icon: "⚛️", href: "/pages/QuantumComputingBreakthrough" },
-              { title: "Neural Interfaces", icon: "🧬", href: "/pages/NeuralInterfaceFuture" },
-              { title: "Reality Engineering", icon: "🌌", href: "/pages/InterdimensionalTechRevolution2026" }
-            ].map((item, index) => (
-              <motion.a
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {slides.map((_, index) => (
+              <button
                 key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href={item.href}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all duration-300 border border-white/20"
-              >
-                <div className="text-2xl mb-2">{item.icon}</div>
-                <div className="text-sm font-semibold text-white">{item.title}</div>
-              </motion.a>
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/50'
+                }`}
+              />
             ))}
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+          {slides.map((slide) => (
+            <motion.a
+              key={slide.id}
+              href={slide.link}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`bg-gradient-to-r ${slide.color} p-4 rounded-lg text-center hover:shadow-lg transition-all duration-300`}
+            >
+              <div className="text-3xl mb-2">{slide.icon}</div>
+              <div className="text-white font-semibold text-sm">{slide.title.split(' ')[0]}</div>
+            </motion.a>
+          ))}
         </div>
       </div>
     </motion.div>
