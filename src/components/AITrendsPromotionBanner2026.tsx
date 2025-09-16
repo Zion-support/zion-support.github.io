@@ -173,4 +173,3 @@ const AITrendsPromotionBanner2026 = () => {
 };
 
 export default AITrendsPromotionBanner2026;
-</div></div></div></div>

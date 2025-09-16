@@ -52,8 +52,13 @@ export default function Blog() {
               <h2 className="text-2xl font-semibold mb-2">
                 <Link to={`/blog/${post.slug}`} className="hover:underline">
                   {post.title}
+                </Link>
+              </h2>
               <p className="text-gray-600 mb-4">{post.summary}</p>
               <div className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</div>
+            </article>
           ))}
-  );
-}
+        </div>
+      </div>
+    );
+  }  }

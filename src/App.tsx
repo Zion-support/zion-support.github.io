@@ -38,7 +38,6 @@ import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
 import NewsletterSignup from './components/NewsletterSignup';
 import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
 import PromotionalBanner from './components/PromotionalBanner';
-import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
 import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
 import QuantumNeuralRevolutionBanner from './components/QuantumNeuralRevolutionBanner';
 import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
@@ -387,7 +386,6 @@ const App: React.FC = () => {
 
               {/* Quantum AI Breakthrough Banner */}
               <div className="mb-12">
-                <QuantumAIBreakthroughBanner />
               </div>
 
               {/* Revolutionary Tech Showcase 2026 */}

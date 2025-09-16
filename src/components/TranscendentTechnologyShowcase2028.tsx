@@ -290,4 +290,3 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
 };
 
 export default TranscendentTechnologyShowcase2028;
-</div></div></div></div>
