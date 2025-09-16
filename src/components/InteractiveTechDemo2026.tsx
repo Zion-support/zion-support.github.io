@@ -99,6 +99,7 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+<<<<<<< HEAD
         {/* Active Demo Display */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -117,6 +118,8 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
                     {feature}
                   </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
                 ))}
               </div>
 

@@ -90,6 +90,7 @@ export default function AnalyticsDashboard() {
     );
   }
 
+<<<<<<< HEAD
   if (!analyticsData) {
     return (
       <div className="py-20 px-4 bg-gray-50">
@@ -112,6 +113,9 @@ export default function AnalyticsDashboard() {
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
+=======
+  if (!analyticsData) return null;
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 
   return (
     <div className="py-20 px-4 bg-gray-50">
@@ -195,8 +199,13 @@ export default function AnalyticsDashboard() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Charts and Tables */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+=======
+        {/* Charts and Detailed Analytics */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           {/* Top Pages */}
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
@@ -234,6 +243,7 @@ export default function AnalyticsDashboard() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Device Types */}
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Types</h3>
@@ -252,6 +262,66 @@ export default function AnalyticsDashboard() {
                   </div>
                 </div>
               ))}
+=======
+        {/* Performance Metrics */}
+        <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Web Vitals</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gray-900 mb-1">
+                {analyticsData.performance.fcp.toFixed(0)}ms
+              </div>
+              <div className="text-sm text-gray-600">First Contentful Paint</div>
+              <div className={`text-xs mt-1 ${
+                analyticsData.performance.fcp < 1800 ? 'text-green-600' : 
+                analyticsData.performance.fcp < 3000 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {analyticsData.performance.fcp < 1800 ? 'Good' : 
+                 analyticsData.performance.fcp < 3000 ? 'Needs Improvement' : 'Poor'}
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gray-900 mb-1">
+                {analyticsData.performance.lcp.toFixed(0)}ms
+              </div>
+              <div className="text-sm text-gray-600">Largest Contentful Paint</div>
+              <div className={`text-xs mt-1 ${
+                analyticsData.performance.lcp < 2500 ? 'text-green-600' : 
+                analyticsData.performance.lcp < 4000 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {analyticsData.performance.lcp < 2500 ? 'Good' : 
+                 analyticsData.performance.lcp < 4000 ? 'Needs Improvement' : 'Poor'}
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gray-900 mb-1">
+                {analyticsData.performance.fid.toFixed(0)}ms
+              </div>
+              <div className="text-sm text-gray-600">First Input Delay</div>
+              <div className={`text-xs mt-1 ${
+                analyticsData.performance.fid < 100 ? 'text-green-600' : 
+                analyticsData.performance.fid < 300 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {analyticsData.performance.fid < 100 ? 'Good' : 
+                 analyticsData.performance.fid < 300 ? 'Needs Improvement' : 'Poor'}
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gray-900 mb-1">
+                {analyticsData.performance.cls.toFixed(3)}
+              </div>
+              <div className="text-sm text-gray-600">Cumulative Layout Shift</div>
+              <div className={`text-xs mt-1 ${
+                analyticsData.performance.cls < 0.1 ? 'text-green-600' : 
+                analyticsData.performance.cls < 0.25 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {analyticsData.performance.cls < 0.1 ? 'Good' : 
+                 analyticsData.performance.cls < 0.25 ? 'Needs Improvement' : 'Poor'}
+              </div>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
           </div>
 
@@ -263,6 +333,7 @@ export default function AnalyticsDashboard() {
                 <span className="text-sm text-gray-900">First Contentful Paint</span>
                 <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.fcp.toFixed(0)}ms</span>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-900">Largest Contentful Paint</span>
                 <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.lcp.toFixed(0)}ms</span>
@@ -276,6 +347,9 @@ export default function AnalyticsDashboard() {
                 <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.cls.toFixed(3)}</span>
               </div>
             </div>
+=======
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
         </div>
       </div>

@@ -120,9 +120,25 @@ const EnhancedSearch: React.FC = () => {
       setRecentSearches(updated);
       localStorage.setItem('recentSearches', JSON.stringify(updated));
     }
+<<<<<<< HEAD
   }, [recentSearches]);
 
   // Search function
+=======
+    
+    // Debounce search
+    if (value.trim()) {
+      searchTimeoutRef.current = setTimeout(() => {
+        performSearch(value);
+      }, 300);
+    } else {
+      setResults([]);
+      setIsOpen(false);
+    }
+  }, []);
+
+  // Perform search
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
   const performSearch = useCallback(async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
@@ -217,6 +233,7 @@ const EnhancedSearch: React.FC = () => {
     return icons[category] || <Cloud className="w-4 h-4" />;
   };
 
+<<<<<<< HEAD
   // Get relevance color
   const getRelevanceColor = (relevance: number) => {
     if (relevance >= 90) return 'text-green-600 bg-green-100';
@@ -267,6 +284,49 @@ const EnhancedSearch: React.FC = () => {
       </form>
 
       {/* Filters Panel */}
+=======
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchInputRef.current && !searchInputRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative w-full max-w-2xl mx-auto">
+      {/* Search Input */}
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Search className="h-5 w-5 text-gray-400" />
+        </div>
+        
+        <input
+          ref={searchInputRef}
+          type="text"
+          value={query}
+          onChange={(e) => handleSearchChange(e.target.value)}
+          onFocus={() => query.trim() && setIsOpen(true)}
+          placeholder={placeholder}
+          className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-2xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
+        />
+        
+        {query && (
+          <button
+            onClick={clearSearch}
+            className="absolute inset-y-0 right-0 pr-3 flex items-center"
+          >
+            <X className="h-5 w-5 text-gray-400 hover:text-gray-600 transition-colors" />
+          </button>
+        )}
+      </div>
+
+      {/* Search Results Dropdown */}
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       <AnimatePresence>
         {showFilters && (
           <motion.div
@@ -392,6 +452,7 @@ const EnhancedSearch: React.FC = () => {
                   </button>
                 ))}
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         )}
@@ -479,9 +540,29 @@ const EnhancedSearch: React.FC = () => {
           <h3 className="text-lg font-semibold text-gray-900 mb-2">No results found</h3>
           <p className="text-gray-600">Try adjusting your search terms or filters</p>
         </motion.div>
+=======
+            </motion.div>
+          )}
+        </AnimatePresence>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       )}
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+// Debounce utility function
+function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 export default EnhancedSearch;

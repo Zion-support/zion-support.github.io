@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -170,6 +171,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       </main>
       
       <Footer />
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
