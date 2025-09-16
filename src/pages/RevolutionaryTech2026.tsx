@@ -1,37 +1,78 @@
 <<<<<<< HEAD
-import React from 'react';
 <<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+import React from 'react';
 import React from 'react';
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> cursor/create-and-deploy-new-content-f995
 import React from 'react';
 >>>>>>> main
 <<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+import React from 'react';
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+import React from 'react';
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -316,8 +357,17 @@ const RevolutionaryTech2026: React.FC = () => {
               Contact Our Experts
             </motion.button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -339,7 +389,14 @@ const RevolutionaryTech2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         </motion.div>
       </div>
@@ -349,22 +406,41 @@ const RevolutionaryTech2026: React.FC = () => {
 
 export default RevolutionaryTech2026;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default RevolutionaryTech2026;
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 <<<<<<< HEAD
+>>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+export default RevolutionaryTech2026;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26

@@ -19,6 +19,10 @@
       "@/*": ["src/*"]
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
@@ -39,3 +43,11 @@
     "coverage"
   ]
 }
+<<<<<<< HEAD
+=======
+=======
+  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-3a26
