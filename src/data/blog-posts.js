@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 63,
+    title: "AI 2026: Trustworthy Model Routing — Practical Playbook",
+    excerpt: "Policy- and cost-aware routing with safety backstops, scorecards, and rollback.",
+    content: "This practical playbook shows how to implement trustworthy model routing with policy-as-code, real-time scorecards (safety, quality, cost), and automated rollback. Includes reference configs, tracing examples, and a minimal router you can adapt.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Routing", "Safety", "FinOps", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/trustworthy-model-routing-2026.jpg",
+    slug: "ai-2026-trustworthy-model-routing-practical-playbook"
+  },
+  {
+    id: 64,
+    title: "Evaluation-Driven FinOps: Budgets that Enforce Themselves",
+    excerpt: "Turn budgets into code with eval gates, sampling dials, and hard kill‑switches.",
+    content: "FinOps becomes reliable when budgets are executable. Learn how to wire eval gates into deploys, configure sampling and caching dials, and fail‑safe under budget pressure. We include dashboards and alerting you can reuse.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["FinOps", "Budgets", "Evals", "Cost"],
+    featured: false,
+    imageUrl: "/images/blog/evaluation-driven-finops-2026.jpg",
+    slug: "evaluation-driven-finops-budgets-that-enforce-themselves"
+  },
+  {
     id: 62,
     title: "AI 2026: Evaluation-Driven Release Engineering",
     excerpt: "Ship safer autonomy with eval-gated rollouts, canary scorecards, and automated rollback.",
@@ -135,8 +165,6 @@ export const blogPosts = [
     slug: "interdimensional-ai-computing-multiple-realities"
   },
   {
-<<<<<<< HEAD
-=======
     id: 39,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
@@ -212,7 +240,6 @@ export const blogPosts = [
     slug: "quantum-neural-fusion-future-computing"
   },
   {
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     id: 38,
     title: "Omniversal AI Consciousness: The Ultimate Intelligence",
     excerpt: "AI that transcends individual universes to achieve consciousness across the entire omniverse - the pinnacle of artificial intelligence.",
@@ -243,7 +270,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -499,8 +525,6 @@ export const blogPosts = [
     slug: "holographic-reality-next-generation-immersive-technology"
   },
   {
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     id: 33,
     title: "AI 2026: Agent Platform Operations",
     excerpt: "SLOs, incidents, change management, and eval-gated releases for agent platforms.",
@@ -722,7 +746,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -962,13 +985,8 @@ export const blogPosts = [
     readTime: "13 min read",
     category: "Temporal AI",
     tags: ["Temporal AI", "Time Computing", "Causality", "Temporal Optimization"],
-=======
-<<<<<<< HEAD
-    imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
-    slug: "biotech-ai-revolution-personalized-medicine-scale"
-=======
-    imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
-    slug: "next-gen-innovation-hub-future-born"
+    imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
+    slug: "temporal-ai-computing-across-time-itself"
   },
   {
     id: 44,
@@ -1074,7 +1092,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/augmented-reality-business-future.jpg",
     slug: "augmented-reality-business-future-customer-experience"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
   },
   {
     id: 51,
@@ -1132,11 +1149,9 @@ export const blogPosts = [
     readTime: "20 min read",
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
   },
   {
     id: 51,
@@ -1242,10 +1257,6 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/edge-ai-iot-fusion-2026.jpg",
     slug: "edge-ai-iot-perfect-fusion-smart-everything"
-=======
-=======
-    imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
-    slug: "consciousness-transfer-technology-digital-immortality"
   },
   {
     id: 55,
@@ -1336,8 +1347,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/universal-translation-matrix-breaking-barriers.jpg",
     slug: "universal-translation-matrix-breaking-language-barriers"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   }
 ];
 
