@@ -185,6 +185,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Quick Spotlight: Agentic Observability Deep Dive (new) */}
+      <section className="py-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Observability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Observability Deep Dive</h3>
+              <p className="text-gray-600 mb-4">Traces, evals, incidents, and KPIs to ship autonomy safely.</p>
+              <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Production Eval Gates in the Wild (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,6 +293,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Agent Readiness Scorecards (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Readiness Scorecards — Practical Guide</h2>
+              <p className="text-gray-600 mt-2">Gate releases with safety, quality, reliability, and cost metrics.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agent-readiness-scorecards" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              <Link href="/resources/ai-2026-release-scorecards-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Starter Kit</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
       

@@ -18,6 +18,7 @@ import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarouse
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import ErrorMonitoringSystem from './src/components/ErrorMonitoringSystem';
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
@@ -65,7 +66,9 @@ import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowca
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
+import NextGenTechInnovation2026 from './src/pages/NextGenTechInnovation2026';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
+import AutonomousBusinessRevolution2026 from './src/pages/AutonomousBusinessRevolution2026';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
@@ -207,6 +210,7 @@ export default function App(): JSX.Element {
         <ContentManagementSystem />
         <SEOAnalyzer />
         <ErrorMonitoringSystem />
+        <NewContentBanner2026 />
         <AdvancedPerformanceOptimizer2025 />
         <AdvancedSEOOptimizer2025 />
         <AdvancedAnalyticsTracker2025 />
@@ -1274,6 +1278,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
+          <Route path="/nextgen-tech-innovation-2026" element={<NextGenTechInnovation2026 />} />
+          <Route path="/autonomous-business-revolution-2026" element={<AutonomousBusinessRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />

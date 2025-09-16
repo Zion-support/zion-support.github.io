@@ -1,11 +1,14 @@
-import React from 'react'
-import { useRouter } from 'next/router'
+// @ts-nocheck
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 // Simple registry mapping ids used by pages/blog and Homepage to components in /blog
 const registry: Record<string, React.ComponentType> = {
   'agentic-product-playbooks': require('../../blog/agentic-product-playbooks').default,
   'ai-automation-trends-2025': require('../../blog/ai-automation-trends-2025').default,
+  'ai-customer-agents-2025': require('../../blog/ai-customer-agents-2025').default,
+  'ai-2026-operational-evals-blueprint': require('../../blog/ai-2026-operational-evals-blueprint').default,
+  'ai-2026-agent-observability-blueprint': require('../../blog/ai-2026-agent-observability-blueprint').default,
   'ai-2026-foundation-model-quality-engineering': require('../../blog/ai-2026-foundation-model-quality-engineering').default,
   'cloud-cost-optimization-2025': require('../../blog/cloud-cost-optimization-2025').default,
   'genai-2025-practical-compliance-patterns': require('../../blog/genai-2025-practical-compliance-patterns').default,
