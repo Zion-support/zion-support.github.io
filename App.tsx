@@ -137,6 +137,11 @@ import RevolutionaryTechBreakthrough2036 from './src/pages/RevolutionaryTechBrea
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import UltimateTechRevolution2037 from './src/pages/UltimateTechRevolution2037';
 import UltimateContentBanner2037 from './src/components/UltimateContentBanner2037';
+import AIConsciousnessBreakthrough2025 from './src/pages/AIConsciousnessBreakthrough2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import NeuralInterfaceBreakthrough2025 from './src/pages/NeuralInterfaceBreakthrough2025';
+import RevolutionaryBreakthroughBanner2025 from './src/components/RevolutionaryBreakthroughBanner2025';
+import InteractiveBreakthroughShowcase2025 from './src/components/InteractiveBreakthroughShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -161,6 +166,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Breakthrough Banner 2025 */}
+                <RevolutionaryBreakthroughBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -404,6 +412,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/AIConsciousnessBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: AI Consciousness →
+                    </a>
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Revolution →
+                    </a>
+                    <a href="/pages/NeuralInterfaceBreakthrough2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧬 NEW: Neural Interface →
                     </a>
                   </div>
                 </div>
@@ -806,6 +823,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Breakthrough Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveBreakthroughShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2026 />
@@ -932,6 +954,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechEvolution2038" element={<UltimateTechEvolution2038 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2036" element={<RevolutionaryTechBreakthrough2036 />} />
           <Route path="/pages/UltimateTechRevolution2037" element={<UltimateTechRevolution2037 />} />
+          <Route path="/pages/AIConsciousnessBreakthrough2025" element={<AIConsciousnessBreakthrough2025 />} />
+          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
+          <Route path="/pages/NeuralInterfaceBreakthrough2025" element={<NeuralInterfaceBreakthrough2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
