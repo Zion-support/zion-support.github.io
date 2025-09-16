@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -180,6 +181,97 @@ const InteractiveTechShowcase: React.FC = () => {
           ))}
         </div>
 =======
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
+  
+  const technologies = {
+    ai: {
+      title: "Artificial Intelligence",
+      subtitle: "Consciousness-Level AI Systems",
+      icon: "🧠",
+      color: "from-blue-500 to-purple-500",
+      description: "Experience the next generation of AI with consciousness-like capabilities, emotional intelligence, and autonomous decision-making.",
+      features: [
+        "Self-aware AI systems",
+        "Emotional intelligence processing",
+        "Autonomous problem solving",
+        "Human-AI collaboration",
+        "Real-time learning adaptation",
+        "Ethical decision making"
+      ],
+      stats: [
+        { label: "Processing Power", value: "10x faster", icon: "⚡" },
+        { label: "Accuracy Rate", value: "99.9%", icon: "🎯" },
+        { label: "Learning Speed", value: "1000x", icon: "📈" }
+      ]
+    },
+    quantum: {
+      title: "Quantum Computing",
+      subtitle: "Exponential Computational Power",
+      icon: "⚡",
+      color: "from-cyan-500 to-blue-500",
+      description: "Unlock the power of quantum mechanics to solve problems that would take classical computers millennia to process.",
+      features: [
+        "Quantum entanglement networks",
+        "Parallel universe processing",
+        "Exponential speedup algorithms",
+        "Quantum error correction",
+        "Secure quantum communication",
+        "Quantum machine learning"
+      ],
+      stats: [
+        { label: "Processing Speed", value: "1Million x", icon: "🚀" },
+        { label: "Qubits", value: "1000+", icon: "🔢" },
+        { label: "Stability", value: "99.99%", icon: "🛡️" }
+      ]
+    },
+    neural: {
+      title: "Neural Interfaces",
+      subtitle: "Direct Brain-Computer Communication",
+      icon: "🔗",
+      color: "from-emerald-500 to-teal-500",
+      description: "Seamlessly connect your mind to digital systems with our advanced neural interface technology.",
+      features: [
+        "Non-invasive neural reading",
+        "Real-time thought processing",
+        "High-bandwidth data transfer",
+        "Secure neural encryption",
+        "Multi-modal interaction",
+        "Consciousness preservation"
+      ],
+      stats: [
+        { label: "Data Transfer", value: "1TB/s", icon: "📊" },
+        { label: "Latency", value: "<1ms", icon: "⏱️" },
+        { label: "Accuracy", value: "99.8%", icon: "🎯" }
+      ]
+    },
+    biotech: {
+      title: "Biotech AI",
+      subtitle: "Personalized Medicine Revolution",
+      icon: "🧬",
+      color: "from-purple-500 to-pink-500",
+      description: "Revolutionize healthcare with AI-driven biotechnology that creates personalized treatments for every individual.",
+      features: [
+        "Genetic profile analysis",
+        "Personalized drug design",
+        "Real-time health monitoring",
+        "Disease prediction algorithms",
+        "Automated treatment optimization",
+        "Regenerative medicine AI"
+      ],
+      stats: [
+        { label: "Treatment Success", value: "95%", icon: "💊" },
+        { label: "Diagnosis Speed", value: "10x faster", icon: "⚡" },
+        { label: "Cost Reduction", value: "80%", icon: "💰" }
+      ]
+    }
+  };
+
+>>>>>>> cursor/create-and-deploy-new-content-9e5a
   const currentTech = technologies[activeTab as keyof typeof technologies];
 
   return (
@@ -303,7 +395,10 @@ const InteractiveTechShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9e5a
       </div>
     </div>
   );
