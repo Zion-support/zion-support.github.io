@@ -118,7 +118,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
   }, []);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -128,22 +128,12 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
         
         {/* Transcendent Particles */}
         {[...Array(30)].map((_, i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-30"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-            }}
-              scale: [0, 1.5, 0],
-              opacity: [0, 0.8, 0],
-              rotate: [0, 720],
-              x: [0, Math.random() * 200 - 100, 0],
-              y: [0, Math.random() * 200 - 100, 0],
-            }}
-              duration: 6 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 3,
             }}
           />
         ))}
@@ -152,11 +142,11 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             ✨ TRANSCENDENT TECH 2028
-          </divdiv>
+          </div>
           <divh2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
@@ -174,7 +164,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <div
               key={currentTech}
               className="space-y-10"
             >
@@ -198,31 +188,31 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {transcendentTechs[currentTech].features.map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(transcendentTechs[currentTech].stats).map(([key, value], index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${transcendentTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -246,26 +236,17 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                 
                 {/* Transcendent Energy Effects */}
                 {[...Array(40)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-50"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      scale: [0, 2, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 200 - 100, 0],
-                      y: [0, Math.random() * 200 - 100, 0],
-                    }}
-                      duration: 3 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 4,
-                    }}
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -284,7 +265,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -301,10 +282,10 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                 🌌 Interdimensional Tech →
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
