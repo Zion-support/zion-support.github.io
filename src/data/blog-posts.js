@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 1010,
+    title: "AI 2026: Trusted GenAI Operations",
+    excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
+    content: "Trusted GenAI Ops brings evaluation-first delivery, policy-as-code controls, and runtime guardrails together. This guide includes a minimal reference stack: dataset/versioning, scenario suites, promotion gates, human-in-the-loop, and evidence publishing.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Governance", "Evaluations", "Policy-as-Code"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-genai-operations-2026.jpg",
+    slug: "trusted-genai-operations-2026"
+  },
+  {
+    id: 1011,
+    title: "AI 2026: Production Evals — Practical Cookbook",
+    excerpt: "Scenario recipes, metrics, and wiring patterns for evaluation-first teams.",
+    content: "A concise cookbook of production eval recipes: groundedness, tool-correctness, instruction adherence, and safety signals. Shows CI wiring, thresholds, dashboards, and rollback hooks you can copy into your stack.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Evaluations",
+    tags: ["Evals", "Metrics", "Cookbook"],
+    featured: true,
+    imageUrl: "/images/blog/production-evals-cookbook-2026.jpg",
+    slug: "ai-2026-production-evals-practical-cookbook"
+  },
+  {
     id: 1001,
     title: "AI 2026: Agent Platform SLOs — Best Practices",
     excerpt: "A concise SLO set for safety, quality, reliability, latency, and cost—ready to adopt.",

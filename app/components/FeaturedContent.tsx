@@ -12,6 +12,24 @@ const featuredContent = [
     tags: ["AI", "Enterprise", "Automation", "2025"]
   },
   {
+    title: "AI 2026: Trusted GenAI Operations",
+    description: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
+    href: "/content/trusted-genai-operations-2026",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Governance", "Evaluations", "Policy-as-Code"]
+  },
+  {
+    title: "AI 2026: Production Evals — Practical Cookbook",
+    description: "Scenario recipes, metrics, and wiring patterns for evaluation‑first teams.",
+    href: "/blog/ai-2026-production-evals-practical-cookbook",
+    category: "Evaluations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Metrics", "Cookbook"]
+  },
+  {
     title: "AI 2025: Next-Generation Cybersecurity Revolution",
     description: "Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.",
     href: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection",
