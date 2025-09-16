@@ -16,6 +16,20 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Blueprint: Agentic SLO Dashboards (2026)',
+    summary: 'Define and operate SLOs across latency, quality, safety, and cost with drill‑downs to traces and incidents.',
+    href: '/blog/ai-2026-agentic-slo-dashboards-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Field Guide: AI Incidents & Postmortems (2026)',
+    summary: 'Templates and checklists for incident response, evidence capture, and corrective actions in AI systems.',
+    href: '/updates/ai-incidents-postmortems-2026',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
     title: 'Blueprint: Production Evidence Hub (2026)',
     summary: 'Centralize evals, traces, policy events, and incidents for audits and incident response.',
     href: '/blog/ai-2026-production-evidence-hub-blueprint',
