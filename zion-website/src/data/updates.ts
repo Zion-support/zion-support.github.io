@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Newly added updates (2025-09-16 - additional)
+    {
+        title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',
+        summary: 'Unified latency, quality, and cost benchmarking with shareable scorecards.',
+        href: '/updates/real-time-agent-benchmark-suite-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Agent Postmortems — Evidence‑First Templates',
+        summary: 'Step-by-step templates for reproducible agent incident analysis with signed evidence.',
+        href: '/updates/production-agent-postmortems-evidence-first',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // Newly added updates (2025-09-16)
     {
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
