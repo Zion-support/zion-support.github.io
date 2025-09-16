@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-011f
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -281,3 +292,20 @@ const RevolutionaryTech2026: React.FC = () => {
             >
               Contact Our Experts
             </motion.button>
+<<<<<<< HEAD
+=======
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryTech2026;
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-011f
