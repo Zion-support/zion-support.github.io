@@ -62,8 +62,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       tag: 'New',
       gradient: 'from-indigo-500 to-fuchsia-500'
     },
-=======
->>>>>>> cursor/create-and-deploy-new-content-aafa
     {
       title: 'Safe Autonomy in Production (2026)',
       href: '/blog/ai-2026-safe-autonomy-in-production',
@@ -135,6 +133,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
       tag: 'New',
       gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Agentic Benchmarking Field Guide (2026)',
+      href: '/blog/ai-2026-agentic-benchmarking-field-guide',
+      tag: 'New',
+      gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'Governed Tooling: Risk Tiers (2026)',
+      href: '/blog/ai-2026-governed-tooling-risk-tiers',
+      tag: 'New',
+      gradient: 'from-amber-500 to-pink-500'
     },
     {
       title: 'Reliable Autonomy Operations (2026)',
