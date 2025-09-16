@@ -1,5 +1,4 @@
 "use client";
-import { AnimatePresence, motion } from 'framer-motion';
 import {
   ArrowRight,
   Atom,
@@ -159,14 +158,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                <divdiv
                   className="flex items-center space-x-2"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
-                </motion.div>
+                </divdiv>
                 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
@@ -187,9 +184,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </div>
 
                 {/* Contact Info */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                <divdiv
                   className="hidden md:flex items-center space-x-4"
                 >
                   <a
@@ -204,7 +199,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   >
                     Contact Us
                   </a>
-                </motion.div>
+                </divdiv>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -218,12 +213,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </div>
 
               {/* Mobile Navigation Menu */}
-              <AnimatePresence>
+              <div>
                 {isMobileMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                  <divdiv
                     className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
@@ -258,9 +250,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                         </a>
                       </div>
                     </div>
-                  </motion.div>
+                  </divdiv>
                 )}
-              </AnimatePresence>
+              </div>
             </div>
           </nav>
         </>
@@ -269,26 +261,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center max-w-6xl mx-auto relative z-10"
           >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+            <divdiv
               className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <divdiv
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
               >
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
-              </motion.div>
+              </divdiv>
               
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -298,8 +282,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </p>
               
               {/* Enhanced CTA Section */}
-              <motion.div 
-                variants={itemVariants}
+              <divdiv 
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
                 <a href="/comprehensive-services-showcase-2026">
@@ -320,13 +303,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     Get Started
                   </button>
                 </a>
-              </motion.div>
+              </divdiv>
               
               {/* Trust Indicators */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+              <divdiv
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -341,19 +321,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <TrendingUp className="w-4 h-4 text-purple-400" />
                   <span>Proven Results</span>
                 </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </divdiv>
+            </divdiv>
+          </divdiv>
         </div>
       </section>
 
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="flex items-end justify-between mb-8"
           >
@@ -362,16 +340,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <p className="text-gray-300 mt-2">New guides and blueprints from our experts</p>
             </div>
             <a href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</a>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {latestInsights.map((post, index) => (
-              <motion.a
+              <diva
                 key={post.href}
                 href={post.href}
-                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-6"
               >
@@ -386,7 +362,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   Read more
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </motion.a>
+              </diva>
             ))}
           </div>
         </div>
@@ -395,10 +371,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-20"
           >
@@ -408,18 +382,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
-                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
@@ -429,7 +400,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -438,11 +409,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div
+          <divdiv
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -451,7 +420,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -462,13 +431,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
-                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
                 onClick={() => window.location.href = service.link}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -483,16 +449,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
 
           {/* Call to Action for Services Showcase */}
-          <motion.div
+          <divdiv
             className="text-center mt-16"
-            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
             <a
@@ -503,18 +467,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               View All 2026 Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div
+          <divdiv
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -523,7 +485,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
@@ -549,11 +511,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </div>
           </div>
 
-          <motion.div
+          <divdiv
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -570,7 +530,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Call Us
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 

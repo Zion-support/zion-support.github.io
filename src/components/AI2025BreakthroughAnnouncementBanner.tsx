@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 BrainZapRocketStarArrowRightX
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -43,46 +42,34 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+    <div>
+      <divdiv
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Left side - Urgency Badge */}
             <div className="flex items-center gap-4">
-              <motion.div
+              <divdiv
                 key={currentBreakthrough}
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: 20 }}
                 className={`px-4 py-2 rounded-full bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} text-white font-bold text-sm animate-pulse`}
               >
                 {breakthroughs[currentBreakthrough].urgency}
-              </motion.div>
+              </divdiv>
               
               {/* Rotating Icon */}
-              <motion.div
+              <divdiv
                 key={`icon-${currentBreakthrough}`}
-                initial={{ scale: 0rotate: -180 }}
-                animate={{ scale: 1rotate: 0 }}
-                transition={{ type: "spring"stiffness: 200 }}
                 className={`p-2 rounded-full bg-gradient-to-r ${breakthroughs[currentBreakthrough].color}`}
               >
                 <breakthroughs[currentBreakthrough].icon className="w-6 h-6 text-white" />
-              </motion.div>
+              </divdiv>
             </div>
 
             {/* Center - Breakthrough Content */}
             <div className="flex-1 text-center px-8">
-              <motion.div
+              <divdiv
                 key={`content-${currentBreakthrough}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
                 className="space-y-1"
               >
                 <h3 className="text-lg font-bold text-white">
@@ -91,21 +78,19 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 <p className="text-sm text-gray-300 max-w-md mx-auto">
                   {breakthroughs[currentBreakthrough].description}
                 </p>
-              </motion.div>
+              </divdiv>
             </div>
 
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/ai-2025-breakthrough-announcement">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   className={`bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >
                   <Star className="w-4 h-4" />
                   Learn More
                   <ArrowRight className="w-4 h-4" />
-                </motion.button>
+                </divbutton>
               </a>
               
               <button
@@ -124,18 +109,16 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_i) => (
-            <motion.div
+            <divdiv
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-20],
                 opacity: [010],
               }}
-              transition={{
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 2,
@@ -143,8 +126,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             />
           ))}
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </divdiv>
+    </div>
   );
 };
 

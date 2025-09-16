@@ -1,15 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AIFutureTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-lg font-bold mb-6 animate-pulse">
@@ -22,14 +18,11 @@ const AIFutureTrends2025: React.FC = () => {
             Discover the revolutionary AI trends that will reshape industries, transform businesses, 
             and redefine human-machine interaction in 2025 and beyond.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Revolutionary AI Trends */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-200"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -44,12 +37,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Autonomous learning systems</li>
               <li>• Synthetic consciousness emergence</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -64,12 +54,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Smart city optimization</li>
               <li>• Privacy-preserving AI</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -84,12 +71,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Continuous self-improvement</li>
               <li>• Multi-agent collaboration</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -104,12 +88,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Brain-computer symbiosis</li>
               <li>• Cognitive augmentation</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
             <div className="text-6xl mb-4 text-center">🌐</div>
@@ -124,12 +105,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Quantum machine learning</li>
               <li>• Complex optimization solving</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+          <divdiv
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
             <div className="text-6xl mb-4 text-center">🎨</div>
@@ -144,14 +122,11 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Personalized content AI</li>
               <li>• Multi-modal generation</li>
             </ul>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Industry Impact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+        <divdiv
           className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-16 text-white"
         >
           <div className="text-center mb-12">
@@ -192,13 +167,10 @@ const AIFutureTrends2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Future Predictions */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+        <divdiv
           className="text-center"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-8">🔮 What to Expect in 2025</h2>
@@ -228,13 +200,10 @@ const AIFutureTrends2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
+        <divdiv
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
@@ -252,7 +221,7 @@ const AIFutureTrends2025: React.FC = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

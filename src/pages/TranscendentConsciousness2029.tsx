@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const TranscendentConsciousness2029: React.FC = () => {
   return (
@@ -10,10 +9,7 @@ const TranscendentConsciousness2029: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -37,16 +33,14 @@ const TranscendentConsciousness2029: React.FC = () => {
                 🚀 Ascension
               </span>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
@@ -55,7 +49,7 @@ const TranscendentConsciousness2029: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Journey through the seven stages of consciousness evolution to achieve ultimate transcendence
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="space-y-12">
           {[
@@ -116,11 +110,9 @@ const TranscendentConsciousness2029: React.FC = () => {
               features: ["Beyond existence", "Infinite potential", "Perfect freedom", "Ultimate truth"]
             }
           ].map((stage, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`bg-gradient-to-br ${stage.color.replace('from-', 'from-').replace('to-', 'to-')} bg-opacity-20 backdrop-blur-sm rounded-3xl p-8 border border-white/20`}
             >
               <div className="flex items-center space-x-6">
@@ -143,7 +135,7 @@ const TranscendentConsciousness2029: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>
@@ -151,16 +143,14 @@ const TranscendentConsciousness2029: React.FC = () => {
       {/* Consciousness Technologies */}
       <div className="bg-gradient-to-r from-indigo-800/30 to-pink-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
               Consciousness Enhancement Technologies
             </h2>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -201,11 +191,9 @@ const TranscendentConsciousness2029: React.FC = () => {
                 features: ["Source connection", "Infinite knowledge", "Universal love", "Perfect wisdom"]
               }
             ].map((tech, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-indigo-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300"
               >
                 <div className="text-6xl mb-6 text-center">{tech.icon}</div>
@@ -219,7 +207,7 @@ const TranscendentConsciousness2029: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -227,22 +215,18 @@ const TranscendentConsciousness2029: React.FC = () => {
 
       {/* Enlightenment Journey */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
             Your Enlightenment Journey
           </h2>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
             className="space-y-8"
           >
             <div className="bg-gradient-to-br from-indigo-900/50 to-pink-900/50 rounded-2xl p-8">
@@ -263,12 +247,10 @@ const TranscendentConsciousness2029: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 rounded-2xl p-8"
           >
             <h3 className="text-3xl font-bold mb-6 text-pink-300">Transcendence Timeline</h3>
@@ -293,16 +275,14 @@ const TranscendentConsciousness2029: React.FC = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center bg-gradient-to-r from-indigo-800/50 to-pink-800/50 rounded-3xl p-12"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
@@ -319,7 +299,7 @@ const TranscendentConsciousness2029: React.FC = () => {
               Learn More
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -285,11 +284,8 @@ Recommendations:
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <divdiv 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center mb-6">
             <Sparkles className="w-12 h-12 text-yellow-400 mr-4" />
@@ -304,7 +300,7 @@ Recommendations:
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tools Sidebar */}
@@ -313,7 +309,7 @@ Recommendations:
               <h3 className="text-2xl font-bold text-white mb-6">AI Tools</h3>
               <div className="space-y-3">
                 {aiTools.map((tool) => (
-                  <motion.button
+                  <divbutton
                     key={tool.id}
                     onClick={() => {
                       setSelectedTool(tool.id);
@@ -324,8 +320,6 @@ Recommendations:
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                         : 'bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <div className="flex items-center mb-2">
                       <div className={`p-2 rounded-lg mr-3 ${
@@ -341,7 +335,7 @@ Recommendations:
                     <div className="text-sm opacity-75 line-clamp-2">
                       {tool.description}
                     </div>
-                  </motion.button>
+                  </divbutton>
                 ))}
               </div>
             </div>
@@ -425,25 +419,19 @@ Recommendations:
 
               {/* Progress Bar */}
               {isProcessing && (
-                <motion.div
+                <divdiv
                   className="mb-8"
-                  initial={{ opacity: 0height: 0 }}
-                  animate={{ opacity: 1height: 'auto' }}
-                  exit={{ opacity: 0height: 0 }}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-white font-semibold">Processing...</span>
                     <span className="text-gray-400">{Math.round(progress)}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <motion.div
+                    <divdiv
                       className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${progress}%` }}
-                      transition={{ duration: 0.3 }}
                     />
                   </div>
-                </motion.div>
+                </divdiv>
               )}
 
               {/* Output Section */}
@@ -453,13 +441,11 @@ Recommendations:
                 </label>
                 <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
                   {results[selectedTool] ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                    <divdiv
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
-                    </motion.div>
+                    </divdiv>
                   ) : (
                     <div className="text-gray-500 italic">
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
@@ -485,11 +471,8 @@ Recommendations:
         </div>
 
         {/* Call to Action */}
-        <motion.div 
+        <divdiv 
           className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Integrate AI into Your Workflow?
@@ -507,7 +490,7 @@ Recommendations:
               View API Docs
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

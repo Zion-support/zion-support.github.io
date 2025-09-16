@@ -13,7 +13,6 @@ import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/listings';
 import { ProductListing } from '@/types/listings';
-import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -215,10 +214,8 @@ export default function EquipmentDetail() {
         />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
-            <motion.div 
+            <divdiv 
               className="text-center py-20"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
               <h1 className="text-3xl font-bold text-white mb-4">
@@ -246,7 +243,7 @@ export default function EquipmentDetail() {
                   Browse Equipment
                 </Button>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </>
@@ -267,10 +264,8 @@ export default function EquipmentDetail() {
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
-          <motion.nav 
+          <divnav 
             className="flex mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
           >
             <button
               onClick={() => router.push('/equipment')}
@@ -280,15 +275,12 @@ export default function EquipmentDetail() {
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
-          </motion.nav>
+          </divnav>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
-            <motion.div 
+            <divdiv 
               className="space-y-4"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
             >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
@@ -319,14 +311,11 @@ export default function EquipmentDetail() {
                   ))}
                 </div>
               )}
-            </motion.div>
+            </divdiv>
 
             {/* Product Details */}
-            <motion.div 
+            <divdiv 
               className="space-y-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
             >
               {/* Header */}
               <div className="space-y-2">
@@ -467,7 +456,7 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>

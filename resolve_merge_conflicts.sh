@@ -1,164 +1,129 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive merge conflict resolution and PR merging process..."
+echo "Starting comprehensive merge conflict resolution..."
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    echo "📋 Resolving merge conflicts..."
+# Function to resolve conflicts in a file
+resolve_conflict() {
+    local file="$1"
+    echo "Resolving conflicts in: $file"
     
-    # Remove deleted files that are causing conflicts
-    echo "🗑️ Removing deleted files..."
-    git rm dist/index.html 2>/dev/null || true
-    git rm src/components/InteractiveTechShowcase2028.tsx 2>/dev/null || true
+    if [[ ! -f "$file" ]]; then
+        echo "File $file does not exist, skipping..."
+        return
+    fi
     
-    # For files with conflicts, we'll use our version (HEAD) as the primary
-    echo "🔧 Resolving file conflicts using our version..."
-    
-    # Resolve App.tsx conflicts by using our version
-    git checkout --ours App.tsx
-    git add App.tsx
-    
-    # Resolve component conflicts
-    git checkout --ours src/components/RevolutionaryAdBanner2025.tsx
-    git add src/components/RevolutionaryAdBanner2025.tsx
-    
-    git checkout --ours src/components/RevolutionaryContentBanner2025.tsx
-    git add src/components/RevolutionaryContentBanner2025.tsx
-    
-    git checkout --ours src/components/UltimateContentBanner2025.tsx
-    git add src/components/UltimateContentBanner2025.tsx
-    
-    # Resolve page conflicts
-    git checkout --ours src/pages/AISolutionsComprehensive2025.tsx
-    git add src/pages/AISolutionsComprehensive2025.tsx
-    
-    git checkout --ours src/pages/NextGenInnovationHub2025.tsx
-    git add src/pages/NextGenInnovationHub2025.tsx
-    
-    git checkout --ours src/pages/RevolutionaryTechBreakthrough2025.tsx
-    git add src/pages/RevolutionaryTechBreakthrough2025.tsx
-    
-    git checkout --ours src/pages/UltimateTechRevolution2025.tsx
-    git add src/pages/UltimateTechRevolution2025.tsx
-    
-    echo "✅ Merge conflicts resolved"
-}
-
-# Function to merge all open PRs
-merge_all_prs() {
-    echo "🔄 Starting bulk PR merge process..."
-    
-    # Get list of all remote branches (excluding main)
-    echo "📋 Getting list of remote branches..."
-    branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -50)
-    
-    echo "Found $(echo "$branches" | wc -l) branches to process"
-    
-    # Counter for processed branches
-    count=0
-    success_count=0
-    error_count=0
-    
-    for branch in $branches; do
-        count=$((count + 1))
-        echo ""
-        echo "🔄 Processing branch $count: $branch"
+    # Check if file has conflict markers
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Found conflicts in $file, resolving..."
         
-        # Skip if branch is main or HEAD
-        if [[ "$branch" == "main" || "$branch" == "HEAD" ]]; then
-            echo "⏭️ Skipping $branch"
-            continue
-        fi
-        
-        # Try to merge the branch
-        echo "🔄 Attempting to merge origin/$branch into main..."
-        
-        if git merge origin/$branch --no-edit 2>/dev/null; then
-            echo "✅ Successfully merged $branch"
-            success_count=$((success_count + 1))
+        # For most files, we'll accept the incoming changes (from the branch)
+        # This is a simple strategy - in production you'd want more sophisticated resolution
+        if [[ "$file" == *.tsx ]] || [[ "$file" == *.ts ]] || [[ "$file" == *.jsx ]] || [[ "$file" == *.js ]]; then
+            # For React/TypeScript files, accept incoming changes
+            git checkout --theirs "$file"
+        elif [[ "$file" == *.json ]]; then
+            # For JSON files, accept incoming changes
+            git checkout --theirs "$file"
+        elif [[ "$file" == *.html ]]; then
+            # For HTML files, accept incoming changes
+            git checkout --theirs "$file"
+        elif [[ "$file" == *.css ]]; then
+            # For CSS files, accept incoming changes
+            git checkout --theirs "$file"
         else
-            echo "⚠️ Merge conflict in $branch, resolving automatically..."
-            
-            # Auto-resolve conflicts by using our version
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                if [[ "$status" == "UU" || "$status" == "AA" ]]; then
-                    echo "🔧 Resolving conflict in $file using our version"
-                    git checkout --ours "$file" 2>/dev/null || true
-                    git add "$file" 2>/dev/null || true
-                elif [[ "$status" == "DD" ]]; then
-                    echo "🗑️ Removing deleted file $file"
-                    git rm "$file" 2>/dev/null || true
-                fi
-            done
-            
-            # Try to commit the merge
-            if git commit --no-edit 2>/dev/null; then
-                echo "✅ Successfully resolved and merged $branch"
-                success_count=$((success_count + 1))
-            else
-                echo "❌ Failed to merge $branch after conflict resolution"
-                git merge --abort 2>/dev/null || true
-                error_count=$((error_count + 1))
-            fi
+            # For other files, accept incoming changes
+            git checkout --theirs "$file"
         fi
         
-        # Limit to prevent infinite loops
-        if [ $count -ge 50 ]; then
-            echo "🛑 Reached processing limit of 50 branches"
-            break
-        fi
-    done
-    
-    echo ""
-    echo "📊 Merge Summary:"
-    echo "   Total processed: $count"
-    echo "   Successfully merged: $success_count"
-    echo "   Failed: $error_count"
-}
-
-# Function to push all changes
-push_changes() {
-    echo "🚀 Pushing all changes to remote..."
-    
-    if git push origin main --force; then
-        echo "✅ Successfully pushed all changes to main branch"
+        git add "$file"
+        echo "Resolved conflicts in $file"
     else
-        echo "❌ Failed to push changes"
-        return 1
+        echo "No conflicts found in $file"
     fi
 }
 
-# Main execution
-main() {
-    echo "🎯 Starting comprehensive merge and conflict resolution process..."
-    
-    # Step 1: Resolve current conflicts
-    resolve_conflicts
-    
-    # Step 2: Commit current merge
-    echo "💾 Committing current merge resolution..."
-    if git commit -m "Resolve merge conflicts and integrate latest changes
+# List of files with conflicts (from the merge output)
+conflict_files=(
+    "App.tsx"
+    "app/blog/page.jsx"
+    "app/page.tsx"
+    "dist/index.html"
+    "index.html"
+    "package-lock.json"
+    "package.json"
+    "pages/blog/index.tsx"
+    "pages/index.tsx"
+    "src/components/AbsoluteTechShowcase2031.tsx"
+    "src/components/AccessibilityEnhancer.tsx"
+    "src/components/DynamicContentCarousel.tsx"
+    "src/components/EnhancedContentShowcase.tsx"
+    "src/components/InteractiveTechShowcase.tsx"
+    "src/components/RevolutionaryAdBanner2026.tsx"
+    "src/components/RevolutionaryContentBanner2026.tsx"
+    "src/components/RevolutionaryContentBanner2033.tsx"
+    "src/components/RevolutionaryContentCarousel.tsx"
+    "src/components/RevolutionaryContentShowcase2026.tsx"
+    "src/components/UltimateContentShowcase2026.tsx"
+    "src/index.css"
+    "src/pages/AdvancedTechShowcase2027.tsx"
+    "src/pages/Blog.tsx"
+    "src/pages/ConsciousnessComputingRevolution2034.tsx"
+    "src/pages/Contact.tsx"
+    "src/pages/InterdimensionalTechRevolution2026.tsx"
+    "src/pages/NeuralInterfaceRevolution2025.tsx"
+    "src/pages/QuantumComputingRevolution2025.tsx"
+    "src/pages/QuantumRealityEngine2026.tsx"
+    "src/pages/RevolutionaryTech2026.tsx"
+    "src/pages/RevolutionaryTechBreakthrough2025.tsx"
+    "src/pages/RevolutionaryTechBreakthrough2026.tsx"
+    "src/pages/RevolutionaryTechInsights2026.tsx"
+    "src/pages/RevolutionaryTechShowcase2026.tsx"
+    "src/pages/SyntheticBiologyRevolution2027.tsx"
+    "src/pages/TranscendentAI2026.tsx"
+    "src/pages/TransdimensionalAI2026.tsx"
+    "src/pages/UltimateAIConsciousness2026.tsx"
+    "src/pages/UltimateTechShowcase2026.tsx"
+    "tsconfig.json"
+    "yarn.lock"
+    "zion-os/src/app/blog/[id]/page.tsx"
+    "zion-os/src/app/blog/page.tsx"
+    "zion-os/src/app/page.tsx"
+    "zion-os/src/components/FeatureShowcase.tsx"
+    "zion-website/src/app/news/page.tsx"
+    "zion-website/src/app/page.tsx"
+    "zion-website/src/data/updates.ts"
+)
 
-- Resolved all merge conflicts using our version
-- Removed deleted files causing conflicts
-- Integrated latest changes from remote main
-- Prepared for bulk PR merging"; then
-        echo "✅ Current merge committed successfully"
-    else
-        echo "❌ Failed to commit current merge"
-        exit 1
-    fi
-    
-    # Step 3: Merge all open PRs
-    merge_all_prs
-    
-    # Step 4: Push all changes
-    push_changes
-    
-    echo ""
-    echo "🎉 Merge conflict resolution and PR merging process completed!"
-    echo "📈 All changes have been integrated and pushed to main branch"
-}
+# Start the merge again
+echo "Starting merge with origin/cursor/create-and-deploy-new-content-e745..."
+git merge origin/cursor/create-and-deploy-new-content-e745
 
-# Run main function
-main "$@"
+# Resolve conflicts for each file
+for file in "${conflict_files[@]}"; do
+    resolve_conflict "$file"
+done
+
+# Handle the deleted file conflict
+echo "Handling deleted file conflict..."
+if [[ -f "src/pages/AdvancedRobotics2026.tsx" ]]; then
+    echo "Removing deleted file: src/pages/AdvancedRobotics2026.tsx"
+    git rm "src/pages/AdvancedRobotics2026.tsx"
+fi
+
+# Check if there are any remaining conflicts
+if git status | grep -q "both modified\|both added\|deleted by us\|deleted by them"; then
+    echo "Remaining conflicts found:"
+    git status
+    echo "Please resolve remaining conflicts manually"
+    exit 1
+else
+    echo "All conflicts resolved, committing merge..."
+    git commit -m "Merge branch 'cursor/create-and-deploy-new-content-e745' into main
+
+- Resolved merge conflicts by accepting incoming changes
+- Integrated new content pages and components
+- Enhanced frontend advertising and promotion
+- Added comprehensive blog and case studies content"
+    
+    echo "Merge completed successfully!"
+fi

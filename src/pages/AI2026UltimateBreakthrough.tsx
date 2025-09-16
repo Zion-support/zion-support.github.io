@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const AI2026UltimateBreakthrough: React.FC = () => {
@@ -18,10 +17,7 @@ const AI2026UltimateBreakthrough: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divdiv
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -34,16 +30,14 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 Experience the most advanced AI breakthroughs: consciousness transfer, quantum AI fusion, 
                 and interdimensional computing that will reshape reality itself.
               </p>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
 
         {/* Consciousness Transfer Section */}
         <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-purple-400/30"
           >
             <div className="text-center mb-8">
@@ -90,13 +84,11 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Quantum AI Fusion Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-blue-400/30"
           >
             <div className="text-center mb-8">
@@ -137,13 +129,11 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Interdimensional Computing Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-indigo-400/30"
           >
             <div className="text-center mb-8">
@@ -203,13 +193,11 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
             className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12"
           >
             <h2 className="text-4xl font-bold mb-6">Ready for the Ultimate AI Breakthrough?</h2>
@@ -225,7 +213,7 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
     </>
