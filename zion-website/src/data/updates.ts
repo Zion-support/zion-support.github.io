@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Blueprint: Grounded Generation Guardrails (2026)',
+		summary: 'Practical patterns to constrain generations with retrieval, policies, and live evals.',
+		href: '/updates/grounded-generation-guardrails-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: Evidence‑Driven Routing — 48% Cost Savings',
+		summary: 'How cost-aware routing and eval gates cut serving costs while improving quality.',
+		href: '/updates/evidence-driven-routing-case-studies-2026',
+		date: '2025-09-16',
+		tag: 'Case Study',
+	},
+	{
+		title: 'Release: Real‑Time Agent Debugger v1.1',
+		summary: 'Live traces, tool snapshots, and policy violations surfaced in one console.',
+		href: '/updates/real-time-agent-debugger-1-1',
+		date: '2025-09-16',
+		tag: 'Release',
+	},
+	{
 		title: 'Launch: Autonomous Support Copilot v1.2',
 		summary: 'Faster resolutions with evidence bundles, safer tool-use, and proactive guardrails.',
 		href: '/updates/autonomous-support-copilot-1-2',
