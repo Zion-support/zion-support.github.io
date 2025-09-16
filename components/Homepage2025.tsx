@@ -51,6 +51,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    {
+      title: 'Zero‑Trust Agents (2026)',
+      href: '/blog/ai-2026-zero-trust-agents',
+      tag: 'New',
+      gradient: 'from-violet-500 to-indigo-500'
+    },
     // Newly added content (Sept 16, 2025)
     {
       title: 'Low‑Latency Agent Observability (2026)',
