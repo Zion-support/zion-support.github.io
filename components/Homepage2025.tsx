@@ -51,18 +51,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
-      title: 'Secure RAG Blueprint (2026)',
-      href: '/blog/ai-2026-secure-rag-blueprint',
-      tag: 'New',
-      gradient: 'from-cyan-600 to-blue-600'
-    },
-    {
-      title: 'Executive Metrics for Agentic Systems (2026)',
-      href: '/blog/ai-2026-exec-metrics-for-agentic-systems',
-      tag: 'New',
-      gradient: 'from-amber-600 to-rose-600'
-    },
-    {
       title: 'Exec Guide — Agent SLO Scorecards (2026)',
       href: '/blog/ai-2026-exec-guide-to-agent-slo-scorecards',
       tag: 'New',
@@ -73,6 +61,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-agent-platform-readiness-checklist',
       tag: 'New',
       gradient: 'from-indigo-500 to-fuchsia-600'
+    },
+    {
+      title: 'Trusted GenAI Patterns for Regulated Enterprises (2026)',
+      href: '/blog/ai-2026-trusted-genai-patterns-regulated-enterprises',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Real-Time Retrieval Architectures (2026)',
+      href: '/blog/ai-2026-real-time-retrieval-architectures',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
@@ -151,6 +151,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-autonomous-incident-response-blueprint',
       tag: 'New',
       gradient: 'from-rose-500 to-red-500'
+    },
+    {
+      title: 'Real-Time Evals & Inference Guardrails (2026)',
+      href: '/blog/ai-2026-real-time-evals-inference-guardrails',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Edge Agents in Production — 2026 Guide',
+      href: '/blog/ai-2026-edge-agents-production-guide',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
     },
     {
       title: 'Enterprise Agent Risk Mitigation (2026)',
@@ -521,16 +533,16 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Secure RAG, exec metrics, evals, observability, and customer agents.</p>
+                <p className="opacity-90">Real-time evals, edge agents, and trustworthy routing now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-secure-rag-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Secure RAG Blueprint (2026)</div>
-                  <div className="text-xs opacity-90">7 min • RAG</div>
+                <a href="/blog/ai-2026-real-time-evals-inference-guardrails" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Real-Time Evals & Inference Guardrails (2026)</div>
+                  <div className="text-xs opacity-90">7 min • Safety</div>
                 </a>
-                <a href="/blog/ai-2026-exec-metrics-for-agentic-systems" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Executive Metrics for Agentic Systems (2026)</div>
-                  <div className="text-xs opacity-90">5 min • Strategy</div>
+                <a href="/blog/ai-2026-edge-agents-production-guide" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Edge Agents in Production — 2026 Guide</div>
+                  <div className="text-xs opacity-90">8 min • Edge</div>
                 </a>
                 <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>

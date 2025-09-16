@@ -104,6 +104,9 @@ export default function HomePage() {
             <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Latest from AI Lab —
+            <a href="/reports/ai-lab" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
           </p>
         </div>
       </div>
@@ -196,6 +199,8 @@ export default function HomePage() {
             <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            New: <a href="/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod — Rollbacks</a>
           </p>
         </div>
       </div>
