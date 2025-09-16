@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9701,
+    title: "AI 2026: Production Agent Runbooks — Copy/Paste Templates",
+    excerpt: "Standardize agent incident, rollback, and change procedures with verifiable templates.",
+    content: "This guide ships ready-to-use JSON and Markdown templates for production agent runbooks: incident timelines, rollback contracts, change approval checklists, and post-incident learning loops. Each template is designed to attach trace-linked evidence into your observability stack, making every decision auditable and every rollback deterministic.",
+    author: "Morgan Hill",
+    authorRole: "Principal Site Reliability Engineer",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Operations",
+    tags: ["Runbooks", "Rollback", "Evidence"],
+    featured: true,
+    imageUrl: "/images/blog/agent-runbooks-templates-2026.jpg",
+    slug: "ai-2026-production-agent-runbooks-templates"
+  },
+  {
+    id: 9700,
+    title: "Trusted RAG 2026: Grounded Answer Scorecards — Starter Kit",
+    excerpt: "Launch groundedness scorecards with freshness windows and citation coverage in hours, not weeks.",
+    content: "We provide a minimal yet production-ready groundedness scorecard: freshness windows, citation coverage, and semantic drift checks. Includes CI wiring, eval thresholds, and dashboards that let you gate merges and canaries with objective evidence. Copy the JSON contracts and ship guarded RAG the same day.",
+    author: "Samira Khan",
+    authorRole: "Applied AI Platform Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["Groundedness", "Scorecards", "Freshness"],
+    featured: true,
+    imageUrl: "/images/blog/grounded-answer-scorecards-2026.jpg",
+    slug: "trusted-rag-2026-grounded-answer-scorecards"
+  },
+  {
     id: 9601,
     title: "AI 2026: Real-Time Incident Postmortems — Evidence First",
     excerpt: "Turn incidents into verifiable learnings with trace-linked evidence and rollback recipes.",
