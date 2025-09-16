@@ -143,6 +143,11 @@ import RevolutionaryContentCarousel2039 from './src/components/RevolutionaryCont
 import UltimateTechBreakthrough2039 from './src/pages/UltimateTechBreakthrough2039';
 import RevolutionaryTechShowcase2039 from './src/pages/RevolutionaryTechShowcase2039';
 import NextGenInnovationHub2039 from './src/pages/NextGenInnovationHub2039';
+import AIConsciousnessRevolution2025 from './src/pages/AIConsciousnessRevolution2025';
+import QuantumComputingBreakthrough2025 from './src/pages/QuantumComputingBreakthrough2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -167,6 +172,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -425,6 +433,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/AIConsciousnessRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: AI Consciousness →
+                    </a>
+                    <a href="/pages/QuantumComputingBreakthrough2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Breakthrough →
+                    </a>
+                    <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧬 NEW: Neural Interface →
                     </a>
                   </div>
                 </div>
@@ -827,6 +844,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2026 />
@@ -961,6 +983,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2039" element={<UltimateTechBreakthrough2039 />} />
           <Route path="/pages/RevolutionaryTechShowcase2039" element={<RevolutionaryTechShowcase2039 />} />
           <Route path="/pages/NextGenInnovationHub2039" element={<NextGenInnovationHub2039 />} />
+          <Route path="/pages/AIConsciousnessRevolution2025" element={<AIConsciousnessRevolution2025 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2025" element={<QuantumComputingBreakthrough2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
