@@ -17,8 +17,8 @@ export default function Home({ items }: HomeProps) {
     <div>
       <main>
         <div style={{ background: '#0ea5e9', color: '#fff', padding: '12px 16px', borderRadius: 8, marginBottom: 16 }}>
-          <strong>New:</strong> Fresh blueprints, guides, and case studies just dropped.{' '}
-          <Link href="/explore" style={{ color: '#fff', textDecoration: 'underline' }}>Check them out →</Link>
+          <strong>New:</strong> Governed Real‑Time Model Routing (2026) is live.{' '}
+          <Link href="/blog/ai-2026-governed-realtime-model-routing" style={{ color: '#fff', textDecoration: 'underline' }}>Read now →</Link>
         </div>
         <h1>Welcome to Zion Tech Group</h1>
         <p>Advanced IT Solutions & AI Services</p>
