@@ -51,6 +51,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Autonomous Incident Response Blueprint (2026)',
+      href: '/blog/ai-2026-autonomous-incident-response-blueprint',
+      tag: 'New',
+      gradient: 'from-rose-500 to-red-500'
+    },
+    {
       title: 'Enterprise Agent Risk Mitigation (2026)',
       href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
       tag: 'New',

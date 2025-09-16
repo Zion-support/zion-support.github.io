@@ -3,6 +3,7 @@ import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-2026-autonomous-incident-response-blueprint', title: 'Autonomous Incident Response Blueprint (2026)', excerpt: 'Close the loop from detection to remediation with safe, auditable autonomy.' },
   { slug: 'ai-2026-reliable-autonomy-operations', title: 'Reliable Autonomy Operations (2026)', excerpt: 'Operate agents safely with SLOs, eval gates, incidents, and governed tools.' },
   { slug: 'ai-2026-agent-slo-scorecards', title: 'Agent SLO Scorecards (2026)', excerpt: 'Objective gates for safe autonomy rollouts.' },
   { slug: 'ai-2026-cost-aware-model-routing', title: 'Cost-Aware Model Routing (2026)', excerpt: 'Route by budget, latency, and quality with evals.' },
