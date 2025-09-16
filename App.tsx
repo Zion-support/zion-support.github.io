@@ -204,6 +204,12 @@ import RevolutionaryAdBanner2034 from './src/components/RevolutionaryAdBanner203
 import UltimateTechBreakthrough2034 from './src/pages/UltimateTechBreakthrough2034';
 import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase2034';
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import RevolutionaryAdBanner2025 from './src/components/RevolutionaryAdBanner2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -234,6 +240,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 */}
+                <RevolutionaryAdBanner2025 />
+                
+                {/* NEW: Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
@@ -1174,6 +1186,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
