@@ -3381,3 +3381,22 @@ zion_academy/seed_updates.py
 [2025-09-16 10:50:38] 🔧 Resolving conflicts in zion_academy/seed_updates.py for branch backup-main-20250915-165201...
 [2025-09-16 10:50:38] 🧩 Generic file: prefer main version
 [2025-09-16 10:50:38] ✅ Resolved conflicts in zion_academy/seed_updates.py
+[2025-09-16 10:50:39] ✅ Successfully resolved conflicts and merged backup-main-20250915-165201
+[2025-09-16 10:50:39] ✅ Branch backup-main-20250915-165201 processed successfully
+[2025-09-16 10:50:39] 📊 Batch progress: 19 successful, 0 failed
+[2025-09-16 10:50:39] 📊 Overall progress: 19 successful, 0 failed, 795 conflicts resolved
+[2025-09-16 10:50:39] 📋 Processing branch 20: backup-main-20250915-170459
+[2025-09-16 10:50:39] 🔄 Attempting to merge backup-main-20250915-170459...
+[2025-09-16 10:50:42] ⚠️  Merge conflicts detected in backup-main-20250915-170459, resolving...
+[2025-09-16 10:50:42] 📋 Conflicted files: zion-website/src/app/page.tsx
+zion-website/src/components/Navigation.tsx
+zion-website/src/data/updates.ts
+[2025-09-16 10:50:42] 🔧 Resolving conflicts in zion-website/src/app/page.tsx for branch backup-main-20250915-170459...
+[2025-09-16 10:50:42] 🧩 Generic file: prefer main version
+[2025-09-16 10:50:42] ✅ Resolved conflicts in zion-website/src/app/page.tsx
+[2025-09-16 10:50:42] 🔧 Resolving conflicts in zion-website/src/components/Navigation.tsx for branch backup-main-20250915-170459...
+[2025-09-16 10:50:42] 🧩 Generic file: prefer main version
+[2025-09-16 10:50:42] ✅ Resolved conflicts in zion-website/src/components/Navigation.tsx
+[2025-09-16 10:50:42] 🔧 Resolving conflicts in zion-website/src/data/updates.ts for branch backup-main-20250915-170459...
+[2025-09-16 10:50:42] 🧩 Generic file: prefer main version
+[2025-09-16 10:50:43] ✅ Resolved conflicts in zion-website/src/data/updates.ts
