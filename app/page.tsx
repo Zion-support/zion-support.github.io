@@ -236,6 +236,16 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-autonomous-change-management-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Autonomous Change Management — Blueprint</h3>
+              <p className="text-gray-600">Eval gates, policy-as-code, and automated rollbacks for safe releases.</p>
+            </Link>
+            <Link href="/blog/ai-2026-production-evidence-hub-starter" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Production Evidence Hub — Starter</h3>
+              <p className="text-gray-600">Centralize traces, evals, and policy events for auditable autonomy.</p>
+            </Link>
             <Link href="/blog/ai-2026-production-de-risking-checklist" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
               <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Production De‑Risking Checklist</h3>
