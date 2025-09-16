@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2025: Agent Cost Optimization Blueprint",
+      description: "Cut spend by 35–65% with tiered models, caching, and eval‑gated execution.",
+      slug: "ai-2025-agent-cost-optimization-blueprint",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/agent-cost-optimization-2025.jpg"
+    },
+    {
       title: "AI 2026: Safe Rollouts in Production",
       description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
       slug: "ai-2026-safe-rollouts-in-production",
