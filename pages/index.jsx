@@ -186,6 +186,11 @@ const Home = () => {
                   <h3 className="text-2xl font-semibold mb-2">Governed Runtime Rollbacks</h3>
                   <p className="text-white/80">Safe, auditable rollbacks using eval gates and evidence bundles.</p>
                 </Link>
+                <Link href="/blog/ai-2026-release-evidence-scorecards-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Leadership • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Release Evidence Scorecards — Blueprint</h3>
+                  <p className="text-white/80">A pragmatic template to make every release auditable.</p>
+                </Link>
               </div>
               <div className="mt-6">
                 <Link href="/blog" className="text-blue-200 hover:text-white font-semibold">View all articles →</Link>

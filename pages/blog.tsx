@@ -5,6 +5,42 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-agent-release-health-scorecards',
+      title: 'Agent Release Health Scorecards',
+      excerpt: 'Turn traces, evals, policy events, and incidents into release health.',
+      author: 'Reliability Engineering',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'Reliability',
+      tags: ['Scorecards', 'Evals', 'Traces'],
+      featured: true,
+      image: '/blog/agent-release-health-scorecards.jpg'
+    },
+    {
+      id: 'ai-2026-governed-runtime-rollback-strategies',
+      title: 'Governed Runtime Rollback Strategies',
+      excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '5 min read',
+      category: 'Operations',
+      tags: ['Rollback', 'Policy', 'Evidence'],
+      featured: false,
+      image: '/blog/governed-runtime-rollback-strategies.jpg'
+    },
+    {
+      id: 'ai-2026-release-evidence-scorecards-blueprint',
+      title: 'Release Evidence Scorecards — Blueprint',
+      excerpt: 'A pragmatic template to make every release auditable.',
+      author: 'Leadership',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Leadership',
+      tags: ['Scorecards', 'Governance', 'Evals'],
+      featured: true,
+      image: '/blog/release-evidence-scorecards-blueprint.jpg'
+    },
+    {
       id: 'ai-2026-governed-real-time-observability',
       title: 'Governed Real‑Time Observability (2026)',
       excerpt: 'Telemetry patterns that preserve sub‑200ms latency while enforcing safety and budget.',
