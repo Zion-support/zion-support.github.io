@@ -45,6 +45,9 @@ import RevolutionaryContentAdvertisingBanner2026 from './components/Revolutionar
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
 import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryContentPromoBanner2025';
+import RevolutionaryContentPromotionBanner2025 from './components/RevolutionaryContentPromotionBanner2025';
+import NextGenAIRevolution2025 from './components/NextGenAIRevolution2025';
+import AutonomousBusinessEcosystem2025 from './components/AutonomousBusinessEcosystem2025';
 import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
@@ -119,6 +122,11 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* NEW: Revolutionary Content Promotion Banner 2025 */}
+              <div className="mb-12">
+                <RevolutionaryContentPromotionBanner2025 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -434,6 +442,10 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2025 */}
+          <Route path="/next-gen-ai-revolution-2025" element={<NextGenAIRevolution2025 />} />
+          <Route path="/autonomous-business-ecosystem-2025" element={<AutonomousBusinessEcosystem2025 />} />
         </Routes>
         
         <Footer />
