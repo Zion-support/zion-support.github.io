@@ -9,6 +9,27 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Launch: Autonomous Incident Simulator v1.2',
+    summary: 'Simulate agent incidents with live eval gates and automated rollback drills.',
+    href: '/updates/incident-simulation-toolkit-1-2',
+    date: '2025-09-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Model Routing Playbook (2026)',
+    summary: 'Deterministic routing, fallback ladders, and budget-aware policies for reliability and cost.',
+    href: '/updates/real-time-model-routing-playbook-2026',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Evidence-Driven AI Change Management (2026)',
+    summary: 'Controls to ship AI changes safely with objective signals and audit-ready evidence.',
+    href: '/updates/enterprise-ai-change-management-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',
