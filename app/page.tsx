@@ -85,6 +85,12 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 // Import new 2026 content promotional components
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
+
+// Import new 2026 promotional components
+import NewContent2026PromotionBanner from './components/NewContent2026PromotionBanner';
+import AIInnovationShowcase2026 from './components/AIInnovationShowcase2026';
+import RevolutionaryAI2026Banner from './components/RevolutionaryAI2026Banner';
+
 =======
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import Link from 'next/link';
@@ -829,6 +835,15 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Revolutionary AI 2026 Banner - FEATURED */}
+        <RevolutionaryAI2026Banner />
+
+        {/* New Content 2026 Promotion Banner - FEATURED */}
+        <NewContent2026PromotionBanner />
+
+        {/* AI Innovation Showcase 2026 - FEATURED */}
+        <AIInnovationShowcase2026 />
 
         {/* New Content 2026 Promotional Banners - FEATURED */}
         <NewContent2026UltimateShowcaseBanner />
