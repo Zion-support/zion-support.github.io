@@ -43,6 +43,14 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
+<<<<<<< HEAD
+  {
+    title: 'Field Guide: Trustworthy Model Routing (2026)',
+    summary: 'Objective routing with evals, risk signals, and cost-latency tradeoffs backed by evidence.',
+    href: '/blog/ai-2026-trustworthy-model-routing',
+    date: '2025-09-16',
+    tag: 'Field Guide'
+=======
   // Additional fresh content 2025-09-16
   {
     title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
@@ -71,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/hybrid-retrieval-latency-case-study',
     date: '2025-09-16',
     tag: 'Case Study'
+>>>>>>> origin/cursor/create-and-deploy-new-content-0383
   },
 
   // Existing content
