@@ -2,7 +2,6 @@ import React from 'react';
 
 const NextGenTechRevolution2029: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -162,7 +161,6 @@ const NextGenTechRevolution2029: React.FC = () => {
               </div>
               <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Enhance Mind →
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -320,7 +318,6 @@ const NextGenTechRevolution2029: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Impact Statistics */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -363,7 +360,6 @@ const NextGenTechRevolution2029: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Real stories from organizations that have embraced the revolution
-=======
         {/* Interactive Experience Section */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-12">
@@ -376,7 +372,6 @@ const NextGenTechRevolution2029: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-bold">+1000%</span>
@@ -417,7 +412,6 @@ const NextGenTechRevolution2029: React.FC = () => {
               <div className="text-sm text-indigo-200">
                 <strong>Results:</strong> 99.99% mission success, 10+ new planets discovered, infinite possibilities unlocked
               </div>
-=======
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4">🌟 Consciousness Simulation</h3>
               <p className="text-white/80 mb-6">
@@ -455,7 +449,6 @@ const NextGenTechRevolution2029: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -467,7 +460,6 @@ const NextGenTechRevolution2029: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Learn More
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
