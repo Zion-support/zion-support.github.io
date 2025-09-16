@@ -28,7 +28,6 @@ const AppMetadataManager: React.FC = () => {
     <AppLayout>;
 
       <SEO
-=======
 import React from "react";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
@@ -46,7 +45,6 @@ const AppMetadataManager: React.FC = () => {
 
 export default AppMetadataManager;
 
-=======
       
       <div className="container py-8">
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>

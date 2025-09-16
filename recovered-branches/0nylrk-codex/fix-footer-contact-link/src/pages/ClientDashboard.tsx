@@ -42,7 +42,6 @@ function ClientDashboardContent() {
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
-=======
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId);
     setSelectedJobTitle(jobTitle);
@@ -134,7 +133,6 @@ function ClientDashboardContent() {
                   </div>;
                 )}
 
-=======
           
           <div>
             <div className="sticky top-4 space-y-6">

@@ -13,7 +13,6 @@ export default function EventsPage() {
 						<h2 className="text-2xl font-semibold mb-2">No upcoming events</h2>
 						<p className="text-gray-400">We are planning our next schedule. Check back soon or follow us on LinkedIn for updates.</p>
 					</article>
-=======
 import SEO from '../components/SEO';
 import Link from 'next/link';
 

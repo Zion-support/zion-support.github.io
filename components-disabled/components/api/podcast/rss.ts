@@ -29,7 +29,6 @@ import path from 'path';
       <link>${siteUrl}/media/podcast/${e && e.id}</link>
       <guid isPermaLink="false">${e && e.id}</guid>
 
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
 
@@ -87,7 +86,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 }

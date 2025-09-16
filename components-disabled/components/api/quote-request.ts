@@ -9,7 +9,6 @@ const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabase
 
 
 
-=======
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 

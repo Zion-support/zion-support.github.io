@@ -79,7 +79,6 @@ function ConversationsList() {
     </div>);
 }
 
-=======
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}

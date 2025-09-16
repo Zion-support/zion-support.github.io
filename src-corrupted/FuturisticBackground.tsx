@@ -4,8 +4,6 @@ export function FuturisticBackground({
   variant = 'particles', 
   intensity = 'medium',
   className = '' 
-=======
-=======
 import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
@@ -29,12 +27,10 @@ export function FuturisticBackground({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-=======
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-=======
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -129,7 +125,6 @@ export function FuturisticBackground({
           opacity: Math.random() * 0.5 + 0.1,
           life: Math.random() * 100,
           maxLife: 100
-=======
           opacity: Math.random() * 0.5 + 0.1,
           color: colors[Math.floor(Math.random() * colors.length)]
         });
@@ -340,7 +335,6 @@ export function FuturisticBackground({
       <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-zion-cyan/30 animate-pulse" />
     </div>
   );
-=======
 
       // Draw connecting lines between nearby particles
       particles.forEach((particle1, i) => {
@@ -394,7 +388,6 @@ export function FuturisticBackground({
         
         ctx.fillStyle = gradient;
         ctx.fillRect(0, scanY - 10, canvas.width, 20);
-=======
 
       // Draw scanning line effect
       const time = Date.now() * 0.001;

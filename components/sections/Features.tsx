@@ -64,7 +64,6 @@ export default Features;  )
                 {feature.title}
               </h3>
               <p className='text-gray-400 leading-relaxed'>                {feature.description}            >
-=======
   columns?: 2 | 3 | 4;
 }
 

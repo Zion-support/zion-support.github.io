@@ -20,24 +20,3 @@ export const generateStructuredData = (pageData) => {
   };
 };
 
-<<<<<<< HEAD
-export const generateBreadcrumbs = (path) => {
-  const segments = path.split('/').filter(Boolean);
-  return segments.map((segment, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": segment.charAt(0).toUpperCase() + segment.slice(1),
-    "item": `https://ziontechgroup.com/${segments.slice(0, index + 1).join('/')}`
-  }));
-};
-=======
-;
-;
-},;
-,;
-;
-}}}
-}};
-},,;
-},,
->>>>>>> origin/merge-pr-12271

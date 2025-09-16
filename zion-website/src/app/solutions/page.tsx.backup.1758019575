@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+=======
+import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+
+const solutions = [
+  { name: 'AI Research Assistant', description: 'Autonomous research platform that accelerates scientific discovery.', icon: LightBulbIcon, href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing for next-generation AI.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
+  { name: 'Autonomous Business Operations', description: 'Self-optimizing processes with predictive intelligence.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
+  { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization.', icon: ShieldCheckIcon, href: '/solutions/it-asset-management' }
+]
+
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+export default function SolutionsPage() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Solutions</h1>
+        <p className="mt-4 text-lg text-gray-300">AI solutions for research, operations, and governance.</p>
+      </div>
+    </div>
+  )
+}
+

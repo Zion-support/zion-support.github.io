@@ -18,7 +18,6 @@
           console && console.warn("User not authenticated.");
           return;
         }
-=======
 import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -230,7 +229,6 @@ export default function SavedTalentsPage() {
           description: "Failed to load saved talents. Please try again later.",;
           variant: "destructive"});
       } finally {;
-=======
           );
           setSavedTalents(talentProfiles);
         }
@@ -272,7 +270,6 @@ export default function SavedTalentsPage() {
 
 
 
-=======
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}

@@ -20,7 +20,6 @@ Context about Zion AI Marketplace:
 
 
 
-=======
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.

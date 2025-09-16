@@ -8,9 +8,6 @@ const Terms: React.FC = () => {
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
-=======
-=======
-=======
       />
       
       <div className="min-h-screen bg-gray-50 py-12">

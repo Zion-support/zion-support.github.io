@@ -141,7 +141,6 @@ export default defineConfig(({ command, mode }) => {
             'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
             'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
-            'animation-vendor': ['framer-motion'],
             'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
           },
           chunkFileNames: (chunkInfo) => {
@@ -171,7 +170,7 @@ export default defineConfig(({ command, mode }) => {
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
+      include: ['react', 'react-dom', 'react-router-dom'],
       exclude: ['@rollup/rollup-linux-x64-gnu'],
       ...(isProduction && {
         force: true,
@@ -179,7 +178,6 @@ export default defineConfig(({ command, mode }) => {
           target: 'es2020',
           platform: 'browser',
         }
-<<<<<<< HEAD
       })
     },
     server: {
@@ -197,19 +195,5 @@ export default defineConfig(({ command, mode }) => {
     css: {
       devSourcemap: true,
     },
-=======
-      }
-    }
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000,
-    host: true
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true
->>>>>>> origin/merge-pr-12271
   }
 })

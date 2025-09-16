@@ -388,7 +388,6 @@ const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`{
-=======
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 

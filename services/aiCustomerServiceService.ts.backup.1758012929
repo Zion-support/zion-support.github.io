@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  customerId: string;
+  subject: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
+  category: string;
+  assignedTo?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
+  tags: string[];
+  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';
+  id: string;
+  email: string;
+  name: string;
+  phone?: string;
+  company?: string;
+  plan: string;
+  subject: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  category: string;
+      throw error;
+    }
+  }
+}
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

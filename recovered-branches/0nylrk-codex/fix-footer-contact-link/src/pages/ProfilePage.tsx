@@ -43,7 +43,6 @@ export default function ProfilePage() {
     );
   }
 
-=======
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive",
@@ -115,7 +114,6 @@ export default function ProfilePage() {
               <div className="space-y-3">;
                 {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
                   profileData && profileData.portfolio_links.map((link, index) => (;
-=======
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -263,7 +261,6 @@ export default function ProfilePage() {
                 hourly_rate: profileData?.hourly_rate |0
 
 
-=======
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
                     >
                       <LinkIcon className="h-4 w-4 mr-2" />
@@ -339,6 +336,5 @@ export default function ProfilePage() {
 
 
 
-=======
   );
 }

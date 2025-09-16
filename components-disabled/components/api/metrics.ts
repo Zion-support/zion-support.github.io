@@ -126,7 +126,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
 
-=======
   const now = new Date();
   const labels = Array.from({ length: 14 }, (_, i) => {
     const d = new Date(now);

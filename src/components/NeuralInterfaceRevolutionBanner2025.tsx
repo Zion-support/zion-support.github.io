@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 XBrainZapTrendingUpArrowRightPlayUsersAward
 
 interface NeuralInterfaceContent {
@@ -103,9 +102,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
 
   if (isDismissed) {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+      <divdiv
         className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white p-4 text-center"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-center space-x-4">
@@ -118,19 +115,16 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             Show Banner
           </button>
         </div>
-      </motion.div>
+      </divdiv>
     );
   }
 
   const currentContent = neuralInterfaceContent[currentIndex];
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+        <divdiv
           className="relative overflow-hidden"
         >
           {/* Animated Background */}
@@ -138,37 +132,31 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
             
             {/* Floating Neural Network Animation */}
-            <motion.div
+            <divdiv
               className="absolute top-10 left-10 w-20 h-20 border border-purple-400/30 rounded-full"
-              animate={{
                 scale: [1.21],
                 opacity: [0.30.60.3],
               }}
-              transition={{
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
-            <motion.div
+            <divdiv
               className="absolute top-20 right-20 w-16 h-16 border border-blue-400/30 rounded-full"
-              animate={{
                 scale: [1.21.2],
                 opacity: [0.60.30.6],
               }}
-              transition={{
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
-            <motion.div
+            <divdiv
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-400/30 rounded-full"
-              animate={{
                 scale: [1.31],
                 opacity: [0.40.70.4],
               }}
-              transition={{
                 duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -217,13 +205,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                       </span>
                     </div>
                     
-                    <AnimatePresence mode="wait">
-                      <motion.div
+                      <divdiv
                         key={currentIndex}
-                        initial={{ opacity: 0x: 20 }}
-                        animate={{ opacity: 1x: 0 }}
-                        exit={{ opacity: 0x: -20 }}
-                        transition={{ duration: 0.5 }}
                       >
                         <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                           {currentContent.title}
@@ -257,8 +240,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                           <span>Explore {currentContent.type}</span>
                           <ArrowRight className="h-4 w-4" />
                         </a>
-                      </motion.div>
-                    </AnimatePresence>
+                      </divdiv>
+                    </div>
 
                     {/* Progress Indicators */}
                     <div className="flex space-x-2 mt-4">
@@ -371,9 +354,9 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

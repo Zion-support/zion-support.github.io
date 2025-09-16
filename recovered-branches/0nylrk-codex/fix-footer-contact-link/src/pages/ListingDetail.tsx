@@ -52,7 +52,6 @@
 
 
 
-=======
                 
                 {/* Features */}
                 <div className="mt-8">
@@ -117,7 +116,6 @@
                       amount={listing && listing.price}
                       serviceId={listing && listing.id}
                       providerId={listing && listing.author.id}
-=======
                 
                 {/* Tags */}
                 <div className="mt-8">
@@ -228,7 +226,6 @@
                     onClick={handleContact}
                     disabled={isLoading}
 
-=======
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
                         });
@@ -323,6 +320,5 @@
 }
 ;
 
-=======
   );
 }

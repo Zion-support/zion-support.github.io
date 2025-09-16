@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
@@ -126,10 +125,7 @@ export default function AdvancedServicesShowcase() {
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <divdiv
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
       }`}
@@ -234,14 +230,11 @@ export default function AdvancedServicesShowcase() {
           </a>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 
   const ServiceList = ({ service }: { service: any }) => (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+    <divdiv
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
       }`}
@@ -344,7 +337,7 @@ export default function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 
   return (
@@ -360,27 +353,18 @@ export default function AdvancedServicesShowcase() {
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divh1 
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               2025 Advanced Services Showcase
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            </divh1>
+            <divp 
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            </divp>
+            <divdiv 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -395,7 +379,7 @@ export default function AdvancedServicesShowcase() {
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Market Validated</span>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>
@@ -545,7 +529,7 @@ export default function AdvancedServicesShowcase() {
               </p>
             </div>
           ) : (
-            <AnimatePresence>
+            <div>
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
@@ -559,7 +543,7 @@ export default function AdvancedServicesShowcase() {
                   ))}
                 </div>
               )}
-            </AnimatePresence>
+            </div>
           )}
         </div>
 

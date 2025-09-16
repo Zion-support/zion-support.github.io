@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -81,49 +80,34 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="space-y-8"
           >
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.2 }}
+            <divdiv
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30"
             >
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
-            </motion.div>
+            </divdiv>
 
             {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.3 }}
+            <divh1
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent"
             >
               Business Solutions Showcase 2027
-            </motion.h1>
+            </divh1>
 
             {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.4 }}
+            <divp
               className="text-xl text-gray-300 leading-relaxed"
             >
               Comprehensive technology solutions designed to accelerate your business growth
               enhance efficiencyand drive innovation across all industries and company sizes.
-            </motion.p>
+            </divp>
 
             {/* Features Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.5 }}
+            <divdiv
               className="grid grid-cols-2 gap-3"
             >
               {features.map((featureindex) => (
@@ -132,13 +116,10 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                   <span className="text-gray-300 text-sm">{feature}</span>
                 </div>
               ))}
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.6 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:transform hover:scale-105">
@@ -150,24 +131,18 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 View Case Studies
               </button>
-            </motion.div>
-          </motion.div>
+            </divdiv>
+          </divdiv>
 
           {/* Right Content */}
-          <motion.div
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <divdiv
             className="space-y-8"
           >
             {/* Solutions Cards */}
             <div className="space-y-4">
               {solutions.map((solutionindex) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0x: 30 }}
-                  animate={isVisible ? { opacity: 1x: 0 } : {}}
-                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4">
@@ -179,7 +154,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                       <p className="text-gray-300 text-sm">{solution.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
 
@@ -188,11 +163,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Proven Results</h3>
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <divdiv
                     key={index}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                     className={`text-center p-4 rounded-2xl bg-gradient-to-r ${stat.color} ${
                       currentStat === index ? 'ring-2 ring-white/30' : ''
                     } transition-all duration-300`}
@@ -200,16 +172,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                     <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
             </div>
 
             {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.8 }}
+            <divdiv
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -220,8 +189,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 Trusted by Fortune 500 companiestartupsand SMBs worldwide. 
                 Recognized for excellence in technology innovation and client success.
               </p>
-            </motion.div>
-          </motion.div>
+            </divdiv>
+          </divdiv>
         </div>
       </div>
     </div>

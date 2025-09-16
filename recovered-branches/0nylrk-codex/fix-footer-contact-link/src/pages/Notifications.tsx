@@ -47,7 +47,6 @@ import { cn } from "@/lib/utils",
 
 
 
-=======
 import React, { useState } from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -133,7 +132,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
             <div className="flex items-center gap-2">;
               {!notification && notification.read && (;
 
-=======
 const NotificationCard: React.FC<{
   notification: {
     id: string;

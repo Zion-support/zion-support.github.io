@@ -312,7 +312,6 @@ export default function DevOpsAutomationPage() {
 
 
 
-=======
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

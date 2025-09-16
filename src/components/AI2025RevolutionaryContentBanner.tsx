@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -74,13 +73,9 @@ const AI2025RevolutionaryContentBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <divdiv
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
         >
           {/* Background effects */}
@@ -92,19 +87,17 @@ const AI2025RevolutionaryContentBanner = () => {
           {/* Floating particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(12)].map((_i) => (
-              <motion.div
+              <divdiv
                 key={i}
                 className="absolute w-1 h-1 bg-white/40 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                animate={{
                   y: [0-20],
                   opacity: [0.40.80.4],
                   scale: [1.51],
                 }}
-                transition={{
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
                   delay: Math.random() * 2,
@@ -117,10 +110,7 @@ const AI2025RevolutionaryContentBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left side - Content */}
               <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0x: -30 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.8 }}
+                <divdiv
                 >
                   {/* Badge */}
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold mb-6">
@@ -144,11 +134,8 @@ const AI2025RevolutionaryContentBanner = () => {
                   </p>
 
                   {/* Current feature highlight */}
-                  <motion.div
+                  <divdiv
                     key={currentFeature}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
                   >
                     <div className="flex items-center justify-center lg:justify-start space-x-4 mb-4">
@@ -165,7 +152,7 @@ const AI2025RevolutionaryContentBanner = () => {
                         {currentFeatureData.stats}
                       </span>
                     </div>
-                  </motion.div>
+                  </divdiv>
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -185,48 +172,40 @@ const AI2025RevolutionaryContentBanner = () => {
                       Get Consultation
                     </a>
                   </div>
-                </motion.div>
+                </divdiv>
               </div>
 
               {/* Right side - Visual elements */}
               <div className="flex-shrink-0">
                 <div className="relative w-80 h-80">
                   {/* Rotating rings */}
-                  <motion.div
+                  <divdiv
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20repeat: Infinityease: "linear" }}
                   />
                   
-                  <motion.div
+                  <divdiv
                     className="absolute inset-8 rounded-full border-2 border-blue-500/30"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 15repeat: Infinityease: "linear" }}
                   />
                   
-                  <motion.div
+                  <divdiv
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 10repeat: Infinityease: "linear" }}
                   />
 
                   {/* Center icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
+                    <divdiv
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
-                      animate={{ 
                         scale: [1.1],
                         rotate: [05-50]
                       }}
-                      transition={{ duration: 3repeat: Infinity }}
                     >
                       <currentFeatureData.icon className="w-12 h-12 text-white" />
-                    </motion.div>
+                    </divdiv>
                   </div>
 
                   {/* Feature indicators */}
                   {features.map((featureindex) => (
-                    <motion.div
+                    <divdiv
                       key={index}
                       className={`absolute w-4 h-4 rounded-full ${
                         index === currentFeature 
@@ -238,29 +217,25 @@ const AI2025RevolutionaryContentBanner = () => {
                         top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`,
                         transform: 'translate(-50%)',
                       }}
-                      animate={{
                         scale: index === currentFeature ? [1.21] : 1,
                         opacity: index === currentFeature ? [0.810.8] : 0.4,
                       }}
-                      transition={{ duration: 2repeat: Infinity }}
                     />
                   ))}
 
                   {/* Floating elements */}
                   {[...Array(8)].map((_i) => (
-                    <motion.div
+                    <divdiv
                       key={i}
                       className="absolute w-2 h-2 bg-white/60 rounded-full"
                       style={{
                         left: `${30 + (i * 10)}%`,
                         top: `${30 + (i * 8)}%`,
                       }}
-                      animate={{
                         y: [0-150],
                         opacity: [0.610.6],
                         scale: [1.21],
                       }}
-                      transition={{
                         duration: 2 + i * 0.3,
                         repeat: Infinity,
                         delay: i * 0.4,
@@ -294,9 +269,9 @@ const AI2025RevolutionaryContentBanner = () => {
               <X className="w-5 h-5" />
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

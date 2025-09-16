@@ -14,7 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
 import { clearSessionCookie } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
