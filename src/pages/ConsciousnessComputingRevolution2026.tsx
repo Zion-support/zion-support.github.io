@@ -262,7 +262,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               Start Your Journey
             </button>
+            <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Learn More
+            </button>
             <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Experts
             </button>
