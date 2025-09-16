@@ -144,6 +144,11 @@ import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryCont
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
 import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
 import ComprehensiveServices2036 from './src/pages/ComprehensiveServices2036';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 
 export default function App(): JSX.Element {
   return (
@@ -168,6 +173,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -409,6 +417,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
                     </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Revolutionary Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Revolution 2025 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Innovation Hub 2025 →
+                    </a>
                   </div>
                 </div>
 
@@ -420,6 +437,9 @@ export default function App(): JSX.Element {
                   </div>
                   <DynamicContentCarousel />
                 </div>
+
+                {/* NEW: Ultimate Content Showcase 2025 */}
+                <UltimateContentShowcase2025 />
 
                 {/* Revolutionary Content Carousel 2027 */}
                 <div className="mb-12">
@@ -942,6 +962,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenTechRevolution2036" element={<NextGenTechRevolution2036 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/ComprehensiveServices2036" element={<ComprehensiveServices2036 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
