@@ -204,6 +204,11 @@ import RevolutionaryAdBanner2034 from './src/components/RevolutionaryAdBanner203
 import UltimateTechBreakthrough2034 from './src/pages/UltimateTechBreakthrough2034';
 import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase2034';
 import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import AITransformationRevolution2025 from './src/pages/AITransformationRevolution2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import AITransformationBanner2025 from './src/components/AITransformationBanner2025';
+import NewContentCarousel2025 from './src/components/NewContentCarousel2025';
 <<<<<<< HEAD
 import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
 import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
@@ -249,21 +254,12 @@ export default function App(): JSX.Element {
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
-<<<<<<< HEAD
-                {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
-                <RevolutionaryContentBanner2025 />
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology */}
+                <RevolutionaryTechBanner2025 />
                 
-                {/* NEW: Ultimate Tech Revolution Banner 2025 */}
-                <UltimateTechRevolutionBanner2025 />
+                {/* NEW: AI Transformation Banner 2025 - Business AI */}
+                <AITransformationBanner2025 />
                 
-                {/* NEW: Revolutionary Breakthrough Banner 2026 */}
-                <RevolutionaryBreakthroughBanner2026 />
-                
-                {/* NEW: Revolutionary Case Studies Banner 2026 */}
-                <RevolutionaryCaseStudiesBanner2026 />
-                
-=======
->>>>>>> 89a254a0a173a29cdfd88acafae4795fcc926b43
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
@@ -624,6 +620,11 @@ export default function App(): JSX.Element {
                       📚 NEW: Tech Blog 2025 →
                     </a>
                   </div>
+                </div>
+
+                {/* NEW: New Content Carousel 2025 - Latest Content Showcase */}
+                <div className="mb-12">
+                  <NewContentCarousel2025 />
                 </div>
 
                 {/* Interactive Dynamic Content Carousel */}
@@ -1183,6 +1184,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2030" element={<RevolutionaryTechBlog2030 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/AITransformationRevolution2025" element={<AITransformationRevolution2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
           <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />
