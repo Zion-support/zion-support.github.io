@@ -146,6 +146,11 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-governed-evidence-hub-overview" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Governed Evidence Hub — Executive Overview</h3>
+              <p className="text-gray-600">Unify evals, incidents, and scorecards for audit‑ready autonomy.</p>
+            </Link>
             <Link href="/blog/ai-2026-agent-reliability-blueprint" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Reliability Blueprint (2026)</h3>
@@ -159,17 +164,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
+      {/* Promo: Governed Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
             <div>
               <p className="text-sm font-semibold text-emerald-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Evidence Hub — Executive Overview</h2>
-              <p className="text-gray-600 mt-2">Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Governed Evidence Hub — Executive Overview</h2>
+              <p className="text-gray-600 mt-2">Centralize evals, releases, incidents, and scorecards for audit‑ready autonomy.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-governed-evidence-hub-overview" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
               <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Architecture</Link>
             </div>
           </div>
