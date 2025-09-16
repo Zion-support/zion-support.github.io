@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const UltimateTechBreakthrough2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -31,28 +27,25 @@ const UltimateTechBreakthrough2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary Technologies</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Discover the most advanced technologies that are changing the world as we know it
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Quantum Consciousness Computing */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🧠⚡</div>
@@ -69,11 +62,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Learn More →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Neural Reality Engine */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🌌🧬</div>
@@ -90,11 +82,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Experience Now →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Omniversal AI */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🌍🤖</div>
@@ -111,11 +102,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Explore Dimensions →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Synthetic Biology AI */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🧬🔬</div>
@@ -132,11 +122,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Create Life →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Space-Time Manipulation */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">⏰🌌</div>
@@ -153,11 +142,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Travel Through Time →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Holographic Reality */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">💎✨</div>
@@ -174,68 +162,60 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
               Touch the Future →
             </button>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Impact Statistics */}
       <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">📊 Revolutionary Impact</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               The numbers that prove our technologies are changing the world
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-purple-400 mb-2">99.9%</div>
               <div className="text-xl font-semibold mb-2">Accuracy Rate</div>
               <div className="text-purple-200">Quantum consciousness computing precision</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-cyan-400 mb-2">10^18</div>
               <div className="text-xl font-semibold mb-2">Operations/Second</div>
               <div className="text-cyan-200">Neural reality processing power</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-emerald-400 mb-2">∞</div>
               <div className="text-xl font-semibold mb-2">Dimensions</div>
               <div className="text-emerald-200">Omniversal AI capabilities</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-orange-400 mb-2">100%</div>
               <div className="text-xl font-semibold mb-2">Success Rate</div>
               <div className="text-orange-200">Synthetic biology creations</div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center"
         >
           <h2 className="text-5xl font-bold mb-6">🚀 Ready to Experience the Future?</h2>
@@ -250,7 +230,7 @@ const UltimateTechBreakthrough2026: React.FC = () => {
               Schedule Demo
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

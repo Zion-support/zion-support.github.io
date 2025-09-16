@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -147,10 +146,7 @@ const InteractiveContentShowcase: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -163,13 +159,10 @@ const InteractiveContentShowcase: React.FC = () => {
             Explore our revolutionary content through interactive experiences. 
             Discover, engage, and immerse yourself in the future of technology.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <divdiv
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {stats.map((stat, index) => (
@@ -179,13 +172,10 @@ const InteractiveContentShowcase: React.FC = () => {
               <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {contentCategories.map((category, index) => (
@@ -202,25 +192,16 @@ const InteractiveContentShowcase: React.FC = () => {
               {category.name}
             </button>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <divdiv
             key={activeTab}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             {contentCategories[activeTab].content.map((item, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -10 }}
                 onHoverStart={() => setHoveredItem(index)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 cursor-pointer relative overflow-hidden"
@@ -257,24 +238,20 @@ const InteractiveContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <divbutton
                     className={`w-full bg-gradient-to-r ${contentCategories[activeTab].color} py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Explore Content →
-                  </motion.button>
+                  </divbutton>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
 
         {/* Interactive Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <div className="text-center mb-12">
@@ -312,13 +289,11 @@ const InteractiveContentShowcase: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
@@ -333,7 +308,7 @@ const InteractiveContentShowcase: React.FC = () => {
               Create Account
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

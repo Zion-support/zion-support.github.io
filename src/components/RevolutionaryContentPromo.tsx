@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryContentPromo: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -71,10 +70,7 @@ const RevolutionaryContentPromo: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -87,16 +83,13 @@ const RevolutionaryContentPromo: React.FC = () => {
             Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing, 
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className={`bg-gradient-to-br ${item.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${item.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
@@ -133,21 +126,16 @@ const RevolutionaryContentPromo: React.FC = () => {
 
               {/* Hover Effect */}
               {hoveredCard === index && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                <divdiv
                   className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"
                 />
               )}
-            </motion.div>
+            </divdiv>
           ))}
         </div>
 
         {/* Interactive Features Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 mb-16"
         >
           <div className="text-center mb-8">
@@ -172,13 +160,10 @@ const RevolutionaryContentPromo: React.FC = () => {
               <p className="text-purple-200">Get AI-powered predictions about technology trends</p>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <divdiv
           className="text-center"
         >
           <h3 className="text-4xl font-bold text-white mb-6">Ready to Explore the Future?</h3>
@@ -194,7 +179,7 @@ const RevolutionaryContentPromo: React.FC = () => {
               Download All Content
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

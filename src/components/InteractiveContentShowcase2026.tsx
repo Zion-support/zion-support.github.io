@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
@@ -55,10 +54,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -71,7 +67,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
             Immerse yourself in our revolutionary content through interactive demonstrations, 
             real-time simulations, and hands-on experiences with cutting-edge technology.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Content Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -91,11 +87,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </div>
 
         {/* Active Content Display */}
-        <motion.div
+        <divdiv
           key={activeContent}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -148,13 +141,10 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Feature Highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <divdiv
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {[
@@ -177,11 +167,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
               color: "from-cyan-500 to-blue-500"
             }
           ].map((feature, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 text-center"
             >
               <div className={`text-4xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
@@ -189,15 +176,12 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
               <p className="text-white/80">{feature.description}</p>
-            </motion.div>
+            </divdiv>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <divdiv
           className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -213,7 +197,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
               📚 View All Content
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

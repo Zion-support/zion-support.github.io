@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
@@ -170,10 +169,7 @@ export default function EnhancedServicesShowcase() {
         {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divdiv
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
@@ -199,17 +195,15 @@ export default function EnhancedServicesShowcase() {
                   <span className="text-pink-300 font-semibold">24/7 Support</span>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
 
         {/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -219,15 +213,13 @@ export default function EnhancedServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((category, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className="relative"
                 >
@@ -259,7 +251,7 @@ export default function EnhancedServicesShowcase() {
                       </Button>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -347,19 +339,15 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid/List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
+            <divdiv
               className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }
             >
               {filteredServices.map((service, index) => (
-                <motion.div
+                <divdiv
                   key={service.id}
-                  variants={itemVariants}
                   className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >
                   {viewMode === 'grid' ? (
@@ -482,9 +470,9 @@ export default function EnhancedServicesShowcase() {
                       </div>
                     </div>
                   )}
-                </motion.div>
+                </divdiv>
               ))}
-            </motion.div>
+            </divdiv>
 
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
@@ -509,10 +497,8 @@ export default function EnhancedServicesShowcase() {
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -557,7 +543,7 @@ export default function EnhancedServicesShowcase() {
                   <DollarSign className="ml-2 w-6 h-6" />
                 </Button>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
       </div>

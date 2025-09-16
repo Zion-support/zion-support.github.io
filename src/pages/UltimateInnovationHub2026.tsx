@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateInnovationHub2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -61,10 +60,7 @@ const UltimateInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-16"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -85,16 +81,13 @@ const UltimateInnovationHub2026: React.FC = () => {
                 Watch Live Demo
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <divdiv
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Technologies</h2>
@@ -118,14 +111,11 @@ const UltimateInnovationHub2026: React.FC = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Active Technology Display */}
-        <motion.div
+        <divdiv
           key={activeTab}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -163,13 +153,10 @@ const UltimateInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Innovation Showcase Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <divdiv
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Featured Innovations</h2>
@@ -212,11 +199,8 @@ const UltimateInnovationHub2026: React.FC = () => {
                 color: "from-violet-500 to-fuchsia-500"
               }
             ].map((innovation, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-all duration-300"
               >
                 <div className={`text-4xl mb-4 bg-gradient-to-r ${innovation.color} bg-clip-text text-transparent`}>
@@ -227,16 +211,13 @@ const UltimateInnovationHub2026: React.FC = () => {
                 <button className={`bg-gradient-to-r ${innovation.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore →
                 </button>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
         >
           <h2 className="text-5xl font-bold mb-6">Ready to Shape the Future?</h2>
@@ -255,7 +236,7 @@ const UltimateInnovationHub2026: React.FC = () => {
               🎮 Try Interactive Demo
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

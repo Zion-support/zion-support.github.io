@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Calendar
@@ -53,12 +52,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6ease: "easeOut" }}
+    <div>
+      <divdiv
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 border-b border-purple-400/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,18 +70,13 @@ const AITrendsPredictions2025PromotionBanner = () => {
                   </h3>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-purple-300" />
-                    <AnimatePresence mode="wait">
-                      <motion.p
+                      <divp
                         key={currentPrediction}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.5 }}
                         className="text-sm text-purple-200"
                       >
                         {predictions[currentPrediction]}
-                      </motion.p>
-                    </AnimatePresence>
+                      </divp>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -157,24 +147,20 @@ const AITrendsPredictions2025PromotionBanner = () => {
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
+          <divdiv
               x: [0100],
               opacity: [0.30.60.3],
             }}
-            transition={{
               duration: 5,
               repeat: Infinity,
               ease: "linear"
             }}
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-xl"
           />
-          <motion.div
-            animate={{
+          <divdiv
               x: [0-100],
               opacity: [0.20.50.2],
             }}
-            transition={{
               duration: 7,
               repeat: Infinity,
               ease: "linear",
@@ -182,12 +168,10 @@ const AITrendsPredictions2025PromotionBanner = () => {
             }}
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
           />
-          <motion.div
-            animate={{
+          <divdiv
               y: [0-20],
               opacity: [0.10.30.1],
             }}
-            transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
@@ -196,8 +180,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"
           />
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </divdiv>
+    </div>
   );
 };
 

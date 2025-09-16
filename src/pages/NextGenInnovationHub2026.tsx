@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2026: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const NextGenInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-16"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -37,29 +33,25 @@ const NextGenInnovationHub2026: React.FC = () => {
                 🌐 Global Network
               </span>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Innovation Labs Section */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">🔬 Innovation Laboratories</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             State-of-the-art research facilities where breakthrough innovations are born and developed
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🧠</div>
@@ -78,12 +70,10 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Active Research
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">⚛️</div>
@@ -102,12 +92,10 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Breakthrough Ready
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🧬</div>
@@ -126,12 +114,10 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Clinical Phase
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🚀</div>
@@ -150,12 +136,10 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Mission Ready
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🌐</div>
@@ -174,12 +158,10 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Beta Testing
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
             className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔋</div>
@@ -198,29 +180,25 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Pilot Phase
               </span>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Innovation Process */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">🔄 Innovation Process</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Our systematic approach to transforming ideas into revolutionary technologies
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
             className="text-center"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
@@ -228,12 +206,10 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Ideation</h3>
             <p className="text-gray-300">Brainstorming breakthrough concepts and innovative solutions</p>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
@@ -241,12 +217,10 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Research</h3>
             <p className="text-gray-300">Deep dive analysis and feasibility studies</p>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
@@ -254,12 +228,10 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Development</h3>
             <p className="text-gray-300">Prototyping and iterative development process</p>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
+          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
@@ -267,77 +239,65 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Deployment</h3>
             <p className="text-gray-300">Global rollout and market implementation</p>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Success Metrics */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">📈 Innovation Success</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Measurable impact of our innovation hub on global technology advancement
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
             className="text-center"
           >
             <div className="text-6xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-xl font-semibold mb-2">Active Projects</div>
             <div className="text-gray-300">Currently in development</div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
             <div className="text-6xl font-bold text-purple-400 mb-2">1000+</div>
             <div className="text-xl font-semibold mb-2">Patents Filed</div>
             <div className="text-gray-300">Innovation protection</div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
             <div className="text-6xl font-bold text-emerald-400 mb-2">50+</div>
             <div className="text-xl font-semibold mb-2">Countries</div>
             <div className="text-gray-300">Global research network</div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center"
           >
             <div className="text-6xl font-bold text-orange-400 mb-2">$2B+</div>
             <div className="text-xl font-semibold mb-2">Investment</div>
             <div className="text-gray-300">Research funding</div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
@@ -352,7 +312,7 @@ const NextGenInnovationHub2026: React.FC = () => {
               Explore Labs
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

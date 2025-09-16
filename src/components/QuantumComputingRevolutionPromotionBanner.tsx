@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 CpuAtomZapClockShieldGlobeTrendingUp
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -32,10 +31,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-      transition={{ duration: 0.6 }}
+    <divdiv
       className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 py-12"
     >
       {/* Quantum Background Animation */}
@@ -49,10 +45,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
-              transition={{ delay: 0.2duration: 0.6 }}
+            <divdiv
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -66,13 +59,10 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 Experience the dawn of the quantum era with revolutionary quantum computing breakthroughs 
                 that are reshaping the boundaries of computational possibility.
               </p>
-            </motion.div>
+            </divdiv>
 
             {/* Features List */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.4duration: 0.6 }}
+            <divdiv
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {features.map((featureindex) => (
@@ -81,13 +71,10 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.6duration: 0.6 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -103,25 +90,19 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               >
                 Get Quantum Access
               </a>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Right Quantum Stats */}
-          <motion.div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.3duration: 0.6 }}
+          <divdiv
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Quantum Capabilities</h3>
               
               {/* Animated Highlight */}
-              <motion.div
+              <divdiv
                 key={currentHighlight}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.5 }}
                 className="text-center mb-6"
               >
                 <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${highlights[currentHighlight].color} mb-4`}>
@@ -129,7 +110,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{highlights[currentHighlight].value}</div>
                 <div className="text-gray-400 text-sm">{highlights[currentHighlight].label}</div>
-              </motion.div>
+              </divdiv>
 
               {/* Quantum Metrics */}
               <div className="space-y-4">
@@ -157,20 +138,17 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1duration: 0.5 }}
+              <divdiv
                 className="mt-6 flex items-center justify-center gap-2 text-cyan-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited quantum access - Apply now!</span>
-              </motion.div>
+              </divdiv>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -197,10 +196,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
+      <divdiv
         className="mb-8"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -209,13 +205,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         <p className="text-gray-300 text-lg">
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
-      </motion.div>
+      </divdiv>
 
       {/* Search and Filters */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6delay: 0.2 }}
+      <divdiv
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
         <div className="flex flex-col lg:flex-row gap-4">
@@ -281,31 +274,24 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </divdiv>
 
       {/* Content Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isVisible ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6delay: 0.4 }}
+      <divdiv
         className={`grid gap-6 ${
           viewMode === 'grid' 
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}
       >
-        <AnimatePresence>
+        <div>
           {sortedContent.map((itemindex) => {
             const TypeIcon = getTypeIcon(item.type);
             const CategoryIcon = getCategoryIcon(item.category);
             
             return (
-              <motion.div
+              <divdiv
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -447,26 +433,20 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     </div>
                   </>
                 )}
-              </motion.div>
+              </divdiv>
             );
           })}
-        </AnimatePresence>
-      </motion.div>
+        </div>
+      </divdiv>
 
       {/* Content Detail Modal */}
-      <AnimatePresence>
+      <div>
         {selectedContent && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <divdiv
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedContent(null)}
           >
-            <motion.div
-              initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8opacity: 0 }}
+            <divdiv
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -533,10 +513,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </divdiv>
+          </divdiv>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 };

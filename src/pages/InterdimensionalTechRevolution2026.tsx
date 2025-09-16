@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
@@ -8,10 +7,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -31,28 +27,25 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
                 Explore Parallel Worlds
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Interdimensional Technologies */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🌌 Interdimensional Technologies</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Access technologies from infinite parallel dimensions and universes
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Dimension Gateway */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🚪🌌</div>
@@ -69,11 +62,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Enter Gateway →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Quantum Dimensional AI */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🤖🌍</div>
@@ -90,11 +82,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Connect AI →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Reality Manipulation Engine */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">⚡🔮</div>
@@ -111,11 +102,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Manipulate Reality →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Parallel Universe Mining */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">⛏️💎</div>
@@ -132,11 +122,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Start Mining →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Dimensional Communication */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">📡🌐</div>
@@ -153,11 +142,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Connect Now →
             </button>
-          </motion.div>
+          </divdiv>
 
           {/* Multiverse Database */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
+          <divdiv
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:shadow-2xl transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🗄️🌌</div>
@@ -174,79 +162,70 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Access Database →
             </button>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Dimensional Statistics */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">📊 Dimensional Impact</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               The incredible reach of our interdimensional technologies
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-indigo-400 mb-2">∞</div>
               <div className="text-xl font-semibold mb-2">Dimensions</div>
               <div className="text-indigo-200">Accessible parallel universes</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-purple-400 mb-2">10^24</div>
               <div className="text-xl font-semibold mb-2">Operations/Second</div>
               <div className="text-purple-200">Cross-dimensional processing</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-cyan-400 mb-2">100%</div>
               <div className="text-xl font-semibold mb-2">Success Rate</div>
               <div className="text-cyan-200">Dimensional gateway stability</div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            </divdiv>
+            <divdiv
               className="text-center"
             >
               <div className="text-6xl font-bold text-emerald-400 mb-2">0ms</div>
               <div className="text-xl font-semibold mb-2">Latency</div>
               <div className="text-emerald-200">Cross-dimensional communication</div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>
 
       {/* Success Stories */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🌟 Success Stories</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Real results from our interdimensional technology implementations
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <divdiv
             className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30"
           >
             <div className="text-4xl mb-4">🚀</div>
@@ -255,10 +234,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "We accessed parallel universes where space travel is 1000x more advanced. This gave us the technology to reach Mars in 2 days instead of 9 months."
             </p>
             <div className="text-indigo-300 font-semibold">- NASA Advanced Projects</div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <divdiv
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
             <div className="text-4xl mb-4">🧬</div>
@@ -267,10 +245,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "By accessing medical knowledge from parallel universes, we cured 15 previously incurable diseases in just 6 months."
             </p>
             <div className="text-purple-300 font-semibold">- Global Health Institute</div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <divdiv
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
             <div className="text-4xl mb-4">⚡</div>
@@ -279,16 +256,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "We found a parallel universe where they solved fusion energy 50 years ago. Now we have unlimited clean energy for the entire planet."
             </p>
             <div className="text-cyan-300 font-semibold">- International Energy Agency</div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center"
         >
           <h2 className="text-5xl font-bold mb-6">🌌 Ready to Cross Dimensions?</h2>
@@ -303,7 +278,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               Schedule Dimensional Demo
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

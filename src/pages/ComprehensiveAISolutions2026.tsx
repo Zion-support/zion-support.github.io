@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const ComprehensiveAISolutions2026: React.FC = () => {
   const [selectedSolution, setSelectedSolution] = useState(0);
@@ -143,10 +142,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center text-white"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -166,7 +162,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 Get Consultation
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
@@ -196,13 +192,8 @@ const ComprehensiveAISolutions2026: React.FC = () => {
         </div>
 
         {/* Solution Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <divdiv
             key={selectedSolution}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -278,8 +269,8 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
       </div>
 
       {/* Industries Section */}
@@ -291,11 +282,9 @@ const ComprehensiveAISolutions2026: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
             >
               <div className="text-4xl mb-4">{industry.icon}</div>
@@ -314,7 +303,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Solutions →
               </button>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>
@@ -328,11 +317,9 @@ const ComprehensiveAISolutions2026: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="flex items-center mb-4">
@@ -346,7 +333,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 <div className="text-sm text-gray-400">{testimonial.role}</div>
                 <div className="text-sm text-gray-500">{testimonial.company}</div>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>

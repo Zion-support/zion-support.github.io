@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const EnhancedNewsletterSignup2026: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -29,10 +28,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
 
   if (isSubscribed) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+      <divdiv
         className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12 text-white text-center"
       >
         <div className="text-6xl mb-4">🎉</div>
@@ -47,17 +43,14 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
         >
           Subscribe Another Email
         </button>
-      </motion.div>
+      </divdiv>
     );
   }
 
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -70,37 +63,28 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             Get exclusive access to our breakthrough technologies, interactive demos, 
             and be the first to experience the future of innovation.
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <divdiv
           >
             <h3 className="text-3xl font-bold mb-6">What You'll Get:</h3>
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
                   <span className="text-cyan-400 text-xl">✨</span>
                   <span className="text-lg">{benefit}</span>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Newsletter Signup Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <divdiv
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold mb-6 text-center">Get Started Now</h3>
@@ -142,14 +126,11 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 Unsubscribe anytime.
               </p>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Additional Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="mt-16 grid md:grid-cols-3 gap-8"
         >
           {[
@@ -175,7 +156,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
               <p className="text-white/80">{feature.description}</p>
             </div>
           ))}
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

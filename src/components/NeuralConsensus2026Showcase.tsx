@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -126,10 +125,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 mb-6">
@@ -146,17 +142,13 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Discover how collective AI intelligence is transforming business operations and achieving unprecedented results across industries.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Interactive Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((featureindex) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} cursor-pointer transition-all duration-300 ${
                 activeFeature === index ? 'ring-4 ring-white/30 shadow-2xl' : 'hover:shadow-xl'
               }`}
@@ -171,23 +163,18 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               <p className="text-white/90 text-sm leading-relaxed">{feature.description}</p>
               
               {activeFeature === index && (
-                <motion.div
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
+                <divdiv
                   className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
                 >
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                </motion.div>
+                </divdiv>
               )}
-            </motion.div>
+            </divdiv>
           ))}
         </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.3 }}
+        <divdiv
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -199,13 +186,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               <div className="text-blue-200 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Case Studies */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <divdiv
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -214,11 +198,8 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((studyindex) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.5 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -242,16 +223,13 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                     <span className="font-bold text-purple-400">{study.timeframe}</span>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-8 border border-blue-400/30">
@@ -265,31 +243,27 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/src/pages/blog/ai-2026-neural-consensus-revolution">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Read Full Analysis
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
+                </divbutton>
               </a>
               
               <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <BarChart3 className="w-5 h-5 mr-2" />
                   View Case Studies
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
+                </divbutton>
               </a>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Mail, 
   Send, 
@@ -64,10 +63,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
     return (
       <div className="py-20 bg-gradient-to-br from-green-900 via-emerald-900 to-green-900">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <divdiv
             className="text-center max-w-2xl mx-auto"
           >
             <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -100,7 +96,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
     );
@@ -111,10 +107,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
               <Star className="w-4 h-4" />
@@ -136,11 +129,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             {/* Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
@@ -150,18 +140,15 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
 
             {/* Stats */}
             <div className="flex space-x-8">
               {stats.map((stat, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="flex items-center justify-center space-x-2 mb-2">
@@ -171,16 +158,13 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
                   </div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Signup Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
           >
             <div className="text-center mb-8">
@@ -253,7 +237,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
@@ -10,69 +9,49 @@ const RevolutionaryTechBanner2026: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 backdrop-blur-sm rounded-2xl p-8 mb-8 text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center"
         >
           {/* Animated Icons */}
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <motion.span
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            <divspan
               className="text-4xl"
             >
               🚀
-            </motion.span>
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+            </divspan>
+            <divspan
               className="text-4xl"
             >
               ⚡
-            </motion.span>
-            <motion.span
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+            </divspan>
+            <divspan
               className="text-4xl"
             >
               🧠
-            </motion.span>
-            <motion.span
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 1, repeat: Infinity, delay: 0.5 }}
+            </divspan>
+            <divspan
               className="text-4xl"
             >
               🧬
-            </motion.span>
+            </divspan>
           </div>
 
           {/* Main Heading */}
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <divh2
             className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent"
           >
             REVOLUTIONARY TECH BREAKTHROUGH 2026
-          </motion.h2>
+          </divh2>
 
           {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <divp
             className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto"
           >
             Experience the convergence of AI Consciousness, Quantum Supremacy, and Neural Interfaces
-          </motion.p>
+          </divp>
 
           {/* Feature Highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <divdiv
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -90,60 +69,45 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
               <p className="text-sm opacity-80">Direct brain-computer communication</p>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Call to Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+          <divdiv
             className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
           >
-            <motion.a
+            <diva
               href="/pages/AIConsciousnessRevolution2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
             >
               🧠 Explore AI Consciousness →
-            </motion.a>
-            <motion.a
+            </diva>
+            <diva
               href="/pages/QuantumSupremacy2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
             >
               ⚡ Discover Quantum Power →
-            </motion.a>
-            <motion.a
+            </diva>
+            <diva
               href="/pages/NeuralInterfaceBreakthrough2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
             >
               🧬 Experience Neural Tech →
-            </motion.a>
-          </motion.div>
+            </diva>
+          </divdiv>
 
           {/* Animated Progress Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+          <divdiv
             className="mt-8"
           >
             <div className="text-sm opacity-80 mb-2">Revolutionary Technology Progress</div>
             <div className="w-full bg-white/20 rounded-full h-2">
-              <motion.div
+              <divdiv
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 2, delay: 1.2 }}
               />
             </div>
             <div className="text-xs opacity-60 mt-2">100% Complete - Ready for Launch</div>
-          </motion.div>
-        </motion.div>
+          </divdiv>
+        </divdiv>
       </div>
     </div>
   );

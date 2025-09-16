@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -40,10 +39,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
   const currentFeatureData = features[currentFeature];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
-      transition={{ duration: 0.8 }}
+    <divdiv
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 shadow-2xl"
     >
       {/* Animated Background */}
@@ -57,10 +53,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1">
-            <motion.div
-              initial={{ opacity: 0x: -20 }}
-              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -20 }}
-              transition={{ duration: 0.8delay: 0.2 }}
+            <divdiv
               className="mb-6"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -82,14 +75,11 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
               <p className="text-xl text-gray-300 mb-6 max-w-2xl">
                 Discover revolutionary AI technologies that will transform industries and reshape the future of human-computer interaction.
               </p>
-            </motion.div>
+            </divdiv>
 
             {/* Rotating Feature Display */}
-            <motion.div
+            <divdiv
               key={currentFeature}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="mb-8"
             >
               <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
@@ -101,13 +91,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                   <div className="text-gray-400 text-sm">Cutting-edge innovation for 2025</div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <divdiv
               className="flex flex-wrap gap-6 mb-8"
             >
               <div className="flex items-center gap-2">
@@ -122,13 +109,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 <Rocket className="w-5 h-5 text-blue-400" />
                 <span className="text-white font-semibold">Future Ready</span>
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8delay: 0.6 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -145,14 +129,11 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 View All Content
                 <Sparkles className="w-5 h-5" />
               </a>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Right Visual */}
-          <motion.div
-            initial={{ opacity: 0x: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8delay: 0.3 }}
+          <divdiv
             className="relative"
           >
             <div className="relative w-80 h-80">
@@ -171,17 +152,15 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 const y = Math.sin(angle) * radius;
                 
                 return (
-                  <motion.div
+                  <divdiv
                     key={index}
                     className="absolute"
                     style={{
                       left: `calc(50% + ${x}px - 24px)`,
                       top: `calc(50% + ${y}px - 24px)`,
                     }}
-                    animate={{
                       rotate: 360,
                     }}
-                    transition={{
                       duration: 20,
                       repeat: Infinity,
                       ease: "linear"
@@ -190,7 +169,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                     <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center shadow-lg`}>
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                  </motion.div>
+                  </divdiv>
                 );
               })}
 
@@ -225,10 +204,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 </defs>
               </svg>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

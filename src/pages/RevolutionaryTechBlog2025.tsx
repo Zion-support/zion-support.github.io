@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryTechBlog2025: React.FC = () => {
   const blogPosts = [
@@ -81,10 +80,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-lg font-bold mb-6 animate-pulse">
@@ -97,26 +93,20 @@ const RevolutionaryTechBlog2025: React.FC = () => {
             Stay ahead of the curve with our cutting-edge insights on AI, quantum computing, 
             neural interfaces, and the technologies shaping tomorrow's world.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Featured Posts */}
         <div className="mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <divh2
             className="text-4xl font-bold text-gray-900 mb-8 text-center"
           >
             🌟 Featured Articles
-          </motion.h2>
+          </divh2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.filter(post => post.featured).map((post, index) => (
-              <motion.article
+              <divarticle
                 key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
                 className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
               >
                 <div className={`h-48 bg-gradient-to-br ${post.color} flex items-center justify-center text-8xl`}>
@@ -150,29 +140,23 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </motion.article>
+              </divarticle>
             ))}
           </div>
         </div>
 
         {/* All Posts Grid */}
         <div className="mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+          <divh2
             className="text-4xl font-bold text-gray-900 mb-8 text-center"
           >
             📖 All Articles
-          </motion.h2>
+          </divh2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <motion.article
+              <divarticle
                 key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + index * 0.05 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
               >
                 <div className={`h-32 bg-gradient-to-br ${post.color} flex items-center justify-center text-6xl`}>
@@ -200,16 +184,13 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </motion.article>
+              </divarticle>
             ))}
           </div>
         </div>
 
         {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
+        <divdiv
           className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-4xl font-bold mb-6">🚀 Stay Updated with Revolutionary Tech</h2>
@@ -230,23 +211,17 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           <p className="text-sm opacity-75 mt-4">
             Join 10,000+ tech leaders and innovators
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Categories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
+        <divdiv
           className="mt-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">📂 Browse by Category</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {['AI Revolution', 'Quantum Computing', 'Neural Technology', 'Autonomous AI', 'Edge Computing', 'Generative AI', 'Blockchain', 'Cybersecurity'].map((category, index) => (
-              <motion.div
+              <divdiv
                 key={category}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.5 + index * 0.05 }}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
               >
                 <div className="text-4xl mb-3 text-center">🧠</div>
@@ -256,10 +231,10 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                 <p className="text-gray-600 text-sm text-center mt-2">
                   {Math.floor(Math.random() * 20) + 5} articles
                 </p>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

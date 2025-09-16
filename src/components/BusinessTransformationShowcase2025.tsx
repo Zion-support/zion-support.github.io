@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -129,21 +128,16 @@ const BusinessTransformationShowcase2025 = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%234F46E5" fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
-      <motion.div
+      <divdiv
         className="container mx-auto px-4 py-16 relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
       >
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.div 
+          <divdiv 
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6"
-            whileHover={{ scale: 1.05 }}
           >
             <Zap className="w-4 h-4" />
             BUSINESS TRANSFORMATION 2025
-          </motion.div>
+          </divdiv>
           
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
             Transform Your Business
@@ -152,21 +146,18 @@ const BusinessTransformationShowcase2025 = () => {
             Join thousands of companies achieving unprecedented growth with our 
             AI-powered business transformation solutions.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Metrics Grid */}
-        <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" variants={itemVariants}>
           {metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
-              <motion.div
+              <divdiv
                 key={index}
                 className={`bg-gradient-to-br ${metric.color} p-6 rounded-2xl text-white cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   activeMetric === index ? 'ring-4 ring-white/30' : ''
                 }`}
                 onClick={() => setActiveMetric(index)}
-                whileHover={{ y: -5 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <Icon className="w-8 h-8" />
@@ -175,19 +166,14 @@ const BusinessTransformationShowcase2025 = () => {
                 <div className="text-3xl font-bold mb-2">{metric.value}</div>
                 <div className="text-lg font-semibold mb-1">{metric.title}</div>
                 <div className="text-sm opacity-90">{metric.description}</div>
-              </motion.div>
+              </divdiv>
             );
           })}
-        </motion.div>
+        </divdiv>
 
         {/* Active Metric Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <divdiv
             key={activeMetric}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 mb-16"
           >
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -208,16 +194,13 @@ const BusinessTransformationShowcase2025 = () => {
 
                 <div className="space-y-4">
                   {metrics[activeMetric].details.map((detailindex) => (
-                    <motion.div
+                    <divdiv
                       key={index}
                       className="flex items-center gap-3"
-                      initial={{ opacity: 0x: -20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      transition={{ delay: index * 0.1 }}
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{detail}</span>
-                    </motion.div>
+                    </divdiv>
                   ))}
                 </div>
               </div>
@@ -231,35 +214,28 @@ const BusinessTransformationShowcase2025 = () => {
                     <div className="text-xl text-gray-300 mb-6">
                       {metrics[activeMetric].title}
                     </div>
-                    <motion.button
+                    <divbutton
                       className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 mx-auto"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                     >
                       Learn More
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </motion.button>
+                    </divbutton>
                   </div>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
 
         {/* Success Stories */}
-        <motion.div className="mb-16" variants={itemVariants}>
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Success Stories
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((storyindex) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ y: -5 }}
               >
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{story.company}</h3>
@@ -279,15 +255,14 @@ const BusinessTransformationShowcase2025 = () => {
                     <p className="text-green-300 text-sm font-semibold">{story.results}</p>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div 
+        <divdiv 
           className="text-center"
-          variants={itemVariants}
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -298,24 +273,20 @@ const BusinessTransformationShowcase2025 = () => {
               with our AI-powered transformation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <divbutton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Start Your Transformation
-              </motion.button>
-              <motion.button
+              </divbutton>
+              <divbutton
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 View Case Studies
-              </motion.button>
+              </divbutton>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </divdiv>
+      </divdiv>
     </div>
   );
 };

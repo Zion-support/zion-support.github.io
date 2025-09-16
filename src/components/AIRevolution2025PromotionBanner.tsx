@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -68,10 +67,7 @@ const AIRevolution2025PromotionBanner = () => {
   const currentAnnouncement = announcements[currentSlide];
 
   return (
-    <motion.div
-      initial={{ y: -100opacity: 0 }}
-      animate={{ y: 0opacity: 1 }}
-      exit={{ y: -100opacity: 0 }}
+    <divdiv
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 text-white shadow-2xl"
     >
       {/* Animated Background */}
@@ -79,12 +75,10 @@ const AIRevolution2025PromotionBanner = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         {/* Floating Elements */}
-        <motion.div
-          animate={{ 
+        <divdiv
             y: [0-20],
             rotate: [050]
           }}
-          transition={{ 
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
@@ -92,14 +86,12 @@ const AIRevolution2025PromotionBanner = () => {
           className="absolute top-4 left-8 w-12 h-12 border border-purple-400/30 rounded-full flex items-center justify-center"
         >
           <Brain className="w-6 h-6 text-purple-400" />
-        </motion.div>
+        </divdiv>
         
-        <motion.div
-          animate={{ 
+        <divdiv
             y: [0150],
             rotate: [0-50]
           }}
-          transition={{ 
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
@@ -108,14 +100,12 @@ const AIRevolution2025PromotionBanner = () => {
           className="absolute top-6 right-12 w-10 h-10 border border-blue-400/30 rounded-full flex items-center justify-center"
         >
           <Zap className="w-5 h-5 text-blue-400" />
-        </motion.div>
+        </divdiv>
 
-        <motion.div
-          animate={{ 
+        <divdiv
             y: [0-10],
             x: [010]
           }}
-          transition={{ 
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut",
@@ -124,31 +114,24 @@ const AIRevolution2025PromotionBanner = () => {
           className="absolute top-8 left-1/2 w-8 h-8 border border-cyan-400/30 rounded-full flex items-center justify-center"
         >
           <Sparkles className="w-4 h-4 text-cyan-400" />
-        </motion.div>
+        </divdiv>
       </div>
 
       <div className="relative z-10 container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex items-center gap-6">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8repeat: Infinityease: "linear" }}
+            <divdiv
               className="flex-shrink-0"
             >
               <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
                 <currentAnnouncement.icon className="w-7 h-7 text-white" />
               </div>
-            </motion.div>
+            </divdiv>
             
             <div className="flex-1 min-w-0">
-              <AnimatePresence mode="wait">
-                <motion.div
+                <divdiv
                   key={currentSlide}
-                  initial={{ opacity: 0x: 20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: -20 }}
-                  transition={{ duration: 0.5 }}
                   className="space-y-2"
                 >
                   <div className="flex items-center gap-2">
@@ -159,21 +142,19 @@ const AIRevolution2025PromotionBanner = () => {
                   </div>
                   <h3 className="text-xl font-bold leading-tight">{currentAnnouncement.title}</h3>
                   <p className="text-sm text-gray-300">{currentAnnouncement.subtitle}</p>
-                </motion.div>
-              </AnimatePresence>
+                </divdiv>
+              </div>
             </div>
           </div>
 
           {/* Center Action Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <divbutton
             className={`hidden md:flex items-center gap-3 px-8 py-4 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-xl rounded-full font-semibold transition-all duration-300 text-lg`}
           >
             <Play className="w-5 h-5" />
             {currentAnnouncement.action}
             <ArrowRight className="w-5 h-5" />
-          </motion.button>
+          </divbutton>
 
           {/* Right Stats */}
           <div className="hidden lg:flex items-center gap-8 text-sm">
@@ -196,44 +177,35 @@ const AIRevolution2025PromotionBanner = () => {
           </div>
 
           {/* Close Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          <divbutton
             onClick={() => setIsVisible(false)}
             className="flex-shrink-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200"
           >
             <X className="w-5 h-5" />
-          </motion.button>
+          </divbutton>
         </div>
 
         {/* Mobile Action Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <divdiv
           className="md:hidden mt-4"
         >
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <divbutton
             className={`w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-xl rounded-full font-semibold transition-all duration-300 text-lg`}
           >
             <Play className="w-5 h-5" />
             {currentAnnouncement.action}
             <ArrowRight className="w-5 h-5" />
-          </motion.button>
-        </motion.div>
+          </divbutton>
+        </divdiv>
 
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
-          <motion.div
+          <divdiv
             className="h-full bg-gradient-to-r from-purple-500 to-blue-600"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 4repeat: Infinityease: "linear" }}
           />
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

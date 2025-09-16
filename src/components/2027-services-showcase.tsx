@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
@@ -10,7 +9,6 @@ import {
 } from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 
 export default function ServicesShowcase2027() {
@@ -114,10 +112,7 @@ export default function ServicesShowcase2027() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -173,7 +168,7 @@ export default function ServicesShowcase2027() {
                 <span>View Pricing</span>
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
@@ -251,14 +246,10 @@ export default function ServicesShowcase2027() {
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
+            <div>
               {sortedServices.map((service, index) => (
-                <motion.div
+                <divdiv
                   key={service.id}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
                   className="group"
                 >
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
@@ -329,16 +320,14 @@ export default function ServicesShowcase2027() {
                       </span>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
-            </AnimatePresence>
+            </div>
           </div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+            <divdiv
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -354,7 +343,7 @@ export default function ServicesShowcase2027() {
               >
                 Clear Filters
               </button>
-            </motion.div>
+            </divdiv>
           )}
         </div>
       </section>

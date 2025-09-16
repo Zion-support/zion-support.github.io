@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
 
 const services = [
@@ -116,10 +115,8 @@ export default function UltimateServicesShowcase2025() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -153,16 +150,14 @@ export default function UltimateServicesShowcase2025() {
               </button>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
-            <motion.div
+            <divdiv
               key={service.id}
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group ${
                 service.popular ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
@@ -212,15 +207,13 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="bg-white rounded-2xl shadow-xl p-8 mb-16"
         >
@@ -247,13 +240,11 @@ export default function UltimateServicesShowcase2025() {
               <div className="text-sm text-gray-600">Countries Served</div>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
         >
@@ -282,7 +273,7 @@ export default function UltimateServicesShowcase2025() {
               View Success Stories
             </a>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </section>
   );

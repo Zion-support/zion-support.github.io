@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, X, Filter, TrendingUp, Clock, 
   Star, Zap, Brain, Shield, Rocket, 
@@ -256,12 +255,9 @@ const EnhancedSearch: React.FC = () => {
         </div>
       </form>
 
-      <AnimatePresence>
+      <div>
         {showFilters && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+          <divdiv
             className="mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-lg"
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -324,17 +320,14 @@ const EnhancedSearch: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         )}
-      </AnimatePresence>
+      </div>
 
       {/* Search Suggestions */}
-      <AnimatePresence>
+      <div>
         {showSuggestions && !query && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+          <divdiv
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
           >
             {/* Recent Searches */}
@@ -382,9 +375,9 @@ const EnhancedSearch: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 };

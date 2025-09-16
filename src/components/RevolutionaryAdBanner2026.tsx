@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
@@ -56,13 +55,8 @@ const RevolutionaryAdBanner2026: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden mb-8">
-      <AnimatePresence mode="wait">
-        <motion.div
+        <divdiv
           key={currentAd}
-          initial={{ opacity: 0, x: 300 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -300 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
           className={`bg-gradient-to-r ${currentAdData.color} rounded-2xl p-8 text-white relative overflow-hidden`}
         >
           {/* Background Pattern */}
@@ -73,40 +67,28 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           <div className="relative z-10">
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
+                <divdiv
                   className="flex items-center space-x-3 mb-4"
                 >
                   <span className="text-4xl animate-bounce">{currentAdData.icon}</span>
                   <div className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold animate-pulse">
                     🌟 BREAKTHROUGH 2026
                   </div>
-                </motion.div>
+                </divdiv>
                 
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
+                <divh2
                   className="text-4xl font-bold mb-4"
                 >
                   {currentAdData.title}
-                </motion.h2>
+                </divh2>
                 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
+                <divp
                   className="text-xl opacity-95 mb-6 max-w-2xl"
                 >
                   {currentAdData.subtitle}
-                </motion.p>
+                </divp>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
+                <divdiv
                   className="flex flex-wrap gap-2 mb-6"
                 >
                   {currentAdData.features.map((feature, index) => (
@@ -117,12 +99,9 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                       {feature}
                     </span>
                   ))}
-                </motion.div>
+                </divdiv>
 
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1, duration: 0.6 }}
+                <divdiv
                   className="flex flex-wrap gap-4"
                 >
                   <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg hover:scale-105">
@@ -131,18 +110,15 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                   <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-bold text-lg hover:scale-105">
                     Learn More
                   </button>
-                </motion.div>
+                </divdiv>
               </div>
 
               <div className="hidden lg:block ml-8">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                  transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
+                <divdiv
                   className="text-8xl animate-pulse"
                 >
                   {currentAdData.icon}
-                </motion.div>
+                </divdiv>
               </div>
             </div>
           </div>
@@ -159,8 +135,8 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               />
             ))}
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </divdiv>
+      </div>
 
       {/* Floating Action Buttons */}
       <div className="absolute top-4 right-4 flex space-x-2">

@@ -215,7 +215,6 @@ export const Blog: React.FC = () => {
       </div>
 =======
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { Search, ArrowRight } from 'lucide-react';
@@ -247,7 +246,6 @@ export default function Blog() {
       <SEO title="Blog - Zion Tech Group" description="Insights on AI, cloud, and modern engineering." />
 
       <section className="py-20 px-6 text-center">
-        <motion.h1 initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className="text-5xl font-bold text-white mb-4">Blog</motion.h1>
         <p className="text-gray-300 max-w-2xl mx-auto">New guides and updates from the team.</p>
         <div className="mt-8 max-w-md mx-auto relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -263,7 +261,6 @@ export default function Blog() {
       <section className="pb-20 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map(post => (
-            <motion.article key={post.id} initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.3}} className="bg-slate-800/40 border border-slate-600/50 rounded-xl p-6">
               <div className="text-xs text-cyan-300 mb-2">{post.category} • {post.readTime}</div>
               <h2 className="text-white text-xl font-semibold mb-2">{post.title}</h2>
               <p className="text-gray-300 mb-4">{post.excerpt}</p>
@@ -271,7 +268,7 @@ export default function Blog() {
                 Read →
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
-            </motion.article>
+            </divarticle>
           ))}
         </div>
       </section>

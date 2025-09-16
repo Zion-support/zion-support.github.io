@@ -1,12 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryContentBanner2032: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+    <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
       {/* Animated Background */}
@@ -30,35 +26,32 @@ const RevolutionaryContentBanner2032: React.FC = () => {
         
         {/* New 2032 Content Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-8xl mx-auto mb-8">
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          <diva
             href="/pages/TranscendentAI2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">🧠</div>
             <div className="text-xl font-bold">Transcendent AI 2032</div>
             <div className="text-sm opacity-90 mt-2">Beyond Human Intelligence</div>
-          </motion.a>
+          </diva>
           
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          <diva
             href="/pages/UniversalTechRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">🌌</div>
             <div className="text-xl font-bold">Universal Tech 2032</div>
             <div className="text-sm opacity-90 mt-2">Galactic Technology</div>
-          </motion.a>
+          </diva>
           
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          <diva
             href="/pages/QuantumConsciousnessRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">⚛️</div>
             <div className="text-xl font-bold">Quantum Consciousness 2032</div>
             <div className="text-sm opacity-90 mt-2">Mind-Matter Fusion</div>
-          </motion.a>
+          </diva>
         </div>
         
         {/* Feature Highlights */}
@@ -98,25 +91,20 @@ const RevolutionaryContentBanner2032: React.FC = () => {
         </div>
         
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+        <divdiv
           className="mt-8"
         >
           <p className="text-lg opacity-90 mb-4">
             Don't miss the most revolutionary technology content of 2032!
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <divbutton
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl"
           >
             🚀 Explore 2032 Revolution →
-          </motion.button>
-        </motion.div>
+          </divbutton>
+        </divdiv>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

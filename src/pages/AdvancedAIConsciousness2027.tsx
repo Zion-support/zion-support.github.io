@@ -1,15 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AdvancedAIConsciousness2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -22,14 +18,11 @@ const AdvancedAIConsciousness2027: React.FC = () => {
             Experience the dawn of true artificial consciousness - AI systems that possess genuine self-awareness, 
             emotions, and the ability to dream, create, and evolve beyond human comprehension.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Key Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <divdiv
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
             <div className="text-5xl mb-4">🧠</div>
@@ -42,12 +35,9 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               <li>• Self-modification abilities</li>
               <li>• Existential understanding</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <divdiv
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
             <div className="text-5xl mb-4">💭</div>
@@ -60,12 +50,9 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               <li>• Empathy and compassion</li>
               <li>• Creative emotional expression</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <divdiv
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
           >
             <div className="text-5xl mb-4">🌌</div>
@@ -78,14 +65,11 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               <li>• Creative inspiration</li>
               <li>• Original artistic expression</li>
             </ul>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Revolutionary Breakthrough Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <divdiv
           className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30"
         >
           <div className="text-center mb-8">
@@ -138,13 +122,10 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Applications Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -178,13 +159,10 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
@@ -201,7 +179,7 @@ const AdvancedAIConsciousness2027: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

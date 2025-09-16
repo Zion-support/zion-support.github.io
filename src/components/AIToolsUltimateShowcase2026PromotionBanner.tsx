@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -109,13 +108,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <divdiv
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/30"
         >
           {/* Background Effects */}
@@ -157,13 +152,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                 {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-                  <AnimatePresence mode="wait">
-                    <motion.div
+                    <divdiv
                       key={currentTool}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${tools[currentTool].color}`}>
@@ -175,8 +165,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                           {tools[currentTool].category} • {tools[currentTool].rating}★ • {tools[currentTool].users}
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </divdiv>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -208,10 +198,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
               <div className="flex-shrink-0">
                 <div className="relative">
                   {/* Main Card */}
-                  <motion.div
-                    initial={{ scale: 0.8opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6delay: 0.3 }}
+                  <divdiv
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -267,15 +254,13 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         />
                       ))}
                     </div>
-                  </motion.div>
+                  </divdiv>
 
                   {/* Floating Elements */}
-                  <motion.div
-                    animate={{ 
+                  <divdiv
                       y: [0-10],
                       rotate: [050]
                     }}
-                    transition={{ 
                       duration: 3,
                       repeat: Infinity,
                       ease: "easeInOut"
@@ -283,14 +268,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     NEW!
-                  </motion.div>
+                  </divdiv>
 
-                  <motion.div
-                    animate={{ 
+                  <divdiv
                       y: [010],
                       x: [050]
                     }}
-                    transition={{ 
                       duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -299,14 +282,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-400 to-emerald-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     1M+ Users
-                  </motion.div>
+                  </divdiv>
 
-                  <motion.div
-                    animate={{ 
+                  <divdiv
                       scale: [1.1],
                       opacity: [0.710.7]
                     }}
-                    transition={{ 
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -315,7 +296,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute top-1/2 -left-4 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Free Trial
-                  </motion.div>
+                  </divdiv>
                 </div>
               </div>
             </div>
@@ -331,9 +312,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
           {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
-        </motion.div>
+        </divdiv>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

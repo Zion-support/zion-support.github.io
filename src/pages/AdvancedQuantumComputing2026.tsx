@@ -179,7 +179,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
@@ -188,10 +187,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -212,7 +208,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
@@ -224,10 +220,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">⚡</div>
@@ -241,12 +235,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Sub-millisecond gate operations</li>
               <li>• Error correction algorithms</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🧬</div>
@@ -260,12 +252,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Climate modeling precision</li>
               <li>• Protein folding analysis</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔐</div>
@@ -279,12 +269,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Secure communication networks</li>
               <li>• Quantum random number generation</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🤖</div>
@@ -298,12 +286,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Quantum machine learning</li>
               <li>• Pattern recognition enhancement</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-violet-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🌐</div>
@@ -317,12 +303,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Distributed quantum computing</li>
               <li>• Quantum communication protocols</li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔬</div>
@@ -336,7 +320,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Materials discovery</li>
               <li>• Fundamental research tools</li>
             </ul>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
@@ -349,10 +333,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Financial Services</h3>
@@ -374,12 +356,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                   <span className="text-sm">Advanced fraud detection</span>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Healthcare & Life Sciences</h3>
@@ -401,7 +381,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                   <span className="text-sm">Personalized treatment optimization</span>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>

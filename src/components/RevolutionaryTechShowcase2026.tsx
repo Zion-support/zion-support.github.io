@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const showcaseItems = [
@@ -63,10 +62,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -79,21 +75,15 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             Experience the most advanced technologies of 2026 with our comprehensive showcase 
             of AI innovations, quantum computing breakthroughs, and neural interface technologies.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Featured Showcase Items */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <divdiv
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {showcaseItems.filter(item => item.featured).map((item, index) => (
-            <motion.div
+            <divdiv
               key={item.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 cursor-pointer`}
               onClick={() => window.location.href = item.link}
             >
@@ -105,25 +95,19 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                   Explore →
                 </span>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* All Showcase Items */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <divdiv
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-12">All Technologies</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {showcaseItems.map((item, index) => (
-              <motion.div
+              <divdiv
                 key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient}/10 backdrop-blur-sm rounded-xl p-6 border border-white/5 hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => window.location.href = item.link}
               >
@@ -144,16 +128,13 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     Learn More →
                   </span>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Technology Categories */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-12">Technology Categories</h3>
@@ -179,13 +160,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <p className="text-purple-200 text-sm">Advanced analytics and data processing systems</p>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <divdiv
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
@@ -207,7 +185,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               Get Started
             </a>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

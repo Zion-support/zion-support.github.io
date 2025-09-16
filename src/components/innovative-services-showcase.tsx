@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
@@ -106,10 +105,7 @@ export default function InnovativeServicesShowcase() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+            <divdiv
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -142,18 +138,16 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-gray-400">{contactInfo.address}</div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
 
         {/* Featured Innovative Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <divdiv
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -164,15 +158,13 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
                 >
@@ -214,7 +206,7 @@ export default function InnovativeServicesShowcase() {
                       </a>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -223,11 +215,9 @@ export default function InnovativeServicesShowcase() {
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <divdiv
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -238,15 +228,13 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the latest technologies that are emerging and transforming industries
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
-                <motion.div
+                <divdiv
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
@@ -266,38 +254,32 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
 
-            <motion.div
+            <divdiv
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <motion.a
+              <diva
                 href="/services"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
-              </motion.a>
-            </motion.div>
+              </diva>
+            </divdiv>
           </div>
         </section>
 
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <divdiv
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -308,15 +290,13 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of artificial intelligence with our most advanced services
               </p>
-            </motion.div>
+            </divdiv>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
-                <motion.div
+                <divdiv
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
@@ -336,37 +316,31 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
 
-            <motion.div
+            <divdiv
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <motion.a
+              <diva
                 href="/services"
                 className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
-              </motion.a>
-            </motion.div>
+              </diva>
+            </divdiv>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -408,7 +382,7 @@ export default function InnovativeServicesShowcase() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
       </div>

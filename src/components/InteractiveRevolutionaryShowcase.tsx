@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveRevolutionaryShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -53,10 +52,8 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
@@ -65,13 +62,11 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Explore the most advanced technologies of 2026 with interactive demonstrations and real-time experiences
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center mb-12"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20">
@@ -90,96 +85,66 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Content Area */}
         <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
+            <divdiv
               key={activeTab}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
               className="grid lg:grid-cols-2 gap-12 items-center"
             >
               {/* Left Side - Content */}
               <div>
-                <motion.div
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                <divdiv
                   className={`text-8xl mb-6 text-center lg:text-left`}
                 >
                   {technologies[activeTab as keyof typeof technologies].icon}
-                </motion.div>
+                </divdiv>
                 
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                <divh3
                   className="text-4xl font-bold mb-4"
                 >
                   {technologies[activeTab as keyof typeof technologies].title}
-                </motion.h3>
+                </divh3>
                 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                <divp
                   className="text-xl opacity-80 mb-8"
                 >
                   {technologies[activeTab as keyof typeof technologies].description}
-                </motion.p>
+                </divp>
 
-                <motion.ul
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
+                <divul
                   className="space-y-3 mb-8"
                 >
                   {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
-                    <motion.li
+                    <divli
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
                       className="flex items-center space-x-3"
                     >
                       <span className="text-green-400 text-xl">✓</span>
                       <span className="text-lg">{feature}</span>
-                    </motion.li>
+                    </divli>
                   ))}
-                </motion.ul>
+                </divul>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
+                <divdiv
                   className="flex space-x-4"
                 >
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <divbutton
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300`}
                   >
                     Experience Demo →
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  </divbutton>
+                  <divbutton
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                   >
                     Learn More
-                  </motion.button>
-                </motion.div>
+                  </divbutton>
+                </divdiv>
               </div>
 
               {/* Right Side - Interactive Demo */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+              <divdiv
                 className={`bg-gradient-to-br ${technologies[activeTab as keyof typeof technologies].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${technologies[activeTab as keyof typeof technologies].borderColor} hover:scale-105 transition-all duration-300`}
               >
                 <div className="text-center">
@@ -199,38 +164,32 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                     </div>
                   </div>
 
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <divbutton
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Launch Interactive Demo
-                  </motion.button>
+                  </divbutton>
                 </div>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+              </divdiv>
+            </divdiv>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
             Join the revolutionary technology movement and be part of the most significant breakthrough in human history
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <divbutton
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             Start Your Journey →
-          </motion.button>
-        </motion.div>
+          </divbutton>
+        </divdiv>
       </div>
     </div>
   );

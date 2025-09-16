@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Users, 
   Globe, 
@@ -141,23 +140,17 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv 
             className="max-w-5xl mx-auto"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <divdiv
               className="mb-8"
             >
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
                 Pioneering the Future of Technology
               </div>
-            </motion.div>
+            </divdiv>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Welcome to{' '}
@@ -172,9 +165,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divdiv
               >
                 <Link to="/comprehensive-services">
                   <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center">
@@ -182,18 +173,16 @@ export default function Home() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </Link>
-              </motion.div>
+              </divdiv>
               
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divdiv
               >
                 <Link to="/comprehensive-pricing">
                   <button className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
                     View Pricing
                   </button>
                 </Link>
-              </motion.div>
+              </divdiv>
             </div>
 
             {/* Trust Indicators */}
@@ -211,7 +200,7 @@ export default function Home() {
                 <span>24/7 Support</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
@@ -220,12 +209,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div 
+              <divdiv 
                 key={index} 
                 className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -234,7 +221,7 @@ export default function Home() {
                 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
                 <div className="text-sm text-zion-slate-light">{stat.description}</div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -244,43 +231,36 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <motion.h2 
+            <divh2 
               className="text-4xl md:text-5xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               Why Choose Zion Tech Group?
-            </motion.h2>
-            <motion.p 
+            </divh2>
+            <divp 
               className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
               We combine cutting-edge technology with proven expertise to deliver solutions that drive real business transformation
-            </motion.p>
+            </divp>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="bg-zion-blue-dark/30 p-8 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group hover:bg-zion-blue-dark/50 backdrop-blur-sm"
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className={`w-8 h-8 ${feature.color}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -300,14 +280,11 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group hover:bg-zion-blue-dark/50 backdrop-blur-sm"
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -320,7 +297,7 @@ export default function Home() {
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -340,13 +317,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="flex items-start space-x-4 p-6 bg-zion-blue-dark/30 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-white" />
@@ -355,7 +330,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
                   <p className="text-zion-slate-light">{item.desc}</p>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -375,12 +350,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <divdiv
                 key={index}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20"
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div className="flex mb-4">
@@ -393,7 +366,7 @@ export default function Home() {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-white/70 text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -429,28 +402,22 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.h2 
+          <divh2 
             className="text-3xl md:text-4xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p 
+          </divh2>
+          <divp 
             className="text-xl text-zion-slate-light mb-8"
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Join hundreds of companies already leveraging our cutting-edge technology solutions
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          </divp>
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <Link 
@@ -460,7 +427,7 @@ export default function Home() {
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
     </div>

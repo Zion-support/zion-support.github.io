@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const AdvancedSpaceTech2026: React.FC = () => {
   const [activeMission, setActiveMission] = useState('mars-colony');
@@ -107,13 +106,8 @@ const AdvancedSpaceTech2026: React.FC = () => {
           </div>
 
           {/* Active Mission Display */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <divdiv
               key={activeMission}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
               className={`bg-gradient-to-br ${spaceMissions[activeMission as keyof typeof spaceMissions].color} rounded-3xl p-12 text-center shadow-2xl`}
             >
               <div className="text-8xl mb-6 animate-pulse">
@@ -127,22 +121,19 @@ const AdvancedSpaceTech2026: React.FC = () => {
               </p>
               <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
                 {spaceMissions[activeMission as keyof typeof spaceMissions].features.map((feature, index) => (
-                  <motion.div
+                  <divdiv
                     key={feature}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-left"
                   >
                     <div className="flex items-center space-x-3">
                       <span className="w-2 h-2 bg-white rounded-full"></span>
                       <span className="font-semibold">{feature}</span>
                     </div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </divdiv>
+          </div>
         </div>
       </div>
 
@@ -174,10 +165,8 @@ const AdvancedSpaceTech2026: React.FC = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
             className="bg-gradient-to-br from-red-600 to-orange-600 rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-6xl mb-6 text-center">🚀</div>
@@ -200,12 +189,10 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <span className="text-sm">Mars in 30 days</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
             className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-6xl mb-6 text-center">🏗️</div>
@@ -228,12 +215,10 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <span className="text-sm">Zero emissions</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
             className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-6xl mb-6 text-center">🌌</div>
@@ -256,7 +241,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <span className="text-sm">AI navigation</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Space Colonies */}

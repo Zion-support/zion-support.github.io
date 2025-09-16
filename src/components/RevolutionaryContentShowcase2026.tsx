@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
 =======
 import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-7a01
@@ -69,10 +68,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -92,15 +89,13 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group"
             >
               <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
@@ -140,15 +135,13 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
 
         {/* Additional Content Highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
         >
           <div className="text-center mb-8">
@@ -233,7 +226,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               View All Content
             </button>
           </div>
-        </motion.div>
+        </divdiv>
 =======
           )}
 

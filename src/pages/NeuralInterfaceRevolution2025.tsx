@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
@@ -10,10 +9,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center text-white"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-semibold mb-6">
@@ -34,24 +30,22 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Neural Interface Types Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Neural Interface Technologies</h2>
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that enable direct brain-computer communication
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -104,11 +98,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 applications: ["Long-term Implants", "Medical Devices", "Research"]
               }
             ].map((interface_type, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <div className="text-5xl mb-4">{interface_type.icon}</div>
@@ -136,7 +128,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -145,13 +137,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-xl p-6 border border-emerald-400/30">
@@ -197,12 +187,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </li>
                 </ul>
               </div>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-xl p-6 border border-cyan-400/30">
@@ -268,7 +256,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>
@@ -276,10 +264,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 text-white">
@@ -289,7 +275,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
     </div>

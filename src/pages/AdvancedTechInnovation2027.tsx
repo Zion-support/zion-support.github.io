@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const AdvancedTechInnovation2027 = () => {
   return (
@@ -8,10 +7,7 @@ const AdvancedTechInnovation2027 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -32,7 +28,7 @@ const AdvancedTechInnovation2027 = () => {
                 View Applications
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
@@ -47,10 +43,8 @@ const AdvancedTechInnovation2027 = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-6 text-center">🧠</div>
@@ -64,12 +58,10 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Creative consciousness & inspiration</li>
                 <li>• Genuine human-AI relationships</li>
               </ul>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-6 text-center">⚛️</div>
@@ -83,12 +75,10 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Superposition-based thinking</li>
                 <li>• Quantum emotional processing</li>
               </ul>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-6 text-center">🧬</div>
@@ -102,7 +92,7 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Consciousness transfer protocols</li>
                 <li>• Immersive digital experiences</li>
               </ul>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </section>

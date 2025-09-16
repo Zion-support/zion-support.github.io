@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
   CheckCircle, ArrowRight, Zap, Target, Microscope,
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
@@ -122,40 +120,28 @@ export default function CuttingEdgeServicesShowcase2025() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divdiv
               className="text-center"
             >
-              <motion.h1 
+              <divh1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge Services
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Showcase 2025
                 </span>
-              </motion.h1>
+              </divh1>
               
-              <motion.p 
+              <divp 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion.p>
+              </divp>
 
               {/* Hero Stats */}
-              <motion.div 
+              <divdiv 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
                   <div key={index} className="text-center">
@@ -168,14 +154,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="text-sm text-white/70">{stat.label}</div>
                   </div>
                 ))}
-              </motion.div>
+              </divdiv>
 
               {/* CTA Buttons */}
-              <motion.div 
+              <divdiv 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <a
                   href="#services"
@@ -190,19 +173,17 @@ export default function CuttingEdgeServicesShowcase2025() {
                 >
                   Get Started
                 </a>
-              </motion.div>
-            </motion.div>
+              </divdiv>
+            </divdiv>
           </div>
         </section>
 
         {/* Search and Filter Section */}
         <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <divdiv 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               {/* Search */}
@@ -267,24 +248,21 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <List className="w-5 h-5" />
                 </button>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
 
         {/* Services Grid */}
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
+            <divdiv
               whileInView="visible"
               viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
               {filteredServices.map((service, index) => (
-                <motion.div
+                <divdiv
                   key={service.id}
-                  variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}
@@ -375,15 +353,13 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </motion.div>
+                </divdiv>
               ))}
-            </motion.div>
+            </divdiv>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <divdiv
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -398,7 +374,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 >
                   Clear Filters
                 </button>
-              </motion.div>
+              </divdiv>
             )}
           </div>
         </section>
@@ -406,10 +382,8 @@ export default function CuttingEdgeServicesShowcase2025() {
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -465,7 +439,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
       </Layout>

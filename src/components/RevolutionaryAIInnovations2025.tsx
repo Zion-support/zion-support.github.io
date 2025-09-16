@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -188,34 +187,27 @@ const RevolutionaryAIInnovations2025 = () => {
   const currentInnovation = innovations[activeInnovation];
 
   return (
-    <motion.section 
+    <divsection 
       className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      transition={{ duration: 1 }}
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ 
+        <divdiv
             x: [0100],
             y: [0-100],
             rotate: [0360]
           }}
-          transition={{ 
             duration: 30
             repeat: Infinity
             ease: "linear" 
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-10 blur-3xl"
         />
-        <motion.div
-          animate={{ 
+        <divdiv
             x: [0-100],
             y: [0100],
             rotate: [360360]
           }}
-          transition={{ 
             duration: 25
             repeat: Infinity
             ease: "linear" 
@@ -227,43 +219,31 @@ const RevolutionaryAIInnovations2025 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2duration: 0.8 }}
+          <divdiv
             className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-8"
           >
             <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
             Revolutionary AI Innovations 2025
-          </motion.div>
+          </divdiv>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4duration: 0.8 }}
+          <divh2
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
             The Future is Here
-          </motion.h2>
+          </divh2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6duration: 0.8 }}
+          <divp
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
-          </motion.p>
+          </divp>
         </div>
 
         {/* Main Innovation Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Side - Innovation Details */}
-          <motion.div
+          <divdiv
             key={activeInnovation}
-            initial={{ opacity: 0x: -50 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div className="flex items-center space-x-4 mb-6">
@@ -326,37 +306,30 @@ const RevolutionaryAIInnovations2025 = () => {
                 Get Started
               </a>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Right Side - Visual Representation */}
-          <motion.div
+          <divdiv
             key={`visual-${activeInnovation}`}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8 }}
             className="relative"
           >
             <div className={`bg-gradient-to-br ${currentInnovation.bgColor} rounded-3xl p-8 h-96 flex items-center justify-center relative overflow-hidden`}>
               {/* Animated Background */}
               <div className="absolute inset-0 opacity-20">
-                <motion.div
-                  animate={{ 
+                <divdiv
                     scale: [1.21],
                     rotate: [0180360]
                   }}
-                  transition={{ 
                     duration: 8
                     repeat: Infinity
                     ease: "easeInOut" 
                   }}
                   className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute top-1/4 left-1/4`}
                 />
-                <motion.div
-                  animate={{ 
+                <divdiv
                     scale: [1.21.2],
                     rotate: [360180]
                   }}
-                  transition={{ 
                     duration: 6
                     repeat: Infinity
                     ease: "easeInOut",
@@ -367,12 +340,10 @@ const RevolutionaryAIInnovations2025 = () => {
               </div>
 
               {/* Main Icon */}
-              <motion.div
-                animate={{ 
+              <divdiv
                   scale: [1.1],
                   rotate: [05-50]
                 }}
-                transition={{ 
                   duration: 4
                   repeat: Infinity
                   ease: "easeInOut" 
@@ -380,25 +351,22 @@ const RevolutionaryAIInnovations2025 = () => {
                 className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full flex items-center justify-center relative z-10`}
               >
                 <currentInnovation.icon className="w-16 h-16 text-white" />
-              </motion.div>
+              </divdiv>
 
               {/* Stats Display */}
               <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-4">
                 {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (
-                  <motion.div
+                  <divdiv
                     key={key}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1duration: 0.5 }}
                     className="bg-white bg-opacity-90 rounded-lg p-3 text-center"
                   >
                     <div className="text-2xl font-bold text-gray-900">{value}</div>
                     <div className="text-xs text-gray-600 capitalize">{key}</div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Innovation Navigation */}
@@ -420,10 +388,7 @@ const RevolutionaryAIInnovations2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1duration: 0.8 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-white to-gray-100 rounded-3xl p-12 text-gray-900">
@@ -451,9 +416,9 @@ const RevolutionaryAIInnovations2025 = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 

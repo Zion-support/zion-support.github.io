@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
@@ -36,12 +35,10 @@ const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <divdiv 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
         >
           <h2 id="testimonials-heading" className="text-4xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -51,18 +48,15 @@ const TestimonialSection: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <divdiv
               key={testimonial.id}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Quote Icon */}
               <div className="mb-6">
@@ -98,17 +92,15 @@ const TestimonialSection: React.FC = () => {
                   <div className="text-xs text-cyan-400">{testimonial.company}</div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <divdiv 
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -134,7 +126,7 @@ const TestimonialSection: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </section>
   );
