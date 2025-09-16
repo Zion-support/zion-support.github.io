@@ -1,4 +1,3 @@
-=======
 import React from 'react';';';
 interface ButtonProps {
   ';';';: any;
@@ -63,6 +62,5 @@ export const Button: React.FC<ButtonProps> = ({';';';
     </button>';
   );';';
 };';';';
-=======
 export default Button;"';';';';
 </ButtonProps>

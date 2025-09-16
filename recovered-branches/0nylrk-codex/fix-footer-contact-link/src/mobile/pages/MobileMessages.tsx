@@ -60,7 +60,6 @@
     </div>);
 }
 
-=======
             id: currentContact?.id || "",
             name: currentContact?.name || "",
             status: "Online"

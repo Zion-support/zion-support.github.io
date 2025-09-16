@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
-import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
-import NeuralRealityBanner from '../components/NeuralRealityBanner';
-import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
-import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
 
 const Home: React.FC = () => {
   return (

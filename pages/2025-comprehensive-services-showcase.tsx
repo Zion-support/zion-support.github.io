@@ -10,7 +10,6 @@ import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cyberse
 import { advancedCloudDevOpsServices } from '../data/2025-advanced-cloud-devops-services';
 import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-=======
   Building, Cpu, DollarSign, Leaf, Globe, BookOpen,
   TrendingUp, Zap, Lock, Eye, Users, Star, Cloud, Phone, Mail
 } from 'lucide-react';
@@ -98,7 +97,6 @@ interface Service {
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 
-=======
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');

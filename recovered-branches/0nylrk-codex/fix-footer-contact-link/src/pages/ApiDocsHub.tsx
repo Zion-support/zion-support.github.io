@@ -38,7 +38,6 @@ export function ApiDocsHub() {
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
 
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";

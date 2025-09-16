@@ -392,7 +392,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

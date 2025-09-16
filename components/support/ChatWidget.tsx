@@ -25,7 +25,6 @@ export default function ChatWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.currentreasontag: 'escalate' })});
-=======
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() },
       ]);
     }

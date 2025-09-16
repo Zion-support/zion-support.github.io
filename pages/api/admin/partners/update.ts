@@ -4,7 +4,6 @@
 
     return res.status(200).json({ ok: true });
 
-=======
     const supabase = getServerSupabase (),
     const updates: any = {},
     // Check condition
@@ -27,10 +26,8 @@ if (updates.commission_rate = commission_rate, ) {
 
 }
 
-=======
 }
 ;
-=======
 
 
   }

@@ -12,7 +12,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
   let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
 

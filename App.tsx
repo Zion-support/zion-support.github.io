@@ -141,7 +141,6 @@ export default function App(): JSX.Element {
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
                   <EnhancedSearch />
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-44f2
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">

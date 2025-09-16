@@ -11,7 +11,6 @@
 
       toast && toast.success("Call joined", {;
         description: `You have joined meeting room ${roomId}`;
-=======
   const handleJoinCall = () => {
     setIsJoining(true);
     // Simulate connection delay

@@ -30,7 +30,6 @@ export function Accordion($1) {;
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, {;
-=======
     </div>;
   )}
 ;
@@ -45,7 +44,6 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {;
   );
 }
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
-=======
   children: React.ReactNode;
   "children": Reac t.ReactNode;
   value: string;
@@ -64,7 +62,6 @@ export function AccordionItem($1) {;
   );
 }
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
-=======
   "children": Reac t.ReactNode;
   className?: string;
   isOpen?: boolean;
@@ -100,7 +97,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;"
   )}
 ;
   "children": "React.ReactNode;
-=======
 ;
   "children": React.ReactNode;
   className?: string;
@@ -124,7 +120,6 @@ export function AccordionContent(props: any) {;
 </ChevronDown>;
 </string>;
 </div>;
-=======
         </div>
   );
 }
