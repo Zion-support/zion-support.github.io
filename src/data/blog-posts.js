@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
     excerpt: "Revolutionary AI technologies including conscious systems, quantum computing, and neural interfaces are transforming every aspect of business and human experience in 2027.",
@@ -210,7 +209,8 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/synthetic-intelligence-2026.jpg",
     slug: "synthetic-intelligence-2026"
-=======
+  },
+  {
     id: 10001,
     title: "AI Ethics Framework 2026: Building Responsible AI Systems",
     excerpt: "Comprehensive guide to implementing ethical AI frameworks that ensure fairness, transparency, and accountability in artificial intelligence systems.",
@@ -254,7 +254,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-2026.jpg",
     slug: "edge-ai-revolution-2026"
->>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
   },
   {
     id: 9901,

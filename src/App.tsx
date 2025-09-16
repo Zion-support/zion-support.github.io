@@ -153,7 +153,6 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
 
-<<<<<<< HEAD
               {/* New Content 2026 Promotion Banner */}
               <div className="mb-12">
                 <NewContent2026PromotionBanner />
@@ -167,7 +166,8 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Tech Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryTechBanner2026 />
-=======
+              </div>
+
               {/* NEW: Ultimate Tech Showcase Banner 2026 */}
               <div className="mb-12">
                 <UltimateTechShowcaseBanner2026 />
@@ -176,7 +176,6 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
->>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
               </div>
 
               {/* NEW: New Content Showcase 2026 */}
@@ -574,13 +573,12 @@ const App: React.FC = () => {
           <Route path="/ai-2027-breakthrough-innovations" element={<AI2027BreakthroughInnovations />} />
           <Route path="/quantum-computing-revolution-2027" element={<QuantumComputingRevolution2027 />} />
           <Route path="/neural-interface-breakthrough-2027" element={<NeuralInterfaceBreakthrough2027 />} />
-=======
+          
           {/* NEW: January 2026 Content Routes */}
           <Route path="/advanced-ai-services-2026" element={<AdvancedAIServices2026 />} />
           <Route path="/blog/ai-ethics-framework-2026" element={<BlogPost_Jan2026_AIEthicsFramework />} />
           <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
           <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
->>>>>>> origin/cursor/create-and-deploy-new-content-1dc3
         </Routes>
         
         <Footer />
