@@ -26,6 +26,9 @@ import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
+import RevolutionaryAISolutions2025 from './src/pages/RevolutionaryAISolutions2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
@@ -534,6 +537,9 @@ export default function App(): JSX.Element {
                     <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       ⚡ NEW: Services 2025 →
                     </a>
+                    <a href="/pages/RevolutionaryAISolutions2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🤖 NEW: AI Solutions 2025 →
+                    </a>
                     <a href="/pages/NextGenTechRevolution2045" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 NEW: Tech Revolution 2045 →
                     </a>
@@ -994,6 +1000,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
+          <Route path="/pages/RevolutionaryAISolutions2025" element={<RevolutionaryAISolutions2025 />} />
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
