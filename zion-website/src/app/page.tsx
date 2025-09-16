@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -17,13 +18,19 @@ import {
 >>>>>>> origin/feat/case-studies-content
 =======
 import React from 'react'
+=======
+>>>>>>> origin/feat/new-updates-and-homepage-promo
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
+<<<<<<< HEAD
   ChartBarIcon,
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/new-updates-and-homepage-promo
   UserGroupIcon
 =======
 import React from 'react'
@@ -191,12 +198,24 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
                 href="/updates/autonomous-ops-sre-for-agents"
 =======
                 href="/blog/ai-2026-policy-as-code-production-blueprint"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+=======
+                href="/updates/agentic-ops-dashboard-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                Launch: Agentic Ops Dashboard
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-sales-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+>>>>>>> origin/feat/new-updates-and-homepage-promo
               >
                 Blueprint: Policy‑as‑Code in Production
                 <span aria-hidden>→</span>

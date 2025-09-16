@@ -15,6 +15,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 =======
     title: 'Guide: Agent Platform Operations (2026)',
@@ -26,6 +27,33 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Report: State of AI Automation (2026 Preview)',
 =======
     title: 'Launch: Autonomous Ops Control Center 2.0',
+=======
+    title: 'Launch: Agentic Ops Dashboard (v1.0)',
+    summary:
+      'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    href: '/updates/agentic-ops-dashboard-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+    summary:
+      'How to evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.',
+    href: '/updates/multimodal-rag-benchmarking-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+    summary:
+      'Incident-driven improvements using live evals, guardrails, and cost-aware routing to halve MTTR.',
+    href: '/updates/mttr-reduction-evals-in-prod',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot (v1.0)',
+>>>>>>> origin/feat/new-updates-and-homepage-promo
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
     href: '/updates/autonomous-ops-control-center-2-0',
