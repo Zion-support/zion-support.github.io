@@ -34,6 +34,7 @@ import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub20
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
+import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
@@ -89,6 +90,7 @@ import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
 import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
 import RevolutionaryCaseStudies2026 from './pages/RevolutionaryCaseStudies2026';
+import RevolutionaryContent2026 from './pages/RevolutionaryContent2026';
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
 const App: React.FC = () => {
@@ -103,6 +105,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+              
+              {/* Revolutionary Content Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* New Services Showcase 2026 */}
+              <div className="mb-12">
+                <NewServicesShowcase2026 />
+              </div>
               
               {/* New Content Promo Banner */}
               <div className="mb-12">
@@ -301,6 +313,7 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
+          <Route path="/revolutionary-content-2026" element={<RevolutionaryContent2026 />} />
         </Routes>
         
         <Footer />
