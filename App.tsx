@@ -35,6 +35,9 @@ import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
 import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
 import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
 import AIRevolution2025 from './src/pages/AIRevolution2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
@@ -99,6 +102,11 @@ import RevolutionaryContentBanner2027 from './src/components/RevolutionaryConten
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
 import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
+import UltimateTechRevolutionBanner2025 from './src/components/UltimateTechRevolutionBanner2025';
+import RevolutionaryBreakthroughBanner2026 from './src/components/RevolutionaryBreakthroughBanner2026';
+import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import SEOOptimizer from './src/components/SEOOptimizer';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
@@ -268,6 +276,7 @@ export default function App(): JSX.Element {
         <ScrollToTop />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
+        <SEOOptimizer />
         <SEOOptimizer />
         <MobileOptimizer />
         <ModernSEOOptimizer />
@@ -1155,6 +1164,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
           <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
