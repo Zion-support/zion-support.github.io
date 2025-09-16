@@ -35,6 +35,7 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
@@ -52,6 +53,7 @@ import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
+import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
@@ -64,6 +66,9 @@ import RevolutionaryTech2030 from './src/pages/RevolutionaryTech2030';
 import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
 import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessComputingRevolution2030';
 import InterdimensionalTechRevolution2030 from './src/pages/InterdimensionalTechRevolution2030';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import FutureTechVision2030 from './src/pages/FutureTechVision2030';
+import EnhancedPromotionalBanner from './src/components/EnhancedPromotionalBanner';
 
 export default function App(): JSX.Element {
   return (
@@ -77,6 +82,7 @@ export default function App(): JSX.Element {
         <MobileOptimizer />
         <PerformanceDashboard />
         <Header />
+        <EnhancedPromotionalBanner />
         
         <Routes>
           <Route path="/" element={
@@ -120,6 +126,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/InterdimensionalTechRevolution2030" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌌 INTERDIMENSIONAL TECH →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 REVOLUTIONARY BREAKTHROUGH →
+                    </a>
+                    <a href="/pages/FutureTechVision2030" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🔮 FUTURE VISION 2030 →
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -172,6 +184,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* Revolutionary Content Showcase 2025 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2025 />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}
@@ -407,6 +424,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2026 />
@@ -489,6 +511,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2030" element={<InterdimensionalTechRevolution2030 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/FutureTechVision2030" element={<FutureTechVision2030 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
