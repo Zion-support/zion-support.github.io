@@ -1,18 +1,18 @@
 import React from 'react';
 
-const QuantumComputingSolutions2025 = () => {
+const InnovationShowcase2025 = () => {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-5xl font-bold text-gray-900 mb-8 text-center">Quantum Computing Solutions2025</h1>
+      <h1 className="text-5xl font-bold text-gray-900 mb-8 text-center">Innovation Showcase2025</h1>
       <p className="text-xl text-gray-700 mb-8 text-center">
-        Explore Quantum Computing Solutions2025 and discover innovative solutions for your business needs.
+        Explore Innovation Showcase2025 and discover innovative solutions for your business needs.
       </p>
       
       <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
         <div>
           <img 
             src="/api/placeholder/1920/1080" 
-            alt="Quantum Computing Solutions2025" 
+            alt="Innovation Showcase2025" 
             className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
           />
         </div>
@@ -49,4 +49,4 @@ const QuantumComputingSolutions2025 = () => {
   );
 };
 
-export default QuantumComputingSolutions2025;
+export default InnovationShowcase2025;
