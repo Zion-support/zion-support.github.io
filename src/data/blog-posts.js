@@ -523,8 +523,7 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
-  }
-  ,
+  },
   {
     id: 7,
     title: "Enterprise AI Security Blueprint (2025)",
