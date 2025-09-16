@@ -8,6 +8,7 @@ import RevolutionaryTechAdvertisingBanner from './src/components/RevolutionaryTe
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import UltimateBreakthroughBanner from './src/components/UltimateBreakthroughBanner';
 import NeuralRealityBanner from './src/components/NeuralRealityBanner';
+import UltimateTechAdvertisingBanner from './src/components/UltimateTechAdvertisingBanner';
 
 const App: React.FC = () => {
   return (
