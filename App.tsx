@@ -232,6 +232,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
+                {/* NEW: Enhanced Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
                 {/* NEW: Revolutionary Content Banner 2025 - Enhanced */}
                 <RevolutionaryContentBanner2025 />
                 
@@ -922,6 +925,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
                   </div>
                   <InteractiveTechShowcase />
+                </div>
+
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2025 */}
