@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+;
+export interface InnovativeAIService  {id: string;
+>>>>>>> origin/merge-pr-12271
 export interface InnovativeAIService {
   id: string;
   name: string;

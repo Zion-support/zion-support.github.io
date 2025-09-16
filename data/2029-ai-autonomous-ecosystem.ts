@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+;
+  id: string;
+export interface AiAutonomousEcosystem2029  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

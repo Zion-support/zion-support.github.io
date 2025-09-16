@@ -1,6 +1,88 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T21:53:00.635Z",
   "totalDuration": 53790,
+=======
+
+<<<<<<< HEAD
+
+
+      "warnings": []
+    },
+    "accessibilityImprovement": {
+      "success": false,
+
+      "duration": 9692,
+
+      "errors": [],
+      "warnings": []
+    },
+    "performanceOptimization": {
+      "success": true,
+
+      "duration": 7154,
+
+      "errors": [],
+      "warnings": []
+    },
+    "deployment": {
+      "success": true,
+
+      "duration": 2037,
+
+      "errors": [],
+      "warnings": []
+    }
+
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+  "timestamp": "2025-09-06T20:40:15.907Z",
+  "duration": "124s",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+  "results": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
+  },
+  "summary": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "totalErrors": 5
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> origin/merge-pr-12271
   "successfulTasks": 6,
   "timestamp": "2025-09-05T22:04:15.746Z",
   "totalDuration": 16690,
@@ -70,7 +152,27 @@
     },
     "deployment": {
       "success": true,
+<<<<<<< HEAD
       "duration": 1426,      "errors": [],
+=======
+      "duration": 1612,
+      "errors": [],
+      "warnings": []
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    "totalErrors": 6
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      "errors": [],
+      "warnings": []
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+  }
+}
+      "success": false,
+      "duration": 0,
+      "errors": [],
+>>>>>>> origin/merge-pr-12271
       "warnings": []
     }
   },

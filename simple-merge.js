@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 const { execSync } = require('child_process');
+=======
+>>>>>>> origin/merge-pr-12271
 console.log('🚀 Starting simple merge process...');
 try {// Check git status;
   console.log('📊 Checking git status...');
@@ -68,6 +71,7 @@ try {;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
 
+<<<<<<< HEAD
 
 
 
@@ -77,6 +81,13 @@ try {;
       const files = conflictFiles.trim().split('\n');
       const files = conflictFiles.trim().split('\n'),;
       const files = conflictFiles.trim().split('\n');
+=======
+      // Resolve conflicts by accepting our version;
+
+
+      for (const file of files) {;
+        if (file.trim()) {;
+>>>>>>> origin/merge-pr-12271
 
       for (const file of files) {;
         if (file.trim()) {;
@@ -127,6 +138,23 @@ try {;
     }
   }
   // Push all changes;
+<<<<<<< HEAD
+=======
+
+
+          }
+          execSync(`git add "${file}"`);
+        }
+      }
+      // Commit the merge;
+      execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
+  }
+      // Continue with other branches;
+    }
+  }
+  // Push all changes;;
+  // Push all changes;
+>>>>>>> origin/merge-pr-12271
   console.log('📤 Pushing all changes to main...');
   execSync('git push origin main');
   console.log('🎉 All merge operations completed successfully!');
@@ -134,6 +162,11 @@ try {;
   console.log('✅ All merge conflicts have been resolved');
   console.log('✅ Repository is now clean and up to date');
 } catch (error) {console.error('❌ Error during merge process:', error.message);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/merge-pr-12271
 ;
   // Get all branches;
   console.log('🌿 Getting all branches...'),;
@@ -177,7 +210,10 @@ try {;
 
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merge-pr-12271
   console.log ('📤 Pushing all changes to main...'),
   exec_sync ('git push origin main'),
   console.log ('🎉 All merge operations completed successfully!'),
@@ -188,4 +224,9 @@ try {;
   console.error ('❌ Error during merge process:', error.message),
   process.exit (1);
 }
+<<<<<<< HEAD
 
+=======
+  process.exit(1);
+}
+>>>>>>> origin/merge-pr-12271

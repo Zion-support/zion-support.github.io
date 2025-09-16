@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface SpecializedEmergingTechService {
+=======
+
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface SpecializedEmergingTechService  {id: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

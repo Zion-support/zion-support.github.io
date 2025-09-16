@@ -1,4 +1,36 @@
 
+<<<<<<< HEAD
+=======
+}
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }
+})}return events;export function resetState(): void {state = { ...defaultState }}}export function readState(): SyncState {return { ...state }}export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }}
+export function upsertEvent(state: MultiverseState;
+  event: SyncEvent;
+): MultiverseState {if (state.seenEventIds[event.eventId]) return state;
+  const entityId = getEntityId(event)const currentVersion = state.latestVersionByEntityId[entityId] |0;
+}
+
+
+export function readState(): SyncState {;
+  return { ...state };
+}
+
+export function updateState(updates: Partial<SyncState>): void {;
+  state = { ...state, ...updates };
+}
+export function upsertEvent(
+  state: MultiverseState
+  event: SyncEvent
+): MultiverseState {;
+  if (state.seenEventIds[event.eventId]) return state;
+  const entityId = getEntityId(event);
+  const currentVersion = state.latestVersionByEntityId[entityId] |0;
+  const isNewer = event.version > currentVersion;
+  if (event.type === 'proposal' && event.merkleRoot && isNewer) {state.proposalMerkleById[entityId] = event.merkleRoot;
+>>>>>>> origin/merge-pr-12271
   }
   if (isNewer) {
     state && state.latestVersionByEntityId[entityId] = event && event.version;
@@ -161,6 +193,7 @@ if ( {) {
 }
 }
 }
+<<<<<<< HEAD
 
 
 =======
@@ -176,3 +209,19 @@ if ( {) {
   }
   return events;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+    return events.filter (e => e.type === 'proposal' || e.type === 'dao_endorsement')}
+  // Check condition;
+if ( {) {$2;
+}
+    return events.filter (e =>;
+        e.type === 'token_transfer' ||;
+        e.type === 'talent_mobility' ||;
+        e.type === 'leaderboard_entry')}
+  return events;export function reset_state (): void {state = { ...default_state }
+}return events;
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

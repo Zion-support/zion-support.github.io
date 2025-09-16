@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+;
+>>>>>>> origin/merge-pr-12271
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';

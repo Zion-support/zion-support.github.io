@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+;
+export interface ExtraService  {export interface ExtraService  {id: string;
+>>>>>>> origin/merge-pr-12271
 export interface ExtraService {
   id: string;
   name: string;

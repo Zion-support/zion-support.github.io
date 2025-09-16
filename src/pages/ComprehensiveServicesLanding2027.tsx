@@ -87,16 +87,49 @@ import {
   TrendingDown,
   Calculator,
   Calendar,
-  Clock as ClockIconDup,
-  Award as AwardIconDup,
+  Clock as ClockIconMain,
+  Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
+<<<<<<< HEAD
   Zap as ZapIconDup,
   Shield as ShieldIconDup,
   Cloud as CloudIconDup,
   Brain as BrainIconDup,
   Rocket as RocketIconDup,
   Leaf as LeafIconDup
+=======
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Cloud as CloudIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Leaf as LeafIcon,
+  Globe as GlobeIcon,
+  Code as CodeIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  Smartphone as SmartphoneIcon,
+  BarChart3 as BarChart3Icon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Headphones as HeadphonesIcon,
+  Mail as MailIcon3,
+  Search as SearchIcon,
+  HelpCircle as HelpCircleIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Globe2 as Globe2Icon,
+  Leaf as LeafIcon2,
+  Sparkles as SparklesIcon,
+  Target as TargetIcon2,
+  DollarSign as DollarSignIcon,
+  Clock as ClockIcon2,
+  Award as AwardIcon2,
+  Phone as PhoneIcon2,
+  MapPin as MapPinIcon2,
+  Infinity as InfinityIcon2
+>>>>>>> cursor/create-and-deploy-new-content-376e
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -256,7 +289,7 @@ export default function ComprehensiveServicesLanding2027() {
               <div className="text-cyan-400 text-sm">Total Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <Target className="w-8 h-8 text-green-400 mx-auto mb-3" />
+              <TargetIconDup className="w-8 h-8 text-green-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">{categories.length - 1}</div>
               <div className="text-green-400 text-sm">Categories</div>
             </div>
