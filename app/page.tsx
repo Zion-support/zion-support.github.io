@@ -59,6 +59,7 @@ import AI2026UltimateBreakthroughBanner from './components/AI2026UltimateBreakth
 import AIInnovationShowcase2026 from './components/AIInnovationShowcase2026';
 import NeuralInterface2026Banner from './components/NeuralInterface2026Banner';
 import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
+import NewContent2026DiscoveryWidget from './components/NewContent2026DiscoveryWidget';
 import NewContent2026PromotionBanner from './components/NewContent2026PromotionBanner';
 import RevolutionaryAI2026Banner from './components/RevolutionaryAI2026Banner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
@@ -151,6 +152,16 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Runtime Guardrails Blueprint</h3>
               <p className="text-gray-600">Policy‑as‑code, safe tool envelopes, and approvals to ship compliant autonomy.</p>
             </Link>
+            <Link href="/blog/ai-2026-realtime-agent-routing-best-practices" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Real‑Time Agent Routing — Best Practices</h3>
+              <p className="text-gray-600">Latency‑aware, eval‑gated, policy‑driven routing across models and regions.</p>
+            </Link>
+            <Link href="/blog/ai-2026-causal-evals-for-autonomous-agents" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Causal Evals for Autonomous Agents</h3>
+              <p className="text-gray-600">Interventions, counterfactuals, and do‑calculus to validate safety.</p>
+            </Link>
             <Link href="/blog/ai-2026-governed-evidence-hub-overview" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Governed Evidence Hub — Executive Overview</h3>
@@ -169,6 +180,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Discovery widget to surface new content */}
+      <NewContent2026DiscoveryWidget />
       {/* Promo: Governed Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -721,6 +735,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+      </div>
       {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
