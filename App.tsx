@@ -66,6 +66,14 @@ import QuantumConsciousnessRevolution2033 from './src/pages/QuantumConsciousness
 // Import DynamicContentCarousel
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import EnhancedContentShowcase2026 from './src/components/EnhancedContentShowcase2026';
+
+// Import new content pages
+import ArtificialGeneralIntelligence2026 from './src/pages/ArtificialGeneralIntelligence2026';
+import BrainComputerInterface2026 from './src/pages/BrainComputerInterface2026';
+import QuantumInternet2026 from './src/pages/QuantumInternet2026';
+import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import ConsciousnessAI2026 from './src/pages/ConsciousnessAI2026';
 
 export default function App(): JSX.Element {
   return (
@@ -95,7 +103,7 @@ export default function App(): JSX.Element {
                   <ContentSearch />
                 </div>
 
-                {/* NEW: Ultimate 2026 Content Banner */}
+                {/* ULTRA-ENHANCED 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
@@ -106,21 +114,27 @@ export default function App(): JSX.Element {
                       <span className="text-4xl animate-bounce">🌟</span>
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
-                      Experience the most advanced technology content featuring AI Revolutionary Breakthrough, 
-                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, and Advanced Robotics
+                      Experience the most advanced technology content featuring AGI, Brain-Computer Interfaces, 
+                      Quantum Internet, Advanced Robotics, Consciousness AI, and cutting-edge innovations
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
-                      <a href="/pages/UltimateTechRevolution2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-yellow-600 transition-all duration-300 font-semibold text-center animate-pulse">
-                        🚀 NEW: Ultimate Tech Revolution 2033 →
+                      <a href="/pages/ArtificialGeneralIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🧠 NEW: AGI Revolution 2026 →
                       </a>
-                      <a href="/pages/TranscendentAI2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-center animate-pulse">
-                        🧠 NEW: Transcendent AI 2033 →
+                      <a href="/pages/BrainComputerInterface2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🧬 NEW: Brain-Computer Interface →
                       </a>
-                      <a href="/pages/UniversalTechRevolution2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-center animate-pulse">
-                        🌌 NEW: Universal Tech 2033 →
+                      <a href="/pages/QuantumInternet2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        ⚛️ NEW: Quantum Internet →
                       </a>
-                      <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-center animate-pulse">
-                        ⚛️ NEW: Quantum Consciousness 2033 →
+                      <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🤖 NEW: Advanced Robotics →
+                      </a>
+                      <a href="/pages/ConsciousnessAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🌟 NEW: Consciousness AI →
+                      </a>
+                      <a href="/pages/UltimateTechRevolution2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-yellow-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🚀 Ultimate Tech Revolution 2033 →
                       </a>
                       <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧠 AI Revolutionary Breakthrough →
@@ -131,19 +145,10 @@ export default function App(): JSX.Element {
                       <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Neural Interface Revolution →
                       </a>
-                      <a href="/pages/AdvancedBiotechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🧬 Advanced Biotech Revolution →
-                      </a>
-                      <a href="/pages/SpaceTechInnovation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🚀 Space Tech Innovation →
-                      </a>
-                      <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🤖 Advanced Robotics →
-                      </a>
                     </div>
                     <div className="flex justify-center space-x-4">
                       <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✨ 10+ NEW REVOLUTIONARY PAGES
+                        ✨ 15+ NEW REVOLUTIONARY PAGES
                       </span>
                       <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                         🚀 CUTTING-EDGE TECHNOLOGY
@@ -153,6 +158,11 @@ export default function App(): JSX.Element {
                       </span>
                     </div>
                   </div>
+                </div>
+
+                {/* Enhanced Content Showcase 2026 */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase2026 />
                 </div>
 
                 {/* Interactive Dynamic Content Carousel */}
@@ -414,6 +424,38 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumConsciousnessRevolution2033" element={
             <div>
               <QuantumConsciousnessRevolution2033 />
+              <EnhancedFooter />
+            </div>
+          } />
+          
+          {/* New 2026 Content Pages */}
+          <Route path="/pages/ArtificialGeneralIntelligence2026" element={
+            <div>
+              <ArtificialGeneralIntelligence2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/BrainComputerInterface2026" element={
+            <div>
+              <BrainComputerInterface2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/QuantumInternet2026" element={
+            <div>
+              <QuantumInternet2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedRobotics2026" element={
+            <div>
+              <AdvancedRobotics2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/ConsciousnessAI2026" element={
+            <div>
+              <ConsciousnessAI2026 />
               <EnhancedFooter />
             </div>
           } />
