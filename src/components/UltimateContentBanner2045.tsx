@@ -1,200 +1,107 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner2045: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const content = [
+  const [isVisible, setIsVisible] = useState(false);
+
+  const slides = [
     {
-      title: "🚀 ULTIMATE AI BREAKTHROUGH 2045",
-      subtitle: "Experience the Future of Artificial Intelligence",
-      description: "Revolutionary AI systems with consciousness-level capabilities that transform how we work, live, and innovate.",
-      features: ["Conscious AI Systems", "Quantum-Neural Fusion", "Interdimensional Computing", "Reality Manipulation"],
-      gradient: "from-purple-600 to-pink-600",
-      bgGradient: "from-purple-900 via-indigo-900 to-blue-900"
+      title: "🌟 ULTIMATE TECH BREAKTHROUGH 2045",
+      subtitle: "Experience the most revolutionary technological advances",
+      description: "Conscious AI, Quantum Reality, Interdimensional Computing",
+      color: "from-purple-600 to-pink-600",
+      icon: "🚀"
     },
     {
-      title: "⚡ QUANTUM REALITY ENGINE 2045",
-      subtitle: "Beyond the Limits of Physical Reality",
-      description: "Advanced quantum computing systems that manipulate reality itself, creating infinite possibilities in virtual worlds.",
-      features: ["Reality Simulation", "Quantum Teleportation", "Dimensional Portals", "Time Manipulation"],
-      gradient: "from-cyan-600 to-blue-600",
-      bgGradient: "from-cyan-900 via-blue-900 to-indigo-900"
+      title: "⚡ REVOLUTIONARY TECH SHOWCASE 2045",
+      subtitle: "Interactive demonstrations of cutting-edge technology",
+      description: "Live demos, Real-time metrics, Future technology",
+      color: "from-cyan-600 to-blue-600",
+      icon: "🎮"
     },
     {
-      title: "🧠 NEURAL CONSCIOUSNESS HUB 2045",
-      subtitle: "The Ultimate Mind-Machine Interface",
-      description: "Direct neural interfaces that merge human consciousness with AI, creating superhuman cognitive abilities.",
-      features: ["Mind Upload", "Collective Intelligence", "Thought Sharing", "Memory Enhancement"],
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-900 via-teal-900 to-cyan-900"
-    },
-    {
-      title: "🌌 INTERDIMENSIONAL TECH 2045",
-      subtitle: "Transcending the Boundaries of Space-Time",
-      description: "Breakthrough technology that allows communication and travel across multiple dimensions and parallel universes.",
-      features: ["Dimensional Travel", "Parallel Universe Access", "Multi-Reality Computing", "Cosmic Consciousness"],
-      gradient: "from-orange-600 to-red-600",
-      bgGradient: "from-orange-900 via-red-900 to-pink-900"
+      title: "🧠 NEXT-GEN INNOVATION HUB 2045",
+      subtitle: "Build the future with revolutionary tools and platforms",
+      description: "50+ Active Innovations, 100M+ Users, ∞ Possibilities",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🛠️"
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br ${content[currentSlide].bgGradient} text-white relative overflow-hidden`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(50)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 3 + 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
+    <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`bg-gradient-to-r ${slides[currentSlide].color} text-white py-8 px-4 relative`}>
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto relative z-10">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-4">
+              <span className="text-4xl mr-3 animate-bounce">{slides[currentSlide].icon}</span>
+              <h2 className="text-3xl md:text-4xl font-bold animate-pulse">
+                {slides[currentSlide].title}
+              </h2>
+            </div>
+            
+            <p className="text-xl md:text-2xl mb-4 font-semibold">
+              {slides[currentSlide].subtitle}
+            </p>
+            
+            <p className="text-lg mb-6 opacity-90">
+              {slides[currentSlide].description}
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
+                href="/pages/UltimateTechBreakthrough2045" 
+                className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Explore Breakthroughs →
+              </a>
+              <a 
+                href="/pages/RevolutionaryTechShowcase2045" 
+                className="bg-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-lg border-2 border-white/30 hover:border-white/50"
+              >
+                View Showcase →
+              </a>
+              <a 
+                href="/pages/NextGenInnovationHub2045" 
+                className="bg-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-lg border-2 border-white/30 hover:border-white/50"
+              >
+                Enter Innovation Hub →
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse border-2 border-white/30"
-            >
-              🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2045
-            </motion.div>
-
-            {/* Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"
-            >
-              {content[currentSlide].title}
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-2xl md:text-3xl font-semibold mb-8 text-white/90"
-            >
-              {content[currentSlide].subtitle}
-            </motion.h2>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-12 leading-relaxed"
-            >
-              {content[currentSlide].description}
-            </motion.p>
-
-            {/* Features Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.8 }}
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto"
-            >
-              {content[currentSlide].features.map((feature, index) => (
-                <motion.div
-                  key={feature}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.2 + index * 0.1, duration: 0.5 }}
-                  className={`bg-gradient-to-br ${content[currentSlide].gradient}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300`}
-                >
-                  <div className="text-4xl mb-3 text-center">
-                    {index === 0 && "🚀"}
-                    {index === 1 && "⚡"}
-                    {index === 2 && "🧠"}
-                    {index === 3 && "🌌"}
-                  </div>
-                  <h3 className="text-lg font-semibold text-center text-white">
-                    {feature}
-                  </h3>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.6, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <button className={`bg-gradient-to-r ${content[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg border-2 border-white/30`}>
-                🌟 Experience the Future →
-              </button>
-              <button className="border-2 border-white/50 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                📚 Learn More
-              </button>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
 
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-12 space-x-3">
-          {content.map((_, index) => (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/30'
+                currentSlide === index ? 'bg-white' : 'bg-white/50'
               }`}
             />
           ))}
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-bounce">
-          🚀
-        </div>
-        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-pulse">
-          ⚡
-        </div>
-        <div className="absolute bottom-40 left-20 text-5xl opacity-20 animate-ping">
-          🧠
-        </div>
-        <div className="absolute bottom-20 right-10 text-6xl opacity-20 animate-bounce">
-          🌌
-        </div>
+        <div className="absolute top-4 left-4 text-2xl animate-bounce">⚡</div>
+        <div className="absolute top-4 right-4 text-2xl animate-bounce delay-1000">🌟</div>
+        <div className="absolute bottom-4 left-4 text-2xl animate-bounce delay-2000">🚀</div>
+        <div className="absolute bottom-4 right-4 text-2xl animate-bounce delay-500">🧠</div>
       </div>
     </div>
   );
