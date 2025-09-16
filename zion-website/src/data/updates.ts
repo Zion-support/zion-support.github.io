@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
+        summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
+        href: '/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Guide: Agent Evidence Bundles — 2026 Blueprint',
         summary: 'Design signed evidence bundles with provenance, policy checks, and eval signals.',
         href: '/blog/ai-2026-agent-evidence-bundles-blueprint',

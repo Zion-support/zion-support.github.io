@@ -46,6 +46,9 @@ export default function HomePage() {
             Multimodal Guardrails —
             <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">patterns</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Cost Optimizer v2.0 —
+            <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
         </div>
@@ -83,6 +86,9 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Multimodal Guardrails —
             <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Cost Optimizer v2.0 —
+            <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
