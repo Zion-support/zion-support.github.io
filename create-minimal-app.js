@@ -1,4 +1,9 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+// Create a minimal App.tsx that will build successfully
+const minimalApp = `import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
 import ScrollToTop from './ScrollToTop';
@@ -26,4 +31,8 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;`;
+
+// Write the minimal app
+fs.writeFileSync('./src/App.tsx', minimalApp);
+console.log('Created minimal App.tsx');
