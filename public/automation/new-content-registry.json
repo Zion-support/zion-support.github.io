@@ -19,6 +19,27 @@
       "href": "/reports/cases/case-2025-08-15-000055",
       "desc": "New autonomous content",
       "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "2025-09 Research Brief — Agentic Business Ops",
+      "href": "/reports/briefs/brief-2025-09-agentic-business-ops",
+      "desc": "Practical playbook for operationalizing agentic workflows",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Autonomous IT Service Desk (v1)",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-it-service-desk",
+      "desc": "LLM-powered triage, routing, and remediation patterns",
+      "createdAt": "2025-09-16T00:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 32% Cost Savings with FinOps AI",
+      "href": "/reports/cases/case-2025-09-finops-ai-savings",
+      "desc": "How FinOps AI reduced cloud waste at scale",
+      "createdAt": "2025-09-16T00:20:00.000Z",
+      "source": "cloud-deep-research-factory"
     }
   ]
 }
