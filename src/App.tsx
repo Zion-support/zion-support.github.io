@@ -115,6 +115,10 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import AICybersecurityRevolution2026 from './pages/AICybersecurityRevolution2026';
+import QuantumMachineLearning2026 from './pages/QuantumMachineLearning2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import RevolutionaryTechShowcaseBanner2026 from './components/RevolutionaryTechShowcaseBanner2026';
 
 const App: React.FC = () => {
   return (
@@ -154,7 +158,12 @@ const App: React.FC = () => {
                 <RevolutionaryContentAdvertisingBanner2026 />
               </div>
 
-              {/* New Content Promotion Banner 2026 */}
+              {/* NEW: Revolutionary Tech Showcase Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryTechShowcaseBanner2026 />
+              </div>
+
+              {/* NEW: New Content Promotion Banner 2026 */}
               <div className="mb-12">
                 <NewContentPromotionBanner2026 />
               </div>
@@ -476,6 +485,10 @@ const App: React.FC = () => {
           {/* NEW: Next Gen Content Routes 2026 */}
           <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
           <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
+          
+          {/* NEW: Latest Content Routes 2026 */}
+          <Route path="/ai-cybersecurity-revolution-2026" element={<AICybersecurityRevolution2026 />} />
+          <Route path="/quantum-machine-learning-2026" element={<QuantumMachineLearning2026 />} />
         </Routes>
         
         <Footer />
