@@ -416,6 +416,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest News */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest News</h2>
+            <p className="text-white/70 max-w-2xl mx-auto">Product releases, research updates, and ecosystem highlights.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'AI Governance Blueprint 2025',
+                summary: 'New enterprise governance model for responsible AI and autonomy.',
+                href: '/blog/ai-governance-blueprint-2025'
+              },
+              {
+                title: 'Zion OS v2.5 Released',
+                summary: 'Performance boosts, analytics dashboards, and security hardening.',
+                href: '/news/v2-5-release-notes'
+              },
+              {
+                title: 'Autonomous IT Case Study',
+                summary: 'How Zion OS cut infrastructure costs by 40% for a global enterprise.',
+                href: '/case-studies/autonomous-it-40-cost-reduction'
+              }
+            ].map((item) => (
+              <div key={item.title} className="glass-effect rounded-2xl p-6 hover-lift">
+                <h3 className="text-2xl font-semibold mb-2">
+                  <a href={item.href} className="hover:underline">
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="text-white/70">{item.summary}</p>
+                <a href={item.href} className="inline-block mt-4 text-blue-400 hover:text-blue-300">Read more →</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

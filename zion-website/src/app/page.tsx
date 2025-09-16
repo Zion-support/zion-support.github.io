@@ -409,6 +409,7 @@ export default function HomePage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
             Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
           </p>
         </div>
@@ -442,6 +443,9 @@ export default function HomePage() {
 =======
             Fresh content, announcements, and courses from Zion Academy.
 >>>>>>> origin/feat/content-promo
+=======
+            Fresh content, announcements, research drops, and courses from Zion Academy.
+>>>>>>> origin/feat/homepage-content-updates
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
@@ -503,6 +507,7 @@ export default function HomePage() {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href: '/updates/web3-learning-path'
 >>>>>>> origin/feature/updates-content
 =======
@@ -523,6 +528,24 @@ export default function HomePage() {
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
 >>>>>>> origin/feat/content-policy-as-code
+=======
+                href: '/updates'
+              },
+              {
+                title: 'Research Drop: AI Governance Blueprint 2025',
+                summary: 'A practical framework for responsible AI governance in enterprises.',
+                href: '/research'
+              },
+              {
+                title: 'Case Study: 40% Cost Reduction with Autonomous IT',
+                summary: 'How a global enterprise cut costs and improved SLAs using Zion OS.',
+                href: '/solutions'
+              },
+              {
+                title: 'Release Notes: v2.5 Platform Enhancements',
+                summary: 'Improved performance, new analytics dashboards, and security updates.',
+                href: '/about'
+>>>>>>> origin/feat/homepage-content-updates
               }
 =======
                 href: '/updates',
