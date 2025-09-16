@@ -50,6 +50,7 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+<<<<<<< HEAD
     {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
       href: '/reports/guides/guide-2025-09-agent-slo-blueprints',
@@ -213,6 +214,13 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       tag: 'Operations',
       gradient: 'from-amber-500 to-pink-500'
     }
+=======
+    { title: 'Guide — Zero‑to‑One Eval Gates (2026)', href: '/reports/guides/guide-2026-zero-to-one-eval-gates', tag: 'Guide', gradient: 'from-amber-500 to-pink-500' },
+    { title: 'Case Study — Guarded Autonomy Containment 44%', href: '/reports/cases/case-2026-guarded-autonomy-containment-44', tag: 'Case Study', gradient: 'from-purple-500 to-blue-500' },
+    { title: 'Brief — Cost‑Aware Model Routing Patterns (2026)', href: '/reports/briefs/brief-2026-cost-aware-model-routing-patterns', tag: 'Brief', gradient: 'from-fuchsia-500 to-indigo-500' },
+    { title: 'Operational Evals — Blueprint (2026)', href: '/blog/ai-2026-operational-evals-blueprint', tag: 'New', gradient: 'from-amber-500 to-rose-500' },
+    { title: 'Agent Observability Blueprint (2026)', href: '/blog/ai-2026-agent-observability-blueprint', tag: 'New', gradient: 'from-indigo-500 to-cyan-500' }
+>>>>>>> cursor/create-and-deploy-new-content-f9de
   ];
 
   const navigationSections = [
@@ -468,25 +476,21 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
-                <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
+                <h3 className="text-2xl font-extrabold">Fresh Research: September 2025</h3>
+                <p className="opacity-90">Zero‑to‑one eval gates, guarded autonomy, and cost‑aware routing.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
-                  <div className="text-xs opacity-90">8 min • Evals</div>
+                <a href="/reports/guides/guide-2026-zero-to-one-eval-gates" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Zero‑to‑One Eval Gates (2026)</div>
+                  <div className="text-xs opacity-90">8 min • Guide</div>
                 </a>
-                <a href="/blog/ai-2026-agent-observability-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
-                  <div className="text-xs opacity-90">7 min • Observability</div>
+                <a href="/reports/cases/case-2026-guarded-autonomy-containment-44" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Guarded Autonomy Containment 44%</div>
+                  <div className="text-xs opacity-90">6 min • Case Study</div>
                 </a>
-                <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
-                  <div className="text-xs opacity-90">6 min • Routing</div>
-                </a>
-                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
-                  <div className="text-xs opacity-90">7 min • Operations</div>
+                <a href="/reports/briefs/brief-2026-cost-aware-model-routing-patterns" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Cost‑Aware Model Routing Patterns (2026)</div>
+                  <div className="text-xs opacity-90">5 min • Brief</div>
                 </a>
               </div>
             </div>
