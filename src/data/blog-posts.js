@@ -2720,6 +2720,58 @@ export const extraContent2029 = [
     imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
     slug: "journey-scorecards-starter-kpis"
   }
+  ,
+  {
+    id: 9907,
+    title: "Operational Reliability Blueprint (2026)",
+    excerpt:
+      "Eval‑gated releases, rollback contracts, error budgets, and observability for dependable agents.",
+    content:
+      "This blueprint details the practices and guardrails required to achieve reliable autonomous operations. It covers evaluation gates across CI/CD, rollback contracts, SLOs with error budgets, production tracing, and incident response playbooks so teams can ship safely without outages.",
+    author: "Jordan Lee",
+    authorRole: "Principal SRE",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Reliability",
+    tags: ["SRE", "Eval Gates", "Rollback", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/operational-reliability-blueprint-2026.jpg",
+    slug: "ai-2026-operational-reliability-blueprint"
+  },
+  {
+    id: 9908,
+    title: "Executive AI Security Playbook (2026)",
+    excerpt:
+      "Board‑ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.",
+    content:
+      "A compact executive guide to governing AI systems in production. We outline policy‑as‑code patterns, runtime approvals, safe tool envelopes, identity and access controls, along with evidence capture and reporting for audits and regulators.",
+    author: "Ava Mitchell",
+    authorRole: "Head of Security Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Security",
+    tags: ["Policy", "Identity", "Approvals", "Audit"],
+    featured: true,
+    imageUrl: "/images/blog/executive-ai-security-playbook-2026.jpg",
+    slug: "ai-2026-executive-ai-security-playbook"
+  },
+  {
+    id: 9909,
+    title: "Evidence Hub Architecture — From Traces to Scorecards",
+    excerpt:
+      "Reference architecture that unifies traces, evals, incidents, and KPIs for audit‑ready autonomy.",
+    content:
+      "We present a practical architecture for an Evidence Hub that connects telemetry (traces, logs, metrics), evaluation results, incidents, and release artifacts. The guide includes data schemas, ingestion pipelines, lineage, and dashboards to power scorecards and release gates.",
+    author: "Priya Natarajan",
+    authorRole: "Platform Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Architecture",
+    tags: ["Observability", "Scorecards", "Incidents", "Data Architecture"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-hub-architecture-2026.jpg",
+    slug: "ai-2026-evidence-hub-architecture"
+  }
 ];
 
 // Merge new content with existing blog posts
