@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 import { 
   Menu, 
   X, 
@@ -80,14 +84,22 @@ export function AppHeader() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
+<<<<<<< HEAD
+              <div 
+=======
               <divdiv 
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
                 className="relative"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+<<<<<<< HEAD
+              </div>
+=======
               </divdiv>
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
                 <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
@@ -214,27 +226,49 @@ export function AppHeader() {
                 aria-label="Toggle mobile menu"
               >
                   {mobileMenuOpen ? (
+<<<<<<< HEAD
+                    <div
+=======
                     <divdiv
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
                       key="close"
                     >
                       <X className="w-6 h-6" />
+<<<<<<< HEAD
+                    </div>
+                  ) : (
+                    <div
+=======
                     </divdiv>
                   ) : (
                     <divdiv
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
                       key="menu"
                     >
                       <Menu className="w-6 h-6" />
+<<<<<<< HEAD
+                    </div>
+                  )}
+                
+=======
                     </divdiv>
                   )}
                 </div>
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
+<<<<<<< HEAD
+          
+            {mobileMenuOpen && (
+              <div 
+=======
           <div>
             {mobileMenuOpen && (
               <divdiv 
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
                 className="lg:hidden"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
@@ -299,9 +333,15 @@ export function AppHeader() {
                     </Link>
                   </div>
                 </div>
+<<<<<<< HEAD
+              </div>
+            )}
+          
+=======
               </divdiv>
             )}
           </div>
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
         </div>
       </header>
       
