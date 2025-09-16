@@ -9,7 +9,10 @@ export default function Navigation() {
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
           <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Solutions</a>
-          <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Updates</a>
+          <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 inline-flex items-center gap-2">
+            <span>Updates</span>
+            <span className="rounded-full bg-blue-600/80 text-white text-[10px] px-2 py-0.5 leading-4">New</span>
+          </a>
           <a href="/blog" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Blog</a>
           <a href="/research" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Research</a>
         </div>
