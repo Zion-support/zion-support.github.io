@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Shield, Globe, Rocket } from 'lucide-react';
 import { revolutionary2026AIServices } from '../../data/revolutionary-2026-ai-services';
 import { revolutionary2026ITServices } from '../../data/revolutionary-2026-it-services';

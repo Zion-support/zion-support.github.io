@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -211,7 +211,7 @@ export default function ComprehensiveServicesAdvertising() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -244,7 +244,7 @@ export default function ComprehensiveServicesAdvertising() {
                 View Pricing
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -280,7 +280,7 @@ export default function ComprehensiveServicesAdvertising() {
 
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -295,7 +295,7 @@ export default function ComprehensiveServicesAdvertising() {
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Filter */}
         <div className="mb-12">
@@ -343,9 +343,9 @@ export default function ComprehensiveServicesAdvertising() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+          <AnimatePresence>
             {sortedServices.map((service, index) => (
-              <div
+              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -436,13 +436,13 @@ export default function ComprehensiveServicesAdvertising() {
                     <Globe className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          
+          </AnimatePresence>
         </div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -473,7 +473,7 @@ export default function ComprehensiveServicesAdvertising() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Footer Contact Section */}

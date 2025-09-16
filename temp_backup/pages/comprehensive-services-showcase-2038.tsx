@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Search, Grid, List, Brain, Atom, Shield, Rocket,
   ArrowRight, Check, Globe, Cpu, Cloud, Users, Target
@@ -304,7 +304,7 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
               <div className="text-gray-400 text-sm">Success Rate</div>
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Star, CheckCircle, TrendingUp, Users, 
   Globe, Brain, Atom, Shield, Rocket,

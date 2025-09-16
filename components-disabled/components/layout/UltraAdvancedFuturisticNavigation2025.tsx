@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, Brain, Rocket, Shield, 
   Zap, Target, Atom, Cpu, Globe, Users, Phone, Mail, MapPin, 

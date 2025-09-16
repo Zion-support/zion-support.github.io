@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-
+import { motion } from 'framer-motion';
 MailSendCheckCircle
 
 export default function AdvancedNewsletter() {

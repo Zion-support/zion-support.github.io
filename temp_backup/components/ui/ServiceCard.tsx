@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Button from './Button';
 import EnhancedFuturisticCard from './EnhancedFuturisticCard';

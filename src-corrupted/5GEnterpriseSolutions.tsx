@@ -23,7 +23,7 @@ import {
   Award
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
+import { motion } from 'framer-motion';
 import { 
   SignalIcon, 
   CpuChipIcon, 
@@ -181,7 +181,7 @@ export default function FiveGEnterpriseSolutions() {
   const features = [
     {
       description: "Lightning-fast 5G networks with ultra-low latency for real-time applications"
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Users, TrendingUp, Globe, Lock, CheckCircle, Star, Cpu, Database, Building2, Network, Server, Monitor, Rocket, Code, Settings, Wifi, Signal, Smartphone, Cloud } from 'lucide-react';
 import { SEO } from '@/components/SEO';

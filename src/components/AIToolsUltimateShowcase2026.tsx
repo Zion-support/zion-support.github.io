@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -353,7 +353,7 @@ const AIToolsUltimateShowcase2026 = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -376,10 +376,10 @@ const AIToolsUltimateShowcase2026 = () => {
             revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Stats */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -402,10 +402,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Category Navigation */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -429,10 +429,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Category Header */}
-        <div
+        <motion.div
           key={activeCategory}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -459,10 +459,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })()}
-        </div>
+        </motion.div>
 
         {/* Tools Grid */}
-        <div
+        <motion.div
           key={activeCategory}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -473,7 +473,7 @@ const AIToolsUltimateShowcase2026 = () => {
             const ToolIcon = tool.icon;
             
             return (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -540,21 +540,21 @@ const AIToolsUltimateShowcase2026 = () => {
 
                 {/* Hover Effect */}
                 {hoveredTool === index && (
-                  <div
+                  <motion.div
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: 1scale: 1 }}
                     className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Popular
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -587,7 +587,7 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

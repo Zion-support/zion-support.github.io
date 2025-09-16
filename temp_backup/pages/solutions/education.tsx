@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
   GraduationCap, Brain, Globe, Shield, Zap, Cpu, 
   Users, CheckCircle, ArrowRight, BarChart3, BookOpen

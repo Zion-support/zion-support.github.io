@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, ExternalLink, Star, Zap, Shield, 
   TrendingUp, Clock, DollarSign, Check, Sparkles,

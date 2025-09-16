@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { Heart, Brain, Users, Target, Award, Clock, CheckCircle, Shield, Database, Server, Layers, FileText } from 'lucide-react';
 
 export default function EmotionalIQPage() {

@@ -52,6 +52,10 @@ import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTrac
 import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility2025';
 import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
 import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
+import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
+import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -657,6 +661,11 @@ export default function App(): JSX.Element {
                   <EnhancedContentCarousel2025 />
                 </div>
 
+                {/* Revolutionary Content Carousel 2025 */}
+                <div className="mb-12">
+                  <RevolutionaryContentCarousel2025 />
+                </div>
+
                 {/* Revolutionary Content Carousel 2027 */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -1129,6 +1138,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
+          <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />

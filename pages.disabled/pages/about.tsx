@@ -2,7 +2,7 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import N
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

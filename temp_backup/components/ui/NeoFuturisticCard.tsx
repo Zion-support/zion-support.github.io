@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
 interface NeoFuturisticCardProps {
   children: React.ReactNode;

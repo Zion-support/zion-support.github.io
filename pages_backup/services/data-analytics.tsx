@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../../components/Layout";";
-
+import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
 export default function DataAnalyticsPage() {
@@ -119,7 +119,7 @@ import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 
 const features = [
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
 const analyticsServices = [

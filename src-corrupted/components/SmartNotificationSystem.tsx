@@ -1,4 +1,4 @@
-
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
   id: string;

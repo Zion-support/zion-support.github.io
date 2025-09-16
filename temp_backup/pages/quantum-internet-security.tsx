@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Shield, Lock, Globe, Zap, Target, Users, ArrowRight, Atom } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 

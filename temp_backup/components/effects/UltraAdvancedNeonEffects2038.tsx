@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useCallback } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface UltraAdvancedNeonEffects2038Props {
   intensity?: 'low' | 'medium' | 'high';

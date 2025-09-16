@@ -5,7 +5,7 @@
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
   Globe, Database, Cloud, Lock, Palette, Target, Layers, 
@@ -34,7 +34,7 @@ export default function Comprehensive2026ServicesShowcase() {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 import {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Eye, 
   EyeOff, 
   Volume2, 

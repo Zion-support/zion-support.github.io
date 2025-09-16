@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Brain, Cpu, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 

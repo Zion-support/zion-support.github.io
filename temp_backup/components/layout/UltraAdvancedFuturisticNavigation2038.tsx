@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, ArrowRight,
   Brain, Rocket, Target, Atom, BookOpen,

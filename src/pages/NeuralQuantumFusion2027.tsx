@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const NeuralQuantumFusion2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -22,11 +22,11 @@ const NeuralQuantumFusion2027: React.FC = () => {
             The revolutionary fusion of neural networks and quantum computing creates AI systems that can process 
             information at the speed of thought while operating in quantum superposition states.
           </p>
-        </div>
+        </motion.div>
 
         {/* Fusion Principles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -42,9 +42,9 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Parallel thought processing</li>
               <li>• Quantum memory storage</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -60,9 +60,9 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Infinite parallel learning</li>
               <li>• Instant knowledge transfer</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -78,11 +78,11 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Coherent thought patterns</li>
               <li>• Quantum error correction</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         {/* Revolutionary Breakthrough Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -138,10 +138,10 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Applications Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -178,10 +178,10 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Future Vision Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -218,10 +218,10 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -241,7 +241,7 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
