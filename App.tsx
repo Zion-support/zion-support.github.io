@@ -158,12 +158,10 @@ import UltimateContentBanner2037 from './src/components/UltimateContentBanner203
 import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
 import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
 import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
-<<<<<<< HEAD
 import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
 import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
 import AdvancedTechShowcase2025 from './src/pages/AdvancedTechShowcase2025';
 import AdvancedTechBanner2025 from './src/components/AdvancedTechBanner2025';
-=======
 import AutonomousAgentRiskPlaybook2026 from './src/pages/AutonomousAgentRiskPlaybook2026';
 import ComprehensiveServices2035 from './src/pages/ComprehensiveServices2035';
 import InterdimensionalTechRevolution2036 from './src/pages/InterdimensionalTechRevolution2036';
@@ -177,7 +175,12 @@ import UltimateTechBreakthrough2035 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
 import UltimateTechBreakthrough2037 from './src/pages/UltimateTechBreakthrough2037';
 import UltimateTechBreakthrough2040 from './src/pages/UltimateTechBreakthrough2040';
->>>>>>> feature/autonomous-agent-risk-playbook-2026
+import RevolutionaryTechShowcase2040 from './src/pages/RevolutionaryTechShowcase2040';
+import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
+import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
+import AdvancedContentShowcase2026 from './src/components/AdvancedContentShowcase2026';
+import InteractiveAdvertisingBanner2026 from './src/components/InteractiveAdvertisingBanner2026';
+import AIInnovationShowcase2026 from './src/pages/AIInnovationShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -226,6 +229,16 @@ export default function App(): JSX.Element {
                 {/* New Content Advertising Banner */}
                 <div className="mb-12">
                   <NewContentAdvertisingBanner2026 />
+                </div>
+
+                {/* NEW: Interactive Advertising Banner 2026 */}
+                <div className="mb-12">
+                  <InteractiveAdvertisingBanner2026 />
+                </div>
+
+                {/* NEW: Advanced Content Showcase 2026 */}
+                <div className="mb-12">
+                  <AdvancedContentShowcase2026 />
                 </div>
                 
                 {/* Revolutionary Content Banner 2035-2037 */}
@@ -596,6 +609,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AdvancedTechShowcase2025" className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧠 ADVANCED: Tech Showcase 2025 →
+                    </a>
+                    <a href="/ai-innovation-showcase-2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: AI Innovation Showcase 2026 →
                     </a>
                   </div>
                 </div>
@@ -1286,6 +1302,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2040" element={<UltimateTechBreakthrough2040 />} />
           <Route path="/pages/RevolutionaryTechShowcase2040" element={<RevolutionaryTechShowcase2040 />} />
           <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
+          <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
