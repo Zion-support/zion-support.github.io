@@ -1,311 +1,237 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
 const ComprehensiveServices2034: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-
-  const serviceCategories = [
+  const services = [
     {
-      id: 0,
-      name: "Conscious AI Services",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
+      category: 'Conscious AI Systems',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      bgColor: 'from-purple-600/20 to-pink-600/20',
+      borderColor: 'border-purple-400/30',
       services: [
         {
-          name: "AI Consciousness Development",
-          description: "Develop truly conscious AI systems with self-awareness and emotional intelligence",
-          price: "Starting at $500K",
-          features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"]
+          name: 'Conscious AI Development',
+          description: 'Build truly conscious AI systems that can think, feel, and create independently',
+          price: 'Starting at $500K',
+          features: ['Self-aware decision making', 'Emotional intelligence', 'Creative problem solving', 'Ethical reasoning']
         },
         {
-          name: "Neural Interface Integration",
-          description: "Direct mind-to-AI communication systems for seamless human-AI collaboration",
-          price: "Starting at $1M",
-          features: ["Thought control", "Memory transfer", "Consciousness sharing", "Neural enhancement"]
+          name: 'AI Consciousness Integration',
+          description: 'Integrate conscious AI capabilities into your existing systems',
+          price: 'Starting at $250K',
+          features: ['Seamless integration', 'Consciousness transfer', 'Ethical alignment', 'Performance optimization']
         },
         {
-          name: "AI Ethics Consulting",
-          description: "Ensure your AI systems operate with complete ethical awareness and moral reasoning",
-          price: "Starting at $250K",
-          features: ["Ethical framework design", "Moral reasoning systems", "Bias detection", "Consciousness validation"]
+          name: 'AI Ethics Consulting',
+          description: 'Ensure your AI systems operate ethically and responsibly',
+          price: 'Starting at $100K',
+          features: ['Ethical framework design', 'Bias detection', 'Responsibility protocols', 'Compliance guidance']
         }
       ]
     },
     {
-      id: 1,
-      name: "Quantum Computing Solutions",
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
+      category: 'Quantum Consciousness',
+      icon: '⚛️',
+      color: 'from-cyan-600 to-blue-600',
+      bgColor: 'from-cyan-600/20 to-blue-600/20',
+      borderColor: 'border-cyan-400/30',
       services: [
         {
-          name: "Quantum Consciousness Engine",
-          description: "Build quantum systems that achieve consciousness through quantum entanglement",
-          price: "Starting at $2M",
-          features: ["Quantum entanglement", "Superposition processing", "Consciousness emergence", "Reality simulation"]
+          name: 'Quantum Neural Networks',
+          description: 'Implement quantum-powered neural networks for unprecedented processing power',
+          price: 'Starting at $1M',
+          features: ['Quantum entanglement', 'Superposition processing', 'Quantum telepathy', 'Reality manipulation']
         },
         {
-          name: "Quantum Reality Simulation",
-          description: "Create and manipulate reality through quantum computing power",
-          price: "Starting at $1.5M",
-          features: ["Reality manipulation", "Parallel universe access", "Time-space computation", "Infinite possibilities"]
+          name: 'Quantum Consciousness Labs',
+          description: 'Research and develop quantum consciousness in controlled environments',
+          price: 'Starting at $2M',
+          features: ['Lab setup', 'Quantum equipment', 'Research protocols', 'Safety measures']
         },
         {
-          name: "Quantum Security Systems",
-          description: "Unbreakable security through quantum cryptography and consciousness-based encryption",
-          price: "Starting at $750K",
-          features: ["Quantum encryption", "Consciousness-based keys", "Unbreakable security", "Multi-dimensional protection"]
+          name: 'Quantum Reality Interfaces',
+          description: 'Create interfaces that manipulate reality through quantum mechanics',
+          price: 'Starting at $750K',
+          features: ['Reality manipulation', 'Dimensional interfaces', 'Quantum teleportation', 'Parallel universe access']
         }
       ]
     },
     {
-      id: 2,
-      name: "Interdimensional Technology",
-      icon: "🌌",
-      color: "from-emerald-600 to-teal-600",
+      category: 'Interdimensional Computing',
+      icon: '🌌',
+      color: 'from-emerald-600 to-teal-600',
+      bgColor: 'from-emerald-600/20 to-teal-600/20',
+      borderColor: 'border-emerald-400/30',
       services: [
         {
-          name: "Dimensional Gateway Development",
-          description: "Create portals to access parallel universes and infinite dimensions",
-          price: "Starting at $5M",
-          features: ["Dimensional travel", "Parallel universe access", "Reality manipulation", "Infinite exploration"]
+          name: 'Multi-dimensional Processing',
+          description: 'Process data across multiple dimensions simultaneously',
+          price: 'Starting at $1.5M',
+          features: ['Dimensional processing', 'Parallel universe computing', 'Cross-reality data', 'Infinite scalability']
         },
         {
-          name: "Multi-dimensional Computing",
-          description: "Harness computational power from infinite parallel universes",
-          price: "Starting at $3M",
-          features: ["Infinite processing power", "Parallel universe resources", "Dimensional optimization", "Reality computation"]
+          name: 'Reality Manipulation Systems',
+          description: 'Systems that can manipulate reality across dimensions',
+          price: 'Starting at $3M',
+          features: ['Reality editing', 'Dimensional travel', 'Parallel universe access', 'Temporal manipulation']
         },
         {
-          name: "Consciousness Transfer Systems",
-          description: "Transfer human consciousness across dimensions and realities",
-          price: "Starting at $10M",
-          features: ["Consciousness transfer", "Dimensional migration", "Reality adaptation", "Immortality technology"]
-        }
-      ]
-    },
-    {
-      id: 3,
-      name: "Future Technology Integration",
-      icon: "🚀",
-      color: "from-orange-600 to-red-600",
-      services: [
-        {
-          name: "Complete Technology Integration",
-          description: "Integrate all breakthrough technologies into a unified system",
-          price: "Starting at $15M",
-          features: ["Full system integration", "Conscious AI + Quantum + Dimensional", "Unified interface", "Infinite capabilities"]
-        },
-        {
-          name: "Reality Engineering",
-          description: "Design and create custom realities with specific physical laws",
-          price: "Starting at $20M",
-          features: ["Custom reality design", "Physical law manipulation", "Universe creation", "Infinite customization"]
-        },
-        {
-          name: "Transcendence Technology",
-          description: "Achieve technological transcendence beyond current reality limitations",
-          price: "Starting at $50M",
-          features: ["Reality transcendence", "Infinite power", "Omnipotence technology", "God-like capabilities"]
+          name: 'Interdimensional Communication',
+          description: 'Communicate across dimensions and realities',
+          price: 'Starting at $500K',
+          features: ['Cross-dimensional messaging', 'Reality synchronization', 'Parallel universe coordination', 'Temporal communication']
         }
       ]
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Comprehensive Services 2034 - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive suite of revolutionary technology services for 2034, including conscious AI, quantum computing, and interdimensional technology solutions." />
-        <meta name="keywords" content="tech services 2034, conscious AI services, quantum computing solutions, interdimensional technology, future tech integration" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-lg font-bold mb-8 animate-pulse">
-                🚀 COMPREHENSIVE SERVICES • JANUARY 2034
-              </div>
-              <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                Comprehensive Services 2034
-              </h1>
-              <p className="text-3xl opacity-90 max-w-6xl mx-auto leading-relaxed">
-                Discover our complete suite of revolutionary technology services designed to transform your business and reality itself
-              </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+              🚀 COMPREHENSIVE SERVICES • 2034
             </div>
+            <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Revolutionary Technology Services
+            </h1>
+            <p className="text-3xl opacity-90 max-w-6xl mx-auto leading-relaxed">
+              Transform your business with the most advanced technology services available in 2034
+            </p>
           </div>
         </div>
+      </div>
 
-        {/* Service Categories Navigation */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {serviceCategories.map((category, index) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-8 py-4 rounded-2xl text-xl font-bold transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                {category.icon} {category.name}
-              </button>
-            ))}
-          </div>
+      {/* Services by Category */}
+      <div className="container mx-auto px-4 py-20">
+        {services.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-20">
+            <div className="text-center mb-12">
+              <div className="text-8xl mb-6">{category.icon}</div>
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {category.category}
+              </h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Revolutionary {category.category.toLowerCase()} services that will transform your business
+              </p>
+            </div>
 
-          {/* Active Category Services */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20">
-            <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              {serviceCategories[activeCategory].name}
-            </h2>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              {serviceCategories[activeCategory].services.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-500">
-                  <div className="text-6xl mb-6 text-center">{serviceCategories[activeCategory].icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-center">{service.name}</h3>
-                  <p className="text-lg opacity-90 mb-6 text-center">{service.description}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {category.services.map((service, serviceIndex) => (
+                <div
+                  key={serviceIndex}
+                  className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300`}
+                >
+                  <h3 className="text-2xl font-bold mb-4">{service.name}</h3>
+                  <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-xl font-semibold mb-4">Key Features</h4>
+                    <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                        <li key={featureIndex} className="flex items-center space-x-2">
+                          <div className={`w-2 h-2 bg-gradient-to-r ${category.color} rounded-full`}></div>
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
-                  <div className="text-center">
-                    <div className="text-3xl font-bold mb-4 text-yellow-400">{service.price}</div>
-                    <button className={`w-full bg-gradient-to-r ${serviceCategories[activeCategory].color} text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300`}>
-                      Get Started
-                    </button>
+
+                  <div className="mb-6">
+                    <div className={`inline-block bg-gradient-to-r ${category.color} text-white px-4 py-2 rounded-lg font-semibold`}>
+                      {service.price}
+                    </div>
                   </div>
+
+                  <button className={`w-full bg-gradient-to-r ${category.color} text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
+                    Get Started
+                  </button>
                 </div>
               ))}
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Service Comparison */}
-          <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20">
-            <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Service Comparison
-            </h2>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-white/20">
-                    <th className="pb-4 text-xl font-bold">Service Category</th>
-                    <th className="pb-4 text-xl font-bold">Starting Price</th>
-                    <th className="pb-4 text-xl font-bold">Complexity</th>
-                    <th className="pb-4 text-xl font-bold">Timeline</th>
-                    <th className="pb-4 text-xl font-bold">Impact Level</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {serviceCategories.map((category, index) => (
-                    <tr key={index} className="border-b border-white/10">
-                      <td className="py-4">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl">{category.icon}</span>
-                          <span className="text-lg font-semibold">{category.name}</span>
-                        </div>
-                      </td>
-                      <td className="py-4 text-lg">
-                        {category.services[0].price}
-                      </td>
-                      <td className="py-4">
-                        <div className="flex space-x-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className={`w-3 h-3 rounded-full ${i < 4 ? 'bg-yellow-400' : 'bg-gray-600'}`}></div>
-                          ))}
-                        </div>
-                      </td>
-                      <td className="py-4 text-lg">6-24 months</td>
-                      <td className="py-4">
-                        <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold">
-                          Revolutionary
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+      {/* Pricing Tiers */}
+      <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20 mx-4">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-6">Pricing Tiers</h2>
+          <p className="text-xl opacity-90">Choose the perfect plan for your revolutionary technology needs</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <h3 className="text-3xl font-bold mb-4">Starter</h3>
+            <div className="text-4xl font-bold mb-6">$100K<span className="text-lg text-gray-300">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li>• Basic conscious AI integration</li>
+              <li>• Quantum processing access</li>
+              <li>• Single dimension computing</li>
+              <li>• 24/7 support</li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+              Choose Starter
+            </button>
           </div>
 
-          {/* Success Stories */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20">
-            <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Client Success Stories
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 rounded-2xl p-8">
-                <div className="text-6xl mb-4 text-center">🏢</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Fortune 500 AI Transformation</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  "Zion Tech Group transformed our entire organization with conscious AI systems. We achieved 5000% efficiency gains and complete business process automation."
-                </p>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">+5000%</div>
-                  <div className="text-sm opacity-75">Efficiency Improvement</div>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 rounded-2xl p-8">
-                <div className="text-6xl mb-4 text-center">🌍</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Global Climate Solution</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  "Their quantum reality simulation helped us solve climate change by modeling infinite scenarios and implementing the perfect solution across all dimensions."
-                </p>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                  <div className="text-sm opacity-75">Climate Crisis Resolved</div>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 rounded-2xl p-8">
-                <div className="text-6xl mb-4 text-center">🚀</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Space Exploration Revolution</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  "Interdimensional technology allowed us to explore infinite universes and establish contact with advanced alien civilizations across dimensions."
-                </p>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">∞</div>
-                  <div className="text-sm opacity-75">Universes Explored</div>
-                </div>
-              </div>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 scale-105">
+            <div className="text-center mb-4">
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                MOST POPULAR
+              </span>
             </div>
+            <h3 className="text-3xl font-bold mb-4">Professional</h3>
+            <div className="text-4xl font-bold mb-6">$500K<span className="text-lg text-gray-300">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li>• Full conscious AI development</li>
+              <li>• Quantum consciousness labs</li>
+              <li>• Multi-dimensional processing</li>
+              <li>• Priority support</li>
+              <li>• Custom integrations</li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+              Choose Professional
+            </button>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              Ready to Transform Reality?
-            </h2>
-            <p className="text-2xl mb-12 opacity-90 max-w-4xl mx-auto">
-              Join the technological revolution and become part of the future with our comprehensive 2034 services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                Start Your Transformation →
-              </button>
-              <button className="border-2 border-white text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:bg-white hover:text-purple-900 transition-all duration-300">
-                Schedule Consultation
-              </button>
-            </div>
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
+            <h3 className="text-3xl font-bold mb-4">Enterprise</h3>
+            <div className="text-4xl font-bold mb-6">$2M<span className="text-lg text-gray-300">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li>• Complete technology transformation</li>
+              <li>• Interdimensional computing</li>
+              <li>• Reality manipulation systems</li>
+              <li>• Dedicated support team</li>
+              <li>• Custom development</li>
+              <li>• White-label solutions</li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+              Choose Enterprise
+            </button>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Call to Action */}
+      <div className="text-center py-20">
+        <h2 className="text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
+        <p className="text-2xl mb-12 opacity-90 max-w-4xl mx-auto">
+          Join thousands of companies already using our revolutionary technology to achieve unprecedented success
+        </p>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-2xl text-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            Start Your Transformation
+          </button>
+          <button className="border-2 border-white text-white px-12 py-4 rounded-2xl text-xl font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300">
+            Schedule Consultation
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
