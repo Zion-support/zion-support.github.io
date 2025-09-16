@@ -17,11 +17,6 @@ body {
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
-/* Custom utilities */
-.gradient-text {
-  background: var(--primary-gradient);
-=======
 .bg-futuristic::before {
   content: '';
   position: absolute;
@@ -597,7 +592,6 @@ body {
 .futuristic-heading {
   background: linear-gradient(45deg, #22ddd2, #a855f7, #10b981);
   background-size: 200% 200%;
->>>>>>> origin/content/autonomous-enterprise-it-2025
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

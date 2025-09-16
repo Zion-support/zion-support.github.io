@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// Safe storage utility for handling localStorage and sessionStorage
-=======
 // Safe storage utilities for handling localStorage and sessionStorage
->>>>>>> origin/cursor/create-and-deploy-new-content-6f00
 // with error handling and fallbacks
 
 export const safeStorage = {
@@ -112,8 +108,6 @@ export const safeStorage = {
         return false;
       }
     }
-<<<<<<< HEAD
-=======
   },
 
   // JSON storage helpers
@@ -138,7 +132,6 @@ export const safeStorage = {
         return false;
       }
     }
->>>>>>> origin/cursor/create-and-deploy-new-content-6f00
   }
 };
 

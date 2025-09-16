@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 
 const NextGenAIRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -55,7 +53,6 @@ const NextGenAIRevolution2026: React.FC = () => {
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Agents</h3>
->>>>>>> cursor/create-and-deploy-new-content-36c0
             <p className="text-purple-100 mb-6 text-center">
               Self-learning AI agents that can independently execute complex tasks, make decisions, and adapt to new challenges in real-time
             </p>
@@ -106,21 +103,14 @@ const NextGenAIRevolution2026: React.FC = () => {
           </motion.div>
         </div>
 
-<<<<<<< HEAD
-        {/* Advanced Applications */}
-        <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 mb-20">
-=======
         {/* Industry Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-20">
->>>>>>> cursor/create-and-deploy-new-content-36c0
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🏭 Industry Transformations</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               See how our AI revolution is transforming industries across the globe
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -159,7 +149,6 @@ const NextGenAIRevolution2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
             </button>
->>>>>>> cursor/create-and-deploy-new-content-36c0
           </div>
         </div>
       </div>

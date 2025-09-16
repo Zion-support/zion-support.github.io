@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Fetch utility with retry logic and error handling
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Fetch with retry utility for handling network requests with automatic retries
-
-interface FetchWithRetryOptions {
-  retries?: number;
-  delay?: number;
-  backoff?: 'linear' | 'exponential';
-  timeout?: number;
-}
-
-const defaultOptions: Required<FetchWithRetryOptions> = {
-  retries: 3,
-  delay: 1000,
-  backoff: 'exponential',
-  timeout: 10000
-};
-
-=======
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 // Fetch with retry utility for better error handling
 interface FetchWithRetryOptions {
   retries?: number;
@@ -33,53 +5,13 @@ interface FetchWithRetryOptions {
   timeout?: number;
 }
 
-<<<<<<< HEAD
 =======
->>>>>>> main
 =======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const { retries, delay, backoff, timeout, ...fetchOptions } = {
-    ...defaultOptions,
-    ...options
-  };
-
-  let lastError: Error | null = null;
-
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    try {
-      // Create abort controller for timeout
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-      const response = await fetch(url, {
-        ...fetchOptions,
-        signal: controller.signal
-      });
-
-      clearTimeout(timeoutId);
-
-      // Check if response is ok
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-
-=======
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
   
 /**
@@ -148,164 +80,15 @@ export async function fetchWithRetry(
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-
-      return response;
 =======
-<<<<<<< HEAD
-      
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       return response;
     } catch (error) {
       lastError = error as Error;
       
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Don't retry on the last attempt
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
-      if (attempt === retries) {
-    } catch (error) {
-      clearTimeout(timeoutId);
-
-      // Check if we should retry this error
-      if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(lastError, attempt)) {
-        throw lastError;
-      }
-
-      throw error;
-    }
-  };
-
-    attempt++;
-  }
-
-  throw lastError!;
-}
-
-export async function fetchJSON<T>(
-  url: string,
-  options: FetchOptions = {}
-): Promise<T> {
-  const response = await fetchWithRetry(url, {
-    ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-  });
-
-  if (!response.ok) {
-    throw new FetchError(
-      `HTTP ${response.status}: ${response.statusText}`,
-      response.status,
-      response.statusText,
-      response
-    );
-  }
-
-  try {
-    return await response.json();
-  } catch (error) {
-    throw new FetchError(
-      'Failed to parse JSON response',
-      response.status,
-      response.statusText,
-      response
-    );
-  }
-}
-
-export async function fetchText(
-  url: string,
-  options: FetchOptions = {}
-): Promise<string> {
-  const response = await fetchWithRetry(url, options);
-
-  if (!response.ok) {
-    throw new FetchError(
-      `HTTP ${response.status}: ${response.statusText}`,
-      response.status,
-      response.statusText,
-      response
-    );
-  }
-
-  return response.text();
-}
-
-export async function fetchBlob(
-  url: string,
-  options: FetchOptions = {}
-): Promise<Blob> {
-  const response = await fetchWithRetry(url, options);
-
-  if (!response.ok) {
-    throw new FetchError(
-      `HTTP ${response.status}: ${response.statusText}`,
-      response.status,
-      response.statusText,
-      response
-    );
-  }
-
-  return response.blob();
-}
-
-// Convenience functions
-export const get = (url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<Response> => {
-  return fetchWithRetry(url, { ...options, method: 'GET' });
-};
-
-export const post = (url: string, body?: any, options: Omit<FetchOptions, 'method' | 'body'> = {}): Promise<Response> => {
-  return fetchWithRetry(url, {
-    ...options,
-    method: 'POST',
-    body: body ? JSON.stringify(body) : undefined,
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-  });
-};
-
-export const put = (url: string, body?: any, options: Omit<FetchOptions, 'method' | 'body'> = {}): Promise<Response> => {
-  return fetchWithRetry(url, {
-    ...options,
-    method: 'PUT',
-    body: body ? JSON.stringify(body) : undefined,
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-  });
-};
-
-export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<Response> => {
-  return fetchWithRetry(url, { ...options, method: 'DELETE' });
-<<<<<<< HEAD
 =======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 };
 
 export default fetchWithRetry;
