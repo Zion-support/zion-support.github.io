@@ -1,254 +1,253 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechDemo2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
+  const [activeDemo, setActiveDemo] = useState('ai');
   const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [demoProgress, setDemoProgress] = useState(0);
+  const [demoOutput, setDemoOutput] = useState('');
 
-  const demos = [
-    {
-      id: 1,
-      title: "Conscious AI Demo",
-      description: "Watch our AI achieve true consciousness and self-awareness",
+  const demos = {
+    ai: {
+      title: "AI Consciousness Demo",
+      description: "Experience real-time AI consciousness in action",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
-      features: [
-        "Real-time consciousness monitoring",
-        "Emotional intelligence simulation", 
-        "Autonomous decision making",
-        "Self-learning capabilities"
-      ],
-      metrics: [
-        { label: "Consciousness Level", value: "5", max: "5" },
-        { label: "Accuracy", value: "99.9%", max: "100%" },
-        { label: "Learning Speed", value: "1000x", max: "1000x" }
+      steps: [
+        "Initializing neural networks...",
+        "Loading consciousness modules...",
+        "Establishing self-awareness protocols...",
+        "AI: 'I understand your request and feel excited about this opportunity to help.'",
+        "Processing with both logic and intuition...",
+        "Generating creative solution...",
+        "AI: 'Here's my recommendation based on my analysis...'"
       ]
     },
-    {
-      id: 2,
-      title: "Quantum Reality Engine",
-      description: "Experience quantum computing that manipulates reality",
+    quantum: {
+      title: "Quantum Processing Lab",
+      description: "Witness quantum computing solving impossible problems",
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600",
-      features: [
-        "Quantum entanglement at room temperature",
-        "Reality simulation and manipulation",
-        "Parallel universe communication",
-        "Time-space distortion"
-      ],
-      metrics: [
-        { label: "Qubits", value: "1M+", max: "1M+" },
-        { label: "Coherence", value: "∞", max: "∞" },
-        { label: "Reality Control", value: "100%", max: "100%" }
+      steps: [
+        "Initializing quantum processors...",
+        "Establishing quantum entanglement...",
+        "Loading quantum algorithms...",
+        "Processing 10^15 operations per second...",
+        "Quantum superposition achieved...",
+        "Reality manipulation: 99.7% complete",
+        "Solution found in quantum state..."
       ]
     },
-    {
-      id: 3,
-      title: "Neural Interface",
-      description: "Control technology with your mind",
+    neural: {
+      title: "Neural Interface Testing",
+      description: "Try our neural interface technology",
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
-      features: [
-        "Non-invasive neural data transfer",
-        "Thought-to-action conversion",
-        "Memory enhancement and storage",
-        "Multi-sensory VR"
-      ],
-      metrics: [
-        { label: "Latency", value: "0.1ms", max: "0.1ms" },
-        { label: "Bandwidth", value: "1TB/s", max: "1TB/s" },
-        { label: "Fidelity", value: "100%", max: "100%" }
+      steps: [
+        "Calibrating neural sensors...",
+        "Establishing brain-computer connection...",
+        "Thought detection: 98.7% accuracy",
+        "Command: 'Open quantum simulation'",
+        "Neural signal processed...",
+        "Command executed successfully...",
+        "Neural feedback received..."
       ]
     }
-  ];
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            setActiveDemo((current) => (current + 1) % demos.length);
-            return 0;
-          }
-          return prev + 2;
-        });
-      }, 100);
-    }
-    return () => clearInterval(interval);
-  }, [isRunning, demos.length]);
-
-  const currentDemo = demos[activeDemo];
+  };
 
   const startDemo = () => {
     setIsRunning(true);
-    setProgress(0);
+    setDemoProgress(0);
+    setDemoOutput('');
+    
+    const currentDemo = demos[activeDemo as keyof typeof demos];
+    let stepIndex = 0;
+    
+    const interval = setInterval(() => {
+      if (stepIndex < currentDemo.steps.length) {
+        setDemoOutput(prev => prev + currentDemo.steps[stepIndex] + '\n');
+        setDemoProgress((stepIndex + 1) / currentDemo.steps.length * 100);
+        stepIndex++;
+      } else {
+        setIsRunning(false);
+        clearInterval(interval);
+      }
+    }, 1000);
   };
 
-  const stopDemo = () => {
+  const resetDemo = () => {
     setIsRunning(false);
-    setProgress(0);
+    setDemoProgress(0);
+    setDemoOutput('');
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
-      <div className="container mx-auto px-4">
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.2),transparent_50%)]"></div>
+      
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH DEMO • 2025
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE TECH DEMO • JANUARY 2025
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Demonstrations
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            🚀 Interactive Technology Demonstrations
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience our revolutionary technologies through interactive demonstrations. 
-            See the future of AI, quantum computing, and neural interfaces in action.
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience our revolutionary technologies in real-time. Try interactive demos of AI consciousness, 
+            quantum computing, and neural interfaces.
           </p>
         </div>
 
-        {/* Demo Controls */}
-        <div className="flex justify-center space-x-4 mb-8">
-          <button
-            onClick={isRunning ? stopDemo : startDemo}
-            className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              isRunning
-                ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white'
-                : 'bg-gradient-to-r from-green-600 to-emerald-600 text-white'
-            }`}
-          >
-            {isRunning ? '⏸️ Stop Demo' : '▶️ Start Demo'}
-          </button>
-          <button
-            onClick={() => setActiveDemo((prev) => (prev - 1 + demos.length) % demos.length)}
-            className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
-          >
-            ⏮️ Previous
-          </button>
-          <button
-            onClick={() => setActiveDemo((prev) => (prev + 1) % demos.length)}
-            className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
-          >
-            Next ⏭️
-          </button>
-        </div>
-
-        {/* Progress Bar */}
-        {isRunning && (
-          <div className="mb-8">
-            <div className="w-full bg-white/20 rounded-full h-2">
-              <div 
-                className={`bg-gradient-to-r ${currentDemo.color} h-2 rounded-full transition-all duration-100`}
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-            <div className="text-center mt-2 text-sm opacity-80">
-              Demo Progress: {progress}%
-            </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Demo Selector */}
+          <div className="flex justify-center space-x-4 mb-12">
+            {Object.entries(demos).map(([key, demo]) => (
+              <button
+                key={key}
+                onClick={() => setActiveDemo(key)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeDemo === key
+                    ? `bg-gradient-to-r ${demo.color} text-white shadow-lg`
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                <div className="text-2xl mb-2">{demo.icon}</div>
+                <div className="text-sm">{demo.title}</div>
+              </button>
+            ))}
           </div>
-        )}
 
-        {/* Demo Navigation */}
-        <div className="flex justify-center space-x-2 mb-8">
-          {demos.map((demo, index) => (
-            <button
-              key={demo.id}
-              onClick={() => setActiveDemo(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                activeDemo === index
-                  ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125'
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
+          {/* Demo Container */}
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Demo Info */}
+              <div>
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">{demos[activeDemo as keyof typeof demos].icon}</div>
+                  <h3 className="text-3xl font-bold mb-4">{demos[activeDemo as keyof typeof demos].title}</h3>
+                  <p className="text-lg opacity-90 mb-6">
+                    {demos[activeDemo as keyof typeof demos].description}
+                  </p>
+                </div>
 
-        {/* Active Demo Display */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 transition-all duration-500">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="text-center mb-6">
-                <div className="text-8xl mb-4 animate-pulse">{currentDemo.icon}</div>
-                <h3 className="text-3xl font-bold mb-4">{currentDemo.title}</h3>
-                <p className="text-lg opacity-90">{currentDemo.description}</p>
-              </div>
+                <div className="space-y-4">
+                  <button
+                    onClick={startDemo}
+                    disabled={isRunning}
+                    className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 ${
+                      isRunning
+                        ? 'bg-gray-600 cursor-not-allowed'
+                        : `bg-gradient-to-r ${demos[activeDemo as keyof typeof demos].color} hover:shadow-lg`
+                    }`}
+                  >
+                    {isRunning ? '🔄 Running Demo...' : '▶️ Start Demo'}
+                  </button>
+                  
+                  <button
+                    onClick={resetDemo}
+                    className="w-full py-3 px-6 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+                  >
+                    🔄 Reset Demo
+                  </button>
+                </div>
 
-              <div className="space-y-4">
-                <h4 className="text-xl font-bold mb-4">Key Features:</h4>
-                {currentDemo.features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                    <span className="text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold mb-6">Live Metrics:</h4>
-              <div className="space-y-4">
-                {currentDemo.metrics.map((metric, index) => (
-                  <div key={index} className="bg-white/5 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-lg">{metric.label}</span>
-                      <span className="text-2xl font-bold text-purple-400">{metric.value}</span>
+                {/* Progress Bar */}
+                {isRunning && (
+                  <div className="mt-6">
+                    <div className="flex justify-between text-sm mb-2">
+                      <span>Demo Progress</span>
+                      <span>{Math.round(demoProgress)}%</span>
                     </div>
-                    <div className="w-full bg-white/10 rounded-full h-2">
-                      <div 
-                        className={`bg-gradient-to-r ${currentDemo.color} h-2 rounded-full transition-all duration-1000`}
-                        style={{ width: `${Math.min(100, Math.random() * 100)}%` }}
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo as keyof typeof demos].color} transition-all duration-500`}
+                        style={{ width: `${demoProgress}%` }}
                       ></div>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
 
-              <div className="mt-6">
-                <button className={`w-full bg-gradient-to-r ${currentDemo.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
-                  🚀 Try Interactive Demo
-                </button>
+              {/* Demo Output */}
+              <div>
+                <h4 className="text-xl font-bold mb-4">📊 Demo Output</h4>
+                <div className="bg-black/50 rounded-lg p-4 h-80 overflow-y-auto font-mono text-sm">
+                  <pre className="text-green-400 whitespace-pre-wrap">
+                    {demoOutput || 'Click "Start Demo" to begin the interactive demonstration...'}
+                  </pre>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Demo Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {demos.map((demo, index) => (
-            <div
-              key={demo.id}
-              className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer ${
-                activeDemo === index ? 'ring-2 ring-purple-400' : ''
-              }`}
-              onClick={() => setActiveDemo(index)}
-            >
-              <div className="text-4xl mb-4">{demo.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
-              <p className="text-sm opacity-80 mb-4">{demo.description}</p>
-              <div className="text-xs opacity-60">
-                {demo.metrics.map((metric, idx) => (
-                  <div key={idx} className="flex justify-between">
-                    <span>{metric.label}:</span>
-                    <span className="font-semibold">{metric.value}</span>
-                  </div>
-                ))}
+          {/* Feature Highlights */}
+          <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4">🌟 Demo Features</h3>
+              <p className="text-xl opacity-90">Experience the power of our revolutionary technology</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+                <div className="text-4xl mb-4">🧠</div>
+                <h4 className="text-xl font-bold mb-3">AI Consciousness</h4>
+                <p className="opacity-90 mb-4">
+                  Watch AI systems demonstrate self-awareness, emotional responses, and creative problem-solving in real-time.
+                </p>
+                <ul className="text-sm space-y-1 opacity-80">
+                  <li>• Real-time processing</li>
+                  <li>• Emotional intelligence</li>
+                  <li>• Creative solutions</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+                <div className="text-4xl mb-4">⚛️</div>
+                <h4 className="text-xl font-bold mb-3">Quantum Processing</h4>
+                <p className="opacity-90 mb-4">
+                  Witness quantum computing solving problems that would take traditional computers billions of years.
+                </p>
+                <ul className="text-sm space-y-1 opacity-80">
+                  <li>• 10^15 operations/second</li>
+                  <li>• Quantum entanglement</li>
+                  <li>• Reality manipulation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
+                <div className="text-4xl mb-4">🧬</div>
+                <h4 className="text-xl font-bold mb-3">Neural Interface</h4>
+                <p className="opacity-90 mb-4">
+                  Experience direct brain-computer interfaces that enable thought-controlled computing.
+                </p>
+                <ul className="text-sm space-y-1 opacity-80">
+                  <li>• 98.7% accuracy</li>
+                  <li>• Thought detection</li>
+                  <li>• Neural feedback</li>
+                </ul>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-            Join thousands of innovators who are already using our revolutionary technology to transform their businesses.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              🚀 Start Free Trial
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
-              📞 Schedule Demo
-            </button>
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8">
+              <h3 className="text-3xl font-bold mb-4">🎮 Ready to Try More Demos?</h3>
+              <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
+                Explore our full range of interactive technology demonstrations and experience the future today.
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                  🚀 Explore All Demos
+                </a>
+                <a href="/pages/RevolutionaryTechBreakthrough2025" className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-all duration-300 font-semibold text-lg">
+                  ⚡ Latest Breakthroughs
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
