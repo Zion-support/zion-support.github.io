@@ -50,145 +50,11 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
-    {
-      title: 'Safe Autonomy in Production (2026)',
-      href: '/blog/ai-2026-safe-autonomy-in-production',
-      tag: 'New',
-      gradient: 'from-rose-500 to-orange-500'
-    },
-    {
-      title: 'Evidence Hub in Practice (2026)',
-      href: '/blog/ai-2026-evidence-hub-in-practice',
-      tag: 'New',
-      gradient: 'from-cyan-500 to-violet-600'
-    },
-    {
-      title: 'Agentic Observability — Deep Dive (2026)',
-      href: '/blog/ai-2026-agentic-observability-deep-dive',
-      tag: 'New',
-      gradient: 'from-violet-500 to-fuchsia-500'
-    },
-    {
-      title: 'Enterprise Agent Risk Mitigation (2026)',
-      href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
-      tag: 'New',
-      gradient: 'from-rose-500 to-orange-500'
-    },
-    {
-      title: 'Trustworthy Model Routing — Starter Kit (2026)',
-      href: '/blog/ai-2026-trustworthy-model-routing-starter',
-      tag: 'Starter Kit',
-      gradient: 'from-sky-500 to-blue-600'
-    },
-    {
-      title: 'Enterprise Automation Strategy 2025',
-      href: '/blog/ai-2025-enterprise-automation-strategy',
-      tag: 'Strategy',
-      gradient: 'from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Autonomous Incident Response Blueprint (2026)',
-      href: '/blog/ai-2026-autonomous-incident-response-blueprint',
-      tag: 'New',
-      gradient: 'from-rose-500 to-red-500'
-    },
-    {
-      title: 'Enterprise Agent Risk Mitigation (2026)',
-      href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
-      tag: 'New',
-      gradient: 'from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Reliable Autonomy Operations (2026)',
-      href: '/blog/ai-2026-reliable-autonomy-operations',
-      tag: 'New',
-      gradient: 'from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Agentic Observability — Deep Dive (2026)',
-      href: '/blog/ai-2026-agentic-observability-deep-dive',
-      tag: 'New',
-      gradient: 'from-purple-500 to-fuchsia-500'
-    },
-    {
-      title: 'Agent Platform SLO Blueprint (2026)',
-      href: '/blog/ai-2026-agent-slo-blueprint',
-      tag: 'New',
-      gradient: 'from-amber-500 to-rose-500'
-    },
-    {
-      title: 'Governed Tool Use — Case Studies (2026)',
-      href: '/blog/ai-2026-governed-tool-use-case-studies',
-      tag: 'New',
-      gradient: 'from-indigo-500 to-cyan-500'
-    },
-    {
-      title: '2025-09 Research Brief — Agentic Business Ops',
-      href: '/reports/briefs/brief-2025-09-agentic-business-ops',
-      tag: 'Brief',
-      gradient: 'from-cyan-500 to-fuchsia-500'
-    },
-    {
-      title: 'Blueprint — Autonomous IT Service Desk (v1)',
-      href: '/reports/blueprints/blueprint-2025-09-autonomous-it-service-desk',
-      tag: 'Blueprint',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Case Study — 32% Cost Savings with FinOps AI',
-      href: '/reports/cases/case-2025-09-finops-ai-savings',
-      tag: 'Case Study',
-      gradient: 'from-cyan-500 to-violet-500'
-    },
-    {
-      title: 'Enterprise Automation Strategy 2025',
-      href: '/blog/ai-2025-enterprise-automation-strategy',
-      tag: 'Automation',
-      gradient: 'from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Agentic Product Playbooks',
-      href: '/blog/agentic-product-playbooks',
-      tag: 'Agentic',
-      gradient: 'from-fuchsia-500 to-indigo-500'
-    },
-    {
-      title: 'Safety Evals Operational Checklist (2026)',
-      href: '/blog/ai-2026-safety-evals-operational-checklist',
-      tag: 'Safety',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Operationalizing Agentic Workflows (2026)',
-      href: '/blog/ai-2026-operationalizing-agentic-workflows',
-      tag: 'Agentic',
-      gradient: 'from-cyan-500 to-purple-500'
-    },
-    {
-      title: 'Operational Evals — Blueprint (2026)',
-      href: '/blog/ai-2026-operational-evals-blueprint',
-      tag: 'New',
-      gradient: 'from-amber-500 to-rose-500'
-    },
-    {
-      title: 'Agent Observability Blueprint (2026)',
-      href: '/blog/ai-2026-agent-observability-blueprint',
-      tag: 'New',
-      gradient: 'from-indigo-500 to-cyan-500'
-    },
-    {
-      title: 'Customer-Facing AI Agents in 2025',
-      href: '/blog/ai-customer-agents-2025',
-      tag: 'New',
-      gradient: 'from-emerald-500 to-lime-500'
-    }
-    ,
-    {
-      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
-      href: '/blog/ai-2026-evidence-led-operations-blueprint',
-      tag: 'Operations',
-      gradient: 'from-amber-500 to-pink-500'
-    }
+    { title: 'Guide — Zero‑to‑One Eval Gates (2026)', href: '/reports/guides/guide-2026-zero-to-one-eval-gates', tag: 'Guide', gradient: 'from-amber-500 to-pink-500' },
+    { title: 'Case Study — Guarded Autonomy Containment 44%', href: '/reports/cases/case-2026-guarded-autonomy-containment-44', tag: 'Case Study', gradient: 'from-purple-500 to-blue-500' },
+    { title: 'Brief — Cost‑Aware Model Routing Patterns (2026)', href: '/reports/briefs/brief-2026-cost-aware-model-routing-patterns', tag: 'Brief', gradient: 'from-fuchsia-500 to-indigo-500' },
+    { title: 'Operational Evals — Blueprint (2026)', href: '/blog/ai-2026-operational-evals-blueprint', tag: 'New', gradient: 'from-amber-500 to-rose-500' },
+    { title: 'Agent Observability Blueprint (2026)', href: '/blog/ai-2026-agent-observability-blueprint', tag: 'New', gradient: 'from-indigo-500 to-cyan-500' }
   ];
 
   const navigationSections = [
@@ -444,25 +310,21 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
-                <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
+                <h3 className="text-2xl font-extrabold">Fresh Research: September 2025</h3>
+                <p className="opacity-90">Zero‑to‑one eval gates, guarded autonomy, and cost‑aware routing.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
-                  <div className="text-xs opacity-90">8 min • Evals</div>
+                <a href="/reports/guides/guide-2026-zero-to-one-eval-gates" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Zero‑to‑One Eval Gates (2026)</div>
+                  <div className="text-xs opacity-90">8 min • Guide</div>
                 </a>
-                <a href="/blog/ai-2026-agent-observability-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
-                  <div className="text-xs opacity-90">7 min • Observability</div>
+                <a href="/reports/cases/case-2026-guarded-autonomy-containment-44" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Guarded Autonomy Containment 44%</div>
+                  <div className="text-xs opacity-90">6 min • Case Study</div>
                 </a>
-                <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
-                  <div className="text-xs opacity-90">6 min • Routing</div>
-                </a>
-                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
-                  <div className="text-xs opacity-90">7 min • Operations</div>
+                <a href="/reports/briefs/brief-2026-cost-aware-model-routing-patterns" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Cost‑Aware Model Routing Patterns (2026)</div>
+                  <div className="text-xs opacity-90">5 min • Brief</div>
                 </a>
               </div>
             </div>
