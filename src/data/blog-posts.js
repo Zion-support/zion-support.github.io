@@ -810,9 +810,6 @@ export const blogPosts = [
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
     featured: true,
-    imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
-    slug: "temporal-ai-computing-across-time-itself"
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
