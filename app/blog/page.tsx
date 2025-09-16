@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-quantum-neural-fusion-breakthrough', title: 'AI 2026: Quantum Neural Fusion Breakthrough', tag: 'Revolutionary' },
+  { href: '/blog/ai-2026-neural-interface-business-transformation', title: 'AI 2026: Neural Interface Business Transformation', tag: 'Breakthrough' },
+  { href: '/blog/ai-2025-enterprise-autonomous-systems-revolution', title: 'AI 2025: Enterprise Autonomous Systems Revolution', tag: 'Featured' },
   { href: '/blog/ai-2026-evidence-hub-architecture', title: 'Production Evidence Hub Architecture (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },
