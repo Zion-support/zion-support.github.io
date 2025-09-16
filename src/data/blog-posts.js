@@ -1,7 +1,7 @@
-// import { newContent2026 } from './newContent2026';
+import { newContent2026 } from './newContent2026';
 
 export const blogPosts = [
-  // ...newContent2026,
+  ...newContent2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
@@ -2753,6 +2753,8 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
+<<<<<<< HEAD
+=======
 =======
 // Additional content for enhanced engagement
 export const additionalContent2026 = [
@@ -3608,5 +3610,7 @@ const newBlogPosts = [
     slug: "metaverse-business-operations-2026-virtual-reality-enterprise"
   }
 ];
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 
 // Helpers for UI components
+// (kept earlier helper versions; remove duplicates below)
