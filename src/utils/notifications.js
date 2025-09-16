@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-// Notifications utility
-export const notifications = {
-  show: (message, type = 'info') => {
-    // Simple notification implementation
-    if (typeof window !== 'undefined' && window.alert) {
-      window.alert(message);
-    }
-  },
-  
-  success: (message) => {
-    notifications.show(message, 'success');
-  },
-  
-  error: (message) => {
-    notifications.show(message, 'error');
-  },
-  
-  warning: (message) => {
-    notifications.show(message, 'warning');
-  },
-  
-  info: (message) => {
-    notifications.show(message, 'info');
-=======
 // Notifications utility for handling browser notifications
 
 export const notifications = {
@@ -89,7 +64,6 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
->>>>>>> cursor/create-and-deploy-new-content-d952
   }
 };
 

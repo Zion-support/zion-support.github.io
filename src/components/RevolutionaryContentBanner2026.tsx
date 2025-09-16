@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -37,18 +31,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
     },
     {
       id: 4,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-      title: "🧬 Neural Interface Evolution 2026",
-      description: "Direct brain-computer communication enabling thought-controlled technology",
-      link: "/pages/NeuralInterfaceEvolution2026",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "🧬"
-<<<<<<< HEAD
-=======
-=======
       title: "🌟 Ultimate Tech Revolution 2026",
       subtitle: "The convergence of all breakthrough technologies",
       description: "Experience AI consciousness, quantum supremacy, and neural interfaces working together",
@@ -76,24 +58,12 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       gradient: "from-rose-600 to-pink-600",
       icon: "💭",
       badge: "CONSCIOUSNESS"
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-=======
-<<<<<<< HEAD
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-=======
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
     }, 5000);
     return () => clearInterval(interval);
   }, [contentSlides.length]);
@@ -130,26 +100,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-      {/* Slide Indicators */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {contentSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? 'bg-purple-600 scale-125' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-<<<<<<< HEAD
-=======
-=======
       {/* Dynamic Content Carousel */}
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -260,8 +210,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             📞 Contact Us
           </a>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
       </div>
 
       {/* Quick Access Grid */}

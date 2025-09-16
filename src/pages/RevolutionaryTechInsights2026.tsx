@@ -39,11 +39,6 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -529,11 +524,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
 
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
@@ -597,9 +587,3 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 };
 
 export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
