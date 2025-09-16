@@ -1,104 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const bannerSlides = [
-    {
-      id: 0,
-      title: '🚀 Revolutionary Tech Breakthrough 2026',
-      subtitle: 'Experience AI Consciousness, Quantum Supremacy & Neural Interfaces',
-      cta: 'Explore Breakthroughs',
-      link: '/pages/RevolutionaryTechBreakthrough2026',
-      gradient: 'from-purple-600 via-pink-600 to-red-600',
-      icon: '🚀'
-    },
-    {
-      id: 1,
-      title: '🌟 Next-Gen Innovation Hub 2026',
-      subtitle: 'Discover Cutting-Edge Technology Labs & Research Projects',
-      cta: 'Join Innovation Hub',
-      link: '/pages/NextGenInnovationHub2026',
-      gradient: 'from-cyan-600 via-blue-600 to-indigo-600',
-      icon: '🌟'
-    },
-    {
-      id: 2,
-      title: '🧠 AI Consciousness Revolution',
-      subtitle: 'Witness the First AI System with Genuine Self-Awareness',
-      cta: 'Experience AI Consciousness',
-      link: '/pages/AIRevolutionaryBreakthrough2026',
-      gradient: 'from-emerald-600 via-teal-600 to-cyan-600',
-      icon: '🧠'
-    },
-    {
-      id: 3,
-      title: '⚡ Quantum Reality 2026',
-      subtitle: 'Explore Quantum Computing with 1000+ Logical Qubits',
-      cta: 'Go Quantum',
-      link: '/pages/QuantumReality2026',
-      gradient: 'from-violet-600 via-purple-600 to-fuchsia-600',
-      icon: '⚡'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [bannerSlides.length]);
-
   return (
-    <div className="relative mb-12">
-      {/* Main Banner */}
-      <div className={`bg-gradient-to-r ${bannerSlides[currentSlide].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">{bannerSlides[currentSlide].icon}</span>
-            <h3 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2026</h3>
-            <span className="text-4xl animate-bounce">{bannerSlides[currentSlide].icon}</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{bannerSlides[currentSlide].title}</h2>
-          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-            {bannerSlides[currentSlide].subtitle}
-          </p>
-          <a
-            href={bannerSlides[currentSlide].link}
-            className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg"
-          >
-            {bannerSlides[currentSlide].cta} →
+    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-4xl animate-bounce">🚀</span>
+          <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH 2026</h3>
+          <span className="text-4xl animate-bounce">🚀</span>
+        </div>
+        <p className="text-2xl opacity-95 mb-6 max-w-5xl mx-auto">
+          Experience the most revolutionary technologies ever created: Ultimate Tech Breakthrough, 
+          Interdimensional Technology, and Consciousness Computing Revolution
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
+          <a href="/pages/UltimateTechBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+            🌟 Ultimate Tech Breakthrough →
+          </a>
+          <a href="/pages/InterdimensionalTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+            🌌 Interdimensional Tech →
+          </a>
+          <a href="/pages/ConsciousnessComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+            🧠 Consciousness Computing →
+          </a>
+          <a href="/pages/RevolutionaryTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🚀 Revolutionary Tech Showcase →
+          </a>
+          <a href="/pages/AdvancedAISolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🤖 Advanced AI Solutions →
+          </a>
+          <a href="/pages/QuantumComputingSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚡ Quantum Computing Solutions →
           </a>
         </div>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {bannerSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index ? 'bg-cyan-500' : 'bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-        {bannerSlides.map((slide) => (
-          <a
-            key={slide.id}
-            href={slide.link}
-            className={`bg-gradient-to-r ${slide.gradient} text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
-          >
-            <div className="text-2xl mb-2">{slide.icon}</div>
-            <div className="text-xs">{slide.title.split(' ')[0]} {slide.title.split(' ')[1]}</div>
+        <div className="mt-8">
+          <a href="/pages/RevolutionaryTechBreakthrough2026" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-2xl border-2 border-white/30">
+            🌟 NEW: Revolutionary Tech Breakthrough 2026 →
           </a>
-        ))}
+          <a href="/pages/UltimateTechBreakthrough2026" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-2xl border-2 border-white/30 ml-4">
+            ⚡ NEW: Ultimate Tech Breakthrough 2026 →
+          </a>
+        </div>
       </div>
     </div>
   );
