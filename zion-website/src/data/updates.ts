@@ -30,6 +30,20 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Release'
   },
   {
+    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
+    summary: 'From datasets to live canaries with objective rubrics and automated rollbacks.',
+    href: '/updates/eval-ready-ai-pipelines-guide',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Deep Dive: Enterprise Retrieval Observability (2026)',
+    summary: 'Tracing, SLIs, and evals for reliable retrieval‑augmented systems in production.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
+  {
     title: 'Launch: Agent Reliability Scorecards v1.0',
     summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability at scale.',
     href: '/updates/agent-reliability-scorecards-1-0',
