@@ -90,6 +90,27 @@
   "items": [
     {
       "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability.md",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.900Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Low‑Latency Observability for Agentic Systems",
+      "href": "/reports/guides/guide-2025-09-low-latency-observability.md",
+      "desc": "Monitor agents in real time without adding drag.",
+      "createdAt": "2025-09-16T23:59:50.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Rollback with Evaluation Scorecards",
+      "href": "/reports/briefs/brief-2025-09-agent-rollback-scorecards.md",
+      "desc": "Tie rollback decisions to live evidence for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:40.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
       "href": "/blog/ai-2026-low-latency-agent-observability",
       "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
       "createdAt": "2025-09-16T23:59:59.000Z",
