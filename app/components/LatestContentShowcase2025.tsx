@@ -49,7 +49,11 @@ export default function LatestContentShowcase2025() {
               Operationalize LLM and agent evals with live metrics and rollbacks.
             </p>
             <Link 
+<<<<<<< HEAD
               href="/blog/ai-2026-evaluations-in-production"
+=======
+              href="/content/hyperautomation-blueprint-2026"
+>>>>>>> origin/feature/new-content-and-promotions
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Article →
@@ -57,6 +61,7 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<<<<<<< HEAD
             <div className="text-4xl mb-4">📏</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
             <p className="text-gray-600 mb-4">
@@ -67,6 +72,18 @@ export default function LatestContentShowcase2025() {
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Playbook →
+=======
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Edge AI Agents</h3>
+            <p className="text-gray-600 mb-4">
+              Real-time autonomy with on-device intelligence and sub-50ms control loops.
+            </p>
+            <Link 
+              href="/content/edge-ai-agents-2026"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read the Article →
+>>>>>>> origin/feature/new-content-and-promotions
             </Link>
           </div>
         </div>

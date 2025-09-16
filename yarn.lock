@@ -269,6 +269,7 @@
     "@babel/helper-plugin-utils" "^7.27.1"
     "@babel/traverse" "^7.28.3"
 
+<<<<<<< HEAD
 "@babel/plugin-proposal-class-properties@^7.18.6":
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.18.6.tgz"
@@ -304,11 +305,14 @@
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-private-property-in-object" "^7.14.5"
 
+=======
+>>>>>>> origin/feature/new-content-and-promotions
 "@babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2":
   version "7.21.0-placeholder-for-preset-env.2"
   resolved "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz"
   integrity sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==
 
+<<<<<<< HEAD
 "@babel/plugin-syntax-async-generators@^7.8.4":
   version "7.8.4"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-async-generators/-/plugin-syntax-async-generators-7.8.4.tgz"
@@ -344,6 +348,8 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.27.1"
 
+=======
+>>>>>>> origin/feature/new-content-and-promotions
 "@babel/plugin-syntax-import-assertions@^7.27.1":
   version "7.27.1"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-import-assertions/-/plugin-syntax-import-assertions-7.27.1.tgz"
@@ -358,6 +364,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.27.1"
 
+<<<<<<< HEAD
 "@babel/plugin-syntax-import-meta@^7.10.4":
   version "7.10.4"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-import-meta/-/plugin-syntax-import-meta-7.10.4.tgz"
@@ -442,6 +449,8 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.27.1"
 
+=======
+>>>>>>> origin/feature/new-content-and-promotions
 "@babel/plugin-syntax-unicode-sets-regex@^7.18.6":
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-unicode-sets-regex/-/plugin-syntax-unicode-sets-regex-7.18.6.tgz"
@@ -772,17 +781,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.27.1"
 
-"@babel/plugin-transform-react-jsx@^7.27.1":
-  version "7.27.1"
-  resolved "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.27.1.tgz"
-  integrity sha512-2KH4LWGSrJIkVf5tSiBFYuXDAoWRq2MMwgivCf+93dd0GQi8RXLjKA/0EvRnVV5G0hrHczsquXuD01L8s6dmBw==
-  dependencies:
-    "@babel/helper-annotate-as-pure" "^7.27.1"
-    "@babel/helper-module-imports" "^7.27.1"
-    "@babel/helper-plugin-utils" "^7.27.1"
-    "@babel/plugin-syntax-jsx" "^7.27.1"
-    "@babel/types" "^7.27.1"
-
 "@babel/plugin-transform-regenerator@^7.28.3":
   version "7.28.4"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-regenerator/-/plugin-transform-regenerator-7.28.4.tgz"
@@ -995,6 +993,7 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+<<<<<<< HEAD
 "@csstools/color-helpers@^5.1.0":
   version "5.1.0"
   resolved "https://registry.npmjs.org/@csstools/color-helpers/-/color-helpers-5.1.0.tgz"
@@ -1060,6 +1059,8 @@
   resolved "https://registry.npmjs.org/@date-fns/tz/-/tz-1.4.1.tgz"
   integrity sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==
 
+=======
+>>>>>>> origin/feature/new-content-and-promotions
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.9.0"
   dependencies:
@@ -2226,10 +2227,17 @@
     estree-walker "^2.0.2"
     picomatch "^4.0.2"
 
+<<<<<<< HEAD
 "@rollup/rollup-linux-x64-gnu@^4.50.2", "@rollup/rollup-linux-x64-gnu@4.50.2":
   version "4.50.2"
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.50.2.tgz"
   integrity sha512-9Jie/At6qk70dNIcopcL4p+1UirusEtznpNtcq/u/C5cC4HBX7qSGsYIcG6bdxj15EYWhHiu02YvmdPzylIZlA==
+=======
+"@rollup/rollup-linux-x64-gnu@^4.18.0", "@rollup/rollup-linux-x64-gnu@^4.50.1":
+  version "4.50.1"
+  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.50.1.tgz"
+  integrity sha512-MCgtFB2+SVNuQmmjHf+wfI4CMxy3Tk8XjA5Z//A0AKD7QXUYFMQcns91K6dEHBvZPCnhJSyDWLApk40Iq/H3tA==
+>>>>>>> origin/feature/new-content-and-promotions
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -4057,10 +4065,22 @@ es-to-primitive@^1.3.0:
     is-date-object "^1.0.5"
     is-symbol "^1.0.4"
 
+<<<<<<< HEAD
 esbuild@^0.21.3:
   version "0.21.5"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz"
   integrity sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==
+=======
+es-toolkit@^1.39.3:
+  version "1.39.10"
+  resolved "https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.39.10.tgz"
+  integrity sha512-E0iGnTtbDhkeczB0T+mxmoVlT4YNweEKBLq7oaU4p11mecdsZpNWOglI4895Vh4usbQ+LsJiuLuI2L0Vdmfm2w==
+
+esbuild@^0.25.0, esbuild@0.25.9:
+  version "0.25.9"
+  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.25.9.tgz"
+  integrity sha512-CRbODhYyQx3qp7ZEwzxOk4JBqmD/seJrzPa/cGjY1VtIn5E09Oi9/dB4JwctnfZ8Q8iT7rioVv5k/FNT/uf54g==
+>>>>>>> origin/feature/new-content-and-promotions
   optionalDependencies:
     "@esbuild/aix-ppc64" "0.21.5"
     "@esbuild/android-arm" "0.21.5"
