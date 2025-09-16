@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -559,3 +560,5 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 };
 
 export default RevolutionaryCaseStudies2025;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

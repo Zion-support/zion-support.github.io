@@ -4,6 +4,7 @@ const UltimateTechBanner2025: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -47,10 +48,13 @@ const UltimateTechBanner2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,10 +90,13 @@ const UltimateTechBanner2025: React.FC = () => {
             </p>
             <a href="/pages/NextGenAIConsciousness2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore AI Consciousness →
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD
             <div className="text-4xl mb-4 text-center">⚛️</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Reality</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
@@ -97,10 +104,13 @@ const UltimateTechBanner2025: React.FC = () => {
             </p>
             <a href="/pages/QuantumRealityEngine2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Enter Quantum Reality →
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD
             <div className="text-4xl mb-4 text-center">🧬</div>
             <h3 className="text-xl font-bold mb-3 text-center">Neural Interface</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
@@ -116,12 +126,15 @@ const UltimateTechBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-f0c0
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
         
         <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <a 
@@ -166,6 +179,8 @@ const UltimateTechBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-f0c0
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>

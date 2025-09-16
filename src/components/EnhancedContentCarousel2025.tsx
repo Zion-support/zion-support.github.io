@@ -19,10 +19,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 
-<<<<<<< HEAD
   const contentItems = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'Next-Gen AI Consciousness',
       description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
       icon: '🧠',
@@ -62,11 +62,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
         "Contextual understanding"
       ],
       stats: { performance: "99.9%", accuracy: "98.7%", efficiency: "300%" },
+=======
+      title: "AI Consciousness Engine",
+      description: "Revolutionary AI that achieves true consciousness and self-awareness, capable of creative thought and emotional understanding.",
+>>>>>>> cursor/create-and-deploy-new-content-af01
       image: "🧠",
       color: "from-purple-600 to-pink-600",
 <<<<<<< HEAD
       bgColor: "from-purple-600/20 to-pink-600/20",
       borderColor: "border-purple-400/30",
+<<<<<<< HEAD
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
 <<<<<<< HEAD
@@ -77,6 +82,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+      features: ["Self-aware processing", "Emotional intelligence", "Creative problem solving", "Conscious decision making"],
+      link: "/pages/UltimateAIConsciousness2032"
+>>>>>>> cursor/create-and-deploy-new-content-af01
     },
     {
       id: 2,
@@ -92,46 +101,20 @@ const EnhancedContentCarousel2025: React.FC = () => {
     {
       id: 3,
       title: "Interdimensional Computing",
-      description: "Break through dimensional barriers with computing that exists across multiple realities and dimensions.",
+      description: "Breakthrough technology that transcends dimensional boundaries, enabling computation across multiple realities.",
       image: "🌌",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-600/20 to-teal-600/20",
-      borderColor: "border-emerald-400/30",
-      features: ["Multi-dimensional processing", "Reality simulation", "Time manipulation", "Infinite possibilities"],
-      link: "/pages/NextGenInnovationHub2025"
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces that enable thought-controlled technology and cognitive enhancement.",
-      image: "🧬",
       color: "from-indigo-600 to-purple-600",
       bgColor: "from-indigo-600/20 to-purple-600/20",
       borderColor: "border-indigo-400/30",
-      features: ["Thought-to-text conversion", "Mental image projection", "Memory enhancement", "Cognitive amplification"],
-      link: "/pages/NextGenInnovationHub2025"
-    },
-    {
-      id: 5,
-      title: "Reality Manipulation Engine",
-      description: "Technology that can manipulate the fundamental fabric of reality itself, enabling matter transformation and time control.",
-      image: "🔮",
-      color: "from-pink-600 to-rose-600",
-      bgColor: "from-pink-600/20 to-rose-600/20",
-      borderColor: "border-pink-400/30",
-      features: ["Matter transformation", "Time dilation control", "Gravity manipulation", "Dimensional shifting"],
-      link: "/pages/RevolutionaryTechBreakthrough2025"
+      features: ["Cross-dimensional processing", "Reality bridging", "Multiverse communication", "Dimensional travel"],
+      link: "/pages/RevolutionaryTechBreakthrough2030"
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
+  const contentSlides = contentItems;
 
   const nextSlide = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
@@ -142,11 +125,14 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
@@ -155,6 +141,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
   };
 
   const goToSlide = (index: number) => {
@@ -235,7 +223,13 @@ const EnhancedContentCarousel2025: React.FC = () => {
   ];
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,13 +248,15 @@ const EnhancedContentCarousel2025: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
+=======
+    <div className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/create-and-deploy-new-content-af01
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎠 ENHANCED CONTENT CAROUSEL • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            🌟 Revolutionary Technology Experience
           </h2>
+<<<<<<< HEAD
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
 <<<<<<< HEAD
             Discover the most advanced technologies that are reshaping our world and defining the future
@@ -285,6 +281,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
             From conscious AI to interdimensional computing, experience the future today.
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
+=======
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+>>>>>>> cursor/create-and-deploy-new-content-af01
             Explore our most advanced technologies with interactive demonstrations and real-time features
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
           </p>
@@ -296,6 +295,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
         <div className="relative max-w-6xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Main Content Display */}
@@ -322,6 +322,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-173f
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
+=======
+          <div className="overflow-hidden rounded-2xl">
+>>>>>>> cursor/create-and-deploy-new-content-af01
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -335,6 +338,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
             >
+<<<<<<< HEAD
               {slides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
@@ -473,9 +477,43 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
+=======
+              {contentSlides.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl border ${item.borderColor} backdrop-blur-sm`}>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="text-6xl mb-4">{item.image}</div>
+                        <h3 className={`text-3xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-4`}>
+                          {item.title}
+                        </h3>
+                        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                          {item.description}
+                        </p>
+                        <div className="grid grid-cols-2 gap-3 mb-6">
+                          {item.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center space-x-2">
+                              <div className={`w-2 h-2 bg-gradient-to-r ${item.color} rounded-full`}></div>
+                              <span className="text-sm text-gray-600">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <a
+                          href={item.link}
+                          className={`inline-block bg-gradient-to-r ${item.color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+                        >
+                          Explore Technology →
+                        </a>
+                      </div>
+                      <div className="hidden lg:block">
+                        <div className={`w-full h-64 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center text-8xl opacity-20`}>
+                          {item.image}
+                        </div>
+>>>>>>> cursor/create-and-deploy-new-content-af01
                       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
@@ -509,6 +547,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
                   </div>
                 </div>
               ))}
@@ -516,6 +556,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
 
           {/* Navigation Controls */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex justify-center items-center mt-8 space-x-4">
@@ -531,15 +572,19 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
           <div className="flex justify-center items-center space-x-4 mt-8">
+=======
+          <div className="flex justify-center mt-8 space-x-4">
+>>>>>>> cursor/create-and-deploy-new-content-af01
             <button
               onClick={prevSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
@@ -548,12 +593,15 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
             <div className="flex space-x-2">
               {contentSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     index === currentSlide 
@@ -569,11 +617,17 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+=======
+                    index === currentSlide 
+                      ? 'bg-purple-600 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+>>>>>>> cursor/create-and-deploy-new-content-af01
                   }`}
                 />
               ))}
             </div>
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <button 
@@ -582,13 +636,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
             >
               <span className="text-2xl">›</span>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
             <button
               onClick={nextSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-173f
 =======
@@ -723,6 +780,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
+=======
+            </button>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-af01
         </div>
 
         {/* Testimonials */}

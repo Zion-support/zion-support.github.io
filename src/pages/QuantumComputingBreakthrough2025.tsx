@@ -2,6 +2,7 @@ import React from 'react';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -153,3 +154,5 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
 };
 
 export default QuantumComputingBreakthrough2025;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

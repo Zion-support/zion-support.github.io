@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -302,6 +303,8 @@
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -331,12 +334,15 @@
     date: '2025-09-15',
     tag: 'Blueprint'
   },
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -361,8 +367,12 @@
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
   {
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -390,6 +400,7 @@
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -425,9 +436,14 @@
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -446,8 +462,11 @@
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -477,6 +496,7 @@
     date: '2025-09-15',
     tag: 'Launch'
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
@@ -489,6 +509,8 @@
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
@@ -506,6 +528,7 @@
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
   },
   // Newly added 2025-09-15 (to advertise on homepage)
   {
@@ -546,11 +569,14 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
+<<<<<<< HEAD
   },
   {
     title: 'Launch: AI Lab Open Benchmarks Portal',
@@ -586,11 +612,17 @@
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
     summary: 'Advanced security automation with real-time threat detection and response capabilities.',
     href: '/updates/autonomous-security-copilot-1-0',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -599,11 +631,14 @@
     tag: 'Launch'
   },
   {
+<<<<<<< HEAD
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -622,6 +657,10 @@
   },
   // Added 2025-09-15 (brand new content)
   {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -634,7 +673,10 @@
     tag: 'Launch'
   },
   {
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
@@ -691,6 +733,10 @@
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
@@ -2930,6 +2976,7 @@
   }
 ]
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
@@ -3139,6 +3186,8 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
 >>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
@@ -356,3 +357,5 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 };
 
 export default RevolutionaryTechShowcase2025;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

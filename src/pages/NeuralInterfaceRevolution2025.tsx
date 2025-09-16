@@ -864,6 +864,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <div className="text-4xl mb-4">💭</div>
               <h3 className="text-2xl font-bold mb-4">Thought Control</h3>
@@ -1795,3 +1796,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 };
 
 export default NeuralInterfaceRevolution2025;
+=======
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-af01

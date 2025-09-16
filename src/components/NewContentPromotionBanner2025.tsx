@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -238,3 +239,5 @@ const NewContentPromotionBanner2025: React.FC = () => {
 };
 
 export default NewContentPromotionBanner2025;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

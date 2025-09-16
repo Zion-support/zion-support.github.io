@@ -45,6 +45,7 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -73,6 +74,8 @@ export const latestContent: ContentItem[] = [
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 >>>>>>> cursor/create-and-deploy-new-content-011f
 >>>>>>> main

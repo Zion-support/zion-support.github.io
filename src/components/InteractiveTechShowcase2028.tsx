@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2028: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       ],
@@ -302,3 +303,5 @@ const InteractiveTechShowcase2028: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2028;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

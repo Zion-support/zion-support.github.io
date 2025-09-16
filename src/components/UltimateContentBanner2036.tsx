@@ -7,6 +7,7 @@ const UltimateContentBanner2036: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
@@ -245,3 +246,5 @@ const UltimateContentBanner2036: React.FC = () => {
 };
 
 export default UltimateContentBanner2036;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

@@ -5,6 +5,7 @@ const UltimateContentBanner2032: React.FC = () => {
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
 =======
@@ -106,3 +107,5 @@ const UltimateContentBanner2032: React.FC = () => {
 };
 
 export default UltimateContentBanner2032;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
