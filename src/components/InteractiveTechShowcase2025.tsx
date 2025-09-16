@@ -34,41 +34,15 @@ const InteractiveTechShowcase2025: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 mb-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🎮 INTERACTIVE TECH SHOWCASE 2025 • LIVE DEMOS
-=======
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-4">
           🚀 INTERACTIVE TECH SHOWCASE 2025
->>>>>>> cursor/create-and-deploy-new-content-36c0
         </div>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Revolutionary Technologies</h2>
         <p className="text-xl text-gray-600">Click on each technology to discover its groundbreaking capabilities</p>
       </div>
 
-<<<<<<< HEAD
-      {/* Demo Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {demos.map((demo, index) => (
-          <button
-            key={demo.id}
-            onClick={() => handleDemoClick(index)}
-            className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeDemo === index
-                ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-            }`}
-          >
-            <span className="text-2xl">{demo.icon}</span>
-            <span>{demo.title}</span>
-          </button>
-        ))}
-=======
       {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
         <div className="bg-white rounded-lg p-2 shadow-lg">
@@ -87,7 +61,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
->>>>>>> cursor/create-and-deploy-new-content-36c0
       </div>
 
       {/* Active Technology Display */}

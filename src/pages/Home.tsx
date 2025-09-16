@@ -225,6 +225,7 @@ const Home: React.FC = () => {
         <EnhancedContentAdvertising />
 
         {/* Call to Action */}
+        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
@@ -240,6 +241,7 @@ const Home: React.FC = () => {
               </button>
             </div>
           </div>
+        </div>
         </motion.section>
 
         {/* Lazy Loaded Components */}

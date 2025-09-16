@@ -82,8 +82,12 @@ export default function HomePage() {
 <<<<<<< HEAD
     <div className="bg-black min-h-screen">
 =======
+<<<<<<< HEAD
+    <div className="bg-black min-h-screen">
+=======
     <div className="bg-black">
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
