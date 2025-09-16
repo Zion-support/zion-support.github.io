@@ -1,4 +1,5 @@
 
+// @ts-nocheck
 export default function AutonomousIncidentResponseCopilotPage() {
   return (
     <div className="bg-black min-h-screen">

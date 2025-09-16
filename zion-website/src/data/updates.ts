@@ -317,14 +317,14 @@ export const updates: UpdateItem[] = [
     summary: 'Standardized artifacts for audits: inputs, outputs, policies, evals, and traces.',
     href: '/updates/production-evidence-bundles-2026',
     date: '2025-09-16',
-    tag: 'Blueprint'
+    tag: 'Guide'
   },
   {
     title: 'Field Guide: Canary + Shadow Testing for Agents (2026)',
     summary: 'Incremental rollout patterns with objective gates to de-risk production launches.',
     href: '/updates/canary-and-shadow-testing-for-agents-2026',
     date: '2025-09-16',
-    tag: 'Field Guide'
+    tag: 'Guide'
   },
   {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
