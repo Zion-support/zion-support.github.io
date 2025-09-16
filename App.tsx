@@ -10,6 +10,8 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import SEOOptimizer from './src/components/SEOOptimizer';
 import MobileOptimizer from './src/components/MobileOptimizer';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import LoadingSpinner from './src/components/LoadingSpinner';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
@@ -34,6 +36,7 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import './src/index.css';
+import './src/styles/optimizations.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
@@ -56,8 +59,9 @@ import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions
 
 export default function App(): JSX.Element {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-white">
         <ScrollToTop />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
@@ -516,5 +520,6 @@ export default function App(): JSX.Element {
         <Footer />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 }
