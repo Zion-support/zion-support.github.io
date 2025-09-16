@@ -109,4 +109,26 @@
     "tags": ["evals", "reliability", "progressive-delivery", "observability"],
     "source": "Zion AI Lab"
   }
+  ,
+  {
+    "title": "Agentic Evidence Hub — Executive Overview",
+    "url": "/reports/ai-lab/articles/agentic-evidence-hub-executive-overview-1758052800000.md",
+    "createdAt": "2025-09-16T14:00:00.000Z",
+    "tags": ["governance", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Reliable Autonomy + Billing Controls",
+    "url": "/reports/ai-lab/articles/reliable-autonomy-and-billing-controls-1758052860000.md",
+    "createdAt": "2025-09-16T14:01:00.000Z",
+    "tags": ["cost", "reliability", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Real‑World Eval Gates — Case Studies",
+    "url": "/reports/ai-lab/articles/real-world-eval-gates-case-studies-1758052920000.md",
+    "createdAt": "2025-09-16T14:02:00.000Z",
+    "tags": ["evals", "case-study", "operations"],
+    "source": "Zion AI Lab"
+  }
 ]

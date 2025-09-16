@@ -9,10 +9,22 @@ const posts = [
       'A pragmatic framework to set, monitor, and enforce latency budgets for production RAG systems.'
   },
   {
+    slug: 'ai-2026-safe-agent-actions-blueprint',
+    title: 'AI 2026: Safe Agent Actions — Blueprint',
+    summary:
+      'Risk‑tiered tools, approvals, budgets, and policy checks for safe agent actions.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:
       'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-agentic-slo-dashboards-blueprint',
+    title: 'AI 2026: Agentic SLO Dashboards — Blueprint',
+    summary:
+      'Define SLIs, wire eval gates, and link traces/policy events to incidents.'
   },
   {
     slug: 'ai-2026-risk-and-guardrails-operating-model',

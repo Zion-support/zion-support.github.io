@@ -18,6 +18,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
+import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
+import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -47,6 +50,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    {
+      title: 'Agent Platform SLO Blueprint (2026)',
+      href: '/blog/ai-2026-agent-slo-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Governed Tool Use — Case Studies (2026)',
+      href: '/blog/ai-2026-governed-tool-use-case-studies',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
     {
       title: '2025-09 Research Brief — Agentic Business Ops',
       href: '/reports/briefs/brief-2025-09-agentic-business-ops',
@@ -112,6 +127,13 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-customer-agents-2025',
       tag: 'New',
       gradient: 'from-emerald-500 to-lime-500'
+    }
+    ,
+    {
+      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'Operations',
+      gradient: 'from-amber-500 to-pink-500'
     }
   ];
 
@@ -384,6 +406,10 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
                   <div className="text-xs opacity-90">6 min • Routing</div>
                 </a>
+                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
+                  <div className="text-xs opacity-90">7 min • Operations</div>
+                </a>
               </div>
             </div>
           </div>
@@ -544,6 +570,15 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
           </motion.div>
         </div>
       </section>
+
+      {/* Revolutionary Content Banner 2026 */}
+      <RevolutionaryContentBanner2026 />
+
+      {/* Innovative Services Showcase 2026 */}
+      <InnovativeServicesShowcase2026 />
+
+      {/* Advanced Automation Banner 2026 */}
+      <AdvancedAutomationBanner2026 />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

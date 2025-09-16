@@ -7,7 +7,7 @@ const navLinks = [
 	{ name: 'Services', href: '/services' },
 	{ name: 'Solutions', href: '/solutions' },
 	{ name: 'Research', href: '/research' },
-	{ name: 'Updates', href: '/updates' },
+	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
 export default function Navigation() {
@@ -17,7 +17,12 @@ export default function Navigation() {
 				<a href="/" className="text-white font-bold">Zion</a>
 				<div className="hidden md:flex gap-x-6">
 					{navLinks.map((item) => (
-						<a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">{item.name}</a>
+						<a key={item.name} href={item.href} className="relative inline-flex items-center gap-1 text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
+							<span>{item.name}</span>
+							{(item as any).badge ? (
+								<span className="ml-1 rounded bg-blue-600 px-1.5 py-0.5 text-[10px] font-bold text-white">{(item as any).badge}</span>
+							) : null}
+						</a>
 					))}
 				</div>
 				<div className="hidden md:flex">

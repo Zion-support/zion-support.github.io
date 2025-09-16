@@ -41,5 +41,34 @@
       "createdAt": "2025-09-16T00:20:00.000Z",
       "source": "cloud-deep-research-factory"
     }
+    ,
+    {
+      "title": "Guide — Real-Time Model Routing (2026)",
+      "href": "/reports/guides/guide-2026-real-time-model-routing",
+      "desc": "Latency, cost, and quality-aware routing with live eval signals",
+      "createdAt": "2025-09-16T15:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Agent SLO Scorecards (2026)",
+      "href": "/reports/blueprints/blueprint-2026-agent-slo-scorecards",
+      "desc": "Minimal SLO set for safety, quality, reliability, and cost",
+      "createdAt": "2025-09-16T15:05:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — Governed Tool Use in Production (2026)",
+      "href": "/reports/cases/case-2026-governed-tool-use",
+      "desc": "Risk-tiered adapters and runtime checks across mission-critical workflows",
+      "createdAt": "2025-09-16T15:10:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Cost-Aware GenAI (2026)",
+      "href": "/reports/briefs/brief-2026-cost-aware-genai",
+      "desc": "Align budget, latency, and quality with adaptive routing",
+      "createdAt": "2025-09-16T15:15:00.000Z",
+      "source": "ai-research-scout"
+    }
   ]
 }
