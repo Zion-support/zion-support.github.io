@@ -45,6 +45,28 @@ export const siteUpdates: SiteUpdate[] = [
 		date: '2025-09-16',
 		tag: 'Case Study'
 	},
+	// Newly added content 2025-09-16 (additional)
+	{
+		title: 'Toolkit: Eval-Driven Rollouts for Agent Features',
+		summary: 'A repeatable workflow to gate new agent tools and prompts behind live evals.',
+		href: '/updates/eval-driven-rollouts-toolkit-2026',
+		date: '2025-09-16',
+		tag: 'Toolkit'
+	},
+	{
+		title: 'Guide: Production Prompt Hardening (SOC2-ready)',
+		summary: 'Threat modeling, jailbreak resistance, and evidence capture for regulated environments.',
+		href: '/updates/production-prompt-hardening-soc2-2026',
+		date: '2025-09-16',
+		tag: 'Guide'
+	},
+	{
+		title: 'Blueprint: Trustworthy Model Routing (2026)',
+		summary: 'Policy- and cost-aware routing with safety backstops and budget enforcement.',
+		href: '/updates/trustworthy-model-routing-2026',
+		date: '2025-09-16',
+		tag: 'Blueprint'
+	},
 
   // Existing highlights
 =======
