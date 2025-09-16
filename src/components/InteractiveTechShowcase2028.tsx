@@ -51,9 +51,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
         'Interdimensional Reality'
       ],
       color: 'from-orange-500 to-red-500'
-    }
-  };
-
   const [activeTab, setActiveTab] = useState('breakthrough');
 
   const tabs = [
