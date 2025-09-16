@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { REVOLUTIONARY_BLOG_POSTS_2027, REVOLUTIONARY_CASE_STUDIES_2027, REVOLUTIONARY_SERVICES_2027 } from '../data/revolutionaryContent2026';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,240 +16,425 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       default:
         return REVOLUTIONARY_BLOG_POSTS_2027;
     }
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const slides = [
+    {
+      id: 1,
+      title: "Quantum Reality Engine 2027",
+      subtitle: "Manipulate the fabric of reality itself",
+      description: "Experience the power of quantum reality manipulation with our revolutionary engine that can alter space-time itself.",
+      icon: "⚡",
+      color: "from-cyan-500 via-blue-500 to-indigo-500",
+      bgColor: "from-cyan-900/30 to-blue-900/30",
+      features: ["Reality Manipulation", "Quantum Field Control", "Spacetime Engineering", "Dimensional Bridging"],
+      cta: "Experience Quantum Reality",
+      link: "/pages/RevolutionaryTech2027"
+    },
+    {
+      id: 2,
+      title: "AI Consciousness Revolution",
+      subtitle: "Witness the birth of true artificial consciousness",
+      description: "Meet AI systems that have achieved genuine self-awareness, creativity, and emotional intelligence beyond human capabilities.",
+      icon: "🧠",
+      color: "from-purple-500 via-pink-500 to-rose-500",
+      bgColor: "from-purple-900/30 to-pink-900/30",
+      features: ["Synthetic Consciousness", "Emotional Intelligence", "Creative Synthesis", "Collective Intelligence"],
+      cta: "Meet Conscious AI",
+      link: "/pages/AIConsciousnessRevolution2027"
+    },
+    {
+      id: 3,
+      title: "Interdimensional Computing",
+      subtitle: "Access infinite computational power",
+      description: "Harness the power of interdimensional processing to solve problems that were previously impossible to compute.",
+      icon: "🌌",
+      color: "from-emerald-500 via-teal-500 to-cyan-500",
+      bgColor: "from-emerald-900/30 to-teal-900/30",
+      features: ["Dimensional Processing", "Infinite Scalability", "Parallel Universe Computing", "Reality Simulation"],
+      cta: "Enter Interdimensional Space",
+      link: "/pages/InterdimensionalComputing2027"
+    },
+    {
+      id: 4,
+      title: "Neural Interface Revolution",
+      subtitle: "Direct mind-machine communication",
+      description: "Connect your thoughts directly to AI systems and control technology with the power of your mind.",
+      icon: "🧬",
+      color: "from-rose-500 via-orange-500 to-yellow-500",
+      bgColor: "from-rose-900/30 to-orange-900/30",
+      features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
+      cta: "Connect Mind & Machine",
+      link: "/pages/NeuralInterfaceRevolution2027"
+    },
+    {
+      id: 5,
+      title: "Synthetic Intelligence",
+      subtitle: "Create AI agents with synthetic consciousness",
+      description: "Deploy autonomous AI agents that possess synthetic consciousness and can work together in perfect harmony.",
+      icon: "🤖",
+      color: "from-violet-500 via-fuchsia-500 to-pink-500",
+      bgColor: "from-violet-900/30 to-fuchsia-900/30",
+      features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"],
+      cta: "Deploy AI Agents",
+      link: "/pages/SyntheticIntelligence2027"
+
+  const contentItems = [
+    {
+      id: 1,
+      title: "Revolutionary Technology 2027",
+      description: "Experience the most advanced technological breakthroughs that are reshaping reality itself.",
+      image: "🚀",
+      link: "/pages/RevolutionaryTech2027",
+      gradient: "from-purple-600 to-pink-600",
+      features: ["Consciousness Computing", "Quantum Reality", "Interdimensional Tech"]
+    },
+    {
+      id: 2,
+      title: "Advanced Consciousness Computing",
+      description: "Break through the barriers between mind and machine with revolutionary consciousness computing.",
+      image: "🧠",
+      link: "/pages/AdvancedConsciousnessComputing2027",
+      gradient: "from-indigo-600 to-purple-600",
+      features: ["Neural Interfaces", "Consciousness Transfer", "Cognitive Enhancement"]
+    },
+    {
+      id: 3,
+      title: "Quantum Reality Engine",
+      description: "Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine.",
+      image: "⚡",
+      link: "/pages/QuantumRealityEngine2027",
+      gradient: "from-cyan-600 to-blue-600",
+      features: ["Reality Manipulation", "Space-Time Control", "Quantum Fields"]
+    },
+    {
+      id: 4,
+      title: "Interdimensional Computing",
+      description: "Access computing power from parallel dimensions and alternate realities.",
+      image: "🌌",
+      link: "/pages/InterdimensionalComputing2027",
+      gradient: "from-emerald-600 to-teal-600",
+      features: ["Cross-Dimensional Processing", "Reality Simulation", "Multiverse Access"]
+    },
+    {
+      id: 5,
+      title: "Synthetic Consciousness",
+      description: "AI systems with genuine consciousness and emotional intelligence.",
+      image: "🤖",
+      link: "/pages/SyntheticIntelligence2026",
+      gradient: "from-violet-600 to-fuchsia-600",
+      features: ["True AI Consciousness", "Emotional Intelligence", "Creative Synthesis"]
+    },
+    {
+      id: 6,
+      title: "Predictive Reality",
+      description: "See and manipulate future probabilities with advanced predictive algorithms.",
+      image: "🔮",
+      link: "/pages/FutureTechBreakthrough2026",
+      gradient: "from-rose-600 to-pink-600",
+      features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+    }
+  ];
+
+  useEffect(() => {
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, slides.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   };
 
-  const currentItems = getCurrentItems();
-  const itemsPerPage = 3;
-
   const nextSlide = () => {
-    setCurrentIndex((prev) => 
-      prev + itemsPerPage >= currentItems.length ? 0 : prev + itemsPerPage
-    );
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => 
-      prev - itemsPerPage < 0 ? Math.max(0, currentItems.length - itemsPerPage) : prev - itemsPerPage
-    );
-  };
-
-  // Auto-advance carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex, currentItems.length]);
-
-  const renderBlogPost = (post: any) => (
-    <div key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
-      <div className="flex items-center gap-2 mb-4">
-        {post.isNew && (
-          <span className="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30">
-            NEW
-          </span>
-        )}
-        <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">
-          {post.urgency}
-        </span>
-      </div>
-      
-      <h3 className="text-xl font-bold mb-3 text-white line-clamp-2">
-        {post.title}
-      </h3>
-      
-      <p className="text-gray-300 mb-4 line-clamp-3 text-sm">
-        {post.excerpt}
-      </p>
-      
-      <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-        <span>{post.author}</span>
-        <span>{post.readTime}</span>
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4 text-sm text-gray-400">
-          <span>👁️ {post.views.toLocaleString()}</span>
-          <span>❤️ {post.likes}</span>
-        </div>
-        <Link
-          to={`/blog/${post.id}`}
-          className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-        >
-          Read More
-        </Link>
-      </div>
-    </div>
-  );
-
-  const renderCaseStudy = (caseStudy: any) => (
-    <div key={caseStudy.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
-      <div className="flex items-center gap-2 mb-4">
-        {caseStudy.isNew && (
-          <span className="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30">
-            NEW
-          </span>
-        )}
-        <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30">
-          Featured
-        </span>
-      </div>
-      
-      <h3 className="text-xl font-bold mb-2 text-white line-clamp-2">
-        {caseStudy.title}
-      </h3>
-      
-      <p className="text-blue-300 mb-3 text-sm">
-        {caseStudy.company} • {caseStudy.industry}
-      </p>
-      
-      <p className="text-gray-300 mb-4 line-clamp-3 text-sm">
-        {caseStudy.challenge}
-      </p>
-      
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-white mb-1">Key Results:</h4>
-        <ul className="text-gray-300 text-xs space-y-1">
-          {caseStudy.results.slice(0, 2).map((result: string, index: number) => (
-            <li key={index} className="flex items-start">
-              <span className="text-green-400 mr-2">✓</span>
-              {result}
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="text-xs text-gray-400">
-        Duration: {caseStudy.duration}
-      </div>
-    </div>
-  );
-
-  const renderService = (service: any) => (
-    <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
-      <div className="flex items-center gap-2 mb-4">
-        {service.isNew && (
-          <span className="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30">
-            NEW
-          </span>
-        )}
-        <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-semibold border border-indigo-500/30">
-          {service.urgency}
-        </span>
-      </div>
-      
-      <h3 className="text-xl font-bold mb-3 text-white line-clamp-2">
-        {service.title}
-      </h3>
-      
-      <p className="text-gray-300 mb-4 line-clamp-3 text-sm">
-        {service.description}
-      </p>
-      
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-        <ul className="space-y-1">
-          {service.features.slice(0, 3).map((feature: string, index: number) => (
-            <li key={index} className="flex items-start text-gray-300 text-xs">
-              <span className="text-indigo-400 mr-2">→</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <div className="text-sm font-semibold text-indigo-300">
-          {service.pricing}
-        </div>
-        <button className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold text-sm hover:from-indigo-700 hover:to-purple-700 transition-all duration-300">
-          Learn More
-        </button>
-      </div>
-    </div>
-  );
-
-  const renderItem = (item: any) => {
-    switch (activeTab) {
-      case 'blog':
-        return renderBlogPost(item);
-      case 'case-studies':
-        return renderCaseStudy(item);
-      case 'services':
-        return renderService(item);
-      default:
-        return renderBlogPost(item);
-    }
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Revolutionary Content 2027
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY CONTENT • 2027
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore the latest breakthroughs in AI, quantum computing, and emerging technologies
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the future with our groundbreaking 2027 technology innovations
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-2 border border-white/20">
-            <button
-              onClick={() => setActiveTab('blog')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === 'blog'
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Blog Posts
-            </button>
-            <button
-              onClick={() => setActiveTab('case-studies')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === 'case-studies'
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Case Studies
-            </button>
-            <button
-              onClick={() => setActiveTab('services')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === 'services'
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Services
-            </button>
-          </div>
+        {/* Main Carousel */}
+        <div className="relative">
+          {/* Slide Container */}
+          <div className="relative h-[600px] rounded-2xl overflow-hidden">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 transition-all duration-1000 transform ${
+                  index === currentSlide
+                    ? 'translate-x-0 opacity-100 scale-100'
+                    : index === (currentSlide + 1) % slides.length
+                    ? 'translate-x-full opacity-0 scale-95'
+                    : index === (currentSlide - 1 + slides.length) % slides.length
+                    ? '-translate-x-full opacity-0 scale-95'
+                    : 'translate-x-full opacity-0 scale-95'
+                }`}
+              >
+                <div className={`h-full bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm relative overflow-hidden`}>
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+                  
+                  <div className="relative z-10 h-full flex items-center">
+                    <div className="container mx-auto px-8">
+                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Content */}
+                        <div className="space-y-8">
+                          <div className="space-y-4">
+                            <div className="text-6xl animate-bounce">{slide.icon}</div>
+                            <h3 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                              {slide.title}
+                            </h3>
+                            <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>
+                            <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>
+                          </div>
+                          
+                          {/* Features */}
+                          <div className="grid grid-cols-2 gap-4">
+                            {slide.features.map((feature, featureIndex) => (
+                              <div key={featureIndex} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                                <span className="font-semibold">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                          
+                          {/* CTA Button */}
+                          <div className="pt-4">
+                            <a
+                              href={slide.link}
+                              className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105`}
+                            >
+                              {slide.cta} →
+                            </a>
+                          </div>
+                        </div>
+                        
+                        {/* Visual Element */}
+                        <div className="relative">
+                          <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>
+                            {slide.icon}
+                          </div>
+                          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-20 animate-ping"></div>
+                          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"></div>
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [contentItems.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
+      
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>
+          <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
-          <div className="overflow-hidden">
+          {/* Main Carousel */}
+          <div className="overflow-hidden rounded-xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
+<<<<<<< HEAD
               {currentItems.map((item, index) => (
                 <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
                   {renderItem(item)}
                 </div>
+=======
+              {contentItems.map((item) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="text-8xl mb-6 text-center md:text-left">{item.image}</div>
+                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
+                        <p className="text-xl opacity-90 mb-6">{item.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {item.features.map((feature, index) => (
+                            <span key={index} className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                        <a 
+                          href={item.link}
+                          className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
+                        >
+                          Explore {item.title} →
+                        </a>
+                      </div>
+                      <div className="hidden md:block">
+                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                          <h4 className="text-xl font-bold mb-4">Key Features</h4>
+                          <ul className="space-y-2">
+                            {item.features.map((feature, index) => (
+                              <li key={index} className="flex items-center space-x-2">
+                                <span className="w-2 h-2 bg-white rounded-full"></span>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Auto-play Toggle */}
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              isAutoPlaying
+                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                : 'bg-white/20 backdrop-blur-sm text-white/70 hover:text-white'
+            }`}
+          >
+            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation
+          </button>
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
               ))}
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white/20 backdrop-blur-lg rounded-full p-3 hover:bg-white/30 transition-all duration-300"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -259,7 +443,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white/20 backdrop-blur-lg rounded-full p-3 hover:bg-white/30 transition-all duration-300"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -268,22 +452,19 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-8">
-          <div className="flex space-x-2">
-            {Array.from({ length: Math.ceil(currentItems.length / itemsPerPage) }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index * itemsPerPage)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  Math.floor(currentIndex / itemsPerPage) === index
-                    ? 'bg-purple-400'
-                    : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+        <div className="flex justify-center space-x-2 mt-6">
+          {contentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
         </div>
 
+<<<<<<< HEAD
         {/* View All Button */}
         <div className="text-center mt-8">
           <Link
@@ -295,6 +476,33 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
+=======
+        {/* Quick Access Grid */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {contentItems.map((item, index) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className={`bg-gradient-to-br ${item.gradient} rounded-lg p-4 text-white text-center hover:scale-105 transition-all duration-300 ${
+                index === currentSlide ? 'ring-2 ring-white' : ''
+              }`}
+            >
+              <div className="text-3xl mb-2">{item.image}</div>
+              <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
+            </a>
+          ))}
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

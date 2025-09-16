@@ -788,6 +788,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "18-26 weeks",
     support: "Cybersecurity experts",
     reviews: { rating: 4.9, count: 123 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-53ca
 =======
     currency: "$",
@@ -917,5 +918,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
 >>>>>>> cursor/create-and-deploy-new-content-d3fa
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   }
 ];
