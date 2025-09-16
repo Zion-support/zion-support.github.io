@@ -251,6 +251,12 @@ import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcas
 import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
 import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+import AdvancedTechShowcase2031 from './src/pages/AdvancedTechShowcase2031';
+import AdvancedTechBanner2031 from './src/components/AdvancedTechBanner2031';
+import EnhancedPerformanceMonitor from './src/components/EnhancedPerformanceMonitor';
+import SmartContentManager from './src/components/SmartContentManager';
+import AdvancedAnalytics from './src/components/AdvancedAnalytics';
+import UserExperienceOptimizer from './src/components/UserExperienceOptimizer';
 
 export default function App(): JSX.Element {
   return (
@@ -319,6 +325,9 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
+
+                {/* NEW: Advanced Tech Banner 2031 */}
+                <AdvancedTechBanner2031 />
 
                 {/* NEW: Ultimate Content Banner 2031 */}
                 <UltimateContentBanner2031 />
@@ -576,6 +585,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateContentShowcase2030" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🔮 Ultimate Content 2030 →
+                    </a>
+                    <a href="/pages/AdvancedTechShowcase2031" className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 Advanced Tech 2031 →
                     </a>
                     <a href="/pages/UltimateTechBreakthrough2031" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧠 Ultimate Tech 2031 →
@@ -1199,6 +1211,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
           <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
           <Route path="/pages/UltimateContentShowcase2030" element={<UltimateContentShowcase2030 />} />
+          <Route path="/pages/AdvancedTechShowcase2031" element={<AdvancedTechShowcase2031 />} />
           <Route path="/pages/UltimateTechBreakthrough2031" element={<UltimateTechBreakthrough2031 />} />
           <Route path="/pages/RevolutionaryTechShowcase2031" element={<RevolutionaryTechShowcase2031 />} />
           <Route path="/pages/UltimateContentShowcase2031" element={<UltimateContentShowcase2031 />} />
