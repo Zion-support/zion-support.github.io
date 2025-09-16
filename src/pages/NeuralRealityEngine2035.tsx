@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const NeuralRealityEngine2035: React.FC = () => {
   return (
@@ -10,10 +9,7 @@ const NeuralRealityEngine2035: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -37,16 +33,14 @@ const NeuralRealityEngine2035: React.FC = () => {
                 ⚡ Thought Power
               </span>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Core Features */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -55,7 +49,7 @@ const NeuralRealityEngine2035: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Harness the power of thought to create, modify, and control reality itself
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -96,11 +90,9 @@ const NeuralRealityEngine2035: React.FC = () => {
               features: ["Reality Syntax", "Physical Law Programming", "Universe Code"]
             }
           ].map((tech, index) => (
-            <motion.div
+            <divdiv
               key={index}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
             >
               <div className="text-6xl mb-4 text-center">{tech.icon}</div>
@@ -114,7 +106,7 @@ const NeuralRealityEngine2035: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>
@@ -122,10 +114,8 @@ const NeuralRealityEngine2035: React.FC = () => {
       {/* Applications Section */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -134,13 +124,11 @@ const NeuralRealityEngine2035: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform existence itself through neural reality control
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30"
             >
               <h3 className="text-2xl font-bold mb-4">🌍 Reality Customization</h3>
@@ -153,12 +141,10 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <li>• Time Flow Manipulation</li>
                 <li>• Matter Creation/Destruction</li>
               </ul>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl p-8 border border-teal-500/30"
             >
               <h3 className="text-2xl font-bold mb-4">🧠 Consciousness Expansion</h3>
@@ -171,17 +157,15 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <li>• Consciousness Cloning</li>
                 <li>• Reality Hopping</li>
               </ul>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </div>
 
       {/* Technical Specifications */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -190,13 +174,11 @@ const NeuralRealityEngine2035: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The most advanced neural reality technology ever created
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold mb-4 text-center">🧠 Neural Processing</h3>
@@ -218,12 +200,10 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <span className="text-emerald-400">100%</span>
               </li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold mb-4 text-center">🌌 Reality Control</h3>
@@ -245,12 +225,10 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <span className="text-emerald-400">Perfect</span>
               </li>
             </ul>
-          </motion.div>
+          </divdiv>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold mb-4 text-center">⚡ Power Requirements</h3>
@@ -272,16 +250,14 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <span className="text-emerald-400">Infinite</span>
               </li>
             </ul>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-3xl p-12 border border-emerald-500/30"
         >
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -298,7 +274,7 @@ const NeuralRealityEngine2035: React.FC = () => {
               Explore Possibilities
             </button>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

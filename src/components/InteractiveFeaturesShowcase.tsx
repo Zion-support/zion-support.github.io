@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveFeaturesShowcase: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -137,13 +136,8 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Main Feature Showcase */}
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <divdiv
                 key={activeFeature}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5 }}
                 className={`bg-gradient-to-br ${currentFeature.gradient} p-12 rounded-2xl relative overflow-hidden`}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
@@ -169,34 +163,27 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     
                     <div className="grid grid-cols-1 gap-4 mb-8">
                       {currentFeature.demo.metrics.map((metric, index) => (
-                        <motion.div
+                        <divdiv
                           key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
                           className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="font-semibold">{metric}</span>
-                        </motion.div>
+                        </divdiv>
                       ))}
                     </div>
                     
                     <div className="flex gap-4">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                      <divbutton
                         className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                       >
                         Try Interactive Demo →
-                      </motion.button>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                      </divbutton>
+                      <divbutton
                         className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
                       >
                         Learn More
-                      </motion.button>
+                      </divbutton>
                     </div>
                   </div>
                   
@@ -222,14 +209,12 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(9)].map((_, i) => (
-                              <motion.div
+                              <divdiv
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded"
-                                animate={{
                                   scale: [1, 1.5, 1],
                                   opacity: [0.3, 1, 0.3]
                                 }}
-                                transition={{
                                   duration: 2,
                                   repeat: Infinity,
                                   delay: i * 0.1
@@ -250,8 +235,8 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </divdiv>
+            </div>
           </div>
 
           {/* Navigation Controls */}
@@ -277,12 +262,9 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <divdiv
               key={feature.id}
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -10 }}
               className={`bg-gradient-to-br ${feature.gradient} p-6 rounded-xl hover:shadow-2xl transition-all duration-300 cursor-pointer ${
                 activeFeature === index ? 'ring-4 ring-white/30' : ''
               }`}
@@ -307,14 +289,12 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                 ))}
               </div>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
               >
                 Try Demo
-              </motion.button>
-            </motion.div>
+              </divbutton>
+            </divdiv>
           ))}
         </div>
 

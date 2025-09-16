@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const ComprehensiveTechBlog2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -93,10 +92,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-16"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -108,7 +104,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Stay ahead of the curve with the latest insights, breakthroughs, and innovations in technology
             </p>
-          </motion.div>
+          </divdiv>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -129,20 +125,14 @@ const ComprehensiveTechBlog2026: React.FC = () => {
           </div>
 
           {/* Featured Posts */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <divdiv
             className="mb-16"
           >
             <h2 className="text-3xl font-bold mb-8 text-center">🌟 Featured Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post, index) => (
-                <motion.article
+                <divarticle
                   key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
                 >
                   <div className="text-4xl mb-4">{post.image}</div>
@@ -158,27 +148,21 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                     <span>{post.author}</span>
                     <span>{post.date}</span>
                   </div>
-                </motion.article>
+                </divarticle>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* All Posts */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <divdiv
           >
             <h2 className="text-3xl font-bold mb-8 text-center">
               {selectedCategory === 'all' ? 'All Articles' : categories.find(c => c.key === selectedCategory)?.name}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
-                <motion.article
+                <divarticle
                   key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
                 >
                   <div className="text-4xl mb-4">{post.image}</div>
@@ -196,16 +180,13 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                     <span>{post.author}</span>
                     <span>{post.date}</span>
                   </div>
-                </motion.article>
+                </divarticle>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Newsletter Signup */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <divdiv
             className="mt-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30 text-center"
           >
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
@@ -222,7 +203,7 @@ const ComprehensiveTechBlog2026: React.FC = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
     </div>

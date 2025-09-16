@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
 
 const AI2025LatestInnovationsShowcase = () => {
@@ -77,10 +76,7 @@ const AI2025LatestInnovationsShowcase = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -96,18 +92,13 @@ const AI2025LatestInnovationsShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <divdiv
                 key={currentSlide}
-                initial={{ opacity: 0scale: 1.1 }}
-                animate={{ opacity: 1scale: 1 }}
-                exit={{ opacity: 0scale: 0.9 }}
-                transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
                 <div className={`h-full bg-gradient-to-br ${innovations[currentSlide].color} relative overflow-hidden`}>
@@ -133,8 +124,8 @@ const AI2025LatestInnovationsShowcase = () => {
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
                   <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -154,10 +145,7 @@ const AI2025LatestInnovationsShowcase = () => {
         </div>
 
         {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.3 }}
+        <divdiv
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {features.map((featureindex) => (
@@ -172,13 +160,10 @@ const AI2025LatestInnovationsShowcase = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -198,7 +183,7 @@ const AI2025LatestInnovationsShowcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

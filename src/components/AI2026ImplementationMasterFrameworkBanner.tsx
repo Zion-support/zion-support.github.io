@@ -1,13 +1,9 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 
 const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    <divsection
       className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden"
     >
       {/* Animated Background Elements */}
@@ -20,44 +16,32 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          <divdiv
             className="inline-flex items-center bg-gradient-to-r from-green-600 to-teal-600 rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🎯 Implementation Master Framework</span>
-          </motion.div>
+          </divdiv>
 
           {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+          <divh1
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
           >
             AI 2026 Implementation
             <span className="block bg-gradient-to-r from-cyan-400 via-green-400 to-teal-400 bg-clip-text text-transparent">
               Master Framework
             </span>
-          </motion.h1>
+          </divh1>
 
           {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+          <divp
             className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90"
           >
             The complete blueprint for achieving unprecedented AI implementation success in 2026. 
             Guaranteed 10,000% ROI and 99.97% success rate across all implementations.
-          </motion.p>
+          </divp>
 
           {/* Success Metrics */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+          <divdiv
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
           >
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -80,13 +64,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Cost Reduction</h3>
               <p className="text-sm opacity-80">Implementation cost efficiency</p>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Framework Pillars */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
+          <divdiv
             className="mb-12"
           >
             <h3 className="text-2xl font-bold mb-8">The 5-Pillar Master Framework</h3>
@@ -117,13 +98,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
                 <p className="text-xs opacity-80">Launch & Scale</p>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
+          <divdiv
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -138,13 +116,10 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
             >
               🎯 Start Implementation
             </a>
-          </motion.div>
+          </divdiv>
 
           {/* Social Proof */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
+          <divdiv
             className="mt-12 pt-8 border-t border-white border-opacity-20"
           >
             <p className="text-sm opacity-70 mb-4">Successfully implemented by leading organizations</p>
@@ -155,7 +130,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
               <div className="text-lg font-semibold">Airbnb</div>
               <div className="text-lg font-semibold">Tesla</div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
@@ -163,7 +138,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
       <div className="absolute top-16 right-16 w-4 h-4 bg-cyan-400 rounded-full animate-bounce opacity-60"></div>
       <div className="absolute top-32 left-16 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.7s' }}></div>
       <div className="absolute bottom-40 right-32 w-5 h-5 bg-teal-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.4s' }}></div>
-    </motion.section>
+    </divsection>
   );
 };
 

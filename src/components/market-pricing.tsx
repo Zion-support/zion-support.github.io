@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   TrendingUp, TrendingDown, DollarSign, Target, 
   ArrowRight, Check, Star, BarChart3, 
@@ -349,40 +348,34 @@ export default function MarketPricing() {
             </div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
             className="text-center"
           >
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {currentMarket.description}
             </p>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+          <divh2 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Competitive Analysis
-          </motion.h2>
+          </divh2>
           
           <div className="space-y-8">
             {currentMarket.competitors.map((competitor, index) => (
-              <motion.div
+              <divdiv
                 key={competitor.name}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
               >
@@ -444,7 +437,7 @@ export default function MarketPricing() {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
 
@@ -706,15 +699,13 @@ export default function MarketPricing() {
       {/* Pricing Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+          <divh2 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Pricing Analysis
-          </motion.h2>
+          </divh2>
           
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
@@ -723,11 +714,9 @@ export default function MarketPricing() {
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
-              <motion.div
+              <divdiv
                 key={tier.label}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -736,14 +725,12 @@ export default function MarketPricing() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
                 <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
             className="text-center"
           >
@@ -769,28 +756,24 @@ export default function MarketPricing() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+          <divh2 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Market Trends & Opportunities
-          </motion.h2>
+          </divh2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
@@ -809,12 +792,10 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </divdiv>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
@@ -833,7 +814,7 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </section>
@@ -841,10 +822,8 @@ export default function MarketPricing() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -869,7 +848,7 @@ export default function MarketPricing() {
                 Get Custom Quote
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
     </div>

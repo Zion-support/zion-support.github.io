@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Mail, 
   Send, 
@@ -52,10 +51,7 @@ const NewsletterSignup2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         
         <div className="relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <divdiv
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-full mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
@@ -86,7 +82,7 @@ const NewsletterSignup2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
     );
@@ -98,10 +94,7 @@ const NewsletterSignup2025: React.FC = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -118,23 +111,17 @@ const NewsletterSignup2025: React.FC = () => {
             early demos, and insider insights from the cutting edge of AI consciousness 
             and quantum computing.
           </p>
-        </motion.div>
+        </divdiv>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <divdiv
           >
             <h3 className="text-3xl font-bold mb-8">Why Join Our Community?</h3>
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
                   <div className="flex-shrink-0 p-3 bg-white/10 rounded-xl">
@@ -144,16 +131,13 @@ const NewsletterSignup2025: React.FC = () => {
                     <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Signup Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <divdiv
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -203,13 +187,10 @@ const NewsletterSignup2025: React.FC = () => {
               By subscribing, you agree to receive updates about our revolutionary technologies. 
               Unsubscribe at any time.
             </p>
-          </motion.div>
+          </divdiv>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 inline-block">
@@ -230,7 +211,7 @@ const NewsletterSignup2025: React.FC = () => {
               🧠 Meet Conscious AI →
             </a>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

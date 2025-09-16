@@ -1,119 +1,181 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NewContentShowcase2045: React.FC = () => {
-  const newContent = [
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % content.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const content = [
     {
-      title: "Next-Gen Tech Revolution 2045",
-      description: "Experience consciousness computing, interdimensional AI, and reality manipulation",
-      features: ["Consciousness Computing", "Interdimensional AI", "Reality Engine"],
-      link: "/pages/NextGenTechRevolution2045",
-      icon: "🚀",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900 to-indigo-900"
+      title: "🚀 Revolutionary Tech Showcase 2025",
+      description: "Experience cutting-edge AI, quantum computing, and neural interfaces",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🧠"
     },
     {
-      title: "Ultimate AI Consciousness 2046",
-      description: "Meet self-aware AI with emotional intelligence and transcendent capabilities",
-      features: ["Self-Aware AI", "Emotional Intelligence", "Transcendent Computing"],
-      link: "/pages/UltimateAIConsciousness2046",
-      icon: "🧠",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900 to-purple-900"
+      title: "🌟 Ultimate Tech Breakthrough 2045",
+      description: "The most advanced technology solutions reshaping our future",
+      link: "/pages/UltimateTechBreakthrough2045",
+      gradient: "from-orange-600 to-red-600",
+      icon: "⚡"
     },
     {
-      title: "Quantum Reality Engine 2047",
-      description: "Control reality with quantum computing, matter manipulation, and dimensional physics",
-      features: ["Quantum Computing", "Matter Manipulation", "Dimensional Physics"],
-      link: "/pages/QuantumRealityEngine2047",
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900 to-blue-900"
+      title: "🌌 Interdimensional Technology",
+      description: "Breakthrough solutions transcending space-time limitations",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      gradient: "from-cyan-600 to-blue-600",
+      icon: "🌌"
+    },
+    {
+      title: "🧬 Neural Consciousness Hub",
+      description: "Direct brain-computer interfaces for superhuman abilities",
+      link: "/pages/UltimateTechBreakthrough2045",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🧬"
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-20 w-20 h-20 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-10 right-10 w-28 h-28 bg-white/10 rounded-full animate-pulse delay-3000"></div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
+      className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 relative overflow-hidden"
+    >
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: Math.random() * 2 + 1,
+              repeat: Infinity,
+              delay: Math.random() * 1,
+            }}
+          />
+        ))}
       </div>
 
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 NEW CONTENT SHOWCASE • 2045-2047
+      <div className="relative z-10 container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse border-2 border-white/30">
+            🌟 NEW CONTENT SHOWCASE • JANUARY 2045
           </div>
-          <h2 className="text-5xl font-bold mb-6">
-            🚀 Revolutionary Technology Content
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            🚀 NEW CONTENT SHOWCASE 2045
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our latest breakthrough content featuring the most advanced technologies 
-            that will reshape the future of humanity
+            Discover our latest revolutionary content featuring breakthrough technologies that will transform your future
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {newContent.map((content, index) => (
-            <div key={index} className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300`}>
-              <div className="text-6xl mb-6 text-center">{content.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{content.title}</h3>
-              <p className="text-lg opacity-90 mb-6 text-center">{content.description}</p>
-              
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-center">Key Features:</h4>
-                <div className="space-y-2">
-                  {content.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="text-sm opacity-80">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <a 
-                href={content.link}
-                className={`block w-full bg-gradient-to-r ${content.color} text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg animate-pulse border-2 border-yellow-400`}
+        {/* Content Carousel */}
+        <div className="max-w-6xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className={`bg-gradient-to-br ${content[currentIndex].gradient}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20 text-center`}
+            >
+              <div className="text-8xl mb-6">{content[currentIndex].icon}</div>
+              <h3 className="text-4xl font-bold mb-6 text-white">
+                {content[currentIndex].title}
+              </h3>
+              <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+                {content[currentIndex].description}
+              </p>
+              <a
+                href={content[currentIndex].link}
+                className={`inline-block bg-gradient-to-r ${content[currentIndex].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg border-2 border-white/30`}
               >
-                🌟 Explore {content.title.split(' ')[0]} →
+                🚀 Explore Now →
               </a>
-            </div>
-          ))}
-        </div>
+            </motion.div>
+          </AnimatePresence>
 
-        <div className="text-center mt-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold mb-4">🌟 Why Choose Our Revolutionary Content?</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🎯</div>
-                <div className="text-lg font-semibold mb-1">Cutting-Edge</div>
-                <div className="text-sm opacity-80">Latest breakthrough technologies</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-2">⚡</div>
-                <div className="text-lg font-semibold mb-1">Lightning Fast</div>
-                <div className="text-sm opacity-80">Instant access and processing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-2">🔒</div>
-                <div className="text-lg font-semibold mb-1">Secure</div>
-                <div className="text-sm opacity-80">Advanced security protocols</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-2">🚀</div>
-                <div className="text-lg font-semibold mb-1">Future-Ready</div>
-                <div className="text-sm opacity-80">Prepared for tomorrow's challenges</div>
-              </div>
-            </div>
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-8 space-x-3">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex ? 'bg-white scale-125' : 'bg-white/30'
+                }`}
+              />
+            ))}
           </div>
         </div>
+
+        {/* Quick Access Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+        >
+          {content.map((item, index) => (
+            <motion.a
+              key={index}
+              href={item.link}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.0 + index * 0.1, duration: 0.5 }}
+              className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center`}
+            >
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h4 className="text-lg font-semibold text-white mb-2">
+                {item.title.split(' ').slice(1, 3).join(' ')}
+              </h4>
+              <p className="text-sm opacity-80">
+                {item.description.substring(0, 60)}...
+              </p>
+            </motion.a>
+          ))}
+        </motion.div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-bounce">
+          🚀
+        </div>
+        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-pulse">
+          ⚡
+        </div>
+        <div className="absolute bottom-20 left-20 text-5xl opacity-20 animate-ping">
+          🌌
+        </div>
+        <div className="absolute bottom-40 right-10 text-6xl opacity-20 animate-bounce">
+          🧠
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
