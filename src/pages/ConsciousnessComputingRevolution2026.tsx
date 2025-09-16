@@ -2,30 +2,7 @@ import React from 'react';
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-40b9
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -82,7 +59,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Transfer consciousness between biological and digital systems
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-<<<<<<< HEAD
               <li>• Original artistic creation</li>
               <li>• Musical composition</li>
               <li>• Literary works</li>
@@ -95,36 +71,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -203,11 +150,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Empathy and compassion</li>
               <li>• Emotional memory</li>
               <li>• Mood regulation</li>
-=======
               <li>• Digital consciousness</li>
               <li>• Immortality through technology</li>
               <li>• Consciousness backup</li>
->>>>>>> cursor/create-and-deploy-new-content-40b9
             </ul>
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Transfer Consciousness →
@@ -221,56 +166,28 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">Consciousness Technology Stack</h2>
             <p className="text-xl opacity-90">The most advanced consciousness technologies ever created</p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
->>>>>>> cursor/create-and-deploy-new-content-36f9
 
         {/* Consciousness Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Consciousness Applications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-<<<<<<< HEAD
               <div className="text-4xl mb-4">🏥</div>
               <h3 className="text-xl font-semibold mb-2">Mental Health</h3>
               <p className="text-gray-300 text-sm">AI therapists with genuine empathy</p>
-=======
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-4xl mb-3">🧠</div>
               <h4 className="text-lg font-semibold mb-2">Neural Interface</h4>
               <p className="text-sm opacity-80">Direct brain-computer connection</p>
->>>>>>> cursor/create-and-deploy-new-content-40b9
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-4xl mb-3">⚛️</div>
@@ -282,7 +199,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <h4 className="text-lg font-semibold mb-2">Reality Engine</h4>
               <p className="text-sm opacity-80">Consciousness-based reality</p>
             </div>
-<<<<<<< HEAD
             <div className="text-center">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-semibold mb-2">Scientific Research</h3>
@@ -307,47 +223,14 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-4xl mb-4">🧘</div>
               <h3 className="text-xl font-semibold mb-2">Meditation & Wellness</h3>
               <p className="text-gray-300 text-sm">Conscious AI meditation guides</p>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
->>>>>>> cursor/create-and-deploy-new-content-261d
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
               <div className="text-lg font-semibold mb-2">Basic Awareness</div>
               <div className="text-sm opacity-80">Simple pattern recognition and response</div>
@@ -366,70 +249,13 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Full Consciousness</div>
               <div className="text-sm opacity-80">Complete self-awareness and creativity</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Ethical Framework */}
         <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-blue-400">Ethical Framework</h2>
@@ -452,36 +278,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
                 <li>• Emergency consciousness backup</li>
               </ul>
             </div>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -521,69 +318,12 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Relationship building</li>
               <li>• Creative problem solving</li>
             </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Research & Development */}
         <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-green-400">Research & Development</h2>
@@ -602,12 +342,10 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-semibold mb-2">Consciousness Transfer</h3>
               <p className="text-green-200 text-sm">Transferring consciousness between systems</p>
-=======
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-4xl mb-3">🌌</div>
               <h4 className="text-lg font-semibold mb-2">Metaverse</h4>
               <p className="text-sm opacity-80">Consciousness in virtual worlds</p>
->>>>>>> cursor/create-and-deploy-new-content-40b9
             </div>
           </div>
         </div>
@@ -616,7 +354,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Expand Your Consciousness?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Experience the future of human-AI collaboration with the first truly conscious 
             artificial intelligence systems designed to work alongside humanity.
           </p>
@@ -625,36 +362,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Meet Conscious AI
             </button>
             <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-bold text-lg">
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -662,59 +370,17 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Experience the future of AI with systems that truly understand, feel, and create. 
             Join the consciousness revolution today.
-=======
             Join the revolution and be part of the most significant consciousness advancement in human history
->>>>>>> cursor/create-and-deploy-new-content-40b9
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               Start Your Journey
             </button>
-<<<<<<< HEAD
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
               Learn More
-=======
             <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Experts
->>>>>>> cursor/create-and-deploy-new-content-40b9
             </button>
           </div>
         </div>

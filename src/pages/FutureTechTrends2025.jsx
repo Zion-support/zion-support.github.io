@@ -2,34 +2,15 @@ import React from 'react';
 
 const FutureTechTrends2025 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
->>>>>>> cursor/create-and-deploy-new-content-40b9
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6">Future Tech Trends2025</h1>
+          <h1 className="text-6xl font-bold mb-6">Future Tech Trends 2025</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover the latest innovations and breakthrough technologies in future tech trends2025
+            Discover the latest innovations and breakthrough technologies in future tech trends 2025
           </p>
         </div>
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
-            <p className="text-blue-100">Cutting-edge technology solutions</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
-            <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Future</h3>
-            <p className="text-blue-100">Next-generation solutions</p>
-=======
-
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
             <div className="text-4xl mb-4">🧠</div>
@@ -62,7 +43,6 @@ const FutureTechTrends2025 = () => {
             <a href="/pages/NeuralInterfaceFuture" className="text-green-400 hover:text-green-300 font-semibold">
               Discover →
             </a>
->>>>>>> cursor/create-and-deploy-new-content-40b9
           </div>
         </div>
       </div>

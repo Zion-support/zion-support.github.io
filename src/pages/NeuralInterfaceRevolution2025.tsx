@@ -1,92 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
@@ -225,18 +150,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         </div>
@@ -260,8 +173,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <li>• Machine learning integration</li>
               <li>• Portable and wireless</li>
             </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
 
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -294,9 +205,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </motion.div>
 
         {/* Neural Features */}
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -353,7 +261,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-purple-200 mb-6 text-center">
               Bidirectional interfaces that provide sensory feedback directly to the brain.
             </p>
-<<<<<<< HEAD
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Sensory stimulation</li>
               <li>• Haptic feedback</li>
@@ -361,7 +268,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </ul>
           </div>
         </div>
-=======
             <ul className="text-purple-300 space-y-2 text-sm">
               <li>• Optogenetics integration</li>
               <li>• Fiber optic arrays</li>
@@ -380,30 +286,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
@@ -530,36 +413,13 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
             </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Invasive Neural Implants</h3>
@@ -590,16 +450,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
 
         {/* Neural Features */}
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b8
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧬 NEURAL BREAKTHROUGH • JANUARY 2025
-=======
         <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -608,23 +463,16 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🧬 NEURAL BREAKTHROUGH 2025 • MIND-MACHINE INTERFACE
-<<<<<<< HEAD
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
             Neural Interface Revolution 2025
           </h1>
           <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD
             Bridge the gap between mind and machine with revolutionary neural interface technology 
             that enables direct brain-computer communication and thought-controlled devices.
-=======
             Bridge the gap between mind and machine with direct neural interfaces that enable thought-controlled computing and enhanced human capabilities.
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </p>
-<<<<<<< HEAD
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Interfaces
@@ -638,7 +486,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         {/* Neural Interface Types */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-=======
         </div>
 
         {/* Neural Interface Technologies */}
@@ -681,12 +528,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-purple-200 mb-6 text-center">
               Bidirectional interfaces that provide sensory feedback directly to the brain.
             </p>
-<<<<<<< HEAD
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Sensory stimulation</li>
               <li>• Haptic feedback</li>
               <li>• Visual augmentation</li>
-=======
             <ul className="text-purple-300 space-y-2 text-sm">
               <li>• Optogenetics integration</li>
               <li>• Fiber optic arrays</li>
@@ -705,29 +550,12 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-de62
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation
             </p>
           </div>
 
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -746,22 +574,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
@@ -940,7 +752,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-=======
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation
             </p>
@@ -1093,7 +904,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <li>• Data anonymization</li>
                 </ul>
               </div>
-=======
         {/* Safety & Ethics */}
         <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">🛡️ Safety & Ethics</h2>
@@ -1121,7 +931,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
         {/* Call to Action */}
@@ -1146,19 +955,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
@@ -1218,26 +1015,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <li>• Enhanced learning</li>
               <li>• Memory augmentation</li>
               <li>• Cognitive enhancement</li>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b8
->>>>>>> cursor/create-and-deploy-new-content-bec3
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
 
         {/* Applications Grid */}
         <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 rounded-2xl p-12 mb-16">
@@ -1384,48 +1164,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
-=======
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
     </div>
   );

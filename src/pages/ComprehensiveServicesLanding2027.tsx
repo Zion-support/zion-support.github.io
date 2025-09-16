@@ -1,35 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
-=======
-<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -123,14 +97,12 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
-<<<<<<< HEAD
   Zap as ZapIconDup,
   Shield as ShieldIconDup,
   Cloud as CloudIconDup,
   Brain as BrainIconDup,
   Rocket as RocketIconDup,
   Leaf as LeafIconDup
-=======
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Cloud as CloudIcon,
@@ -161,7 +133,6 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
->>>>>>> cursor/create-and-deploy-new-content-376e
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -253,45 +224,7 @@ export default function ComprehensiveServicesLanding2027() {
     }
     return `$${price}`;
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
