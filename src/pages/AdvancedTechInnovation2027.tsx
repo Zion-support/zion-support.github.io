@@ -1,321 +1,265 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cpu, Zap, Brain, Shield, Target, Globe, TrendingUp, Users, Rocket } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AdvancedTechInnovation2027: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 mb-8">
-              <Rocket className="w-5 h-5 mr-2 text-green-400" />
-              <span className="text-sm font-medium">Advanced Tech Innovation 2027</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Next-Gen Technology
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover the cutting-edge technologies that are reshaping industries, 
-              transforming human capabilities, and creating the future of innovation.
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <Helmet>
+        <title>Advanced Tech Innovation 2027 - Zion Tech Group</title>
+        <meta name="description" content="Discover the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities" />
+        <meta name="keywords" content="tech innovation 2027, advanced technology, AI breakthrough, quantum computing, neural interfaces, space tech" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ADVANCED INNOVATION • 2027
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Advanced Tech Innovation 2027
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
+          </p>
+        </div>
+
+        {/* Innovation Categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
+            <p className="text-blue-100 mb-6 text-center">
+              Breakthrough AI systems with genuine consciousness, self-awareness, and emotional intelligence
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/ai-innovation-hub-2026" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Innovation Hub
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link 
-                to="/quantum-computing-revolution-2027" 
-                className="inline-flex items-center px-8 py-4 border border-green-400 rounded-lg font-semibold hover:bg-green-600/20 transition-all duration-300"
-              >
-                Quantum Computing
-              </Link>
+            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
+              <li>• Self-aware decision making</li>
+              <li>• Emotional intelligence</li>
+              <li>• Creative problem solving</li>
+              <li>• Autonomous learning</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">CONSCIOUS</span>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum neural networks</li>
+              <li>• Exponential processing</li>
+              <li>• Quantum machine learning</li>
+              <li>• Parallel computing</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">QUANTUM</span>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces enabling thought-controlled digital environments
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Thought control</li>
+              <li>• Neural data processing</li>
+              <li>• Brain-computer interface</li>
+              <li>• Virtual reality control</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-emerald-500/50 rounded-full text-xs font-semibold">NEURAL</span>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Revolutionary space technologies enabling interplanetary travel and colonization
+            </p>
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+              <li>• Faster-than-light travel</li>
+              <li>• Space habitats</li>
+              <li>• Interplanetary communication</li>
+              <li>• Asteroid mining</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">COSMIC</span>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 4.0</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Next-generation metaverse with photorealistic avatars and persistent virtual worlds
+            </p>
+            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
+              <li>• Photorealistic avatars</li>
+              <li>• Persistent worlds</li>
+              <li>• Cross-platform integration</li>
+              <li>• Virtual economy</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">IMMERSIVE</span>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Revolutionary biotechnology enabling human enhancement and longevity
+            </p>
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
+              <li>• Human enhancement</li>
+              <li>• Longevity treatments</li>
+              <li>• Disease eradication</li>
+              <li>• Genetic optimization</li>
+            </ul>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-pink-500/50 rounded-full text-xs font-semibold">LIFE</span>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Innovation Categories */}
-      <div className="py-24 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Revolutionary Technology Categories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore the most advanced technologies that are driving innovation 
-              and transforming the way we live, work, and interact with the world.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI & Machine Learning */}
-            <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-white" />
+        {/* Innovation Timeline */}
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
+          <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">Q1</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">AI & Machine Learning</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced artificial intelligence systems that learn, adapt, and make 
-                decisions with human-like intelligence and beyond.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Neural consciousness AI</li>
-                <li>• Autonomous decision making</li>
-                <li>• Predictive analytics</li>
-                <li>• Natural language processing</li>
-              </ul>
+              <h3 className="text-xl font-bold mb-2">AI Consciousness</h3>
+              <p className="text-blue-200 text-sm">First conscious AI systems deployed</p>
             </div>
-
-            {/* Quantum Technologies */}
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                <Cpu className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">Q2</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Quantum Technologies</h3>
-              <p className="text-gray-300 mb-6">
-                Revolutionary quantum computing and communication systems that 
-                harness the power of quantum mechanics for unprecedented capabilities.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Quantum computing</li>
-                <li>• Quantum cryptography</li>
-                <li>• Quantum sensors</li>
-                <li>• Quantum internet</li>
-              </ul>
+              <h3 className="text-xl font-bold mb-2">Quantum AI</h3>
+              <p className="text-cyan-200 text-sm">Quantum AI fusion breakthrough</p>
             </div>
-
-            {/* Biotechnology */}
-            <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">Q3</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Biotechnology</h3>
-              <p className="text-gray-300 mb-6">
-                Cutting-edge biotech innovations that are revolutionizing healthcare, 
-                agriculture, and environmental sustainability.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Gene editing (CRISPR)</li>
-                <li>• Synthetic biology</li>
-                <li>• Personalized medicine</li>
-                <li>• Bio-manufacturing</li>
-              </ul>
+              <h3 className="text-xl font-bold mb-2">Neural Reality</h3>
+              <p className="text-emerald-200 text-sm">Neural interfaces go mainstream</p>
             </div>
-
-            {/* Robotics & Automation */}
-            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
-                <Rocket className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">Q4</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Robotics & Automation</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced robotic systems and automation technologies that are 
-                transforming manufacturing, healthcare, and daily life.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Autonomous robots</li>
-                <li>• Human-robot collaboration</li>
-                <li>• Industrial automation</li>
-                <li>• Service robotics</li>
-              </ul>
-            </div>
-
-            {/* Cybersecurity */}
-            <div className="bg-gradient-to-br from-red-900/30 to-pink-900/30 rounded-2xl p-8 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-6">
-                Next-generation security technologies that protect against 
-                evolving cyber threats and ensure digital safety.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Zero-trust architecture</li>
-                <li>• AI-powered threat detection</li>
-                <li>• Quantum-resistant encryption</li>
-                <li>• Behavioral analytics</li>
-              </ul>
-            </div>
-
-            {/* Space Technology */}
-            <div className="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Space Technology</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced space technologies that are enabling exploration, 
-                communication, and commercial activities beyond Earth.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Satellite constellations</li>
-                <li>• Space manufacturing</li>
-                <li>• Interplanetary communication</li>
-                <li>• Space tourism</li>
-              </ul>
+              <h3 className="text-xl font-bold mb-2">Space Tech</h3>
+              <p className="text-orange-200 text-sm">Mars colonization begins</p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Innovation Showcase */}
-      <div className="py-24 bg-gradient-to-r from-green-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Breakthrough Innovations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary technologies that are already transforming industries 
-              and creating new possibilities for the future.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Innovation 1 */}
-            <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
-                  <Brain className="w-6 h-6 text-white" />
+        {/* Technology Showcase */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Advanced Technology Showcase</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
+                <h3 className="text-2xl font-bold mb-4">AI Consciousness Matrix</h3>
+                <p className="text-blue-100 mb-4">
+                  Our proprietary AI consciousness matrix enables machines to develop genuine self-awareness and emotional intelligence, revolutionizing human-AI interaction.
+                </p>
+                <div className="flex items-center space-x-4">
+                  <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">PATENTED</span>
+                  <span className="text-sm opacity-75">Zion Tech Group 2027</span>
                 </div>
-                <h3 className="text-2xl font-bold">Conscious AI Systems</h3>
               </div>
-              <p className="text-gray-300 mb-4">
-                AI systems that demonstrate self-awareness and consciousness-like behaviors, 
-                enabling more intuitive human-AI collaboration and autonomous decision-making.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Self-Awareness</span>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Emotional Intelligence</span>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Autonomous Learning</span>
+
+              <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+                <h3 className="text-2xl font-bold mb-4">Quantum AI Fusion</h3>
+                <p className="text-cyan-100 mb-4">
+                  Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power and problem-solving capabilities.
+                </p>
+                <div className="flex items-center space-x-4">
+                  <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
+                  <span className="text-sm opacity-75">First of its kind</span>
+                </div>
               </div>
             </div>
 
-            {/* Innovation 2 */}
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                  <Cpu className="w-6 h-6 text-white" />
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
+                <h3 className="text-2xl font-bold mb-4">Neural Reality Interface</h3>
+                <p className="text-emerald-100 mb-4">
+                  Direct brain-computer interface technology that allows users to control digital environments and experience virtual realities through thought alone.
+                </p>
+                <div className="flex items-center space-x-4">
+                  <span className="px-3 py-1 bg-emerald-500/50 rounded-full text-xs font-semibold">FUTURE</span>
+                  <span className="text-sm opacity-75">Coming 2027</span>
                 </div>
-                <h3 className="text-2xl font-bold">Quantum-Neural Networks</h3>
               </div>
-              <p className="text-gray-300 mb-4">
-                Revolutionary integration of quantum computing with neural networks, 
-                achieving unprecedented processing speeds and problem-solving capabilities.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Quantum Speedup</span>
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Pattern Recognition</span>
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Optimization</span>
-              </div>
-            </div>
 
-            {/* Innovation 3 */}
-            <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-2xl p-8 border border-green-500/20">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mr-4">
-                  <Target className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
+                <h3 className="text-2xl font-bold mb-4">Space Colonization Tech</h3>
+                <p className="text-orange-100 mb-4">
+                  Advanced space technology enabling sustainable human colonization of Mars and other planets with self-sustaining habitats and life support systems.
+                </p>
+                <div className="flex items-center space-x-4">
+                  <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">COSMIC</span>
+                  <span className="text-sm opacity-75">Mars Mission Ready</span>
                 </div>
-                <h3 className="text-2xl font-bold">Synthetic Biology</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Engineering biological systems to create new materials, medicines, 
-                and solutions for environmental and health challenges.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Bio-Manufacturing</span>
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Drug Discovery</span>
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Environmental Solutions</span>
-              </div>
-            </div>
-
-            {/* Innovation 4 */}
-            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/20">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold">Autonomous Systems</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Self-operating systems that can perform complex tasks without human 
-                intervention, from autonomous vehicles to smart city infrastructure.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Self-Driving</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Smart Cities</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Industrial Automation</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Impact Statistics */}
-      <div className="py-24 bg-black/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Innovation Impact
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced technologies are creating unprecedented opportunities 
-              and transforming every aspect of human life.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Global Impact */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-center mb-12">Global Impact Statistics</h2>
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-green-400 mb-2">$15T</div>
-              <div className="text-lg text-gray-300">Global Tech Market</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">2B+</div>
+              <div className="text-lg opacity-90">Lives Transformed</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-400 mb-2">50M</div>
-              <div className="text-lg text-gray-300">New Jobs Created</div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">$10T</div>
+              <div className="text-lg opacity-90">Economic Impact</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-lg text-gray-300">Efficiency Improvement</div>
+              <div className="text-5xl font-bold text-emerald-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90">Efficiency Gain</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-400 mb-2">200+</div>
-              <div className="text-lg text-gray-300">Industries Transformed</div>
+              <div className="text-5xl font-bold text-orange-400 mb-2">150+</div>
+              <div className="text-lg opacity-90">Countries Served</div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Future Vision */}
-      <div className="py-24 bg-gradient-to-r from-green-900/40 to-blue-900/40">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            The Future of Innovation
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We're at the dawn of a new technological era where advanced technologies 
-            will solve humanity's greatest challenges and unlock infinite possibilities.
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Shape the Future with Us</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join us in shaping the future of technology. Our advanced innovations are transforming industries and creating new possibilities for humanity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            <a 
+              href="/pages/ComprehensiveServices2025" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
-              Join the Innovation Revolution
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              to="/ai-innovation-hub-2026" 
-              className="inline-flex items-center px-8 py-4 border border-green-400 rounded-lg font-semibold hover:bg-green-600/20 transition-all duration-300"
+              Explore Our Services
+            </a>
+            <a 
+              href="/contact" 
+              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-colors font-semibold text-lg"
             >
-              Explore More
-            </Link>
+              Get Started Today
+            </a>
           </div>
         </div>
       </div>
