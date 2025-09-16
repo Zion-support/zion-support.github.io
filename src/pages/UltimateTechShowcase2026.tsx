@@ -95,84 +95,79 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
           </div>
 
-          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Metaverse Integration</h3>
-            <p className="text-violet-100 mb-6 text-center">
-              Immersive virtual worlds with seamless real-world integration
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Metaverse Technology</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Immersive virtual worlds with photorealistic avatars and haptic feedback
             </p>
-            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-              <li>• Virtual reality</li>
-              <li>• Augmented reality</li>
-              <li>• Digital twins</li>
-              <li>• Immersive experiences</li>
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+              <li>• Photorealistic avatars</li>
+              <li>• Haptic feedback</li>
+              <li>• Virtual economies</li>
+              <li>• Mixed reality integration</li>
             </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Enter Metaverse →
             </button>
           </div>
 
-          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Biotech Innovation</h3>
-            <p className="text-rose-100 mb-6 text-center">
-              Revolutionary biotechnology solutions for healthcare and life sciences
+          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">🌱</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
+            <p className="text-green-100 mb-6 text-center">
+              Revolutionary biotech solutions for healthcare, agriculture, and environmental sustainability
             </p>
-            <ul className="text-rose-200 space-y-2 mb-6 text-sm">
+            <ul className="text-green-200 space-y-2 mb-6 text-sm">
               <li>• Gene editing</li>
-              <li>• Personalized medicine</li>
               <li>• Synthetic biology</li>
-              <li>• Drug discovery</li>
+              <li>• Personalized medicine</li>
+              <li>• Sustainable agriculture</li>
             </ul>
-            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold">
               Explore Biotech →
             </button>
           </div>
         </div>
 
-        {/* Technology Impact Section */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Technology Impact & Results</h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
-              See how our revolutionary technologies are transforming industries and delivering measurable results
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">500%</div>
-              <div className="text-lg font-semibold mb-2">Performance Increase</div>
-              <div className="text-gray-300">Average performance improvement across all implementations</div>
+        {/* Statistics Section */}
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Ultimate Technology Impact
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-8 rounded-2xl border border-cyan-400/20">
+              <div className="text-5xl font-bold text-cyan-400 mb-4">99.9%</div>
+              <div className="text-xl font-semibold mb-2">System Reliability</div>
+              <div className="text-gray-300">Ultra-high availability with quantum redundancy</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-lg font-semibold mb-2">Uptime Guarantee</div>
-              <div className="text-gray-300">Reliable, always-on technology solutions</div>
+            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-400/20">
+              <div className="text-5xl font-bold text-blue-400 mb-4">10,000x</div>
+              <div className="text-xl font-semibold mb-2">Processing Speed</div>
+              <div className="text-gray-300">Quantum-enhanced computational power</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">$2.5M</div>
-              <div className="text-lg font-semibold mb-2">Average Savings</div>
-              <div className="text-gray-300">Cost savings per client annually</div>
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-400/20">
+              <div className="text-5xl font-bold text-purple-400 mb-4">∞</div>
+              <div className="text-xl font-semibold mb-2">Scalability</div>
+              <div className="text-gray-300">Infinite expansion capabilities</div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies already using our revolutionary technology solutions to drive innovation and growth
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Ready to Transform Your Future?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Join thousands of innovators who are already using our ultimate technology solutions to revolutionize their industries
           </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation →
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Get Started Today →
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
-              Download Brochure
             </button>
           </div>
         </div>

@@ -11,28 +11,6 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "autonomous-ops-roadmap-2026",
-    title: "AI 2026: Autonomous Ops Roadmap",
-    description:
-      "Quarterly plan to go from pilots to production with eval-gated safety and SLOs.",
-    ctaLabel: "Read Roadmap",
-    href: "/blog/ai-2026-autonomous-ops-roadmap",
-    emoji: "🗺️",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "evidence-vault-blueprint-2026",
-    title: "AI 2026: Evidence Vault Blueprint",
-    description:
-      "Centralize evals, incidents, and approvals for audit-ready AI operations.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-evidence-vault-blueprint",
-    emoji: "🗃️",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
     description:
