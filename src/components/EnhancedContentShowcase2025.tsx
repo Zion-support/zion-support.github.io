@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -103,7 +103,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -116,10 +116,10 @@ const EnhancedContentShowcase2025: React.FC = () => {
             Explore our comprehensive collection of cutting-edge technology content, 
             featuring the latest breakthroughs in AI, Quantum Computing, Neural Interfaces, and more.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -138,11 +138,11 @@ const EnhancedContentShowcase2025: React.FC = () => {
               {label}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCategory}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -206,13 +206,13 @@ const EnhancedContentShowcase2025: React.FC = () => {
                     Explore {item.title.split(' ')[0]} →
                   </motion.a>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -230,7 +230,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
               { number: '12+', label: 'Quantum Breakthroughs', color: 'text-cyan-600' },
               { number: '8+', label: 'Neural Interfaces', color: 'text-emerald-600' }
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -239,13 +239,13 @@ const EnhancedContentShowcase2025: React.FC = () => {
               >
                 <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.number}</div>
                 <div className="text-gray-600 font-semibold">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -265,7 +265,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

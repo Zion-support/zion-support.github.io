@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 
 const EnhancedCaseStudiesShowcase: React.FC = () => {
   const caseStudies = [
@@ -126,7 +126,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -151,9 +151,9 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
               <span className="text-green-300 font-semibold">99.7% Success Rate</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -161,7 +161,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {caseStudies.map((studyindex) => (
-            <motion.div
+            <div
               key={study.id}
               variants={itemVariants}
               className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -223,11 +223,11 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                   View Full Case Study →
                 </Link>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -243,7 +243,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

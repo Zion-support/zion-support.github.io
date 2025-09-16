@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Play
   Pause
@@ -160,7 +160,7 @@ const InteractiveTechDemo2025 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -185,10 +185,10 @@ const InteractiveTechDemo2025 = () => {
             Interact with cutting-edge AI technologiesquantum computing systemsand neural interfaces 
             in real-time. See the future of technology in action.
           </p>
-        </motion.div>
+        </div>
 
         {/* Demo Selector */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -211,17 +211,17 @@ const InteractiveTechDemo2025 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Main Demo Area */}
-        <motion.div
+        <div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           {/* Demo Visualization */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <div variants={itemVariants} className="space-y-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
@@ -248,7 +248,7 @@ const InteractiveTechDemo2025 = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="grid grid-cols-4 gap-4">
                       {[...Array(16)].map((_i) => (
-                        <motion.div
+                        <div
                           key={i}
                           animate={{
                             scale: isPlaying ? [1.21] : 1,
@@ -270,7 +270,7 @@ const InteractiveTechDemo2025 = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative">
                       {[...Array(8)].map((_i) => (
-                        <motion.div
+                        <div
                           key={i}
                           animate={{
                             rotate: isPlaying ? 360 : 0,
@@ -296,7 +296,7 @@ const InteractiveTechDemo2025 = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-full h-32 relative">
                       {[...Array(5)].map((_i) => (
-                        <motion.div
+                        <div
                           key={i}
                           animate={{
                             scaleY: isPlaying ? [121] : 1,
@@ -322,7 +322,7 @@ const InteractiveTechDemo2025 = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="grid grid-cols-3 gap-4">
                       {[...Array(9)].map((_i) => (
-                        <motion.div
+                        <div
                           key={i}
                           animate={{
                             scale: isPlaying ? [1.31] : 1,
@@ -342,7 +342,7 @@ const InteractiveTechDemo2025 = () => {
 
                 {/* Progress Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
-                  <motion.div
+                  <div
                     className={`h-full bg-gradient-to-r ${currentDemo.color}`}
                     style={{ width: `${progress}%` }}
                     transition={{ duration: 0.1 }}
@@ -369,16 +369,16 @@ const InteractiveTechDemo2025 = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Features and Metrics */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <div variants={itemVariants} className="space-y-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
               
               <div className="space-y-4">
                 {currentDemo.features.map((featureindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0x: 20 }}
                     animate={{ opacity: 1x: 0 }}
@@ -389,7 +389,7 @@ const InteractiveTechDemo2025 = () => {
                     <div>
                       <p className="text-white font-medium">{feature.name}</p>
                       <div className="w-32 h-2 bg-white/10 rounded-full mt-2">
-                        <motion.div
+                        <div
                           className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
                           initial={{ width: 0 }}
                           animate={{ width: `${(feature.value / 100) * 100}%` }}
@@ -403,7 +403,7 @@ const InteractiveTechDemo2025 = () => {
                         <span className="text-sm text-gray-400 ml-1">{feature.unit}</span>
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -430,11 +430,11 @@ const InteractiveTechDemo2025 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -459,7 +459,7 @@ const InteractiveTechDemo2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

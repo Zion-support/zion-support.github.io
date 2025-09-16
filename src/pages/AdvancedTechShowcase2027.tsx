@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedTechShowcase2027: React.FC = () => {
@@ -94,7 +94,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -110,7 +110,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 Explore the most revolutionary technologies that will define the future. 
                 From quantum consciousness to interdimensional computing, discover what's possible.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -125,7 +125,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   </span>
                   <span className="text-purple-300">{tech.timeline}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -177,7 +177,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   <p className="text-purple-200 mb-4">{story.technology}</p>
                   <div className="text-3xl font-bold text-green-400 mb-4">{story.result}</div>
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

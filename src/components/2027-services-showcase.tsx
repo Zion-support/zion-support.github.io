@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
@@ -114,7 +114,7 @@ export default function ServicesShowcase2027() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -173,7 +173,7 @@ export default function ServicesShowcase2027() {
                 <span>View Pricing</span>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -251,9 +251,9 @@ export default function ServicesShowcase2027() {
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
+            
               {sortedServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -329,14 +329,14 @@ export default function ServicesShowcase2027() {
                       </span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
+            
           </div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
-            <motion.div
+            <div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-20"
@@ -354,7 +354,7 @@ export default function ServicesShowcase2027() {
               >
                 Clear Filters
               </button>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Building2
   TrendingUp
@@ -81,14 +81,14 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             {/* Badge */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -96,7 +96,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             >
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
-            </motion.div>
+            </div>
 
             {/* Main Heading */}
             <motion.h1
@@ -120,7 +120,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             </motion.p>
 
             {/* Features Grid */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
@@ -132,10 +132,10 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                   <span className="text-gray-300 text-sm">{feature}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -150,11 +150,11 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 View Case Studies
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -163,7 +163,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             {/* Solutions Cards */}
             <div className="space-y-4">
               {solutions.map((solutionindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0x: 30 }}
                   animate={isVisible ? { opacity: 1x: 0 } : {}}
@@ -179,7 +179,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                       <p className="text-gray-300 text-sm">{solution.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -188,7 +188,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Proven Results</h3>
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -200,13 +200,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                     <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Trust Indicators */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.8 }}
@@ -220,8 +220,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 Trusted by Fortune 500 companiestartupsand SMBs worldwide. 
                 Recognized for excellence in technology innovation and client success.
               </p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

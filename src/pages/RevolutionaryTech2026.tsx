@@ -1,18 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-import React from 'react';
 import React from 'react';
 =======
 <<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -27,35 +26,45 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+import React from 'react';
+import React from 'react';
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+=======
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import React from 'react';
 <<<<<<< HEAD
 import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,14 +75,15 @@ import React from 'react';
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-import React from 'react';
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import { motion } from 'framer-motion';
+=======
+
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const RevolutionaryTech2026: React.FC = () => {
   return (
@@ -82,7 +92,7 @@ const RevolutionaryTech2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-3xl"></div>
         <div className="relative z-10 container mx-auto px-6 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -98,28 +108,28 @@ const RevolutionaryTech2026: React.FC = () => {
               Experience the future of technology with groundbreaking innovations that will reshape our world
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
                 Explore Innovations
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 Watch Demo
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-6 py-20">
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -131,11 +141,11 @@ const RevolutionaryTech2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Discover the cutting-edge technologies that are transforming industries and creating new possibilities
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Quantum Consciousness */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -155,10 +165,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Explore Quantum AI →
             </button>
-          </motion.div>
+          </div>
 
           {/* Neural Reality */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -178,10 +188,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Enter Neural Reality →
             </button>
-          </motion.div>
+          </div>
 
           {/* Synthetic Intelligence */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -201,10 +211,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Meet Synthetic AI →
             </button>
-          </motion.div>
+          </div>
 
           {/* Quantum Internet */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -224,10 +234,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Join Quantum Web →
             </button>
-          </motion.div>
+          </div>
 
           {/* Molecular Assemblers */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -247,10 +257,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Explore Nanotech →
             </button>
-          </motion.div>
+          </div>
 
           {/* Time Dilation Fields */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -270,14 +280,14 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
               Manipulate Time →
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Impact Section */}
       <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border-t border-b border-cyan-400/30">
         <div className="container mx-auto px-6 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -289,10 +299,10 @@ const RevolutionaryTech2026: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               These technologies are already transforming industries and creating unprecedented opportunities
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -301,9 +311,9 @@ const RevolutionaryTech2026: React.FC = () => {
               <div className="text-6xl mb-4">📈</div>
               <h3 className="text-3xl font-bold mb-4 text-cyan-400">10,000%</h3>
               <p className="text-lg opacity-80">Increase in computational power with quantum consciousness AI</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -312,9 +322,9 @@ const RevolutionaryTech2026: React.FC = () => {
               <div className="text-6xl mb-4">🔒</div>
               <h3 className="text-3xl font-bold mb-4 text-purple-400">100%</h3>
               <p className="text-lg opacity-80">Secure communications with quantum internet technology</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -323,14 +333,14 @@ const RevolutionaryTech2026: React.FC = () => {
               <div className="text-6xl mb-4">⚡</div>
               <h3 className="text-3xl font-bold mb-4 text-emerald-400">99.99%</h3>
               <p className="text-lg opacity-80">Accuracy in molecular assembly and manufacturing</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-6 py-20 text-center">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -342,20 +352,27 @@ const RevolutionaryTech2026: React.FC = () => {
             Be part of the future. Explore these revolutionary technologies and transform your business today.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <motion.button
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-4 rounded-lg font-semibold text-xl hover:shadow-2xl transition-all duration-300"
             >
               Start Your Journey
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               Contact Our Experts
+<<<<<<< HEAD
             </motion.button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -391,14 +408,16 @@ const RevolutionaryTech2026: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+            </button>
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
+            </button>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
@@ -408,20 +427,20 @@ export default RevolutionaryTech2026;
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -436,11 +455,33 @@ export default RevolutionaryTech2026;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
+<<<<<<< HEAD
 export default RevolutionaryTech2026;
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3

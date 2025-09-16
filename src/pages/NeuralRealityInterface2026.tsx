@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const NeuralRealityInterface2026: React.FC = () => {
@@ -18,7 +18,7 @@ const NeuralRealityInterface2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -34,13 +34,13 @@ const NeuralRealityInterface2026: React.FC = () => {
                 Revolutionary neural interface technology that enables direct brain-computer interaction 
                 for reality manipulation, consciousness expansion, and infinite computational access.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Neural Interface Core */}
         <div className="container mx-auto px-4 py-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -93,10 +93,10 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Consciousness Expansion Matrix */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -161,10 +161,10 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Infinite Computational Access */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -208,10 +208,10 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Neural Network Integration */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -274,10 +274,10 @@ const NeuralRealityInterface2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Call to Action */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -296,7 +296,7 @@ const NeuralRealityInterface2026: React.FC = () => {
                 Explore Capabilities
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Play
   Zap
@@ -49,7 +49,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: -100 }}
       animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
       transition={{ duration: 0.8ease: "easeOut" }}
@@ -65,7 +65,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex-1">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -80,7 +80,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             <motion.h2
               initial={{ opacity: 0x: -30 }}
@@ -100,7 +100,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
               Experience the power of AI tools with live demonstrations. Generate codeanalyze datacreate imagesand more in real-time.
             </motion.p>
 
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.5 }}
@@ -115,11 +115,11 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 <Zap className="w-4 h-4" />
                 View All Tools
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Rotating Tool Icons */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -127,7 +127,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           >
             <div className="relative w-20 h-20">
               {tools.map((toolindex) => (
-                <motion.div
+                <div
                   key={tool.name}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{
@@ -141,7 +141,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                     <tool.icon className="w-8 h-8 text-white" />
                   </div>
                   <span className="text-xs font-medium mt-1 text-center">{tool.name}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
             
@@ -153,11 +153,11 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 AI Tools
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Progress Indicator */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -168,17 +168,17 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
             <span>Ready to Use</span>
           </div>
           <div className="w-full bg-white/20 rounded-full h-1.5">
-            <motion.div
+            <div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 3delay: 1 }}
               className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Floating Elements */}
-        <motion.div
+        <div
           animate={{
             y: [0-80],
             rotate: [030]
@@ -191,9 +191,9 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           className="absolute top-3 right-3 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
         >
           <Sparkles className="w-3 h-3 text-white" />
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           animate={{
             y: [080],
             rotate: [0-30]
@@ -207,7 +207,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           className="absolute bottom-3 left-3 w-4 h-4 bg-white/20 rounded-full flex items-center justify-center"
         >
           <Zap className="w-2 h-2 text-white" />
-        </motion.div>
+        </div>
       </div>
 
       {/* Dismiss Button */}
@@ -217,7 +217,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
       >
         <X className="w-3 h-3 text-white" />
       </button>
-    </motion.div>
+    </div>
   );
 };
 

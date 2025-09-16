@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   BookOpen
   Video
@@ -146,7 +146,7 @@ const UltimateContentHub2026 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -162,10 +162,10 @@ const UltimateContentHub2026 = () => {
             Access our comprehensive library of cutting-edge contentguidesand resources 
             to stay ahead in the AI revolution.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -223,10 +223,10 @@ const UltimateContentHub2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -236,12 +236,12 @@ const UltimateContentHub2026 = () => {
               : 'grid-cols-1'
           }`}
         >
-          <AnimatePresence>
+          
             {filteredContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               
               return (
-                <motion.div
+                <div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -311,14 +311,14 @@ const UltimateContentHub2026 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* Load More */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -327,7 +327,7 @@ const UltimateContentHub2026 = () => {
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">
             Load More Content
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

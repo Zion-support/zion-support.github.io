@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search
   Filter
@@ -197,7 +197,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: -20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
@@ -209,10 +209,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         <p className="text-gray-300 text-lg">
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
-      </motion.div>
+      </div>
 
       {/* Search and Filters */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6delay: 0.2 }}
@@ -281,10 +281,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Content Grid */}
-      <motion.div
+      <div
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : {}}
         transition={{ duration: 0.6delay: 0.4 }}
@@ -294,13 +294,13 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             : 'grid-cols-1'
         }`}
       >
-        <AnimatePresence>
+        
           {sortedContent.map((itemindex) => {
             const TypeIcon = getTypeIcon(item.type);
             const CategoryIcon = getCategoryIcon(item.category);
             
             return (
-              <motion.div
+              <div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -447,23 +447,23 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     </div>
                   </>
                 )}
-              </motion.div>
+              </div>
             );
           })}
-        </AnimatePresence>
-      </motion.div>
+        
+      </div>
 
       {/* Content Detail Modal */}
-      <AnimatePresence>
+      
         {selectedContent && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedContent(null)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
@@ -533,10 +533,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 };

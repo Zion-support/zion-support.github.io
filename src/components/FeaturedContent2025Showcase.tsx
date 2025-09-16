@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const FeaturedContent2025Showcase: React.FC = () => {
   const featuredContent = [
@@ -45,7 +45,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -63,11 +63,11 @@ const FeaturedContent2025Showcase: React.FC = () => {
             Discover the latest insights, strategies, and success stories from industry leaders. 
             Expert guidance to accelerate your AI transformation journey.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -134,12 +134,12 @@ const FeaturedContent2025Showcase: React.FC = () => {
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -163,10 +163,10 @@ const FeaturedContent2025Showcase: React.FC = () => {
               <div className="text-gray-600 text-sm">Content Updates</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Newsletter Signup */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -195,7 +195,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
               No spam. Unsubscribe anytime. Privacy policy applies.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

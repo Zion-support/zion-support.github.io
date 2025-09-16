@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AIBusinessTransformation2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AIBusinessTransformation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,13 +31,13 @@ const AIBusinessTransformation2026: React.FC = () => {
                 View Case Studies
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* AI Transformation Pillars */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,10 +47,10 @@ const AIBusinessTransformation2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our comprehensive AI transformation framework addresses every aspect of your business operations
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -67,9 +67,9 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Smart routing</li>
               <li>• Exception handling</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -86,9 +86,9 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Risk assessment</li>
               <li>• Demand planning</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -105,9 +105,9 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Sentiment analysis</li>
               <li>• Proactive support</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -124,11 +124,11 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Fraud prevention</li>
               <li>• Compliance automation</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Success Metrics */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -163,10 +163,10 @@ const AIBusinessTransformation2026: React.FC = () => {
               <div className="text-sm text-orange-200">AI-powered support</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Industry Solutions */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -252,10 +252,10 @@ const AIBusinessTransformation2026: React.FC = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Implementation Roadmap */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -290,10 +290,10 @@ const AIBusinessTransformation2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Continuous improvement and scaling of AI capabilities</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -312,7 +312,7 @@ const AIBusinessTransformation2026: React.FC = () => {
               Download AI Guide
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

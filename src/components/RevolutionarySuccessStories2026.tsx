@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -149,7 +149,7 @@ const RevolutionarySuccessStories2026 = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -174,10 +174,10 @@ const RevolutionarySuccessStories2026 = () => {
             See how industry leaders are achieving unprecedented success with our AI and automation solutions. 
             These 'aren', 't just promises—'they', 're proven results.
           </p>
-        </motion.div>
+        </div>
 
         {/* Overall Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -192,10 +192,10 @@ const RevolutionarySuccessStories2026 = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Success Stories Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -222,7 +222,7 @@ const RevolutionarySuccessStories2026 = () => {
 
           {/* Story Content */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeStory}
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
@@ -320,12 +320,12 @@ const RevolutionarySuccessStories2026 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -356,7 +356,7 @@ const RevolutionarySuccessStories2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

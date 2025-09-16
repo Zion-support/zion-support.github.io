@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
@@ -146,7 +146,7 @@ export default function PricingPage() {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -189,14 +189,14 @@ export default function PricingPage() {
             <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Pricing Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
-              <motion.div
+              <div
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +215,7 @@ export default function PricingPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, serviceIndex) => (
-                    <motion.div
+                    <div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -338,10 +338,10 @@ export default function PricingPage() {
                           <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
@@ -349,7 +349,7 @@ export default function PricingPage() {
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -416,7 +416,7 @@ export default function PricingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

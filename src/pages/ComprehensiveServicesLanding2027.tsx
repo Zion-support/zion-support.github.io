@@ -1,17 +1,37 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+import React from 'react';
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -103,6 +123,45 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
+<<<<<<< HEAD
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
+  Leaf as LeafIconDup
+=======
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Cloud as CloudIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Leaf as LeafIcon,
+  Globe as GlobeIcon,
+  Code as CodeIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  Smartphone as SmartphoneIcon,
+  BarChart3 as BarChart3Icon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Headphones as HeadphonesIcon,
+  Mail as MailIcon3,
+  Search as SearchIcon,
+  HelpCircle as HelpCircleIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Globe2 as Globe2Icon,
+  Leaf as LeafIcon2,
+  Sparkles as SparklesIcon,
+  Target as TargetIcon2,
+  DollarSign as DollarSignIcon,
+  Clock as ClockIcon2,
+  Award as AwardIcon2,
+  Phone as PhoneIcon2,
+  MapPin as MapPinIcon2,
+  Infinity as InfinityIcon2
+>>>>>>> cursor/create-and-deploy-new-content-376e
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -195,6 +254,24 @@ export default function ComprehensiveServicesLanding2027() {
     return `$${price}`;
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
@@ -204,9 +281,17 @@ export default function ComprehensiveServicesLanding2027() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -244,7 +329,7 @@ export default function ComprehensiveServicesLanding2027() {
           </motion.p>
 
           {/* Search Bar */}
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -260,10 +345,10 @@ export default function ComprehensiveServicesLanding2027() {
                 className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Quick Stats */}
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -289,14 +374,14 @@ export default function ComprehensiveServicesLanding2027() {
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-purple-400 text-sm">Support</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Category Navigation */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -310,12 +395,12 @@ export default function ComprehensiveServicesLanding2027() {
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
             </p>
-          </motion.div>
+          </div>
 
           {/* Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <motion.button
+              <button
                 key={category.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +416,7 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -340,7 +425,7 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -356,12 +441,12 @@ export default function ComprehensiveServicesLanding2027() {
                 : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
             </p>
-          </motion.div>
+          </div>
 
           {/* Services Grid */}
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -444,9 +529,9 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
 
                 {/* Expanded Details */}
-                <AnimatePresence>
+                
                   {expandedService === service.id && (
-                    <motion.div
+                    <div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -509,15 +594,15 @@ export default function ComprehensiveServicesLanding2027() {
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+                
+              </div>
             ))}
 
             {/* No Results Message */}
             {filteredServices.length === 0 && (
-              <motion.div 
+              <div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-20"
@@ -525,7 +610,7 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
@@ -534,7 +619,7 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
+          <div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -589,7 +674,7 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

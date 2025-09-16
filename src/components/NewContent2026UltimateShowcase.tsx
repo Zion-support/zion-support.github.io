@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const NewContent2026UltimateShowcase: React.FC = () => {
   const contentItems = [
@@ -42,14 +42,14 @@ const NewContent2026UltimateShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
-          </motion.div>
+          </div>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
         {/* Content Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,12 +121,12 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                   📖 Read Complete Guide
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Additional Resources */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.8 }}
@@ -153,10 +153,10 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               📞 Schedule Consultation
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Trust Indicators */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.6, duration: 0.8 }}
@@ -173,7 +173,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               <div className="text-2xl font-bold text-gray-400">Netflix</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -78,14 +78,14 @@ const NewContentShowcase2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -93,7 +93,7 @@ const NewContentShowcase2025PromotionBanner = () => {
             >
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
-            </motion.div>
+            </div>
 
             {/* Main Heading */}
             <motion.h2
@@ -120,7 +120,7 @@ const NewContentShowcase2025PromotionBanner = () => {
             </motion.p>
 
             {/* Rotating Feature */}
-            <motion.div
+            <div
               key={currentFeature}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -140,10 +140,10 @@ const NewContentShowcase2025PromotionBanner = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Stats */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
@@ -155,10 +155,10 @@ const NewContentShowcase2025PromotionBanner = () => {
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -179,11 +179,11 @@ const NewContentShowcase2025PromotionBanner = () => {
                 <PlayCircle className="w-5 h-5 mr-2" />
                 Watch Demo
               </a>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Content - Visual */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 50 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -204,7 +204,7 @@ const NewContentShowcase2025PromotionBanner = () => {
               {/* Feature Cards */}
               <div className="space-y-4">
                 {features.map((featureindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0x: 20 }}
                     animate={{ opacity: 1x: 0 }}
@@ -224,16 +224,16 @@ const NewContentShowcase2025PromotionBanner = () => {
                         <p className="text-gray-300 text-sm">{feature.description}</p>
                       </div>
                       {index === currentFeature && (
-                        <motion.div
+                        <div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           className="ml-auto"
                         >
                           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        </motion.div>
+                        </div>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -244,7 +244,7 @@ const NewContentShowcase2025PromotionBanner = () => {
                   <span>100%</span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
-                  <motion.div
+                  <div
                     className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
@@ -255,21 +255,21 @@ const NewContentShowcase2025PromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <motion.div
+            <div
               animate={{ y: [0-10] }}
               transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
-            </motion.div>
-            <motion.div
+            </div>
+            <div
               animate={{ y: [010] }}
               transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

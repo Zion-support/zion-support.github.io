@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Award
   ArrowRight
@@ -31,7 +31,7 @@ const RevolutionarySuccessStories2026Banner = () => {
   if (isDismissed) return null;
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: -100 }}
       animate={{ 
         opacity: isVisible ? 1 : 0
@@ -158,7 +158,7 @@ const RevolutionarySuccessStories2026Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500">
         <div className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 animate-pulse"></div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

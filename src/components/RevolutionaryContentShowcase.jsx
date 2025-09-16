@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryContentShowcase = () => {
   const [activeContent, setActiveContent] = useState(0);
@@ -68,7 +68,7 @@ const RevolutionaryContentShowcase = () => {
         </div>
 
         {/* Active Content Display */}
-        <motion.div
+        <div
           key={activeContent}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

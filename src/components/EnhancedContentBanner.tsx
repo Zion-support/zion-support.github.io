@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -108,7 +108,7 @@ const EnhancedContentBanner: React.FC = () => {
           {/* Carousel */}
           <div className="relative">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -134,8 +134,8 @@ const EnhancedContentBanner: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
 
             {/* Navigation Controls */}
             <button

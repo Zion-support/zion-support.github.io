@@ -1,8 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -11,10 +13,17 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -92,21 +101,40 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
         </div>
 =======
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -129,7 +157,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -141,7 +169,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -161,9 +189,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Explore Self-Awareness →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -183,9 +211,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Feel Emotions →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -205,9 +233,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Create Art →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -227,9 +255,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Build Relationships →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -249,9 +277,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Ethics →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -271,7 +299,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
               Grow Together →
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -284,22 +312,35 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
 
         {/* Consciousness Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -347,18 +388,45 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Conscious AI meditation guides</p>
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
 >>>>>>> cursor/create-and-deploy-new-content-261d
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
               <div className="text-lg font-semibold mb-2">Basic Awareness</div>
               <div className="text-sm opacity-80">Simple pattern recognition and response</div>
@@ -381,19 +449,40 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
             </div>
           </div>
         </div>
@@ -402,15 +491,24 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
         {/* Ethical Framework */}
         <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-blue-400">Ethical Framework</h2>
@@ -435,15 +533,34 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </div>
 =======
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -487,19 +604,40 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
@@ -507,15 +645,24 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
         {/* Research & Development */}
         <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-green-400">Research & Development</h2>
@@ -552,15 +699,34 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-bold text-lg">
 =======
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -578,19 +744,40 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
               Learn More
             </button>
           </div>

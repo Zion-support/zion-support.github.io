@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Brain
@@ -126,7 +126,7 @@ const AITrendsPredictions2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-cyan-900/30" />
         <div className="absolute inset-0">
           {[...Array(30)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
               style={{
@@ -149,13 +149,13 @@ const AITrendsPredictions2026 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div
+          <div
             initial={{ scale: 0.8 }}
             animate={isVisible ? { scale: 1 } : {}}
             transition={{ duration: 0.6delay: 0.2 }}
@@ -163,7 +163,7 @@ const AITrendsPredictions2026 = () => {
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             AI Trends & Predictions 2026
-          </motion.div>
+          </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future of
@@ -176,17 +176,17 @@ const AITrendsPredictions2026 = () => {
             Discover the groundbreaking AI trends and predictions that will shape 2026 and beyond. 
             From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
           </p>
-        </motion.div>
+        </div>
 
         {/* Market Insights */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {marketInsights.map((insightindex) => (
-            <motion.div
+            <div
               key={index}
               whileHover={{ scale: 1.05 }}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
@@ -195,12 +195,12 @@ const AITrendsPredictions2026 = () => {
               <div className="text-2xl font-bold text-white mb-1">{insight.value}</div>
               <div className="text-cyan-400 font-semibold mb-1">{insight.growth}</div>
               <div className="text-gray-300 text-sm">{insight.category}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Predictions Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -212,7 +212,7 @@ const AITrendsPredictions2026 = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {predictions.map((predictionindex) => (
-              <motion.div
+              <div
                 key={prediction.id}
                 whileHover={{ scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer"
@@ -259,14 +259,14 @@ const AITrendsPredictions2026 = () => {
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400" />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Detailed Prediction View */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activePrediction}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -312,11 +312,11 @@ const AITrendsPredictions2026 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Timeline */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -331,7 +331,7 @@ const AITrendsPredictions2026 = () => {
             
             <div className="space-y-8">
               {timeline.map((itemindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
                   animate={isVisible ? { opacity: 1x: 0 } : {}}
@@ -362,14 +362,14 @@ const AITrendsPredictions2026 = () => {
                   </div>
                   
                   <div className="w-1/2"></div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 1.2 }}
@@ -393,7 +393,7 @@ const AITrendsPredictions2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Settings
   BarChart3
@@ -159,7 +159,7 @@ const AdvancedContentManagementSystem = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -185,10 +185,10 @@ const AdvancedContentManagementSystem = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Stats Overview */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -212,10 +212,10 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Navigation Tabs */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -243,10 +243,10 @@ const AdvancedContentManagementSystem = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Types Overview */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -266,10 +266,10 @@ const AdvancedContentManagementSystem = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Recent Content */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -362,10 +362,10 @@ const AdvancedContentManagementSystem = () => {
               </tbody>
             </table>
           </div>
-        </motion.div>
+        </div>
 
         {/* Analytics Charts Placeholder */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 1.0 }}
@@ -390,7 +390,7 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

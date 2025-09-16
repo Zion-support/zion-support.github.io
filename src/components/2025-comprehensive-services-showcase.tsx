@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, Building, Target, Cpu, Shield, 
   Check, Phone, Mail, MapPin,
@@ -87,7 +87,7 @@ const allServices = [
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -110,7 +110,7 @@ const allServices = [
                 Enterprise Ready
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -167,7 +167,7 @@ const allServices = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -263,14 +263,14 @@ const allServices = [
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
-              <motion.div 
+              <div 
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -278,7 +278,7 @@ const allServices = [
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
-                  <motion.div
+                  <div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -409,11 +409,11 @@ const allServices = [
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          
 
           {/* No Results */}
           {filteredServices.length === 0 && (
@@ -441,7 +441,7 @@ const allServices = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -454,9 +454,9 @@ const allServices = [
               <p className="text-gray-600">
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -469,9 +469,9 @@ const allServices = [
               <p className="text-gray-600">
                 Bank-grade security and compliance for mission-critical business applications
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -484,7 +484,7 @@ const allServices = [
               <p className="text-gray-600">
                 Cloud-native solutions that scale globally with enterprise-grade reliability
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

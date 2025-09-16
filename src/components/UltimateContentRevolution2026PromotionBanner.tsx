@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Sparkles
   Zap
@@ -33,9 +33,9 @@ const UltimateContentRevolution2026PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -46,7 +46,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4">
-                <motion.div
+                <div
                   animate={{ rotate: [0360] }}
                   transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="flex-shrink-0"
@@ -54,7 +54,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
@@ -106,7 +106,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex items-center gap-2">
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
@@ -114,27 +114,27 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                     <Play className="w-4 h-4" />
                     <span className="hidden sm:inline">Explore Now</span>
                     <span className="sm:hidden">Explore</span>
-                  </motion.button>
+                  </button>
                   
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/20 transition-all duration-300"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </button>
                 </div>
 
                 {/* Dismiss Button */}
-                <motion.button
+                <button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={handleDismiss}
                   className="text-gray-400 hover:text-white transition-colors duration-300 p-1"
                 >
                   <X className="w-5 h-5" />
-                </motion.button>
+                </button>
               </div>
             </div>
 
@@ -159,7 +159,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
 
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
+            <div
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
               animate={{
                 y: [0-10],
@@ -171,7 +171,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                 ease: "easeInOut"
               }}
             />
-            <motion.div
+            <div
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
               animate={{
                 y: [0-80],
@@ -184,7 +184,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                 delay: 0.5
               }}
             />
-            <motion.div
+            <div
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
               animate={{
                 y: [0-60],
@@ -198,9 +198,9 @@ const UltimateContentRevolution2026PromotionBanner = () => {
               }}
             />
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

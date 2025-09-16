@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { 
   FileText, 
   Download, 
@@ -137,7 +137,7 @@ const ReportsPage: React.FC = () => {
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </motion.p>
             
-            <motion.div
+            <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -155,14 +155,14 @@ const ReportsPage: React.FC = () => {
                 <Eye className="w-5 h-5" />
                 <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
               </span>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
+            <div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -172,10 +172,10 @@ const ReportsPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Report
               </h2>
-            </motion.div>
+            </div>
 
             {reports.filter(report => report.featured).map((report, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -239,7 +239,7 @@ const ReportsPage: React.FC = () => {
                     <span>Preview Report</span>
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
@@ -247,7 +247,7 @@ const ReportsPage: React.FC = () => {
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
+            <div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -260,10 +260,10 @@ const ReportsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive research across different technology domains
               </p>
-            </motion.div>
+            </div>
 
             {/* Category Pills */}
-            <motion.div 
+            <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ const ReportsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
-            </motion.div>
+            </div>
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -342,7 +342,7 @@ const ReportsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -370,7 +370,7 @@ const ReportsPage: React.FC = () => {
                   View Research Services
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

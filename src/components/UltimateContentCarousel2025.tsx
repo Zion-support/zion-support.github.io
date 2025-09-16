@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
 const UltimateContentCarousel2025 = () => {
@@ -87,7 +87,7 @@ const UltimateContentCarousel2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <div
             initial={{ scale: 0.9 }}
             animate={isVisible ? { scale: 1 } : {}}
             transition={{ delay: 0.2duration: 0.6 }}
@@ -95,7 +95,7 @@ const UltimateContentCarousel2025 = () => {
           >
             <Star className="w-4 h-4 mr-2" />
             Ultimate Content Carousel 2025
-          </motion.div>
+          </div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ const UltimateContentCarousel2025 = () => {
         <div className="relative">
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0x: 300 }}
                 animate={{ opacity: 1x: 0 }}
@@ -144,7 +144,7 @@ const UltimateContentCarousel2025 = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="max-w-4xl px-8 md:px-12 text-white">
-                    <motion.div
+                    <div
                       key={`badge-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ const UltimateContentCarousel2025 = () => {
                     >
                       <TrendingUp className="w-4 h-4 mr-2" />
                       {slides[currentSlide].subtitle}
-                    </motion.div>
+                    </div>
 
                     <motion.h3
                       key={`title-${currentSlide}`}
@@ -176,7 +176,7 @@ const UltimateContentCarousel2025 = () => {
                     </motion.p>
 
                     {/* Features */}
-                    <motion.div
+                    <div
                       key={`features-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -191,10 +191,10 @@ const UltimateContentCarousel2025 = () => {
                           {feature}
                         </span>
                       ))}
-                    </motion.div>
+                    </div>
 
                     {/* Stats and CTA */}
-                    <motion.div
+                    <div
                       key={`cta-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -217,11 +217,11 @@ const UltimateContentCarousel2025 = () => {
                         {slides[currentSlide].cta}
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Arrows */}
@@ -256,7 +256,7 @@ const UltimateContentCarousel2025 = () => {
         </div>
 
         {/* Additional Info */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8duration: 0.6 }}
@@ -276,7 +276,7 @@ const UltimateContentCarousel2025 = () => {
               <span>Free Resources & Guides</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

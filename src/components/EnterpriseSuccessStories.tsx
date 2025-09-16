@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   ArrowRight
   TrendingUp
@@ -141,7 +141,7 @@ const EnterpriseSuccessStories = () => {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -160,10 +160,10 @@ const EnterpriseSuccessStories = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how leading enterprises have transformed their operations and achieved unprecedented growth with our AI solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Key Metrics */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -182,10 +182,10 @@ const EnterpriseSuccessStories = () => {
               <div className="text-sm text-gray-400">{metric.description}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -204,10 +204,10 @@ const EnterpriseSuccessStories = () => {
               {story.company}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Active Story Display */}
-        <motion.div
+        <div
           key={activeStory}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -277,10 +277,10 @@ const EnterpriseSuccessStories = () => {
               <p className="font-semibold text-gray-900">— {successStories[activeStory].author}</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Benefits Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -297,10 +297,10 @@ const EnterpriseSuccessStories = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -323,7 +323,7 @@ const EnterpriseSuccessStories = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

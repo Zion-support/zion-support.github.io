@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveFeaturesShowcase: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -138,7 +138,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-2xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={activeFeature}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -169,7 +169,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     
                     <div className="grid grid-cols-1 gap-4 mb-8">
                       {currentFeature.demo.metrics.map((metric, index) => (
-                        <motion.div
+                        <div
                           key={index}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
@@ -178,25 +178,25 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="font-semibold">{metric}</span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                     
                     <div className="flex gap-4">
-                      <motion.button
+                      <button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                       >
                         Try Interactive Demo →
-                      </motion.button>
-                      <motion.button
+                      </button>
+                      <button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
                       >
                         Learn More
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
                   
@@ -222,7 +222,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(9)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded"
                                 animate={{
@@ -250,8 +250,8 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Controls */}
@@ -277,7 +277,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -307,14 +307,14 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                 ))}
               </div>
               
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
               >
                 Try Demo
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
           ))}
         </div>
 

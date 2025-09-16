@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const Home: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -102,9 +102,9 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -120,9 +120,9 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -138,9 +138,9 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -156,9 +156,9 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -174,9 +174,9 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

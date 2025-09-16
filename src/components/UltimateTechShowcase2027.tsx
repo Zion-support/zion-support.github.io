@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const UltimateTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -39,7 +39,7 @@ const UltimateTechShowcase2027: React.FC = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -54,13 +54,13 @@ const UltimateTechShowcase2027: React.FC = () => {
               Explore the most advanced technologies that will reshape the future of humanity. 
               From AI consciousness to interdimensional travel, experience what's possible.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {showcaseItems.map((item, index) => (
-            <motion.button
+            <button
               key={item.id}
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -73,13 +73,13 @@ const UltimateTechShowcase2027: React.FC = () => {
             >
               <span className="mr-2">{item.icon}</span>
               {item.title.split(' ')[0]} {item.title.split(' ')[1]}
-            </motion.button>
+            </button>
           ))}
         </div>
 
         {/* Content Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ const UltimateTechShowcase2027: React.FC = () => {
                 
                 <div className="space-y-4 mb-8">
                   {showcaseItems[activeTab].features.map((feature, index) => (
-                    <motion.div
+                    <div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -109,7 +109,7 @@ const UltimateTechShowcase2027: React.FC = () => {
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-lg">{feature}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -122,19 +122,19 @@ const UltimateTechShowcase2027: React.FC = () => {
                   >
                     Explore Technology →
                   </motion.a>
-                  <motion.button
+                  <button
                     className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Watch Demo
-                  </motion.button>
+                  </button>
                 </div>
               </div>
 
               {/* Right Visual */}
               <div className="relative">
-                <motion.div
+                <div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -160,14 +160,14 @@ const UltimateTechShowcase2027: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -179,22 +179,22 @@ const UltimateTechShowcase2027: React.FC = () => {
             The future is here, and it's more incredible than you can imagine.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
+            <button
               className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Start Your Journey
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Learn More
-            </motion.button>
+            </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

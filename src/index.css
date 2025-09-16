@@ -1,13 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+=======
+<<<<<<< HEAD
 =======
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -111,7 +125,13 @@
   background: linear-gradient(45deg, #7c3aed, #db2777);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -128,21 +148,33 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 /* Focus Management */
 =======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 .reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 .focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Screen Reader Only */
+/* Screen reader only content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -155,6 +187,9 @@
   border: 0;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 /* Animation Classes */
 .animate-fade-in {
@@ -182,6 +217,9 @@
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Dark mode support */
 .dark {
   color-scheme: dark;
@@ -267,91 +305,92 @@
   --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+/* New Animations for 2027 Components */
+@keyframes fade-in {
+  from {
+=======
+<<<<<<< HEAD
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
 /* New Animations for 2027 Components */
 @keyframes fade-in {
   from {
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+/* New Animations for 2027 Components */
+@keyframes fade-in {
+  from {
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     opacity: 0;
     transform: translateY(20px);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateY(-20px);
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Print Styles */
-@media print {
-  .no-print {
-    display: none !important;
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  
-  body {
-    font-size: 12pt;
-    line-height: 1.4;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
+  50% {
+    transform: translateY(-15px);
   }
 }
 
-/* High DPI Display Support */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .high-dpi {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .auto-dark {
-    background-color: #1a1a1a;
-    color: #ffffff;
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
   }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 /* Reduced Motion Support */
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 }
@@ -379,11 +418,17 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
 >>>>>>> main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
@@ -414,6 +459,94 @@ body {
   filter: contrast(150%) brightness(120%);
 }
 
+<<<<<<< HEAD
+=======
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Reduced motion */
+>>>>>>> cursor/create-and-deploy-new-content-f995
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+<<<<<<< HEAD
+/* Custom CSS Variables */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom utilities */
+=======
+/* Custom Utility Classes */
+>>>>>>> cursor/create-and-deploy-new-content-079e
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive Typography */
+.text-responsive {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Interactive Elements */
+.interactive {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.interactive:active {
+  transform: translateY(0);
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 .high-contrast button,
 .high-contrast input,
 .high-contrast select,
@@ -479,6 +612,7 @@ body {
 
 /* Skip links */
 .skip-link {
+<<<<<<< HEAD
   position: absolute;
   top: -40px;
   left: 6px;
@@ -489,6 +623,12 @@ body {
   z-index: 1000;
 }
 
+<<<<<<< HEAD
+.skip-link:focus {
+  top: 6px;
+}
+
+=======
 <<<<<<< HEAD
 /* Reduced motion */
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -640,6 +780,8 @@ body {
 .loading::after {
   content: '';
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   position: absolute;
   top: 0;
   left: -100%;
@@ -655,6 +797,10 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -667,6 +813,12 @@ body {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+=======
+<<<<<<< HEAD
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
@@ -677,12 +829,21 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -720,6 +881,9 @@ body {
 >>>>>>> cursor/create-and-deploy-new-content-12a7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 }
 
 #root {
@@ -727,6 +891,10 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -740,3 +908,7 @@ body {
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-bec3

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -88,7 +88,7 @@ export default function ServicesShowcase2026() {
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -122,7 +122,7 @@ export default function ServicesShowcase2026() {
                   <div className="text-gray-400 text-sm">Emerging Tech</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -183,7 +183,7 @@ export default function ServicesShowcase2026() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -260,13 +260,13 @@ export default function ServicesShowcase2026() {
                       Learn More
                     </a>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-16"
@@ -274,7 +274,7 @@ export default function ServicesShowcase2026() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
-              </motion.div>
+              </div>
             )}
           </div>
         </section>
@@ -282,7 +282,7 @@ export default function ServicesShowcase2026() {
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -323,7 +323,7 @@ export default function ServicesShowcase2026() {
                   View Pricing
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

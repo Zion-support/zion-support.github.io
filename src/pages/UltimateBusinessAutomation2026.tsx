@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateBusinessAutomation2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -68,9 +68,9 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Self-healing processes</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,9 +95,9 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Zero latency processing</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -122,7 +122,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Zero-trust architecture</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 

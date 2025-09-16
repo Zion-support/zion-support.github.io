@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -33,9 +33,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -64,7 +64,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Content */}
               <div className="flex-1 text-center lg:text-left">
-                <motion.div
+                <div
                   initial={{ opacity: 0x: -20 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: 0.2 }}
@@ -83,7 +83,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
-                </motion.div>
+                </div>
 
                 <motion.h2
                   initial={{ opacity: 0x: -20 }}
@@ -106,7 +106,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                   <span className="font-semibold text-white"> $50M+ in cost savings</span> with our solutions.
                 </motion.p>
 
-                <motion.div
+                <div
                   initial={{ opacity: 0x: -20 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: 0.5 }}
@@ -124,9 +124,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                     <CheckCircle className="w-4 h-4 text-green-300" />
                     <span>HealthcarePlus: +280% ROI</span>
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
+                <div
                   initial={{ opacity: 0x: -20 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: 0.6 }}
@@ -141,11 +141,11 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                     <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Read Case Studies
                   </button>
-                </motion.div>
+                </div>
               </div>
 
               {/* Success Metrics */}
-              <motion.div
+              <div
                 initial={{ opacity: 0x: 20 }}
                 animate={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: 0.7 }}
@@ -166,7 +166,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                   <div className="text-2xl font-bold text-white mb-1">$50M+</div>
                   <div className="text-green-100 text-sm">Saved</div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Dismiss Button */}
@@ -181,9 +181,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
 
           {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-green-400 to-teal-400 animate-pulse" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

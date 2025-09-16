@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain
   Sparkles
@@ -114,7 +114,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -149,10 +149,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* AI Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -167,10 +167,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* AI Capabilities */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -190,10 +190,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <p className="text-blue-100 text-sm">{capability.description}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Features Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -212,10 +212,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Content Types Showcase */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -237,10 +237,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* AI Demo Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
@@ -313,10 +313,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.2 }}
@@ -343,7 +343,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -91,7 +91,7 @@ export default function ServicesShowcase2028() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -151,7 +151,7 @@ export default function ServicesShowcase2028() {
                 <div className="text-cyan-300">Support Available</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -170,7 +170,7 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <motion.div
+              <div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +207,7 @@ export default function ServicesShowcase2028() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -227,7 +227,7 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futuristic2028Services.slice(0, 6).map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -278,7 +278,7 @@ export default function ServicesShowcase2028() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function ServicesShowcase2028() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -312,9 +312,9 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -329,9 +329,9 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-blue-400">$500B+</div>
               <div className="text-blue-300">Total Addressable Market</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -346,7 +346,7 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-pink-400">90%</div>
               <div className="text-pink-300">Market Share in Niche</div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -354,7 +354,7 @@ export default function ServicesShowcase2028() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -400,7 +400,7 @@ export default function ServicesShowcase2028() {
                 <span>Money-Back Guarantee</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

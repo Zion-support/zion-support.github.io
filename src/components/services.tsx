@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -27,7 +27,7 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
@@ -344,13 +344,13 @@ export default function ServicesPage() {
           {/* Main Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <motion.div
+              <div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -360,7 +360,7 @@ export default function ServicesPage() {
                   <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                   {allServices.length}+ Revolutionary Services Available
                 </div>
-              </motion.div>
+              </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -373,7 +373,7 @@ export default function ServicesPage() {
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -395,11 +395,11 @@ export default function ServicesPage() {
                   <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
                   Micro SAAS
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Enhanced Search and Filters */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -519,7 +519,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Enhanced Category Overview */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -540,7 +540,7 @@ export default function ServicesPage() {
                 {categories.map((category, index) => {
                   const stats = getCategoryStats(category.id);
                   return (
-                    <motion.div
+                    <div
                       key={category.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -577,7 +577,7 @@ export default function ServicesPage() {
                       </div>
 
             {/* Services Grid/List */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -591,7 +591,7 @@ export default function ServicesPage() {
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {sortedServices.map((service, index) => (
-                    <motion.div
+                    <div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -621,11 +621,11 @@ export default function ServicesPage() {
                         <div className="text-4xl mb-4">{service.icon}</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-20"
@@ -642,7 +642,7 @@ export default function ServicesPage() {
                 >
                   Clear Filters
                 </button>
-              </motion.div>
+              </div>
             )}
           </div>
         </section>
@@ -695,13 +695,13 @@ export default function ServicesPage() {
                           <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </a>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               ) : (
                 <div className="space-y-4">
                   {sortedServices.map((service, index) => (
-                    <motion.div
+                    <div
                       key={service.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -759,14 +759,14 @@ export default function ServicesPage() {
                           </a>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
 
             {/* Enhanced CTA Section */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -778,7 +778,7 @@ export default function ServicesPage() {
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
                 
                 <div className="relative z-10">
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
@@ -788,7 +788,7 @@ export default function ServicesPage() {
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                       Transform Your Business Today
                     </div>
-                  </motion.div>
+                  </div>
                   
                   <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
                     <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -824,7 +824,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 BellZapTrendingUpUsersAwardGlobeArrowRightClock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -49,7 +49,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
@@ -62,7 +62,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
               transition={{ delay: 0.2duration: 0.6 }}
@@ -79,10 +79,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Revolutionary breakthroughs in AIquantum computingand automation are reshaping the future of technology. 
                 Be among the first to experience the transformation.
               </p>
-            </motion.div>
+            </div>
 
             {/* Animated Announcement */}
-            <motion.div
+            <div
               key={currentAnnouncement}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,10 +105,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.6duration: 0.6 }}
@@ -127,11 +127,11 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               >
                 Get Early Access
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
             transition={{ delay: 0.3duration: 0.6 }}
@@ -143,7 +143,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-1 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
@@ -155,12 +155,12 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Urgency Indicator */}
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1duration: 0.5 }}
@@ -168,12 +168,12 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time - Act now!</span>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

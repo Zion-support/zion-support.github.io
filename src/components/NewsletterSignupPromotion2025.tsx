@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 MailArrowRightCheckCircleStarZapTrendingUpUsersAward
 
 const NewsletterSignupPromotion2025 = () => {
@@ -42,7 +42,7 @@ const NewsletterSignupPromotion2025 = () => {
     return (
       <div className="py-16 bg-gradient-to-r from-green-500 to-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0scale: 0.8 }}
             animate={{ opacity: 1scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -65,7 +65,7 @@ const NewsletterSignupPromotion2025 = () => {
                 Follow Us on Social
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -84,7 +84,7 @@ const NewsletterSignupPromotion2025 = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: -30 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
@@ -109,7 +109,7 @@ const NewsletterSignupPromotion2025 = () => {
             {/* Benefits List */}
             <div className="space-y-4 mb-8">
               {benefits.map((benefitindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0x: -20 }}
                   animate={isVisible ? { opacity: 1x: 0 } : {}}
@@ -118,14 +118,14 @@ const NewsletterSignupPromotion2025 = () => {
                 >
                   <CheckCircle className="w-5 h-5 text-green-300" />
                   <span className="text-lg">{benefit}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -137,13 +137,13 @@ const NewsletterSignupPromotion2025 = () => {
                   </div>
                   <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column - Signup Form */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8delay: 0.2 }}
@@ -203,7 +203,7 @@ const NewsletterSignupPromotion2025 = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

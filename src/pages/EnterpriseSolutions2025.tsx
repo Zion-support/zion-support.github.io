@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const EnterpriseSolutions2025: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const EnterpriseSolutions2025: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Request Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -87,7 +87,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 roi: "200% productivity increase"
               }
             ].map((solution, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-3">
                   <p className="text-white font-semibold text-sm">ROI: {solution.roi}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -191,7 +191,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 benefits: "70% service efficiency, 95% citizen satisfaction"
               }
             ].map((industry, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -213,7 +213,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-4">
                   <p className="text-white font-semibold">Benefits: {industry.benefits}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -254,7 +254,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 duration: "Ongoing"
               }
             ].map((phase, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -269,7 +269,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-2">
                   <p className="text-blue-300 font-semibold text-sm">Duration: {phase.duration}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -306,7 +306,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 description: "Round-the-clock enterprise support and monitoring"
               }
             ].map((metric, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -316,7 +316,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
                 <div className="text-xl font-semibold text-white mb-2">{metric.label}</div>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -325,7 +325,7 @@ const EnterpriseSolutions2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -345,7 +345,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

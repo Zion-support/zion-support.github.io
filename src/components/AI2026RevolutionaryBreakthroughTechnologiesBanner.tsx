@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
   return (
@@ -20,14 +20,14 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🚀 Revolutionary AI 2026</span>
-          </motion.div>
+          </div>
 
           {/* Main Heading */}
           <motion.h1
@@ -55,7 +55,7 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
           </motion.p>
 
           {/* Key Benefits */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -76,10 +76,10 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">50,000% ROI</h3>
               <p className="text-sm opacity-80">Revolutionary technologies delivering extraordinary returns</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: 0.8 }}
@@ -97,10 +97,10 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
             >
               🚀 Get Implementation Support
             </a>
-          </motion.div>
+          </div>
 
           {/* Trust Indicators */}
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -114,7 +114,7 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
               <div className="text-lg font-semibold">IBM</div>
               <div className="text-lg font-semibold">Oracle</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

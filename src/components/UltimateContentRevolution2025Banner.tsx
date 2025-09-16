@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Sparkles
   ArrowRight
@@ -39,8 +39,8 @@ const UltimateContentRevolution2025Banner = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -62,13 +62,13 @@ const UltimateContentRevolution2025Banner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
-                <motion.div
+                <div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                </motion.div>
+                </div>
                 <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wider">
                   New Content Available
                 </span>
@@ -85,7 +85,7 @@ const UltimateContentRevolution2025Banner = () => {
               
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">
                 <AnimatePresence mode="wait">
-                  <motion.div
+                  <div
                     key={currentFeature}
                     initial={{ opacity: 0x: 20 }}
                     animate={{ opacity: 1x: 0 }}
@@ -97,8 +97,8 @@ const UltimateContentRevolution2025Banner = () => {
                     <span className="text-gray-300 font-medium">
                       {features[currentFeature].text}
                     </span>
-                  </motion.div>
-                </AnimatePresence>
+                  </div>
+                
               </div>
 
               <p className="text-gray-300 text-sm md:text-base max-w-2xl">
@@ -139,7 +139,7 @@ const UltimateContentRevolution2025Banner = () => {
 
           {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-            <motion.div
+            <div
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
@@ -170,8 +170,8 @@ const UltimateContentRevolution2025Banner = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

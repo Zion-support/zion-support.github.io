@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Building2
   Zap
@@ -60,7 +60,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
   }[]);
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
@@ -73,7 +73,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -94,10 +94,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 Streamline processesreduce costsand accelerate growth with our comprehensive 
                 suite of AI-powered automation solutions designed for enterprise scale.
               </p>
-            </motion.div>
+            </div>
 
             {/* Features List */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
@@ -114,10 +114,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -132,17 +132,17 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 Schedule Demo
               </button>
-            </motion.div>
+            </div>
 
             {/* Dynamic Stats */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
               className="pt-8 border-t border-white/10"
             >
               <div className="text-center">
-                <motion.div
+                <div
                   key={currentStat}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -157,13 +157,13 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                     <div className="text-3xl font-bold text-white">{stats[currentStat].value}</div>
                     <div className="text-sm text-gray-400">{stats[currentStat].label}</div>
                   </div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Solutions Showcase */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -172,7 +172,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             {/* Main Solutions Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               {solutions.slice(04).map((solutionindex) => (
-                <motion.div
+                <div
                   key={solution.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -194,14 +194,14 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Additional Solutions */}
             <div className="grid grid-cols-2 gap-4">
               {solutions.slice(4).map((solutionindex) => (
-                <motion.div
+                <div
                   key={solution.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -217,12 +217,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                       <p className="text-xs text-gray-300">Available</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Floating Elements */}
-            <motion.div
+            <div
               animate={{ 
                 y: [0-10],
                 rotate: [050]
@@ -235,9 +235,9 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Zap className="w-8 h-8 text-white" />
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               animate={{ 
                 y: [010],
                 rotate: [0-50]
@@ -251,7 +251,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Brain className="w-6 h-6 text-white" />
-            </motion.div>
+            </div>
 
             {/* Performance Indicators */}
             <div className="absolute top-0 right-0 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium">
@@ -260,11 +260,11 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 <span>Live</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom Stats Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 1.0 }}
@@ -284,12 +284,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               <div className="text-sm text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
-    </motion.div>
+    </div>
   );
 };
 

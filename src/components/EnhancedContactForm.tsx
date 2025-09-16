@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
@@ -106,7 +106,7 @@ const EnhancedContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <motion.div
+      <div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className="text-center py-12"

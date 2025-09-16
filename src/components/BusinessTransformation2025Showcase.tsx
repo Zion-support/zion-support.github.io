@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -137,7 +137,7 @@ const BusinessTransformation2025Showcase = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -149,10 +149,10 @@ const BusinessTransformation2025Showcase = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Navigation Tabs */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -175,10 +175,10 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Metrics Display */}
-        <motion.div
+        <div
           key={activeSection}
           initial={{ opacity: 0x: 50 }}
           animate={{ opacity: 1x: 0 }}
@@ -189,7 +189,7 @@ const BusinessTransformation2025Showcase = () => {
           {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
-              <motion.div
+              <div
                 key={index}
                 variants={itemVariants}
                 initial="hidden"
@@ -212,13 +212,13 @@ const BusinessTransformation2025Showcase = () => {
                     {metric.label}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Success Stories */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -232,7 +232,7 @@ const BusinessTransformation2025Showcase = () => {
             {successStories.map((storyindex) => {
               const Icon = story.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   variants={itemVariants}
                   initial="hidden"
@@ -278,14 +278,14 @@ const BusinessTransformation2025Showcase = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -311,7 +311,7 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -90,7 +90,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
@@ -110,7 +110,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
@@ -134,10 +134,10 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                 From strategy consulting to implementationwe offer a complete range of AI services 
                 to transform your business and drive innovation across all industries.
               </p>
-            </motion.div>
+            </div>
 
             {/* Service Categories */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
@@ -146,7 +146,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
               <h3 className="text-lg font-semibold text-white mb-4">Service Categories</h3>
               <div className="grid grid-cols-2 gap-4">
                 {categories.map((categoryindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0scale: 0.9 }}
                     animate={{ opacity: 1scale: 1 }}
@@ -162,13 +162,13 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                         <div className="text-gray-400 text-sm">{category.count} services</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Key Benefits */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -188,10 +188,10 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
@@ -210,11 +210,11 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                   Get Pricing
                 </span>
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Content - Service Showcase */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -261,7 +261,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
               {/* Service Grid */}
               <div className="grid grid-cols-2 gap-4">
                 {services.slice(04).map((serviceindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0scale: 0.9 }}
                     animate={{ opacity: 1scale: 1 }}
@@ -280,14 +280,14 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                       <Star className="h-3 w-3 text-yellow-400 fill-current" />
                       <span className="text-white text-xs ml-1">{service.rating}</span>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -297,7 +297,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                     <stat.icon className="h-6 w-6 text-purple-400 mx-auto mb-2" />
                     <div className="text-white text-xl font-bold">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -315,6 +315,6 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" />
         </svg>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryContentPromo: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -71,7 +71,7 @@ const RevolutionaryContentPromo: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -87,12 +87,12 @@ const RevolutionaryContentPromo: React.FC = () => {
             Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing, 
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -133,18 +133,18 @@ const RevolutionaryContentPromo: React.FC = () => {
 
               {/* Hover Effect */}
               {hoveredCard === index && (
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"
                 />
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Interactive Features Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -172,10 +172,10 @@ const RevolutionaryContentPromo: React.FC = () => {
               <p className="text-purple-200">Get AI-powered predictions about technology trends</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -194,7 +194,7 @@ const RevolutionaryContentPromo: React.FC = () => {
               Download All Content
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

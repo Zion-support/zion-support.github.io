@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -293,7 +293,7 @@ const AIInnovationHub2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.8 }}
@@ -313,11 +313,11 @@ const AIInnovationHub2025 = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -374,10 +374,10 @@ const AIInnovationHub2025 = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5delay: 0.4 }}
@@ -388,7 +388,7 @@ const AIInnovationHub2025 = () => {
           }`}
         >
           {filteredInnovations.map((itemindex) => (
-            <motion.div
+            <div
               key={item.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -457,7 +457,7 @@ const AIInnovationHub2025 = () => {
 
                 {/* Hover Overlay */}
                 {hoveredItem === item.id && (
-                  <motion.div
+                  <div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center"
@@ -472,15 +472,15 @@ const AIInnovationHub2025 = () => {
                         Download
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Load More */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -490,7 +490,7 @@ const AIInnovationHub2025 = () => {
             <RefreshCw className="w-5 h-5 mr-2" />
             Load More Innovations
           </button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

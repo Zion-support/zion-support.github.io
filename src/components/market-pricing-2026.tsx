@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -92,7 +92,7 @@ export default function MarketPricing2026() {
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -130,7 +130,7 @@ export default function MarketPricing2026() {
                   <div className="text-gray-400 text-sm">Total Customers</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -191,7 +191,7 @@ export default function MarketPricing2026() {
         {/* Market Analysis Section */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -203,11 +203,11 @@ export default function MarketPricing2026() {
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
                 in the rapidly evolving technology landscape
               </p>
-            </motion.div>
+            </div>
 
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -224,9 +224,9 @@ export default function MarketPricing2026() {
                   <TrendingUp className="w-4 h-4 mr-2" />
                   <span>20-40% cost savings</span>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -243,9 +243,9 @@ export default function MarketPricing2026() {
                   <Award className="w-4 h-4 mr-2" />
                   <span>1000% ROI guarantee</span>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -262,7 +262,7 @@ export default function MarketPricing2026() {
                   <Zap className="w-4 h-4 mr-2" />
                   <span>Future-proof solutions</span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -270,7 +270,7 @@ export default function MarketPricing2026() {
         {/* Services Pricing Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -281,11 +281,11 @@ export default function MarketPricing2026() {
               <p className="text-xl text-gray-300">
                 {filteredServices.length} services found matching your criteria
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -386,13 +386,13 @@ export default function MarketPricing2026() {
                       View Details
                     </a>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-16"
@@ -400,7 +400,7 @@ export default function MarketPricing2026() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>
-              </motion.div>
+              </div>
             )}
           </div>
         </section>
@@ -408,7 +408,7 @@ export default function MarketPricing2026() {
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -450,7 +450,7 @@ export default function MarketPricing2026() {
                   View All Services
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

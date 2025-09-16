@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -153,7 +153,7 @@ export default function InteractiveCaseStudies2025() {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -173,10 +173,10 @@ export default function InteractiveCaseStudies2025() {
             Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
             Real case studiesreal resultsreal impact.
           </p>
-        </motion.div>
+        </div>
 
         {/* Industry Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -195,18 +195,18 @@ export default function InteractiveCaseStudies2025() {
               {industry}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Case Studies Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          <AnimatePresence>
+          
             {filteredCaseStudies.map((caseStudyindex) => (
-              <motion.div
+              <div
                 key={caseStudy.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -285,13 +285,13 @@ export default function InteractiveCaseStudies2025() {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -316,20 +316,20 @@ export default function InteractiveCaseStudies2025() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Case Study Modal */}
-      <AnimatePresence>
+      
         {selectedCase && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedCase(null)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -410,10 +410,10 @@ export default function InteractiveCaseStudies2025() {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 }

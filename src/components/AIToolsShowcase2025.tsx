@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -120,7 +120,7 @@ export default function AIToolsShowcase2025() {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -140,10 +140,10 @@ export default function AIToolsShowcase2025() {
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -162,18 +162,18 @@ export default function AIToolsShowcase2025() {
               {category}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Tools Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <AnimatePresence>
+          
             {filteredTools.map((toolindex) => (
-              <motion.div
+              <div
                 key={tool.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -247,20 +247,20 @@ export default function AIToolsShowcase2025() {
                 </div>
 
                 {/* Hover Effect */}
-                <motion.div
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={false}
                   animate={{
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
                 />
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -283,7 +283,7 @@ export default function AIToolsShowcase2025() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search
   Filter
@@ -217,9 +217,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${showFilters ? 'rotate-180' : ''}`} />
               </button>
 
-              <AnimatePresence>
+              
                 {showFilters && (
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -247,9 +247,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         </button>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
+              
             </div>
 
             {/* Sort Options */}
@@ -274,11 +274,11 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
+          
             {filteredContent.map((itemindex) => {
               const TypeIcon = getContentTypeIcon(item.type);
               return (
-                <motion.div
+                <div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -362,10 +362,10 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                     </a>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </AnimatePresence>
+          
         </div>
 
         {/* Load More */}

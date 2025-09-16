@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -132,7 +132,7 @@ const BusinessSuccessStories2025 = () => {
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -144,10 +144,10 @@ const BusinessSuccessStories2025 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Overall Stats */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -162,12 +162,12 @@ const BusinessSuccessStories2025 = () => {
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {successStories.map((storyindex) => (
-            <motion.div
+            <div
               key={story.id}
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -230,12 +230,12 @@ const BusinessSuccessStories2025 = () => {
                 Read Full Case Study
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Industries Served */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -246,7 +246,7 @@ const BusinessSuccessStories2025 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -259,13 +259,13 @@ const BusinessSuccessStories2025 = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">{industry.name}</h4>
                 <p className="text-2xl font-bold text-green-600">{industry.count}+</p>
                 <p className="text-sm text-gray-600">Projects</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 1.0 }}
@@ -293,7 +293,7 @@ const BusinessSuccessStories2025 = () => {
               View All Stories
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

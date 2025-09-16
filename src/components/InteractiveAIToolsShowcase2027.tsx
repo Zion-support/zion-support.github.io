@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -157,7 +157,7 @@ const InteractiveAIToolsShowcase2027 = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
             animate={{
@@ -180,7 +180,7 @@ const InteractiveAIToolsShowcase2027 = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -204,10 +204,10 @@ const InteractiveAIToolsShowcase2027 = () => {
             Discover and interact with the most advanced AI tools and technologies 
             that are transforming industries in 2027.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -269,11 +269,11 @@ const InteractiveAIToolsShowcase2027 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Tools */}
         {featuredTools.length > 0 && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
@@ -286,7 +286,7 @@ const InteractiveAIToolsShowcase2027 = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredTools.map((toolindex) => (
-                <motion.div
+                <div
                   key={tool.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -321,13 +321,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </div>
                     {tool.demo && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <motion.button
+                        <button
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                           className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                         >
                           <Play className="w-6 h-6 text-white ml-1" />
-                        </motion.button>
+                        </button>
                       </div>
                     )}
                   </div>
@@ -367,14 +367,14 @@ const InteractiveAIToolsShowcase2027 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* All Tools Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -392,7 +392,7 @@ const InteractiveAIToolsShowcase2027 = () => {
               : 'grid-cols-1'
           }`}>
             {filteredTools.map((toolindex) => (
-              <motion.div
+              <div
                 key={tool.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -419,13 +419,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                   {tool.demo && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.button
+                      <button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                       >
                         <Play className="w-5 h-5 text-white ml-1" />
-                      </motion.button>
+                      </button>
                     </div>
                   )}
                 </div>
@@ -479,13 +479,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -511,20 +511,20 @@ const InteractiveAIToolsShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Tool Detail Modal */}
-      <AnimatePresence>
+      
         {selectedTool && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedTool(null)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
@@ -606,10 +606,10 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 };

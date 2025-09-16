@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const BlockchainInnovation2025: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const BlockchainInnovation2025: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 View Use Cases
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -81,7 +81,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 features: ["Lending protocols", "DEX trading", "Yield farming"]
               }
             ].map((tech, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const BlockchainInnovation2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -182,7 +182,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 benefits: "New revenue streams, true digital ownership"
               }
             ].map((industry, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -204,7 +204,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 rounded-lg p-4">
                   <p className="text-white font-semibold">Benefits: {industry.benefits}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -241,7 +241,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 description: "Continuous blockchain network operation"
               }
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -251,7 +251,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 <div className="text-4xl font-bold text-emerald-400 mb-2">{stat.number}</div>
                 <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>
                 <p className="text-gray-300 text-sm">{stat.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -283,7 +283,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 timeline: "2026-2028"
               }
             ].map((trend, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -296,7 +296,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 rounded-lg p-3">
                   <p className="text-emerald-300 font-semibold">Timeline: {trend.timeline}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -305,7 +305,7 @@ const BlockchainInnovation2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -325,7 +325,7 @@ const BlockchainInnovation2025: React.FC = () => {
                 Get Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

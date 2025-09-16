@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Cpu
@@ -221,7 +221,7 @@ const ComprehensiveServicesShowcase2025 = () => {
           </motion.p>
           
           {/* Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
@@ -243,11 +243,11 @@ const ComprehensiveServicesShowcase2025 = () => {
               <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
               <div className="text-gray-600">Customer Rating</div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Service Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
@@ -270,11 +270,11 @@ const ComprehensiveServicesShowcase2025 = () => {
               }`} />
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Featured Service */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeService}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -377,18 +377,18 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* All Services Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((serviceindex) => (
-            <motion.div
+            <div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -439,12 +439,12 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -474,7 +474,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

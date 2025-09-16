@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateContentPromotionalBanner2026: React.FC = () => {
   return (
@@ -7,14 +7,14 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-lg font-bold mb-8 animate-pulse"
           >
             🚀 ULTIMATE BREAKTHROUGH CONTENT • JANUARY 2026
-          </motion.div>
+          </div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
           </motion.p>
         </div>
         
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -90,9 +90,9 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               Explore Breakthrough →
             </a>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -121,9 +121,9 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -140,7 +140,7 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               🚀 Ultimate Breakthrough
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

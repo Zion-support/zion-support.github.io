@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Play
   Pause
@@ -106,9 +106,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -125,7 +125,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
-                <motion.div
+                <div
                   key={currentDemo}
                   initial={{ opacity: 0x: 20 }}
                   animate={{ opacity: 1x: 0 }}
@@ -187,12 +187,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       Download SDK
                     </button>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
-                <motion.div
+                <div
                   key={currentDemo}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
@@ -218,7 +218,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
                             {[...Array(8)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
                                 animate={{
                                   scale: isPlaying ? [1.21] : 1,
@@ -238,7 +238,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
                                 animate={{
                                   rotate: isPlaying ? 360 : 0,
@@ -262,7 +262,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
                                 animate={{
                                   scaleY: isPlaying ? [121] : 1,
@@ -286,7 +286,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
                                 animate={{
                                   scale: isPlaying ? [1.31] : 1,
@@ -323,22 +323,22 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </div>
 
                   {/* Floating Elements */}
-                  <motion.div
+                  <div
                     animate={{ y: [0-10] }}
                     transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
-                  </motion.div>
+                  </div>
 
-                  <motion.div
+                  <div
                     animate={{ y: [010] }}
                     transition={{ duration: 2.5repeat: Infinityease: "easeInOut" }}
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -365,9 +365,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

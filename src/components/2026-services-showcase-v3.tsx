@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -44,7 +44,7 @@ export default function ServicesShowcase2026V3() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -74,7 +74,7 @@ export default function ServicesShowcase2026V3() {
                   Get Started
                 </motion.a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -86,7 +86,7 @@ export default function ServicesShowcase2026V3() {
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -137,7 +137,7 @@ export default function ServicesShowcase2026V3() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

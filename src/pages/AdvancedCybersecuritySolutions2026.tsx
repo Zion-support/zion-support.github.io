@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedCybersecuritySolutions2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 Security Assessment
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -68,9 +68,9 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Autonomous bot networks</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,9 +95,9 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Supply chain infiltration</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -122,7 +122,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Data exfiltration</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -159,9 +159,9 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Machine learning models that adapt to new threats</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -186,7 +186,7 @@ const AdvancedCybersecuritySolutions2026: React.FC = () => {
                 <span>Homomorphic encryption for secure computation</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
