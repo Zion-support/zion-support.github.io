@@ -113,6 +113,8 @@ import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
 import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
+import EnhancedNewsletterSignup2025 from './src/components/EnhancedNewsletterSignup2025';
 
 export default function App(): JSX.Element {
   return (
@@ -130,6 +132,11 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Content 2025-2026 Banner */}
                 <RevolutionaryContentBanner2025 />
+
+                {/* NEW: Interactive Content Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveContentShowcase2025 />
+                </div>
 
                 {/* NEW: Revolutionary Tech 2027 Banner */}
                 <RevolutionaryTech2027Banner />

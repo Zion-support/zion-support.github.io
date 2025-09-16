@@ -1,103 +1,74 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const contentSlides = [
-    {
-      title: "Revolutionary Tech Breakthrough 2025",
-      description: "Experience the most groundbreaking technological innovations reshaping our world",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🚀"
-    },
-    {
-      title: "Next-Gen Space Technology 2026",
-      description: "Revolutionary space technologies making interplanetary travel a reality",
-      link: "/pages/NextGenSpaceTech2026",
-      color: "from-cyan-600 to-blue-600",
-      icon: "🛰️"
-    },
-    {
-      title: "Advanced Biotech Revolution 2026",
-      description: "Cutting-edge biotechnology transforming medicine and human enhancement",
-      link: "/pages/AdvancedBiotechRevolution2026",
-      color: "from-emerald-600 to-teal-600",
-      icon: "🧬"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [contentSlides.length]);
-
   return (
-    <div className="relative overflow-hidden mb-12">
-      {/* Main Banner */}
-      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-4">
-                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-                <span className="text-2xl font-bold">NEW REVOLUTIONARY CONTENT 2025-2026</span>
-                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-              </div>
-              <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
-              <p className="text-xl opacity-95 mb-6 max-w-3xl">
-                {contentSlides[currentSlide].description}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href={contentSlides[currentSlide].link}
-                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                >
-                  Explore Now →
-                </a>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
-            </div>
+    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <span className="text-4xl animate-bounce">🚀</span>
+            <h2 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2025-2026</h2>
+            <span className="text-4xl animate-bounce">🚀</span>
           </div>
+          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+            Discover the most groundbreaking technology content featuring AI breakthroughs, 
+            space exploration, biotech revolution, and quantum computing innovations
+          </p>
         </div>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {contentSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-purple-600' : 'bg-gray-300'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
-        {contentSlides.map((slide, index) => (
-          <a
-            key={index}
-            href={slide.link}
-            className={`bg-gradient-to-r ${slide.color} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 ${
-              index === currentSlide ? 'ring-4 ring-white/50' : ''
-            }`}
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <a 
+            href="/pages/RevolutionaryTechBreakthrough2025" 
+            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
           >
-            <div className="text-3xl mb-3">{slide.icon}</div>
-            <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
-            <p className="text-sm opacity-90">{slide.description}</p>
+            <div className="text-4xl mb-3 text-center">🧠</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Revolutionary Tech Breakthrough 2025</h3>
+            <p className="text-sm opacity-90 text-center">
+              Experience the most revolutionary technology breakthroughs reshaping our digital future
+            </p>
+            <div className="text-center mt-3">
+              <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">BREAKTHROUGH</span>
+            </div>
           </a>
-        ))}
+
+          <a 
+            href="/pages/NextGenSpaceTech2026" 
+            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
+          >
+            <div className="text-4xl mb-3 text-center">🚀</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Next-Gen Space Tech 2026</h3>
+            <p className="text-sm opacity-90 text-center">
+              Explore revolutionary space technologies making interplanetary travel a reality
+            </p>
+            <div className="text-center mt-3">
+              <span className="px-3 py-1 bg-cyan-500 text-white text-xs rounded-full">SPACE AGE</span>
+            </div>
+          </a>
+
+          <a 
+            href="/pages/AdvancedBiotechRevolution2026" 
+            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
+          >
+            <div className="text-4xl mb-3 text-center">🧬</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Advanced Biotech Revolution 2026</h3>
+            <p className="text-sm opacity-90 text-center">
+              Discover revolutionary biotechnology transforming healthcare and human enhancement
+            </p>
+            <div className="text-center mt-3">
+              <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full">LIFE CHANGING</span>
+            </div>
+          </a>
+        </div>
+
+        <div className="text-center mt-8">
+          <a 
+            href="/pages/ComprehensiveServices2025" 
+            className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30"
+          >
+            🌟 Explore All Revolutionary Content →
+          </a>
+        </div>
       </div>
     </div>
   );
