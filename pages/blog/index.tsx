@@ -90,6 +90,13 @@ posts.unshift(
   { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 )
 
+// New content (Sept 16, 2025) — Additional (Autonomous Change Mgmt, Red Teaming, Compliance Evidence)
+posts.unshift(
+  { slug: 'ai-2026-autonomous-change-management-blueprint', title: 'Autonomous Change Management — Blueprint (2026)', excerpt: 'Design safe, auditable, and low‑risk change pipelines for agentic systems.' },
+  { slug: 'ai-2026-agent-red-teaming-playbook', title: 'Agent Red Teaming — Practical Playbook (2026)', excerpt: 'Continuously probe agents for jailbreaks, unsafe tool use, and policy gaps.' },
+  { slug: 'ai-2026-compliance-evidence-automation', title: 'Compliance Evidence Automation (2026)', excerpt: 'Automate policy checks and evidence capture to accelerate audits and approvals.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
