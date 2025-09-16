@@ -2689,6 +2689,37 @@ export const newContent2026 = [
     imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
     slug: "cost-aware-model-routing-copy-paste-policy"
   }
+  ,
+  {
+    id: 9510,
+    title: "AI 2026: Policy‑as‑Code Approvals Starter",
+    excerpt: "Minimal approval policies with risk tiers you can ship today.",
+    content: "Jump‑start governance with copy‑paste approval policies wired to risk tiers and evidence. Includes JSON policy templates, example GitHub checks, and how to thread approvals into release scorecards for auditable go/no‑go decisions.",
+    author: "Riley Kim",
+    authorRole: "Platform Governance Lead",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Governance",
+    tags: ["Policy‑as‑Code", "Approvals", "Risk Tiers"],
+    featured: true,
+    imageUrl: "/images/blog/policy-approvals-starter-2026.jpg",
+    slug: "ai-2026-policy-approvals-starter"
+  },
+  {
+    id: 9511,
+    title: "AI 2026: Incident Lifecycle Playbook",
+    excerpt: "Detect, triage, contain, learn — with evidence at every step.",
+    content: "A practical playbook to manage agent incidents end‑to‑end. We provide runbook templates, evidence capture checklists, and scorecard hooks so learnings feed releases and prevent repeats.",
+    author: "Jordan Lee",
+    authorRole: "Principal SRE",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Reliability",
+    tags: ["Incidents", "Runbooks", "Evidence"],
+    featured: true,
+    imageUrl: "/images/blog/incident-lifecycle-playbook-2026.jpg",
+    slug: "ai-2026-incident-lifecycle-playbook"
+  }
 ];
 
 // Additional fresh content (2029 preview)
