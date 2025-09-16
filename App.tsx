@@ -44,6 +44,10 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import RevolutionaryAdBanner2025 from './src/components/RevolutionaryAdBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import SocialProofShowcase2025 from './src/components/SocialProofShowcase2025';
+import UltimatePromoBanner2025 from './src/components/UltimatePromoBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import './src/index.css';
@@ -250,6 +254,18 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 - Limited Time Offer */}
+                <RevolutionaryAdBanner2025 />
+                
+                {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Content Library */}
+                <UltimateContentShowcase2025 />
+                
+                {/* NEW: Social Proof Showcase 2025 - Client Testimonials and Success Stories */}
+                <SocialProofShowcase2025 />
+                
+                {/* NEW: Ultimate Promo Banner 2025 - Exclusive Launch Offer */}
+                <UltimatePromoBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2034 - Latest Revolutionary Content */}
                 <UltimateContentBanner2034 />
