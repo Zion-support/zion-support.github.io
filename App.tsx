@@ -45,6 +45,11 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
+import './src/styles/animations.css';
+import PerformanceEnhancer from './src/components/PerformanceEnhancer';
+import AdvancedSearch from './src/components/AdvancedSearch';
+import AnalyticsDashboard from './src/components/AnalyticsDashboard';
+import NotificationSystem from './src/components/NotificationSystem';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
@@ -229,12 +234,20 @@ export default function App(): JSX.Element {
         <EnhancedAccessibilityPanel />
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
+        <PerformanceEnhancer />
+        <AnalyticsDashboard />
+        <NotificationSystem />
         <Header />
         
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Advanced Search Component */}
+                <div className="mb-8">
+                  <AdvancedSearch />
+                </div>
+                
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
