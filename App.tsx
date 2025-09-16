@@ -45,6 +45,9 @@ import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
 import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
+import NextGenTechInnovation2026 from './src/pages/NextGenTechInnovation2026';
+import AutonomousBusinessRevolution2026 from './src/pages/AutonomousBusinessRevolution2026';
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
@@ -291,6 +294,7 @@ export default function App(): JSX.Element {
         <ContentManagementSystem />
         <SEOAnalyzer />
         <ErrorMonitoringSystem />
+        <NewContentBanner2026 />
         <AdvancedPerformanceOptimizer2025 />
         <AdvancedSEOOptimizer2025 />
         <AdvancedAnalyticsTracker2025 />
@@ -1354,6 +1358,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
+          <Route path="/nextgen-tech-innovation-2026" element={<NextGenTechInnovation2026 />} />
+          <Route path="/autonomous-business-revolution-2026" element={<AutonomousBusinessRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
