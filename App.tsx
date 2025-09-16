@@ -44,6 +44,9 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import LatestContentShowcase2026 from './src/components/LatestContentShowcase2026';
+import RevolutionaryContent2026 from './src/pages/RevolutionaryContent2026';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
@@ -297,6 +300,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: 2026 Content Promotion Banner */}
+                <NewContentPromotionBanner2026 />
+                
+                {/* NEW: Latest Content Showcase 2026 */}
+                <LatestContentShowcase2026 />
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 - Latest Breakthrough Technology */}
                 <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-20 mb-12 relative overflow-hidden">
@@ -1203,6 +1212,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryContent2026" element={<RevolutionaryContent2026 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
