@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: Zero‑Downtime Agent Deployments (2026 Preview)',
+		summary: 'Release management patterns with shadow traffic, phased rollout, and auto‑rollback.',
+		href: '/updates/zero-downtime-agent-deployments-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',

@@ -35,11 +35,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: State of Agent Reliability (2026 Preview) —
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            New: Zero‑Downtime Agent Deployments (2026 Preview) —
+            <a href="/updates/zero-downtime-agent-deployments-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            Agent Reliability 2026 —
+            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -70,8 +70,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Zero‑Downtime Agent Deployments —
+            <a href="/updates/zero-downtime-agent-deployments-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability report</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -141,8 +141,8 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Zero‑Downtime Agent Deployments —
+            <a href="/updates/zero-downtime-agent-deployments-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also read: <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Reliability 2026</a>
             <span className="mx-2 text-blue-300/60">|</span>
