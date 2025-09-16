@@ -64,6 +64,12 @@ posts.unshift(
   { slug: 'ai-2026-governed-tool-approvals', title: 'Governed Tool Approvals (2026)', excerpt: 'Risk‑tiered adapters, budgets, and JIT approvals for safe actions.' }
 )
 
+// New content (Sept 16, 2025) — Added in this change
+posts.unshift(
+  { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
+  { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
