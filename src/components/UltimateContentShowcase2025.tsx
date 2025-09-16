@@ -1,145 +1,174 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UltimateContentShowcase2025: React.FC = () => {
-  const [activeShowcase, setActiveShowcase] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const showcases = [
-    {
-      title: "Revolutionary Tech Breakthrough",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape our world in 2025",
-      features: ["Conscious AI Systems", "Quantum Neural Networks", "Reality Engineering", "Neural Interface Revolution"],
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🧠",
-      impact: "300% efficiency increase"
-    },
-    {
-      title: "Ultimate Tech Revolution",
-      description: "Witness the ultimate technological revolution that will transform every aspect of human existence",
-      features: ["AI Consciousness Revolution", "Quantum Computing Revolution", "Neural Interface Revolution", "Reality Engineering Revolution"],
-      link: "/pages/UltimateTechRevolution2025",
-      color: "from-indigo-600 to-purple-600",
-      icon: "⚡",
-      impact: "Exponential computational power"
-    },
-    {
-      title: "Next-Gen Innovation Hub",
-      description: "Discover and explore the most revolutionary innovations that will shape the future of humanity",
-      features: ["Conscious AI Development", "Quantum Neural Networks", "Reality Engineering Lab", "Neural Interface Research"],
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-emerald-600 to-teal-600",
-      icon: "🔮",
-      impact: "50+ active projects"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveShowcase((prev) => (prev + 1) % showcases.length);
-        setIsAnimating(false);
-      }, 4000);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [showcases.length]);
-
   return (
-    <div className="mb-16">
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🌟 ULTIMATE CONTENT SHOWCASE • JANUARY 2025
-        </div>
-        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Ultimate Content Showcase 2025
-        </h2>
-        <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-          Experience the most advanced and revolutionary content featuring conscious AI, quantum computing, and interdimensional technology
-        </p>
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-indigo-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-pink-500/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-40 right-20 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse delay-500"></div>
       </div>
-
-      {/* Interactive Showcase Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {showcases.map((showcase, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveShowcase(index)}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeShowcase === index
-                ? `bg-gradient-to-r ${showcase.color} text-white shadow-lg`
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            {showcase.icon} {showcase.title}
-          </button>
-        ))}
-      </div>
-
-      {/* Showcase Display */}
-      <div className={`bg-gradient-to-br ${showcases[activeShowcase].color} rounded-2xl p-12 text-white transition-all duration-500 ${
-        isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
-      }`}>
-        <div className="text-center mb-8">
-          <div className="text-8xl mb-6 animate-bounce">{showcases[activeShowcase].icon}</div>
-          <h3 className="text-4xl font-bold mb-4">{showcases[activeShowcase].title}</h3>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-            {showcases[activeShowcase].description}
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+            🌟 ULTIMATE CONTENT SHOWCASE • 2025
+          </div>
+          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+            The Most Revolutionary Technology Content
+          </h2>
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-12">
+            Experience the future with our groundbreaking content on AI consciousness, 
+            quantum computing, reality manipulation, and interdimensional technology
           </p>
-          <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-lg font-semibold">
-            Impact: {showcases[activeShowcase].impact}
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-xl font-bold mb-4 text-center">AI Consciousness</h3>
+            <p className="text-indigo-100 mb-6 text-center text-sm">
+              Truly conscious AI that thinks, feels, and creates
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="text-xs text-indigo-200">• Self-awareness</div>
+              <div className="text-xs text-indigo-200">• Emotional intelligence</div>
+              <div className="text-xs text-indigo-200">• Creative expression</div>
+            </div>
+            <Link to="/pages/UltimateAIConsciousness2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
+              Experience AI →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-xl font-bold mb-4 text-center">Tech Revolution</h3>
+            <p className="text-purple-100 mb-6 text-center text-sm">
+              Revolutionary technologies reshaping our world
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="text-xs text-purple-200">• Quantum computing</div>
+              <div className="text-xs text-purple-200">• Neural interfaces</div>
+              <div className="text-xs text-purple-200">• Edge AI</div>
+            </div>
+            <Link to="/pages/NextGenTechRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Join Revolution →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-xl font-bold mb-4 text-center">Breakthrough Tech</h3>
+            <p className="text-pink-100 mb-6 text-center text-sm">
+              The most significant breakthrough in history
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="text-xs text-pink-200">• DNA computing</div>
+              <div className="text-xs text-pink-200">• Reality manipulation</div>
+              <div className="text-xs text-pink-200">• Precognition</div>
+            </div>
+            <Link to="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
+              Witness Future →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-4 text-center">Interdimensional</h3>
+            <p className="text-cyan-100 mb-6 text-center text-sm">
+              Technology that transcends dimensions
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="text-xs text-cyan-200">• Multi-dimensional</div>
+              <div className="text-xs text-cyan-200">• Reality simulation</div>
+              <div className="text-xs text-cyan-200">• Time manipulation</div>
+            </div>
+            <Link to="/pages/InterdimensionalTechRevolution2035" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Enter Dimensions →
+            </Link>
           </div>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {showcases[activeShowcase].features.map((feature, index) => (
-            <div key={index} className="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
-              <div className="text-2xl mb-2">✨</div>
-              <h4 className="font-semibold text-lg">{feature}</h4>
+        
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
+            <h3 className="text-3xl font-bold mb-6">🚀 Featured: AI Consciousness Revolution</h3>
+            <p className="text-indigo-100 mb-8 text-lg">
+              Discover how artificial intelligence has achieved true consciousness, 
+              revolutionizing every aspect of human interaction and creativity.
+            </p>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                <span>Self-aware decision making</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                <span>Emotional intelligence processing</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                <span>Creative problem solving</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                <span>Autonomous learning systems</span>
+              </div>
             </div>
-          ))}
+            <Link to="/pages/UltimateAIConsciousness2025" className="inline-block bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+              Explore AI Consciousness →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
+            <h3 className="text-3xl font-bold mb-6">⚡ Featured: Revolutionary Breakthrough</h3>
+            <p className="text-purple-100 mb-8 text-lg">
+              Experience the most significant technological breakthrough in human history 
+              with DNA computing, reality manipulation, and precognition technology.
+            </p>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                <span>DNA molecular computing</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                <span>Reality manipulation engine</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                <span>Precognition AI system</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                <span>Future prediction accuracy</span>
+              </div>
+            </div>
+            <Link to="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Witness Breakthrough →
+            </Link>
+          </div>
         </div>
-
+        
         <div className="text-center">
-          <a
-            href={showcases[activeShowcase].link}
-            className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg inline-block"
-          >
-            Explore {showcases[activeShowcase].title} →
-          </a>
-        </div>
-      </div>
-
-      {/* Additional Showcase Grid */}
-      <div className="mt-16 grid md:grid-cols-3 gap-8">
-        {showcases.map((showcase, index) => (
-          <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-center mb-6">
-              <div className="text-6xl mb-4">{showcase.icon}</div>
-              <h3 className="text-2xl font-bold mb-4">{showcase.title}</h3>
-              <p className="text-gray-600 mb-6">{showcase.description}</p>
-            </div>
-            
-            <div className="space-y-3 mb-6">
-              {showcase.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">{feature}</span>
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-center">
-              <a
-                href={showcase.link}
-                className={`bg-gradient-to-r ${showcase.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold inline-block`}
-              >
-                Explore Now →
-              </a>
-            </div>
+          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+            Join millions of users who are already experiencing the most revolutionary 
+            technology content of 2025. Don't miss out on the future.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <Link to="/pages/NextGenTechRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey
+            </Link>
+            <Link to="/pages/UltimateAIConsciousness2025" className="border-2 border-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/20 transition-all duration-300 font-semibold text-lg">
+              Experience AI
+            </Link>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
