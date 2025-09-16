@@ -3000,119 +3000,78 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
 =======
-export type UpdateItem = {
-  id: string
+export type SiteUpdate = {
   title: string
   summary: string
-  date: string
-  href?: string
-=======
-export interface UpdateItem {
-  id: string;
-  title: string;
-  summary: string;
-  href: string;
-  date: string;
-  tag: 'Course' | 'Announcement' | 'Challenge' | 'Research' | 'Release';
->>>>>>> origin/feat/updates-content-and-advertising
+  href: string
+  date?: string
+  tag?: string
 }
 
-export const updates: UpdateItem[] = [
+export const siteUpdates: SiteUpdate[] = [
+  // Fresh content added 2025-09-16
   {
-    id: 'ai-security-blueprint',
-    title: 'Guide: AI Security Blueprint 2025',
-=======
-    id: 'ai-agents-lab-opening',
-    title: 'Launch: AI Agents Innovation Lab',
-    summary:
-      'Hands-on lab with real-world agentic workflows, evals, and governance. Apply to join the first cohort.',
-    href: '/updates/ai-agents-lab-opening',
-    date: '2025-09-15',
-    tag: 'Announcement',
+    title: 'Launch: Evaluation-Driven FinOps (Starter Kit)'
+    , summary: 'Reduce LLM cost-to-value with eval gates, routing policies, and safety budgets.'
+    , href: '/updates/evaluation-driven-finops'
+    , date: '2025-09-16'
+    , tag: 'Launch'
   },
   {
-    id: 'quantum-partnership-announcement',
-    title: 'Partnership: Quantum Computing Center of Excellence',
-    summary:
-      'We partnered with leading research institutions to accelerate quantum neural networks for enterprise.',
-    href: '/updates/quantum-partnership',
-    date: '2025-09-14',
-=======
-    id: 'ai-governance-bootcamp',
-    title: 'New Bootcamp: Enterprise AI Governance (Oct 2025)',
-    summary:
-      'Hands-on governance bootcamp covering risk management, policy, evals, and controls for enterprise AI.',
-    href: '/updates/ai-governance-bootcamp',
-    date: '2025-09-15',
-    tag: 'Course',
+    title: 'Guide: Real-Time Model Routing Playbook (2026 Preview)'
+    , summary: 'Production patterns for cost-aware, safety-aware routing with live telemetry and rollback.'
+    , href: '/updates/real-time-model-routing-playbook-2026'
+    , date: '2025-09-16'
+    , tag: 'Guide'
+  },
+  // Existing recent content (kept)
+  {
+    title: 'Deep Dive: Enterprise Agent Observability (2026)'
+    , summary: 'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
+    , href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
+    , date: '2025-09-15'
+    , tag: 'Deep Dive'
   },
   {
-    id: 'agent-research-insights-2025q3',
-    title: 'Research: Agent Observability Insights (Q3 2025)',
-    summary:
-      'Key findings on monitoring agent behaviors, failure modes, and safe interventions at scale.',
-    href: '/updates/agent-observability-q3-2025',
-    date: '2025-09-14',
-    tag: 'Research',
+    title: 'Complete Guide: Autonomous Business Operations (2026)'
+    , summary: 'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.'
+    , href: '/blog/ai-2026-autonomous-business-operations-complete-guide'
+    , date: '2025-09-15'
+    , tag: 'Complete Guide'
   },
   {
-    id: 'zion-website-refresh',
-    title: 'Announcement: Website UX Refresh and Accessibility Upgrades',
-    summary:
-      'Improved navigation, better performance, and WCAG-focused accessibility enhancements across the site.',
-    href: '/updates/website-ux-refresh-2025',
-    date: '2025-09-13',
->>>>>>> origin/feat/updates-and-fixes
-    tag: 'Announcement',
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)'
+    , summary: 'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.'
+    , href: '/blog/ai-2026-policy-as-code-production-blueprint'
+    , date: '2025-09-15'
+    , tag: 'Blueprint'
   },
   {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
->>>>>>> origin/feat/new-updates-ads
-    summary:
-      'Best practices for securing AI systems in production: model, data, and pipeline.',
-    href: '/updates/ai-security-blueprint-2025',
-    date: '2025-09-14',
-    tag: 'Announcement',
+    title: 'Launch: Real-Time AI Analytics Dashboard v3.0'
+    , summary: 'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.'
+    , href: '/updates/real-time-ai-analytics-dashboard-v3-0'
+    , date: '2025-09-15'
+    , tag: 'Launch'
   },
   {
-    id: 'genai-engineering-course',
-    title: 'New Course: GenAI Engineering Masterclass',
-    summary:
-      'Hands-on masterclass on RAG, agents, evals, safety, and productionization.',
-    href: '/updates/genai-engineering-masterclass',
-    date: '2025-09-13',
-    tag: 'Course',
+    title: 'Launch: AI Agent Orchestration Platform v2.0'
+    , summary: 'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.'
+    , href: '/updates/ai-agent-orchestration-platform-2-0'
+    , date: '2025-09-15'
+    , tag: 'Launch'
   },
   {
-    id: 'ai-lab-research-update',
-    title: 'Research: Long-horizon Planning with Tool-using Agents',
-    summary:
-      'Our latest results show scalable planning via hierarchical tool-use and memory.',
-    href: '/updates/long-horizon-tool-agents',
-    date: '2025-09-12',
-    tag: 'Research',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
->>>>>>> origin/feature/updates-2025-09
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-    date: '2025-09-10',
-    href: '/updates/advanced-blockchain-course',
-=======
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-    href: '/updates/advanced-blockchain-development',
-    date: '2025-09-10',
-    tag: 'Course',
-  },
-  {
-    id: 'web3-fundamentals-path',
-    title: 'New Learning Path: Web3 Fundamentals',
+    title: 'Launch: AI Autonomous Testing Framework v1.0'
+    , summary: 'Self-healing test automation with intelligent test generation, execution, and maintenance for enterprise applications.'
+    , href: '/updates/ai-autonomous-testing-framework-1-0'
+    , date: '2025-09-15'
+    , tag: 'Launch'
+  }
+]
+
+export function getLatestUpdates(count: number = 6): SiteUpdate[] {
+  return siteUpdates.slice(0, count)
+}
     summary:
       'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
     href: '/updates/web3-fundamentals',
