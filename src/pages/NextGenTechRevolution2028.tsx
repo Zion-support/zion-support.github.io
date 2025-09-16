@@ -354,7 +354,6 @@ const NextGenTechRevolution2028: React.FC = () => {
             <div className="text-center">
               <div className="text-4xl font-bold text-green-400 mb-2">∞</div>
               <div className="text-lg opacity-90">Possibilities</div>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
@@ -380,7 +379,6 @@ const NextGenTechRevolution2028: React.FC = () => {
               Start Revolution
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
               Learn More
             </button>
           </div>

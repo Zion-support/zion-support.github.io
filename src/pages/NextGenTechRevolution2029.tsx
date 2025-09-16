@@ -312,7 +312,6 @@ const NextGenTechRevolution2029: React.FC = () => {
             <div className="text-center">
               <button className="w-full bg-white text-pink-600 py-4 rounded-xl hover:bg-pink-50 transition-colors font-semibold text-lg">
                 Achieve Immortality →
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
               </button>
             </div>
           </div>
@@ -367,7 +366,6 @@ const NextGenTechRevolution2029: React.FC = () => {
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Step into the future with our immersive interactive experiences. Experience these revolutionary 
               technologies firsthand and understand how they will transform every aspect of human existence.
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </p>
           </div>
           
@@ -443,7 +441,6 @@ const NextGenTechRevolution2029: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Enhance Your Mind
               </button>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
@@ -472,7 +469,6 @@ const NextGenTechRevolution2029: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Explore More
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </button>
           </div>
         </div>

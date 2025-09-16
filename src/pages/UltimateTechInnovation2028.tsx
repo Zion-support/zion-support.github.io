@@ -360,7 +360,6 @@ const UltimateTechInnovation2028: React.FC = () => {
               <button className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Roadmap
               </button>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </div>
           </div>
         </div>
@@ -389,7 +388,6 @@ const UltimateTechInnovation2028: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </button>
           </div>
         </div>
