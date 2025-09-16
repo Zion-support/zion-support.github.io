@@ -126,7 +126,25 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+<<<<<<< HEAD
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
+=======
+                href="/updates/autonomous-ops-sre-for-agents"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Autonomous Ops & SRE for Agents
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-governance-toolkit"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                New: AI Governance Toolkit v2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-ops-playbook-2026"
+>>>>>>> origin/feature/autonomous-ops-sre-content
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Deep Dive: Agent Observability
@@ -201,11 +219,17 @@ export default function HomePage() {
             {[
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
 <<<<<<< HEAD
                   'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
                 href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
+=======
+                title: 'AI 2026: Autonomous Ops and SRE for Agents',
+                summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
+                href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
+>>>>>>> origin/feature/autonomous-ops-sre-content
               },
               {
                 title: 'AI 2026: Autonomous Business Operations — Complete Guide',

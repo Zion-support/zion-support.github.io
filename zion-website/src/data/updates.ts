@@ -11,9 +11,21 @@ export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-15
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 =======
     title: 'Guide: Agent Platform Operations (2026)',
+=======
+    title: 'Launch: Autonomous Ops and SRE for Agents',
+    summary:
+      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+>>>>>>> origin/feature/autonomous-ops-sre-content
     summary:
       'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
     href: '/updates/agent-platform-operations',
