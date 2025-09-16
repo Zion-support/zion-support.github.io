@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "title": "Executive Brief — Zero‑Downtime Agent Releases (2026)",
+      "href": "/reports/briefs/brief-2026-zero-downtime-agent-releases",
+      "desc": "Blue/green, canary, and rollback patterns wired to evaluation gates.",
+      "createdAt": "2025-09-16T23:59:59.995Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Guide — Trusted RAG in Production (2026)",
+      "href": "/reports/guides/guide-2026-trusted-rag-in-production",
+      "desc": "Grounding, guardrails, and online evals to keep retrieval reliable.",
+      "createdAt": "2025-09-16T23:59:59.992Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 27% Cost Savings via Policy‑Aware Routing (2026)",
+      "href": "/reports/cases/case-2026-policy-aware-routing-cost-savings",
+      "desc": "How adaptive routing cut spend while improving latency and quality.",
+      "createdAt": "2025-09-16T23:59:59.991Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
       "title": "Executive Guide — Agent Safety Evidence Bundles (2026)",
       "href": "/reports/guides/guide-2026-agent-safety-evidence-bundles",
       "desc": "Package traces, policy events, evals, and metrics into verifiable bundles.",

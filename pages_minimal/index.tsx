@@ -17,8 +17,8 @@ export default function Home({ items }: HomeProps) {
     <div>
       <main>
         <div style={{ background: '#0ea5e9', color: '#fff', padding: '12px 16px', borderRadius: 8, marginBottom: 16 }}>
-          <strong>New:</strong> Executive Guide — Agent Safety Evidence Bundles (2026) is live.{' '}
-          <Link href="/reports/guides/guide-2026-agent-safety-evidence-bundles" style={{ color: '#fff', textDecoration: 'underline' }}>Read now →</Link>
+          <strong>New:</strong> Executive Brief — Zero‑Downtime Agent Releases (2026) is live.{' '}
+          <Link href="/reports/briefs/brief-2026-zero-downtime-agent-releases" style={{ color: '#fff', textDecoration: 'underline' }}>Read now →</Link>
         </div>
         <h1>Welcome to Zion Tech Group</h1>
         <p>Advanced IT Solutions & AI Services</p>
