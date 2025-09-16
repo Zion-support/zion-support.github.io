@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 
@@ -107,6 +107,7 @@ const CTASection: React.FC = (): JSX.Element => {
 "}}
           viewport={{ "once": "tru e "}}
         >;
+=======
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />
@@ -225,6 +226,7 @@ const CTASection: React.FC = (): JSX.Element => {
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8";
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.;
           </motion.p>;
+=======
         </div> {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6 mb-12"
@@ -232,16 +234,19 @@ const CTASection: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 3 0 ;
 ;
+=======
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
 ;
+=======
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 ;
 ;
+=======
 }}
           viewport={{ once: tru e }}
         >
@@ -267,6 +272,7 @@ const CTASection: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">;
                 <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />;
               </div>;
+=======
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20"
               initial = {
   { opacity: 0,
@@ -292,6 +298,7 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {;
   { duration: 0.6,;
   delay: 0.6 + index * 0.1;
+=======
 
 }}
               viewport={{ once: tru e }}
@@ -421,6 +428,7 @@ export default CTASection;}};
 </motion>;
 </motion>;
 </motion>;
+=======
 </motion>
 </motion>
 </motion>

@@ -258,6 +258,8 @@ const benefits = [
     title: "24/7 Support",
     description: "Round-the-clock support and monitoring for critical services",
     icon: <Globe className="h-6 w-6" />
+=======
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -772,6 +774,8 @@ export default function ServicesOverviewPage() {
       
       <Footer />
     </>
+=======
+=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
@@ -792,6 +796,7 @@ export default function ServicesOverviewPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Free Consultation
+=======
   Cloud, 
   Shield, 
   Server, 

@@ -21,6 +21,7 @@ export function FeatureHighlights() {
 
       features: [
 
+=======
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";

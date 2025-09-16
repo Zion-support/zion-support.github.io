@@ -1,4 +1,4 @@
-
+import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
 
 interface Stat {
@@ -118,6 +118,7 @@ const stats: Sta t[] = [{;
     description: 'Rapidly expanding global presence',;
     color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-cyan';
+=======
 ];
 export default function EnhancedStatsSection(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({}
@@ -131,6 +132,7 @@ export default function EnhancedStatsSection(...args[]):  {
   // TODO: Add dependencies if needed
 }, []);
     if(inView) {;
+=======
     if(inView) {
 
       controls.start('visible')}
@@ -141,6 +143,7 @@ export default function EnhancedStatsSection(...args[]):  {
       if(current >= numericValue) {
         current = numericValue;
         clearInterval(timer) }
+=======
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 "}}
@@ -316,7 +319,9 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             </div>;
           </div>;
         </motion.div>;
+=======
       </div>;
+=======
     </section>;) }
 '"`
 </motion>

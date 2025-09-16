@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 CheckMailMapPinPhoneExternalLink
+=======
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -17,6 +18,7 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 function getAllServices(): Service[] {
+=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[]additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -47,6 +49,7 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
 		.concat(real2027Q4Additions as unknown as Service[]);
+=======
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
@@ -104,6 +107,7 @@ function extractServiceSlugFromLink(link: string): string | null {
 			return path.substring('services/'.length);
 		}
 		return null;
+=======
 		return null;
 	} catch {
 		return null;
@@ -280,6 +284,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
+=======
 export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
@@ -300,6 +305,7 @@ export async function getStaticPaths() {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
 	};
+=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -347,6 +353,7 @@ export default function ServiceDetailPage({ serviceslug }: { service: SimpleServ
         </div>
 
 }
+=======
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}

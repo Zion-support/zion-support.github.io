@@ -1,5 +1,5 @@
 import React from 'react';'''
-'''
+import {motion} from 'framer-motion';'''
 import {Link} from 'react-router-dom';'''
 import {Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database} from 'lucide-react';'''
 import SEO from '../components/SEO';

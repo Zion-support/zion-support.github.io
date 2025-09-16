@@ -60,9 +60,10 @@ export default function UltraFuturistic2029InnovationsPage() {;
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   return (
 
+=======
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -531,6 +532,7 @@ export default function UltraFuturistic2029InnovationsPage() {
 
 
 
+=======
       
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />

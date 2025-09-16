@@ -1,20 +1,16 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -38,14 +34,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Neural Interface Types Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -55,7 +51,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that enable direct brain-computer communication
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -108,7 +104,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 applications: ["Long-term Implants", "Medical Devices", "Research"]
               }
             ].map((interface_type, index) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +136,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -149,10 +145,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -201,9 +197,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -272,59 +268,15 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Neural Interface Revolution 2025
-          </h1>
-          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with direct neural interfaces that enable thought-controlled computing and enhanced human capabilities.
-          </p>
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Non-Invasive BCI</h3>
-            <p className="text-emerald-200 mb-6 text-center">
-              Advanced EEG and fNIRS systems for seamless brain-computer interaction without surgery.
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• EEG-based control</li>
-              <li>• fNIRS monitoring</li>
-              <li>• Real-time processing</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Thought Control</h3>
-            <p className="text-cyan-200 mb-6 text-center">
-              Direct neural control of devices and applications through pure thought and intention.
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Motor imagery</li>
-              <li>• Cognitive load detection</li>
-              <li>• Intent recognition</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔄</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Feedback</h3>
-            <p className="text-purple-200 mb-6 text-center">
-              Bidirectional interfaces that provide sensory feedback directly to the brain.
-            </p>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
-              Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation
-            </p>
-          </div>
-
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -337,239 +289,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
-            <h2 className="text-4xl font-bold mb-6">Ready to Connect Mind and Machine?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Experience the future of human-computer interaction with revolutionary neural interface technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-colors">
-                Explore Neural Interfaces →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
-
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 NEURAL BREAKTHROUGH • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Neural Interface Revolution 2025
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with our revolutionary neural interface technology that enables direct brain-computer communication.
-          </p>
-        </div>
-
-        {/* Neural Interface Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
-            <div className="text-6xl mb-6 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-emerald-800">Non-Invasive BCI</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Advanced brain-computer interfaces that read neural signals without surgery, enabling seamless mind-machine interaction.
-            </p>
-            <ul className="text-emerald-700 space-y-2 text-sm">
-              <li>• EEG signal processing</li>
-              <li>• Machine learning algorithms</li>
-              <li>• Real-time neural decoding</li>
-              <li>• Wireless connectivity</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-200">
-            <div className="text-6xl mb-6 text-center">🎮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-teal-800">Thought Control</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Control devices, applications, and systems using only your thoughts, opening new possibilities for accessibility and efficiency.
-            </p>
-            <ul className="text-teal-700 space-y-2 text-sm">
-              <li>• Device control via thoughts</li>
-              <li>• Virtual reality interaction</li>
-              <li>• Smart home automation</li>
-              <li>• Accessibility solutions</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
-            <div className="text-6xl mb-6 text-center">🔄</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Neural Feedback</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Receive direct feedback from digital systems to your brain, creating immersive experiences and enhanced learning capabilities.
-            </p>
-            <ul className="text-cyan-700 space-y-2 text-sm">
-              <li>• Sensory feedback loops</li>
-              <li>• Enhanced learning</li>
-              <li>• Memory augmentation</li>
-              <li>• Cognitive enhancement</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Applications Grid */}
-        <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Neural Interface Applications</h2>
-            <p className="text-xl text-emerald-200">Revolutionary applications transforming human-computer interaction</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                🏥
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Medical</h3>
-              <p className="text-emerald-200 text-sm">Prosthetic control and rehabilitation</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                🎮
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Gaming</h3>
-              <p className="text-emerald-200 text-sm">Immersive thought-controlled gaming</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                💼
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Workplace</h3>
-              <p className="text-emerald-200 text-sm">Enhanced productivity and focus</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                🚗
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Transportation</h3>
-              <p className="text-emerald-200 text-sm">Thought-controlled vehicles</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Technology Stack */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Neural Technology Stack</h2>
-            <p className="text-xl text-emerald-200">Complete neural interface infrastructure</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
-                <h3 className="text-xl font-semibold text-white mb-3">Hardware Components</h3>
-                <ul className="text-emerald-200 space-y-2">
-                  <li>• High-density EEG arrays</li>
-                  <li>• fNIRS sensors</li>
-                  <li>• Neural signal amplifiers</li>
-                  <li>• Real-time processors</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
-                <h3 className="text-xl font-semibold text-white mb-3">Signal Processing</h3>
-                <ul className="text-cyan-200 space-y-2">
-                  <li>• Noise filtering algorithms</li>
-                  <li>• Feature extraction</li>
-                  <li>• Pattern recognition</li>
-                  <li>• Real-time classification</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6 border border-purple-400/30">
-                <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
-                <ul className="text-purple-200 space-y-2">
-                  <li>• Neural network models</li>
-                  <li>• Adaptive learning</li>
-                  <li>• Personalization</li>
-                  <li>• Continuous calibration</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
-                <h3 className="text-xl font-semibold text-white mb-3">User Interface</h3>
-                <ul className="text-orange-200 space-y-2">
-                  <li>• Thought visualization</li>
-                  <li>• Feedback systems</li>
-                  <li>• Calibration tools</li>
-                  <li>• Training programs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Safety & Ethics */}
-        <div className="bg-gradient-to-r from-yellow-800/50 to-orange-800/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-4">Safety & Ethics</h2>
-            <p className="text-xl text-yellow-200">Responsible development of neural interface technology</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                🛡️
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Privacy Protection</h3>
-              <p className="text-yellow-200 text-sm">Advanced encryption and data protection</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                ⚖️
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Ethical Guidelines</h3>
-              <p className="text-yellow-200 text-sm">Comprehensive ethical framework</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                🔬
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Medical Validation</h3>
-              <p className="text-yellow-200 text-sm">Rigorous safety testing and validation</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
-          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
-            Experience the next evolution of human-computer interaction with our revolutionary neural interface technology.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Neural Journey
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
-              Learn More
-            </button>
-          </div>
-        </div>
+          </motion.div>
         </div>
       </div>
     </div>

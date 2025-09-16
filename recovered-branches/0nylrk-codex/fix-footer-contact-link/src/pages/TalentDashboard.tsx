@@ -6,6 +6,7 @@
       <SEO
         title="Talent Dashboard | Zion AI Marketplace"
         description="Your personalized talent dashboard with job matches and professional opportunities."
+=======
 import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader"; 
 import { Footer } from "@/components/Footer";
@@ -103,6 +104,7 @@ function TalentDashboardContent() {
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
+=======
             
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
@@ -187,5 +189,6 @@ export default function TalentDashboard() {
 
 
 
+=======
   );
 }

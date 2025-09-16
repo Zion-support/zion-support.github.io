@@ -26,6 +26,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     try {;
 ;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
+=======
       
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
@@ -48,6 +49,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     e.preventDefault () ;
 ;
     if(!newUser.name.trim() || !newUser.email.trim()) {;
+=======
       setLoading(false)};
     e.preventDefault () ;
     if(!newUser.name.trim() || !newUser.email.trim()) {
@@ -63,6 +65,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
 ;
     try {;
       if(response.success && response.data) {;
+=======
         setUsers(prev => [...prev, response.data!]);
       setLoading(false)};
   return ();
@@ -164,6 +167,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               type="submit";
               disabled={loading}";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
+=======
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
 
               {loading ? 'Creating...' : 'Create User'}
@@ -198,6 +202,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
               {loading ? 'Loading...' : 'Refresh'}
+=======
+=======
             </div>) }
         </div>;
         {/* Architecture Info */}";
@@ -220,6 +226,7 @@ export default ApiDemo}}}}}}}'"`;
 </any>;
 </any>;
 </any>;
+=======
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
               {loading ? 'Loading...' : 'Refresh'}

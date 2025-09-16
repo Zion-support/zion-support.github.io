@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -92,7 +92,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0">
           {[...Array(50)].map((_i) => (
-            <div
+            <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
               style={{
@@ -115,7 +115,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -135,27 +135,27 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
               Explore Solutions
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Tab Navigation */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -183,11 +183,11 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               AI 2026
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Technology Features */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeTab}
             initial={{ opacity: 0x: 50 }}
             animate={{ opacity: 1x: 0 }}
@@ -206,7 +206,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
-                <div
+                <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -232,14 +232,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Stats Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -257,7 +257,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               { number: '300%'label: 'ROI Increase' },
               { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (
-              <div
+              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -268,13 +268,13 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -289,25 +289,25 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
               >
                 <Rocket className="w-6 h-6" />
                 Start Your AI Journey
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 <Users className="w-6 h-6" />
                 Schedule Demo
-              </button>
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

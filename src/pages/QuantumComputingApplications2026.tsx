@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const QuantumComputingApplications2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const QuantumComputingApplications2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,13 +31,13 @@ const QuantumComputingApplications2026: React.FC = () => {
                 View Quantum Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Quantum Advantage Section */}
       <div className="container mx-auto px-4 py-16">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,10 +47,10 @@ const QuantumComputingApplications2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Quantum computers offer exponential speedup for specific problem classes that would take classical computers millennia to solve
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -72,9 +72,9 @@ const QuantumComputingApplications2026: React.FC = () => {
                 1000x Faster
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -96,9 +96,9 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Unbreakable
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -120,9 +120,9 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Real-time
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -144,9 +144,9 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Ultra-Precise
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -168,9 +168,9 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Mission Critical
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -192,11 +192,11 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Enhanced AI
               </span>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Quantum Performance Metrics */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -231,10 +231,10 @@ const QuantumComputingApplications2026: React.FC = () => {
               <div className="text-sm text-orange-200">Quantum algorithms</div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Quantum Algorithms */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -320,10 +320,10 @@ const QuantumComputingApplications2026: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Implementation Timeline */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
@@ -358,10 +358,10 @@ const QuantumComputingApplications2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Global quantum communication networks and distributed quantum computing</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
@@ -379,7 +379,7 @@ const QuantumComputingApplications2026: React.FC = () => {
               Quantum Assessment
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

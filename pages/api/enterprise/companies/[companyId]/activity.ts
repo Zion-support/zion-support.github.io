@@ -1,5 +1,6 @@
 
 
+=======
 
 
   }
@@ -9,6 +10,7 @@
 }
 
 
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -28,6 +30,7 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

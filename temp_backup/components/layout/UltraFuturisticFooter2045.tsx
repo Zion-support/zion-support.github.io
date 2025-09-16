@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Star, ArrowUp,
   Brain, Rocket, Shield, Atom, Target, Star as StarIcon,
@@ -242,6 +242,7 @@ const UltraFuturisticFooter2045: React.FC = () => {
                 {quickLinks.map((link) => (
                   <Link
                     <social.icon />
+=======
                     key={link.name}
                     href={link.href}
                     className="text-sm text-white/70 hover:text-cyan-400 transition-colors"

@@ -1,8 +1,9 @@
 import React from 'react';
-
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;
   showDashboard = false,: any;
+=======
 export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true",: "any;
   showDashboard = false",: "any;
@@ -51,6 +52,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
       // Google Analytics 4 initialization';
+=======
 
     // Initialize Google Analytics(if tracking ID provided)
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
@@ -60,6 +62,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script) ;
       window.dataLayer = window.dataLayer || [];
       function gtag("props": "any) {;
+=======
       function gtag(props: any) {
 
         window.dataLayer.push(args);
@@ -164,11 +167,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
+=======
     if(!enabled) return;
 ;
       trackEvent('user_interaction', {;
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
 ';
+=======
         "interaction_type": 'click',;
         "page_path": "currentPag e",;
         "timestamp": "Dat e.now()"})};
@@ -202,6 +207,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   };
 }, []);, []);
+=======
             "milestone": "9 0",;
             "page_path": "currentPag e"})}
     // Track initial page'
@@ -326,6 +332,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track event function;
       // Google Analytics 4;
       if(window.gtag) {;
+=======
         window.gtag('event', eventName, parameters)}
           "method": 'POST',;
           "headers": "{ 'Content-Type': 'application/json' "},;
@@ -471,6 +478,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             fcp: 80 0,;
             lcp: 150 0,;
             fid: 5 0,;
+=======
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
@@ -753,6 +761,7 @@ export default EnhancedAnalytics;
 </any>;
 </AnalyticsData>;
 </EnhancedAnalyticsProps>;
+=======
 </any>
 </any>
 </any>

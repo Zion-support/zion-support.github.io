@@ -8,6 +8,7 @@
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false);
   const [analysisResultsetAnalysisResults] = useState(null);
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -240,6 +241,7 @@ export default function WebsitePerformanceMonitorPage() {
 
 
 
+=======
       {/* Metrics Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">

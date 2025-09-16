@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {motion} from 'framer-motion';
 import {Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings} from 'lucide-react';
 import {Building, Brain, ArrowRight, Star, Rocket, Cpu, Database} from 'lucide-react';
 import {Link} from 'react-router-dom';

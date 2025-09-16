@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
 FileTextCheckPhoneMailMapPinExternalLinkShieldCheck
+=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 
 
@@ -28,6 +29,7 @@ export default function DomainDNSMonitorPage() {
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+=======
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
@@ -73,6 +75,7 @@ export default function DomainDNSMonitorPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
+=======
     </QuantumHolographicMatrixBackground>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown,
   Brain, Rocket, Shield, 
@@ -519,6 +519,7 @@ export default function EnhancedNavigation2025() {
                 >
                   Get Started
                 </Link>
+=======
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}

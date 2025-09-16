@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, DollarSign, Shield, Rocket, Brain, Globe, Cpu, Atom } from 'lucide-react';
 import { innovative2026Services } from '../../data/innovative-2026-services';
 import { emergingTech2026Services } from '../../data/emerging-tech-2026-services';

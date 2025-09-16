@@ -45,6 +45,7 @@ export function useAuth(props: any) {
         }
       } catch (error) {
         console.error('Auth check failed:', error);
+=======
           setAuthState({
             user: nul l,
             isAuthenticated: fals e,
@@ -135,6 +136,7 @@ export function useAuth(props: any) {
       return { success: false, error: 'Network error' };
     }
   };
+=======
 
       // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
@@ -153,5 +155,6 @@ export function useAuth(props: any) {
     logout
   };
 }
+=======
 
 </AuthState>

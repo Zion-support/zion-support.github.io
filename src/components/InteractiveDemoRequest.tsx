@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 CalendarClockUsersZapCheckCircleArrowRightX
 
 interface DemoFormData {
@@ -83,7 +83,7 @@ export default function InteractiveDemoRequest() {
   return (
     <>
       {/* Floating Demo Button */}
-      <button
+      <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 2type: "spring"stiffness: 200 }}
@@ -92,19 +92,19 @@ export default function InteractiveDemoRequest() {
       >
         <Calendar className="w-5 h-5 mr-2" />
         Request Demo
-      </button>
+      </motion.button>
 
       {/* Modal */}
-      
+      <AnimatePresence>
         {isOpen && (
-          <div
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <div
+            <motion.div
               initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
@@ -149,7 +149,7 @@ export default function InteractiveDemoRequest() {
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[60vh]">
                 {isSubmitted ? (
-                  <div
+                  <motion.div
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: 1scale: 1 }}
                     className="text-center py-12"
@@ -167,13 +167,13 @@ export default function InteractiveDemoRequest() {
                     >
                       Close
                     </button>
-                  </div>
+                  </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit}>
                     <AnimatePresence mode="wait">
                       {/* Step 1: Personal Information */}
                       {currentStep === 1 && (
-                        <div
+                        <motion.div
                           key="step1"
                           initial={{ opacity: 0x: 50 }}
                           animate={{ opacity: 1x: 0 }}
@@ -230,12 +230,12 @@ export default function InteractiveDemoRequest() {
                               />
                             </div>
                           </div>
-                        </div>
+                        </motion.div>
                       )}
 
                       {/* Step 2: Business Details */}
                       {currentStep === 2 && (
-                        <div
+                        <motion.div
                           key="step2"
                           initial={{ opacity: 0x: 50 }}
                           animate={{ opacity: 1x: 0 }}
@@ -306,12 +306,12 @@ export default function InteractiveDemoRequest() {
                               ))}
                             </div>
                           </div>
-                        </div>
+                        </motion.div>
                       )}
 
                       {/* Step 3: Schedule */}
                       {currentStep === 3 && (
-                        <div
+                        <motion.div
                           key="step3"
                           initial={{ opacity: 0x: 50 }}
                           animate={{ opacity: 1x: 0 }}
@@ -358,9 +358,9 @@ export default function InteractiveDemoRequest() {
                               placeholder="Tell us about your specific needs or questions..."
                             />
                           </div>
-                        </div>
+                        </motion.div>
                       )}
-                    
+                    </AnimatePresence>
                   </form>
                 )}
               </div>
@@ -398,10 +398,10 @@ export default function InteractiveDemoRequest() {
                   )}
                 </div>
               )}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         )}
-      
+      </AnimatePresence>
     </>
   );
 }

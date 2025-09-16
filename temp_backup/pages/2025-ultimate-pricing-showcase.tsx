@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Filter, Star, TrendingUp, Brain, Atom, Rocket, Shield, 
   Cloud, Target, Building, Users, Code, Sparkles, Zap, Eye, 

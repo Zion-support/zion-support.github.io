@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { Users, MessageCircle, BarChart3, Zap, Shield, Globe, Phone, Mail, MapPin } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';

@@ -22,6 +22,7 @@
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
+=======
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive",
@@ -76,6 +77,7 @@
 
       {/* Request to Hire Modal */}
       <HireRequestModal
+=======
       
       {/* Request to Hire Modal */}
       <HireRequestModal 

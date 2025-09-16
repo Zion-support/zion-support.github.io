@@ -22,10 +22,12 @@ Plus,;
   Bookmark,;
   Download,;
   Printer';
+=======
   Bookmark,
   Download,
   Printer'
 } from 'lucide-react';
+=======
   "id": "string;
   "icon": React.ComponentType<{ size?: number; className?: string;
 "}>;
@@ -62,6 +64,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 }) => {;
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [showScrollButton, setShowScrollButton] = useState<any>(false);
+=======
 ;
 const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
   actions = []",: "any;
@@ -105,6 +108,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       ';
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {;
+=======
 }, []);, []);
     if(theme === 'auto') {
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
@@ -311,6 +315,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()},;
         color: 'bg-gray-500 hover: b g-gray-600',;
         priority: 'low' as const;
+=======
       {
         id: 'download',
         icon: Downloa d,
@@ -379,6 +384,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
+=======
       default:'
         return 'bottom-6 right-6'}
   };
@@ -413,6 +419,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     {action.label}
                   </span>
                 </div>) ) }
+=======
             </div>) }
           {/* Main Button */}
           <button
@@ -489,6 +496,7 @@ export default FloatingActionButton;
 </any>;
 </any>;
 </FloatingActionButtonProps>;
+=======
 
 </any>
 </FloatingActionButtonProps>

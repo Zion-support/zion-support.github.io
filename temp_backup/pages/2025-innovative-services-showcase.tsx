@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Brain, Atom, Shield, Rocket, Globe,
@@ -343,6 +343,7 @@ export default function InnovativeServicesShowcase2025() {
                     )}
                   </div>
                 </div>
+=======
                 </div>
 
                 {/* Service Details */}

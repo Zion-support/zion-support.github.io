@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 
 
 
+=======
           <p className="text-sm text-zion-slate-light">Unreviewed quote requests</p>
         </CardContent>
       </Card>
@@ -36,6 +37,7 @@ import { Badge } from "@/components/ui/badge";
 
 
 
+=======
           <p className="text-sm text-zion-slate-light">Quotes being evaluated</p>
         </CardContent>
       </Card>
@@ -52,6 +54,7 @@ import { Badge } from "@/components/ui/badge";
 
 
 
+=======
           <p className="text-sm text-zion-slate-light">Quotes with responses sent</p>
         </CardContent>
       </Card>
@@ -68,6 +71,7 @@ import { Badge } from "@/components/ui/badge";
 
 
 
+=======
           <p className="text-sm text-zion-slate-light">Successfully converted quotes</p>
         </CardContent>
       </Card>
@@ -148,6 +152,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default QuoteStatusCards;
 
+=======
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>

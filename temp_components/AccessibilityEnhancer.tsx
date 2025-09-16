@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Eye, EyeOff, Volume2, VolumeX, Type, 
   Contrast, ZoomIn, ZoomOut, RotateCcw,

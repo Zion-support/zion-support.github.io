@@ -48,6 +48,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
+=======
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 import { Users, Globe, BarChart3 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -409,7 +409,7 @@ const AIPoweredITAssetManagement = () => {
                 ];
                 return (<section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-
+import {motion} from 'framer-motion';
 import {Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database} from 'lucide-react';
 
 const AIPoweredITAssetManagement: React.FC = () => {}

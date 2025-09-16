@@ -66,6 +66,7 @@
       };
 
 
+=======
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
@@ -409,6 +410,7 @@ if ( {) {
 
 
 
+=======
   };
   
   // Handle resume download
@@ -572,6 +574,7 @@ if ( {) {
 
 }
 
+=======
         />
       )}
       

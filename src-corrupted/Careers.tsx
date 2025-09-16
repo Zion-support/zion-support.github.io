@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -47,10 +47,12 @@ export default function Careers() {
       icon: Cloud,
       color: 'from-green-500 to-emerald-500'
     }
+=======
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+=======
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Briefcase, 
   Users, 
@@ -124,7 +126,8 @@ export default function Careers() {
     { id: 'full-time', name: 'Full-time', count: 20 },
     { id: 'part-time', name: 'Part-time', count: 2 },
     { id: 'contract', name: 'Contract', count: 2 }
-
+=======
+import { motion } from 'framer-motion';
 import { 
   Briefcase, 
   Users, 
@@ -254,6 +257,7 @@ const Careers: React.FC = () => {
     { id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500' },
     { id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500' },
     { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' }
+=======
 import { 
   MapPin, 
   Clock, 
@@ -485,6 +489,7 @@ export default function Careers() {
       icon: Target,
       urgent: false,
       postedDate: "2024-12-03"
+=======
       id: 3,
       title: "Cloud Infrastructure Engineer",
       department: "cloud",
@@ -554,6 +559,7 @@ export default function Careers() {
       icon: BookOpen
     }
   ];
+=======
       id: 1,
       title: "Senior AI Research Engineer",
       department: "ai-ml",
@@ -777,6 +783,7 @@ export default function Careers() {
       description: "We invest in growth and development at every level",
       icon: BookOpen,
       color: "from-purple-500 to-pink-500"
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -955,7 +962,9 @@ export default function Careers() {
                 <span className="text-white">Competitive Benefits</span>
               </div>
             </div>
+=======
   return (
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1004,6 +1013,7 @@ export default function Careers() {
                 Learn About Us
               </Link>
             </div>
+=======
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1092,6 +1102,7 @@ export default function Careers() {
                 </button>
               ))}
             </div>
+=======
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -1270,6 +1281,7 @@ const Careers = () => {
       icon: Heart,
       title: 'Customer Focus',
       description: 'Everything we do is driven by our commitment to customer success.'
+=======
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
     : jobOpenings.filter(job => job.department === selectedDepartment);
@@ -1597,6 +1609,7 @@ const Careers = () => {
       icon: '💰',
       title: 'Competitive Pay',
       description: 'Above-market salaries with equity options'
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -1722,6 +1735,7 @@ const Careers = () => {
       icon: "💡",
       title: "Excellence",
       description: "We strive for quality in everything we do"
+=======
       title: "Competitive Compensation",
       description: "Attractive salary packages with equity options",
       icon: Award
@@ -1748,6 +1762,7 @@ const Careers = () => {
       <SEO
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+=======
     
       <SEO 
         title="Careers at Zion - Join Our Team" 
@@ -1878,6 +1893,7 @@ const Careers = () => {
                 </span>
               </button>
             ))}
+=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
@@ -1962,6 +1978,7 @@ const Careers = () => {
                         </li>
                       ))}
                     </ul>
+=======
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -2017,6 +2034,7 @@ const Careers = () => {
                     </div>
                   ))}
                 </div>
+=======
       {/* Company Culture */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2108,6 +2126,7 @@ const Careers = () => {
                         {position.requirements.slice(0, 3).map((req, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+=======
       {/* Benefits */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2132,6 +2151,7 @@ const Careers = () => {
                 <p className="text-zion-slate text-sm">
                   {benefit.description}
                 </p>
+=======
       </div>
 
       {/* Benefits Section */}
@@ -2171,6 +2191,7 @@ const Careers = () => {
                 </div>
               ))
             )}
+=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="Careers - Join Zion Tech Group" 
@@ -2375,6 +2396,7 @@ const Careers = () => {
                         <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{benefit}</span>
+=======
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO 
         title="Careers - Join Zion Tech Group" 
@@ -2418,6 +2440,7 @@ const Careers = () => {
                 <Mail className="w-5 h-5" />
               </Link>
             </div>
+=======
       description: 'Our solutions help businesses worldwide transform and succeed in the digital age.',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -2752,6 +2775,7 @@ const Careers = () => {
                       </span>
                     ))}
                   </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -3041,6 +3065,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
+=======
       {/* Open Positions */}
       <section id="open-positions" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -3171,8 +3196,11 @@ const Careers = () => {
           </div>
         </div>
 export default Careers;
+=======
 export default Careers;
+=======
 export default Careers;
+=======
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
@@ -3230,6 +3258,7 @@ export default Careers;
         </div>
       </section>
     </div>
+=======
       </main>
     
   );

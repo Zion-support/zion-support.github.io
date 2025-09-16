@@ -23,6 +23,7 @@
                 <Button
 
 
+=======
               )}
               {secondaryAction && (
                 <Button
@@ -52,6 +53,7 @@
 
 
         </div>
+=======
               )}
             </div>
           )}
@@ -77,6 +79,7 @@
         <div
           className='mt-16 md:mt-20 animate-fade-in'
 
+=======
                     {stat.value}
                   </div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -117,6 +120,7 @@
 
 
 
+=======
   );
 };
 

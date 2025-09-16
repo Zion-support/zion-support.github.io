@@ -108,6 +108,7 @@ if ( {) {
     </AppLayout>);
 }
 
+=======
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>

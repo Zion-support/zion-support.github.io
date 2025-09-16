@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Wrench
   Zap
@@ -159,7 +159,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -179,7 +179,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
             Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
             boost productivityand drive innovation across all aspects of your business.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Navigation */}
         <div className="mb-12">
@@ -215,7 +215,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <AnimatePresence mode="wait">
             {filteredTools.map((toolindex) => (
-              <div
+              <motion.div
                 key={tool.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -271,9 +271,9 @@ const AI2025ToolsUtilitiesShowcase = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          
+          </AnimatePresence>
         </div>
 
         {/* Key Features */}
@@ -281,7 +281,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((featureindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -293,13 +293,13 @@ const AI2025ToolsUtilitiesShowcase = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">{feature.text}</h4>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -320,7 +320,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

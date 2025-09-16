@@ -23,6 +23,7 @@
 
 
 
+=======
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -142,6 +143,7 @@ if ( {) {
     </ProtectedRoute>);
 }
 
+=======
           onClose={() => {
             setShowDetails(false);
             setSelectedQuote(null);

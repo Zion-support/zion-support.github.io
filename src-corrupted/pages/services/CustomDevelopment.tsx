@@ -23,6 +23,7 @@
       stack['Node.js',Python',Java',C#',Go']}, {
 
       title: 'Mobile',
+=======
       icon: Monito r,'
       stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']}, {
 '

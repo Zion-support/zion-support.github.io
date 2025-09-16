@@ -1,6 +1,6 @@
 "use client";
 import React{ useEffectuseState } from 'react';
-
+import { motionAnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   ArrowRight

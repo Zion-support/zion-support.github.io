@@ -1,4 +1,4 @@
-'
+import React, { useEffect, useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {fcp: number;'
    lcp: number;
    fid: number;
    cls: number;

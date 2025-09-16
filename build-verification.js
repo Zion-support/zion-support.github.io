@@ -7,9 +7,9 @@ try {
   // Test basic React functionality;
   const React = require('react');
   console.log('✅ React import successful', React.version);
-  // Test framer-motion - removed for build compatibility;
-  // const { motion } = require('framer-motion');
-  // console.log('✅ Framer Motion import successful', typeof motion);
+  // Test framer-motion;
+  const { motion } = require('framer-motion');
+  console.log('✅ Framer Motion import successful', typeof motion);
   // Test lucide-react icons;
   const {
     ArrowRight,
@@ -17,12 +17,19 @@ try {
     Brain,
     Cloud,
     Shield,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
     Zap} = require('lucide-react');
+=======
 
 
 
     Zap
   } = require('lucide-react');
+>>>>>>> origin/merge-pr-12271
   console.log('✅ Lucide React icons import successful', {
     "ArrowRight": typeof ArrowRight,
     "CheckCircle": typeof CheckCircle,
@@ -37,4 +44,4 @@ try {
   process.exit(1);
 }
 console.log('🏁 Build verification complete');
-// Duplicate code removed for build compatibility
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');

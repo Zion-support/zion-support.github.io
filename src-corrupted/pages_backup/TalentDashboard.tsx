@@ -83,6 +83,7 @@ import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
 
 
+=======
 
 
   const { user } = useAuth();

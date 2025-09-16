@@ -50,6 +50,7 @@ function FuturisticHero() {
   );
 }
 
+=======
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
 

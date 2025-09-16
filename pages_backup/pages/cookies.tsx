@@ -12,7 +12,7 @@
 
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
-
+import { motion } from 'framer-motion';
 import {
 
 
@@ -120,7 +120,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-
+import { motion } from 'framer-motion';
 import {;
   Shield,;
   Settings,;
@@ -782,15 +782,15 @@ if (return) {
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 

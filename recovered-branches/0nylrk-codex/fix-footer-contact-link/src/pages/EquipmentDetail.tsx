@@ -138,6 +138,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                           </li>;
                         ))}
 
+=======
                         <img 
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
@@ -291,6 +292,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                     </div>;
                   )}
                 </div>
+=======
             
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">

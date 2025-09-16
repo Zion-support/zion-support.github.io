@@ -1,6 +1,6 @@
 import React{ useState } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   SearchFilterStarUsersTrendingUp
   BrainAtomCpuShieldDatabaseCloud,
@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
+=======
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';

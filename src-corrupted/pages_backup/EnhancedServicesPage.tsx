@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award, MessageSquare, Phone, Mail, ExternalLink } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';

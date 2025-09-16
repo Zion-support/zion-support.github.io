@@ -25,6 +25,7 @@
       <SEO
         title={post.title}
         description={post.excerpt}
+=======
       default:
         return '#';
     }
@@ -129,6 +130,7 @@
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+=======
                   )}
                 </div>
               </div>
@@ -172,6 +174,7 @@
               ))}
             </div>
             <Separator className="my-12 bg-zion-blue-light" />
+=======
                   const target = e.target as HTMLImageElement;
                   target.src = "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
                 }}
@@ -237,6 +240,7 @@
               <Button
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+=======
                   ))}
                 </div>
               </div>
@@ -264,5 +268,6 @@
 
 
 
+=======
   );
 }

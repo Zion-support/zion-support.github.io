@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react',;
-
+import { motion } from 'framer-motion',;
 import { 
   Brain, Shield, Rocket, Globe, Cpu, Database, 
   TrendingUp, Users, Star, Zap, Lock, Target,
@@ -14,7 +14,7 @@ import {
     ...innovativeITServicesExpansion2025V3,
     ...innovativeAIServicesExpansion2025V3
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 import {
   Brain, Shield, Rocket, Globe, Cpu, Database

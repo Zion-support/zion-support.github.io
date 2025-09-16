@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Star, Award, TrendingUp, Users } from 'lucide-react';
 
 const contactInfo = {

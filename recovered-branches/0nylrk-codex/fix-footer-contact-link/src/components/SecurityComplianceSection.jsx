@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award } from 'lucide-react';
 const securityStandards = [
     {

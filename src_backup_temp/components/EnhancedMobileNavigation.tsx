@@ -1,14 +1,16 @@
+=======
 import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {
-
+import { motion, AnimatePresence  } from 'framer-motion';
 
  from 'lucide-react';
 
 >} from 'lucide-react';
   icon: React.ComponentType<{ size?: number; className?: string;
 }>;
+=======
   "label": "string;
   "path": string;
   "icon": React.ComponentType<{ size?: number; className?: string;
@@ -118,6 +120,7 @@ export const "EnhancedMobileNavigation": "React.FC = () => {;
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false)"}
     };
+=======
 ;
 export default function EnhancedMobileNavigation("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
@@ -267,6 +270,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 }, []);, []);
     if(isOpen) {;
       document.addEventListener('mousedown', handleClickOutside);
+=======
     setActivePath(location.pathname)}, [location]);
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -350,6 +354,7 @@ export default function EnhancedMobileNavigation(props: any) {
 ;
     setExpandedItems(new Set())};
 ;
+=======
 
     setExpandedItems(new Set())};
 
@@ -390,6 +395,7 @@ export default function EnhancedMobileNavigation(props: any) {
             <div className="flex items-center gap-3">;
               <item.icon;
                 size={20}
+=======
               <item.icon
                 size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
@@ -411,9 +417,11 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`;
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
                   isExpanded ? 'rotate-180' : ''`;
+=======
                 }`}
                />) }          </Link>
           {hasChildren && (;
+=======
             <button;
               onClick={() => toggleExpanded(item.label)}";
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light "hover": "tex t-white transition-colors"'`;
@@ -422,6 +430,7 @@ export default function EnhancedMobileNavigation(props: any) {
               <ChevronDown size={16}`;
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
                   isExpanded ? 'rotate-180' : ''`;
+=======
             <button
               onClick={() => toggleExpanded(item.label)}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: tex t-white transition-colors"'`
@@ -442,6 +451,7 @@ export default function EnhancedMobileNavigation(props: any) {
                 animate = {;
   { height: 'auto',;
   opacity: 1;
+=======
                 animate = {
   { height: 'auto',
   opacity: 1
@@ -465,6 +475,7 @@ export default function EnhancedMobileNavigation(props: any) {
                 className="overflow-hidden";
 ";
                 <div className="border-l border-zion-slate-light/20 ml-4">;
+=======
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
               </motion.div>;) };
@@ -558,6 +569,7 @@ export default function EnhancedMobileNavigation(props: any) {
                   <div className="grid grid-cols-3 gap-3">;
                     {quickActions.map(action => (;
                       <Link;
+=======
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}`
@@ -652,5 +664,6 @@ export default function EnhancedMobileNavigation(props: any) {
 </string>;
 </Set>;
 </any>;
+=======
 </Set>
 </any>

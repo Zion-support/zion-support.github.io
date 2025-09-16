@@ -105,6 +105,7 @@ export default async function handler(
     // Calculate score
     let score = 0;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface PasswordStrengthResult {
@@ -298,6 +299,7 @@ export default async function handler(
       }
       suggestions
     }
+=======
         entropy: Math.round(entropy * 100) / 100,
       },
       suggestions,

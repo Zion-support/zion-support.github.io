@@ -147,6 +147,7 @@
     </div>);
 }
 
+=======
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
                   No countries match your search
                 </TableCell>

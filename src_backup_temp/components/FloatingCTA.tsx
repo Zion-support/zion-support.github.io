@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {;
+=======
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {
@@ -81,6 +82,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 </motion>;
 </any>;
 </any>;
+=======
     </>
   )}
 '"

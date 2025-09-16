@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';

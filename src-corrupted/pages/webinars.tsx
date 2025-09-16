@@ -1,6 +1,6 @@
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom',;',';';
     ';';';';
 import { SEO } from '../components/SEO'; import { Video,; Calendar,; Clock,; Users,; Tag,; ArrowRight,; Play,; ExternalLink,; Search,; Filter,; Star,; TrendingUp,; Brain,; Shield,; Cloud,; Zap,; Globe,; BookOpen,; Award, CheckCircle} from 'lucide-react',',';';
     ';';';';
@@ -18,7 +18,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { motion    } from 'framer-motion'; import { Link    } from 'react-router-dom',;',';';
     ';';';';
 import { SEO } from '../components/SEO'; import { Video,; Calendar,; Clock,; Users,; Tag,; ArrowRight,; Play,; ExternalLink,; Search,; Filter,; Star,; TrendingUp,; Brain,; Shield,; Cloud,; Zap,; Globe,; BookOpen,; Award, CheckCircle} from 'lucide-react',',';';
     ';';';';
@@ -36,7 +36,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { motion } from 'framer-motion'; import { Link } from 'react-router-dom',;',';';
     ';';';';
 import { SEO } from '../components/SEO'; import { Video,; Calendar,; Clock,; Users,; Tag,; ArrowRight,; Play,; ExternalLink,; Search,; Filter,; Star,; TrendingUp,; Brain,; Shield,; Cloud,; Zap,; Globe,; BookOpen,; Award, CheckCircle} from 'lucide-react',',';';
     ';';';';
@@ -73,7 +73,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { motion    } from 'framer-motion'; import { Link    } from 'react-router-dom',;',';';
     ';';';';
 import { SEO } from '../components/SEO'; import { Video,; Calendar,; Clock,; Users,; Tag,; ArrowRight,; Play,; ExternalLink,; Search,; Filter,; Star,; TrendingUp,; Brain,; Shield,; Cloud,; Zap,; Globe,; BookOpen,; Award, CheckCircle} from 'lucide-react',',';';
     ';';';';

@@ -13,6 +13,7 @@
 
   
   ;
+=======
 '
   marketSize: '$2.8 billion','
     growthRate: '23.4% CAGR','
@@ -728,6 +729,7 @@
 </motion>
 </motion>
 </SEO>
+=======
 import React from 'react';
 
 export default function SmartContractRiskScanner() {

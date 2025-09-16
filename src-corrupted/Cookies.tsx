@@ -1,4 +1,5 @@
 import { SEO } from '@/components/SEO';
+=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -190,6 +191,7 @@ export default function Cookies() {
                   </div>
                   <p className="text-zion-slate-light">
                     Check your browser's help section for specific instructions on managing cookies.
+=======
       <SEO
         title="Cookie Policy | Zion Tech Group"
         description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience"
@@ -354,10 +356,11 @@ export default function Cookies() {
             </div>
           </div>
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react';
+=======
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
 
 export default function Cookies() {
@@ -622,6 +625,7 @@ export default function Cookies() {
       </main>
       <Footer />
     </>
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -901,6 +905,7 @@ export default function Cookies() {
         </section>
       </div>
     </div>
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';

@@ -73,6 +73,7 @@ export default function MarketplaceProducts(props: any) {
   
       case 'price-low':
         return a.price - b.price;
+=======
         );'      case 'price-low':
         return a.price - b.price;'
       case 'price-high':

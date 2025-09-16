@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 const TranscendentAI2026: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -198,7 +198,6 @@ const TranscendentAI2026: React.FC = () => {
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
               </div>
-              </div>
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -265,11 +264,6 @@ const TranscendentAI2026: React.FC = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-
-              </div>
             </div>
           </div>
         </div>
@@ -465,8 +459,6 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </div>
 
-              </div>
-        {/* Revolutionary Applications */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -643,12 +635,6 @@ const TranscendentAI2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore the revolutionary capabilities that define transcendent AI
             </p>
-          </div>
-        </motion.section>
-
-          </div>
-        </motion.section>
-
           </div>
         </motion.section>
 

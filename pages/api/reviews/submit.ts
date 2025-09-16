@@ -38,6 +38,7 @@ if ( {) {
 
       };
 
+=======
 
     }
     const project = await findProjectById(projectId);
@@ -47,10 +48,12 @@ if ( {) {
       });
     }
 
+=======
       return res.status(404).json({ error: 'Project not found' })
     }
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
+=======
 
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
@@ -71,7 +74,9 @@ if ( {) {
 
         error: "You have already submitted a review for this project",
       });
+=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
+=======
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
@@ -85,12 +90,14 @@ if ( {) {
       .json({ error: "Internal server error", details: error?.message });
   }
 }
+=======
       id: uuidv4(),
       projectId,
       fromRole,
       fromId,
       toRole,
       toId,
+=======
     const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
@@ -104,6 +111,7 @@ if ( {) {
       categories,
 
       reported: false, reports: [],
+=======
 
       id: uuidv4(),
       projectId,

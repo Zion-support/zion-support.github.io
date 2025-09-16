@@ -1,4 +1,4 @@
-
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
 > {
@@ -11,6 +11,7 @@ showStats: tru e,;
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
+=======
   const [stats, setStats] = useState<FeedbackStats>({;
     "totalFeedback": "0",;
     "averageRating": "0",;
@@ -242,6 +243,7 @@ showStats: tru e,;
         date: '2024-01-05',;
         helpful: 2 8,;
         unhelpful: 1,;
+=======
         helpful: 2 8,
         unhelpful: 1,
         tags['AI',Efficiency',Implementation'],;
@@ -284,6 +286,7 @@ showStats: tru e,;
     let filtered = feedback;
 ;
     if(selectedCategory !== 'all') {;
+=======
     let filtered = feedback;
     if(selectedCategory !== 'all') {
 
@@ -321,6 +324,7 @@ showStats: tru e,;
     "};
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' });
+=======
     const feedback: Feedbac k = {
   id: Dat e.now().toString(),
       customerName: 'Anonymous Customer',
@@ -341,6 +345,7 @@ showStats: tru e,;
       date: new Date().toISOString().split('T')[0],;
       helpful: 0,;
       unhelpful: 0,;
+=======
       tags: [],;
   ;
   ;
@@ -382,6 +387,7 @@ showStats: tru e,;
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
 ;
   // Get category color;
+=======
   ;
   ;
 '
@@ -489,6 +495,7 @@ showStats: tru e,;
           </motion.div>;
         </div>) }
 ;
+=======
         </div>) }
 
       {/* Top Categories */}
@@ -523,6 +530,7 @@ showStats: tru e,;
           {/* Category Filter */}
           <select
             value={selectedCategory}
+=======
           </button>;
         </div>) "}
 ;
@@ -628,6 +636,7 @@ showStats: tru e,;
                         />;
                       </button>;) ) }                  </div>;
                 </div>;
+=======
                         onClick={ () => setNewFeedback(prev => ({ ...prev,
   rating: sta r
 }))}"
@@ -640,6 +649,7 @@ showStats: tru e,;
                         className="p-2 hover: scal e-110 transition-transform";
                         <Star`;
                           className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+=======
                           }`}
                         />
                       </button>;) ) }                  </div>
@@ -677,6 +687,7 @@ showStats: tru e,;
                     <option value="support">Customer Support</option>;
                   </select>;
                 </div>;
+=======
                 {/* Comment */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
@@ -759,6 +770,7 @@ showStats: tru e,;
                 <Star key={star}`;
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
+=======
             <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;
                 <Star key={star}`
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
@@ -837,6 +849,7 @@ showStats: tru e,;
               <button className="text-zinc-400 hover: tex t-red-400 transition-colors">";
                 <Flag className="w-4 h-4"   />              </button>;
             </div>;
+=======
           </motion.div>) ) }
       </div>
       {/* No Results */}
@@ -900,6 +913,7 @@ showStats: tru e,;
 </Feedback>;
 </Feedback>;
 </CustomerFeedbackSystemProps>;
+=======
 </Feedback>
 </Feedback>
 </CustomerFeedbackSystemProps>

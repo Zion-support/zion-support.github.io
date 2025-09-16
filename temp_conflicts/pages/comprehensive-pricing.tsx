@@ -6,7 +6,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');

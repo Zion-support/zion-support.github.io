@@ -10,7 +10,8 @@
         setIsSubmitting(false);
 ;
 import React, { useState } from 'react';
-
+import { motion  } from 'framer-motion';
+=======
   const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
@@ -43,8 +44,9 @@ import React, { useState } from 'react';
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import React, { useState } from 'react';
-
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
+=======
         viewport={{ "once": "tru e "}}
 ";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-16 items-center">;
@@ -314,6 +316,7 @@ export function ITServiceRequestHero(props: any) {
 </motion>;
 </any>;
 </any>;
+=======
 </motion>
 </any>
 </any>

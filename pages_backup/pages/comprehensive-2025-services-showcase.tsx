@@ -6,7 +6,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
@@ -22,7 +22,7 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
 
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
-
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
@@ -100,7 +100,7 @@ export default function Comprehensive2025ServicesShowcase() {
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;

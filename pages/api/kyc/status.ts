@@ -19,6 +19,7 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
 
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import type { KycProfile } from "../../../utils / kyc";
 import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';
@@ -42,11 +43,13 @@ function load (): Record < string, KycProfile> {
 
 }
 
+=======
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role)})
 
 }
+=======
 export default /**
  * handler - Function description
  */
@@ -71,5 +74,6 @@ function handler() {
     optional_documents: getOptionalDocuments (profile.role),
   });
 }
+=======
 
 

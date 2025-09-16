@@ -60,6 +60,7 @@ import React from 'react';
                   <li>• Creative AI tools</li>
                 </ul>
               </Card>
+=======
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
@@ -354,6 +355,7 @@ export default function AI2025UltimateBreakthroughTrends() {
           </div>
         </section>
       </div>
+=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">7. AI-Powered Personalization at Scale</h2>
           <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-6">

@@ -11,6 +11,7 @@ function PortfolioBuilderContent() {
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
         description="Create and customize your resume and portfolio to showcase your skills and experience."
+=======
 import { useState } from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -53,6 +54,7 @@ export default function PortfolioBuilder() {
 
 
 
+=======
     <ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>

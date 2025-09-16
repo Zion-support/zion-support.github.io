@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain, Atom, Rocket, Cloud, Target, Users, TrendingUp, CheckCircle } from 'lucide-react';
 
 interface UltraFuturisticServiceCard2047Props {

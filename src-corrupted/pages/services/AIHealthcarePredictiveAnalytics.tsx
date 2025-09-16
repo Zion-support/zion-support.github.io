@@ -19,6 +19,7 @@
   
         'Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations'
       ],;
+=======
       features[;'
         'Up to 1,000 patients','
         'Basic predictive analytics','

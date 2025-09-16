@@ -2,6 +2,7 @@
 
 
 } from "@/components/ui/dialog";
+=======
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -89,6 +90,7 @@ interface Integration {;
 interface IntegrationConnectionModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
+=======
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 
@@ -131,6 +133,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+=======
         
         {(integration.status === "connected" || integration.status === "warning") ? (
           <>
@@ -188,6 +191,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 onClick={handleDisconnect}
                 type="button"
               >
+=======
             
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
@@ -208,6 +212,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+=======
                 Connect your {integration.name} account to sync job contacts, applicants, and more. 
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
@@ -235,6 +240,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </DialogFooter>
           </>
 
+=======
             
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>

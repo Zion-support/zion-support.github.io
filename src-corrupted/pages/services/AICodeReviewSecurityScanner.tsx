@@ -11,6 +11,7 @@
         'Custom workflows',;
         'On-premise deployment';
       ],;
+=======
         'Unlimited repositories','
         'Custom AI models','
         'White-label solutions','
