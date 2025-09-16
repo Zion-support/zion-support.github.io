@@ -172,7 +172,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       
       <Footer />
 =======
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {

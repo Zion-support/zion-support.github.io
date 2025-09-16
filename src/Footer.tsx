@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             <div className="flex items-center space-x-2 mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 =======
             <p className="text-gray-400 mb-4 max-w-md">
               Leading the future of technology with AI, blockchain, and innovative solutions that transform industries.
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
                   Quantum Computing
                 </a>
               </li>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             </ul>
           </div>
 
@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
         </div>
       </div>
     </footer>

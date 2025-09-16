@@ -45,7 +45,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
       <div className="text-center mb-8">
         <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-4">
           🚀 INTERACTIVE TECH SHOWCASE 2025
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
         </div>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Revolutionary Technologies</h2>
         <p className="text-xl text-gray-600">Click on each technology to discover its groundbreaking capabilities</p>
@@ -87,7 +87,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       </div>
 
       {/* Active Technology Display */}

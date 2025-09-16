@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-6eae
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -112,7 +115,10 @@ const Header = () => {
             </nav>
           </div>
         )}
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36c0
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-6eae
       </div>
     </header>
   );

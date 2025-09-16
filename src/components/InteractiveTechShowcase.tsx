@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const technologies = [
     {
+<<<<<<< HEAD
       id: 1,
       title: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
@@ -15,23 +14,21 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AIInnovationHub2026"
+=======
+      name: 'Quantum Consciousness 2028',
+      icon: '🧠',
+      description: 'AI systems that achieve true self-awareness through quantum entanglement',
+      color: 'from-purple-500 to-pink-500'
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
     },
     {
-      id: 2,
-      title: "Quantum Computing Breakthrough",
-      description: "Witness computing power that defies imagination - solving impossible problems in seconds.",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      features: [
-        "1000x faster than supercomputers",
-        "Unbreakable quantum cryptography",
-        "Molecular simulation at quantum scale",
-        "Reality-bending computational power"
-      ],
-      link: "/pages/QuantumComputingBreakthrough2025",
-      isNew: true
+      name: 'Neural Reality Engine 2030',
+      icon: '🌌',
+      description: 'Fully immersive consciousness-driven virtual worlds',
+      color: 'from-cyan-500 to-blue-500'
     },
     {
+<<<<<<< HEAD
       id: 3,
       name: "Analytics Dashboard 2026",
       description: "AI-powered analytics with real-time insights and predictive modeling",
@@ -273,21 +270,26 @@ const InteractiveTechShowcase: React.FC = () => {
     return () => clearInterval(interval);
   }, [technologies.length]);
 
+=======
+      name: 'Interdimensional Tech 2030',
+      icon: '🌌',
+      description: 'Travel and communicate across parallel universes',
+      color: 'from-violet-500 to-purple-500'
+    }
+  ];
+
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
   const currentTech = technologies[activeTech];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our cutting-edge technologies with interactive demonstrations and real-time metrics
-          </p>
+    <div className="mb-16">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-6">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-300">Click through our revolutionary technologies</p>
         </div>
 
+<<<<<<< HEAD
         {/* Technology Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
@@ -672,6 +674,33 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
+=======
+        <div className="flex justify-center space-x-4 mb-12">
+          {technologies.map((tech, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTech(index)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeTech === index
+                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                  : 'bg-white/20 text-gray-300 hover:bg-white/30'
+              }`}
+            >
+              <span className="text-2xl mr-2">{tech.icon}</span>
+              {tech.name}
+            </button>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+          <div className="text-center">
+            <div className="text-8xl mb-6">{currentTech.icon}</div>
+            <h3 className="text-4xl font-bold mb-6">{currentTech.name}</h3>
+            <p className="text-xl text-gray-300 mb-8">{currentTech.description}</p>
+            <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300`}>
+              Explore Technology →
+            </button>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
         </div>
       </div>

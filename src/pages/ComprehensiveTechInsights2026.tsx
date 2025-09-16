@@ -314,7 +314,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
                 View Interactive Dashboard
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
               </button>
             </div>
           </motion.div>
@@ -532,7 +532,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
     </>
 =======
     </div>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
   );
 };
 

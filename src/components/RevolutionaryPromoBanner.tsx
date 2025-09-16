@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryPromoBanner: React.FC = () => {
+<<<<<<< HEAD
+=======
   const [currentPromo, setCurrentPromo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -25,11 +27,14 @@ const RevolutionaryPromoBanner: React.FC = () => {
       link: "/pages/ConsciousnessComputing2026",
       color: "from-emerald-600 to-cyan-600",
       icon: "🧠"
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
+<<<<<<< HEAD
+=======
       setIsAnimating(true);
       setTimeout(() => {
         setCurrentPromo((prev) => (prev + 1) % promos.length);
@@ -126,6 +131,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
           
           {/* Navigation Dots */}
@@ -142,6 +148,11 @@ const RevolutionaryPromoBanner: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+            }`}
+          />
+        ))}
+=======
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {promos.map((promo, index) => (
@@ -183,6 +194,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
             </a>
           </div>
         </div>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       </div>
     </div>
   );

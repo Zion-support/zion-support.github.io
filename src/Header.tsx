@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
               Get Started
             </button>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
         </div>
       </div>

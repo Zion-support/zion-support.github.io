@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 =======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -294,7 +294,7 @@ const PerformanceMonitor: React.FC = () => {
         <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
           Settings
         </button>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
       </div>
     </div>
   );

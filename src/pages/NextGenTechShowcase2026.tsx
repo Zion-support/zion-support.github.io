@@ -42,7 +42,7 @@ import {
   Globe as World
 } from 'lucide-react';
 =======
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);

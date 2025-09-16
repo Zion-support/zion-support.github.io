@@ -55,7 +55,7 @@ const NextGenAIRevolution2026: React.FC = () => {
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Agents</h3>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             <p className="text-purple-100 mb-6 text-center">
               Self-learning AI agents that can independently execute complex tasks, make decisions, and adapt to new challenges in real-time
             </p>
@@ -112,7 +112,7 @@ const NextGenAIRevolution2026: React.FC = () => {
 =======
         {/* Industry Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-20">
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🏭 Industry Transformations</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -159,7 +159,7 @@ const NextGenAIRevolution2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
             </button>
->>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
         </div>
       </div>
