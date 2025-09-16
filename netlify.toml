@@ -1,6 +1,7 @@
 # This is a VITE project, NOT a Next.js project
 # The build process uses Vite to create a static site in the 'dist' folder
 # No Next.js plugins or configurations are needed
+# Configuration updated to resolve merge conflicts
 
 [build]
   # Use `npm install` for consistent dependency management, Vite builds to dist/
