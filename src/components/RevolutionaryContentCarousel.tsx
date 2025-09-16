@@ -12,10 +12,26 @@ import {
   Infinity,
   Eye,
   Heart,
-  Rocket,
   Zap,
+  Rocket,
+  Globe,
+  Cpu,
+  Database,
   Shield,
-  Globe
+  Target,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  Award,
+  Gauge,
+  CircuitBoard,
+  CpuChip,
+  Layers,
+  Lightbulb,
+  Puzzle,
+  Activity,
+  Waves,
+  Hexagon
 } from 'lucide-react';
 
 const RevolutionaryContentCarousel: React.FC = () => {
@@ -57,7 +73,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/FutureTechBreakthrough2026",
       status: "Breakthrough",
-      impact: "Unprecedented"
+      impact: "Revolutionary"
     },
     {
       id: 3,
@@ -133,6 +149,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
     }
   ];
 
+  const stats = [
+    { number: '∞', label: 'Computational Power', icon: Zap },
+    { number: '0ms', label: 'Processing Latency', icon: Gauge },
+    { number: '100%', label: 'Accuracy Rate', icon: Target },
+    { number: '∞', label: 'Learning Capacity', icon: Brain },
+    { number: '∞', label: 'Storage Capacity', icon: Database },
+    { number: '∞', label: 'Reality Simulations', icon: Globe }
+  ];
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -154,6 +178,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
     setCurrentSlide(index);
   };
 
+  const currentContent = revolutionaryContent[currentSlide];
+
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
@@ -165,7 +191,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className={`relative bg-gradient-to-br ${revolutionaryContent[currentSlide].bgColor} text-white overflow-hidden`}
+            className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
           >
             {/* Animated Background */}
             <div className="absolute inset-0">
@@ -206,16 +232,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   >
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
                       <Sparkles className="w-4 h-4" />
-                      <span className="text-sm font-semibold">{revolutionaryContent[currentSlide].status}</span>
+                      <span className="text-sm font-semibold">{currentContent.status}</span>
                     </div>
                     <h2 className="text-4xl md:text-6xl font-bold mb-4">
-                      {revolutionaryContent[currentSlide].title}
+                      {currentContent.title}
                     </h2>
                     <p className="text-xl md:text-2xl text-white/90 mb-6">
-                      {revolutionaryContent[currentSlide].subtitle}
+                      {currentContent.subtitle}
                     </p>
                     <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                      {revolutionaryContent[currentSlide].description}
+                      {currentContent.description}
                     </p>
                   </motion.div>
 
@@ -227,7 +253,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     className="mb-8"
                   >
                     <ul className="space-y-3">
-                      {revolutionaryContent[currentSlide].features.map((feature, index) => (
+                      {currentContent.features.map((feature, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -20 }}
@@ -250,7 +276,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <a
-                      href={revolutionaryContent[currentSlide].link}
+                      href={currentContent.link}
                       className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-white/90 transition-all duration-300 font-semibold text-lg group"
                     >
                       <Play className="w-5 h-5" />
@@ -271,8 +297,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="relative"
                   >
-                    <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${revolutionaryContent[currentSlide].color} rounded-3xl flex items-center justify-center shadow-2xl`}>
-                      <revolutionaryContent[currentSlide].icon className="w-16 h-16 text-white" />
+                    <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
+                      <currentContent.icon className="w-16 h-16 text-white" />
                     </div>
                     
                     {/* Floating Elements */}

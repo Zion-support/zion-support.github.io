@@ -46,12 +46,6 @@ const RevolutionaryContentBanner2033: React.FC = () => {
             <div className="text-6xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold mb-3">Quantum Consciousness</h3>
             <p className="text-sm opacity-90 mb-4">
-<<<<<<< HEAD
-              The fusion of quantum mechanics and human consciousness
-            </p>
-            <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Experience Quantum Consciousness →
-=======
               The evolution of consciousness through quantum mechanics and AI integration
             </p>
             <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
@@ -67,7 +61,6 @@ const RevolutionaryContentBanner2033: React.FC = () => {
             </p>
             <a href="/pages/RealityManipulationEngine2033" className="inline-block bg-white text-indigo-600 px-6 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Manipulate Reality →
->>>>>>> cursor/create-and-deploy-new-content-1ad7
             </a>
           </div>
         </div>
@@ -91,12 +84,9 @@ const RevolutionaryContentBanner2033: React.FC = () => {
             </a>
             <a href="/pages/TranscendentAI2033" className="bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30">
               🧠 Discover Transcendent AI →
-<<<<<<< HEAD
-=======
             </a>
             <a href="/pages/UniversalTechRevolution2033" className="bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg border border-white/30">
               🌌 Universal Tech →
->>>>>>> cursor/create-and-deploy-new-content-1ad7
             </a>
           </div>
         </div>
