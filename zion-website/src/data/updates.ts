@@ -2984,6 +2984,15 @@ export const updates: UpdateItem[] = [
     tag: 'Announcement',
   },
   {
+    id: 'ai-governance-toolkit-v3',
+    title: 'Launch: AI Governance Toolkit v3',
+    summary:
+      'Expanded policy-as-code templates, eval gates, and audit-ready evidence packs for enterprise AI.',
+    href: '/updates/ai-governance-toolkit-v3',
+    date: '2025-09-16',
+    tag: 'Release',
+  },
+  {
     id: 'quantum-partnership-announcement',
     title: 'Partnership: Quantum Computing Center of Excellence',
     summary:

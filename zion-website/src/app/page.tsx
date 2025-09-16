@@ -589,6 +589,9 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
               <span className="mx-2 text-blue-300/60">|</span>
+              AI Governance Toolkit v3 —
+              <a href="/updates/ai-governance-toolkit-v3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">governance toolkit</a>
+              <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
 =======
