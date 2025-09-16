@@ -1,104 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Sparkles
-  TrendingUp
-  Target
-  Users
-  Clock
-  Star,
-  ArrowRight,
-  BookOpen,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  Eye,
-  Tag,
-  Calendar,
-  User,
-  Zap,
-  Cpu,
-  Globe,
-  Database,
-  Cloud,
-  Shield,
-  CheckCircle,
-  AlertCircle,
-  RefreshCw,
-  Filter,
-  Search,
-  Settings,
-  BarChart3,
-  Activity,
-  Lightbulb,
-  Rocket,
-  Award,
-  ThumbsUp
-} from 'lucide-react';
-
-const AIPoweredContentRecommendationSystemPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    'AI-Powered Personalization',
-    'Real-Time Content Analysis',
-    'Smart Recommendation Engine',
-    'Behavioral Pattern Recognition',
-    'Engagement Optimization',
-    'Cross-Platform Content Discovery'
-  ];
-
-  const stats = [
-    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target },
-    { value: '98.7%'label: ''Personalization', 'icon: Users },
-    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp },
-    { value: '1,247'label: 'Content 'Matched', 'icon: Database }
-  ];
-
-  const recommendationTypes = [
-    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' },
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' },
-    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' },
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' },
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' },
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: 'Neural Pattern Recognition',
-      description: 'Advanced AI algorithms analyze your reading patterns and preferences',
-      icon: Brain,
-      accuracy: '94.2%'
-    },
-    {
-      title: 'Behavioral Analysis',
-      description: 'Machine learning models understand your content consumption habits',
-      icon: Users,
-      accuracy: '98.7%'
-    },
-    {
-      title: 'Content Optimization',
-      description: 'AI continuously optimizes recommendations based on engagement data',
-      icon: TrendingUp,
-      accuracy: '+67%'
-    },
-    {
-      title: 'Real-Time Processing',
-      description: 'Instant content analysis and recommendation generation',
-      icon: Zap,
-      accuracy: '<100ms'
-    }
-  ];
-
+const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
       {/* Background Pattern */}
@@ -113,7 +15,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
@@ -145,10 +47,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </divdiv>
+        </div>
 
         {/* AI Stats */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           {stats.map((statindex) => (
@@ -160,10 +62,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* AI Capabilities */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {aiCapabilities.map((capabilityindex) => (
@@ -180,10 +82,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <p className="text-blue-100 text-sm">{capability.description}</p>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Features Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {features.map((featureindex) => (
@@ -199,10 +101,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Content Types Showcase */}
-        <divdiv
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -221,10 +123,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* AI Demo Section */}
-        <divdiv
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -294,10 +196,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -321,7 +223,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

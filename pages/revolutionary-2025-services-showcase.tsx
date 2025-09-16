@@ -1,153 +1,21 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code,
-  Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-// Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',
-
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = [
-  {
-    id: 'ai-consciousness',
-    title: '🧠 AI Consciousness & Emotional Intelligence',
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20'
-  },
-  {
-    id: 'quantum-emerging',
-    title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
-    icon: Atom,
-    color: 'from-blue-500 to-cyan-500',
-    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  },
-  {
-    id: 'space-tech',
-    title: '🚀 Space Technology & Satellite',
-    description: 'Space mission management and satellite operations',
-    icon: Rocket,
-    color: 'from-indigo-500 to-blue-500',
-    services: allServices.filter(s => s.category.includes('Space Technology')),
-    gradient: 'from-indigo-500/20 to-blue-500/20'
-  },
-  {
-    id: 'cybersecurity',
-    title: '🔒 Next-Generation Cybersecurity',
-    description: 'Quantum encryption and AI threat detection',
-    icon: Shield,
-    color: 'from-red-500 to-pink-500',
-    services: allServices.filter(s => s.category.includes('Cybersecurity')),
-    gradient: 'from-red-500/20 to-pink-500/20'
-  },
-  {
-    id: 'cloud-infrastructure',
-    title: '☁️ Quantum Cloud & Infrastructure',
-    description: 'Quantum-enhanced cloud computing and infrastructure',
-    icon: Cloud,
-    color: 'from-cyan-500 to-blue-500',
-    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
-    gradient: 'from-cyan-500/20 to-blue-500/20'
-  },
-  {
-    id: 'fintech',
-    title: '🏦 Financial Technology Revolution',
-    description: 'AI-powered trading and quantum risk management',
-    icon: DollarSign,
-    color: 'from-green-500 to-emerald-500',
-    services: allServices.filter(s => s.category.includes('Financial Technology')),
-    gradient: 'from-green-500/20 to-emerald-500/20'
-  },
-  {
-    id: 'industrial-iot',
-    title: '🏭 Industrial IoT & Smart Manufacturing',
-    description: 'Zero downtime manufacturing and predictive maintenance',
-    icon: Building2,
-    color: 'from-gray-500 to-slate-500',
-    services: allServices.filter(s => s.category.includes('Industrial IoT')),
-    gradient: 'from-gray-500/20 to-slate-500/20'
-  },
-  {
-    id: 'edtech',
-    title: '🎓 Education Technology Revolution',
-    description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
-    icon: Users,
-    color: 'from-blue-500 to-cyan-500',
-    services: allServices.filter(s => s.category.includes('Education Technology')),
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  },
-  {
-    id: 'sustainability',
-    title: '🌱 Sustainability & Green Technology',
-    description: 'AI-powered environmental solutions for carbon neutrality',
-    icon: Globe,
-    color: 'from-green-500 to-emerald-500',
-    services: allServices.filter(s => s.category.includes('Sustainability')),
-    gradient: 'from-green-500/20 to-emerald-500/20'
-  },
-  {
-    id: 'logistics',
-    title: '🚛 Logistics & Supply Chain',
-    description: '99.9% delivery accuracy and zero waste supply chain',
-    icon: Package,
-    color: 'from-orange-500 to-red-500',
-    services: allServices.filter(s => s.category.includes('Logistics')),
-    gradient: 'from-orange-500/20 to-red-500/20'
-  }
-],
-
-export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [viewMode, setViewMode] = useState('grid'),
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
-    return matchesSearch && matchesCategory,
-  }),
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
-      case 'rating':
-        return b.rating - a.rating,
-      case 'customers':
-        return b.customers - a.customers,
-      default: return b.popular ? 1 : -1
-    }
-  }),
-
+const revolutionary-2025-services-showcase: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>revolutionary-2025-services-showcase | Zion Tech Group</title>
+        <meta name="description" content="revolutionary-2025-services-showcase - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">revolutionary-2025-services-showcase</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+=======
     <>
       <Head>
         <title>Revolutionary 2025 Services Showcase | Zion Tech Group</title>
@@ -595,7 +463,10 @@ export default function Revolutionary2025ServicesShowcase() {
             </motion.div>
           </div>
         </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default revolutionary-2025-services-showcase;

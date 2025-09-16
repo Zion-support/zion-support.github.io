@@ -1,44 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  ArrowRight
-  Star,
-  Sparkles,
-  Target,
-  Clock
-} from 'lucide-react';
-
-const AI2025TrendsInnovationPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const stats = [
-    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
-    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
-    { icon: Zapvalue: "60%"label: "Faster Processing" },
-    { icon: Targetvalue: "95%"label: "Success Rate" }
-  ];
-
-  const features = [
-    "Generative AI Revolution",
-    "Edge AI Computing"
-    "Quantum AI Integration",
-    "Predictive Analytics"
-  ];
-
+const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -51,7 +13,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -78,13 +40,13 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             {/* Features List */}
             <div className="space-y-4">
               {features.map((featureindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center space-x-3"
                 >
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
                   <span className="text-gray-300 text-lg">{feature}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
 
@@ -104,10 +66,10 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 Limited Time
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Stats Display */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Main Stats Card */}
@@ -119,7 +81,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
               {/* Animated Stat Display */}
               <div className="text-center mb-8">
-                <divdiv
+                <div
                   key={currentStat}
                   className="space-y-4"
                 >
@@ -132,7 +94,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                   <div className="text-gray-300 text-lg">
                     {stats[currentStat].label}
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Progress Indicators */}
@@ -149,22 +111,22 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
               <Zap className="w-6 h-6 text-white" />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
@@ -178,10 +140,11 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               <span>✓ ROI Guarantee</span>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default AI2025TrendsInnovationPromotionBanner;
+</div></div></div>

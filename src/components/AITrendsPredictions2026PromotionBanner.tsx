@@ -1,47 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Globe
-  Shield,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Calendar,
-  Target,
-  X
-} from 'lucide-react';
-
-const AITrendsPredictions2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
-  const predictions = [
-    { icon: Brainlabel: 'Quantum 'AI', 'confidence: '95%' },
-    { icon: Zaplabel: 'Neural 'Interfaces', 'confidence: '88%' },
-    { icon: Shieldlabel: 'Autonomous 'Systems', 'confidence: '92%' },
-    { icon: Globelabel: 'AI 'Consciousness', 'confidence: '75%' }
-  ];
-
+const AITrendsPredictions2026PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white overflow-hidden"
         >
           {/* Animated Background */}
@@ -49,7 +12,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-purple-600/20" />
             <div className="absolute inset-0">
               {[...Array(15)].map((_i) => (
-                <divdiv
+                <div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
                   style={{
@@ -72,7 +35,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <div
                   className="flex items-center justify-center lg:justify-start mb-3"
                 >
                   <div className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-sm font-semibold mr-4">
@@ -84,7 +47,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                </divdiv>
+                </div>
 
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
@@ -99,7 +62,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
                 </divp>
 
                 {/* Prediction Icons */}
-                <divdiv
+                <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
                 >
                   {predictions.map((predictionindex) => (
@@ -109,11 +72,11 @@ const AITrendsPredictions2026PromotionBanner = () => {
                       <span className="text-xs text-cyan-300 ml-2">({prediction.confidence})</span>
                     </div>
                   ))}
-                </divdiv>
+                </div>
               </div>
 
               {/* Right Content - CTA */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row items-center gap-4"
               >
                 <div className="text-center sm:text-right">
@@ -126,7 +89,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
                   View Predictions
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
+              </div>
 
               {/* Dismiss Button */}
               <divbutton
@@ -139,11 +102,11 @@ const AITrendsPredictions2026PromotionBanner = () => {
           </div>
 
           {/* Progress Bar */}
-          <divdiv
+          <div
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 origin-left"
             style={{ width: '100%' }}
           />
-        </divdiv>
+        </div>
       )}
     </div>
   );

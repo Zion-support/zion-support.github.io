@@ -1,43 +1,12 @@
+import React from 'react';
 
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-
-interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-}
-
-export function TimelineField({ form }: TimelineFieldProps) {
-  const timelineOptions = [
-  ];
-
+const TimelineField: React.FC = () => {
   return (
-    <FormField
-      control={form.control}
-      name="timeline"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Timeline</FormLabel>
-          <FormControl>
-            <Select 
-              onValueChange={field.onChange} 
-              value={field.value}
-              defaultValue={field.value}
-            >
-              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">
-                <SelectValue placeholder="Select estimated timeline" />
-              </SelectTrigger>
-              <SelectContent>
-                {timelineOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TimelineField</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default TimelineField;

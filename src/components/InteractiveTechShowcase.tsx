@@ -63,7 +63,7 @@ const InteractiveTechShowcase: React.FC = () => {
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
-        <divdiv
+        <div
           key={activeTech}
           className="space-y-8"
         >
@@ -121,12 +121,12 @@ const InteractiveTechShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
-            <divdiv
+            <div
               key={tech.id}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
@@ -140,7 +140,7 @@ const InteractiveTechShowcase: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
               
               {hoveredCard === index && (
-                <divdiv
+                <div
                   className="space-y-2"
                 >
                   {tech.features.slice(0, 2).map((feature, featureIndex) => (
@@ -149,9 +149,9 @@ const InteractiveTechShowcase: React.FC = () => {
                       {feature}
                     </div>
                   ))}
-                </divdiv>
+                </div>
               )}
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
@@ -521,18 +521,18 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="relative h-full min-h-[400px]">
               <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
               <div className="relative z-10 flex items-center justify-center h-full">
-                <divdiv
+                <div
                   key={activeTech}
                   className="text-9xl"
                 >
                   {currentTech.icon}
-                </divdiv>
+                </div>
               </div>
               
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
@@ -787,7 +787,7 @@ const InteractiveTechShowcase: React.FC = () => {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🧪</div>
@@ -796,9 +796,9 @@ const InteractiveTechShowcase: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Simulation
               </button>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">📊</div>
@@ -807,9 +807,8 @@ const InteractiveTechShowcase: React.FC = () => {
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Analytics
               </button>
-            </divdiv>
+            </div>
 export default InteractiveTechShowcase;
-
               {/* Demo Button */}
               <div className="text-center">
                 <motion.a
@@ -820,13 +819,3 @@ export default InteractiveTechShowcase;
                 >
                   <span className="mr-2">{currentTech.demo}</span>
                   <span>→</span>
-                </motion.a>
-              </div>
-            </div>
-          </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-

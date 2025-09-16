@@ -97,7 +97,7 @@ import {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Experience our revolutionary technologies through interactive demonstrations and real-time simulations
           </p>
-        </divdiv>
+        </div>
 
                 </button>
               ))}
@@ -194,7 +194,7 @@ import {
               
               <div className="space-y-4">
                 {currentDemo.features.map((featureindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
                     onClick={() => setSelectedFeature(feature)}
@@ -202,7 +202,7 @@ import {
                     <div>
                       <p className="text-white font-medium">{feature.name}</p>
                       <div className="w-32 h-2 bg-white/10 rounded-full mt-2">
-                        <divdiv
+                        <div
                           className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
                         />
                       </div>
@@ -213,7 +213,7 @@ import {
                         <span className="text-sm text-gray-400 ml-1">{feature.unit}</span>
                       </p>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -223,7 +223,7 @@ import {
                 <span className="text-purple-300 font-mono">{demoData.consciousnessLevel.toFixed(1)}%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-3">
-                <motion.div
+                <div
                   className="bg-gradient-to-r from-purple-400 to-pink-400 h-3 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${demoData.consciousnessLevel}%` }}
@@ -259,7 +259,7 @@ import {
               <div className="text-sm text-gray-300">Cross-dimensional speed</div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

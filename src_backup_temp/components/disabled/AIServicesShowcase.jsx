@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const AIServicesShowcase: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AIServicesShowcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AIServicesShowcase;
+=======
 
     ' }''' "return": "(<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">'",',;';';
     ' {}''' <"div": "className="absolute inset-0">''' <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20 animate-pulse"></div>''' <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce"></div>''' <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-ping"></div>' </div>''' <div className="container mx-auto px-4 relative z-10">'",;',';';
@@ -203,3 +217,4 @@ import React {useState} from &apos;',';';
 const React {useState} from "react" ""`"`
 import { useState } from 'react';,
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

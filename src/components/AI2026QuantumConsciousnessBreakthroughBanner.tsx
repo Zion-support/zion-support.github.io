@@ -1,5 +1,4 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
   return (

@@ -1,54 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-BellZapTrendingUpUsersAwardGlobeArrowRightClock
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentAnnouncementsetCurrentAnnouncement] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentAnnouncement(prev => (prev + 1) % 3);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const announcements = [
-    {
-      title: "AI 2025 Breakthrough Achieved",
-      description: "Revolutionary AI technology delivering 5,000% ROI increase",
-      icon: Zap,
-      color: "from-purple-500 to-blue-500",
-      urgency: "Just Announced"
-    },
-    {
-      title: "Quantum Supremacy Unlocked",
-      description: "Error-corrected quantum computers now available",
-      icon: TrendingUp,
-      color: "from-blue-500 to-cyan-500",
-      urgency: "Breaking News"
-    },
-    {
-      title: "Global Implementation Success",
-      description: "10M+ users transformed across 150+ countries",
-      icon: Users,
-      color: "from-green-500 to-emerald-500",
-      urgency: "Worldwide Impact"
-    }
-  ];
-
-  const stats = [
-    { icon: Awardvalue: "99.9%"label: "Success Rate" },
-    { icon: Globevalue: "150+"label: "Countries" },
-    { icon: Usersvalue: "10M+"label: "Users" }
-  ];
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
     >
       {/* Animated Background */}
@@ -58,7 +12,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -72,10 +26,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Revolutionary breakthroughs in AIquantum computingand automation are reshaping the future of technology. 
                 Be among the first to experience the transformation.
               </p>
-            </divdiv>
+            </div>
 
             {/* Animated Announcement */}
-            <divdiv
+            <div
               key={currentAnnouncement}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 mb-6"
             >
@@ -95,10 +49,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -114,11 +68,11 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               >
                 Get Early Access
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <divdiv
+          <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
@@ -127,7 +81,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-1 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
@@ -136,22 +90,22 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               {/* Urgency Indicator */}
-              <divdiv
+              <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time - Act now!</span>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateContentShowcase2028: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);

@@ -9,7 +9,6 @@ export default function ZeroTrustSecurityPlatformPage() {
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
 				<meta name="description" content="Design and enforce zero trust architecture: identity-first accessmicrosegmentationcontinuous verificationand least privilege." />
 				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
-			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
 				description="Accelerate zero trust adoption with reference architecturespolicy-as-codeidentity-aware proxiesmicrosegmentationand continuous verification across usersdevicesand services."

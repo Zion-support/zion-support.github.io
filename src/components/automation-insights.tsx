@@ -29,7 +29,6 @@ export default function AutomationInsightsPage() {
       featured: false
     }
   ];
-
   const automationTools = [
     {
       id: 'automation-framework',
@@ -53,7 +52,6 @@ export default function AutomationInsightsPage() {
       complexity: 'Beginner'
     }
   ];
-
   const successMetrics = [
     {
       metric: '227',
@@ -76,7 +74,6 @@ export default function AutomationInsightsPage() {
       description: 'Content created autonomously'
     }
   ];
-
   return (
     <>
       <Head>
@@ -85,19 +82,13 @@ export default function AutomationInsightsPage() {
         <meta property="og:title" content="Automation Insights | Zion Tech Group" />
         <meta property="og:description" content="Expert insights on AI automation, autonomous systems, and industry trends." />
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Automation Insights
-            </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Deep insights into AI automation, autonomous systems, and the future of intelligent technology
-            </p>
-          </section>
-
           <section className="mx-auto max-w-7xl">
             {/* Success Metrics */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
@@ -108,11 +99,7 @@ export default function AutomationInsightsPage() {
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
-                  </div>
                 ))}
-              </div>
-            </div>
-
             {/* Automation Trends */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Latest Automation Trends</h2>
@@ -122,7 +109,6 @@ export default function AutomationInsightsPage() {
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
                       <span className="text-white/60 text-sm">{trend.readTime}</span>
-                    </div>
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
                     <p className="text-white/70 mb-4">{trend.description}</p>
                     <a 
@@ -130,12 +116,7 @@ export default function AutomationInsightsPage() {
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Read More <span className="ml-1">→</span>
-                    </a>
-                  </div>
                 ))}
-              </div>
-            </div>
-
             {/* Automation Tools & Frameworks */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Our Automation Tools</h2>
@@ -148,36 +129,25 @@ export default function AutomationInsightsPage() {
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-                    </div>
-                  </div>
                 ))}
-              </div>
-            </div>
-
             {/* Call to Action */}
             <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4 text-white">Ready to Automate Your Business?</h2>
               <p className="text-xl text-white/80 mb-6">
                 Let our experts help you build the automation systems of the future
-              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
                 <a 
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   View Case Studies
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
     </>
   );
-}
+};
+
+export default automation-insights;

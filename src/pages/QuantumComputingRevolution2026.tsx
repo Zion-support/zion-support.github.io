@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cpu, Atom, Shield, Target, Users, TrendingUp, Globe, Brain } from 'lucide-react';
 
@@ -237,3 +236,4 @@ const QuantumComputingRevolution2026: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2026;
+=======

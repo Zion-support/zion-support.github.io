@@ -1,23 +1,12 @@
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-
-interface NoJobsCardProps {
-  onUpdateProfile?: () => void;
-}
-
-export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
+const NoJobsCard: React.FC = () => {
   return (
-    <Card className="bg-muted/30 border border-dashed">
-      <CardContent className="p-6 text-center">
-        <p className="text-muted-foreground">
-          No job suggestions available yet. Complete your profile to get AI-matched jobs.
-        </p>
-        {onUpdateProfile && (
-          <Button variant="outline" className="mt-4" asChild>
-            <a href="/profile">Update Profile</a>
-          </Button>
-        )}
-      </CardContent>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NoJobsCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default NoJobsCard;

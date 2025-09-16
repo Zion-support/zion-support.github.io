@@ -1,54 +1,12 @@
 import React from 'react';
 
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
+const card: React.FC = () => {
   return (
-    <div className={`bg-white rounded-lg shadow-md border border-gray-200 ${className}`}>
-      {children}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">card</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
 
-export const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <div className={`px-6 py-4 border-b border-gray-200 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <div className={`px-6 py-4 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <div className={`px-6 py-4 border-t border-gray-200 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <h3 className={`text-lg font-semibold ${className}`}>
-      {children}
-    </h3>
-  );
-};
-
-export const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <p className={`text-sm text-gray-600 ${className}`}>
-      {children}
-    </p>
-  );
-};
+export default card;

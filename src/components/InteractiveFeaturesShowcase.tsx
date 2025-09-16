@@ -1,109 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const InteractiveFeaturesShowcase: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const features = [
-    {
-      id: 1,
-      title: "Real-time AI Demos",
-      description: "Experience live AI agents making decisions, learning, and adapting in real-time",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      interactive: true,
-      demo: {
-        type: "ai-agent",
-        status: "Active",
-        metrics: ["99.7% accuracy", "0.1s response", "Continuous learning"]
-      }
-    },
-    {
-      id: 2,
-      title: "Quantum Simulation",
-      description: "Interact with quantum circuits and see quantum phenomena in action",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      interactive: true,
-      demo: {
-        type: "quantum-sim",
-        status: "Processing",
-        metrics: ["1000+ qubits", "Quantum supremacy", "Molecular modeling"]
-      }
-    },
-    {
-      id: 3,
-      title: "Neural Interface Demo",
-      description: "Control digital interfaces with your thoughts and see neural activity",
-      icon: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      interactive: true,
-      demo: {
-        type: "neural-interface",
-        status: "Connected",
-        metrics: ["95% accuracy", "Real-time", "Non-invasive"]
-      }
-    },
-    {
-      id: 4,
-      title: "3D Holographic Display",
-      description: "View and interact with 3D holographic projections of data and models",
-      icon: "🔮",
-      gradient: "from-orange-600 to-red-600",
-      interactive: true,
-      demo: {
-        type: "hologram",
-        status: "Rendering",
-        metrics: ["4K resolution", "360° view", "Touch interaction"]
-      }
-    },
-    {
-      id: 5,
-      title: "Predictive Analytics",
-      description: "See future predictions and trends based on real-time data analysis",
-      icon: "📊",
-      gradient: "from-indigo-600 to-purple-600",
-      interactive: true,
-      demo: {
-        type: "predictive",
-        status: "Analyzing",
-        metrics: ["99.9% accuracy", "Real-time", "Multi-dimensional"]
-      }
-    },
-    {
-      id: 6,
-      title: "Voice AI Assistant",
-      description: "Interact with advanced AI through natural conversation and voice commands",
-      icon: "🎤",
-      gradient: "from-pink-600 to-rose-600",
-      interactive: true,
-      demo: {
-        type: "voice-ai",
-        status: "Listening",
-        metrics: ["Natural language", "Context aware", "Multi-language"]
-      }
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [features.length]);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  const currentFeature = features[activeFeature];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-20 relative overflow-hidden">
       {/* Animated Background */}
@@ -136,7 +33,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Main Feature Showcase */}
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-2xl">
-              <divdiv
+              <div
                 key={activeFeature}
                 className={`bg-gradient-to-br ${currentFeature.gradient} p-12 rounded-2xl relative overflow-hidden`}
                 onMouseEnter={() => setIsHovering(true)}
@@ -163,13 +60,13 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     
                     <div className="grid grid-cols-1 gap-4 mb-8">
                       {currentFeature.demo.metrics.map((metric, index) => (
-                        <divdiv
+                        <div
                           key={index}
                           className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="font-semibold">{metric}</span>
-                        </divdiv>
+                        </div>
                       ))}
                     </div>
                     
@@ -209,7 +106,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(9)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded"
                                   scale: [1, 1.5, 1],
@@ -235,7 +132,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           </div>
 
@@ -262,7 +159,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <divdiv
+            <div
               key={feature.id}
               whileInView={{ opacity: 1, y: 0 }}
               className={`bg-gradient-to-br ${feature.gradient} p-6 rounded-xl hover:shadow-2xl transition-all duration-300 cursor-pointer ${
@@ -294,7 +191,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
               >
                 Try Demo
               </divbutton>
-            </divdiv>
+            </div>
           ))}
         </div>
 
@@ -316,3 +213,5 @@ const InteractiveFeaturesShowcase: React.FC = () => {
 };
 
 export default InteractiveFeaturesShowcase;
+</div></div></div></div></div></div></div>
+</p></p>

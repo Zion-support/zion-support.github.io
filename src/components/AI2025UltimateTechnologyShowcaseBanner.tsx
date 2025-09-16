@@ -1,45 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Brain
-  Cpu
-  Zap
-  Shield
-  ArrowRight
-  Star,
-  TrendingUp,
-  Sparkles,
-  Rocket
-} from 'lucide-react';
-
-const AI2025UltimateTechnologyShowcaseBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % 4);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    { icon: Braintext: 'AI-Powered 'Automation', 'color: 'from-purple-500 to-pink-500' },
-    { icon: Cputext: 'Quantum 'Computing', 'color: 'from-blue-500 to-cyan-500' },
-    { icon: Zaptext: 'Neural 'Interfaces', 'color: 'from-green-500 to-emerald-500' },
-    { icon: Shieldtext: 'Advanced 'Security', 'color: 'from-red-500 to-orange-500' }
-  ];
-
-  const currentFeatureData = features[currentFeature];
-
+const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 shadow-2xl"
     >
       {/* Animated Background */}
@@ -53,7 +16,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1">
-            <divdiv
+            <div
               className="mb-6"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -75,10 +38,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
               <p className="text-xl text-gray-300 mb-6 max-w-2xl">
                 Discover revolutionary AI technologies that will transform industries and reshape the future of human-computer interaction.
               </p>
-            </divdiv>
+            </div>
 
             {/* Rotating Feature Display */}
-            <divdiv
+            <div
               key={currentFeature}
               className="mb-8"
             >
@@ -91,10 +54,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                   <div className="text-gray-400 text-sm">Cutting-edge innovation for 2025</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Stats */}
-            <divdiv
+            <div
               className="flex flex-wrap gap-6 mb-8"
             >
               <div className="flex items-center gap-2">
@@ -109,10 +72,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 <Rocket className="w-5 h-5 text-blue-400" />
                 <span className="text-white font-semibold">Future Ready</span>
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -129,11 +92,11 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 View All Content
                 <Sparkles className="w-5 h-5" />
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Visual */}
-          <divdiv
+          <div
             className="relative"
           >
             <div className="relative w-80 h-80">
@@ -152,7 +115,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 const y = Math.sin(angle) * radius;
                 
                 return (
-                  <divdiv
+                  <div
                     key={index}
                     className="absolute"
                     style={{
@@ -169,7 +132,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                     <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center shadow-lg`}>
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                  </divdiv>
+                  </div>
                 );
               })}
 
@@ -204,10 +167,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 </defs>
               </svg>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

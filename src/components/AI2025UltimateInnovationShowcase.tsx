@@ -1,59 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const AI2025UltimateInnovationShowcase: React.FC = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const innovations = [
-    {
-      title: "Quantum-AI Fusion Technology",
-      description: "Revolutionary fusion of quantum computing and artificial intelligence delivering unprecedented processing power",
-      icon: Cpu,
-      metrics: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "Autonomous Business Operations",
-      description: "Self-managing business systems that adapt and optimize without human intervention",
-      icon: Brain,
-      metrics: "99.9% automation accuracy",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
-      icon: Zap,
-      metrics: "Real-time consciousness sync",
-      color: "from-orange-600 to-red-600"
-    },
-    {
-      title: "Transcendent Intelligence",
-      description: "AI systems that transcend traditional limitationsachieving superhuman cognitive abilities",
-      icon: Rocket,
-      metrics: "Beyond human comprehension",
-      color: "from-indigo-600 to-purple-600"
-    }
-  ];
-
-  const benefits = [
-    { icon: TrendingUptext: "2,500-5,000% ROI Increase"color: "text-green-500" },
-    { icon: Targetext: "99.9% Accuracy Rate"color: "text-blue-500" },
-    { icon: Userstext: "10M+ Users Impacted"color: "text-purple-500" },
-    { icon: Globetext: "Global Implementation"color: "text-orange-500" },
-    { icon: Shieldtext: "Enterprise Security"color: "text-red-500" }
-  ];
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
     >
       {/* Background Effects */}
@@ -61,7 +10,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -74,12 +23,12 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
-        </divdiv>
+        </div>
 
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <divdiv
+            <div
               key={index}
               className="group relative"
             >
@@ -93,18 +42,18 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{innovation.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{innovation.metrics}</div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Proven Results & Impact</h2>
           <div className="grid md:grid-cols-5 gap-6">
             {benefits.map((benefitindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -112,13 +61,13 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
                 </div>
                 <p className="text-white font-semibold text-sm">{benefit.text}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -139,9 +88,9 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join thousands of enterprises already transforming with our AI innovations
           </p>
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

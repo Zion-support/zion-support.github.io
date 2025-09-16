@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const ai-search.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ai-search.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ai-search.js;
+=======
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 
 import {Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2} from 'lucide-react';
@@ -464,3 +478,4 @@ export function AISearch("props": "any) {;
 </motion>
 </motion>
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

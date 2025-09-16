@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
@@ -18,7 +16,7 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="text-center lg:text-left"
           >
@@ -50,10 +48,10 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
                 Learn More
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Feature Grid */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="grid grid-cols-2 gap-6"
           >
@@ -79,7 +77,7 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
                 description: "Dimensional protection systems"
               }
             ].map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-400/40 transition-all group"
@@ -93,9 +91,9 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                   {feature.description}
                 </p>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -108,3 +106,4 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
 };
 
 export default UltimateTechRevolution2032Banner;
+</div></div></div>

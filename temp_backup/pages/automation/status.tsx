@@ -1,28 +1,22 @@
-"use client";
-import { useEffectuseState } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AutomationStatusPage() {
-  const [statusetStatus] = useState<{ runAt?: string; ok?: boolean } | null>(null);
-
-  useEffect(() => {
-    fetch('/automation/status.json')
-      .then((r) => r.json())
-      .then((j) => setStatus(j))
-      .catch(() => setStatus(null));
-  }[]);
-
+const status: React.FC = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>
-      {status ? (
-        <div className="rounded-lg border p-4 text-sm">
-          <div>Last Run: {new Date(status.runAt || '').toLocaleString() || '—'}</div>
-          <div>Health: {status.ok ? 'OK' : 'Unknown'}</div>
-          <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>status | Zion Tech Group</title>
+        <meta name="description" content="status - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">status</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      ) : (
-        <div className="text-sm text-gray-500">No status available yet.</div>
-      )}
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default status;

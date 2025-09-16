@@ -1,3 +1,12 @@
-import React from 'react';const MainLayout.dynamic = () => {return (<div data - testid="mainlayout.dynamic">;
-      <h1 > MainLayout.dynamic</h1>;
-    </div>)}export default MainLayout.dynamic;
+import React from 'react';
+
+const MainLayout.dynamic: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MainLayout.dynamic</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default MainLayout.dynamic;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 
 import { motion } from 'framer-motion';
@@ -59,8 +62,16 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       }
     }
   };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const RevolutionaryContentBanner2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <section className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -168,6 +179,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
         </motion.div>
       </div>
     </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

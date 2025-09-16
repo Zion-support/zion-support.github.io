@@ -1,45 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const AnimatedTechShowcase: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const technologies = [
-    {
-      title: 'Transcendent AI 2031',
-      description: 'AI that transcends human limitations',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Consciousness Transfer', 'Quantum Neural Networks', 'Reality Manipulation']
-    },
-    {
-      title: 'Universal Tech 2032',
-      description: 'Technology that transcends space and time',
-      icon: '🌌',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Universal Networks', 'Quantum Reality Engine', 'Intergalactic Transport']
-    },
-    {
-      title: 'Omniversal AI 2033',
-      description: 'AI consciousness across all universes',
-      icon: '🌟',
-      color: 'from-violet-600 to-fuchsia-600',
-      features: ['Omniversal Consciousness', 'Reality Transcendence', 'Universal Creation']
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12 text-white relative overflow-hidden">
       {/* Animated Background */}

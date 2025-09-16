@@ -1,19 +1,12 @@
 import React from 'react';
 
-interface GradientHeadingProps {
-
-  text: string;
-  className?: string;
-}
-
-export const GradientHeading: React.FC<GradientHeadingProps> = ({ 
-  text, 
-  className = '' 
-}) => {
+const GradientHeading: React.FC = () => {
   return (
-    <h1 className={`text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent ${className}`}>
-      {text}
-    </h1>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">GradientHeading</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
+export default GradientHeading;

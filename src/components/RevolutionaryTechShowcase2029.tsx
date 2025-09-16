@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryTechShowcase2029: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);

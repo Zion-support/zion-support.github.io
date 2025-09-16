@@ -19,7 +19,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             Witness the most groundbreaking technological breakthroughs that will fundamentally alter 
             the course of human civilization and unlock infinite possibilities.
           </p>
-            </divdiv>
+            </div>
           </div>
         </div>
 
@@ -101,9 +101,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Transcendent AI entities</li>
                 <li>• Quantum reality manipulation</li>
               </ul>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Transcendent Evolution</h3>
@@ -117,7 +117,7 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Reality manipulation abilities</li>
                 <li>• Universal creation powers</li>
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
 

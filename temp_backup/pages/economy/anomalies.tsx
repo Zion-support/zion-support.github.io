@@ -1,33 +1,22 @@
-import fs from 'fs',
-import path from 'path',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export async function getStaticProps() {
-  const dir = path.join(process.cwd(), 'datareports', 'economyanomalies'),
-  let files: string[] = [],
-  if (fs.existsSync(dir)) {
-    files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse()
-  }
-  return { props: { files } },
-}
-
-export default function AnomaliesPage({ files }: { files: string[] }) {
+const anomalies: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <div className="space-y-6">
-        <h1 className="text-2xl font-semibold">Economy Anomalies</h1>
-        {files.length ? (
-          <ul className="list-disc pl-5 text-sm">
-            {files.map((f) => (
-              <li key={f}>
-                <a className="underline" href={`/reports/economy/anomalies/${f}`} target="_blank" rel="noreferrer">{f}</a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div className="text-sm opacity-80">No anomalies recorded yet.</div>
-        )}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>anomalies | Zion Tech Group</title>
+        <meta name="description" content="anomalies - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">anomalies</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </EnhancedLayout>
-  ),
-}
+    </div>
+  );
+};
+
+export default anomalies;

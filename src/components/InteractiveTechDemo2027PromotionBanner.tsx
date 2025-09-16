@@ -1,88 +1,15 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Zap
-  Brain
-  Rocket
-  ArrowRight,
-  X,
-  ChevronRight,
-  Award,
-  Users,
-  Clock,
-  TrendingUp,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const InteractiveTechDemo2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const demos = [
-    {
-      icon: Brain,
-      title: 'AI Quantum Processing',
-      description: '1.2M ops/sec',
-      color: 'from-purple-500 to-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'Autonomous Automation',
-      description: '847 tasks automated',
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Neural Interface',
-      description: '12ms response time',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const features = [
-    'Real-time Processing',
-    'Interactive Controls',
-    'Live Metrics',
-    'Step-by-step Guide'
-  ];
-
-  const stats = [
-    { value: '99.97%'label: 'Accuracy' },
-    { value: '2.3k 'hrs', 'label: 'Time Saved' },
-    { value: '0.02%'label: 'Error Rate' },
-    { value: '$1.2'M', 'label: 'Cost Saved' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (isDismissed) return null;
-
+const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <divdiv
+            <div
               className="absolute inset-0 opacity-30"
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
@@ -122,7 +49,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
                 {/* Rotating Demo Features */}
                 <div className="flex items-center gap-4 mb-4">
-                    <divdiv
+                    <div
                       key={currentDemo}
                       className="flex items-center gap-2"
                     >
@@ -137,7 +64,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                           {demos[currentDemo].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
 
@@ -206,10 +133,11 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default InteractiveTechDemo2027PromotionBanner;
+</div></div></div></div>

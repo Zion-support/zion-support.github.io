@@ -241,9 +241,7 @@ import React from 'react';
             </button>
           </div>
         </div>
-      </main>
-
-      <EnhancedFooter />
+      </div>
     </div>
   );
 };

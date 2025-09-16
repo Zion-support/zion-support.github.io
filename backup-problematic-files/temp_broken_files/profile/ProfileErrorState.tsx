@@ -1,39 +1,12 @@
+import React from 'react';
 
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-import Link from "next/link",;
-import { ArrowLeft } from 'lucide-react';
-;
-interface ProfileErrorStateProps {;
-  error:string | null;
-}
-;
-export function ProfileErrorState({ error } ProfileErrorStateProps) {;
-  return (;
-    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
-      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
-      <Button asChild>;
-        <Link href="/talents" className="bg-zion-purple hover:bg-zion-purple-dark">;
-          <ArrowLeft className="mr-2 h-4 w-4" />;
-          Back to Talent Directory;
-        </Link>;
-      </Button>;
-    </div>;
-  );}
- import {;
-  {;
-  {;
-  ArrowLeft ;
-}from 'lucide-react' interface ProfileErrorStateProps {;
-  error: string | null ;
-}export function ProfileErrorState ({;
-  error ;
-}: ProfileErrorStateProps) {;
+const ProfileErrorState: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ProfileErrorState</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-
-  return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {";
-  error || "Something went wrong" ;
-}</div> ;
-}'"
-
-
+export default ProfileErrorState;

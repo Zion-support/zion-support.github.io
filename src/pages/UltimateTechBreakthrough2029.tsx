@@ -1,7 +1,9 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateTechBreakthrough2029: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -328,6 +330,15 @@ const UltimateTechBreakthrough2029: React.FC = () => {
             <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Join Elite Program
 =======
+=======
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+      <Helmet>
+        <title>UltimateTechBreakthrough2029 | Zion Tech Group</title>
+        <meta name="description" content="UltimateTechBreakthrough2029 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -339,7 +350,10 @@ const UltimateTechBreakthrough2029: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Learn More
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
             </button>
           </div>
         </div>

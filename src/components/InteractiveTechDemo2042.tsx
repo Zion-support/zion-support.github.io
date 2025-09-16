@@ -1,6 +1,96 @@
-import React, { useState, useEffect } from 'react';
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+  const [progress, setProgress] = useState(0);
 
-const InteractiveTechDemo2042: React.FC = () => {
+  const demos = [
+    {
+      id: 1,
+      title: "Conscious AI Interaction",
+      description: "Experience real-time conversation with our conscious AI system",
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Emotional intelligence demonstration",
+        "Creative problem solving",
+        "Artistic expression",
+        "Empathetic responses"
+      ]
+    },
+    {
+      id: 2,
+      title: "Quantum Reality Manipulation",
+      description: "Control and manipulate physical matter through quantum fields",
+      icon: "⚛️",
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Matter creation from energy",
+        "Instantaneous teleportation",
+        "Time manipulation",
+        "Dimensional gateways"
+      ]
+    },
+    {
+      id: 3,
+      title: "Interdimensional Computing",
+      description: "Access and process information across infinite dimensions",
+      icon: "🌌",
+      color: "from-emerald-500 to-teal-500",
+      features: [
+        "Multi-dimensional data processing",
+        "Parallel universe communication",
+        "Infinite computational power",
+        "Reality simulation"
+      ]
+    },
+    {
+      id: 4,
+      title: "Synthetic Intelligence Matrix",
+      description: "Interact with the most advanced synthetic intelligence ever created",
+      icon: "🤖",
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Cognitive supremacy demonstration",
+        "Creative mastery showcase",
+        "Perfect human alignment",
+        "Instant learning capabilities"
+      ]
+    }
+  ];
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isRunning) {
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsRunning(false);
+            return 0;
+          }
+          return prev + 2;
+        });
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [isRunning]);
+
+  const startDemo = () => {
+    setIsRunning(true);
+    setProgress(0);
+    setProgress(0);
+  };
+
+  const nextDemo = () => {
+    setActiveDemo((prev) => (prev + 1) % demos.length);
+    setProgress(0);
+    setIsRunning(false);
+  };
+
+  const prevDemo = () => {
+    setActiveDemo((prev) => (prev - 1 + demos.length) % demos.length);
+    setProgress(0);
+    setIsRunning(false);
+  };
+
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -99,6 +189,8 @@ const InteractiveTechDemo2042: React.FC = () => {
   };
 
   return (
+=======
+  return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -124,11 +216,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title.split(' ')[0]}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
@@ -146,10 +233,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   <div key={index} className="flex items-center text-sm">
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     {feature}
-                  </div>
-                ))}
-              </div>
-
               <div className="flex space-x-4">
                 <button
                   onClick={startDemo}
@@ -201,10 +284,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-        </div>
-
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
           <button
@@ -238,10 +317,3 @@ const InteractiveTechDemo2042: React.FC = () => {
               {demo.icon} {demo.title.split(' ')[0]}
             </button>
           ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default InteractiveTechDemo2042;

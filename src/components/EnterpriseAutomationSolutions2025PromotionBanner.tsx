@@ -1,65 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Building2
-  Zap
-  TrendingUp
-  ArrowRight
-  CheckCircle
-  Star
-  Users
-  Clock,
-  Shield,
-  DollarSign,
-  Target,
-  BarChart3,
-  Workflow,
-  Database,
-  MessageSquare,
-  CreditCard,
-  PieChart,
-  Activity,
-  Play,
-  Sparkles,
-  Globe,
-  Lock,
-  Cloud,
-  Bot,
-  Brain
-} from 'lucide-react';
+import React from 'react';
 
 const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
-  const [currentStatsetCurrentStat] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  const stats = [
-    { value: '300%'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '80%'label: 'Time 'Saved', 'icon: <Clock className="w-6 h-6" /> },
-    { value: '500+'label: 'Enterprise 'Clients', 'icon: <Building2 className="w-6 h-6" /> },
-    { value: '99.9%'label: ''Uptime', 'icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const solutions = [
-    { name: 'Workflow 'Orchestrator', 'icon: <Workflow className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
-    { name: 'Data 'Pipeline', 'icon: <Database className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
-    { name: 'Customer 'Service', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
-    { name: 'Financial 'Automation', 'icon: <CreditCard className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
-    { name: 'HR 'Automation', 'icon: <Users className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
-    { name: 'Business 'Intelligence', 'icon: <PieChart className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-20"
     >
       {/* Background Pattern */}
@@ -69,7 +12,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <divdiv
+            <div
             >
               <div className="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Building2 className="w-4 h-4" />
@@ -87,10 +30,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 Streamline processesreduce costsand accelerate growth with our comprehensive 
                 suite of AI-powered automation solutions designed for enterprise scale.
               </p>
-            </divdiv>
+            </div>
 
             {/* Features List */}
-            <divdiv
+            <div
               className="space-y-4"
             >
               {[
@@ -104,10 +47,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25">
@@ -119,14 +62,14 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 Schedule Demo
               </button>
-            </divdiv>
+            </div>
 
             {/* Dynamic Stats */}
-            <divdiv
+            <div
               className="pt-8 border-t border-white/10"
             >
               <div className="text-center">
-                <divdiv
+                <div
                   key={currentStat}
                   className="flex items-center justify-center space-x-3 mb-2"
                 >
@@ -137,19 +80,19 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                     <div className="text-3xl font-bold text-white">{stats[currentStat].value}</div>
                     <div className="text-sm text-gray-400">{stats[currentStat].label}</div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Solutions Showcase */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Main Solutions Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               {solutions.slice(04).map((solutionindex) => (
-                <divdiv
+                <div
                   key={solution.name}
                   className={`p-4 rounded-lg border transition-all duration-300 ${
                     index === 0 ? 'bg-gradient-to-r ' + solution.color + ' border-white/20' : 'bg-white/5 border-white/10'
@@ -168,14 +111,14 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Additional Solutions */}
             <div className="grid grid-cols-2 gap-4">
               {solutions.slice(4).map((solutionindex) => (
-                <divdiv
+                <div
                   key={solution.name}
                   className="p-4 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300"
                 >
@@ -188,12 +131,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                       <p className="text-xs text-gray-300">Available</p>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
                 y: [0-10],
                 rotate: [050]
               }}
@@ -204,9 +147,9 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Zap className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
                 y: [010],
                 rotate: [0-50]
               }}
@@ -218,7 +161,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Brain className="w-6 h-6 text-white" />
-            </divdiv>
+            </div>
 
             {/* Performance Indicators */}
             <div className="absolute top-0 right-0 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium">
@@ -227,11 +170,11 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 <span>Live</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Bottom Stats Grid */}
-        <divdiv
+        <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -248,12 +191,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               <div className="text-sm text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
       </div>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
-    </divdiv>
+    </div>
   );
 };
 

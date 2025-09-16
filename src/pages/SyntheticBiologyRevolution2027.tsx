@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
@@ -58,3 +59,4 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 };
 
 export default SyntheticBiologyRevolution2027;
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
