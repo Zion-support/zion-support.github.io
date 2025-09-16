@@ -88,6 +88,12 @@ import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanne
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import Link from 'next/link';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+
+// Import new 2026 breakthrough promotional banners
+import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
+import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -103,6 +109,12 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* NEW 2026 BREAKTHROUGH CONTENT BANNERS - FEATURED */}
+      <NewContent2026UltimateBreakthroughBanner />
+      <QuantumAI2026RevolutionBanner />
+      <NeuralInterfaceRevolutionBanner2026 />
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Promo: Freshly published — Reliable Autonomy + Billing Controls */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
