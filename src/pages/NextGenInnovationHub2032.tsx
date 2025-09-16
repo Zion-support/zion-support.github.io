@@ -93,6 +93,7 @@ const NextGenInnovationHub2032: React.FC = () => {
               <p className="text-gray-200 text-center mb-4">
                 AI systems that can transform any planet into a habitable environment for human life
               </p>
+<<<<<<< HEAD
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-emerald-200 text-sm">Planets Transformed:</span>
@@ -139,6 +140,15 @@ const NextGenInnovationHub2032: React.FC = () => {
             <button className="border border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg hover:bg-emerald-400/10 transition-colors">
               Request Innovation Access
             </button>
+=======
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 bg-cyan-500 text-white text-sm rounded-full">Breakthrough</span>
+                <a href="/pages/UltimateTechRevolution2032" className="text-cyan-300 hover:text-cyan-100 font-semibold">
+                  Explore →
+                </a>
+              </div>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-b33f
           </div>
         </div>
       </main>
