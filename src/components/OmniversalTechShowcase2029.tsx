@@ -128,22 +128,12 @@ const OmniversalTechShowcase2029: React.FC = () => {
         
         {/* Omniversal Particles */}
         {[...Array(40)].map((_, i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-4 h-4 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-40"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-            }}
-              scale: [0, 2, 0],
-              opacity: [0, 1, 0],
-              rotate: [0, 720],
-              x: [0, Math.random() * 300 - 150, 0],
-              y: [0, Math.random() * 300 - 150, 0],
-            }}
-              duration: 8 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 4,
             }}
           />
         ))}
@@ -246,26 +236,17 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 
                 {/* Omniversal Energy Effects */}
                 {[...Array(50)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-60"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      scale: [0, 3, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 300 - 150, 0],
-                      y: [0, Math.random() * 300 - 150, 0],
-                    }}
-                      duration: 4 + Math.random() * 3,
-                      repeat: Infinity,
-                      delay: Math.random() * 5,
-                    }}
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
