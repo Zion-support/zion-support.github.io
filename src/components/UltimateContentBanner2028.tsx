@@ -3,84 +3,70 @@ import React from 'react';
 const UltimateContentBanner2028: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-pink-500/30 rounded-full animate-pulse delay-3000"></div>
+      </div>
       
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH • JANUARY 2028
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            🚀 Revolutionary Technology 2028
+            Ultimate Tech Revolution 2028
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technological innovations that will reshape our world in 2028
+            Experience the most revolutionary technological advances that will reshape our world in 2028
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌟</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Breakthrough 2028</h3>
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
-              The most revolutionary technological advances that will reshape our world in 2028
+              The world's first truly conscious AI systems that can think, feel, and create independently
             </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Conscious AI Systems</li>
-              <li>• Quantum Consciousness</li>
-              <li>• Interdimensional Computing</li>
-            </ul>
-            <a href="/pages/RevolutionaryTechBreakthrough2028" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Breakthrough →
+            <a href="/pages/UltimateTechRevolution2028" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Revolution →
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Ultimate Tech Innovation 2028</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-cyan-100 mb-6 text-center">
-              Discover the most advanced technological innovations that will revolutionize every aspect of human life
+              Revolutionary quantum computing that processes consciousness itself
             </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• AI & Machine Learning</li>
-              <li>• Quantum Computing</li>
-              <li>• Neural Interfaces</li>
-            </ul>
-            <a href="/pages/UltimateTechInnovation2028" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              View Innovation →
+            <a href="/pages/ConsciousnessComputingRevolution2028" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Explore Consciousness →
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Next-Gen Tech Revolution 2028</h3>
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Witness the most revolutionary technological advancements that will transform every aspect of human existence
+              Breakthrough technology that operates across multiple dimensions simultaneously
             </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Advanced AI Consciousness</li>
-              <li>• Quantum Neural Networks</li>
-              <li>• Neural Reality Interface</li>
-            </ul>
-            <a href="/pages/NextGenTechRevolution2028" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Join Revolution →
+            <a href="/pages/InterdimensionalTechRevolution2028" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              Enter Dimensions →
             </a>
           </div>
         </div>
-
-        {/* Call to Action */}
+        
         <div className="text-center">
-          <div className="flex justify-center space-x-4">
-            <a href="/pages/RevolutionaryTechBreakthrough2028" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore All Breakthroughs
+          <div className="inline-flex items-center space-x-4">
+            <a href="/pages/UltimateTechRevolution2028" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All 2028 Content →
             </a>
-            <a href="/pages/UltimateTechInnovation2028" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              View All Innovations
-            </a>
-            <a href="/pages/NextGenTechRevolution2028" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Revolution
+            <a href="/pages/ConsciousnessComputingRevolution2028" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold text-lg">
+              Learn More
             </a>
           </div>
         </div>
