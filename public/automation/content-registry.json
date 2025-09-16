@@ -107,6 +107,27 @@
       "href": "/reports/cases/case-2025-08-15-000055",
       "desc": "New autonomous content",
       "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — AI Content Strategy 2025",
+      "href": "/reports/guides/ai-content-strategy-2025-09-16",
+      "desc": "Practical playbook for high-velocity content creation with AI",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Update — Product Launch Highlights Q3",
+      "href": "/reports/updates/product-launch-highlights-q3-2025",
+      "desc": "Top features shipped and what’s next",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Case Study — 5x Organic Traffic in 60 Days",
+      "href": "/reports/cases/5x-organic-traffic-60-days",
+      "desc": "How we scaled SEO with programmatic content",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "growth-lab"
     }
   ]
 }

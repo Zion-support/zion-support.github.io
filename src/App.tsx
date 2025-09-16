@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
+import ContentSpotlight from './components/ContentSpotlight';
 import Footer from './Footer';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
@@ -115,6 +116,9 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
+
+              {/* Latest Content Spotlight */}
+              <ContentSpotlight />
               
               {/* Dynamic Content Carousel */}
               <DynamicContentCarousel />
