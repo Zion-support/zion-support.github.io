@@ -93,6 +93,11 @@ import OmniversalAIConsciousness2035 from './src/pages/OmniversalAIConsciousness
 import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
 import InteractiveTechDemo2027 from './src/components/InteractiveTechDemo2027';
 import RevolutionaryTechBlog2027 from './src/pages/RevolutionaryTechBlog2027';
+import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
+import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTechRevolution2026';
+import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
+import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -802,6 +807,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/InterdimensionalTechRevolution2030" element={<InterdimensionalTechRevolution2030 />} />
           <Route path="/pages/OmniversalAIConsciousness2035" element={<OmniversalAIConsciousness2035 />} />
           <Route path="/pages/RevolutionaryTechBlog2027" element={<RevolutionaryTechBlog2027 />} />
+          <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
           <Route path="/contact" element={
