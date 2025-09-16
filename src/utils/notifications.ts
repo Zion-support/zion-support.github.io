@@ -10,6 +10,11 @@ interface NotificationOptions {
 
 interface NotificationOptions {
 =======
+<<<<<<< HEAD
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+=======
 =======
 =======
 // Notifications utility for handling browser notifications and toast messages
@@ -18,6 +23,7 @@ interface NotificationOptions {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
@@ -28,11 +34,14 @@ export interface NotificationOptions {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 // Notification utilities
 interface NotificationOptions {
   title: string;
@@ -79,9 +88,12 @@ class NotificationManager {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   requireInteraction?: boolean;
   silent?: boolean;
   vibrate?: number[];
@@ -134,11 +146,14 @@ export const notifications = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
@@ -146,6 +161,8 @@ export const notifications = {
   actions?: NotificationAction[];
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +183,7 @@ class NotificationManager {
     if (this.permission !== 'granted') {
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     }
 
     try {
@@ -183,9 +201,12 @@ class NotificationManager {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
@@ -220,9 +241,12 @@ class NotificationManager {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -249,11 +273,14 @@ class NotificationManager {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       console.error('Error showing notification:', error);
       return null;
     }
@@ -292,9 +319,12 @@ export default notificationManager;
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       requireInteraction: true
     });
   },
@@ -329,11 +359,14 @@ export default notifications;
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       requireInteraction: true,
     });
   }

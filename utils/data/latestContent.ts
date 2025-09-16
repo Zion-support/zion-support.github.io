@@ -49,7 +49,11 @@ export const latestContent: ContentItem[] = [
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,7 +64,11 @@ export const latestContent: ContentItem[] = [
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -198,9 +206,18 @@ export const latestContent: ContentItem[] = [
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     tag: "Blueprint",
     date: "2025-09-15",
   },

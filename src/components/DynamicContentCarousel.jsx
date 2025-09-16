@@ -84,17 +84,20 @@ const DynamicContentCarousel = () => {
             className={`w-3 h-3 rounded-full transition-colors ${
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 <<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
 <<<<<<< HEAD
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 <<<<<<< HEAD
@@ -109,26 +112,39 @@ const DynamicContentCarousel = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 =======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-8069
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -138,10 +154,17 @@ const DynamicContentCarousel = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
             }`}
           />
         ))}

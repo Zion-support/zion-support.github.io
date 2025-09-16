@@ -1,9 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 <<<<<<< HEAD
 
@@ -105,6 +108,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                 Start Demo →
               </button>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -262,7 +269,14 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                   <span className="text-green-400 text-sm font-semibold">Live Demo Active</span>
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-bec3
             </div>
           </div>
         </div>
@@ -342,7 +356,11 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <div className="text-sm opacity-75">Unlimited capacity</div>
             </div>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         {/* Technology Impact Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
@@ -364,11 +382,23 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-lg opacity-90">System Uptime</div>
             <div className="text-sm text-pink-300 mt-2">Continuous Operation</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
@@ -382,6 +412,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -397,7 +431,11 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
             </button>
           </div>
         </div>

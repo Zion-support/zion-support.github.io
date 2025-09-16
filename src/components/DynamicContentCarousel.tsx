@@ -3,6 +3,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
@@ -36,6 +60,7 @@ const DynamicContentCarousel: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 import React from 'react';
@@ -94,6 +119,9 @@ const DynamicContentCarousel: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -109,7 +137,11 @@ const DynamicContentCarousel: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
@@ -130,6 +162,15 @@ const DynamicContentCarousel: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -139,6 +180,7 @@ const DynamicContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -165,10 +207,17 @@ const DynamicContentCarousel: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
     </div>
   );
@@ -178,10 +227,23 @@ export default DynamicContentCarousel;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -194,10 +256,16 @@ export default DynamicContentCarousel;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 <<<<<<< HEAD
 =======
@@ -238,7 +306,14 @@ export default DynamicContentCarousel;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
