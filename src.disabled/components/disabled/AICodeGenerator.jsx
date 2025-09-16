@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AICodeGenerator: React.FC = () => {
@@ -10,3 +11,9 @@ const AICodeGenerator: React.FC = () => {
 };
 
 export default AICodeGenerator;
+=======
+
+
+const React,{ useState,useCallback } from";react" ''"
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

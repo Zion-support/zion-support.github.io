@@ -7,6 +7,6 @@ const SignUpForm: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
+}
 
-export default SignUpForm;
+</p></p></p></p></p>

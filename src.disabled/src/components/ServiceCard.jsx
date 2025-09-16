@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ServiceCard: React.FC = () => {
@@ -10,3 +11,9 @@ const ServiceCard: React.FC = () => {
 };
 
 export default ServiceCard;
+=======
+
+
+const React from "react"; export default ServiceCard; '"'"
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

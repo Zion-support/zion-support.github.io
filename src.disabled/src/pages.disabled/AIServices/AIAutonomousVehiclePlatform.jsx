@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousVehiclePlatform: React.FC = () => {
@@ -10,3 +11,9 @@ const AIAutonomousVehiclePlatform: React.FC = () => {
 };
 
 export default AIAutonomousVehiclePlatform;
+=======
+
+
+const React from "react";"""; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

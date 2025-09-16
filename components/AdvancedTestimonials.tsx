@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+StarQuote
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedTestimonials: React.FC = () => {
   return (

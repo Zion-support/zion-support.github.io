@@ -16,16 +16,12 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
       {content ? (
         <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">
 {content}
-        </pre>
       ) : (
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
           No changelog generated yet.
-        </div>
       )}
-    </main>
   );
 }
-
 export async function getStaticProps() {
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md');

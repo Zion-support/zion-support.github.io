@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   return (
@@ -20,3 +19,4 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 };
 
 export default AIAutonomousResearchAssistant;
+=======

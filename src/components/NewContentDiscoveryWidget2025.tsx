@@ -10,3 +10,4 @@ const NewContentDiscoveryWidget2025: React.FC = () => {
 };
 
 export default NewContentDiscoveryWidget2025;
+</p></p></p></p>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+}
+}
+ : allServices.filter(service => {}export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }}}})
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 
 const InnovativeServicesOverview: React.FC = () => {
@@ -7,6 +13,13 @@ const InnovativeServicesOverview: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default InnovativeServicesOverview;
+=======
+}
+}
+}
+ export { InnovativeServicesOverview }}}})
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

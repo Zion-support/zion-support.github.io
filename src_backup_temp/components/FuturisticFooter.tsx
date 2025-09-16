@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const FuturisticFooter: React.FC = () => {
@@ -7,6 +8,13 @@ const FuturisticFooter: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+=======
+import React from 'react';''
+import Link from 'next/link';''
+'
+import {}
+  // TODO: Implement;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 };
 
 export default FuturisticFooter;

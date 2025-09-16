@@ -1,4 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+XBrainZapTrendingUpArrowRightPlayUsersAward
+
+interface NeuralInterfaceContent {
+  id: string;
+  title: string;
+  type: string;
+  url: string;
+  metrics: {
+    roi: string;
+    savings: string;
+    timeframe: string;
+    accuracy: string;
+  };
+  description: string;
+  featured: boolean;
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   return (

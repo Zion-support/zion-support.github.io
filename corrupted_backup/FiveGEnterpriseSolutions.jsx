@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+}
+}
+ <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { FiveGEnterpriseSolutions }export { FiveGEnterpriseSolutions }export { FiveGEnterpriseSolutions }export { FiveGEnterpriseSolutions }export { FiveGEnterpriseSolutions }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 
 const FiveGEnterpriseSolutions: React.FC = () => {
@@ -7,6 +13,13 @@ const FiveGEnterpriseSolutions: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default FiveGEnterpriseSolutions;
+=======
+}
+}
+}
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

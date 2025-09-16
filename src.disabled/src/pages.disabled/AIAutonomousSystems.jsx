@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousSystems: React.FC = () => {
@@ -10,3 +11,9 @@ const AIAutonomousSystems: React.FC = () => {
 };
 
 export default AIAutonomousSystems;
+=======
+
+
+const React,{ useState } from "react";"""; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

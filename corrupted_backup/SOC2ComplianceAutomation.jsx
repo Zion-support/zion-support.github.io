@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+}
+}
+ <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { SOC2ComplianceAutomation }export { SOC2ComplianceAutomation }export { SOC2ComplianceAutomation }export { SOC2ComplianceAutomation }export { SOC2ComplianceAutomation }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 
 const SOC2ComplianceAutomation: React.FC = () => {
@@ -7,6 +13,13 @@ const SOC2ComplianceAutomation: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default SOC2ComplianceAutomation;
+=======
+}
+}
+}
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

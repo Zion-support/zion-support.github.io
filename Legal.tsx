@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const Legal: React.FC = () => {
@@ -10,3 +11,9 @@ const Legal: React.FC = () => {
 };
 
 export default Legal;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -10,3 +10,4 @@ const ModernPerformanceMonitor: React.FC = () => {
 };
 
 export default ModernPerformanceMonitor;
+</p></p>

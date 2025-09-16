@@ -1,100 +1,42 @@
 #!/bin/bash
 
-echo "🔧 Starting comprehensive merge conflict resolution..."
+<<<<<<< HEAD
+echo "Resolving merge conflicts by accepting our changes..."
 
-# Function to resolve conflicts by accepting our version
-resolve_conflict() {
-    local file="$1"
+# Find all files with merge conflicts
+find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
     echo "Resolving conflicts in: $file"
-    
-    if [ -f "$file" ]; then
-        # Check if file has conflict markers
-        if grep -q "<<<<<<< HEAD" "$file"; then
-            echo "  → Resolving conflicts by accepting our version"
-            git checkout --ours "$file"
-            git add "$file"
-        else
-            echo "  → No conflicts found, adding file"
-            git add "$file"
-        fi
-    else
-        echo "  → File not found, skipping"
-    fi
-}
-
-# List of all conflicted files
-conflicted_files=(
-    "App.tsx"
-    "src/components/InteractiveTechDemo2042.tsx"
-    "src/components/NewContentPromotionBanner2025.tsx"
-    "src/components/RevolutionaryContentBanner2025.tsx"
-    "src/components/RevolutionaryContentBanner2035.tsx"
-    "src/components/RevolutionaryContentBanner2036.tsx"
-    "src/components/RevolutionaryContentCarousel2039.tsx"
-    "src/components/UltimateContentBanner2025.tsx"
-    "src/components/UltimateContentBanner2034.tsx"
-    "src/components/UltimateContentBanner2037.tsx"
-    "src/components/UltimateContentShowcase2025.tsx"
-    "src/pages/AISolutionsComprehensive2025.tsx"
-    "src/pages/ComprehensiveServices2034.tsx"
-    "src/pages/NextGenInnovationHub2025.tsx"
-    "src/pages/NextGenInnovationHub2039.tsx"
-    "src/pages/RevolutionaryTechBreakthrough2025.tsx"
-    "src/pages/RevolutionaryTechBreakthrough2036.tsx"
-    "src/pages/RevolutionaryTechShowcase2034.tsx"
-    "src/pages/UltimateTechBreakthrough2034.tsx"
-    "src/pages/UltimateTechRevolution2025.tsx"
-    "src/pages/UltimateTechRevolution2042.tsx"
-)
-
-# Resolve conflicts for each file
-for file in "${conflicted_files[@]}"; do
-    resolve_conflict "$file"
+    # Accept our changes (HEAD)
+    git checkout --ours "$file"
+  fi
 done
 
-# Handle the modify/delete conflict for InteractiveTechShowcase2028.tsx
-echo "Handling modify/delete conflict for InteractiveTechShowcase2028.tsx"
-if [ -f "src/components/InteractiveTechShowcase2028.tsx" ]; then
-    echo "  → Keeping the modified version"
-    git add "src/components/InteractiveTechShowcase2028.tsx"
-else
-    echo "  → File was deleted, keeping deletion"
-    git rm "src/components/InteractiveTechShowcase2028.tsx" 2>/dev/null || true
-fi
+echo "All merge conflicts resolved!"
+=======
+echo "Resolving merge conflicts..."
 
-# Add all new files from our feature branch
-echo "Adding all new files from feature branch..."
-git add src/components/NextGenInnovationBanner2030.tsx
-git add src/components/RevolutionaryBreakthroughBanner2030.tsx
-git add src/components/UltimateContentCarousel2030.tsx
-git add src/pages/UltimateTechRevolution2030.tsx
-git add src/pages/RevolutionaryTechBreakthrough2030.tsx
-git add src/pages/NextGenInnovationHub2030.tsx
+# Function to resolve merge conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "Processing: $file"
+    
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+}
 
-echo "✅ All conflicts resolved!"
-echo "📝 Committing merge..."
+# Find all files with merge conflicts in src directory
+find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        resolve_conflicts "$file"
+    fi
+done
 
-git commit -m "Merge feature/revolutionary-2030-content into main
-
-- Resolved all merge conflicts by accepting our version
-- Added new 2030 content pages and advertising components
-- Integrated interactive showcases and carousels
-- All new content is now live and prominently advertised
-
-Conflicts resolved in:
-- App.tsx (main routing and component integration)
-- Multiple component files (banners, carousels, showcases)
-- Multiple page files (2030 content pages)
-- InteractiveTechShowcase2028.tsx (modify/delete conflict resolved)
-
-New content added:
-- UltimateTechRevolution2030.tsx
-- RevolutionaryTechBreakthrough2030.tsx  
-- NextGenInnovationHub2030.tsx
-- UltimateTechBanner2030.tsx
-- RevolutionaryBreakthroughBanner2030.tsx
-- NextGenInnovationBanner2030.tsx
-- UltimateContentCarousel2030.tsx
-- InteractiveTechShowcase2030.tsx"
-
-echo "🎉 Merge completed successfully!"
+echo "Merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

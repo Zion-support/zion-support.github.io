@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const ConsciousnessComputing2026: React.FC = () => {
   return (
@@ -14,7 +15,9 @@ const ConsciousnessComputing2026: React.FC = () => {
           <h1 className="text-4xl font-bold mb-6">ConsciousnessComputing2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 };

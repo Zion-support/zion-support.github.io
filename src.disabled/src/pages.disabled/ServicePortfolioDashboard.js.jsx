@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ServicePortfolioDashboard.js: React.FC = () => {
@@ -10,3 +11,9 @@ const ServicePortfolioDashboard.js: React.FC = () => {
 };
 
 export default ServicePortfolioDashboard.js;
+=======
+
+
+const React from "react";"""; '"'"
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

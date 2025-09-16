@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, Target, CheckCircle, Phone, Mail } from 'lucide-react';
+import Link from 'next/link';
+import Button from '../ui/Button';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticHero2029V2: React.FC = () => {
   return (

@@ -8,5 +8,4 @@ const AuthRoutes= () => {
     </div>
   );
 };
-
 export default AuthRoutes;

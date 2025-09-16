@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
@@ -10,3 +11,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase2025;
+=======
+
+
+const React,{ useState } from "react";"""; """
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

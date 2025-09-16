@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const FuturisticServicesShowcase: React.FC = () => {
@@ -10,3 +11,9 @@ const FuturisticServicesShowcase: React.FC = () => {
 };
 
 export default FuturisticServicesShowcase;
+=======
+ ))} ></div> )))))))))))))))))))))))))))))))
+ ))} ></div> )))))))))))))))))))))))))))))))
+const React,{ useState,useEffect } from "react";  ))} ></div> )))))))))))))))))))))))))))))))"""
+ ))} ></div> )))))))))))))))))))))))))))))))
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

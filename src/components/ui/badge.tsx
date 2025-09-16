@@ -9,4 +9,5 @@ const badge: React.FC = () => {
   );
 };
 
-export default badge;
+export { Badge, badgeVariants }
+</div>

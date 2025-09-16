@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+}
+}
+ ></div> ></div> ></div> ></div> ></div> ></div> )}export { Contact }export { Contact }export { Contact }export { Contact }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 
 const Contact: React.FC = () => {
@@ -7,6 +13,13 @@ const Contact: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Contact;
+=======
+}
+}
+}
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

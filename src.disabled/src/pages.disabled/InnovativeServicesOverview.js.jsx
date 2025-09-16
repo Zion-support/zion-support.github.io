@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InnovativeServicesOverview.js: React.FC = () => {
@@ -10,3 +11,9 @@ const InnovativeServicesOverview.js: React.FC = () => {
 };
 
 export default InnovativeServicesOverview.js;
+=======
+
+
+const React,{ useState } from "react";"""; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

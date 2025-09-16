@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIContentGenerationAutomation: React.FC = () => {
@@ -10,3 +11,9 @@ const AIContentGenerationAutomation: React.FC = () => {
 };
 
 export default AIContentGenerationAutomation;
+=======
+
+
+const React from "react";"""; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

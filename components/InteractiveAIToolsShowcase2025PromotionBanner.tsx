@@ -1,4 +1,39 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+
+import { 
+  ArrowRight
+  Star
+  Brain
+  Zap
+  TrendingUp
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle
+} from 'lucide-react';
+
+const InteractiveAIToolsShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
   return (

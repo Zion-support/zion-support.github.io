@@ -10,3 +10,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+</p></p></p>

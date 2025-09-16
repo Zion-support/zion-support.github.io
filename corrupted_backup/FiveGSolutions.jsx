@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+}
+}
+ <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { FiveGSolutions }export { FiveGSolutions }export { FiveGSolutions }export { FiveGSolutions }export { FiveGSolutions }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 
 const FiveGSolutions: React.FC = () => {
@@ -7,6 +13,13 @@ const FiveGSolutions: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default FiveGSolutions;
+=======
+}
+}
+}
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

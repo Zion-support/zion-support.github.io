@@ -1,18 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveTechInsights2026= () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveTechInsights2026 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveTechInsights2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveTechInsights2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+          <h1 className="text-4xl font-bold mb-4">Comprehensive Tech Insights 2026</h1>
+          <p className="text-lg opacity-90">Insights and analyses coming soon.</p>
         </div>
       </div>
     </div>
@@ -20,3 +10,9 @@ const ComprehensiveTechInsights2026= () => {
 };
 
 export default ComprehensiveTechInsights2026;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">ComprehensiveTechInsights2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const LinkHealthMonitor.js: React.FC = () => {
@@ -10,3 +11,9 @@ const LinkHealthMonitor.js: React.FC = () => {
 };
 
 export default LinkHealthMonitor.js;
+=======
+
+
+const React,{ useState,useEffect } from "react"; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

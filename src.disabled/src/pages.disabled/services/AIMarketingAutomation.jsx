@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIMarketingAutomation: React.FC = () => {
@@ -10,3 +11,9 @@ const AIMarketingAutomation: React.FC = () => {
 };
 
 export default AIMarketingAutomation;
+=======
+
+
+const React from "react"; '"'"
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

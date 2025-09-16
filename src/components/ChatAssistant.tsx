@@ -9,4 +9,5 @@ const ChatAssistant: React.FC = () => {
   );
 };
 
-export default ChatAssistant;
+export { ChatAssistant };
+</p></p>

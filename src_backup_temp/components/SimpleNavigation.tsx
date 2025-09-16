@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SimpleNavigation: React.FC = () => {
@@ -10,3 +11,14 @@ const SimpleNavigation: React.FC = () => {
 };
 
 export default SimpleNavigation;
+=======
+
+
+;
+</motion>;
+</any>;
+</any>;
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

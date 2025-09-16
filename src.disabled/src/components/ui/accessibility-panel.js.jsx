@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const accessibility-panel.js: React.FC = () => {
@@ -10,3 +11,9 @@ const accessibility-panel.js: React.FC = () => {
 };
 
 export default accessibility-panel.js;
+=======
+'use client';'; 
+'use client\';\'; 
+"use client";"; ""`"`
+'use client';'; 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
