@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -223,9 +224,23 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Cost Reduction", value: "80%", icon: "💰" }
 >>>>>>> cursor/create-and-deploy-new-content-376e
       ]
+=======
+      color: "from-purple-600 to-pink-600",
+      features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
+      demo: "Try AI Consciousness Demo",
+      link: "/pages/AIInnovationHub2026"
+      name: "Analytics Dashboard 2026",
+      description: "AI-powered analytics with real-time insights and predictive modeling",
+      icon: "📊",
+      color: "from-slate-600 to-gray-600",
+      features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
+      demo: "View Live Dashboard",
+      link: "/pages/AdvancedAnalyticsDashboard2026"
+>>>>>>> cursor/create-and-deploy-new-content-0dce
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-white">
@@ -273,6 +288,9 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
   const currentTech = technologies[activeTab as keyof typeof technologies];
+=======
+  const currentTech = technologies[activeTech];
+>>>>>>> cursor/create-and-deploy-new-content-0dce
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
@@ -313,6 +331,7 @@ const InteractiveTechShowcase: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Technology Display */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -370,11 +389,83 @@ const InteractiveTechShowcase: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
+=======
+        {/* Technology Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {technologies.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => {
+                  setIsAnimating(true);
+                  setTimeout(() => {
+                    setActiveTech(index);
+                    setIsAnimating(false);
+                  }, 300);
+                }}
+                className={`px-6 py-3 rounded-xl transition-all duration-300 ${
+                  activeTech === index
+                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-2xl mr-3">{tech.icon}</span>
+                {tech.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Technology Display */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Technology Info */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className={`bg-gradient-to-br ${currentTech.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full`}>
+              <div className="text-8xl mb-6 text-center animate-pulse">
+                {currentTech.icon}
+              </div>
+              <h3 className="text-4xl font-bold mb-6 text-center">
+                {currentTech.name}
+              </h3>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                {currentTech.description}
+              </p>
+              
+              {/* Features */}
+              <div className="mb-8">
+                <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {currentTech.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Demo Button */}
+              <div className="text-center">
+                <motion.a
+                  href={currentTech.link}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentTech.color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
+                >
+                  <span className="mr-2">{currentTech.demo}</span>
+                  <span>→</span>
+                </motion.a>
+              </div>
+            </div>
+          </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-0dce
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -405,3 +496,5 @@ const InteractiveTechShowcase: React.FC = () => {
 };
 
 export default InteractiveTechShowcase;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce

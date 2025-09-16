@@ -92,9 +92,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       impact: "Revolutionary"
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
     },
     {
       id: 4,
@@ -118,10 +121,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -196,6 +202,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
   const currentContent = revolutionaryContent[currentSlide];
 
   return (
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 =======
@@ -238,6 +245,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
             <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
           </motion.button>
         ))}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
     </div>

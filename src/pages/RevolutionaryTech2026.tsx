@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
 import { motion } from 'framer-motion';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -286,6 +289,7 @@ const RevolutionaryTech2026: React.FC = () => {
             >
               Contact Our Experts
             </motion.button>
+<<<<<<< HEAD
 =======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/AdvancedAISolutions2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -306,3 +310,5 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
