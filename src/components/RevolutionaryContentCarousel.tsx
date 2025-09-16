@@ -91,6 +91,15 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      impact: "Revolutionary"
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -117,6 +126,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
       stats: { views: "3.9M", likes: "267K", shares: "54K" },
       color: "from-cyan-600 to-blue-600"
       impact: "Revolutionary"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
     },
     {
       id: 4,
@@ -139,16 +152,44 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
+<<<<<<< HEAD
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -156,19 +197,49 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
+<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
       status: "Live Now",
       impact: "Transformative"
     }

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -39,6 +43,11 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -300,7 +309,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
+<<<<<<< HEAD
             <div className="mb-8">
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -408,6 +421,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
         </section>
 
         {/* Applications Section */}
@@ -524,6 +541,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
 
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
@@ -586,5 +608,12 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
+=======
+<<<<<<< HEAD
+export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
