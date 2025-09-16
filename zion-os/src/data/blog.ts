@@ -187,6 +187,43 @@ export const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     image: '/blog/edge-ai-compliance.jpg',
     content: 'Enterprises can enforce policy at the edge with signed adapters and privacy preserving telemetry, while preserving centralized oversight for audit and incident response.'
+  },
+  // Newly added posts (2025-09-16)
+  {
+    id: 'real-time-agent-cost-optimizer-architecture-2026',
+    title: 'Inside the Real‑Time Agent Cost Optimizer: Architecture and Results (2026)',
+    excerpt: 'How dynamic routing, budgeted quality, and eval‑aware policies cut cost 38% with stable SLAs.',
+    category: 'AI Solutions',
+    author: 'Operations Engineering',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    image: '/blog/agent-cost-optimizer-architecture.jpg',
+    featured: true,
+    content: 'We detail the cost optimizer reference design: capability tagging, tiered models, speculative decoding, cache orchestration, and eval‑gated rollouts with evidence‑led guardrails. Includes real‑world KPI deltas and incident learnings.'
+  },
+  {
+    id: 'evals-in-prod-2026-blueprint',
+    title: 'Evals‑in‑Prod 2026: Practical Control Plane Blueprint',
+    excerpt: 'Design an evals control plane with canaries, policy gates, auto‑rollback, and evidence bundling.',
+    category: 'AI Quality',
+    author: 'Quality Engineering Team',
+    date: '2025-09-16',
+    readTime: '8 min read',
+    image: '/blog/evals-in-prod-2026.jpg',
+    featured: true,
+    content: 'A pragmatic approach to continuous evaluation: scenario catalogs, scorecards, regression sentinels, budgeted quality, and API hooks to orchestrate safe ramp‑ups and recoveries across environments.'
+  },
+  {
+    id: 'autonomous-failure-analysis-toolkit-2026',
+    title: 'Autonomous Failure Analysis Toolkit: Traces, Diffs, and Evidence (2026)',
+    excerpt: 'Run faster, reproducible post‑mortems with trace diffs, prompt lineage, and tamper‑evident bundles.',
+    category: 'Operations',
+    author: 'Reliability Engineering',
+    date: '2025-09-16',
+    readTime: '7 min read',
+    image: '/blog/autonomous-failure-analysis-2026.jpg',
+    featured: true,
+    content: 'We present a toolkit for incident analysis in agentic systems: span diffing, prompt and tool lineage, environment captures, and policy exception trails that make remediations auditable and scalable.'
   }
 ];
 

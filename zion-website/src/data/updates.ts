@@ -206,6 +206,28 @@ export const updates: UpdateItem[] = [
 		date: '2025-09-01',
 		tag: 'Release',
 	},
+  // Newly added updates (2025-09-16)
+  {
+    title: 'Launch: Real‑Time Agent Cost Optimizer v2.0 — Deep Dive',
+    summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
+    href: '/updates/real-time-agent-cost-optimizer-2-0-deep-dive',
+    date: '2025-09-16',
+    tag: 'Launch',
+  },
+  {
+    title: 'Guide: Evals‑in‑Prod Control Plane (2026)',
+    summary: 'Blueprint for live evals, policy gates, and evidence bundles across environments.',
+    href: '/updates/evals-in-prod-control-plane-2026',
+    date: '2025-09-16',
+    tag: 'Guide',
+  },
+  {
+    title: 'Report: Autonomous Failure Analysis Toolkit (2026)',
+    summary: 'Trace diffs, lineage captures, and reproducible post‑mortems for agent incidents.',
+    href: '/updates/autonomous-failure-analysis-toolkit-2026',
+    date: '2025-09-16',
+    tag: 'Report',
+  },
 ]
 
 export const getLatestUpdates = (limit = 6): UpdateItem[] => {
