@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9901,
+    title: "AI 2026: Shipping Safe Agents — Playbook in 24 Hours",
+    excerpt: "Copy-paste eval gates, rollback ladders, and scorecards you can enable today.",
+    content: "This field-tested playbook shows exactly how to ship AI agent features safely in under a day. Wire objective eval gates into CI, attach trace-linked evidence, and enforce deterministic rollback with budget and SLO guardrails. Includes JSON contracts, GitHub Checks examples, and Grafana panels ready to drop in.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Agents", "Eval Gates", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/ship-safe-agents-24h-2026.jpg",
+    slug: "ai-2026-ship-safe-agents-24-hours"
+  },
+  {
+    id: 9900,
+    title: "Trusted RAG 2026: Freshness Windows + Citation Coverage Kit",
+    excerpt: "A minimal, production-ready kit to gate merges with grounded answers.",
+    content: "Launch groundedness with confidence using freshness windows, semantic drift checks, and citation coverage metrics. We include a minimal scorecard schema, CI wiring, and dashboards to block merges and canaries unless quality signals pass. Designed to be copied into your repo with zero yak-shaving.",
+    author: "Samira Khan",
+    authorRole: "Applied AI Platform Lead",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["Groundedness", "Freshness", "Citations"],
+    featured: true,
+    imageUrl: "/images/blog/freshness-citation-kit-2026.jpg",
+    slug: "trusted-rag-2026-freshness-citation-kit"
+  },
+  {
     id: 9804,
     title: "AI Innovation Hub 2026: The Future of Artificial Intelligence",
     excerpt: "Explore the revolutionary AI innovations that are reshaping technology and transforming industries worldwide.",
