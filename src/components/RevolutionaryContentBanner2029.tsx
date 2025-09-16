@@ -1,79 +1,152 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2029: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const slides = [
+    {
+      id: 1,
+      title: "🌟 Revolutionary Tech Breakthrough 2029",
+      description: "Experience the most advanced technological innovations that will reshape our world",
+      link: "/pages/RevolutionaryTechBreakthrough2029",
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🌟"
+    },
+    {
+      id: 2,
+      title: "🚀 Ultimate Tech Showcase 2029",
+      description: "Interactive demonstrations of cutting-edge technologies that will define the future",
+      link: "/pages/UltimateTechShowcase2029",
+      gradient: "from-cyan-600 to-blue-600",
+      icon: "🚀"
+    },
+    {
+      id: 3,
+      title: "🧠 Next-Gen Innovation Hub 2029",
+      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
+      link: "/pages/NextGenInnovationHub2029",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🧠"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      <div className="relative z-10">
+    <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      {/* Background with animated gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 p-8 md:p-12">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-bounce">
-            🌟 REVOLUTIONARY 2029 CONTENT • TRANSCENDENT LAUNCH
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 BREAKTHROUGH CONTENT • JANUARY 2029
           </div>
-          <h2 className="text-8xl font-bold mb-4">🚀 Revolutionary Technology 2029</h2>
-          <p className="text-4xl opacity-95 max-w-8xl mx-auto">
-            Experience the most revolutionary technological content ever created. 
-            From omniversal consciousness to reality manipulation - discover transcendent technology today.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+            Revolutionary Technology 2029
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technological innovations that will reshape our world in 2029
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto">
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-3">Revolutionary Tech 2029</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Discover breakthrough innovations that transcend reality itself
-            </p>
-            <a href="/pages/RevolutionaryTech2029" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Explore Revolution →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-3">Omniversal Consciousness</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI systems achieving true universal consciousness across infinite dimensions
-            </p>
-            <a href="/pages/OmniversalConsciousness2029" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Discover Consciousness →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-3">Reality Manipulation</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Direct manipulation of the fundamental fabric of reality through advanced physics
-            </p>
-            <a href="/pages/RealityManipulation2029" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Experience Reality →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-3">Transcendent Evolution</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Evolution beyond biological limitations through AI-guided transformation
-            </p>
-            <a href="/pages/TranscendentEvolution2029" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Explore Evolution →
-            </a>
-          </div>
+
+        {/* Slides */}
+        <div className="relative">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`transition-all duration-500 ${
+                index === currentSlide
+                  ? 'opacity-100 translate-x-0'
+                  : index < currentSlide
+                  ? 'opacity-0 -translate-x-full absolute inset-0'
+                  : 'opacity-0 translate-x-full absolute inset-0'
+              }`}
+            >
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">{slide.icon}</div>
+                  <h3 className="text-3xl font-bold mb-4 text-white">{slide.title}</h3>
+                  <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{slide.description}</p>
+                  <a
+                    href={slide.link}
+                    className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
+                  >
+                    Explore Innovation →
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center space-x-4">
-            <a href="/pages/RevolutionaryTech2029" className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              🌌 Revolutionary Tech
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-white scale-125'
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
+          {slides.map((slide) => (
+            <a
+              key={slide.id}
+              href={slide.link}
+              className={`group bg-gradient-to-br ${slide.gradient} bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:scale-105 transition-all duration-300`}
+            >
+              <div className="text-center">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {slide.icon}
+                </div>
+                <h4 className="text-lg font-semibold mb-2 text-white">{slide.title}</h4>
+                <p className="text-sm opacity-90 mb-4">{slide.description}</p>
+                <div className="text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">
+                  Learn More →
+                </div>
+              </div>
             </a>
-            <a href="/pages/OmniversalConsciousness2029" className="bg-white text-cyan-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              🌌 Omniversal Consciousness
-            </a>
-            <a href="/pages/RealityManipulation2029" className="bg-white text-emerald-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              ⚛️ Reality Manipulation
-            </a>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-4 text-white">Ready to Experience the Future?</h3>
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+              Join us in exploring the most revolutionary technologies that will define 2029 and beyond
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105">
+                Start Your Journey
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+                View All Innovations
+              </button>
+            </div>
           </div>
         </div>
       </div>
