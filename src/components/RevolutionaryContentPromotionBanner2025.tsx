@@ -1,229 +1,124 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, X, Star, Zap, Brain, Target } from 'lucide-react';
 
-interface RevolutionaryContentPromotionBanner2025Props {
-  variant?: 'featured' | 'compact' | 'hero';
-  className?: string;
-}
+const RevolutionaryContentPromotionBanner2025: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-export default function RevolutionaryContentPromotionBanner2025({ 
-  variant = 'featured'
-  className = ', ' 
-}: RevolutionaryContentPromotionBanner2025Props) {
-  const content = {
-    featured: {
-      title: "🚀 Revolutionary AI Content 2025",
-      subtitle: "Discover the Future of Enterprise Automation",
-      description: "Explore cutting-edge AI solutionsreal success storiesand implementation guides that are transforming businesses worldwide.",
-      bgColor: "bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600",
-      textColor: "text-white",
-      buttonText: "Explore Now",
-      buttonHref: "/blog/ai-2025-enterprise-automation-revolution",
-      stats: [
-        { label: "15,000% ROI"value: "Achieved" },
-        { label: "$2.3B Revenue"value: "Generated" },
-        { label: "500+ Clients"value: "Transformed" }
-      ]
+  const promotions = [
+    {
+      title: "🚀 New: Revolutionary AI Services 2025",
+      subtitle: "Transform your business with cutting-edge AI solutions",
+      cta: "Explore Services",
+      link: "/revolutionary-ai-services-2025",
+      color: "from-cyan-500 to-purple-600",
+      icon: Brain
     },
-    compact: {
-      title: "New AI Content 2025",
-      subtitle: "Latest Insights & Case Studies",
-      description: "Discover how AI is revolutionizing enterprise operations with real-world success stories.",
-      bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
-      textColor: "text-white",
-      buttonText: "Read More",
-      buttonHref: "/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
+    {
+      title: "📈 AI Business Transformation Guide",
+      subtitle: "Complete 2025 guide to achieving 10x ROI with AI",
+      cta: "Read Guide",
+      link: "/ai-powered-business-transformation-2025-guide-10x-roi",
+      color: "from-purple-500 to-pink-600",
+      icon: Target
     },
-    hero: {
-      title: "🌟 The AI Revolution is Here",
-      subtitle: "Transform Your Business with Cutting-Edge AI Solutions",
-      description: "Join 500+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studiesimplementation guidesand the latest AI innovations.",
-      bgColor: "bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900",
-      textColor: "text-white",
-      buttonText: "Start Your Journey",
-      buttonHref: "/contact",
-      secondaryButtonText: "View Success Stories",
-      secondaryButtonHref: "/case-studies"
+    {
+      title: "⚡ Quantum Computing Breakthrough",
+      subtitle: "Solve complex problems in seconds, not years",
+      cta: "Learn More",
+      link: "/quantum-computing-breakthrough-solving-business-problems-seconds",
+      color: "from-green-500 to-teal-600",
+      icon: Zap
     }
-  };
+  ];
 
-  const currentContent = content[variant];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [promotions.length]);
 
-  if (variant === 'hero') {
-    return (
-      <section className={`py-20 ${currentContent.bgColor} ${className}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-              <Star className="h-5 w-5 text-yellow-400 mr-2" />
-              <span className="text-sm font-semibold">NEW CONTENT 2025</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              {currentContent.title}
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-white/90 mb-4 max-w-4xl mx-auto">
-              {currentContent.subtitle}
-            </p>
-            
-            <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
-              {currentContent.description}
-            </p>
+  if (!isVisible) return null;
 
-            {/* Featured Content Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <a 
-                href="/blog/ai-2025-enterprise-automation-revolution"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <BookOpen className="h-6 w-6 text-cyan-400 mr-2" />
-                  <h3 className="text-lg font-semibold">AI Enterprise Revolution</h3>
-                </div>
-                <p className="text-white/80 text-sm mb-4">
-                  Discover how AI is transforming enterprise operations with real-world insights and implementation strategies.
-                </p>
-                <div className="flex items-center text-cyan-400 text-sm font-medium">
-                  Read Article <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </a>
-
-              <a 
-                href="/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <Award className="h-6 w-6 text-purple-400 mr-2" />
-                  <h3 className="text-lg font-semibold">15,000% ROI Success</h3>
-                </div>
-                <p className="text-white/80 text-sm mb-4">
-                  Real case study: How a Fortune 500 company achieved unprecedented results through AI transformation.
-                </p>
-                <div className="flex items-center text-purple-400 text-sm font-medium">
-                  View Case Study <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </a>
-
-              <a 
-                href="/resources/ai-2025-implementation-quick-start-guide"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <Zap className="h-6 w-6 text-pink-400 mr-2" />
-                  <h3 className="text-lg font-semibold">Quick Start Guide</h3>
-                </div>
-                <p className="text-white/80 text-sm mb-4">
-                  Step-by-step implementation guide to start your AI transformation journey today.
-                </p>
-                <div className="flex items-center text-pink-400 text-sm font-medium">
-                  Get Started <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <div className="text-white/80 text-sm">Enterprises Transformed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">15,000%</div>
-                <div className="text-white/80 text-sm">Average ROI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">$50B+</div>
-                <div className="text-white/80 text-sm">Value Generated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
-                <div className="text-white/80 text-sm">Success Rate</div>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href={currentContent.buttonHref}
-                className="px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center"
-              >
-                {currentContent.buttonText}
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </a>
-              <a 
-                href={currentContent.secondaryButtonHref}
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105 flex items-center"
-              >
-                {currentContent.secondaryButtonText}
-                <Play className="h-5 w-5 ml-2" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (variant === 'compact') {
-    return (
-      <section className={`py-8 ${currentContent.bgColor} ${className}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-white mb-2">{currentContent.title}</h3>
-              <p className="text-white/90 text-sm">{currentContent.description}</p>
-            </div>
-            <a 
-              href={currentContent.buttonHref}
-              className="ml-6 px-6 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/30 transition-colors flex items-center"
-            >
-              {currentContent.buttonText}
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </a>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const currentPromo = promotions[currentSlide];
+  const IconComponent = currentPromo.icon;
 
   return (
-    <section className={`py-12 ${currentContent.bgColor} ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-4">
-            <Star className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-sm font-semibold">FEATURED CONTENT</span>
-          </div>
-          
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {currentContent.title}
-          </h2>
-          
-          <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
-            {currentContent.description}
-          </p>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mb-8">
-            {currentContent.stats?.map((statindex) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">{stat.label}</div>
-                <div className="text-white/80 text-sm">{stat.value}</div>
+    <div className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-500/20 overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between">
+            {/* Left side - Promotion content */}
+            <div className="flex items-center space-x-4 flex-1">
+              <div className="flex items-center space-x-3">
+                <div className="bg-gradient-to-r from-cyan-400 to-purple-400 p-2 rounded-lg">
+                  <IconComponent className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-sm sm:text-base">
+                    {currentPromo.title}
+                  </h3>
+                  <p className="text-cyan-200 text-xs sm:text-sm">
+                    {currentPromo.subtitle}
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Center - CTA Button */}
+            <div className="hidden sm:flex items-center space-x-4">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center text-sm">
+                {currentPromo.cta}
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Right side - Close button and indicators */}
+            <div className="flex items-center space-x-3">
+              {/* Slide indicators */}
+              <div className="hidden sm:flex space-x-1">
+                {promotions.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-cyan-400 w-6' 
+                        : 'bg-gray-500 hover:bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Close button */}
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          <a 
-            href={currentContent.buttonHref}
-            className="inline-flex items-center px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-          >
-            {currentContent.buttonText}
-            <ArrowRight className="h-5 w-5 ml-2" />
-          </a>
+          {/* Mobile CTA */}
+          <div className="sm:hidden mt-3">
+            <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              {currentPromo.cta}
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+
+      {/* Animated border */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 animate-pulse"></div>
+    </div>
   );
-}
+};
+
+export default RevolutionaryContentPromotionBanner2025;

@@ -56,6 +56,7 @@ import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBan
 import UltimateContentShowcase2026Banner from './components/UltimateContentShowcase2026Banner';
 import RevolutionaryContentPromotionBanner2026 from './components/RevolutionaryContentPromotionBanner2026';
 import NewContentBreakthroughBanner2026 from './components/NewContentBreakthroughBanner2026';
+import RevolutionaryContentPromotionBanner2025 from './components/RevolutionaryContentPromotionBanner2025';
 import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPromotionBanner2026';
 import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
 import NewContentShowcase2027 from './components/NewContentShowcase2027';
@@ -118,6 +119,8 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import RevolutionaryAIServices2025 from './pages/RevolutionaryAIServices2025';
+import AITrendsInsights2025 from './pages/AITrendsInsights2025';
 
 const App: React.FC = () => {
   return (
@@ -136,6 +139,9 @@ const App: React.FC = () => {
               <div className="mb-12">
                 <RevolutionaryContentPromoBanner2025 />
               </div>
+
+              {/* New Revolutionary Content Promotion Banner 2025 */}
+              <RevolutionaryContentPromotionBanner2025 />
 
               {/* Ultimate Tech Showcase Banner 2025 */}
               <div className="mb-12">
@@ -420,6 +426,15 @@ const App: React.FC = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/sep-2025-exec-guide-evals-guardrails" element={<BlogPost_Sep2025_AIExecGuide />} />
           <Route path="/blog/sep-2025-finserv-model-routing-case-study" element={<BlogPost_Sep2025_CaseStudy />} />
+          
+          {/* New Revolutionary Content Routes 2025 */}
+          <Route path="/revolutionary-ai-services-2025" element={<RevolutionaryAIServices2025 />} />
+          <Route path="/ai-trends-insights-2025" element={<AITrendsInsights2025 />} />
+          <Route path="/ai-powered-business-transformation-2025-guide-10x-roi" element={<Blog />} />
+          <Route path="/future-work-ai-human-collaboration-2025-beyond" element={<Blog />} />
+          <Route path="/quantum-computing-breakthrough-solving-business-problems-seconds" element={<Blog />} />
+          <Route path="/ai-ethics-governance-building-trust-age-artificial-intelligence" element={<Blog />} />
+          <Route path="/ai-powered-customer-experience-revolution-personalization-scale" element={<Blog />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
           <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />

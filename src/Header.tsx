@@ -10,8 +10,8 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-4 text-sm">
             <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: Ultimate Content Showcase 2026 - 60+ Revolutionary Articles</span>
-            <a href="/ultimate-content-showcase-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
+            <span className="font-semibold">NEW: Revolutionary AI Services 2025 - Transform Your Business with Next-Gen AI</span>
+            <a href="/revolutionary-ai-services-2025" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
               Explore Now →
             </a>
             <span className="animate-pulse">🚀</span>
@@ -40,6 +40,12 @@ const Header: React.FC = () => {
             </a>
             <a href="/pages/AITrends2026Insights" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
               AI Trends 2026
+            </a>
+            <a href="/ai-trends-insights-2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-green-50 to-teal-50 rounded-lg">
+              AI Trends 2025
+            </a>
+            <a href="/revolutionary-ai-services-2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg">
+              AI Services 2025
             </a>
             <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
               Case Studies
