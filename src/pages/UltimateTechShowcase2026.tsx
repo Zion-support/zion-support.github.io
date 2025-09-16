@@ -41,6 +41,7 @@ const UltimateTechShowcase2026: React.FC = () => {
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-6">🧠</div>
             <h3 className="text-2xl font-bold text-purple-300 mb-4">AI Consciousness</h3>
@@ -135,6 +136,8 @@ const UltimateTechShowcase2026: React.FC = () => {
             <ul className="space-y-2 mb-6 text-sm text-gray-300">
               <li>• Human-like movement</li>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4f5e
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI Systems</h3>
@@ -298,12 +301,16 @@ const UltimateTechShowcase2026: React.FC = () => {
               <div className="text-5xl font-bold text-purple-400 mb-4">∞</div>
               <div className="text-xl font-semibold mb-2">Scalability</div>
               <div className="text-gray-300">Infinite expansion capabilities</div>
+<<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4f5e
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -319,6 +326,8 @@ const UltimateTechShowcase2026: React.FC = () => {
               Learn More
             </a>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4f5e
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Ready to Transform Your Future?
