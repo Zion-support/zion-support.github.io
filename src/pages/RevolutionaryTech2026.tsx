@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -8,6 +9,12 @@ import React from 'react';
 import React from 'react';
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -303,9 +310,16 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
 export default RevolutionaryTech2026;
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8

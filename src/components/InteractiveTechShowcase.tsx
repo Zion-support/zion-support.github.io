@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -223,6 +226,11 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -257,6 +265,10 @@ const InteractiveTechShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
     {
       id: 4,
       name: "Synthetic Intelligence",
@@ -286,6 +298,14 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 
   const currentTech = technologies[activeTech];
+<<<<<<< HEAD
+=======
+=======
+      ]
+    }
+  };
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 
   return (
     <div className="mb-16">
@@ -348,6 +368,10 @@ const InteractiveTechShowcase: React.FC = () => {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 
               {/* Demo Button */}
               <div className="text-center">
@@ -495,12 +519,21 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Learning Capacity</div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
       </div>
     </div>
   );
 };
 
 export default InteractiveTechShowcase;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -635,7 +668,12 @@ export default InteractiveTechShowcase;
             </motion.div>
 export default InteractiveTechShowcase;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8

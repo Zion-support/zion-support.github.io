@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -37,6 +43,11 @@ const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -94,7 +105,14 @@ const Contact: React.FC = () => {
     "IoT Solutions"
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -317,6 +335,10 @@ const Contact: React.FC = () => {
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -347,6 +369,11 @@ const Contact: React.FC = () => {
               <li>• Technology consulting</li>
             </ul>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -454,7 +481,14 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
           </div>
         </div>
       </section>

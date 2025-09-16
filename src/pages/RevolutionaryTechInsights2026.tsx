@@ -614,6 +614,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -621,3 +622,9 @@ export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8

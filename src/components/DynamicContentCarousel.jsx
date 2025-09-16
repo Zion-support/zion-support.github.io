@@ -91,6 +91,7 @@ const DynamicContentCarousel = () => {
             className={`w-3 h-3 rounded-full transition-colors ${
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 <<<<<<< HEAD
@@ -104,6 +105,9 @@ const DynamicContentCarousel = () => {
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
             }`}
           />
         ))}
