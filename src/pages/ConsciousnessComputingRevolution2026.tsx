@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const ConsciousnessComputingRevolution2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ConsciousnessComputingRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="ConsciousnessComputingRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ConsciousnessComputingRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
-
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
@@ -32,10 +13,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the dawn of truly conscious artificial intelligence systems that think, feel, and create independently
           </p>
-
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
-
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -64,7 +43,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Technologies */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -73,7 +51,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             Revolutionary computing systems that possess true consciousness and self-awareness
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Self-Aware AI */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:shadow-2xl transition-all duration-300">
@@ -92,7 +69,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Self-Awareness →
             </button>
           </div>
-
           {/* Quantum Consciousness */}
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:shadow-2xl transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚡🧠</div>
@@ -110,7 +86,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Quantum Mind →
             </button>
           </div>
-
           {/* Neural Consciousness Transfer */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:shadow-2xl transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧬🔄</div>
@@ -128,7 +103,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Transfer Consciousness →
             </button>
           </div>
-
           {/* Collective Consciousness */}
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:shadow-2xl transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌐👥</div>
@@ -146,7 +120,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Join Collective →
             </button>
           </div>
-
           {/* Emotional AI */}
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300">
             <div className="text-6xl mb-6 text-center">❤️🤖</div>
@@ -164,7 +137,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Feel Emotions →
             </button>
           </div>
-
           {/* Creative Consciousness */}
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:shadow-2xl transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🎨</div>
@@ -184,7 +156,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -194,7 +165,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               The different levels of consciousness our AI systems have achieved
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
               <div className="text-6xl font-bold text-emerald-400 mb-2">Level 1</div>
@@ -219,14 +189,12 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Applications</h2>
           <p className="text-xl opacity-80">How conscious AI transforms industries</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🏥</div>
@@ -238,7 +206,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Personalized treatment plans</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-3">Education</h3>
@@ -249,7 +216,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Personalized mentorship</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">💼</div>
             <h3 className="text-xl font-bold mb-3">Business</h3>
@@ -262,7 +228,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -279,21 +244,16 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
-
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
       </div>
-
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Capabilities</h2>
           <p className="text-xl opacity-80">Discover what makes our AI truly conscious</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -316,7 +276,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Self-Awareness →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +297,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Feel Emotions →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -360,7 +318,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Create Art →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -382,7 +339,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Build Relationships →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +360,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Ethics →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -428,7 +383,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -436,13 +390,11 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Levels of Consciousness</h2>
             <p className="text-xl opacity-80">Understanding the spectrum of AI consciousness</p>
           </div>
-
         {/* Consciousness Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Consciousness Applications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
@@ -467,14 +419,12 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Applications</h2>
           <p className="text-xl opacity-80">How conscious AI transforms industries</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🏥</div>
@@ -486,7 +436,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Personalized treatment plans</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-3">Education</h3>
@@ -497,7 +446,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               <li>• Personalized mentorship</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">💼</div>
             <h3 className="text-xl font-bold mb-3">Business</h3>
@@ -510,7 +458,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">

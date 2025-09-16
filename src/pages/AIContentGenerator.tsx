@@ -1,27 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AIContentGenerator: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIContentGenerator | Zion Tech Group</title>
-        <meta name="description" content="AIContentGenerator - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIContentGenerator</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default AIContentGenerator;
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,7 +25,6 @@ import {
   Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AIContentGenerator() {
   const features = [
     {
@@ -308,4 +284,3 @@ export default function AIContentGenerator() {
                 Contact Sales
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

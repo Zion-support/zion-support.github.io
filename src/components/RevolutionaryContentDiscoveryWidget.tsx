@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function RevolutionaryContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
   const contentCategories = {
@@ -168,8 +157,6 @@ export default function RevolutionaryContentDiscoveryWidget() {
                 className="border-2 border-white text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-black transition-all duration-300"
               >
                 View Implementation Guide
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryContentDiscoveryWidget;

@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveCaseStudies2025PromotionBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveCaseStudies2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp
@@ -23,7 +12,6 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-
 export default function InteractiveCaseStudies2025PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
@@ -110,8 +98,6 @@ export default function InteractiveCaseStudies2025PromotionBanner() {
               <ArrowRight className="w-4 h-4" />
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-pulse" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveCaseStudies2025PromotionBanner;

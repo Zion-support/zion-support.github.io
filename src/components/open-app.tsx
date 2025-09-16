@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const open-app: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">open-app</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default open-app;
-=======
 import { useEffect } from 'react';
-
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
-
 export default function OpenApp() {
   useEffect(() => {
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -50,4 +34,3 @@ export default function OpenApp() {
         <div className="mt-2 text-sm opacity-70">If nothing happens, you’ll be redirected to the store.</div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,25 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const RevolutionaryTechBreakthrough2035: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTechBreakthrough2035 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTechBreakthrough2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechBreakthrough2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
 import Header from '../Header';
 import Footer from '../Footer';
-
 const RevolutionaryTechBreakthrough2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -40,7 +21,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Applications */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
@@ -62,7 +42,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             <div className="text-center">
               <div className="text-6xl mb-4">🎨</div>
               <h3 className="text-2xl font-bold mb-4">Reality Creation</h3>
@@ -80,7 +59,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             <div className="text-center">
               <div className="text-6xl mb-4">⏰</div>
               <h3 className="text-2xl font-bold mb-4">Time Manipulation</h3>
@@ -100,7 +78,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🏆 Success Stories</h2>
@@ -120,7 +97,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Quantum reality manipulation</li>
               </ul>
             </div>
-
             <div
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
             >
@@ -138,7 +114,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
         >
@@ -158,11 +133,8 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </button>
           </div>
       </main>
-      
       <Footer />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechBreakthrough2035;

@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryCaseStudiesShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -21,7 +14,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -36,7 +28,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Case Study Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -60,7 +51,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Active Case Study Details */}
           <div
             key={activeCase}
@@ -81,18 +71,15 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
                     <p className="text-gray-500">{caseStudies[activeCase].industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
                     <p className="text-gray-600">{caseStudies[activeCase].challenge}</p>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
                     <p className="text-gray-600">{caseStudies[activeCase].solution}</p>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
@@ -105,7 +92,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Column - Results & Testimonial */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-4">Results</h4>
@@ -127,7 +113,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
                     <div className="text-sm text-gray-600">Satisfaction</div>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-6 mb-6 text-sm text-gray-600">
                   <div className="flex items-center space-x-2">
                     <Clock className="w-4 h-4" />
@@ -138,7 +123,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
                     <span>{caseStudies[activeCase].team}</span>
                   </div>
                 </div>
-
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Client Testimonial</h4>
                   <p className="text-gray-600 italic mb-4">"{caseStudies[activeCase].testimonial.content}"</p>
@@ -151,7 +135,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -178,8 +161,6 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryCaseStudiesShowcase2026;

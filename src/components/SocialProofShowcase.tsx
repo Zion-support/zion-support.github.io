@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const SocialProofShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SocialProofShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function SocialProofShowcase() {
   const testimonials = [
     {
@@ -156,8 +146,6 @@ export default function SocialProofShowcase() {
               className="border-2 border-blue-500 text-blue-600 px-12 py-4 rounded-lg font-bold text-xl hover:bg-blue-500 hover:text-white transition-colors"
             >
               View All Case Studies
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default SocialProofShowcase;

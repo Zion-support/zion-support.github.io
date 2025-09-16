@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AITrendsPredictions2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AITrendsPredictions2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -25,7 +19,6 @@ const AITrendsPredictions2025: React.FC = () => {
             Explore our comprehensive predictions for the future of artificial intelligencefrom quantum breakthroughs to synthetic consciousness.
           </p>
         </div>
-
         {/* Year Selector */}
         <div
           className="flex justify-center gap-4 mb-12"
@@ -44,7 +37,6 @@ const AITrendsPredictions2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content */}
           <div
             key={activeYear}
@@ -58,7 +50,6 @@ const AITrendsPredictions2025: React.FC = () => {
                 {trendsData[activeYear].subtitle}
               </p>
             </div>
-
             {/* Trends Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
               {trendsData[activeYear].trends.map((trendindex) => {
@@ -95,7 +86,6 @@ const AITrendsPredictions2025: React.FC = () => {
                 );
               })}
             </div>
-
             {/* Predictions */}
             <div
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
@@ -117,7 +107,6 @@ const AITrendsPredictions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -148,9 +137,7 @@ const AITrendsPredictions2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AITrendsPredictions2025;

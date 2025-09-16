@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const [slug]: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">[slug]</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default [slug];
-=======
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -39,7 +25,6 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
@@ -202,4 +187,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

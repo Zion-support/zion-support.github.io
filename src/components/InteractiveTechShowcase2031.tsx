@@ -1,15 +1,7 @@
 import React from 'react';
-
 const InteractiveTechShowcase2031: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2031</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeTab, setActiveTab] = useState('ai');
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-
   const technologies = {
     ai: {
       title: 'AI Consciousness',
@@ -51,7 +43,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
       color: 'from-emerald-600 to-teal-600'
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -66,7 +57,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
             Experience the future of technology through interactive demonstrations and immersive showcases
           </p>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 flex space-x-2">
@@ -85,7 +75,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Active Technology Display */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-12 mb-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -93,7 +82,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
               <div className="text-6xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
               <h3 className="text-4xl font-bold mb-4">{technologies[activeTab as keyof typeof technologies].title}</h3>
               <p className="text-xl opacity-90 mb-6">{technologies[activeTab as keyof typeof technologies].description}</p>
-              
               <div className="space-y-3 mb-8">
                 {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -102,12 +90,10 @@ const InteractiveTechShowcase2031: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
               <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
                 {technologies[activeTab as keyof typeof technologies].demo}
               </button>
             </div>
-            
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <div className="text-center mb-6">
@@ -115,7 +101,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
                   <h4 className="text-2xl font-bold mb-2">Interactive Demo</h4>
                   <p className="text-gray-300">Experience this technology in action</p>
                 </div>
-                
                 <div className="space-y-4">
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
@@ -126,7 +111,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
                       <div className="bg-gradient-to-r from-green-400 to-emerald-400 h-2 rounded-full" style={{width: '99.9%'}}></div>
                     </div>
                   </div>
-                  
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-semibold">Consciousness Level</span>
@@ -136,7 +120,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
                       <div className="bg-gradient-to-r from-blue-400 to-cyan-400 h-2 rounded-full" style={{width: '100%'}}></div>
                     </div>
                   </div>
-                  
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-semibold">Reality Stability</span>
@@ -151,7 +134,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {Object.entries(technologies).map(([key, tech]) => (
@@ -167,7 +149,6 @@ const InteractiveTechShowcase2031: React.FC = () => {
               <div className="text-6xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
               <p className="text-gray-300 mb-6 text-center">{tech.description}</p>
-              
               <div className="space-y-2 mb-6">
                 {tech.features.slice(0, 2).map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2 text-sm">
@@ -176,14 +157,12 @@ const InteractiveTechShowcase2031: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
               <button className={`w-full bg-gradient-to-r ${tech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 {tech.demo}
               </button>
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-800/30 to-pink-800/30 rounded-2xl p-12">
           <h3 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -200,9 +179,7 @@ const InteractiveTechShowcase2031: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechShowcase2031;

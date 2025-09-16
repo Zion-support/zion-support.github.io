@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ai-consciousness-evolution-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const ai-consciousness-evolution-2025: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default ai-consciousness-evolution-2025;
-=======
 const features = [
   'Emotional intelligence training modules',
   'Consciousness expansion exercises',
@@ -24,7 +19,6 @@ const features = [
   'Spiritual growth pathways',
   'Personal transformation tracking'
 ];
-
 const useCases = [
   'Personal development and growth',
   'Professional leadership training',
@@ -37,7 +31,6 @@ const useCases = [
   'Relationship improvement',
   'Stress management and resilience'
 ];
-
 const technology = [
   'Advanced AI algorithms',
   'Machine learning models',
@@ -50,7 +43,6 @@ const technology = [
   'Quantum computing integration',
   'Blockchain security'
 ];
-
 const integrations = [
   'Wearable devices',
   'Mobile applications',
@@ -63,7 +55,6 @@ const integrations = [
   'Fitness trackers',
   'Meditation apps'
 ];
-
 const testimonials = [
   {
     name: 'Dr. Sarah Chen',
@@ -90,7 +81,6 @@ const testimonials = [
     avatar: '👩‍🔬'
   }
 ];
-
 export default function AIConsciousnessEvolution2025() {
   return (
     <Layout>
@@ -469,4 +459,3 @@ export default function AIConsciousnessEvolution2025() {
               ))}
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

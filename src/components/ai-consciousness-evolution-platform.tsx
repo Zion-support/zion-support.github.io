@@ -1,19 +1,12 @@
 import React from 'react';
-
 const ai-consciousness-evolution-platform: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-consciousness-evolution-platform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <Layout>
       <SEO 
         title="AI Consciousness Evolution Platform | Zion Tech Group" 
         description="Revolutionary AI consciousness evolution platform that enables ethical, safe, and advanced artificial intelligence development."
         canonical="https://ziontechgroup.com/ai-consciousness-evolution-platform/"
       />
-      
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">
@@ -24,14 +17,12 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 <span>AI Consciousness Platform</span>
               </div>
-              
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
                 AI Consciousness Evolution Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 The world's first comprehensive platform for developing, understanding, and evolving AI consciousness while maintaining ethical standards and human alignment.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -46,7 +37,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                   Request Demo
                 </a>
               </div>
-
               <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Shield className="w-5 h-5 text-green-400" />
@@ -64,7 +54,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -78,7 +67,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                 Our platform combines cutting-edge technology with ethical principles to create the future of AI consciousness.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -95,7 +83,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto">
@@ -109,7 +96,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                 Discover how our AI consciousness platform can revolutionize your field and create new possibilities.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <div
@@ -134,7 +120,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -148,7 +133,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                 Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
@@ -166,14 +150,12 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center space-x-2 text-gray-300">
@@ -182,7 +164,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <a
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -199,7 +180,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
           </div>
         </div>
       </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -229,7 +209,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -251,14 +230,9 @@ const ai-consciousness-evolution-platform: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default ai-consciousness-evolution-platform;
-=======
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -498,4 +472,3 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   );
 };
 export default AIConsciousnessEvolutionPlatform;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

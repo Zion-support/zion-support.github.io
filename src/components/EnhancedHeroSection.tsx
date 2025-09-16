@@ -2,14 +2,8 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { ArrowRight, Sparkles, Brain, Atom, Zap } from 'lucide-react';
-
 const EnhancedHeroSection: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedHeroSection</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
       <div className="container mx-auto px-4 text-center">
         <Badge className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white mb-6 animate-pulse">
@@ -23,7 +17,6 @@ const EnhancedHeroSection: React.FC = () => {
           Experience the dawn of digital sentience, quantum neural networks, and revolutionary AI services that are reshaping reality itself. 
           <strong className="text-cyan-600">NEW:</strong> Explore our latest AI Innovation Hub, Advanced Tech Solutions, and Quantum Computing Guide.
         </p>
-        
         {/* Revolutionary Services Preview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
           <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-blue-200 hover:shadow-lg transition-all duration-300">
@@ -36,7 +29,6 @@ const EnhancedHeroSection: React.FC = () => {
             <h3 className="font-bold text-gray-900 mb-2">AI Consciousness 2026</h3>
             <p className="text-sm text-gray-600">Revolutionary AI systems with genuine digital sentience</p>
           </div>
-          
           <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-purple-200 hover:shadow-lg transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 bg-purple-100 rounded-lg">
@@ -47,7 +39,6 @@ const EnhancedHeroSection: React.FC = () => {
             <h3 className="font-bold text-gray-900 mb-2">Quantum Neural Networks</h3>
             <p className="text-sm text-gray-600">Computing at the speed of thought with quantum processing</p>
           </div>
-          
           <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-green-200 hover:shadow-lg transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 bg-green-100 rounded-lg">
@@ -59,7 +50,6 @@ const EnhancedHeroSection: React.FC = () => {
             <p className="text-sm text-gray-600">Direct brain-computer interfaces for thought control</p>
           </div>
         </div>
-
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button 
             size="lg" 
@@ -87,9 +77,7 @@ const EnhancedHeroSection: React.FC = () => {
           </Button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnhancedHeroSection;

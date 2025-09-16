@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const NewContentBanner2025: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
 =======
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-cyan-900 text-white py-12 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -24,7 +13,6 @@ const NewContentBanner2025: React.FC = () => {
             Discover our newest technology showcases, AI solutions, and revolutionary content
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
@@ -38,7 +26,6 @@ const NewContentBanner2025: React.FC = () => {
               Explore AI Solutions →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
               <div className="text-3xl mr-3">⚡</div>
@@ -51,7 +38,6 @@ const NewContentBanner2025: React.FC = () => {
               View Showcase →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
               <div className="text-3xl mr-3">🚀</div>
@@ -65,7 +51,6 @@ const NewContentBanner2025: React.FC = () => {
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <span className="text-sm opacity-75">Featured Technologies:</span>
@@ -73,15 +58,3 @@ const NewContentBanner2025: React.FC = () => {
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Quantum Computing</span>
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Neural Interfaces</span>
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Interdimensional Tech</span>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-    </div>
-  );
-};
-
-export default NewContentBanner2025;
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

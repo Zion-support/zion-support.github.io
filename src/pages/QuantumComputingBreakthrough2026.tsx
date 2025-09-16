@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { Atom, Cpu, Zap, Infinity, Brain, Network } from 'lucide-react';
-
 const QuantumComputingBreakthrough2026 = () => {
   const quantumFeatures = [
     {
@@ -44,14 +40,12 @@ const QuantumComputingBreakthrough2026 = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   const quantumStats = [
     { number: "10^18", label: "Speed Increase", description: "Exponential speedup over classical computers" },
     { number: "1000+", label: "Qubits", description: "Revolutionary quantum processor capacity" },
     { number: "99.9%", label: "Accuracy", description: "Quantum error correction and stability" },
     { number: "0°C", label: "Operating Temp", description: "Room temperature quantum operation" }
   ];
-
   const applications = [
     {
       title: "Drug Discovery Revolution",
@@ -74,21 +68,7 @@ const QuantumComputingBreakthrough2026 = () => {
       impact: "Enable interstellar travel"
     }
   ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingBreakthrough2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingBreakthrough2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingBreakthrough2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -131,7 +111,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Stats */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,7 +138,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Features */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,7 +158,6 @@ const QuantumComputingBreakthrough2026 = () => {
               that will transform every industry and solve humanity's greatest challenges.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumFeatures.map((feature, index) => (
               <motion.div
@@ -202,7 +179,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Applications */}
       <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,7 +199,6 @@ const QuantumComputingBreakthrough2026 = () => {
               that are currently impossible for classical computers.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {applications.map((app, index) => (
               <motion.div
@@ -241,10 +216,8 @@ const QuantumComputingBreakthrough2026 = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,5 +251,4 @@ const QuantumComputingBreakthrough2026 = () => {
     </div>
   );
 };
-
 export default QuantumComputingBreakthrough2026;

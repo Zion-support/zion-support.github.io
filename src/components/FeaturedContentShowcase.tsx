@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const FeaturedContentShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FeaturedContentShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, User, Tag, Star, TrendingUp, Eye } from 'lucide-react';
 import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
-
 const FeaturedContentShowcase = () => {
   const [activeTab, setActiveTab] = useState('featured');
   const featuredPosts = getFeaturedBlogPosts();
   const recentPosts = getRecentBlogPosts(6);
-
   const tabs = [
     { id: 'featured', label: 'Featured', count: featuredPosts.length },
     { id: 'recent', label: 'Latest', count: recentPosts.length },
     { id: 'trending', label: 'Trending', count: 12 }
   ];
-
   const getPostsForTab = () => {
     switch (activeTab) {
       case 'featured':
@@ -36,9 +23,7 @@ const FeaturedContentShowcase = () => {
         return featuredPosts.slice(0, 6);
     }
   };
-
   const posts = getPostsForTab();
-
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +38,6 @@ const FeaturedContentShowcase = () => {
             <Star className="w-4 h-4 mr-2" />
             Fresh Content Daily
           </motion.div>
-          
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Discover Our Latest <span className="text-blue-600">Innovations</span>
           </h2>
@@ -62,7 +46,6 @@ const FeaturedContentShowcase = () => {
             that are shaping the future of business and technology.
           </p>
         </div>
-
         {/* Tabs */}
         <div className="flex justify-center mb-8">
           <div className="bg-white rounded-lg p-1 shadow-sm border">
@@ -84,7 +67,6 @@ const FeaturedContentShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Content Grid */}
         <motion.div
           key={activeTab}
@@ -122,13 +104,11 @@ const FeaturedContentShowcase = () => {
                   </h3>
                 </div>
               </div>
-
               {/* Content */}
               <div className="p-6">
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
-
                 {/* Meta */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-4">
@@ -146,7 +126,6 @@ const FeaturedContentShowcase = () => {
                     {Math.floor(Math.random() * 1000) + 100}
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.tags.slice(0, 3).map((tag) => (
@@ -159,7 +138,6 @@ const FeaturedContentShowcase = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* CTA */}
                 <motion.a
                   href={`/blog/${post.slug}`}
@@ -174,7 +152,6 @@ const FeaturedContentShowcase = () => {
             </motion.article>
           ))}
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -213,8 +190,6 @@ const FeaturedContentShowcase = () => {
         </motion.div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default FeaturedContentShowcase;

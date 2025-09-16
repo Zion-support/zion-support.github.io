@@ -1,12 +1,6 @@
 import React from 'react';
-
 const InteractiveAILearningHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveAILearningHub2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -29,7 +23,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
             and interactive content designed for all skill levels.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +40,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Level Filter */}
             <div className="flex gap-2">
               {levels.map((level) => (
@@ -66,7 +58,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Category Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +81,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Courses Grid */}
         <div
           whileInView="visible"
@@ -140,7 +130,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Course Content */}
                 <div className="p-6">
                   {/* Level Badge */}
@@ -153,15 +142,12 @@ const InteractiveAILearningHub2025: React.FC = () => {
                       {course.level.charAt(0).toUpperCase() + course.level.slice(1)}
                     </span>
                   </div>
-
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
-
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {course.description}
                   </p>
-
                   {/* Instructor */}
                   <div className="flex items-center mb-4">
                     <img
@@ -178,7 +164,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {course.tags.slice(02).map((tagindex) => (
@@ -190,7 +175,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
@@ -203,7 +187,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
                       {course.modules} modules
                     </div>
                   </div>
-
                   {/* Price and Actions */}
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-gray-900">
@@ -219,7 +202,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Certificate Badge */}
                   {course.certificate && (
                     <div className="mt-3 flex items-center text-sm text-green-600">
@@ -232,7 +214,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Learning Paths Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +227,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
               Follow curated learning paths designed by industry experts
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -308,7 +288,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -334,9 +313,7 @@ const InteractiveAILearningHub2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveAILearningHub2025;

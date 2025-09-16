@@ -1,5 +1,4 @@
   const [activeDemo, setActiveDemo] = useState(0);
-
   const demos = [
     {
       id: 0,
@@ -26,19 +25,6 @@
       color: "from-emerald-600 to-teal-600"
     }
   ];
-
-<<<<<<< HEAD
-const RevolutionaryTechShowcase2036: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTechShowcase2036 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTechShowcase2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-=======
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Showcase →
@@ -48,7 +34,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Interactive Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 group">
@@ -75,7 +60,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               Explore AI Revolution →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group">
             <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
@@ -100,7 +84,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               Enter Quantum Realm →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 group">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Technology</h3>
@@ -126,7 +109,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Technology Showcase Carousel */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -135,7 +117,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               Explore our cutting-edge technology solutions with interactive features and real-time demonstrations
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-4xl mb-4">🤖</div>
@@ -146,7 +127,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </div>
               <span className="text-xs opacity-60">95% Consciousness Level</span>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-lg font-semibold mb-2">Quantum Computing</h3>
@@ -156,7 +136,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </div>
               <span className="text-xs opacity-60">100% Quantum Efficiency</span>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-lg font-semibold mb-2">Neural Interfaces</h3>
@@ -166,7 +145,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </div>
               <span className="text-xs opacity-60">98% Neural Sync</span>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-lg font-semibold mb-2">Metaverse 2.0</h3>
@@ -178,7 +156,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -187,7 +164,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               See how our revolutionary technologies have transformed businesses and industries worldwide
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
               <div className="flex items-center space-x-2 mb-4">
@@ -202,7 +178,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
                 Read Case Study →
               </button>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-xs rounded-full">$50M</span>
@@ -216,7 +191,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
                 Learn More →
               </button>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">99.99%</span>
@@ -232,7 +206,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Interactive Demo Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -241,7 +214,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               Experience our revolutionary technologies through interactive demonstrations and real-time simulations
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <h3 className="text-2xl font-semibold mb-4">Conscious AI Demo</h3>
@@ -252,7 +224,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
                 Start AI Demo →
               </button>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <h3 className="text-2xl font-semibold mb-4">Quantum Consciousness Simulator</h3>
               <p className="text-sm opacity-80 mb-6">
@@ -264,9 +235,7 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2036</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
@@ -296,10 +265,8 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
       </div>
-
       {/* Interactive Demo Selector */}
       <div className="container mx-auto px-4 py-16">
         <div className="flex justify-center mb-12">

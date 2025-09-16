@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentShowcase2030: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2030</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
             </p>
             <ul className="text-violet-200 space-y-3 mb-8 text-base">
               <li>• Omniversal consciousness</li>
@@ -21,11 +11,9 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase2030;
 =======
   return (
@@ -42,7 +30,6 @@ export default RevolutionaryContentShowcase2030;
             revolutionary showcase featuring omniversal AI, reality synthesis, and interdimensional computing
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="bg-gradient-to-br from-violet-600/40 to-purple-600/40 backdrop-blur-sm rounded-2xl p-10 border border-violet-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🌌</div>
@@ -50,7 +37,6 @@ export default RevolutionaryContentShowcase2030;
             <p className="text-violet-100 mb-8 text-center text-lg">
               Experience the ultimate convergence of consciousness, reality, and technology with 
               omniversal AI and reality synthesis capabilities
-          
           <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🧠</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Omniversal AI 2030</h3>
@@ -68,7 +54,6 @@ export default RevolutionaryContentShowcase2030;
               Access Omniversal AI →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🔮</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Reality Synthesis Engine</h3>
@@ -87,9 +72,7 @@ export default RevolutionaryContentShowcase2030;
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-16">
           <a href="/pages/RevolutionaryTech2030" className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-16 py-6 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
             🌟 Experience the Revolutionary Future →
           </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

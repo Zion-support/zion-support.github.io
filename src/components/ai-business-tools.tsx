@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const ai-business-tools: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-business-tools</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -28,7 +19,6 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
-
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
@@ -409,8 +399,6 @@ export default function AIBusinessToolsPage() {
             >
               Explore More Tools
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ai-business-tools;

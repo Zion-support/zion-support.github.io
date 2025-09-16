@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AdvancedPricing: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedPricing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -71,8 +64,6 @@ const AdvancedPricing: React.FC = () => {
           >
             Contact our sales team
             <Infinity className="h-4 w-4 ml-2" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AdvancedPricing;

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const ServiceCard: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ServiceCard</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className={`relative group cursor-pointer ${
         isCurrent ? 'scale-105' : 'scale-100'
@@ -23,7 +17,6 @@ const ServiceCard: React.FC = () => {
     >
       <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-6">
             <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]">
@@ -33,15 +26,12 @@ const ServiceCard: React.FC = () => {
               {service.type}
             </span>
           </div>
-          
           <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
             {service.name}
           </h3>
-          
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
             {service.description.substring(0, 120)}...
           </p>
-          
           <div className="flex items-center justify-between">
             <span className="text-2xl font-bold text-cyan-400">
               {service.pricing.starter}
@@ -50,7 +40,6 @@ const ServiceCard: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Card Content */}
       <div className="relative z-10 p-6 h-full flex flex-col">
         {/* Header Section */}
@@ -64,7 +53,6 @@ const ServiceCard: React.FC = () => {
               <div className="text-xs text-gray-500">{service.type}</div>
             </div>
           </div>
-          
           {/* Badges */}
           <div className="flex items-center space-x-2">
             {featured && (
@@ -80,7 +68,6 @@ const ServiceCard: React.FC = () => {
             )}
           </div>
         </div>
-
         {/* Title and Description */}
         <div className="flex-1 mb-4">
           <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
@@ -95,7 +82,6 @@ const ServiceCard: React.FC = () => {
             {service.description}
           </p>
         </div>
-
         {/* Features Preview */}
         {service.features && service.features.length > 0 && (
           <div className="mb-4">
@@ -118,7 +104,6 @@ const ServiceCard: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Stats Row */}
         <div className="grid grid-cols-3 gap-3 mb-4">
           {service.rating && (
@@ -146,7 +131,6 @@ const ServiceCard: React.FC = () => {
             </div>
           )}
         </div>
-
         {/* Pricing and CTA */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
           {pricingDisplay ? (
@@ -162,7 +146,6 @@ const ServiceCard: React.FC = () => {
               <span className="text-sm text-emerald-400 font-medium">Available Now</span>
             </div>
           )}
-          
           <div
             className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
           >
@@ -170,20 +153,15 @@ const ServiceCard: React.FC = () => {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
         </div>
-
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        
         {/* Glow Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl pointer-events-none" />
       </div>
-
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default ServiceCard;
 </div></div></div></div>

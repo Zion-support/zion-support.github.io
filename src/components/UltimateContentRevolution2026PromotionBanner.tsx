@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentRevolution2026PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <div
@@ -23,7 +17,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold">
@@ -38,7 +31,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                   </h3>
                 </div>
               </div>
-
               {/* Center Content - Mobile */}
               <div className="md:hidden text-center">
                 <div className="flex items-center justify-center gap-2 mb-1">
@@ -53,7 +45,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                   Experience the Future
                 </h3>
               </div>
-
               {/* Right Content */}
               <div className="flex items-center gap-3">
                 {/* Stats */}
@@ -71,7 +62,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <span>5★ Rated</span>
                   </div>
                 </div>
-
                 {/* CTA Buttons */}
                 <div className="flex items-center gap-2">
                   <divbutton
@@ -81,7 +71,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <span className="hidden sm:inline">Explore Now</span>
                     <span className="sm:hidden">Explore</span>
                   </divbutton>
-                  
                   <divbutton
                     className="flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/20 transition-all duration-300"
                   >
@@ -89,7 +78,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-
                 {/* Dismiss Button */}
                 <divbutton
                   onClick={handleDismiss}
@@ -99,7 +87,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                 </divbutton>
               </div>
             </div>
-
             {/* Mobile Stats */}
             <div className="lg:hidden mt-3 pt-3 border-t border-purple-500/30">
               <div className="flex justify-center gap-6 text-xs">
@@ -118,7 +105,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
@@ -156,10 +142,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
           </div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentRevolution2026PromotionBanner;
 </div></div></div></div></div></div>

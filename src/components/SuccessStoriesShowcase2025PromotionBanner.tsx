@@ -1,12 +1,6 @@
 import React from 'react';
-
 const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SuccessStoriesShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative bg-gradient-to-r from-green-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
@@ -20,7 +14,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
           <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-700" />
         </div>
       </div>
-
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -36,11 +29,9 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                   NEW: Success Stories Showcase 2025
                 </span>
               </div>
-
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
                 Real Results from Real Companies
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Featuring:</span>
                 <div
@@ -53,7 +44,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
                 <div className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4" />
@@ -69,7 +59,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Center - Rotating Stats */}
             <div className="hidden md:flex items-center gap-8">
               {stats.map((statindex) => {
@@ -89,7 +78,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                 );
               })}
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <divbutton
@@ -99,7 +87,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                 View Stories
                 <ArrowRight className="w-4 h-4" />
               </divbutton>
-              
               <divbutton
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
               >
@@ -107,7 +94,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                 Join Success
               </divbutton>
             </div>
-
             {/* Close Button */}
             <divbutton
               onClick={() => setIsVisible(false)}
@@ -117,7 +103,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
             </divbutton>
           </div>
         </div>
-
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
           <div
@@ -125,10 +110,8 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
           />
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default SuccessStoriesShowcase2025PromotionBanner;
 </div></div></div></div></div></div></div></div></div>

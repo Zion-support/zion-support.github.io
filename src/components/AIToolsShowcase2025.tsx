@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AIToolsShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Brain
@@ -28,7 +17,6 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-
 interface AITool {
   id: string;
   name: string;
@@ -41,7 +29,6 @@ interface AITool {
   isNew?: boolean;
   isPopular?: boolean;
 }
-
 const aiTools: AITool[] = [
   {
     id: '1',
@@ -109,9 +96,7 @@ const aiTools: AITool[] = [
     isPopular: true
   }
 ];
-
 const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
-
 export default function AIToolsShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [hoveredToolsetHoveredTool] = useState<string | null>(null);
@@ -234,8 +219,6 @@ export default function AIToolsShowcase2025() {
                 Start Free Trial
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                 View All Tools
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AIToolsShowcase2025;

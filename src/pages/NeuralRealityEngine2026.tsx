@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const NeuralRealityEngine2026: React.FC = () => {
   const [realityLevel, setRealityLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setRealityLevel(prev => (prev + 1) % 100);
     }, 50);
     return () => clearInterval(interval);
   }, []);
-
   const realityFeatures = [
     {
       title: "Matter Manipulation",
@@ -43,27 +35,13 @@ const NeuralRealityEngine2026: React.FC = () => {
       capabilities: ["Astral projection", "Virtual embodiment", "Reality perception", "Consciousness transfer"]
     }
   ];
-
   const realityMetrics = [
     { name: "Reality Coherence", value: 94, color: "from-blue-400 to-cyan-400" },
     { name: "Neural Sync", value: 87, color: "from-purple-400 to-pink-400" },
     { name: "Matter Stability", value: 91, color: "from-green-400 to-emerald-400" },
     { name: "Temporal Accuracy", value: 89, color: "from-yellow-400 to-orange-400" }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NeuralRealityEngine2026 | Zion Tech Group</title>
-        <meta name="description" content="NeuralRealityEngine2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NeuralRealityEngine2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -99,7 +77,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Reality Simulation */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-br from-indigo-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">
@@ -159,7 +136,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Reality Features */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🔮 Revolutionary Reality Features</h2>
@@ -187,7 +163,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Interactive Reality Demo */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🎮 Interactive Reality Demo</h2>
@@ -284,7 +259,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🚀 Future Applications</h2>
@@ -306,7 +280,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>
@@ -321,11 +294,9 @@ const NeuralRealityEngine2026: React.FC = () => {
           <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
             Learn More
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default NeuralRealityEngine2026;

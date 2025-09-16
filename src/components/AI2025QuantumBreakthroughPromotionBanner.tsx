@@ -1,19 +1,11 @@
 import React from 'react';
-
 const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025QuantumBreakthroughPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -30,7 +22,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
             Learn about practical applications and implementation strategies that are reshaping industries.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">⚡</div>
@@ -40,7 +31,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
             </p>
             <div className="text-2xl font-bold text-yellow-400">1000x</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-3">Quantum Machine Learning</h3>
@@ -49,7 +39,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
             </p>
             <div className="text-2xl font-bold text-green-400">∞</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Real-Time Decision Making</h3>
@@ -59,7 +48,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
             <div className="text-2xl font-bold text-blue-400">Real-Time</div>
           </div>
         </div>
-
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-6">Transform Your Business Today</h3>
@@ -83,7 +71,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -99,15 +86,12 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
-          
           <div className="text-sm text-gray-300">
             <p>🚀 Join thousands of businesses already transforming with quantum-AI technology</p>
           </div>
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025QuantumBreakthroughPromotionBanner;

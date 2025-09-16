@@ -1,13 +1,6 @@
 import React from 'react';
-
 const InteractiveAIToolsDemo2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -22,7 +15,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             See how our solutions can transform your workflow in real-time.
           </p>
         </div>
-
         {/* Demo Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -45,7 +37,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Interactive Demo Area */}
         <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
@@ -83,7 +74,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
@@ -97,7 +87,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
               />
             </div>
           </div>
-
           {/* Demo Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Features */}
@@ -112,7 +101,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Metrics */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Performance Metrics</h4>
@@ -133,7 +121,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mb-12"
@@ -158,7 +145,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -185,8 +171,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveAIToolsDemo2026;

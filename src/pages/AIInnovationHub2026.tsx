@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Target, Users, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const AIInnovationHub2026: React.FC = () => {
   const innovations = [
     {
@@ -34,29 +27,13 @@ const AIInnovationHub2026: React.FC = () => {
       features: ["End-to-end automation", "Strategic planning", "Real-time optimization"]
     }
   ];
-
   const stats = [
     { label: "AI Performance Increase", value: "10,000x", icon: TrendingUp },
     { label: "Processing Speed", value: "Quantum Fast", icon: Zap },
     { label: "Accuracy Rate", value: "99.97%", icon: CheckCircle },
     { label: "Energy Efficiency", value: "95% Better", icon: Brain }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIInnovationHub2026 | Zion Tech Group</title>
-        <meta name="description" content="AIInnovationHub2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIInnovationHub2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -73,7 +50,6 @@ const AIInnovationHub2026: React.FC = () => {
               2026
             </span>
           </motion.h1>
-          
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +58,6 @@ const AIInnovationHub2026: React.FC = () => {
           >
             The most advanced AI research and development center, pushing the boundaries of artificial intelligence into uncharted territories
           </motion.p>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,7 +74,6 @@ const AIInnovationHub2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -122,7 +96,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Innovations Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -140,7 +113,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover the cutting-edge AI technologies that are reshaping the future of human-machine collaboration
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -160,7 +132,6 @@ const AIInnovationHub2026: React.FC = () => {
                     <p className="text-gray-300">{innovation.description}</p>
                   </div>
                 </div>
-                
                 <ul className="space-y-3">
                   {innovation.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -174,7 +145,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -207,7 +177,6 @@ const AIInnovationHub2026: React.FC = () => {
           </motion.button>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -236,8 +205,6 @@ const AIInnovationHub2026: React.FC = () => {
               </button>
             </div>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -255,7 +222,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore Cognitive AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
@@ -272,7 +238,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover Quantum AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI</h3>
@@ -289,7 +254,6 @@ const AIInnovationHub2026: React.FC = () => {
               Learn About Autonomous AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural AI</h3>
@@ -306,7 +270,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore Neural AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative AI</h3>
@@ -323,7 +286,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover Creative AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Research AI</h3>
@@ -341,7 +303,6 @@ const AIInnovationHub2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -350,13 +311,11 @@ const AIInnovationHub2026: React.FC = () => {
               Our AI innovations are transforming industries and creating measurable impact
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
               <div className="text-lg opacity-80">AI Models Deployed</div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the AI Innovation Revolution</h2>

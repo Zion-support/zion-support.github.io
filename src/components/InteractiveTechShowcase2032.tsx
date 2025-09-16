@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveTechShowcase2032: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2032</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState, useEffect } from 'react';
-
 const InteractiveTechShowcase2032: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
   const technologies = [
     {
       id: 1,
@@ -64,7 +53,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
       status: "Research"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -73,10 +61,8 @@ const InteractiveTechShowcase2032: React.FC = () => {
         setIsAnimating(false);
       }, 500);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4">
@@ -92,7 +78,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
             Experience the most revolutionary technologies through interactive demonstrations and hands-on exploration
           </p>
         </div>
-
         {/* Technology Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-full p-2">
@@ -112,7 +97,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Active Technology Display */}
         <div className={`bg-gradient-to-r ${technologies[activeTech].bgColor} backdrop-blur-sm rounded-2xl p-12 mb-16 border ${technologies[activeTech].borderColor} transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -134,9 +118,7 @@ const InteractiveTechShowcase2032: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <p className="text-xl text-gray-200 mb-8">{technologies[activeTech].description}</p>
-              
               <div className="space-y-4 mb-8">
                 {technologies[activeTech].features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -145,7 +127,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-4">
                 <button className={`bg-gradient-to-r ${technologies[activeTech].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
                   Try Interactive Demo
@@ -155,7 +136,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Interactive Demo Area */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h4 className="text-2xl font-bold text-white mb-6 text-center">Live Demo</h4>
@@ -182,7 +162,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {technologies.map((tech, index) => (
@@ -199,7 +178,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
                 <div className="text-5xl mb-4">{tech.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{tech.name}</h3>
                 <p className="text-sm text-gray-300 mb-4">{tech.description}</p>
-                
                 <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-xs text-gray-400">Progress</span>
@@ -212,7 +190,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
                     ></div>
                   </div>
                 </div>
-
                 <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${tech.color} text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300`}>
                   {hoveredCard === tech.id ? 'Explore Now →' : 'Learn More'}
                 </div>
@@ -220,14 +197,12 @@ const InteractiveTechShowcase2032: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Performance Metrics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-white/20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Revolutionary Performance Metrics</h3>
             <p className="text-lg text-gray-300">See the incredible achievements of our technologies</p>
           </div>
-
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
@@ -247,7 +222,6 @@ const InteractiveTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
           <h3 className="text-4xl font-bold text-white mb-6">Experience the Future Today</h3>
@@ -264,9 +238,7 @@ const InteractiveTechShowcase2032: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechShowcase2032;

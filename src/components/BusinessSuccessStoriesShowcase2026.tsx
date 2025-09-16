@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessSuccessStoriesShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessSuccessStoriesShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -26,7 +20,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
         </div>
-
         {/* Featured Stories */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +30,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
             {featuredStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
-
               return (
                 <div
                   key={story.id}
@@ -66,7 +58,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                       <span className="bg-white/20 px-2 py-1 rounded-full">Featured</span>
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className="p-6">
                     {/* Challenge */}
@@ -74,13 +65,11 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                       <h5 className="font-semibold text-slate-900 mb-2">Challenge</h5>
                       <p className="text-sm text-slate-600 line-clamp-2">{story.challenge}</p>
                     </div>
-
                     {/* Solution */}
                     <div className="mb-4">
                       <h5 className="font-semibold text-slate-900 mb-2">Solution</h5>
                       <p className="text-sm text-slate-600 line-clamp-2">{story.solution}</p>
                     </div>
-
                     {/* Key Results */}
                     <div className="mb-6">
                       <h5 className="font-semibold text-slate-900 mb-3">Key Results</h5>
@@ -93,7 +82,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Technologies */}
                     <div className="mb-4">
                       <h5 className="font-semibold text-slate-900 mb-2">Technologies Used</h5>
@@ -108,7 +96,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Stats */}
                     <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                       <div className="flex items-center gap-4">
@@ -126,7 +113,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                         <span>{story.duration}</span>
                       </div>
                     </div>
-
                     {/* Actions */}
                     <div className="flex gap-2">
                       <button className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
@@ -143,7 +129,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* All Stories Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +139,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
             {allStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
-
               return (
                 <div
                   key={story.id}
@@ -180,11 +164,9 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className="p-4">
                     <h5 className="font-semibold text-slate-900 mb-2 line-clamp-1">{story.challenge}</h5>
-                    
                     {/* Key Results */}
                     <div className="grid grid-cols-2 gap-2 mb-3">
                       {Object.entries(story.results).slice(02).map(([keyvalue]resultIndex) => (
@@ -194,7 +176,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                         </div>
                       ))}
                     </div>
-
                     {/* Stats */}
                     <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
                       <div className="flex items-center gap-1">
@@ -210,7 +191,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
                         <span>{story.duration}</span>
                       </div>
                     </div>
-
                     <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-1">
                       <Play className="w-3 h-3" />
                       Read Story
@@ -221,7 +201,6 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -248,9 +227,7 @@ const BusinessSuccessStoriesShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessSuccessStoriesShowcase2026;

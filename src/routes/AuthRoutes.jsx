@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AuthRoutes= () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,8 +7,4 @@ const AuthRoutes= () => {
     </div>
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default AuthRoutes;

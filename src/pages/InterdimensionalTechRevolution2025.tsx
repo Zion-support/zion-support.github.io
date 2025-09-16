@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const InterdimensionalTechRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>InterdimensionalTechRevolution2025 | Zion Tech Group</title>
-        <meta name="description" content="InterdimensionalTechRevolution2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">InterdimensionalTechRevolution2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Break through the barriers of our dimension and access infinite parallel realities with our revolutionary interdimensional technology
           </p>
@@ -27,7 +11,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Interdimensional Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -43,7 +26,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               <li>• Consciousness transfer</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Tunneling</h3>
@@ -57,7 +39,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               <li>• Temporal synchronization</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -72,7 +53,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Technology Deep Dive */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Interdimensional Technology Architecture</h2>
@@ -121,7 +101,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -138,7 +117,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
                 • Population distribution optimization
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-bold mb-3">Scientific Discovery</h3>
@@ -151,7 +129,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
                 • Universal law discovery
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-bold mb-3">Business Expansion</h3>
@@ -166,7 +143,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Dimensional Map */}
         <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Dimensional Universe Map</h2>
@@ -193,7 +169,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Safety Protocols */}
         <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Safety & Security Protocols</h2>
@@ -241,7 +216,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               </ul>
             </div>
           </div>
-
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore Interdimensional Space?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
@@ -256,11 +230,9 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               Schedule Exploration
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default InterdimensionalTechRevolution2025;

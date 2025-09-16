@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedAnalytics2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedAnalytics2025 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedAnalytics2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedAnalytics2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -26,7 +8,6 @@ const AdvancedAnalytics2025= () => {
             Unlock the power of data with advanced analytics solutions
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 rounded-xl p-6 backdrop-blur-sm border border-cyan-400/20">
             <h3 className="text-2xl font-bold mb-4 text-cyan-300">Predictive Analytics</h3>
@@ -39,7 +20,6 @@ const AdvancedAnalytics2025= () => {
               <li>• Risk assessment</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">Real-time Analytics</h3>
             <p className="text-gray-300 mb-4">
@@ -51,7 +31,6 @@ const AdvancedAnalytics2025= () => {
               <li>• Instant alerts</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-indigo-400/20">
             <h3 className="text-2xl font-bold mb-4 text-indigo-300">Business Intelligence</h3>
             <p className="text-gray-300 mb-4">
@@ -64,18 +43,15 @@ const AdvancedAnalytics2025= () => {
             </ul>
           </div>
         </div>
-        
         <div className="text-center mt-16">
           <button className="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-600 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Explore Analytics
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedAnalytics2025;
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -83,4 +59,3 @@ export default AdvancedAnalytics2025;
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">AdvancedAnalytics2025</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

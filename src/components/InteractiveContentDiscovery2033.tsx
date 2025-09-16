@@ -1,13 +1,6 @@
 import React from 'react';
-
 const InteractiveContentDiscovery2033: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentDiscovery2033</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <divsection
       whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden"
@@ -18,7 +11,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div
@@ -32,7 +24,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
         </div>
-
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +40,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
             />
           </div>
-
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
@@ -68,7 +58,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Grid */}
           <div
             key={`${activeFilter}-${searchTerm}`}
@@ -97,7 +86,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Title and Description */}
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
                   {item.title}
@@ -105,7 +93,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag, tagIndex) => (
@@ -117,7 +104,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-gray-400">
@@ -131,7 +117,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-
                 {/* Hover Effect */}
                 <div>
                   {hoveredItem === item.id && (
@@ -144,7 +129,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div
@@ -157,9 +141,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
         )}
       </div>
     </divsection>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveContentDiscovery2033;
 </div></div></div>

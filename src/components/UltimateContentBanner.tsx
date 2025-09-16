@@ -1,17 +1,7 @@
 import React from 'react';
-
-
 const UltimateContentBanner: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const bannerContent = [
     {
       title: "🚀 NEW: Ultimate Tech Breakthrough 2026",
@@ -38,23 +28,17 @@ const UltimateContentBanner: React.FC = () => {
       bgColor: "from-emerald-900/90 to-teal-900/90"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
-    
       <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -77,7 +61,6 @@ const UltimateContentBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-4">
                 <a
                   href={bannerContent[currentSlide].link}
@@ -95,7 +78,6 @@ const UltimateContentBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Slide Indicators */}
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {bannerContent.map((_, index) => (
@@ -109,9 +91,6 @@ const UltimateContentBanner: React.FC = () => {
           ))}
         </div>
       </div>
-    
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default UltimateContentBanner;

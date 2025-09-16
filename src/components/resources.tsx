@@ -1,17 +1,6 @@
 import React from 'react';
-
 const resources: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">resources</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default resources;
-=======
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
       <div className="container mx-auto px-4 py-16 text-white">
@@ -36,4 +25,3 @@ export default resources;
   );
 };
 export default ResourcesPage;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

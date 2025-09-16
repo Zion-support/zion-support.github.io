@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveCaseStudies2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveCaseStudies2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp
@@ -26,7 +15,6 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-
 interface CaseStudy {
   id: string;
   title: string;
@@ -49,7 +37,6 @@ interface CaseStudy {
   tags: string[];
   isFeatured?: boolean;
 }
-
 const caseStudies: CaseStudy[] = [
   {
     id: '1',
@@ -142,9 +129,7 @@ const caseStudies: CaseStudy[] = [
     tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
   }
 ];
-
 const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
-
 export default function InteractiveCaseStudies2025() {
   const [selectedIndustrysetSelectedIndustry] = useState('All');
   const [selectedCasetSelectedCase] = useState<CaseStudy | null>(null);
@@ -330,8 +315,6 @@ export default function InteractiveCaseStudies2025() {
                   <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                     Schedule Consultation
         )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveCaseStudies2025;

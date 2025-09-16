@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AITransformationROICalculator: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AITransformationROICalculator</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState } from 'react';
-
 interface ROICalculation {
   currentRevenue: number;
   currentCosts: number;
@@ -21,7 +9,6 @@ interface ROICalculation {
   implementationCost: number;
   timeframe: number;
 }
-
 export default function AITransformationROICalculator() {
   const [inputs, setInputs] = useState<ROICalculation>({
     currentRevenue: 10000000,
@@ -201,8 +188,6 @@ export default function AITransformationROICalculator() {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Success Stories
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AITransformationROICalculator;

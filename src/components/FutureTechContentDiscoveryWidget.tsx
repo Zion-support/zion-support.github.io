@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const FutureTechContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FutureTechContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function FutureTechContentDiscoveryWidget() {
   const [activeCategorysetActiveCategory] = useState('all');
   const contentCategories = {
@@ -174,8 +163,6 @@ export default function FutureTechContentDiscoveryWidget() {
                 className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 📚 Latest Articles
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default FutureTechContentDiscoveryWidget;

@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const cloud-monitoring: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">cloud-monitoring</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -385,8 +375,6 @@ export default function CloudMonitoringPage() {
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default cloud-monitoring;

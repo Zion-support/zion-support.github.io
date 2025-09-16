@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AI2025InteractiveContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025InteractiveContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function AI2025InteractiveContentDiscoveryWidget() {
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [selectedROIsetSelectedROI] = useState('all');
@@ -213,8 +202,6 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
                 className="bg-white border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Browse All Content
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025InteractiveContentDiscoveryWidget;

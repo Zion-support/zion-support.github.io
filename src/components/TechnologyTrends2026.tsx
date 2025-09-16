@@ -1,12 +1,6 @@
 import React from 'react';
-
 const TechnologyTrends2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TechnologyTrends2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -26,7 +20,6 @@ const TechnologyTrends2026: React.FC = () => {
               Discover the most influential technology trendsbreakthrough innovationsand transformative 
               developments that will shape the future of technology and society.
             </p>
-            
             {/* Search and View Controls */}
             <div className="max-w-4xl mx-auto mb-8">
               <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -63,7 +56,6 @@ const TechnologyTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Featured Trends */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div
@@ -138,7 +130,6 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Category Filter */}
         <div
           className="mb-12"
@@ -167,7 +158,6 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Trends Grid */}
         <div
         >
@@ -232,7 +222,6 @@ const TechnologyTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Trend Detail Modal */}
       <div>
         {selectedTrend && (
@@ -277,7 +266,6 @@ const TechnologyTrends2026: React.FC = () => {
                 <p className="text-gray-600 text-lg mb-6">
                   {selectedTrend.description}
                 </p>
-                
                 {/* Market Data */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
@@ -299,7 +287,6 @@ const TechnologyTrends2026: React.FC = () => {
                     <div className="text-sm text-gray-600">Timeline</div>
                   </div>
                 </div>
-
                 {/* Predictions */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Predictions</h3>
@@ -318,7 +305,6 @@ const TechnologyTrends2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Key Players and Challenges */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -348,7 +334,6 @@ const TechnologyTrends2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedTrend.tags.map((tag) => (
                     <span
@@ -359,7 +344,6 @@ const TechnologyTrends2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
                     Timeline: {selectedTrend.timeline}
@@ -374,9 +358,7 @@ const TechnologyTrends2026: React.FC = () => {
           </div>
         )}
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default TechnologyTrends2026;

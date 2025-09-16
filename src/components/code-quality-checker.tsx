@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const code-quality-checker: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">code-quality-checker</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -382,8 +371,6 @@ export default function CodeQualityCheckerPage() {
             >
               Schedule Demo
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default code-quality-checker;

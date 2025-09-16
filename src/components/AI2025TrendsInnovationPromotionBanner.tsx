@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025TrendsInnovationPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -15,7 +8,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -27,7 +19,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
               <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-blue-300 font-medium">New: AI Trends 2025</span>
             </div>
-
             {/* Main Heading */}
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -36,13 +27,11 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                 <br />
                 of AI Innovation
               </h2>
-              
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
                 Explore revolutionary AI trends and cutting-edge innovations that will transform your business in 2025. 
                 Stay ahead with the latest technology insights and implementation strategies.
               </p>
             </div>
-
             {/* Features List */}
             <div className="space-y-4">
               {features.map((featureindex) => (
@@ -55,7 +44,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <divbutton
@@ -64,7 +52,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                 Explore AI Trends
                 <ArrowRight className="w-5 h-5 ml-2" />
               </divbutton>
-              
               <divbutton
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
@@ -73,7 +60,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Right Content - Stats Display */}
           <div
             className="relative"
@@ -84,7 +70,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Results</h3>
                 <p className="text-gray-300">Real impact from AI implementation</p>
               </div>
-
               {/* Animated Stat Display */}
               <div className="text-center mb-8">
                 <div
@@ -102,7 +87,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2">
                 {stats.map((_index) => (
@@ -115,14 +99,12 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
             </div>
-
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
@@ -130,7 +112,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
           className="text-center mt-16"
@@ -149,9 +130,7 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025TrendsInnovationPromotionBanner;
 </div></div></div>

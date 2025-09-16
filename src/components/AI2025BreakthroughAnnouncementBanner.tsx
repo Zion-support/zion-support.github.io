@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025BreakthroughAnnouncementBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
@@ -21,7 +15,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
               >
                 {breakthroughs[currentBreakthrough].urgency}
               </div>
-              
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentBreakthrough}`}
@@ -30,7 +23,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 <breakthroughs[currentBreakthrough].icon className="w-6 h-6 text-white" />
               </div>
             </div>
-
             {/* Center - Breakthrough Content */}
             <div className="flex-1 text-center px-8">
               <div
@@ -45,7 +37,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/ai-2025-breakthrough-announcement">
@@ -57,7 +48,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
               </a>
-              
               <button
                 onClick={() => setIsVisible(false)}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
@@ -67,10 +57,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_i) => (
@@ -92,10 +80,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AI2025BreakthroughAnnouncementBanner;
 </div></div>

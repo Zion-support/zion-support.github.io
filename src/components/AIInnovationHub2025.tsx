@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIInnovationHub2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div
@@ -27,7 +21,6 @@ const AIInnovationHub2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 py-8">
         {/* Search and Filters */}
         <div
@@ -45,7 +38,6 @@ const AIInnovationHub2025: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex items-center gap-2">
               <button
@@ -66,7 +58,6 @@ const AIInnovationHub2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-4 justify-center">
             {Object.entries(categories).map(([keycategory]) => (
@@ -85,7 +76,6 @@ const AIInnovationHub2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Grid */}
         <div
           className={`grid gap-6 ${
@@ -106,12 +96,10 @@ const AIInnovationHub2025: React.FC = () => {
               <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${item.color} 
                 ${hoveredItem === item.id ? 'scale-105 shadow-2xl' : 'shadow-lg'} 
                 transition-all duration-300 ${viewMode === 'list' ? 'flex-1' : 'h-full'}`}>
-                
                 {/* Status Badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getStatusColor(item.status)} text-white`}>
                   {item.status}
                 </div>
-
                 <div className={`p-6 ${viewMode === 'list' ? 'flex items-center gap-6' : ''}`}>
                   {/* Icon */}
                   <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mb-4'}`}>
@@ -119,12 +107,10 @@ const AIInnovationHub2025: React.FC = () => {
                       <item.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-gray-200 mb-4 text-sm">{item.description}</p>
-                    
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.features.slice(02).map((featureidx) => (
@@ -138,13 +124,11 @@ const AIInnovationHub2025: React.FC = () => {
                         </span>
                       )}
                     </div>
-
                     {/* Meta Info */}
                     <div className="flex items-center justify-between text-sm text-gray-300 mb-4">
                       <span className={getDifficultyColor(item.difficulty)}>{item.difficulty}</span>
                       <span>{item.downloads} downloads</span>
                     </div>
-
                     {/* Rating and Price */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -158,7 +142,6 @@ const AIInnovationHub2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Overlay */}
                 {hoveredItem === item.id && (
                   <div
@@ -180,7 +163,6 @@ const AIInnovationHub2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Load More */}
         <div
           className="text-center mt-12"
@@ -191,9 +173,7 @@ const AIInnovationHub2025: React.FC = () => {
           </button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIInnovationHub2025;

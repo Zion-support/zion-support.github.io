@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const micro-saas: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">micro-saas</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
-
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const microSaasServices = [
@@ -2138,8 +2128,6 @@ export default function MicroSaasPage() {
             >
               Contact Sales
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default micro-saas;

@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const SocialSharing: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SocialSharing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface SocialSharingProps {
   title: string;
   url: string;
@@ -17,7 +7,6 @@ interface SocialSharingProps {
   hashtags?: string[];
   className?: string;
 }
-
 export default function SocialSharing({ 
   title
   url
@@ -115,8 +104,6 @@ export default function SocialSharing({
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
         Copy Link
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default SocialSharing;

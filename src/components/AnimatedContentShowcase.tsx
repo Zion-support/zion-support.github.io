@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AnimatedContentShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AnimatedContentShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ShowcaseItem {
   id: string;
   title: string;
@@ -27,7 +16,6 @@ interface ShowcaseItem {
     speed: string;
   };
 }
-
 export default function AnimatedContentShowcase() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -249,8 +237,6 @@ export default function AnimatedContentShowcase() {
                   <div className="text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
                     Explore →
             ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AnimatedContentShowcase;

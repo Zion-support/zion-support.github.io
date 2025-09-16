@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const NeuralRealityEngine2027: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NeuralRealityEngine2027 | Zion Tech Group</title>
-        <meta name="description" content="NeuralRealityEngine2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NeuralRealityEngine2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
-
-
 const NeuralRealityEngine2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -52,7 +32,6 @@ const NeuralRealityEngine2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Neural Interface Technologies */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -66,7 +45,6 @@ const NeuralRealityEngine2027: React.FC = () => {
             Discover the most advanced brain-computer interfaces that enable direct communication between mind and machine
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -89,7 +67,6 @@ const NeuralRealityEngine2027: React.FC = () => {
               Try BCI Interface →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -111,7 +88,6 @@ const NeuralRealityEngine2027: React.FC = () => {
               Enter VR World →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -135,7 +111,6 @@ const NeuralRealityEngine2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Neural Applications */}
       <div className="bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -150,7 +125,6 @@ const NeuralRealityEngine2027: React.FC = () => {
               Explore how neural interfaces are transforming healthcare, education, and human-computer interaction
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div
               initial={{ opacity: 0, x: -50 }}
@@ -169,7 +143,6 @@ const NeuralRealityEngine2027: React.FC = () => {
                 <li>• Pain management</li>
               </ul>
             </div>
-
             <div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -190,7 +163,6 @@ const NeuralRealityEngine2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Vision */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -204,7 +176,6 @@ const NeuralRealityEngine2027: React.FC = () => {
             Imagine a world where the boundaries between human consciousness and artificial intelligence have completely dissolved
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -218,7 +189,6 @@ const NeuralRealityEngine2027: React.FC = () => {
               A global network where minds can connect and share experiences directly
             </p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +201,6 @@ const NeuralRealityEngine2027: React.FC = () => {
               The ability to backup and transfer human consciousness to digital platforms
             </p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +215,6 @@ const NeuralRealityEngine2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -269,9 +237,7 @@ const NeuralRealityEngine2027: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NeuralRealityEngine2027;

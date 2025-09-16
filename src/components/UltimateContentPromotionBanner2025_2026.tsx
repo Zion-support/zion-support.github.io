@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentPromotionBanner2025_2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentPromotionBanner2025_2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -32,7 +26,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -50,24 +43,20 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold">New Content Available</span>
                   </div>
-
                   {/* Title */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
                     <span className={`bg-gradient-to-r ${currentSlideData.gradient} bg-clip-text text-transparent`}>
                       {currentSlideData.title}
                     </span>
                   </h1>
-
                   {/* Subtitle */}
                   <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-200">
                     {currentSlideData.subtitle}
                   </h2>
-
                   {/* Description */}
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-lg">
                     {currentSlideData.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-3 mb-8">
                     {currentSlideData.features.map((featureindex) => (
@@ -80,7 +69,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <divbutton
@@ -90,7 +78,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                       {currentSlideData.cta}
                       <ArrowRight className="w-5 h-5" />
                     </divbutton>
-                    
                     <divbutton
                       className="border-2 border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:bg-white/10 transition-all duration-300"
                     >
@@ -101,7 +88,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Visual */}
             <div
               className="relative"
@@ -126,7 +112,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 {/* Floating Elements */}
                 {[...Array(6)].map((_i) => (
                   <div
@@ -150,7 +135,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
         {slides.map((_index) => (
@@ -165,17 +149,14 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10">
         <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
         />
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentPromotionBanner2025_2026;
 </div></div></div></div></div>

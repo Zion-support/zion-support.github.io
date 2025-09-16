@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AI2026UltimateServicesShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2026UltimateServicesShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div
         className="max-w-7xl mx-auto"
@@ -26,7 +20,6 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
             Experience the future of artificial intelligence with our cutting-edge services that are transforming industries and revolutionizing human potential.
           </p>
         </div>
-
         {/* Services Grid */}
           {services.map((serviceindex) => (
             <div
@@ -40,15 +33,12 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="space-y-3 mb-6">
                   {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -57,14 +47,12 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">
                     {service.stats}
                   </div>
                   <ArrowRight className="w-6 h-6 text-purple-400 group-hover:translate-x-2 transition-transform" />
                 </div>
-
                 {activeService === index && (
                   <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
@@ -74,7 +62,6 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Active Service Details */}
           <div
             key={activeService}
@@ -85,15 +72,12 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
                 <div className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${services[activeService].color} flex items-center justify-center mb-8`}>
                   <services[activeService].icon className="w-10 h-10 text-white" />
                 </div>
-                
                 <h2 className="text-4xl font-bold text-white mb-6">
                   {services[activeService].title}
                 </h2>
-                
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {services[activeService].description}
                 </p>
-
                 <div className="flex items-center gap-4 mb-8">
                   <div className="text-4xl font-bold text-white">
                     {services[activeService].stats}
@@ -102,13 +86,11 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
                     Performance Metric
                   </div>
                 </div>
-
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group">
                   Get Started Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
                 {services[activeService].features.map((featureindex) => (
@@ -124,7 +106,6 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -142,9 +123,7 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AI2026UltimateServicesShowcase;

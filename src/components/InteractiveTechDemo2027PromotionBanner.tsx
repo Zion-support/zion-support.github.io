@@ -1,12 +1,6 @@
 import React from 'react';
-
 const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2027PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <div
@@ -25,7 +19,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
               }}
             />
           </div>
-
           <div className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -40,18 +33,15 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                     <span className="text-green-400 text-xs font-medium">LIVE</span>
                   </div>
                 </div>
-
                 <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                   🎮 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                     Interactive Tech Demo 2027
                   </span>
                 </h2>
-                
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
                   Experience our cutting-edge technology in action! Watch real-time demonstrations 
                   of AI processingautomationand neural interfaces with interactive controls.
                 </p>
-
                 {/* Rotating Demo Features */}
                 <div className="flex items-center gap-4 mb-4">
                     <div
@@ -72,7 +62,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="flex flex-wrap items-center gap-3 text-xs">
                   {features.map((featureindex) => (
@@ -83,7 +72,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Center - Live Stats */}
               <div className="hidden lg:flex items-center gap-6">
                 <div className="text-center">
@@ -101,7 +89,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                   <div className="text-xs text-gray-400">Cost Saved</div>
                 </div>
               </div>
-
               {/* Right Content - CTA */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
@@ -109,13 +96,11 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                   <span>Start Demo</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-                
                 <button className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
                   <Settings className="w-4 h-4" />
                   <span>Schedule Demo</span>
                 </button>
               </div>
-
               {/* Dismiss Button */}
               <button
                 onClick={() => setIsDismissed(true)}
@@ -124,7 +109,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
                 <X className="w-4 h-4 text-gray-400 hover:text-white" />
               </button>
             </div>
-
             {/* Mobile Stats */}
             <div className="lg:hidden mt-4 grid grid-cols-4 gap-4">
               {stats.map((statindex) => (
@@ -135,15 +119,12 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechDemo2027PromotionBanner;
 </div></div></div></div>

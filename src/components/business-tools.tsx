@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const business-tools: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">business-tools</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -401,8 +391,6 @@ export default function BusinessToolsPage() {
             >
               Get Business Consultation
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default business-tools;

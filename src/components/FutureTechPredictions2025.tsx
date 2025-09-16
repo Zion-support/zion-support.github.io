@@ -1,17 +1,10 @@
 import React from 'react';
-
 const FutureTechPredictions2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FutureTechPredictions2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 min-h-screen py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-500/10 via-transparent to-purple-500/10"></div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -29,7 +22,6 @@ const FutureTechPredictions2025: React.FC = () => {
             Explore our predictions for the next 5 years of technological advancement and prepare for the revolutionary changes ahead.
           </p>
         </div>
-
         {/* Year Navigation */}
         <div
           className="mb-16"
@@ -50,7 +42,6 @@ const FutureTechPredictions2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Active Prediction Display */}
             <div
               key={activeYear}
@@ -70,7 +61,6 @@ const FutureTechPredictions2025: React.FC = () => {
                   <p className="text-lg text-gray-400 mb-8">
                     {predictions[activeYear].impact}
                   </p>
-                  
                   {/* Probability Bar */}
                   <div className="mb-8">
                     <div className="flex justify-between items-center mb-2">
@@ -83,7 +73,6 @@ const FutureTechPredictions2025: React.FC = () => {
                       />
                     </div>
                   </div>
-
                   <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center">
                     Learn More
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -107,7 +96,6 @@ const FutureTechPredictions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Progress */}
         <div
           className="mb-20"
@@ -136,7 +124,6 @@ const FutureTechPredictions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Timeline */}
         <div
           className="mb-20"
@@ -147,7 +134,6 @@ const FutureTechPredictions2025: React.FC = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
-            
             <div className="space-y-12">
               {milestones.map((milestoneindex) => (
                 <div
@@ -170,17 +156,14 @@ const FutureTechPredictions2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   {/* Timeline Dot */}
                   <div className="relative z-10 w-4 h-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-4 border-slate-900"></div>
-                  
                   <div className="w-1/2"></div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl p-12 border border-indigo-500/30"
@@ -203,9 +186,7 @@ const FutureTechPredictions2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default FutureTechPredictions2025;

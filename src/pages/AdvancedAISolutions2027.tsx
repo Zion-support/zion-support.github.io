@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import RevolutionaryServicesBanner2027 from '../components/RevolutionaryServicesBanner2027';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const AdvancedAISolutions2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const solutions = [
     {
       id: 1,
@@ -125,14 +117,12 @@ const AdvancedAISolutions2027: React.FC = () => {
       icon: "🧠"
     }
   ];
-
   const tabs = [
     { id: 0, name: "Overview", icon: "📊" },
     { id: 1, name: "Features", icon: "⚡" },
     { id: 2, name: "Benefits", icon: "🎯" },
     { id: 3, name: "Use Cases", icon: "💼" }
   ];
-
   const testimonials = [
     {
       id: 1,
@@ -162,22 +152,7 @@ const AdvancedAISolutions2027: React.FC = () => {
       avatar: "/api/placeholder/80/80"
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedAISolutions2027 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedAISolutions2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedAISolutions2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className={`advanced-ai-solutions-2027 ${isVisible ? 'visible' : ''}`}>
       {/* Hero Section */}
       <section className="hero-section">
@@ -216,7 +191,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="solutions-section">
         <div className="section-container">
@@ -224,7 +198,6 @@ const AdvancedAISolutions2027: React.FC = () => {
             <h2>Revolutionary AI Solutions</h2>
             <p>Cutting-edge technologies that redefine what's possible in business automation</p>
           </div>
-
           <div className="solutions-grid">
             {solutions.map((solution) => (
               <div key={solution.id} className="solution-card">
@@ -233,7 +206,6 @@ const AdvancedAISolutions2027: React.FC = () => {
                   <h3 className="solution-title">{solution.title}</h3>
                   <p className="solution-description">{solution.description}</p>
                 </div>
-
                 <div className="solution-tabs">
                   <div className="tab-buttons">
                     {tabs.map((tab) => (
@@ -247,7 +219,6 @@ const AdvancedAISolutions2027: React.FC = () => {
                       </button>
                     ))}
                   </div>
-
                   <div className="tab-content">
                     {activeTab === 0 && (
                       <div className="tab-panel">
@@ -306,7 +277,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="testimonials-section">
         <div className="section-container">
@@ -314,7 +284,6 @@ const AdvancedAISolutions2027: React.FC = () => {
             <h2>What Our Clients Say</h2>
             <p>Real results from industry leaders</p>
           </div>
-
           <div className="testimonials-grid">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-card">
@@ -339,10 +308,8 @@ const AdvancedAISolutions2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Banner */}
       <RevolutionaryServicesBanner2027 />
-
       {/* CTA Section */}
       <section className="final-cta-section">
         <div className="section-container">
@@ -360,19 +327,16 @@ const AdvancedAISolutions2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       <style jsx>{`
         .advanced-ai-solutions-2027 {
           opacity: 0;
           transform: translateY(30px);
           transition: all 0.8s ease-out;
         }
-
         .advanced-ai-solutions-2027.visible {
           opacity: 1;
           transform: translateY(0);
         }
-
         .hero-section {
           background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #dc2626 100%);
           color: white;
@@ -380,7 +344,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           position: relative;
           overflow: hidden;
         }
-
         .hero-container {
           max-width: 1400px;
           margin: 0 auto;
@@ -389,7 +352,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           gap: 80px;
           align-items: center;
         }
-
         .hero-badge {
           background: rgba(255, 255, 255, 0.2);
           padding: 10px 25px;
@@ -401,7 +363,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .hero-title {
           font-size: 4rem;
           font-weight: 800;
@@ -411,7 +372,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           flex-direction: column;
           gap: 15px;
         }
-
         .hero-subtitle {
           font-size: 2.5rem;
           background: linear-gradient(45deg, #fbbf24, #f59e0b);
@@ -419,20 +379,17 @@ const AdvancedAISolutions2027: React.FC = () => {
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-
         .hero-description {
           font-size: 1.4rem;
           line-height: 1.6;
           margin-bottom: 40px;
           opacity: 0.9;
         }
-
         .hero-actions {
           display: flex;
           gap: 25px;
           flex-wrap: wrap;
         }
-
         .cta-button {
           padding: 20px 40px;
           border-radius: 50px;
@@ -443,53 +400,44 @@ const AdvancedAISolutions2027: React.FC = () => {
           border: 2px solid transparent;
           display: inline-block;
         }
-
         .cta-button.primary {
           background: white;
           color: #1e3a8a;
         }
-
         .cta-button.primary:hover {
           background: #f8fafc;
           transform: translateY(-3px);
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
-
         .cta-button.secondary {
           background: transparent;
           color: white;
           border-color: white;
         }
-
         .cta-button.secondary:hover {
           background: white;
           color: #1e3a8a;
           transform: translateY(-3px);
         }
-
         .cta-button.large {
           padding: 25px 50px;
           font-size: 1.3rem;
         }
-
         .hero-visual {
           display: flex;
           justify-content: center;
           align-items: center;
         }
-
         .ai-visualization {
           position: relative;
           width: 400px;
           height: 400px;
         }
-
         .neural-network {
           position: relative;
           width: 100%;
           height: 100%;
         }
-
         .node {
           position: absolute;
           width: 80px;
@@ -505,24 +453,20 @@ const AdvancedAISolutions2027: React.FC = () => {
           border: 2px solid rgba(255, 255, 255, 0.3);
           animation: pulse 2s ease-in-out infinite;
         }
-
         .node:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
         .node:nth-child(2) { top: 20%; right: 20%; animation-delay: 0.5s; }
         .node:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 1s; }
         .node:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 1.5s; }
-
         @keyframes pulse {
           0%, 100% { transform: scale(1); opacity: 0.8; }
           50% { transform: scale(1.1); opacity: 1; }
         }
-
         .connection {
           position: absolute;
           height: 2px;
           background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
           animation: flow 3s ease-in-out infinite;
         }
-
         .connection:nth-child(5) {
           top: 30%;
           left: 30%;
@@ -530,7 +474,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           transform: rotate(45deg);
           animation-delay: 0s;
         }
-
         .connection:nth-child(6) {
           top: 30%;
           right: 30%;
@@ -538,7 +481,6 @@ const AdvancedAISolutions2027: React.FC = () => {
           transform: rotate(-45deg);
           animation-delay: 1s;
         }
-
         .connection:nth-child(7) {
           bottom: 30%;
           left: 50%;
@@ -546,28 +488,23 @@ const AdvancedAISolutions2027: React.FC = () => {
           transform: translateX(-50%);
           animation-delay: 2s;
         }
-
         @keyframes flow {
           0%, 100% { opacity: 0.3; }
           50% { opacity: 0.8; }
         }
-
         .solutions-section,
         .testimonials-section,
         .final-cta-section {
           padding: 100px 20px;
         }
-
         .section-container {
           max-width: 1400px;
           margin: 0 auto;
         }
-
         .section-header {
           text-align: center;
           margin-bottom: 80px;
         }
-
         .section-header h2 {
           font-size: 3rem;
           font-weight: 700;
@@ -577,20 +514,17 @@ const AdvancedAISolutions2027: React.FC = () => {
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-
         .section-header p {
           font-size: 1.3rem;
           color: #64748b;
           max-width: 600px;
           margin: 0 auto;
         }
-
         .solutions-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
           gap: 40px;
         }
-
         .solution-card {
           background: white;
           border-radius: 25px;
@@ -599,46 +533,38 @@ const AdvancedAISolutions2027: React.FC = () => {
           border: 2px solid transparent;
           transition: all 0.3s ease;
         }
-
         .solution-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
           border-color: #1e3a8a;
         }
-
         .solution-header {
           margin-bottom: 30px;
         }
-
         .solution-icon {
           font-size: 3rem;
           margin-bottom: 20px;
         }
-
         .solution-title {
           font-size: 1.8rem;
           font-weight: 700;
           margin-bottom: 15px;
           color: #1e293b;
         }
-
         .solution-description {
           color: #64748b;
           line-height: 1.6;
           font-size: 1.1rem;
         }
-
         .solution-tabs {
           margin-top: 30px;
         }
-
         .tab-buttons {
           display: flex;
           gap: 10px;
           margin-bottom: 30px;
           flex-wrap: wrap;
         }
-
         .tab-button {
           padding: 12px 20px;
           border: 2px solid #e2e8f0;
@@ -652,33 +578,27 @@ const AdvancedAISolutions2027: React.FC = () => {
           font-weight: 600;
           color: #64748b;
         }
-
         .tab-button:hover {
           border-color: #1e3a8a;
           color: #1e3a8a;
         }
-
         .tab-button.active {
           background: #1e3a8a;
           color: white;
           border-color: #1e3a8a;
         }
-
         .tab-icon {
           font-size: 1.1rem;
         }
-
         .tab-content {
           min-height: 200px;
         }
-
         .tab-panel h4 {
           font-size: 1.4rem;
           font-weight: 700;
           margin-bottom: 20px;
           color: #1e293b;
         }
-
         .overview-content .pricing-info {
           display: flex;
           justify-content: space-between;
@@ -688,13 +608,11 @@ const AdvancedAISolutions2027: React.FC = () => {
           background: #f8fafc;
           border-radius: 15px;
         }
-
         .price {
           font-size: 1.5rem;
           font-weight: 700;
           color: #1e3a8a;
         }
-
         .pricing-cta {
           background: #1e3a8a;
           color: white;
@@ -704,19 +622,16 @@ const AdvancedAISolutions2027: React.FC = () => {
           font-weight: 600;
           transition: all 0.3s ease;
         }
-
         .pricing-cta:hover {
           background: #1e40af;
           transform: translateY(-2px);
         }
-
         .features-list,
         .benefits-list,
         .usecases-list {
           list-style: none;
           padding: 0;
         }
-
         .features-list li,
         .benefits-list li,
         .usecases-list li {
@@ -726,19 +641,16 @@ const AdvancedAISolutions2027: React.FC = () => {
           font-size: 1rem;
           border-bottom: 1px solid #f1f5f9;
         }
-
         .features-list li:last-child,
         .benefits-list li:last-child,
         .usecases-list li:last-child {
           border-bottom: none;
         }
-
         .testimonials-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
           gap: 40px;
         }
-
         .testimonial-card {
           background: white;
           padding: 40px;
@@ -747,22 +659,18 @@ const AdvancedAISolutions2027: React.FC = () => {
           border: 2px solid transparent;
           transition: all 0.3s ease;
         }
-
         .testimonial-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
           border-color: #1e3a8a;
         }
-
         .rating {
           margin-bottom: 20px;
         }
-
         .star {
           font-size: 1.2rem;
           margin-right: 5px;
         }
-
         .testimonial-text {
           font-size: 1.1rem;
           line-height: 1.6;
@@ -770,126 +678,103 @@ const AdvancedAISolutions2027: React.FC = () => {
           margin-bottom: 30px;
           font-style: italic;
         }
-
         .testimonial-author {
           display: flex;
           align-items: center;
           gap: 20px;
         }
-
         .author-avatar {
           width: 60px;
           height: 60px;
           border-radius: 50%;
           object-fit: cover;
         }
-
         .author-name {
           font-size: 1.2rem;
           font-weight: 700;
           color: #1e293b;
           margin-bottom: 5px;
         }
-
         .author-role,
         .author-company {
           color: #64748b;
           font-size: 1rem;
           margin: 2px 0;
         }
-
         .final-cta-section {
           background: linear-gradient(135deg, #1e3a8a, #7c3aed);
           color: white;
         }
-
         .cta-content {
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
         }
-
         .cta-content h2 {
           font-size: 3rem;
           font-weight: 700;
           margin-bottom: 25px;
         }
-
         .cta-content p {
           font-size: 1.4rem;
           margin-bottom: 50px;
           opacity: 0.9;
         }
-
         .cta-actions {
           display: flex;
           gap: 30px;
           justify-content: center;
           flex-wrap: wrap;
         }
-
         @media (max-width: 1024px) {
           .hero-container {
             grid-template-columns: 1fr;
             text-align: center;
             gap: 60px;
           }
-
           .hero-title {
             font-size: 3rem;
           }
-
           .hero-subtitle {
             font-size: 2rem;
           }
-
           .solutions-grid {
             grid-template-columns: 1fr;
           }
-
           .testimonials-grid {
             grid-template-columns: 1fr;
           }
         }
-
         @media (max-width: 768px) {
           .hero-title {
             font-size: 2.5rem;
           }
-
           .hero-subtitle {
             font-size: 1.8rem;
           }
-
           .hero-actions {
             flex-direction: column;
             align-items: center;
           }
-
           .cta-button {
             width: 100%;
             max-width: 300px;
             text-align: center;
           }
-
           .tab-buttons {
             flex-direction: column;
           }
-
           .tab-button {
             justify-content: center;
           }
-
           .cta-actions {
             flex-direction: column;
             align-items: center;
           }
-
           .ai-visualization {
             width: 300px;
             height: 300px;
           }
-
           .node {
             width: 60px;
             height: 60px;
@@ -897,9 +782,7 @@ const AdvancedAISolutions2027: React.FC = () => {
           }
         }
       `}</style>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AdvancedAISolutions2027;

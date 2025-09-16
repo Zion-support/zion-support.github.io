@@ -1,5 +1,4 @@
 import React from 'react';
-
 const cutting-edge-pricing-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const cutting-edge-pricing-2025: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default cutting-edge-pricing-2025;
-=======
 const pricingTiers = [
   {
     name: 'Starter',
@@ -77,7 +72,6 @@ const pricingTiers = [
     popular: false
   }
 ];
-
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services',
@@ -108,14 +102,12 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
-
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 ];
-
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
@@ -388,4 +380,3 @@ export default function CuttingEdgePricing2025() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

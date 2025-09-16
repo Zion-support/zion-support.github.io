@@ -1,28 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const NextGenAIRevolution2034: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenAIRevolution2034 | Zion Tech Group</title>
-        <meta name="description" content="NextGenAIRevolution2034 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenAIRevolution2034</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
             className="text-center"
@@ -37,7 +21,6 @@ const NextGenAIRevolution2034: React.FC = () => {
               Experience the most advanced AI systems that transcend human intelligence, 
               featuring consciousness transfer, quantum neural networks, and omniversal computing
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold">
                 ✨ Consciousness Transfer
@@ -55,7 +38,6 @@ const NextGenAIRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -69,7 +51,6 @@ const NextGenAIRevolution2034: React.FC = () => {
             Discover the breakthrough technologies that are reshaping the future of artificial intelligence
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -129,7 +110,6 @@ const NextGenAIRevolution2034: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Technology Showcase */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 py-20">
         <div className="container mx-auto px-4">
@@ -144,7 +124,6 @@ const NextGenAIRevolution2034: React.FC = () => {
               Seamlessly integrated technologies working in perfect harmony to create the ultimate AI experience
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -169,7 +148,6 @@ const NextGenAIRevolution2034: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="relative"
@@ -202,7 +180,6 @@ const NextGenAIRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -226,9 +203,7 @@ const NextGenAIRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NextGenAIRevolution2034;

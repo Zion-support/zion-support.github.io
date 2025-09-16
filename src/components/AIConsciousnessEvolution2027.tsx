@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AIConsciousnessEvolution2027: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIConsciousnessEvolution2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function AIConsciousnessEvolution2027() {
   const [currentStagesetCurrentStage] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -167,8 +156,6 @@ export default function AIConsciousnessEvolution2027() {
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Journey
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AIConsciousnessEvolution2027;

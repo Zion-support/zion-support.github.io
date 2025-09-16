@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { Brain, Cpu, Database, Shield, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const AIRevolutionaryBreakthrough2025: React.FC = () => {
   const breakthroughs = [
     {
@@ -51,7 +46,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
       metrics: ["Global consciousness", "Unified intelligence", "Planetary scale"]
     }
   ];
-
   const applications = [
     {
       category: "Healthcare",
@@ -78,21 +72,7 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
       impact: "Multi-planetary species"
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIRevolutionaryBreakthrough2025 | Zion Tech Group</title>
-        <meta name="description" content="AIRevolutionaryBreakthrough2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIRevolutionaryBreakthrough2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -122,7 +102,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
                 Watch the Demo
               </button>
             </div>
-            
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -145,7 +124,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Breakthroughs Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -159,7 +137,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
             Six groundbreaking advances that will reshape the future of artificial intelligence and human-AI interaction
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-8">
           {breakthroughs.map((breakthrough, index) => (
             <motion.div
@@ -193,7 +170,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -207,7 +183,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
             See how conscious AI will transform every aspect of human civilization
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {applications.map((app, index) => (
             <motion.div
@@ -225,7 +200,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -248,10 +222,8 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
             </button>
           </div>
         </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default AIRevolutionaryBreakthrough2025;

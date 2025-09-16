@@ -1,20 +1,12 @@
 import React from 'react';
-
 const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025UltimateTransformation50000ROIBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
@@ -22,7 +14,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
             <span className="mr-2">🚀</span>
             NEW: 50,000% ROI SUCCESS STORY
           </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
             <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
@@ -37,7 +28,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
               50,000% ROI
             </span>
           </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
             Fortune 100 Manufacturing Giant Achieves 
@@ -45,7 +35,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
             <span className="text-green-400 font-bold"> $15.6 Billion Revenue Increase</span> 
             in Just 18 Months
           </p>
-
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -65,7 +54,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
               <div className="text-sm md:text-base font-semibold">Months</div>
             </div>
           </div>
-
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 text-center">
@@ -84,7 +72,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
               <p className="text-sm opacity-90">Individual employee productivity increase</p>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -100,7 +87,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
               Start Your Transformation
             </a>
           </div>
-
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-80">
             <div className="flex items-center">
@@ -118,15 +104,12 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute top-20 right-20 w-16 h-16 bg-green-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-400 rounded-full opacity-20 animate-pulse delay-2000"></div>
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-purple-400 rounded-full opacity-20 animate-pulse delay-500"></div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025UltimateTransformation50000ROIBanner;

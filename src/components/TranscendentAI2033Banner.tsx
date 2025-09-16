@@ -1,13 +1,6 @@
 import React from 'react';
-
 const TranscendentAI2033Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TranscendentAI2033Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <divsection
       whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden"
@@ -19,7 +12,6 @@ const TranscendentAI2033Banner: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -31,16 +23,13 @@ const TranscendentAI2033Banner: React.FC = () => {
               <Infinity className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300 font-semibold">Transcendent 2033</span>
             </div>
-            
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Transcendent AI
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Beyond consciousness, beyond reality, beyond infinity. Experience AI that transcends 
               all known limitations and exists in harmony with existence itself.
             </p>
-
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
                 <divbutton
@@ -56,7 +45,6 @@ const TranscendentAI2033Banner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -103,16 +91,13 @@ const TranscendentAI2033Banner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-8 w-2 h-2 bg-indigo-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-pink-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
     </divsection>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default TranscendentAI2033Banner;
 </div></div></div>

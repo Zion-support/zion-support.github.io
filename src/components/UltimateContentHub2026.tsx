@@ -1,13 +1,6 @@
 import React from 'react';
-
 const UltimateContentHub2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentHub2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
@@ -25,7 +18,6 @@ const UltimateContentHub2026: React.FC = () => {
             to stay ahead in the AI revolution.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +36,6 @@ const UltimateContentHub2026: React.FC = () => {
                   className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
@@ -61,7 +52,6 @@ const UltimateContentHub2026: React.FC = () => {
                   </button>
                 ))}
               </div>
-
               {/* View Mode */}
               <div className="flex items-center space-x-2">
                 <button
@@ -84,7 +74,6 @@ const UltimateContentHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div
           whileInView={{ opacity: 1 }}
@@ -97,7 +86,6 @@ const UltimateContentHub2026: React.FC = () => {
           <div>
             {filteredContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
-              
               return (
                 <div
                   key={item.id}
@@ -110,7 +98,6 @@ const UltimateContentHub2026: React.FC = () => {
                       Featured
                     </div>
                   )}
-                  
                   <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -122,7 +109,6 @@ const UltimateContentHub2026: React.FC = () => {
                       </button>
                     </div>
                   </div>
-
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <div className="flex items-center justify-between mb-3">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(item.difficulty)}`}>
@@ -133,15 +119,12 @@ const UltimateContentHub2026: React.FC = () => {
                         <span className="text-sm text-gray-600">{item.rating}</span>
                       </div>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h3>
-
                     <p className="text-gray-600 mb-4 line-clamp-2">
                       {item.description}
                     </p>
-
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
@@ -154,7 +137,6 @@ const UltimateContentHub2026: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <button className="flex items-center space-x-2 text-blue-600 font-medium hover:text-blue-700 transition-colors">
                         <span>Read More</span>
@@ -170,7 +152,6 @@ const UltimateContentHub2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Load More */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -182,8 +163,6 @@ const UltimateContentHub2026: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default UltimateContentHub2026;

@@ -1,17 +1,10 @@
 import React from 'react';
-
 const UltimateContentCarousel2034: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentCarousel2034</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20 mb-12">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -24,7 +17,6 @@ const UltimateContentCarousel2034: React.FC = () => {
             Discover our revolutionary content featuring the most advanced technologies that will reshape our world in 2034.
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main Slide */}
@@ -58,7 +50,6 @@ const UltimateContentCarousel2034: React.FC = () => {
                           Explore Content →
                         </a>
                       </div>
-                      
                       {/* Visual Element */}
                       <div className="relative">
                         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -89,7 +80,6 @@ const UltimateContentCarousel2034: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -107,7 +97,6 @@ const UltimateContentCarousel2034: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
@@ -123,7 +112,6 @@ const UltimateContentCarousel2034: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Explore the Future?</h3>
@@ -140,15 +128,12 @@ const UltimateContentCarousel2034: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentCarousel2034;
 </p></p>

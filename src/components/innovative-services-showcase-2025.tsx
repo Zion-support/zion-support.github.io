@@ -1,5 +1,4 @@
 import React from 'react';
-
 const innovative-services-showcase-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const innovative-services-showcase-2025: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default innovative-services-showcase-2025;
-=======
 const serviceCategories = [
   {
     id: 'financial-technology',
@@ -104,7 +99,6 @@ const serviceCategories = [
     badge: 'Popular'
   }
 ];
-
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -325,4 +319,3 @@ export default function InnovativeServicesShowcase2025() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

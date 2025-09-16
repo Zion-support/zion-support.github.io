@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AccessibilityProvider: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const AccessibilityProvider: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default AccessibilityProvider;
-=======
     toggleReducedMotion
   };
 ,
@@ -24,4 +19,3 @@ export default AccessibilityProvider;
 };
 ,
 export default AccessibilityProvider,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

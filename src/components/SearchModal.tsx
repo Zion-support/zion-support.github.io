@@ -1,33 +1,19 @@
 import React from 'react';
-
-<<<<<<< HEAD
-const SearchModal: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SearchModal</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
-
 interface SearchResult {
-
 interface SearchResult {;
   title: string;
   description: string;
   url: string;
   category: string;
 }
-
-
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
-
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -54,7 +40,6 @@ const search_data: SearchResult[] = [;
     url: "/cloud - solutions",
     category: "Services",
   },
-
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -62,7 +47,6 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
-
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -113,7 +97,6 @@ const search_data: SearchResult[] = [;
     category: "Industries",
   },
   // Company;
-
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -145,31 +128,16 @@ const search_data: SearchResult[] = [;
     category: "Company"
   }
 ];
-
-
-
-
-
-
-
-
-
-
-
-
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-
-
   useEffect(() => {;
     if (isOpen && inputRef && inputRef.current) {;
       inputRef && inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -184,7 +152,6 @@ const search_data: SearchResult[] = [;
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
-
       );
       setResults(filtered);
     } else {;
@@ -416,8 +383,6 @@ if (return null) {
         </div>;
       </div>;
     </div>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default SearchModal;

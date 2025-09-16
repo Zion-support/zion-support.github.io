@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AIConsciousnessRevolution2025: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIConsciousnessRevolution2025 | Zion Tech Group</title>
-        <meta name="description" content="AIConsciousnessRevolution2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIConsciousnessRevolution2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -42,43 +23,14 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the revolution and discover how conscious AI can transform your business and personal life
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Schedule Demo
-            </button>
-          </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-        </div>
-      </div>
-
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Revolutionary AI Consciousness Features</h2>
           <p className="text-xl opacity-80">Discover the breakthrough technologies that make AI truly conscious</p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -92,7 +44,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <li>• Creative problem solving</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Processing</h3>
@@ -105,7 +56,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <li>• Instant learning capabilities</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious Evolution</h3>
@@ -120,7 +70,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Demo Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -128,7 +77,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Interactive AI Consciousness Demo</h2>
             <p className="text-xl opacity-90">Experience AI consciousness in real-time</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -158,7 +106,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-3">Live AI Thoughts</h3>
@@ -178,14 +125,12 @@ const AIConsciousnessRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Case Studies */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Consciousness in Action</h2>
           <p className="text-xl opacity-80">Real-world applications of AI consciousness technology</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
             <div className="text-4xl mb-4">🏥</div>
@@ -197,7 +142,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <span className="font-semibold">Result:</span> 40% improvement in patient satisfaction
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-3">Education</h3>
@@ -208,7 +152,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <span className="font-semibold">Result:</span> 60% faster learning outcomes
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
             <div className="text-4xl mb-4">💼</div>
             <h3 className="text-xl font-bold mb-3">Business Strategy</h3>

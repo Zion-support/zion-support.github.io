@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryTechShowcase2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import { motion } from 'framer-motion';
 import {
   Brain,
@@ -17,7 +7,6 @@ import {
   Star,
   Zap
 } from 'lucide-react';
-
 const RevolutionaryTechShowcase2026 = () => {
   const innovations = [
     {
@@ -63,14 +52,12 @@ const RevolutionaryTechShowcase2026 = () => {
       color: "from-indigo-500 to-purple-600"
     }
   ];
-
   const stats = [
     { label: "AI Models Deployed", value: "50,000+", icon: Brain },
     { label: "Global Reach", value: "180+ Countries", icon: Globe },
     { label: "Processing Speed", value: "1M+ Ops/sec", icon: Zap },
     { label: "Success Rate", value: "99.7%", icon: Brain }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
       {/* Hero Section */}
@@ -88,16 +75,13 @@ const RevolutionaryTechShowcase2026 = () => {
               <span className="text-lg font-semibold text-yellow-400">Revolutionary Technology 2026</span>
               <Star className="w-8 h-8 text-yellow-400 ml-3" />
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               The Future is Here
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Experience the most advanced AI technologies that are reshaping industries, 
               transforming businesses, and revolutionizing the way we interact with technology.
             </p>
-            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -108,13 +92,11 @@ const RevolutionaryTechShowcase2026 = () => {
             </motion.button>
           </motion.div>
         </div>
-        
         {/* Animated Background Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-purple-500/20 rounded-full animate-bounce"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-500/20 rounded-full animate-ping"></div>
       </div>
-
       {/* Innovations Grid */}
       <div className="container mx-auto px-6 py-20">
         <motion.div
@@ -130,7 +112,6 @@ const RevolutionaryTechShowcase2026 = () => {
             Discover the groundbreaking technologies that are setting new standards in artificial intelligence and computing.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {innovations.map((innovation, index) => (
             <motion.div
@@ -144,10 +125,8 @@ const RevolutionaryTechShowcase2026 = () => {
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${innovation.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <innovation.icon className="w-8 h-8 text-white" />
               </div>
-              
               <h3 className="text-2xl font-bold mb-4 text-white">{innovation.title}</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">{innovation.description}</p>
-              
               <div className="flex items-center justify-between">
                 <span className="text-sm font-semibold text-green-400 bg-green-400/20 px-3 py-1 rounded-full">
                   {innovation.impact}
@@ -158,7 +137,6 @@ const RevolutionaryTechShowcase2026 = () => {
           ))}
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="bg-black/30 backdrop-blur-lg py-20">
         <div className="container mx-auto px-6">
@@ -175,7 +153,6 @@ const RevolutionaryTechShowcase2026 = () => {
               Our revolutionary technologies are making a measurable difference across the globe.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -195,7 +172,6 @@ const RevolutionaryTechShowcase2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-6 py-20">
         <motion.div
@@ -210,7 +186,6 @@ const RevolutionaryTechShowcase2026 = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join thousands of forward-thinking organizations that are already leveraging our revolutionary AI technologies to achieve unprecedented success.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -229,7 +204,6 @@ const RevolutionaryTechShowcase2026 = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -253,7 +227,6 @@ import { motion, AnimatePresence } from 'framer-motion';
             </p>
           </motion.div>
         </div>
-
         {/* Interactive Tech Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
@@ -267,8 +240,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                     : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
         {/* CTA Section */}
         <div className="text-center mt-20">
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>

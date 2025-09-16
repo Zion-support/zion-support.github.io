@@ -1,22 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const InterdimensionalTechRevolution2030: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>InterdimensionalTechRevolution2030 | Zion Tech Group</title>
-        <meta name="description" content="InterdimensionalTechRevolution2030 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">InterdimensionalTechRevolution2030</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
-
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -34,7 +16,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             </div>
         </div>
       </section>
-
             <div className="text-center">
               <div className="text-6xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Dimensional Processing</h3>
@@ -43,7 +24,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Interdimensional Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -51,7 +31,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🌌 Interdimensional Technologies</h2>
             <p className="text-xl opacity-80">Access realities beyond our dimension</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Dimension Gateway */}
             <motion.div
@@ -75,7 +54,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Open Gateway →
               </button>
             </motion.div>
-
             {/* Reality Engine */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -98,7 +76,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Engine Reality →
               </button>
             </motion.div>
-
             {/* Consciousness Transfer */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -124,7 +101,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-800/50 to-purple-800/50">
         <div className="container mx-auto">
@@ -132,7 +108,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🔬 Advanced Applications</h2>
             <p className="text-xl opacity-80">Revolutionary applications of interdimensional technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -159,7 +134,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -176,7 +150,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -199,7 +172,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Engine Reality →
               </button>
             </motion.div>
-
             {/* Consciousness Transfer */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -224,7 +196,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
       {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-800/50 to-purple-800/50">
         <div className="container mx-auto">
@@ -232,7 +203,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🔬 Advanced Applications</h2>
             <p className="text-xl opacity-80">Revolutionary applications of interdimensional technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -259,7 +229,6 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -275,10 +244,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             </motion.div>
           </div>
         </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default InterdimensionalTechRevolution2030;

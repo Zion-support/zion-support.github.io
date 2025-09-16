@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const FutureTechTrends2026: React.FC = () => {
   const [selectedTrend, setSelectedTrend] = useState('quantum');
-
   const trends = {
     quantum: {
       title: 'Quantum Computing Revolution',
@@ -94,20 +87,7 @@ const FutureTechTrends2026: React.FC = () => {
       impact: 'Eliminating disease and extending healthy human lifespan'
     }
   };
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>FutureTechTrends2026 | Zion Tech Group</title>
-        <meta name="description" content="FutureTechTrends2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">FutureTechTrends2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -134,14 +114,12 @@ const FutureTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Trend Selection */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🔮 Technology Trends</h2>
           <p className="text-xl opacity-90">Select a trend to explore in detail</p>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {Object.entries(trends).map(([key, trend]) => (
             <button
@@ -158,7 +136,6 @@ const FutureTechTrends2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Selected Trend Details */}
         <div className="max-w-6xl mx-auto">
           <div className={`bg-gradient-to-br ${trends[selectedTrend as keyof typeof trends].color}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20`}>
@@ -169,7 +146,6 @@ const FutureTechTrends2026: React.FC = () => {
                 <p className="text-lg opacity-90">{trends[selectedTrend as keyof typeof trends].description}</p>
               </div>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-xl font-bold mb-4">Key Developments</h4>
@@ -182,11 +158,9 @@ const FutureTechTrends2026: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h4 className="text-xl font-bold mb-4">Global Impact</h4>
                 <p className="opacity-90 mb-4">{trends[selectedTrend as keyof typeof trends].impact}</p>
-                
                 <div className="bg-white/10 rounded-lg p-4">
                   <h5 className="font-bold mb-2">Market Projection</h5>
                   <div className="text-2xl font-bold text-green-400 mb-1">$2.5T+</div>
@@ -197,7 +171,6 @@ const FutureTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Timeline Section */}
       <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -205,7 +178,6 @@ const FutureTechTrends2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">📅 Technology Timeline</h2>
             <p className="text-xl opacity-90">The roadmap to the future</p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <div className="flex items-center">
@@ -215,7 +187,6 @@ const FutureTechTrends2026: React.FC = () => {
                   <div className="opacity-75">Quantum computers solve practical problems faster than classical computers</div>
                 </div>
               </div>
-              
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-blue-400 rounded-full mr-4"></div>
                 <div className="flex-1">
@@ -223,7 +194,6 @@ const FutureTechTrends2026: React.FC = () => {
                   <div className="opacity-75">Artificial General Intelligence achieves human-level capabilities</div>
                 </div>
               </div>
-              
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-purple-400 rounded-full mr-4"></div>
                 <div className="flex-1">
@@ -231,7 +201,6 @@ const FutureTechTrends2026: React.FC = () => {
                   <div className="opacity-75">Commercial brain-computer interfaces become widely available</div>
                 </div>
               </div>
-              
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-pink-400 rounded-full mr-4"></div>
                 <div className="flex-1">
@@ -239,7 +208,6 @@ const FutureTechTrends2026: React.FC = () => {
                   <div className="opacity-75">3D holographic displays replace traditional screens</div>
                 </div>
               </div>
-              
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-orange-400 rounded-full mr-4"></div>
                 <div className="flex-1">
@@ -251,14 +219,12 @@ const FutureTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Impact Statistics */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">📊 Global Impact</h2>
           <p className="text-xl opacity-90">The numbers behind the transformation</p>
         </div>
-        
         <div className="grid md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">$15T</div>
@@ -282,7 +248,6 @@ const FutureTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -298,11 +263,9 @@ const FutureTechTrends2026: React.FC = () => {
               Subscribe to Updates
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechTrends2026;

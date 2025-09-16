@@ -1,5 +1,4 @@
 import React from 'react';
-
 const 2028-services-showcase: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const 2028-services-showcase: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default 2028-services-showcase;
-=======
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
@@ -56,7 +51,6 @@ const serviceCategories = [
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
   }
 ];
-
 export default function ServicesShowcase2028() {
   return (
     <>
@@ -286,4 +280,3 @@ export default function ServicesShowcase2028() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

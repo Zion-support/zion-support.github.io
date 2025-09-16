@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentCarousel2035: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
@@ -78,31 +67,25 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       features: ["Faster-than-light travel", "Time manipulation", "Interstellar colonization", "Temporal paradox resolution"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -115,7 +98,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             Explore our most advanced technological breakthroughs with this interactive showcase
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main Slide Display */}
@@ -134,7 +116,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
                         {slide.description}
                       </p>
                     </div>
-                    
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div>
                         <h4 className="text-2xl font-bold mb-4">Key Features:</h4>
@@ -161,7 +142,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -182,7 +162,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
         {/* Slide Indicators */}
@@ -198,7 +177,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {slides.slice(0, 3).map((slide) => (
@@ -217,7 +195,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
@@ -233,7 +210,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
@@ -250,11 +226,9 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentCarousel2035;
 =======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -263,4 +237,3 @@ export default RevolutionaryContentCarousel2035;
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
               className={`w-3 h-3 rounded-full transition-colors ${
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

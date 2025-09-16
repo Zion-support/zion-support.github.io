@@ -1,17 +1,9 @@
 import React from 'react';
-
 const AI2025BreakthroughShowcaseBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025BreakthroughShowcaseBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-16">
@@ -26,7 +18,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
             Experience the future of artificial intelligence with our groundbreaking 2025 technology suite 'that', 's reshaping industries worldwide.
           </p>
         </div>
-
         {/* Rotating Feature Showcase */}
         <div className="mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
@@ -67,7 +58,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Feature Dots */}
         <div className="flex justify-center mb-12">
           <div className="flex space-x-2">
@@ -82,7 +72,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Technology Stack Preview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {[
@@ -106,7 +95,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -131,8 +119,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025BreakthroughShowcaseBanner;

@@ -1,23 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedTechSolutions2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedTechSolutions2026 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedTechSolutions2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedTechSolutions2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Shield, Zap, Globe, Target, Users, TrendingUp, Brain, Atom, Database, Cloud } from 'lucide-react';
-
 const AdvancedTechSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 text-white">
@@ -49,7 +32,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Solution Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-green-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-green-500/20">
@@ -64,7 +46,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
               <Shield className="w-8 h-8 text-white" />
@@ -77,7 +58,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
               <Cloud className="w-8 h-8 text-white" />
@@ -91,7 +71,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-green-500/20">
           <h2 className="text-4xl font-bold text-center mb-12">Comprehensive Technology Stack</h2>
@@ -126,7 +105,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Solution Features */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Solution Features</h2>
@@ -143,7 +121,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-white" />
@@ -155,7 +132,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <TrendingUp className="w-6 h-6 text-white" />
@@ -168,7 +144,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -181,7 +156,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Globe className="w-6 h-6 text-white" />
@@ -193,7 +167,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Cpu className="w-6 h-6 text-white" />
@@ -208,7 +181,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Process */}
         <div className="bg-gradient-to-r from-blue-900/50 to-green-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-500/20">
           <h2 className="text-4xl font-bold text-center mb-12">Implementation Process</h2>
@@ -243,7 +215,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Proven Success Metrics</h2>
@@ -266,7 +237,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-12 border border-green-500/20">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -287,11 +257,9 @@ const AdvancedTechSolutions2026: React.FC = () => {
               Explore AI Solutions
             </Link>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechSolutions2026;

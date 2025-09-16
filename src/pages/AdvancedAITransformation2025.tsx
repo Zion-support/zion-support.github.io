@@ -1,21 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedAITransformation2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedAITransformation2025 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedAITransformation2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedAITransformation2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
-
 const AdvancedAITransformation2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
@@ -45,14 +28,12 @@ const AdvancedAITransformation2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* AI Solutions Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🤖 AI Solutions</h2>
           <p className="text-xl opacity-90">Comprehensive AI solutions for every business need</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -70,7 +51,6 @@ const AdvancedAITransformation2025: React.FC = () => {
               Learn More →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Edge AI Computing</h3>
@@ -87,7 +67,6 @@ const AdvancedAITransformation2025: React.FC = () => {
               Explore Technology →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Generative AI 2.0</h3>
@@ -105,14 +84,12 @@ const AdvancedAITransformation2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Transformation Process */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🔄 Transformation Process</h2>
             <p className="text-xl opacity-90">Our proven methodology for AI transformation</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">1</div>
@@ -136,14 +113,12 @@ const AdvancedAITransformation2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">📊 Success Metrics</h2>
             <p className="text-xl opacity-90">Measurable results from our AI transformations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-6xl font-bold text-emerald-400 mb-2">95%</div>
@@ -163,7 +138,6 @@ const AdvancedAITransformation2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -178,11 +152,9 @@ const AdvancedAITransformation2025: React.FC = () => {
               Schedule Consultation
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedAITransformation2025;

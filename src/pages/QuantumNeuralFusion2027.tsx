@@ -1,27 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumNeuralFusion2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumNeuralFusion2027 | Zion Tech Group</title>
-        <meta name="description" content="QuantumNeuralFusion2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumNeuralFusion2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Quantum Neural Fusion 2027 - Revolutionary AI Technology</title>
         <meta name="description" content="Explore the groundbreaking fusion of quantum computing and neural networks that's revolutionizing AI capabilities in 2027." />
         <meta name="keywords" content="quantum neural fusion, quantum AI, neural networks, quantum computing, AI 2027, breakthrough technology" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -40,7 +26,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Core Technology Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 mb-16 border border-white/10">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -95,7 +80,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Breakthrough Capabilities */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/10 to-indigo-600/10 rounded-xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all duration-300">
@@ -106,7 +90,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </p>
             <div className="text-purple-400 font-semibold">Learn More →</div>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-xl p-8 border border-indigo-400/20 hover:border-indigo-400/50 transition-all duration-300">
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold text-white mb-4">Conscious AI Systems</h3>
@@ -115,7 +98,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </p>
             <div className="text-indigo-400 font-semibold">Explore →</div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-xl p-8 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold text-white mb-4">Predictive Intelligence</h3>
@@ -125,7 +107,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             <div className="text-blue-400 font-semibold">Discover →</div>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 mb-16 border border-white/10">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -154,7 +135,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications Section */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -205,7 +185,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -222,11 +201,9 @@ const QuantumNeuralFusion2027: React.FC = () => {
               Contact Experts
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumNeuralFusion2027;

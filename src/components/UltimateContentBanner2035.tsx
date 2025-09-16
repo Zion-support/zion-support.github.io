@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const UltimateContentBanner2035: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.15%2522%253E%253Cpath%2520d%253D%2522M20%252020c0-11.046-8.954-20-20-20v20h20z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -28,7 +16,6 @@ const UltimateContentBanner2035: React.FC = () => {
             The most significant technological advancement in human history - where science fiction becomes reality
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧬</div>
@@ -62,7 +49,6 @@ const UltimateContentBanner2035: React.FC = () => {
             interdimensional computing, and reality manipulation technologies.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -80,7 +66,6 @@ const UltimateContentBanner2035: React.FC = () => {
               Explore AI Revolution →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
@@ -97,7 +82,6 @@ const UltimateContentBanner2035: React.FC = () => {
               Discover Quantum Tech →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
@@ -113,7 +97,6 @@ const UltimateContentBanner2035: React.FC = () => {
             <a href="/pages/UltimateTechRevolution2035" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Dimensions →
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌍</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Planetary Terraforming AI</h3>
@@ -139,7 +122,6 @@ const UltimateContentBanner2035: React.FC = () => {
             </a>
           </div>
         </div>
-
             </a>
           </div>
         </div>
@@ -170,7 +152,6 @@ const UltimateContentBanner2035: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Banner Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
@@ -183,11 +164,9 @@ const UltimateContentBanner2035: React.FC = () => {
           />
         ))}
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentBanner2035;
 =======
         <div className="text-center">
@@ -200,4 +179,3 @@ export default UltimateContentBanner2035;
             </a>
             <a href="/pages/UltimateTechRevolution2035" className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               🌌 Interdimensional Tech
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

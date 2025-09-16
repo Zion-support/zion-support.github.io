@@ -1,21 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const RevolutionaryContentPromotionBanner2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentPromotionBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
-
 interface RevolutionaryContentPromotionBanner2025Props {
   variant?: 'featured' | 'compact' | 'hero';
   className?: string;
 }
-
 export default function RevolutionaryContentPromotionBanner2025({ 
   variant = 'featured'
   className = ', ' 
@@ -176,8 +165,6 @@ export default function RevolutionaryContentPromotionBanner2025({
           >
             {currentContent.buttonText}
             <ArrowRight className="h-5 w-5 ml-2" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryContentPromotionBanner2025;

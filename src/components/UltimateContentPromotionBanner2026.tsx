@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const UltimateContentPromotionBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "🚀 Autonomous Business AI - 300% Efficiency Gains",
     "⚛️ Quantum ML Platform - 1000x Faster Processing", 
@@ -11,23 +9,14 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
     "🔗 Neural Interfaces - Human-AI Symbiosis",
     "⚡ Edge AI Revolution - Ultra-Low Latency"
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
-
   if (!isVisible) return null;
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentPromotionBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4 px-6 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -45,7 +34,6 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-4">
           <a
             href="/pages/NewContentShowcase2026"
@@ -63,16 +51,13 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
           </button>
         </div>
       </div>
-      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-4 -left-4 w-8 h-8 bg-white bg-opacity-10 rounded-full animate-ping"></div>
         <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-white bg-opacity-10 rounded-full animate-ping animation-delay-1000"></div>
         <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white bg-opacity-10 rounded-full animate-ping animation-delay-2000"></div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentPromotionBanner2026;

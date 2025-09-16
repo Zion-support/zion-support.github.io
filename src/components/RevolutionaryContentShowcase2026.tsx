@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentShowcase2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -24,17 +14,14 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
-
 interface RevolutionaryContentShowcase2026Props {
   className?: string;
 }
-
 const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase2026Props> = ({ 
   className = "" 
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -89,7 +76,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
       readTime: "25 min read"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -97,13 +83,10 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
     }, 6000);
     return () => clearInterval(interval);
   }, [revolutionaryContent.length]);
-
   const handleContentClick = (link: string) => {
     window.location.href = link;
   };
-
   const currentContent = revolutionaryContent[currentIndex];
-
   return (
     <div className={`revolutionary-content-showcase-2026 ${className}`}>
       {/* Header */}
@@ -117,7 +100,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
           <Star className="w-5 h-5 text-white mr-2" />
           <span className="text-white font-semibold">REVOLUTIONARY CONTENT 2026</span>
         </motion.div>
-        
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,7 +108,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
         >
           Next-Generation AI Revolution
         </motion.h2>
-        
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -136,7 +117,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
           Discover the breakthrough technologies and strategies that are transforming enterprise operations in 2026
         </motion.p>
       </div>
-
       {/* Main Content Showcase */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -161,27 +141,22 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-bold">
                   FEATURED
                 </div>
-
                 {/* Category Badge */}
                 <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full mb-4">
                   <span className="text-white text-sm font-medium">{currentContent.category}</span>
                 </div>
-
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentContent.gradient} p-4 mb-6`}>
                   <currentContent.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                   {currentContent.title}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {currentContent.description}
                 </p>
-
                 {/* Stats and Meta */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -195,19 +170,16 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
                     </div>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex items-center text-purple-300 group-hover:text-white transition-colors">
                   <span className="font-semibold mr-2">Explore Now</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
-
                 {/* Animated Background */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
             </AnimatePresence>
           </motion.div>
-
           {/* Content Details Panel */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -240,7 +212,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
                 </li>
               </ul>
             </div>
-
             {/* Success Metrics */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -266,7 +237,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
                 </div>
               </div>
             </div>
-
             {/* Navigation Dots */}
             <div className="flex justify-center space-x-2">
               {revolutionaryContent.map((_, index) => (
@@ -283,7 +253,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
             </div>
           </motion.div>
         </div>
-
         {/* All Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -294,7 +263,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Explore All Revolutionary Content
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {revolutionaryContent.map((content, index) => (
               <motion.div
@@ -308,19 +276,15 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${content.gradient} p-3 mb-4`}>
                   <content.icon className="w-6 h-6 text-white" />
                 </div>
-                
                 <div className="text-xs text-purple-300 font-semibold mb-2">
                   {content.category}
                 </div>
-                
                 <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors">
                   {content.title}
                 </h4>
-                
                 <p className="text-gray-300 text-sm mb-4">
                   {content.description.substring(0, 100)}...
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-purple-300 text-sm font-semibold">
                     {content.stats}
@@ -332,7 +296,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -401,25 +364,20 @@ import { motion } from 'framer-motion';
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                
                 <h3 className="text-2xl font-bold mb-4 text-center">
                   {item.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   {item.description}
                 </p>
-                
                 <h3 className="text-2xl font-bold mb-4 text-center">
                   {item.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   {item.description}
                 </p>
           ))}
         </div>
-
         {/* Active Tab Content */}
         <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
             </div>
@@ -434,8 +392,6 @@ import { motion } from 'framer-motion';
               <p className="text-gray-300">Regular updates on the latest technological breakthroughs</p>
             </div>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
           <div className="text-center mt-8">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 mr-4">
               Get Early Access
@@ -448,7 +404,6 @@ import { motion } from 'framer-motion';
             </div>
           )}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>

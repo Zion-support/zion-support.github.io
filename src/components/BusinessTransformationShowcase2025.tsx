@@ -1,16 +1,9 @@
 import React from 'react';
-
 const BusinessTransformationShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessTransformationShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25234F46E5%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div
         className="container mx-auto px-4 py-16 relative z-10"
       >
@@ -21,7 +14,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
             <Zap className="w-4 h-4" />
             BUSINESS TRANSFORMATION 2025
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
             Transform Your Business
           </h1>
@@ -30,7 +22,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
             AI-powered business transformation solutions.
           </p>
         </div>
-
         {/* Metrics Grid */}
           {metrics.map((metricindex) => {
             const Icon = metric.icon;
@@ -53,7 +44,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
             );
           })}
         </div>
-
         {/* Active Metric Details */}
           <div
             key={activeMetric}
@@ -74,7 +64,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="space-y-4">
                   {metrics[activeMetric].details.map((detailindex) => (
                     <div
@@ -87,7 +76,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10">
                   <div className="text-center">
@@ -109,7 +97,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Success Stories
@@ -123,7 +110,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{story.company}</h3>
                 <p className="text-blue-300 text-sm mb-4">{story.industry}</p>
-                
                 <div className="space-y-3">
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 mb-1">Challenge:</h4>
@@ -142,7 +128,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div 
           className="text-center"
@@ -170,9 +155,7 @@ const BusinessTransformationShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessTransformationShowcase2025;

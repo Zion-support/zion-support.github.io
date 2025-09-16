@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentPromoBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContentPromoBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function ContentPromoBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
@@ -64,8 +53,6 @@ export default function ContentPromoBanner() {
               className="flex-1 border border-white text-white px-3 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center text-sm"
             >
               Download Free
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ContentPromoBanner;

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateContentBanner2038: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2038</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -21,7 +10,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             🌟 BREAKTHROUGH 2038 • NEW CONTENT AVAILABLE
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +18,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             🚀 Ultimate Tech Breakthrough 2038
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +26,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             Experience the most revolutionary technological advances that will reshape reality in 2038
           </motion.p>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +47,6 @@ const UltimateContentBanner2038: React.FC = () => {
                 Explore Now →
               </div>
             </motion.a>
-            
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -77,7 +62,6 @@ const UltimateContentBanner2038: React.FC = () => {
                 Enter Cosmic Realm →
               </div>
             </motion.a>
-            
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -90,10 +74,8 @@ const UltimateContentBanner2038: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default UltimateContentBanner2038;
 =======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
@@ -102,4 +84,3 @@ export default UltimateContentBanner2038;
               Transcendent Showcase 2040 →
             </a>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

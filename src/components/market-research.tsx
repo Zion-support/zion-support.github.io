@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const market-research: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">market-research</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-
 export default function MarketResearchPage() {
   const marketSegments = [
     {
@@ -590,8 +580,6 @@ export default function MarketResearchPage() {
             >
               View Our Services
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default market-research;

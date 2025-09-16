@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServicesAdvertising: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServicesAdvertising | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServicesAdvertising - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesAdvertising</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -105,7 +85,6 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
-
 export default function ComprehensiveServicesAdvertising() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -457,8 +436,6 @@ export default function ComprehensiveServicesAdvertising() {
                     <p className="text-white font-semibold">Website</p>
                     <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
                       ziontechgroup.com
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ComprehensiveServicesAdvertising;

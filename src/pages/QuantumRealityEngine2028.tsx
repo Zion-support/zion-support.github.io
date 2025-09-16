@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const QuantumRealityEngine2028: React.FC = () => {
   const [activeDimension, setActiveDimension] = useState('overview');
   const [quantumState, setQuantumState] = useState('superposition');
   const [realityStability, setRealityStability] = useState(85);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setRealityStability(prev => {
@@ -20,7 +13,6 @@ const QuantumRealityEngine2028: React.FC = () => {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-
   const quantumDimensions = [
     {
       id: 'reality-simulation',
@@ -71,7 +63,6 @@ const QuantumRealityEngine2028: React.FC = () => {
       stability: 73
     }
   ];
-
   const applications = [
     {
       title: 'Medical Breakthroughs',
@@ -102,28 +93,13 @@ const QuantumRealityEngine2028: React.FC = () => {
       dimension: 'temporal-manipulation'
     }
   ];
-
   const quantumStates = [
     { name: 'Superposition', description: 'Existing in multiple states simultaneously', probability: 0.4 },
     { name: 'Entanglement', description: 'Instantaneous connection across space', probability: 0.3 },
     { name: 'Tunneling', description: 'Passing through impossible barriers', probability: 0.2 },
     { name: 'Coherence', description: 'Maintaining quantum properties', probability: 0.1 }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumRealityEngine2028 | Zion Tech Group</title>
-        <meta name="description" content="QuantumRealityEngine2028 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumRealityEngine2028</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
@@ -143,7 +119,6 @@ const QuantumRealityEngine2028: React.FC = () => {
             Manipulate the very fabric of reality itself with quantum technology that creates, modifies, and navigates between infinite dimensions
           </p>
         </motion.div>
-
         {/* Quantum State Monitor */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -195,7 +170,6 @@ const QuantumRealityEngine2028: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Navigation Tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -214,7 +188,6 @@ const QuantumRealityEngine2028: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Sections */}
         <AnimatePresence mode="wait">
           {activeDimension === 'overview' && (
@@ -251,7 +224,6 @@ const QuantumRealityEngine2028: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeDimension === 'dimensions' && (
             <motion.div
               key="dimensions"
@@ -294,7 +266,6 @@ const QuantumRealityEngine2028: React.FC = () => {
               ))}
             </motion.div>
           )}
-
           {activeDimension === 'applications' && (
             <motion.div
               key="applications"
@@ -332,7 +303,6 @@ const QuantumRealityEngine2028: React.FC = () => {
               ))}
             </motion.div>
           )}
-
           {activeDimension === 'research' && (
             <motion.div
               key="research"
@@ -369,7 +339,6 @@ const QuantumRealityEngine2028: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -390,10 +359,8 @@ const QuantumRealityEngine2028: React.FC = () => {
             </button>
           </div>
         </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default QuantumRealityEngine2028;

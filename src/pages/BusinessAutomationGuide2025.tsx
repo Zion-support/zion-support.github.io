@@ -1,22 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const BusinessAutomationGuide2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>BusinessAutomationGuide2025 | Zion Tech Group</title>
-        <meta name="description" content="BusinessAutomationGuide2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">BusinessAutomationGuide2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { CheckCircle, ArrowRight, Zap, Users, Shield, TrendingUp, Clock } from 'lucide-react';
-
 const BusinessAutomationGuide2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -44,14 +27,12 @@ const BusinessAutomationGuide2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Key Benefits */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">🎯 Why Automate Your Business?</h2>
           <p className="text-xl text-gray-600">Transform your operations with proven automation strategies</p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4 text-center">⚡</div>
@@ -74,7 +55,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4 text-center">💰</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">80% Cost Reduction</h3>
@@ -96,7 +76,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4 text-center">🎯</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">24/7 Operations</h3>
@@ -120,7 +99,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* 90-Day Roadmap */}
       <div id="roadmap" className="bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 py-16">
@@ -128,7 +106,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🗓️ 90-Day Automation Roadmap</h2>
             <p className="text-xl text-gray-600">Step-by-step guide to transform your business operations</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {/* Month 1 */}
             <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -163,7 +140,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             {/* Month 2 */}
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
@@ -197,7 +173,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             {/* Month 3 */}
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
@@ -234,14 +209,12 @@ const BusinessAutomationGuide2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Automation Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">🤖 Automation Categories</h2>
           <p className="text-xl text-gray-600">Comprehensive automation across all business functions</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">📊</div>
@@ -253,7 +226,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               <li>• Database management</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">💬</div>
             <h3 className="text-xl font-bold mb-3 text-gray-900">Customer Service</h3>
@@ -264,7 +236,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               <li>• Customer feedback analysis</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">💰</div>
             <h3 className="text-xl font-bold mb-3 text-gray-900">Financial Operations</h3>
@@ -275,7 +246,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               <li>• Financial reporting</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">📦</div>
             <h3 className="text-xl font-bold mb-3 text-gray-900">Supply Chain</h3>
@@ -286,7 +256,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               <li>• Logistics optimization</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">👥</div>
             <h3 className="text-xl font-bold mb-3 text-gray-900">Human Resources</h3>
@@ -297,7 +266,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
               <li>• Payroll processing</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">📈</div>
             <h3 className="text-xl font-bold mb-3 text-gray-900">Marketing & Sales</h3>
@@ -310,7 +278,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -318,7 +285,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
             <p className="text-xl opacity-90">Real results from businesses that implemented our automation guide</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
@@ -331,7 +297,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
                 "Our team can now focus on product development instead of repetitive tasks."
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-sm rounded-full">-75%</span>
@@ -343,7 +308,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
                 "We've reduced operational costs by 75% while improving accuracy."
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <span className="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">24/7</span>
@@ -358,7 +322,6 @@ const BusinessAutomationGuide2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-2xl p-12 shadow-2xl text-center">
@@ -374,11 +337,9 @@ const BusinessAutomationGuide2025: React.FC = () => {
               Explore More Solutions
             </a>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default BusinessAutomationGuide2025;

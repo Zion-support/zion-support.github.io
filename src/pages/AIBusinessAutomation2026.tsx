@@ -1,22 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AIBusinessAutomation2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIBusinessAutomation2026 | Zion Tech Group</title>
-        <meta name="description" content="AIBusinessAutomation2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIBusinessAutomation2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Link } from 'react-router-dom';
-
 const AIBusinessAutomation2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -36,7 +19,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             <span className="px-4 py-2 bg-yellow-600 rounded-full text-sm">300% ROI</span>
           </div>
         </div>
-
         {/* Key Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
@@ -48,7 +30,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             <h3 className="text-xl font-semibold mb-3">Intelligent Process Automation</h3>
             <p className="text-gray-300">Automate complex business processes with AI that learns and adapts to your organization's unique requirements.</p>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
             <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +39,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             <h3 className="text-xl font-semibold mb-3">Predictive Analytics</h3>
             <p className="text-gray-300">Leverage machine learning to predict trends, optimize resources, and make data-driven decisions in real-time.</p>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
             <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +49,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             <p className="text-gray-300">Enable AI systems to make complex business decisions autonomously while maintaining human oversight and control.</p>
           </div>
         </div>
-
         {/* Case Studies */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
@@ -84,7 +63,6 @@ const AIBusinessAutomation2026: React.FC = () => {
                 <div className="text-sm text-gray-400">Cost Reduction</div>
               </div>
             </div>
-
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
               <h3 className="text-2xl font-semibold mb-4">Financial Services Inc</h3>
               <p className="text-gray-300 mb-4">
@@ -97,7 +75,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Guide */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12">Implementation Roadmap</h2>
@@ -124,7 +101,6 @@ const AIBusinessAutomation2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -145,11 +121,9 @@ const AIBusinessAutomation2026: React.FC = () => {
               Learn More
             </Link>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AIBusinessAutomation2026;

@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AI2025ContentShowcaseBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025ContentShowcaseBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white py-4 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
@@ -46,8 +39,6 @@ const AI2025ContentShowcaseBanner: React.FC = () => {
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025ContentShowcaseBanner;

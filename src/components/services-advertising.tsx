@@ -1,5 +1,4 @@
 import React from 'react';
-
 const services-advertising: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const services-advertising: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default services-advertising;
-=======
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1015,4 +1010,3 @@ export default function ServicesAdvertisingPage() {
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 	);
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

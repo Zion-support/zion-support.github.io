@@ -1,13 +1,6 @@
 import React from 'react';
-
 const EnhancedHomepage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedHomepage</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
@@ -18,22 +11,18 @@ const EnhancedHomepage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-        
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#00d4ff" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
-        
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </Head>
-
       {/* Enhanced Navigation */}
       <EnhancedNavigation />
-
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <divsection 
@@ -46,14 +35,12 @@ const EnhancedHomepage: React.FC = () => {
             >
               Zion Tech Group
             </divh1>
-            
             <divp 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness, 
               Quantum Computing, and Autonomous Solutions
             </divp>
-
             {/* CTA Buttons */}
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -66,7 +53,6 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-              
               <a href="/quote">
                 <divbutton
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -76,7 +62,6 @@ const EnhancedHomepage: React.FC = () => {
                 </divbutton>
               </a>
             </div>
-
             {/* Contact Information */}
             <div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
@@ -95,21 +80,18 @@ const EnhancedHomepage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Floating Elements */}
           <div
             className="absolute top-20 left-10 text-cyan-400/20"
           >
             <Atom className="w-8 h-8" />
           </div>
-          
           <div
             className="absolute top-40 right-20 text-blue-400/20"
             style={{ animationDelay: '1s' }}
           >
             <Brain className="w-6 h-6" />
           </div>
-          
           <div
             className="absolute bottom-40 left-20 text-purple-400/20"
             style={{ animationDelay: '2s' }}
@@ -117,7 +99,6 @@ const EnhancedHomepage: React.FC = () => {
             <Rocket className="w-7 h-7" />
           </div>
         </divsection>
-
         {/* Category Filter */}
         <divsection 
           className="py-16 px-4 lg:px-8"
@@ -128,7 +109,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Explore Our Revolutionary Services
             </divh2>
-            
             <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
@@ -149,7 +129,6 @@ const EnhancedHomepage: React.FC = () => {
             </div>
           </div>
         </divsection>
-
         {/* Services Grid */}
         <divsection 
           className="py-16 px-4 lg:px-8"
@@ -178,7 +157,6 @@ const EnhancedHomepage: React.FC = () => {
                 />
               ))}
             </div>
-            
             {getFilteredServices().length > 12 && (
               <div 
                 className="text-center mt-12"
@@ -195,7 +173,6 @@ const EnhancedHomepage: React.FC = () => {
             )}
           </div>
         </divsection>
-
         {/* Featured Service Showcase */}
         <divsection 
           className="py-16 px-4 lg:px-8"
@@ -206,7 +183,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Featured Revolutionary Services
             </divh2>
-            
             <div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
             >
@@ -218,11 +194,9 @@ const EnhancedHomepage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    
                     <div className="flex flex-wrap gap-4 mb-6">
                       {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
@@ -230,7 +204,6 @@ const EnhancedHomepage: React.FC = () => {
                         </span>
                       ))}
                     </div>
-                    
                     <a href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <divbutton
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -240,7 +213,6 @@ const EnhancedHomepage: React.FC = () => {
                       </divbutton>
                     </a>
                   </div>
-                  
                   <div className="relative">
                     <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
                       <div className="text-center">
@@ -256,7 +228,6 @@ const EnhancedHomepage: React.FC = () => {
             </div>
           </div>
         </divsection>
-
         {/* Call to Action */}
         <divsection 
           className="py-16 px-4 lg:px-8"
@@ -267,14 +238,12 @@ const EnhancedHomepage: React.FC = () => {
             >
               Ready to Transform Your Business?
             </divh2>
-            
             <divp 
               className="text-xl text-gray-300 mb-8"
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
             </divp>
-            
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -286,7 +255,6 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-              
               <a href="/contact">
                 <divbutton
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -299,7 +267,6 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </divsection>
       </UltraFuturisticBackground>
-
       {/* Performance Monitor */}
       <div>
         {showPerformanceMonitor && (
@@ -307,8 +274,6 @@ const EnhancedHomepage: React.FC = () => {
         )}
       </div>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default EnhancedHomepage;

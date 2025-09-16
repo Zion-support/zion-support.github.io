@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const market-pricing-2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">market-pricing-2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
@@ -15,7 +5,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-
 export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -332,8 +321,6 @@ export default function MarketPricing2026() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View All Services
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default market-pricing-2026;

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FuturePredictionsShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
     >
@@ -15,7 +9,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           {/* Left Content */}
@@ -28,7 +21,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
               FUTURE PREDICTIONS
               <Sparkles className="w-4 h-4" />
             </div>
-
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -38,7 +30,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                 Showcase 2025-2030
               </span>
             </divh2>
-
             {/* Description */}
             <divp
               className="text-xl text-gray-300 mb-8 max-w-2xl"
@@ -46,7 +37,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
               Explore our expert predictions for the future of AItechnologyand human civilization 
               from 2025 to 2030 and beyond.
             </divp>
-
             {/* Features */}
             <div
               className="flex flex-wrap gap-4 mb-8"
@@ -62,7 +52,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -72,14 +61,12 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                 Explore Predictions
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button className="flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <ChevronRight className="w-5 h-5" />
                 View Timeline
               </button>
             </div>
           </div>
-
           {/* Right Visual - Rotating Predictions */}
           <div
             className="relative"
@@ -87,10 +74,8 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
             <div className="relative w-80 h-80">
               {/* Main Circle */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full opacity-20 animate-pulse"></div>
-              
               {/* Rotating Elements */}
               <div className="absolute inset-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-30 animate-spin" style={{ animationDuration: '12s' }}></div>
-              
               {/* Center Content */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div
@@ -104,7 +89,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                   <div className="text-gray-300 text-sm">{predictions[currentPrediction].year}</div>
                 </div>
               </div>
-
               {/* Floating Prediction Icons */}
               {predictions.map((predictionindex) => (
                 <div
@@ -123,7 +107,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               ))}
-
               {/* Timeline Dots */}
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
               {predictions.map((predictionindex) => (
@@ -140,11 +123,9 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default FuturePredictionsShowcase2025PromotionBanner;
 </div></div>
 </p></p>

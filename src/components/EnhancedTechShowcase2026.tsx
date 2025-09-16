@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const EnhancedTechShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedTechShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div
@@ -27,7 +16,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             Explore our revolutionary technologies through an interactive showcase featuring the most advanced innovations
           </p>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
@@ -47,7 +35,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Display */}
         <AnimatePresence mode="wait">
           <div
@@ -85,8 +72,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               </div>
             ))}
           </div>
-        
-
         {/* Statistics Section */}
         <div
           initial={{ opacity: 0, y: 50 }}
@@ -98,7 +83,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             <h3 className="text-3xl font-bold mb-4">📊 Innovation Impact</h3>
             <p className="text-xl opacity-80">Our technologies are making a real difference</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -138,7 +122,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 50 }}
@@ -160,9 +143,7 @@ const EnhancedTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnhancedTechShowcase2026;

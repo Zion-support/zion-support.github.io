@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveDemoRequest: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveDemoRequest</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 CalendarClockUsersZapCheckCircleArrowRightX
-
 interface DemoFormData {
   name: string;
   email: string;
@@ -25,23 +14,18 @@ interface DemoFormData {
   preferredTime: string;
   message: string;
 }
-
 const industries = [
   ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other'
 ];
-
 const companySizes = [
   '1-10 employees'11-50 employees'51-200 employees'201-1000 employees'1000+ employees'
 ];
-
 const interests = [
   'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization'
 ];
-
 const timeSlots = [
   '9:00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM'
 ];
-
 export default function InteractiveDemoRequest() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
@@ -324,8 +308,6 @@ export default function InteractiveDemoRequest() {
               )}
         )}
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveDemoRequest;

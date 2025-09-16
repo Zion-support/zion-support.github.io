@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AI2030ContentNavigation: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2030ContentNavigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CardContent } from '@/components/ui/card';
@@ -28,7 +17,6 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
-
 export default function AI2030ContentNavigation() {
   const [isExpandedsetIsExpanded] = useState(false);
   const contentSections = [
@@ -217,8 +205,6 @@ export default function AI2030ContentNavigation() {
                 Show All Content <ChevronDown className="h-4 w-4 ml-2" />
               </>
             )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2030ContentNavigation;

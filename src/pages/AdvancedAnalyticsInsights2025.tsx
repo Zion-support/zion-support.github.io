@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedAnalyticsInsights2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedAnalyticsInsights2025 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedAnalyticsInsights2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedAnalyticsInsights2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -33,7 +19,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             and real-time intelligence that drives strategic business decisions.
           </p>
         </div>
-
         {/* Analytics Capabilities */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
@@ -52,7 +37,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Demand planning optimization</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
@@ -69,7 +53,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Dynamic alert systems</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
@@ -86,7 +69,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Intelligent data exploration</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
@@ -103,7 +85,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Immersive data experiences</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
@@ -120,7 +101,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Historical trend analysis</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
@@ -138,7 +118,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div
           className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-3xl p-12 mb-16 text-white"
@@ -150,7 +129,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               and creating competitive advantages for forward-thinking organizations.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl mb-4">🏦</div>
@@ -182,7 +160,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div
           className="grid md:grid-cols-3 gap-8 mb-16"
@@ -212,7 +189,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div
           className="bg-white rounded-3xl p-12 mb-16 shadow-xl"
@@ -224,7 +200,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               unparalleled insights and performance.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl mb-4">🤖</div>
@@ -256,7 +231,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -277,10 +251,8 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default AdvancedAnalyticsInsights2025;

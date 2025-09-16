@@ -1,37 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Home= () => {
-=======
-
 import { getRecentBlogPosts } from '@/data/blog-posts';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
   const recent = getRecentBlogPosts(2);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
 import React from "react";
-
 const Home = () => {
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Home</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4">Welcome</h1>
           <p className="text-lg opacity-90">Build, ship, and scale intelligent products with confidence.</p>
         </div>
-
         <section aria-labelledby="latest-insights" className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h2 id="latest-insights" className="text-2xl font-semibold">Latest insights</h2>
@@ -47,12 +27,10 @@ const Home = () => {
             ))}
           </div>
         </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default Home;
 =======
         <div className="text-center mb-16">
@@ -63,7 +41,6 @@ export default Home;
             Leading the future of technology with innovative solutions and cutting-edge expertise
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Solutions</h3>
@@ -76,7 +53,6 @@ export default Home;
               <li>• Computer vision</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Cloud Services</h3>
             <p className="text-gray-300 mb-4">
@@ -88,7 +64,6 @@ export default Home;
               <li>• Microservices architecture</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
             <h3 className="text-2xl font-bold mb-4 text-green-300">Data Analytics</h3>
             <p className="text-gray-300 mb-4">
@@ -101,4 +76,3 @@ export default Home;
             </ul>
           </div>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

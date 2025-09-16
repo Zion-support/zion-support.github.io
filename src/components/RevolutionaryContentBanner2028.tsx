@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentBanner2028: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2028</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -20,10 +11,8 @@ import {
   TrendingUp,
   Clock
 } from 'lucide-react';
-
 const RevolutionaryContentBanner2028: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const contentItems = [
     {
       id: 'consciousness-transfer-2028',
@@ -62,18 +51,14 @@ const RevolutionaryContentBanner2028: React.FC = () => {
       stats: '∞ Entertainment'
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [contentItems.length]);
-
   const currentContent = contentItems[currentSlide];
   const IconComponent = currentContent.icon;
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -82,7 +67,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-sm font-medium mb-6 animate-bounce">
@@ -100,7 +84,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
             interdimensional computing, and conscious virtual worlds.
           </p>
         </div>
-
         {/* Main Content Carousel */}
         <div className="relative">
           <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 overflow-hidden">
@@ -120,11 +103,9 @@ const RevolutionaryContentBanner2028: React.FC = () => {
                     </h3>
                   </div>
                 </div>
-                
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl">
                   {currentContent.description}
                 </p>
-
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link 
                     to={currentContent.link}
@@ -141,7 +122,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
                   </Link>
                 </div>
               </div>
-
               {/* Visual Element */}
               <div className="flex-shrink-0">
                 <div className={`w-64 h-64 bg-gradient-to-br ${currentContent.bgGradient} backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center relative overflow-hidden`}>
@@ -154,7 +134,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
                       Revolutionary Impact
                     </div>
                   </div>
-                  
                   {/* Animated Elements */}
                   <div className="absolute top-4 right-4">
                     <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
@@ -166,7 +145,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-8 space-x-3">
             {contentItems.map((_, index) => (
@@ -182,7 +160,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {contentItems.map((item, index) => {
@@ -213,7 +190,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
             );
           })}
         </div>
-
         {/* Urgency Banner */}
         <div className="mt-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-xl p-6 text-center">
           <div className="flex items-center justify-center mb-3">
@@ -229,9 +205,7 @@ const RevolutionaryContentBanner2028: React.FC = () => {
           </p>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2028;

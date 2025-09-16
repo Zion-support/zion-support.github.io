@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AIInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIInnovationHub2025 | Zion Tech Group</title>
-        <meta name="description" content="AIInnovationHub2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIInnovationHub2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -41,14 +28,12 @@ const AIInnovationHub2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* AI Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🧠 Revolutionary AI Technologies</h2>
           <p className="text-xl opacity-90">Cutting-edge AI solutions that are transforming businesses worldwide</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -66,7 +51,6 @@ const AIInnovationHub2025: React.FC = () => {
               Learn More →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Edge AI Computing</h3>
@@ -83,7 +67,6 @@ const AIInnovationHub2025: React.FC = () => {
               Explore Edge AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Generative AI 2.0</h3>
@@ -100,7 +83,6 @@ const AIInnovationHub2025: React.FC = () => {
               Try Generator →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
@@ -117,7 +99,6 @@ const AIInnovationHub2025: React.FC = () => {
               View Analytics →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface AI</h3>
@@ -134,7 +115,6 @@ const AIInnovationHub2025: React.FC = () => {
               Experience Interface →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
@@ -153,7 +133,6 @@ const AIInnovationHub2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -161,7 +140,6 @@ const AIInnovationHub2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
             <p className="text-xl opacity-90">Real results from our AI implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <div className="flex items-center space-x-2 mb-4">
@@ -174,7 +152,6 @@ const AIInnovationHub2025: React.FC = () => {
               </p>
               <div className="text-sm opacity-75">- CEO, Global Manufacturing Corp</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-sm rounded-full">$50M</span>
@@ -186,7 +163,6 @@ const AIInnovationHub2025: React.FC = () => {
               </p>
               <div className="text-sm opacity-75">- CTO, TechCommerce Inc</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">99.9%</span>
@@ -201,7 +177,6 @@ const AIInnovationHub2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -217,11 +192,9 @@ const AIInnovationHub2025: React.FC = () => {
               Schedule Demo
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AIInnovationHub2025;

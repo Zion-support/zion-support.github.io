@@ -1,14 +1,6 @@
 import React from 'react';
-
 const EnhancedContentShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedContentShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [activeCategory, setActiveCategory] = useState('all');
-
   const contentCategories = {
     all: 'All Content',
     ai: 'AI & Consciousness',
@@ -18,7 +10,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
     space: 'Space Technology',
     robotics: 'Robotics & Automation'
   };
-
   const contentItems = [
     {
       id: 1,
@@ -87,11 +78,9 @@ const EnhancedContentShowcase2025: React.FC = () => {
       status: 'NEW'
     }
   ];
-
   const filteredItems = activeCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === activeCategory);
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -103,7 +92,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
             Discover revolutionary technology content that's shaping the future
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(contentCategories).map(([key, label]) => (
@@ -120,7 +108,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
@@ -138,7 +125,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                 <p className="text-white/90 text-sm">{item.description}</p>
               </div>
-              
               <div className="p-6">
                 <div className="space-y-2 mb-6">
                   {item.features.map((feature, index) => (
@@ -158,7 +144,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
@@ -177,9 +162,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnhancedContentShowcase2025;

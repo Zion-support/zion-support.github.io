@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const QuantumRealityEngine2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumRealityEngine2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumRealityEngine2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumRealityEngine2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-=======
 export default QuantumRealityEngine2026;
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -170,7 +146,6 @@ export default QuantumRealityEngine2026;
               Explore Quantum Reality →
             <a href="/pages/UltimateAIConsciousness2026" className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn About AI Consciousness
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default QuantumRealityEngine2026;
 =======
 export default QuantumRealityEngine2026;
@@ -179,4 +154,3 @@ export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

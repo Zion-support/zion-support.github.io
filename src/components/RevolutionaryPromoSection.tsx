@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryPromoSection: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryPromoSection</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
   const promoItems = [
@@ -144,8 +132,6 @@ export default function RevolutionaryPromoSection() {
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg border border-white/30"
               >
                 🔥 Watch Webinar
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryPromoSection;

@@ -8,22 +8,8 @@
           <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
             Enter the quantum realm where impossible problems become solvable. Experience computing power that defies classical limitations.
           </p>
-
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingRevolution2025 | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingRevolution2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingRevolution2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -39,7 +25,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
           </p>
         </div>
-
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
@@ -55,7 +40,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Quantum interference</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-200">
             <div className="text-6xl mb-6 text-center">🔐</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-blue-800">Quantum Cryptography</h3>
@@ -69,7 +53,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Future-proof security</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-indigo-200">
             <div className="text-6xl mb-6 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-indigo-800">Molecular Simulation</h3>
@@ -84,7 +67,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 mb-16 text-white">
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Applications</h2>
@@ -111,7 +93,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Quantum Performance</h2>
@@ -133,7 +114,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Implementation */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Implementation Journey</h2>
@@ -168,7 +148,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
@@ -218,7 +197,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </p>
           </div>
         </div>
-
         {/* Quantum Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -233,7 +211,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Quantum entanglement</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔐</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Cryptography</h3>
@@ -246,7 +223,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Future-proof security</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Molecular Simulation</h3>
@@ -260,14 +236,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Applications</h2>
             <p className="text-xl text-cyan-200">Revolutionary use cases transforming industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
@@ -276,7 +250,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Healthcare</h3>
               <p className="text-cyan-200 text-sm">Drug discovery and personalized medicine</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                 💰
@@ -284,7 +257,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Finance</h3>
               <p className="text-cyan-200 text-sm">Portfolio optimization and risk analysis</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                 🌱
@@ -292,7 +264,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Climate</h3>
               <p className="text-cyan-200 text-sm">Climate modeling and carbon capture</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                 🚀
@@ -302,14 +273,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Technology Stack */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Technology Stack</h2>
             <p className="text-xl text-cyan-200">Complete quantum computing infrastructure</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
@@ -321,7 +290,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                   <li>• Topological qubits</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6 border border-purple-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Software</h3>
                 <ul className="text-purple-200 space-y-2">
@@ -332,7 +300,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 </ul>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Cloud</h3>
@@ -343,7 +310,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                   <li>• Quantum as a Service</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Security</h3>
                 <ul className="text-orange-200 space-y-2">
@@ -356,7 +322,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
@@ -372,7 +337,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
@@ -402,14 +366,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Quantum Computing Capabilities</h2>
           <p className="text-xl text-gray-300">Unlock unprecedented computational power</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">⚛️</div>
@@ -423,7 +385,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Exponential speed advantage
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🔐</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
@@ -436,7 +397,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Unbreakable security
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Biology</h3>
@@ -459,7 +419,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Quantum Computing Capabilities</h2>
           <p className="text-xl text-gray-300">Unlock unprecedented computational power</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">⚛️</div>
@@ -473,7 +432,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Exponential speed advantage
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🔐</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
@@ -486,7 +444,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Unbreakable security
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Biology</h3>
@@ -499,7 +456,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Molecular-level simulation
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Simulation</h3>
@@ -512,7 +468,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Accurate quantum modeling
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-pink-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/30 hover:border-pink-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🚀</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Optimization</h3>
@@ -525,7 +480,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Optimal solutions guaranteed
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
@@ -540,7 +494,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
@@ -548,7 +501,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🌟 Quantum Applications</h2>
             <p className="text-xl opacity-90">Real-world applications of quantum computing technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -561,7 +513,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <div className="text-3xl font-bold text-cyan-400">10x</div>
                 <div className="text-sm text-gray-400">Faster Drug Development</div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-4xl mb-4">🏦</div>
                 <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>
@@ -573,7 +524,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <div className="text-sm text-gray-400">Risk Prediction Accuracy</div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-4xl mb-4">🔬</div>
@@ -604,7 +554,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Real-World Quantum Applications</h2>
             <p className="text-xl text-gray-300">See quantum computing in action</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -617,7 +566,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <div className="text-3xl font-bold text-cyan-400">10x</div>
                 <div className="text-sm text-gray-400">Faster Drug Development</div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-4xl mb-4">🏦</div>
                 <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>
@@ -629,7 +577,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <div className="text-sm text-gray-400">Risk Prediction Accuracy</div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-4xl mb-4">🔬</div>
@@ -641,7 +588,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <div className="text-3xl font-bold text-indigo-400">1000x</div>
                 <div className="text-sm text-gray-400">Faster Scientific Discovery</div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="text-2xl font-bold mb-4">Supply Chain</h3>
@@ -656,27 +602,23 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Quantum Technology Stack</h2>
           <p className="text-xl text-gray-300">Complete quantum computing infrastructure</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center">
             <div className="text-3xl mb-3">🔧</div>
             <h3 className="text-lg font-bold mb-2">Quantum Hardware</h3>
             <p className="text-sm text-gray-300">Advanced quantum processors and cooling systems</p>
           </div>
-          
           <div className="bg-gradient-to-br from-blue-800/30 to-indigo-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 text-center">
             <div className="text-3xl mb-3">💻</div>
             <h3 className="text-lg font-bold mb-2">Quantum Software</h3>
             <p className="text-sm text-gray-300">Programming frameworks and development tools</p>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/20 text-center">
             <div className="text-3xl mb-3">🌐</div>
             <h3 className="text-lg font-bold mb-2">Quantum Cloud</h3>
@@ -691,26 +633,22 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Quantum Technology Stack</h2>
           <p className="text-xl text-gray-300">Complete quantum computing infrastructure</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center">
             <div className="text-3xl mb-3">🔧</div>
             <h3 className="text-lg font-bold mb-2">Quantum Hardware</h3>
             <p className="text-sm text-gray-300">Advanced quantum processors and cooling systems</p>
           </div>
-          
           <div className="bg-gradient-to-br from-blue-800/30 to-indigo-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 text-center">
             <div className="text-3xl mb-3">💻</div>
             <h3 className="text-lg font-bold mb-2">Quantum Software</h3>
             <p className="text-sm text-gray-300">Programming frameworks and development tools</p>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/20 text-center">
             <div className="text-3xl mb-3">🌐</div>
             <h3 className="text-lg font-bold mb-2">Quantum Cloud</h3>
             <p className="text-sm text-gray-300">Scalable quantum computing as a service</p>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center">
             <div className="text-3xl mb-3">🔒</div>
             <h3 className="text-lg font-bold mb-2">Quantum Security</h3>
@@ -718,7 +656,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -748,17 +685,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumComputingRevolution2025;
 =======
->>>>>>> cursor/create-and-deploy-new-content-af01
 =======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn More
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

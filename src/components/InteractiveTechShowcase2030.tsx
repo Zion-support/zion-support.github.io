@@ -1,7 +1,5 @@
-
 const InteractiveTechShowcase2030: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('ai-consciousness');
-
   const demos = [
     {
       id: 'ai-consciousness',
@@ -28,13 +26,7 @@ const InteractiveTechShowcase2030: React.FC = () => {
       features: ['Dimensional Travel', 'Reality Shifting', 'Multi-verse Navigation', 'Infinite Exploration']
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2030</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -49,7 +41,6 @@ const InteractiveTechShowcase2030: React.FC = () => {
             Click on different technologies to explore their capabilities in real-time.
           </p>
         </div>
-
         {/* Demo Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
@@ -69,7 +60,6 @@ const InteractiveTechShowcase2030: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Active Demo Display */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Demo Content */}
@@ -84,7 +74,6 @@ const InteractiveTechShowcase2030: React.FC = () => {
                   <p className="text-xl opacity-90 leading-relaxed">
                     {demo.description}
                   </p>
-                  
                   {/* Features List */}
                   <div className="space-y-3">
                     <h4 className="text-xl font-semibold text-purple-300">Key Features:</h4>
@@ -97,7 +86,6 @@ const InteractiveTechShowcase2030: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Interactive Elements */}
                   <div className="space-y-4">
                     <h4 className="text-xl font-semibold text-purple-300">Try It Now:</h4>
@@ -118,7 +106,6 @@ const InteractiveTechShowcase2030: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Additional Features */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold mb-8">More Interactive Features</h3>
@@ -141,9 +128,7 @@ const InteractiveTechShowcase2030: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechShowcase2030;

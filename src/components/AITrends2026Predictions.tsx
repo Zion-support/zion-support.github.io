@@ -1,17 +1,10 @@
 import React from 'react';
-
 const AITrends2026Predictions: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AITrends2026Predictions</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20"></div>
-      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
@@ -32,7 +25,6 @@ const AITrends2026Predictions: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -42,20 +34,17 @@ const AITrends2026Predictions: React.FC = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             AI TRENDS & PREDICTIONS 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Future Technology
             <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Predictions
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Expert predictions and probability assessments for the most significant 
             technological breakthroughs expected in 2026.
           </p>
         </div>
-
         {/* Statistics */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -85,7 +74,6 @@ const AITrends2026Predictions: React.FC = () => {
             <div className="text-gray-300">Investment</div>
           </div>
         </div>
-
         {/* Category Tabs */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -109,7 +97,6 @@ const AITrends2026Predictions: React.FC = () => {
             );
           })}
         </div>
-
         {/* Predictions Grid */}
         <div
           key={activeCategory}
@@ -130,7 +117,6 @@ const AITrends2026Predictions: React.FC = () => {
                   {prediction.probability}% likely
                 </div>
               </div>
-
               {/* Impact Badge */}
               <div className="absolute top-4 left-4">
                 <div className={`px-3 py-1 rounded-full text-xs font-bold ${
@@ -141,22 +127,18 @@ const AITrends2026Predictions: React.FC = () => {
                   {prediction.impact}
                 </div>
               </div>
-
               {/* Content */}
               <div className="pt-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors">
                   {prediction.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {prediction.description}
                 </p>
-
                 <div className="flex items-center text-sm text-gray-400 mb-6">
                   <Calendar className="w-4 h-4 mr-2" />
                   Expected: {prediction.timeline}
                 </div>
-
                 {/* Implications */}
                 <div className="space-y-3 mb-8">
                   <h4 className="text-sm font-bold text-white uppercase tracking-wide">Key Implications:</h4>
@@ -167,7 +149,6 @@ const AITrends2026Predictions: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Button */}
                 <a
                   href={`/ai-trends-2026/${activeCategory}`}
@@ -177,13 +158,11 @@ const AITrends2026Predictions: React.FC = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -215,9 +194,7 @@ const AITrends2026Predictions: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AITrends2026Predictions;

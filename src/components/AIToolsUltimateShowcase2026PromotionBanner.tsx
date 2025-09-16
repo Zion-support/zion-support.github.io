@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsUltimateShowcase2026PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <div
@@ -14,10 +8,8 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
         >
           {/* Background Effects */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-          
           {/* Animated Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-indigo-600/20 animate-pulse"></div>
-          
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -27,7 +19,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                     <Sparkles className="w-4 h-4 text-indigo-400 mr-2" />
                     <span className="text-indigo-300 font-medium text-sm">AI TOOLS ULTIMATE 2026</span>
                   </div>
-                  
                   <div className="flex items-center text-yellow-400">
                     {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
@@ -35,20 +26,17 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                     <span className="ml-2 text-sm font-medium">4.8/5 Rating</span>
                   </div>
                 </div>
-
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
                   🚀 50+ Powerful AI Tools
                   <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                     for Every Business Need
                   </span>
                 </h2>
-
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl">
                   Discover our comprehensive collection of AI-powered tools for productivity
                   developmentanalyticsmultimediasecurityand communication. 
                   <span className="text-yellow-400 font-bold"> Start your free trial today!</span>
                 </p>
-
                 {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                     <div
@@ -67,7 +55,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6">
                   {features.map((featureindex) => (
@@ -77,7 +64,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25">
@@ -85,14 +71,12 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                     Explore All Tools
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  
                   <button className="group border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center">
                     <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                     Watch Demo
                   </button>
                 </div>
               </div>
-
               {/* Right Content - Interactive Preview */}
               <div className="flex-shrink-0">
                 <div className="relative">
@@ -107,7 +91,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                         <span className="text-sm text-green-400">Live</span>
                       </div>
                     </div>
-
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       {categories.slice(04).map((categoryindex) => {
@@ -121,7 +104,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                         );
                       })}
                     </div>
-
                     {/* Active Tool */}
                     <div className="bg-white/5 rounded-lg p-4 mb-4">
                       <div className="flex items-center gap-3 mb-2">
@@ -141,7 +123,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                         <div className="text-gray-400">{tools[currentTool].users}</div>
                       </div>
                     </div>
-
                     {/* Progress Indicator */}
                     <div className="flex justify-center gap-2">
                       {tools.map((_index) => (
@@ -154,7 +135,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Floating Elements */}
                   <div
                       y: [0-10],
@@ -168,7 +148,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                   >
                     NEW!
                   </div>
-
                   <div
                       y: [010],
                       x: [050]
@@ -182,7 +161,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                   >
                     1M+ Users
                   </div>
-
                   <div
                       scale: [1.1],
                       opacity: [0.710.7]
@@ -200,7 +178,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -208,14 +185,11 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
           >
             <X className="w-5 h-5" />
           </button>
-
           {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIToolsUltimateShowcase2026PromotionBanner;

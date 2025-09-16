@@ -1,12 +1,6 @@
 import React from 'react';
-
 const NewContentNavigation: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentNavigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
     >
@@ -17,20 +11,17 @@ const NewContentNavigation: React.FC = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             NEW CONTENT 2025
           </div>
-          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Explore Revolutionary
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               {" "}Technologies
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Discover cutting-edge AIquantum computingand neural interface technologies 
             that are reshaping the future of business and human potential.
           </p>
         </div>
-
         {/* Featured Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {featuredContent.map((itemindex) => (
@@ -56,7 +47,6 @@ const NewContentNavigation: React.FC = () => {
                   {item.badge}
                 </span>
               </div>
-              
               <a
                 href={item.href}
                 className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
@@ -67,7 +57,6 @@ const NewContentNavigation: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Expandable Categories */}
         <div className="text-center mb-8">
           <button
@@ -78,7 +67,6 @@ const NewContentNavigation: React.FC = () => {
             <ArrowRight className={`w-4 h-4 ml-2 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
           </button>
         </div>
-
         {/* Categories Grid */}
         <div>
           {isExpanded && (
@@ -99,7 +87,6 @@ const NewContentNavigation: React.FC = () => {
                       <p className="text-sm text-gray-300">{category.description}</p>
                     </div>
                   </div>
-                  
                   <div className="space-y-2 mb-6">
                     {category.items.map((itemIndex) => (
                       <div key={itemIndex} className="flex items-center text-sm text-gray-300">
@@ -108,7 +95,6 @@ const NewContentNavigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <a
                     href={category.href}
                     className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 font-medium rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300 group-hover:translate-y-[-2px]"
@@ -121,7 +107,6 @@ const NewContentNavigation: React.FC = () => {
             </div>
           )}
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-12"
@@ -134,7 +119,6 @@ const NewContentNavigation: React.FC = () => {
               Join thousands of companies already using our revolutionary technologies 
               to achieve unprecedented growth and efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
@@ -143,7 +127,6 @@ const NewContentNavigation: React.FC = () => {
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              
               <a
                 href="/demo"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -155,9 +138,7 @@ const NewContentNavigation: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NewContentNavigation;

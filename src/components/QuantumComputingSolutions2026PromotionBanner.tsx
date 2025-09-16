@@ -1,12 +1,6 @@
 import React from 'react';
-
 const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">QuantumComputingSolutions2026PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <div
@@ -36,7 +30,6 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           <div className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -54,19 +47,16 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   ⚛️ Quantum Computing Solutions 2026
                 </divh2>
-
                 <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Harness quantum power: OptimizationEncryptionSimulationand AI/ML solutions
                 </divp>
-
                 {/* Solution Icons */}
                 <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
@@ -79,7 +69,6 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Right Content - CTA */}
               <div
                 className="flex flex-col sm:flex-row items-center gap-4"
@@ -88,14 +77,12 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                   <div className="text-3xl font-bold text-yellow-400 mb-1">10,000x</div>
                   <div className="text-sm text-cyan-200">Faster Processing</div>
                 </div>
-                
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-purple-500 text-indigo-900 rounded-full font-bold hover:shadow-lg transition-all duration-300 flex items-center group">
                   <Zap className="w-5 h-5 mr-2" />
                   Explore Quantum
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-
               {/* Dismiss Button */}
               <divbutton
                 onClick={handleDismiss}
@@ -105,7 +92,6 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 origin-left"
@@ -113,10 +99,8 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
           />
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default QuantumComputingSolutions2026PromotionBanner;
 </div></div></div></div></div></div>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const defi-nexus-platform: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const defi-nexus-platform: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default defi-nexus-platform;
-=======
 const features = [
   'Multi-chain DeFi aggregation',
   'Automated yield optimization',
@@ -22,7 +17,6 @@ const features = [
   'Mobile app integration',
   'Staking and governance'
 ];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -46,7 +40,6 @@ const pricingPlans = [
     popular: false
   }
 ];
-
 export default function DeFiNexusPlatform() {
   return (
     <Layout>
@@ -204,4 +197,3 @@ export default function DeFiNexusPlatform() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

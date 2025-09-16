@@ -1,35 +1,24 @@
 import React from 'react';
-
 const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NeuralConsciousnessBreakthroughBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-bold">🧠 NEW BREAKTHROUGH CONTENT</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Neural Consciousness Breakthrough
           </h2>
-          
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover revolutionary AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations and deliver unprecedented results.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Featured Blog Post */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -52,7 +41,6 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Featured Case Study */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center mb-4">
@@ -74,7 +62,6 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Featured Guide */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center mb-4">
@@ -97,7 +84,6 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* ROI Calculator Tool */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
           <div className="flex items-center justify-center mb-4">
@@ -116,7 +102,6 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             Calculate Your ROI
           </a>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-lg text-gray-200 mb-6">
@@ -139,8 +124,6 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default NeuralConsciousnessBreakthroughBanner2025;

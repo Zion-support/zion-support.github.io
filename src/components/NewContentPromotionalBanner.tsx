@@ -1,12 +1,6 @@
 import React from 'react';
-
 const NewContentPromotionalBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentPromotionalBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-sm border-b border-gray-700/50"
@@ -22,7 +16,6 @@ const NewContentPromotionalBanner: React.FC = () => {
               >
                 <ArrowRight className="w-4 h-4 text-gray-400 rotate-180" />
               </button>
-
               {/* Slide Content */}
                 <div
                   key={currentSlide}
@@ -32,7 +25,6 @@ const NewContentPromotionalBanner: React.FC = () => {
                   <div className={`w-10 h-10 bg-gradient-to-r ${promotionalContent[currentSlide].gradient} rounded-lg flex items-center justify-center`}>
                     <Sparkles className="w-5 h-5 text-white" />
                   </div>
-
                   {/* Text Content */}
                   <div className="flex-1">
                     <h3 className="text-white font-semibold text-sm">
@@ -42,7 +34,6 @@ const NewContentPromotionalBanner: React.FC = () => {
                       {promotionalContent[currentSlide].description}
                     </p>
                   </div>
-
                   {/* CTA Button */}
                   <Link
                     to={promotionalContent[currentSlide].link}
@@ -53,7 +44,6 @@ const NewContentPromotionalBanner: React.FC = () => {
                   </Link>
                 </div>
               </div>
-
               {/* Navigation Arrow */}
               <button
                 onClick={handleNext}
@@ -62,7 +52,6 @@ const NewContentPromotionalBanner: React.FC = () => {
                 <ArrowRight className="w-4 h-4 text-gray-400" />
               </button>
             </div>
-
             {/* Close Button */}
             <button
               onClick={handleClose}
@@ -71,7 +60,6 @@ const NewContentPromotionalBanner: React.FC = () => {
               <X className="w-4 h-4 text-gray-400" />
             </button>
           </div>
-
           {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 mt-3">
             {promotionalContent.map((_, index) => (
@@ -87,7 +75,6 @@ const NewContentPromotionalBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
@@ -130,13 +117,8 @@ const NewContentPromotionalBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
-<<<<<<< HEAD
-=======
 export { NewContentPromotionalBanner };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default NewContentPromotionalBanner;

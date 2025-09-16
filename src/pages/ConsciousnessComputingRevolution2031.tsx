@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
       {/* Interactive Consciousness Demo */}
       <div className="bg-gradient-to-r from-purple-900/30 to-cyan-900/30 py-20">
         <div className="container mx-auto px-4">
@@ -19,7 +12,6 @@ import { Helmet } from 'react-helmet-async';
               Experience consciousness computing in real-time
             </p>
           </motion.div>
-
           <div className="max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-gray-700/50">
               <div className="grid md:grid-cols-2 gap-12">
@@ -32,7 +24,6 @@ import { Helmet } from 'react-helmet-async';
                         <div className="text-4xl animate-pulse">🧠</div>
                       </div>
                     </div>
-                    
                     <div className="bg-gray-700/50 rounded-xl p-6">
                       <h4 className="text-xl font-bold mb-3 text-green-400">Quantum Processing</h4>
                       <div className="space-y-2">
@@ -52,7 +43,6 @@ import { Helmet } from 'react-helmet-async';
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-3xl font-bold mb-6 text-cyan-400">Consciousness Output</h3>
                   <div className="space-y-6">
@@ -62,7 +52,6 @@ import { Helmet } from 'react-helmet-async';
                         <div className="text-4xl animate-bounce">💭</div>
                       </div>
                     </div>
-                    
                     <div className="bg-gray-700/50 rounded-xl p-6">
                       <h4 className="text-xl font-bold mb-3 text-yellow-400">Reality Creation</h4>
                       <div className="space-y-2">
@@ -96,7 +85,6 @@ import { Helmet } from 'react-helmet-async';
             Transform every aspect of human existence through consciousness computing
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
@@ -168,21 +156,15 @@ import { Helmet } from 'react-helmet-async';
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
       </div>
-
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
       {/* Ultimate Call to Action */}
       <div className="container mx-auto px-4 py-24">
         <motion.div
@@ -205,15 +187,12 @@ import { Helmet } from 'react-helmet-async';
           >
             🧠
           </motion.div>
-          
           <h2 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Consciousness Awaits
           </h2>
-          
           <p className="text-3xl opacity-90 mb-12 max-w-5xl mx-auto">
             Join the consciousness revolution and transcend the limitations of physical existence
           </p>
-          
           <div className="flex justify-center space-x-8">
             <motion.button
               whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(168, 85, 247, 0.6)" }}

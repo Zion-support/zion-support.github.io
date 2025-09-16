@@ -1,18 +1,10 @@
 import React from 'react';
-
 const RevolutionaryContentBanner: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10 p-8 md:p-12">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -25,7 +17,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             Discover our latest breakthrough content showcasing the most advanced technologies of 2025-2026
           </p>
         </div>
-
         {/* Featured Content Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
@@ -63,7 +54,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {featuredContent.map((_, index) => (
@@ -79,7 +69,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {featuredContent.map((content, index) => (
@@ -96,7 +85,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               </div>
             </a>
   const [currentBanner, setCurrentBanner] = useState(0);
-  
   const banners = [
     {
       title: "🚀 Revolutionary Tech Breakthrough 2025",
@@ -120,14 +108,12 @@ const RevolutionaryContentBanner: React.FC = () => {
       textColor: "text-white"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners.length]);
-
   return (
     <div className="relative overflow-hidden mb-12">
       <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 text-white relative">
@@ -145,7 +131,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               that are reshaping industries and creating new possibilities for humanity.
             </p>
           </div>
-          
           {/* Banner Carousel */}
           <div className="relative">
             <div className="overflow-hidden rounded-xl">
@@ -171,7 +156,6 @@ const RevolutionaryContentBanner: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             {/* Banner Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {banners.map((_, index) => (
@@ -185,7 +169,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Quick Access Links */}
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             {banners.map((banner, index) => (
@@ -202,10 +185,8 @@ const RevolutionaryContentBanner: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentBanner;
 </div></div></div>

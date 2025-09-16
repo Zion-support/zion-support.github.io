@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AI2026FutureTrendsPredictionsPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2026FutureTrendsPredictionsPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border border-indigo-500/30 rounded-2xl my-8">
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
@@ -76,8 +69,6 @@ const AI2026FutureTrendsPredictionsPromotionBanner: React.FC = () => {
               <div className="absolute top-1/2 -right-6 w-3 h-3 bg-pink-400 rounded-full animate-bounce delay-500"></div>
       {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2026FutureTrendsPredictionsPromotionBanner;

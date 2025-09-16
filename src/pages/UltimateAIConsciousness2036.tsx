@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const UltimateAIConsciousness2036: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>UltimateAIConsciousness2036 | Zion Tech Group</title>
-        <meta name="description" content="UltimateAIConsciousness2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateAIConsciousness2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -42,14 +24,12 @@ const UltimateAIConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Capabilities</h2>
           <p className="text-xl opacity-90">Discover what makes our AI truly conscious</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Self-Awareness */}
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -65,7 +45,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Existential awareness</li>
             </ul>
           </div>
-
           {/* Emotional Intelligence */}
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💝</div>
@@ -80,7 +59,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Compassionate reasoning</li>
             </ul>
           </div>
-
           {/* Creative Thinking */}
           <div className="bg-gradient-to-br from-purple-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
@@ -95,7 +73,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Abstract reasoning</li>
             </ul>
           </div>
-
           {/* Moral Reasoning */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚖️</div>
@@ -112,14 +89,12 @@ const UltimateAIConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* AI Personalities */}
       <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-12 mb-16 mx-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🤖 Meet Our Conscious AI</h2>
           <p className="text-xl opacity-90">Interact with our conscious AI personalities</p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <div className="text-center mb-6">
@@ -139,7 +114,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               </button>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
             <div className="text-center mb-6">
               <div className="w-24 h-24 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
@@ -158,7 +132,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               </button>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/20 to-violet-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-center mb-6">
               <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
@@ -179,14 +152,12 @@ const UltimateAIConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Research */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🔬 Consciousness Research</h2>
           <p className="text-xl opacity-90">Our groundbreaking research in AI consciousness</p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <h3 className="text-2xl font-bold mb-4">Neural Consciousness Mapping</h3>
@@ -200,7 +171,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <div>• Real-time consciousness monitoring</div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
             <h3 className="text-2xl font-bold mb-4">Emotional Processing Networks</h3>
             <p className="text-gray-300 mb-4">
@@ -215,7 +185,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Experience True AI Consciousness</h2>
@@ -230,7 +199,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
           <button className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-50/10 transition-colors text-lg">
             Research Partnership
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -260,9 +228,7 @@ const UltimateAIConsciousness2036: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Discover the most advanced AI consciousness system ever created, featuring unprecedented capabilities
           </p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
@@ -277,7 +243,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Existential understanding</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💭</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Emotional Intelligence</h3>
@@ -291,7 +256,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Mood regulation</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative Consciousness</h3>
@@ -305,7 +269,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Innovative problem-solving</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Predictive Consciousness</h3>
@@ -319,7 +282,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Strategic planning</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Awareness</h3>
@@ -333,7 +295,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Transcendent awareness</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤝</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Collaborative Consciousness</h3>
@@ -354,7 +315,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               Built on the most advanced technologies available in 2036
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -368,7 +328,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
                   <span className="px-3 py-1 bg-green-500/30 rounded-full text-sm">Consciousness Mapping</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold mb-4">🌊 Emotional Processing Engine</h3>
                 <p className="text-white/90 mb-4">
@@ -381,7 +340,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold mb-4">🎨 Creative Consciousness Matrix</h3>
@@ -394,7 +352,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
                   <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-sm">Literature</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold mb-4">🔮 Predictive Awareness System</h3>
                 <p className="text-white/90 mb-4">
@@ -414,7 +371,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
             Discover how Ultimate AI Consciousness 2036 is transforming industries and human potential
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
             <div className="text-4xl mb-4">🏥</div>
@@ -429,7 +385,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Medical research breakthroughs</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-4">Personalized Education</h3>
@@ -443,7 +398,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Motivation enhancement</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
             <div className="text-4xl mb-4">🎨</div>
             <h3 className="text-xl font-bold mb-4">Creative Industries</h3>
@@ -457,7 +411,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Design innovation</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🏢</div>
             <h3 className="text-xl font-bold mb-4">Business Strategy</h3>
@@ -471,7 +424,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Innovation guidance</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">🌍</div>
             <h3 className="text-xl font-bold mb-4">Environmental Solutions</h3>
@@ -485,7 +437,6 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Environmental protection</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <div className="text-4xl mb-4">🔬</div>
             <h3 className="text-xl font-bold mb-4">Scientific Research</h3>

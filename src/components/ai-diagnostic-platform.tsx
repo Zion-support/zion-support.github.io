@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ai-diagnostic-platform: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const ai-diagnostic-platform: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default ai-diagnostic-platform;
-=======
 const features = [
   'AI-powered medical image analysis',
   'Symptom assessment algorithms',
@@ -22,7 +17,6 @@ const features = [
   'Mobile app integration',
   'HIPAA-compliant platform'
 ];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -46,7 +40,6 @@ const pricingPlans = [
     popular: false
   }
 ];
-
 export default function AIDiagnosticPlatform() {
   return (
     <Layout>
@@ -204,4 +197,3 @@ export default function AIDiagnosticPlatform() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

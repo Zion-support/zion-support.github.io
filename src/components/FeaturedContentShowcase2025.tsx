@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const FeaturedContentShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FeaturedContentShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,7 +17,6 @@ import {
   Target,
   Award
 } from 'lucide-react';
-
 interface FeaturedContent {
   id: string;
   title: string;
@@ -46,11 +36,9 @@ interface FeaturedContent {
     downloads?: number;
   };
 }
-
 const FeaturedContentShowcase2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const featuredContent: FeaturedContent[] = [
     {
       id: 'ai-transformation-guide',
@@ -125,7 +113,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
       }
     }
   ];
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'guide': return <BookOpen className="w-5 h-5" />;
@@ -134,7 +121,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
       default: return <FileText className="w-5 h-5" />;
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'guide': return 'from-blue-500 to-blue-600';
@@ -143,7 +129,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
       default: return 'from-gray-500 to-gray-600';
     }
   };
-
   const getPriorityBadge = (priority: string) => {
     switch (priority) {
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
@@ -152,17 +137,14 @@ const FeaturedContentShowcase2025: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
     setIsAutoPlaying(false);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
     setIsAutoPlaying(false);
   };
-
   React.useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -171,7 +153,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, featuredContent.length]);
-
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,7 +170,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
             that are transforming businesses worldwide.
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl shadow-2xl">
@@ -218,17 +198,14 @@ const FeaturedContentShowcase2025: React.FC = () => {
                           {featuredContent[currentIndex].priority.toUpperCase()}
                         </div>
                       </div>
-
                       {/* Title */}
                       <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                         {featuredContent[currentIndex].title}
                       </h3>
-
                       {/* Description */}
                       <p className="text-white/90 text-lg mb-6 leading-relaxed">
                         {featuredContent[currentIndex].description}
                       </p>
-
                       {/* Meta Information */}
                       <div className="flex flex-wrap items-center gap-6 text-white/80 text-sm mb-6">
                         <div className="flex items-center gap-2">
@@ -250,7 +227,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
                           </div>
                         )}
                       </div>
-
                       {/* Metrics */}
                       {featuredContent[currentIndex].metrics && (
                         <div className="flex gap-6 mb-6">
@@ -268,7 +244,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
                           )}
                         </div>
                       )}
-
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {featuredContent[currentIndex].tags.slice(0, 4).map((tag, index) => (
@@ -280,7 +255,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
                           </span>
                         ))}
                       </div>
-
                       {/* CTA Button */}
                       <Link
                         to={featuredContent[currentIndex].url}
@@ -290,7 +264,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
-
                     {/* Visual Element */}
                     <div className="relative">
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
@@ -314,7 +287,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Navigation */}
           <div className="flex items-center justify-between mt-6">
             {/* Previous Button */}
@@ -325,7 +297,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
               <ChevronLeft className="w-4 h-4" />
               <span>Previous</span>
             </button>
-
             {/* Dots */}
             <div className="flex gap-2">
               {featuredContent.map((_, index) => (
@@ -343,7 +314,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
                 />
               ))}
             </div>
-
             {/* Next Button */}
             <button
               onClick={nextSlide}
@@ -354,7 +324,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Additional Content Grid */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
@@ -397,9 +366,7 @@ const FeaturedContentShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default FeaturedContentShowcase2025;

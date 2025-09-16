@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RevolutionaryTechBanner2031: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechBanner2031</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -17,7 +10,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.03%22%253E%253Cpath%20d%3D%22m0%2040l40-40h-40v40z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
-      
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="flex-1 mb-6 lg:mb-0">
@@ -32,7 +24,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
                 REVOLUTIONARY TECH 2031
               </span>
             </motion.div>
-            
             <motion.h2
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -41,7 +32,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
             >
               Next-Generation Technology Revolution
             </motion.h2>
-            
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,7 +40,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
             >
               Discover synthetic intelligence, quantum neural fusion, and consciousness transfer technologies
             </motion.p>
-            
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,7 +64,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
               </div>
             </motion.div>
           </div>
-          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -104,8 +92,6 @@ const RevolutionaryTechBanner2031: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryTechBanner2031;

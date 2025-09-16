@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
-
 const InteractiveTechShowcase2042: React.FC = () => {
   const [activeTech, setActiveTech] = useState('conscious-ai');
   const [isDemoActive, setIsDemoActive] = useState(false);
-
   const technologies = [
     {
       id: 'conscious-ai',
@@ -98,9 +93,7 @@ const InteractiveTechShowcase2042: React.FC = () => {
       }
     }
   ];
-
   const currentTech = technologies.find(tech => tech.id === activeTech) || technologies[0];
-
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12">
       <div className="container mx-auto px-4">
@@ -116,7 +109,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
             Experience the most advanced technologies through interactive demonstrations and real-time simulations
           </p>
         </div>
-
         {/* Technology Selector */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {technologies.map((tech) => (
@@ -134,7 +126,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Active Technology Display */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
           <div className="grid md:grid-cols-2 gap-8">
@@ -147,7 +138,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                   <p className="text-lg opacity-90">{currentTech.description}</p>
                 </div>
               </div>
-              
               <div className="mb-6">
                 <h4 className="text-xl font-bold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
@@ -160,7 +150,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             {/* Interactive Demo */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <h4 className="text-xl font-bold mb-4">🎮 Live Demo</h4>
@@ -170,7 +159,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                   <div>Title: {currentTech.demo.title}</div>
                 </div>
               </div>
-              
               <div className="grid grid-cols-2 gap-4 mb-4">
                 {Object.entries(currentTech.demo.metrics).map(([key, value]) => (
                   <div key={key} className="text-center">
@@ -179,7 +167,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
               <button
                 onClick={() => setIsDemoActive(!isDemoActive)}
                 className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -193,7 +180,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Demo Status */}
         {isDemoActive && (
           <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 mb-12">
@@ -213,14 +199,12 @@ const InteractiveTechShowcase2042: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Technology Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">📊 Revolutionary Statistics</h3>
             <p className="text-xl opacity-90">Our technology is breaking every known limit</p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">99.99%</div>
@@ -240,7 +224,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -253,21 +236,13 @@ const InteractiveTechShowcase2042: React.FC = () => {
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const InteractiveTechShowcase2042: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2042</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white rounded-2xl p-8 mb-12">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Tech Showcase 2042</h2>
         <p className="text-xl opacity-90">Explore the most revolutionary technologies with interactive demos</p>
       </div>
-
       {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20">
@@ -292,9 +267,7 @@ const InteractiveTechShowcase2042: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechShowcase2042;

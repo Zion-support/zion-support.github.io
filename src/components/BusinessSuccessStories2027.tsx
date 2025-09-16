@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessSuccessStories2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessSuccessStories2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -22,7 +16,6 @@ const BusinessSuccessStories2027: React.FC = () => {
           }}
         />
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -32,7 +25,6 @@ const BusinessSuccessStories2027: React.FC = () => {
             <Award className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Success Stories 2027</span>
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
               Business Success
@@ -42,13 +34,11 @@ const BusinessSuccessStories2027: React.FC = () => {
               Stories 2027
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies achieved extraordinary results using our 
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
         </div>
-
         {/* Story Navigation */}
         <div
           className="flex justify-center mb-8"
@@ -60,7 +50,6 @@ const BusinessSuccessStories2027: React.FC = () => {
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
-            
             <div className="flex gap-2">
               {successStories.map((_index) => (
                 <button
@@ -72,14 +61,12 @@ const BusinessSuccessStories2027: React.FC = () => {
                 />
               ))}
             </div>
-            
             <button
               onClick={nextStory}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
-            
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className={`p-3 rounded-full transition-all duration-300 ${
@@ -90,7 +77,6 @@ const BusinessSuccessStories2027: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Story Content */}
           <div
             key={currentStory}
@@ -106,7 +92,6 @@ const BusinessSuccessStories2027: React.FC = () => {
                 <p className="text-gray-300 text-lg">{currentStoryData.industry}</p>
               </div>
             </div>
-
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Challenge & Solution */}
               <div>
@@ -117,7 +102,6 @@ const BusinessSuccessStories2027: React.FC = () => {
                   </h4>
                   <p className="text-gray-300 leading-relaxed">{currentStoryData.challenge}</p>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <Brain className="w-5 h-5 text-green-400" />
@@ -125,7 +109,6 @@ const BusinessSuccessStories2027: React.FC = () => {
                   </h4>
                   <p className="text-gray-300 leading-relaxed">{currentStoryData.solution}</p>
                 </div>
-
                 {/* Testimonial */}
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl p-6 border border-purple-500/30">
                   <Quote className="w-8 h-8 text-purple-400 mb-4" />
@@ -143,14 +126,12 @@ const BusinessSuccessStories2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Results & Metrics */}
               <div>
                 <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-green-400" />
                   Results
                 </h4>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30">
                     <div className="text-2xl font-bold text-green-400 mb-1">{currentStoryData.results.efficiency}</div>
@@ -169,7 +150,6 @@ const BusinessSuccessStories2027: React.FC = () => {
                     <div className="text-sm text-gray-300">ROI</div>
                   </div>
                 </div>
-
                 {/* Key Metrics */}
                 <div className="space-y-3">
                   {currentStoryData.metrics.map((metricindex) => (
@@ -184,7 +164,6 @@ const BusinessSuccessStories2027: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Timeline */}
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
@@ -205,7 +184,6 @@ const BusinessSuccessStories2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -229,9 +207,7 @@ const BusinessSuccessStories2027: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessSuccessStories2027;

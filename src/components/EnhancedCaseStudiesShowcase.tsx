@@ -1,13 +1,6 @@
 import React from 'react';
-
 const EnhancedCaseStudiesShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedCaseStudiesShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
@@ -34,7 +27,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div
           whileInView="visible"
           viewport={{ once: true }}
@@ -62,7 +54,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {study.tags.map((tagIndex) => (
@@ -74,7 +65,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   {Object.entries(study.metrics).map(([keyvalue]metricIndex) => (
                     <div key={metricIndex} className="text-center">
@@ -85,7 +75,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     <span className="font-semibold">Client:</span> {study.client}
@@ -94,7 +83,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                     <span className="font-semibold">Timeframe:</span> {study.timeframe}
                   </div>
                 </div>
-
                 <Link
                   to={`/case-studies/${study.id}`}
                   className="mt-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -105,7 +93,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -123,8 +110,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default EnhancedCaseStudiesShowcase;

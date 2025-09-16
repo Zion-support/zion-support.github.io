@@ -1,37 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React from "react";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const RevolutionaryTechShowcase2035 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTechShowcase2035 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTechShowcase2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div>
       <div>
         <div>
           <h1>Revolutionary Tech Showcase2035</h1>
           <p>Content coming soon...</p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2035;
 =======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
@@ -70,7 +49,6 @@ export default RevolutionaryTechShowcase2035;
               Explore Interdimensional AI →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
@@ -86,7 +64,6 @@ export default RevolutionaryTechShowcase2035;
               Experience Quantum Consciousness →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -106,7 +83,6 @@ export default RevolutionaryTechShowcase2035;
             <h2 className="text-4xl font-bold mb-4">🔮 Advanced Technology Features</h2>
             <p className="text-xl opacity-90">Discover the most advanced features of our 2035 technology suite</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl mb-4">🌊</div>
@@ -141,7 +117,6 @@ export default RevolutionaryTechShowcase2035;
             <h2 className="text-4xl font-bold mb-4">🏆 Revolutionary Success Stories</h2>
             <p className="text-xl opacity-90">See how our 2035 technology has transformed civilizations</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="flex items-center space-x-2 mb-3">
@@ -154,7 +129,6 @@ export default RevolutionaryTechShowcase2035;
                 Read Full Story →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">∞ Years</span>
@@ -166,7 +140,6 @@ export default RevolutionaryTechShowcase2035;
                 Learn More →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">∞%</span>
@@ -188,4 +161,3 @@ export default RevolutionaryTechShowcase2035;
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
               Contact Our AI →
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">QuantumComputingRevolution2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"
     >
@@ -16,7 +10,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl animate-spin" style={{ animationDuration: '20s' }}></div>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
@@ -33,7 +26,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience the dawn of the quantum era with our revolutionary quantum computing breakthroughs that are reshaping the boundaries of computational possibility.
           </p>
         </div>
-
         {/* Active Feature Showcase */}
         <div
           key={activeFeature}
@@ -53,7 +45,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
@@ -77,7 +68,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Quantum Capabilities */}
         <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
@@ -98,7 +88,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -123,9 +112,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </p>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default QuantumComputingRevolution2025;

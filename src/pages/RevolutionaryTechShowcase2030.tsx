@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       title: "Quantum Consciousness Computing",
@@ -65,7 +56,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       color: "from-pink-600 to-rose-600"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -86,7 +76,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       avatar: "👨‍🔬"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -133,29 +122,19 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechShowcase2030</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
         </div>
       </div>
-
           </div>
         </div>
       </div>
-
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
           <p className="text-xl opacity-80">Discover the technologies that will define the next decade</p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {technologies.map((tech, index) => (
             <motion.div
@@ -186,7 +165,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Interactive Technology Demo</h2>
             <p className="text-xl opacity-80">Experience these technologies in action</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -205,7 +183,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Start Simulation
               </motion.button>
             </motion.div>
-
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
@@ -223,7 +200,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Enter Dimension
               </motion.button>
             </motion.div>
-
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
@@ -247,7 +223,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">What Experts Say</h2>
           <p className="text-xl opacity-80">Hear from leading scientists and industry experts</p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -267,10 +242,8 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               </div>
             </motion.div>
           ))}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AnalyticsIntegration: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,14 +7,9 @@ const AnalyticsIntegration: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default AnalyticsIntegration;
-=======
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
 }
-
 export default function AnalyticsIntegration({ children }: AnalyticsIntegrationProps) {
   const router = useRouter();
   useEffect(() => {
@@ -169,4 +163,3 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

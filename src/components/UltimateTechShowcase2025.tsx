@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateTechShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -25,11 +16,9 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-
 const UltimateTechShowcase2025 = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -37,7 +26,6 @@ const UltimateTechShowcase2025 = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const features = [
     {
       icon: Brain,
@@ -75,7 +63,6 @@ const UltimateTechShowcase2025 = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -96,13 +83,11 @@ const UltimateTechShowcase2025 = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="relative py-20 px-4 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20" />
-      
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -128,7 +113,6 @@ const UltimateTechShowcase2025 = () => {
             that will transform your business and propel you into the future.
           </p>
         </motion.div>
-
         {/* Feature Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
@@ -173,7 +157,6 @@ const UltimateTechShowcase2025 = () => {
               ))}
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
@@ -203,7 +186,6 @@ const UltimateTechShowcase2025 = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
-              
               {/* Floating elements */}
               <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
               <div className="absolute bottom-4 left-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-1000" />
@@ -211,7 +193,6 @@ const UltimateTechShowcase2025 = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -247,7 +228,6 @@ const UltimateTechShowcase2025 = () => {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -274,10 +254,8 @@ const UltimateTechShowcase2025 = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateTechShowcase2025;
 </div></div></div></div></div>

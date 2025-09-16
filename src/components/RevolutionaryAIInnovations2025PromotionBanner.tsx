@@ -1,12 +1,6 @@
 import React from 'react';
-
 const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAIInnovations2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
@@ -38,7 +32,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20 blur-3xl"
         />
       </div>
-
       {/* Floating Innovation Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {innovations.map((innovationindex) => (
@@ -64,7 +57,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
           </div>
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
@@ -75,19 +67,16 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
               Revolutionary AI Innovations 2025
             </div>
-
             <divh2
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
             >
               The Future is Here
             </divh2>
-
             <divp
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl"
             >
               Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
             </divp>
-
             {/* Current Innovation Highlight */}
             <div
               key={currentInnovation}
@@ -110,7 +99,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
                 Revolutionary breakthrough transforming how we approach complex problems and decision-making
               </p>
             </div>
-
             {/* Innovation Dots */}
             <div className="flex justify-center lg:justify-start space-x-2 mb-8">
               {innovations.map((_index) => (
@@ -125,7 +113,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
                 />
               ))}
             </div>
-
             {/* Action Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
@@ -147,7 +134,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Content - Visual Showcase */}
           <div
             className="flex-shrink-0 lg:ml-8"
@@ -167,7 +153,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
                   }}
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl"
                 />
-                
                 <div
                     scale: [1.1],
                     rotate: [05-50]
@@ -180,7 +165,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
                 >
                   <currentInnovationData.icon className="w-16 h-16 text-white" />
                 </div>
-
                 {/* Innovation Stats */}
                 <div
                   key={currentInnovation}
@@ -196,7 +180,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Floating Innovation Icons */}
               {innovations.slice(04).map((innovationindex) => (
                 <div
@@ -226,7 +209,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Dismiss Button */}
       <button
         onClick={handleDismiss}
@@ -235,10 +217,8 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
       >
         <X className="w-6 h-6" />
       </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryAIInnovations2025PromotionBanner;
 </div></div></div></div></div>

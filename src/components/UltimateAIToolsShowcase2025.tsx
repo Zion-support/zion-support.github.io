@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateAIToolsShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateAIToolsShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -29,7 +23,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
             createand innovate in 2025.
           </p>
         </div>
-
         {/* Search and Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +40,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -70,7 +62,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Tools Grid */}
         <div
           whileInView="visible"
@@ -105,7 +96,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Tool Content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -117,11 +107,9 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
                       <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                     </div>
                   </div>
-
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {tool.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {tool.features.slice(02).map((featureindex) => (
@@ -131,7 +119,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center text-sm text-gray-500">
@@ -142,7 +129,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
                       {tool.price}
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="flex gap-3">
                     <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center">
@@ -164,7 +150,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -190,9 +175,7 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateAIToolsShowcase2025;

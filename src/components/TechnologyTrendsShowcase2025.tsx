@@ -1,12 +1,6 @@
 import React from 'react';
-
 const TechnologyTrendsShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TechnologyTrendsShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -18,7 +12,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
           </div>
-          
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -26,7 +19,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             The Future of Technology is
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Here Today</span>
           </divh2>
-          
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -34,7 +26,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             Discover the cutting-edge technologies that will shape the next decade and learn how to prepare your business for the future.
           </divp>
         </div>
-
         {/* Trend Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {trends.map((trendindex) => {
@@ -58,14 +49,12 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             );
           })}
         </div>
-
         {/* Main Trend Display */}
           <div
             key={activeTrend}
             className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12"
           >
             <div className={`h-2 bg-gradient-to-r ${currentTrend.color}`} />
-            
             <div className="p-8 md:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side - Trend Details */}
@@ -93,11 +82,9 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <p className="text-lg text-gray-600 mb-8">
                     {currentTrend.description}
                   </p>
-
                   {/* Stats Grid */}
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -119,7 +106,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">Cost Reduction</div>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="space-y-3">
                     {currentTrend.features.map((featureindex) => (
@@ -133,7 +119,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Right Side - Visual */}
                 <div className="relative">
                   <div
@@ -162,7 +147,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Auto-play Controls */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <button
@@ -177,7 +161,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             {isPlaying ? 'Auto-playing' : 'Paused'}
           </button>
         </div>
-
         {/* Future Predictions */}
         <div className="mb-16">
           <div
@@ -191,7 +174,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
               Based on current trends and expert analysis
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {predictions.map((predictionindex) => (
               <div
@@ -226,7 +208,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -254,10 +235,8 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default TechnologyTrendsShowcase2025;
 </div></div></div></div></div></div></div>

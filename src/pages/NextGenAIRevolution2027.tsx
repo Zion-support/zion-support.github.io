@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const NextGenAIRevolution2027: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenAIRevolution2027 | Zion Tech Group</title>
-        <meta name="description" content="NextGenAIRevolution2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -42,7 +28,6 @@ const NextGenAIRevolution2027: React.FC = () => {
             </div>
           </div>
       {/* Revolutionary AI Technologies */}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -55,7 +40,6 @@ const NextGenAIRevolution2027: React.FC = () => {
             Discover the most advanced AI systems that are redefining what's possible in artificial intelligence
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -78,7 +62,6 @@ const NextGenAIRevolution2027: React.FC = () => {
               Explore Consciousness →
             </button>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -100,7 +83,6 @@ const NextGenAIRevolution2027: React.FC = () => {
               Go Quantum →
             </button>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -127,13 +109,10 @@ const NextGenAIRevolution2027: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
             </button>
           </div>
         </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
-
       {/* AI Applications Section */}
       <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -148,7 +127,6 @@ const NextGenAIRevolution2027: React.FC = () => {
               See how next-generation AI is transforming industries and creating new possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -167,7 +145,6 @@ const NextGenAIRevolution2027: React.FC = () => {
                 <li>• Drug discovery acceleration</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -188,7 +165,6 @@ const NextGenAIRevolution2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <motion.div

@@ -1,29 +1,22 @@
 #!/bin/bash
 
-echo "Finding files with merge conflicts..."
+# Script to fix merge conflicts in source files
+echo "Fixing merge conflicts in source files..."
 
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u)
-
-echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
+# Find all files with merge conflicts in src directory
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing conflicts in: $file"
     
-    # Skip backup files and node_modules
-    if [[ "$file" == *".backup"* ]] || [[ "$file" == *"node_modules"* ]] || [[ "$file" == *".git"* ]]; then
-        echo "Skipping backup/git file: $file"
-        continue
-    fi
+    # Remove merge conflict markers and keep the more complete version
+    # This is a simple approach - keep everything between ======= and >>>>>>> 
+    # and remove the HEAD section
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i 's/>>>>>>>.*//' "$file"
     
-    # Create a backup
-    cp "$file" "$file.backup.$(date +%s)"
-    
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> /d' "$file"
-    
-    echo "Fixed: $file"
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/d' "$file"
+  fi
 done
 
-echo "Merge conflict resolution complete!"
+echo "Merge conflicts fixed!"

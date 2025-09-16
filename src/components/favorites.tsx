@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const favorites: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">favorites</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { TALENT_PROFILES } from '../data/talent';
-
 function useFavorites() {
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -25,7 +14,6 @@ function useFavorites() {
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug));
   return { favorites, remove };
 }
-
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
@@ -66,8 +54,6 @@ export default function FavoritesPage() {
                   <a href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></a>
           ))}
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default favorites;

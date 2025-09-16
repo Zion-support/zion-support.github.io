@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentRevolution2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -25,7 +19,6 @@ const UltimateContentRevolution2026: React.FC = () => {
             that are reshaping the future of business and technology.
           </p>
         </div>
-
         {/* Content Tabs */}
         <div
           className="mb-12"
@@ -46,7 +39,6 @@ const UltimateContentRevolution2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
             <div
               key={activeTab}
@@ -60,7 +52,6 @@ const UltimateContentRevolution2026: React.FC = () => {
                   <p className="text-lg text-gray-300 mb-6">
                     {contentSections[activeTab].content.description}
                   </p>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     {contentSections[activeTab].content.stats.map((statindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
@@ -71,7 +62,6 @@ const UltimateContentRevolution2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                
                 <div>
                   <h4 className="text-xl font-semibold mb-4 text-white">Key Features</h4>
                   <div className="space-y-3">
@@ -87,7 +77,6 @@ const UltimateContentRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -122,7 +111,6 @@ const UltimateContentRevolution2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
@@ -145,9 +133,7 @@ const UltimateContentRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentRevolution2026;

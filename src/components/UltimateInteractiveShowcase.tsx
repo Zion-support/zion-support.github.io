@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateInteractiveShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateInteractiveShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -23,7 +12,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
           Explore our revolutionary technology solutions with immersive interactive experiences
         </p>
       </div>
-
       {/* Category Tabs */}
       <div className="flex justify-center mb-12">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
@@ -42,8 +30,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
       {/* Interactive Grid */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -68,7 +54,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-              
               <div className="relative z-10">
                 {/* Icon */}
                 <div className="text-6xl mb-6 text-center">
@@ -82,11 +67,9 @@ const UltimateInteractiveShowcase: React.FC = () => {
                     {item.icon}
                   </motion.span>
                 </div>
-
                 {/* Content */}
                 <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
                 <p className="text-white/90 mb-6 text-center">{item.description}</p>
-
                 {/* Features */}
                 <div className="space-y-2 mb-8">
                   {item.features.map((feature, idx) => (
@@ -102,7 +85,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 {/* Action Button */}
                 <motion.a
                   href={item.link}
@@ -113,7 +95,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
                   Explore {item.title.split(' ')[0]} →
                 </motion.a>
               </div>
-
               {/* Hover Effect */}
               <AnimatePresence>
                 {hoveredItem === index && (
@@ -129,7 +110,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
           ))}
         </motion.div>
       </AnimatePresence>
-
       {/* Call to Action */}
       <div className="text-center mt-16">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>

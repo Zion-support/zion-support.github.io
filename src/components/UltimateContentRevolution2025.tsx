@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentRevolution2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentRevolution2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -44,7 +38,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +57,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Content Tabs */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +68,6 @@ const UltimateContentRevolution2025: React.FC = () => {
               {contentSections[activeTab].subtitle}
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center mb-12">
             {Object.keys(contentSections).map((tab) => (
@@ -93,7 +84,6 @@ const UltimateContentRevolution2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Content Grid */}
             <div
               key={activeTab}
@@ -119,7 +109,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +116,6 @@ const UltimateContentRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
             <p className="text-xl text-gray-300">Hear from industry leaders 'who', 've transformed their businesses with our AI solutions</p>
           </div>
-
           <div className="relative">
               <div
                 key={currentSlide}
@@ -150,7 +138,6 @@ const UltimateContentRevolution2025: React.FC = () => {
                 <p className="text-lg text-gray-300 italic">"{testimonials[currentSlide].content}"</p>
               </div>
             </div>
-
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
               {testimonials.map((_index) => (
@@ -166,7 +153,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -195,9 +181,7 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentRevolution2025;

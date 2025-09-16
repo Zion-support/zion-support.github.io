@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const MobileOptimizedNav: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">MobileOptimizedNav</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import { useStateuseEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { useRouter } from 'next/router';
-
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
 }
-
 const navigationItems: NavItem[] = [
   {
     label: 'Home',
@@ -65,7 +52,6 @@ const navigationItems: NavItem[] = [
     href: '/contact',
   },
 ];
-
 export default function MobileOptimizedNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -217,8 +203,6 @@ export default function MobileOptimizedNav() {
               >
                 Get Started
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default MobileOptimizedNav;

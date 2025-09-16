@@ -1,12 +1,6 @@
 import React from 'react';
-
 const NewContentShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -14,7 +8,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -28,7 +21,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
             </div>
-
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
@@ -38,7 +30,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 Innovations
               </span>
             </divh2>
-
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8"
@@ -46,7 +37,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
             </divp>
-
             {/* Rotating Feature */}
             <div
               key={currentFeature}
@@ -66,7 +56,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -78,7 +67,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -100,7 +88,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Content - Visual */}
           <div
             className="relative"
@@ -116,7 +103,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
               </div>
-
               {/* Feature Cards */}
               <div className="space-y-4">
                 {features.map((featureindex) => (
@@ -147,7 +133,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Progress Bar */}
               <div className="mt-6">
                 <div className="flex justify-between text-sm text-gray-300 mb-2">
@@ -161,7 +146,6 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
@@ -176,10 +160,8 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NewContentShowcase2025PromotionBanner;
 </div></div></div></div></div></div>

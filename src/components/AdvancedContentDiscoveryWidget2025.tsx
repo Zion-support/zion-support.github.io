@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AdvancedContentDiscoveryWidget2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedContentDiscoveryWidget2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Search
@@ -37,7 +26,6 @@ import {
   Target
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function AdvancedContentDiscoveryWidget2025() {
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
@@ -309,8 +297,6 @@ export default function AdvancedContentDiscoveryWidget2025() {
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 mx-auto">
             Load More Content
             <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AdvancedContentDiscoveryWidget2025;

@@ -1,27 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const About: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>About | Zion Tech Group</title>
-        <meta name="description" content="About - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">About</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default About;
-=======
 import { SEO } from '@/components/SEO';
 import { 
   Rocket, 
@@ -35,7 +12,6 @@ import {
   TrendingUp,
   Heart
 } from 'lucide-react';
-
 export default function About() {
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients', color: 'from-blue-500 to-cyan-500' },
@@ -244,4 +220,3 @@ export default function About() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

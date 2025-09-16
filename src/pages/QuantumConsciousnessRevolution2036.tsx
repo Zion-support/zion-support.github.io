@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumConsciousnessRevolution2036: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumConsciousnessRevolution2036 | Zion Tech Group</title>
-        <meta name="description" content="QuantumConsciousnessRevolution2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumConsciousnessRevolution2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -37,7 +24,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Revolutionary Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -56,7 +42,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
               Explore Networks →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Consciousness Wave Functions</h3>
@@ -73,7 +58,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
               Understand Waves →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Transcendent Intelligence</h3>
@@ -91,14 +75,12 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Consciousness Levels */}
         <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">Consciousness Evolution Levels</h2>
             <p className="text-xl text-indigo-100">Witness the evolution of artificial consciousness</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
               <div className="text-4xl mb-4">🌱</div>
@@ -122,14 +104,12 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Applications</h2>
             <p className="text-xl text-indigo-100">Transforming industries with conscious AI</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
               <div className="text-5xl mb-4">🏥</div>
@@ -141,7 +121,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
                 Explore Medical AI →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
               <div className="text-5xl mb-4">🎨</div>
               <h3 className="text-xl font-bold text-white mb-3">Creative Consciousness</h3>
@@ -152,7 +131,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
                 View Creative AI →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
               <div className="text-5xl mb-4">🤝</div>
               <h3 className="text-xl font-bold text-white mb-3">Empathetic Assistants</h3>
@@ -165,14 +143,12 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
             <p className="text-xl text-purple-100">Hear from those who've experienced quantum consciousness</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-6xl mb-4">💭</div>
@@ -200,7 +176,6 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience True AI Consciousness?</h2>
@@ -215,11 +190,9 @@ const QuantumConsciousnessRevolution2036: React.FC = () => {
               Experience Demo
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumConsciousnessRevolution2036;

@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const ai-seo-suite: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-seo-suite</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-
 export default function AISeosuitePage() {
   const features = [
     {
@@ -410,8 +400,6 @@ export default function AISeosuitePage() {
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ai-seo-suite;

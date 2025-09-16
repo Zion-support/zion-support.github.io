@@ -1,23 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const quantum-financial-trading: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quantum-financial-trading</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default quantum-financial-trading;
-=======
 import Head from 'next/head';
 PhoneMailMapPinCheckArrowRightTrendingUpStar
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
   if (!service) return null;
@@ -53,4 +38,3 @@ export default function QuantumFinancialTradingPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

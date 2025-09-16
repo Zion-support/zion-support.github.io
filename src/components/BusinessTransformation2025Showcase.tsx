@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessTransformation2025Showcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessTransformation2025Showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -20,7 +14,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.
           </p>
         </div>
-
         {/* Navigation Tabs */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -43,7 +36,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
             );
           })}
         </div>
-
         {/* Metrics Display */}
         <div
           key={activeSection}
@@ -57,16 +49,13 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
                 <div className="relative z-10">
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${transformationData[activeSection as keyof typeof transformationData].color} mb-4`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className={`text-3xl font-bold ${metric.color} mb-2`}>
                     {metric.value}
                   </div>
-                  
                   <div className="text-gray-300 font-medium">
                     {metric.label}
                   </div>
@@ -75,7 +64,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
             );
           })}
         </div>
-
         {/* Success Stories */}
         <div
           className="mb-16"
@@ -83,7 +71,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Success Stories
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((storyindex) => {
               const Icon = story.icon;
@@ -93,7 +80,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 mr-3">
@@ -104,7 +90,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                         <p className="text-gray-400 text-sm">{story.industry}</p>
                       </div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 mb-1">Challenge</h4>
@@ -119,7 +104,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                         <p className="text-gray-300 text-sm">{story.results}</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-green-400">
                         {story.revenue}
@@ -135,7 +119,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -162,10 +145,8 @@ const BusinessTransformation2025Showcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessTransformation2025Showcase;
 </div></div>

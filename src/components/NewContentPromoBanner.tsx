@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const NewContentPromoBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentPromoBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
 import { getRecentBlogPosts } from '../data/blog-posts';
-
 const NewContentPromoBanner: React.FC = () => {
 	const recent = getRecentBlogPosts(3);
-
 	return (
 		<div className="px-4 md:px-8 lg:px-12 py-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-fuchsia-900 rounded-xl border border-purple-500/30">
 			<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Latest from the blog</h2>
@@ -37,7 +24,5 @@ const NewContentPromoBanner: React.FC = () => {
 			</div>
 		</div>
 	);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 };
-
 export default NewContentPromoBanner;

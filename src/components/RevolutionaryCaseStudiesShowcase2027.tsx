@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryCaseStudiesShowcase2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -26,7 +19,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
             Real projectsreal resultsreal transformation.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -41,7 +33,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Case Study Navigation */}
         <div
           className="mb-12"
@@ -62,7 +53,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Case Study Content */}
           <div
             key={activeCase}
@@ -80,18 +70,15 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
                     <p className="text-gray-300">{caseStudies[activeCase].industry} • {caseStudies[activeCase].duration}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Key Highlights</h4>
                     <ul className="space-y-2">
@@ -103,7 +90,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
@@ -116,7 +102,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Column - Results & Testimonial */}
               <div>
                 {/* Results Metrics */}
@@ -132,7 +117,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Testimonial */}
                 <div className="bg-white/10 rounded-lg p-6">
                   <div className="flex items-start gap-4 mb-4">
@@ -150,7 +134,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
                     "{caseStudies[activeCase].testimonial.quote}"
                   </blockquote>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-6">
                   <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-2">
@@ -166,7 +149,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -192,8 +174,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryCaseStudiesShowcase2027;

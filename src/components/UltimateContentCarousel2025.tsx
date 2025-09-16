@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const UltimateContentCarousel2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentCarousel2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { useState, useEffect } from 'react';
     {
       id: 1,
@@ -41,26 +30,21 @@ import React, { useState, useEffect } from 'react';
       features: ["50+ Active Innovations", "99.9% Success Rate", "Infinite Possibilities"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [contentSlides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
   };
-
   return (
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -79,24 +63,19 @@ import React, { useState, useEffect } from 'react';
             </svg>
           </button>
         </div>
-
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default UltimateContentCarousel2025;
 </p></p>
 =======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
-
 const UltimateContentCarousel2025 = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -104,7 +83,6 @@ const UltimateContentCarousel2025 = () => {
     }5000);
     return () => clearInterval(interval);
   }[]);
-
   const slides = [
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
@@ -118,7 +96,6 @@ const UltimateContentCarousel2025 = () => {
             <Star className="w-4 h-4 mr-2" />
             Ultimate Content Carousel 2025
           </divdiv>
-          
           <divh2
             className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
           >
@@ -128,7 +105,6 @@ const UltimateContentCarousel2025 = () => {
               Showcase
             </span>
           </divh2>
-          
           <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
@@ -136,7 +112,6 @@ const UltimateContentCarousel2025 = () => {
             industries and transforming businesses worldwide.
           </divp>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl shadow-2xl">
@@ -151,7 +126,6 @@ const UltimateContentCarousel2025 = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
                 </div>
-
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="max-w-4xl px-8 md:px-12 text-white">
@@ -162,21 +136,18 @@ const UltimateContentCarousel2025 = () => {
                       <TrendingUp className="w-4 h-4 mr-2" />
                       {slides[currentSlide].subtitle}
                     </divdiv>
-
                     <divh3
                       key={`title-${currentSlide}`}
                       className="text-4xl md:text-6xl font-bold mb-6"
                     >
                       {slides[currentSlide].title}
                     </divh3>
-
                     <divp
                       key={`desc-${currentSlide}`}
                       className="text-xl text-gray-200 mb-8 max-w-2xl"
                     >
                       {slides[currentSlide].description}
                     </divp>
-
                     {/* Features */}
                     <divdiv
                       key={`features-${currentSlide}`}
@@ -191,7 +162,6 @@ const UltimateContentCarousel2025 = () => {
                         </span>
                       ))}
                     </divdiv>
-
                     {/* Stats and CTA */}
                     <divdiv
                       key={`cta-${currentSlide}`}
@@ -205,7 +175,6 @@ const UltimateContentCarousel2025 = () => {
                           {slides[currentSlide].stats.label}
                         </div>
                       </div>
-                      
                       <a
                         href={slides[currentSlide].href}
                         className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 group shadow-lg"
@@ -235,4 +204,3 @@ const UltimateContentCarousel2025 = () => {
               <span>Free Resources & Guides</span>
             </div>
     </divsection>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

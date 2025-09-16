@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const QuantumComputingRevolution2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumComputingRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumComputingRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumComputingRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cpu, Atom, Shield, Target, Users, TrendingUp, Globe, Brain } from 'lucide-react';
-
 const QuantumComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
@@ -50,7 +31,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Quantum Capabilities Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-500/20">
@@ -65,7 +45,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
               <Atom className="w-8 h-8 text-white" />
@@ -78,7 +57,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/30 to-indigo-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-6">
               <Zap className="w-8 h-8 text-white" />
@@ -92,7 +70,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-500/20">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Quantum Applications</h2>
@@ -127,7 +104,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Performance Metrics</h2>
@@ -153,7 +129,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <Users className="w-8 h-8 text-purple-400" />
@@ -175,7 +150,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
@@ -201,7 +175,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 backdrop-blur-sm rounded-xl p-8 border border-green-500/20">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <Globe className="w-8 h-8 text-green-400" />
@@ -225,7 +198,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Vision */}
         <div className="text-center bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-500/20">
           <h2 className="text-4xl font-bold mb-6">The Quantum Future is Here</h2>
@@ -247,13 +219,10 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Explore AI Integration
             </Link>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumComputingRevolution2026;
 =======
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AIPoweredITAssetManagement: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIPoweredITAssetManagement | Zion Tech Group</title>
-        <meta name="description" content="AIPoweredITAssetManagement - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIPoweredITAssetManagement</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
 import { Link } from 'react-router-dom';
 import { 
   Monitor, 
@@ -50,7 +29,6 @@ import { Helmet } from 'react-helmet-async';
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 } from 'lucide-react';
-
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
@@ -64,7 +42,6 @@ const AIPoweredITAssetManagement = () => {
       title: "Real-time Monitoring",
 import { Link } from 'react-router-dom';
 import { Monitor, Shield, TrendingUp, Database, ArrowRight, CheckCircle, Star, BarChart3, Zap } from 'lucide-react';
-
 export default function AIPoweredITAssetManagement() {
   const features = [
     {
@@ -1484,15 +1461,9 @@ const AIPoweredITAssetManagement: React.FC = () => {
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
             >
               View Pricing
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default AIPoweredITAssetManagement;
 =======
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

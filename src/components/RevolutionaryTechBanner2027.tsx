@@ -12,7 +12,6 @@ import {
   TrendingUp,
   Globe
 } from 'lucide-react';
-
 const RevolutionaryTechBanner2027 = () => {
   const technologies = [
     {
@@ -34,13 +33,7 @@ const RevolutionaryTechBanner2027 = () => {
       impact: "500% cognitive enhancement"
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechBanner2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
@@ -49,7 +42,6 @@ const RevolutionaryTechBanner2027 = () => {
         <div className="absolute top-20 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 left-1/4 w-24 h-24 bg-pink-500/20 rounded-full blur-xl"></div>
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +75,6 @@ const RevolutionaryTechBanner2027 = () => {
             </span>
           </div>
         </motion.div>
-
         {/* Technology Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {technologies.map((tech, index) => (
@@ -109,7 +100,6 @@ const RevolutionaryTechBanner2027 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -134,7 +124,6 @@ const RevolutionaryTechBanner2027 = () => {
             <div className="text-gray-300 text-sm">Cost Reduction</div>
           </div>
         </motion.div>
-
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -162,9 +151,7 @@ const RevolutionaryTechBanner2027 = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechBanner2027;

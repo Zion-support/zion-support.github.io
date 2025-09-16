@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServicesLanding2027: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServicesLanding2027 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServicesLanding2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesLanding2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ComprehensiveServicesLanding2027;
-=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -149,7 +124,6 @@ import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeITInfrastructureServices2027';
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027';
-
 export default function ComprehensiveServicesLanding2027() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -489,7 +463,6 @@ function Dna({ className }: { className?: string }) {
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
   Zap as ZapIconDup,
   Shield as ShieldIconDup,
@@ -499,7 +472,6 @@ function Dna({ className }: { className?: string }) {
   Leaf as LeafIconDup
           <divdiv 
           </divdiv>
-
           {/* Quick Stats */}
           <divdiv 
           </divdiv>
@@ -521,4 +493,3 @@ function Dna({ className }: { className?: string }) {
               </divdiv>
           <divdiv 
           </divdiv>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

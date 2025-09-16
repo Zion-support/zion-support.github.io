@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const comprehensive-services-showcase-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">comprehensive-services-showcase-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default comprehensive-services-showcase-2025;
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { 
@@ -20,13 +6,11 @@ import {
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 } from 'lucide-react';
-
 // Import service data
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
 interface Service {
   id: string;
   name: string;
@@ -44,7 +28,6 @@ interface Service {
   badge?: string;
   icon?: React.ReactNode;
 }
-
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
     ...service,
@@ -67,7 +50,6 @@ const allServices: Service[] = [
     icon: <Atom className="w-6 h-6" />
   }))
 ];
-
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
@@ -75,7 +57,6 @@ const categories = [
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
 ];
-
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
@@ -83,7 +64,6 @@ const priceRanges = [
   { label: '$200 - $500/month', value: '200-500' },
   { label: 'Over $500/month', value: 'over-500' }
 ];
-
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' },
   { label: 'Highest Rated', value: 'rating' },
@@ -91,7 +71,6 @@ const sortOptions = [
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
 ];
-
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
@@ -465,4 +444,3 @@ export default function ComprehensiveServicesShowcase2025() {
                 View Pricing Plans
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

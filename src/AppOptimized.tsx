@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AppOptimized: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AppOptimized</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -21,7 +11,6 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -29,7 +18,6 @@ const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
-
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,7 +32,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -77,8 +64,6 @@ const AppOptimized: React.FC = () => {
         </QueryClientProvider>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AppOptimized;

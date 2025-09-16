@@ -1,14 +1,6 @@
 import React from 'react';
-
 const UltimateTechBanner2026: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentBanner, setCurrentBanner] = useState(0);
-
   const banners = [
     {
       title: "🧬 Advanced Biotech AI 2026",
@@ -32,14 +24,12 @@ const UltimateTechBanner2026: React.FC = () => {
       bgGradient: "from-cyan-600/20 to-purple-600/20"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 4000);
     return () => clearInterval(timer);
   }, [banners.length]);
-
   return (
     <div className="relative overflow-hidden rounded-2xl mb-12">
       <div 
@@ -78,7 +68,6 @@ const UltimateTechBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
-        
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
@@ -87,7 +76,6 @@ const UltimateTechBanner2026: React.FC = () => {
           <div className="absolute bottom-32 right-1/3 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-3000"></div>
         </div>
       </div>
-
       {/* Navigation Dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
@@ -100,9 +88,7 @@ const UltimateTechBanner2026: React.FC = () => {
           />
         ))}
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateTechBanner2026;

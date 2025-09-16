@@ -1,23 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const quantum-internet-security-platform: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quantum-internet-security-platform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default quantum-internet-security-platform;
-=======
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
   if (!service) return null;
@@ -53,4 +39,3 @@ export default function QuantumInternetSecurityPage() {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

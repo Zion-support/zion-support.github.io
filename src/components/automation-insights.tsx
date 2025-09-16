@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const automation-insights: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">automation-insights</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
@@ -156,8 +146,6 @@ export default function AutomationInsightsPage() {
                 >
                   View Case Studies
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default automation-insights;

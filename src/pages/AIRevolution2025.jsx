@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AIRevolution2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIRevolution2025 | Zion Tech Group</title>
-        <meta name="description" content="AIRevolution2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIRevolution2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -26,7 +8,6 @@ const AIRevolution2025= () => {
             Join the AI revolution transforming industries worldwide
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
             <h3 className="text-2xl font-bold mb-4 text-green-300">Machine Learning</h3>
@@ -39,7 +20,6 @@ const AIRevolution2025= () => {
               <li>• Reinforcement learning</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-emerald-400/20">
             <h3 className="text-2xl font-bold mb-4 text-emerald-300">Natural Language Processing</h3>
             <p className="text-gray-300 mb-4">
@@ -51,7 +31,6 @@ const AIRevolution2025= () => {
               <li>• Chatbot development</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 rounded-xl p-6 backdrop-blur-sm border border-teal-400/20">
             <h3 className="text-2xl font-bold mb-4 text-teal-300">Computer Vision</h3>
             <p className="text-gray-300 mb-4">
@@ -64,18 +43,15 @@ const AIRevolution2025= () => {
             </ul>
           </div>
         </div>
-        
         <div className="text-center mt-16">
           <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Join the Revolution
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default AIRevolution2025;
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -83,4 +59,3 @@ export default AIRevolution2025;
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">AIRevolution2025</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

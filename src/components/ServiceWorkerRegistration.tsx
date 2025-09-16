@@ -1,12 +1,6 @@
 import React from 'react';
-
 const ServiceWorkerRegistration: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ServiceWorkerRegistration</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {/* Update Available Notification */}
       {isUpdateAvailable && (
@@ -17,7 +11,6 @@ const ServiceWorkerRegistration: React.FC = () => {
             <div className="flex-shrink-0">
               <Download className="w-5 h-5 text-cyan-400" />
             </div>
-            
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Update Available
@@ -25,7 +18,6 @@ const ServiceWorkerRegistration: React.FC = () => {
               <p className="text-xs text-gray-400 mb-3">
                 A new version of Zion Tech Group is available with improved features and performance.
               </p>
-              
               <div className="flex gap-2">
                 <button
                   onClick={handleUpdate}
@@ -41,7 +33,6 @@ const ServiceWorkerRegistration: React.FC = () => {
                     'Update Now'
                   )}
                 </button>
-                
                 <button
                   onClick={handleDismiss}
                   className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-medium rounded transition-colors duration-200"
@@ -50,7 +41,6 @@ const ServiceWorkerRegistration: React.FC = () => {
                 </button>
               </div>
             </div>
-            
             <button
               onClick={handleDismiss}
               className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
@@ -60,7 +50,6 @@ const ServiceWorkerRegistration: React.FC = () => {
           </div>
         </div>
       )}
-
       {/* Update Installed Notification */}
       {isUpdateInstalled && (
         <div
@@ -70,7 +59,6 @@ const ServiceWorkerRegistration: React.FC = () => {
             <div className="flex-shrink-0">
               <CheckCircle className="w-5 h-5 text-green-400" />
             </div>
-            
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Update Installed
@@ -78,7 +66,6 @@ const ServiceWorkerRegistration: React.FC = () => {
               <p className="text-xs text-gray-400 mb-3">
                 The new version has been installed successfully. The page will reload automatically.
               </p>
-              
               <button
                 onClick={() => window.location.reload()}
                 className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white text-xs font-medium rounded transition-colors duration-200"
@@ -86,7 +73,6 @@ const ServiceWorkerRegistration: React.FC = () => {
                 Reload Now
               </button>
             </div>
-            
             <button
               onClick={handleDismiss}
               className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
@@ -96,7 +82,6 @@ const ServiceWorkerRegistration: React.FC = () => {
           </div>
         </div>
       )}
-
       {/* Error Notification */}
       {error && (
         <div
@@ -106,7 +91,6 @@ const ServiceWorkerRegistration: React.FC = () => {
             <div className="flex-shrink-0">
               <XCircle className="w-5 h-5 text-red-400" />
             </div>
-            
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Service Worker Error
@@ -114,7 +98,6 @@ const ServiceWorkerRegistration: React.FC = () => {
               <p className="text-xs text-red-300 mb-3">
                 {error}
               </p>
-              
               <button
                 onClick={() => setError(null)}
                 className="px-3 py-1.5 bg-red-700 hover:bg-red-600 text-white text-xs font-medium rounded transition-colors duration-200"
@@ -125,9 +108,7 @@ const ServiceWorkerRegistration: React.FC = () => {
           </div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default ServiceWorkerRegistration;

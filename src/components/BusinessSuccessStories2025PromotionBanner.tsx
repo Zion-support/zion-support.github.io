@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessSuccessStories2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -14,7 +8,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -28,7 +21,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-4 h-4 mr-2" />
               REAL SUCCESS STORIES
             </div>
-
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
@@ -38,7 +30,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                 Stories
               </span>
             </divh2>
-
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8"
@@ -46,7 +37,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
               Discover how businesses across industries have transformed their operations 
               and achieved remarkable results with our cutting-edge solutions.
             </divp>
-
             {/* Stats */}
             <div
               className="grid grid-cols-2 gap-4 mb-8"
@@ -58,7 +48,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Industries */}
             <div
               className="mb-8"
@@ -74,7 +63,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -96,7 +84,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Content - Testimonial Carousel */}
           <div
             className="relative"
@@ -112,7 +99,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
               </div>
-
               {/* Testimonial Content */}
               <div
                 key={currentTestimonial}
@@ -145,7 +131,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2 mb-4">
                 {testimonials.map((_index) => (
@@ -158,13 +143,11 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
                   />
                 ))}
               </div>
-
               {/* Quote Icon */}
               <div className="absolute top-4 right-4">
                 <Quote className="w-8 h-8 text-green-400/30" />
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
@@ -179,10 +162,8 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessSuccessStories2025PromotionBanner;
 </div></div></div></div></div>

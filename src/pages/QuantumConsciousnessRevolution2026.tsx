@@ -1,27 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumConsciousnessRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumConsciousnessRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumConsciousnessRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumConsciousnessRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <Helmet>
         <title>Quantum Consciousness Revolution 2026 - The Next Evolution</title>
         <meta name="description" content="Explore the groundbreaking fusion of quantum computing and artificial consciousness that's reshaping reality in 2026." />
         <meta name="keywords" content="quantum consciousness, AI consciousness, quantum computing, neural networks, consciousness transfer" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -34,7 +20,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
             and consciousness transfer capabilities that were once considered science fiction.
           </p>
         </div>
-
         {/* Core Concepts */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-purple-800 to-indigo-800 p-8 rounded-2xl shadow-2xl">
@@ -58,7 +43,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-800 to-blue-800 p-8 rounded-2xl shadow-2xl">
             <h2 className="text-3xl font-bold mb-6 text-cyan-400">Consciousness Transfer Technology</h2>
             <p className="text-gray-300 mb-6">
@@ -82,7 +66,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Revolutionary Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -95,7 +78,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
                 treatment planning, and even performing complex surgeries with human-level intuition.
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl shadow-2xl">
               <div className="text-5xl mb-4">🎓</div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Educational Revolution</h3>
@@ -104,7 +86,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
                 personalized education experiences that accelerate learning by 10x.
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-green-800 to-emerald-800 p-8 rounded-2xl shadow-2xl">
               <div className="text-5xl mb-4">🌍</div>
               <h3 className="text-2xl font-bold mb-4 text-green-400">Environmental Solutions</h3>
@@ -115,7 +96,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technical Specifications */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-12 rounded-3xl mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technical Specifications</h2>
@@ -156,7 +136,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Success Stories</h2>
@@ -170,7 +149,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
               </p>
               <div className="text-pink-400 font-bold">- Dr. Sarah Chen, Chief Medical Officer</div>
             </div>
-
             <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Tech Innovation Lab</h3>
               <p className="text-gray-300 mb-4">
@@ -182,7 +160,6 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-800 to-pink-800 p-12 rounded-3xl">
           <h2 className="text-4xl font-bold mb-6">Join the Consciousness Revolution</h2>
@@ -198,11 +175,9 @@ const QuantumConsciousnessRevolution2026: React.FC = () => {
               Schedule Demo
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumConsciousnessRevolution2026;

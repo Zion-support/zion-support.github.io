@@ -1,25 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const QuantumNeuralFusion2035: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumNeuralFusion2035 | Zion Tech Group</title>
-        <meta name="description" content="QuantumNeuralFusion2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumNeuralFusion2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { ArrowRight, Brain, Atom, Zap, Network, Cpu, Globe, Rocket, Shield, Lightbulb } from 'lucide-react';
-
 const QuantumNeuralFusion2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -44,7 +27,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
             <Badge className="bg-purple-500 text-white px-4 py-2">2035 Technology</Badge>
           </div>
         </div>
-
         {/* Core Technologies */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 border-cyan-500/30 backdrop-blur-sm">
@@ -81,7 +63,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </ul>
             </CardContent>
           </Card>
-
           <Card className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 border-blue-500/30 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center gap-3 mb-3">
@@ -116,7 +97,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </ul>
             </CardContent>
           </Card>
-
           <Card className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 border-indigo-500/30 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center gap-3 mb-3">
@@ -152,7 +132,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-
         {/* Revolutionary Capabilities */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <Card className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 border-purple-500/30 backdrop-blur-sm">
@@ -182,7 +161,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-
           <Card className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 border-green-500/30 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center gap-3 mb-3">
@@ -211,7 +189,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 rounded-2xl p-12 backdrop-blur-sm border border-cyan-500/30 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-8">
@@ -248,7 +225,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Impact */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Card className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 border-yellow-500/30 backdrop-blur-sm">
@@ -270,7 +246,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </ul>
             </CardContent>
           </Card>
-
           <Card className="bg-gradient-to-br from-red-800/50 to-pink-800/50 border-red-500/30 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center gap-3 mb-3">
@@ -290,7 +265,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </ul>
             </CardContent>
           </Card>
-
           <Card className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 border-teal-500/30 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center gap-3 mb-3">
@@ -311,7 +285,6 @@ const QuantumNeuralFusion2035: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-cyan-800/30 to-blue-800/30 rounded-2xl p-12 backdrop-blur-sm border border-cyan-500/30">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -330,11 +303,9 @@ const QuantumNeuralFusion2035: React.FC = () => {
               Learn More
             </Button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumNeuralFusion2035;

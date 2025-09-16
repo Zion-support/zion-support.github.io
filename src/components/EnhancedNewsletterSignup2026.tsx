@@ -21,31 +21,18 @@
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-pulse">🚀</span>
         </div>
-
-<<<<<<< HEAD
-const EnhancedNewsletterSignup2026: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedNewsletterSignup2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
   };
-
   if (isSubscribed) {
     return (
         <p className="text-xl opacity-90 mb-6">
@@ -54,7 +41,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
         </p>
     );
   }
-
   return (
           </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
@@ -76,7 +62,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   required
                 />
               </div>
-              
               <div className="space-y-4">
                 <label className="flex items-start space-x-3">
                   <input
@@ -89,7 +74,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                     the processing of my data for this purpose.
                   </span>
                 </label>
-                
                 <label className="flex items-start space-x-3">
                   <input
                     type="checkbox"
@@ -102,7 +86,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   </span>
                 </label>
               </div>
-              
               <button
                 type="submit"
                 disabled={isLoading}
@@ -123,7 +106,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
               </button>
             </form>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -151,7 +133,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h4 className="text-2xl font-bold mb-4 text-purple-400">What You'll Receive</h4>
               <ul className="space-y-3">
@@ -174,17 +155,13 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
               </ul>
             </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h4 className="text-2xl font-bold mb-6 text-center text-white">Get Started Today</h4>
-            
             <p className="text-sm text-gray-300 text-center mt-4">
               Join over 50,000+ innovators already part of our community
             </p>
           </div>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
         <div className="text-center">
           <p className="text-lg opacity-90 mb-4">
             Ready to experience the future of technology?

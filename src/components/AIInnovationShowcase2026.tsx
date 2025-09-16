@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIInnovationShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIInnovationShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -32,7 +26,6 @@ const AIInnovationShowcase2026: React.FC = () => {
           }}
         />
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -53,7 +46,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             creating unprecedented opportunities for innovation and growth.
           </p>
         </div>
-
         {/* Innovation Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -77,7 +69,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             );
           })}
         </div>
-
         {/* Detailed Innovation Display */}
           <div
             key={activeInnovation}
@@ -105,7 +96,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   {currentInnovation.description}
                 </p>
               </div>
-
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
@@ -117,7 +107,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Impact Metrics */}
               <div
                 className="grid grid-cols-3 gap-6 mb-8"
@@ -133,7 +122,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Applications */}
               <div
                 className="mb-8"
@@ -150,7 +138,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* CTA Buttons */}
               <div
                 className="flex flex-wrap gap-4"
@@ -165,7 +152,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Visual Representation */}
             <div
               className="relative"
@@ -179,7 +165,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   <p className="text-lg opacity-90 mb-6">
                     {currentInnovation.description}
                   </p>
-                  
                   {/* Interactive Elements */}
                   <div className="grid grid-cols-2 gap-4">
                     {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
@@ -193,7 +178,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               {/* Floating Elements */}
               <div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
@@ -207,7 +191,6 @@ const AIInnovationShowcase2026: React.FC = () => {
               >
                 <Star className="w-4 h-4 text-yellow-800" />
               </div>
-              
               <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                   scale: [1.21],
@@ -221,7 +204,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div
           className="mb-20"
@@ -262,7 +244,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Final CTA */}
         <div
           className="text-center"
@@ -288,10 +269,8 @@ const AIInnovationShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIInnovationShowcase2026;
 </div></div></div>

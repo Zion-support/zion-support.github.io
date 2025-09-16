@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const pricing: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">pricing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default pricing;
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -21,14 +7,12 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -326,4 +310,3 @@ export default function PricingPage() {
       <UltraFuturisticFooter2029 />
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

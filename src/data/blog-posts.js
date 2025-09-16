@@ -1,5 +1,4 @@
 // import { newContent2026 } from './newContent2026';
-
 export const blogPosts = [
   // ...newContent2026,
   {
@@ -2552,7 +2551,6 @@ export const blogPosts = [
     slug: "real-time-evals-ship-guardrails-fast"
   }
 ];
-
 // Fresh promoted content (2025-09-16)
 export const newPromoted2025 = [
   {
@@ -2607,7 +2605,6 @@ export const newPromoted2025 = [
     slug: "ai-2026-evidence-driven-ai-governance"
   }
 ];
-
 // Latest additions (2025-09-16)
 const latest2025 = [
   {
@@ -2708,25 +2705,20 @@ const latest2025 = [
     slug: "ai-2026-operational-maturity-models-for-agentic-systems"
   }
 ];
-
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);
 };
-
 export const getBlogPostsByCategory = (category) => {
   return blogPosts.filter(post => post.category === category);
 };
-
 export const getFeaturedBlogPosts = () => {
   return BLOG_POSTS.filter(post => post.featured);
 };
-
 export const getRecentBlogPosts = (limit = 3) => {
   return [...BLOG_POSTS]
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit);
 };
-
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase();
   return blogPosts.filter(post =>
@@ -2736,7 +2728,6 @@ export const searchBlogPosts = (query) => {
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
 };
-
 export const getBlogCategories = () => {
   const categories = [...new Set(blogPosts.map(post => post.category))];
   return categories.map(category => ({
@@ -2744,7 +2735,6 @@ export const getBlogCategories = () => {
     count: blogPosts.filter(post => post.category === category).length
   }));
 };
-
 export const getBlogTags = () => {
   const allTags = blogPosts.flatMap(post => post.tags);
   const uniqueTags = [...new Set(allTags)];
@@ -2753,11 +2743,6 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-f34e
 =======
 // Additional content for enhanced engagement
 export const additionalContent2026 = [
@@ -3335,9 +3320,7 @@ export const additionalContent2026 = [
     slug: "ai-2026-incident-lifecycle-playbook"
   }
 ];
-
 // Additional fresh content (2029 preview)
->>>>>>> bb6d824a5e7e83351983fdb432aa9f870d0b1dba
 export const extraContent2029 = [
   {
     id: 9901,
@@ -3528,14 +3511,12 @@ export const extraContent2029 = [
     slug: "ai-2026-evidence-hub-architecture"
   }
 ];
-
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...newBlogPosts];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-
 // Add new blog posts to the existing array
 const newBlogPosts = [
   {
@@ -3614,6 +3595,4 @@ const newBlogPosts = [
     slug: "metaverse-business-operations-2026-virtual-reality-enterprise"
   }
 ];
-
->>>>>>> 7a46bf6786a558df1ac43d8a02ad5dd9fe984f92
 // Helpers for UI components

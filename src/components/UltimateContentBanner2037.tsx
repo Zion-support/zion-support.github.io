@@ -9,15 +9,6 @@
       icon: '🧠'
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 10000);
-
-<<<<<<< HEAD
-const UltimateContentBanner2037: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2037</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -30,7 +21,6 @@ const UltimateContentBanner2037: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world in 2037
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -47,7 +37,6 @@ const UltimateContentBanner2037: React.FC = () => {
               Explore AI Revolution →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
@@ -63,7 +52,6 @@ const UltimateContentBanner2037: React.FC = () => {
               View Showcase →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Technology</h3>
@@ -81,7 +69,6 @@ const UltimateContentBanner2037: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -91,7 +78,6 @@ const UltimateContentBanner2037: React.FC = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/15 to-blue-600/15 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-        
         {/* Close Button */}
         <button
           onClick={handleClose}
@@ -101,8 +87,6 @@ const UltimateContentBanner2037: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
         {/* Banner Content */}
         <div className="relative z-10">
           <div className="flex items-center justify-between">
@@ -113,19 +97,15 @@ const UltimateContentBanner2037: React.FC = () => {
                   🌟 ULTIMATE REVOLUTION • JANUARY 2037
                 </div>
               </div>
-              
               <h2 className="text-3xl font-bold text-white mb-3">
                 {currentBannerData.title}
               </h2>
-              
               <p className="text-xl text-purple-200 mb-3">
                 {currentBannerData.subtitle}
               </p>
-              
               <p className="text-purple-300 mb-6 max-w-3xl text-lg">
                 {currentBannerData.description}
               </p>
-              
               <a
                 href={currentBannerData.link}
                 className={`inline-block bg-gradient-to-r ${currentBannerData.color} text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl hover:scale-105`}
@@ -133,7 +113,6 @@ const UltimateContentBanner2037: React.FC = () => {
                 Experience Ultimate Revolution →
               </a>
             </div>
-
             {/* Banner Indicators */}
             <div className="flex flex-col space-y-3 ml-12">
               {banners.map((_, index) => (
@@ -150,7 +129,6 @@ const UltimateContentBanner2037: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-6 left-1/4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
         <div className="absolute bottom-6 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-ping animation-delay-1000"></div>

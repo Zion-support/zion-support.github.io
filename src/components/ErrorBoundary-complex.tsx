@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ErrorBoundary-complex: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,30 +7,22 @@ const ErrorBoundary-complex: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default ErrorBoundary-complex;
-=======
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class ErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: truerror };
   }
-
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:'errorInfo);
   }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -52,42 +43,34 @@ class ErrorBoundary extends Component<PropsState> {
       error,
       errorInfo
     });
-
     // Log error to external service (e.g.Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error{ extra: errorInfo });
     }
   }
-
   handleReload = () => {
     window.location.reload();
   };
-
   handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-24 h-24 rounded-full bg-red-500/20 mx-auto mb-8 flex items-center justify-center">
               <AlertTriangle className="w-12 h-12 text-red-400" />
             </div>
-            
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Oops! Something went wrong
             </h1>
-            
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
               'We', 're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">
                 <summary className="text-white/80 font-medium cursor-pointer mb-4">
@@ -111,7 +94,6 @@ class ErrorBoundary extends Component<PropsState> {
                 </div>
               </details>
             )}
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleReload}
@@ -120,7 +102,6 @@ class ErrorBoundary extends Component<PropsState> {
                 <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
-              
               <button
                 onClick={this.handleGoHome}
                 className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
@@ -129,7 +110,6 @@ class ErrorBoundary extends Component<PropsState> {
                 Go Home
               </button>
             </div>
-
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-white/50 text-sm">
                 If this problem persistsplease contact our support team at{' '}
@@ -145,10 +125,7 @@ class ErrorBoundary extends Component<PropsState> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

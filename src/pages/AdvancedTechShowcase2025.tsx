@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedTechShowcase2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedTechShowcase2025 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedTechShowcase2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedTechShowcase2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: 1,
@@ -88,7 +65,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
       applications: ["Financial forecasting", "Climate prediction", "Supply chain optimization", "Risk assessment"]
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -96,7 +72,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
         <meta name="description" content="Discover the most advanced technologies of 2025: Neural Quantum Processing, Holographic Data Storage, Bio-Integrated Computing, and Temporal Computing Systems." />
         <link rel="canonical" href="https://ziontechgroup.com/pages/AdvancedTechShowcase2025" />
       </Helmet>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
@@ -125,7 +100,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Technology Tabs */}
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -144,7 +118,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Technology Details */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -163,7 +136,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                   <p className="text-lg mb-6 text-gray-300">
                     {technologies[activeTab].description}
                   </p>
-                  
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-3 text-cyan-400">Key Features</h3>
                     <ul className="space-y-2">
@@ -176,7 +148,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Applications</h3>
                   <div className="grid grid-cols-2 gap-3">
@@ -189,7 +160,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="mt-6 p-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-lg">
                     <h4 className="font-semibold mb-2">Ready to Transform Your Business?</h4>
                     <p className="text-sm text-gray-300 mb-3">
@@ -204,7 +174,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <div className="container mx-auto px-6 py-12 text-center">
           <motion.div
@@ -231,8 +200,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
         </div>
       </motion.div>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AdvancedTechShowcase2025;

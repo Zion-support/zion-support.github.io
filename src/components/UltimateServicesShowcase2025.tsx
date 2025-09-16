@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const UltimateServicesShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateServicesShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
-
 const services = [
   {
     id: 1,
@@ -109,9 +99,7 @@ const services = [
     category: "Consulting"
   }
 ];
-
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
-
 export default function UltimateServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = React.useState("All");
   const filteredServices = selectedCategory === "All" 
@@ -238,8 +226,6 @@ export default function UltimateServicesShowcase2025() {
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default UltimateServicesShowcase2025;

@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryContentBanner2034: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2034</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2034;
 =======
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -51,4 +39,3 @@ export default RevolutionaryContentBanner2034;
           <a href="/ultimate-showcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30 hover:scale-105">
             🚀 Discover More →
           </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

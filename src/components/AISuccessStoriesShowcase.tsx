@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AISuccessStoriesShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AISuccessStoriesShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -19,7 +12,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
           </div>
-          
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -27,7 +19,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             Real Results from
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> AI Implementation</span>
           </divh2>
-          
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -35,7 +26,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             Discover how leading companies achieved remarkable results with our AI solutions. Real storiesreal impactreal success.
           </divp>
         </div>
-
         {/* Metrics Overview */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +44,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             );
           })}
         </div>
-
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {successStories.map((storyindex) => {
@@ -75,7 +64,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             );
           })}
         </div>
-
         {/* Active Story Display */}
           <div
             key={activeStory}
@@ -93,18 +81,15 @@ const AISuccessStoriesShowcase: React.FC = () => {
                     <p className="text-gray-600">{currentStory.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
                     <p className="text-gray-600">{currentStory.challenge}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
                     <p className="text-gray-600">{currentStory.solution}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Results:</h4>
                     <div className="grid grid-cols-2 gap-4">
@@ -128,7 +113,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
                 <Quote className="w-8 h-8 text-blue-500 mb-4" />
@@ -143,7 +127,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -176,8 +159,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AISuccessStoriesShowcase;

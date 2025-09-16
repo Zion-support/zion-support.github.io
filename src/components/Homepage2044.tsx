@@ -1,13 +1,6 @@
 import React from 'react';
-
 const Homepage2044: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2044</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
@@ -15,21 +8,18 @@ const Homepage2044: React.FC = () => {
         <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ziontechgroup.com/" />
         <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
         <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
         <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -54,13 +44,11 @@ const Homepage2044: React.FC = () => {
             })
           }}
         />
-        
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
       </Head>
-
       <Layout>
         {/* Main Content */}
         <main className="relative z-10" role="main" aria-labelledby="hero-heading">
@@ -75,7 +63,6 @@ const Homepage2044: React.FC = () => {
               <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]"></div>
               <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000 shadow-[0_0_100px_rgba(168,85,247,0.5)]"></div>
               <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500 shadow-[0_0_100px_rgba(16,185,129,0.5)]"></div>
-              
               {/* Animated particles with neon trails */}
               <div className="absolute inset-0">
                 {[...Array(20)].map((_, i) => (
@@ -99,7 +86,6 @@ const Homepage2044: React.FC = () => {
                   />
                 ))}
               </div>
-
               {/* Grid pattern with neon glow */}
               <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -107,7 +93,6 @@ const Homepage2044: React.FC = () => {
                   backgroundSize: '60px 60px'
                 }}></div>
               </div>
-
               {/* Floating geometric shapes */}
               <div
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
@@ -131,7 +116,6 @@ const Homepage2044: React.FC = () => {
                 }}
               />
             </div>
-
             {/* Hero Content */}
             <div className="text-center max-w-7xl mx-auto relative z-10">
               <div
@@ -141,7 +125,6 @@ const Homepage2044: React.FC = () => {
                   🚀 Revolutionary 2044 Technology
                 </span>
               </div>
-
               <divh1
                 id="hero-heading"
                 className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
@@ -150,13 +133,11 @@ const Homepage2044: React.FC = () => {
                   Zion Tech Group
                 </span>
               </divh1>
-              
               <divp
                 className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
               >
                 Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
               </divp>
-
               <div
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
               >
@@ -182,7 +163,6 @@ const Homepage2044: React.FC = () => {
                   </span>
                 </button>
               </div>
-
               {/* Featured Service Showcase */}
               <div
                 className="max-w-6xl mx-auto"
@@ -195,7 +175,6 @@ const Homepage2044: React.FC = () => {
                     Experience the future of technology with our cutting-edge solutions
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service, index) => (
                     <div
@@ -215,7 +194,6 @@ const Homepage2044: React.FC = () => {
                     >
                       <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        
                         <div className="relative z-10">
                           <div className="flex items-center justify-between mb-6">
                             <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]">
@@ -225,15 +203,12 @@ const Homepage2044: React.FC = () => {
                               {service.type}
                             </span>
                           </div>
-                          
                           <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                             {service.name}
                           </h3>
-                          
                           <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             {service.description.substring(0, 120)}...
                           </p>
-                          
                           <div className="flex items-center justify-between">
                             <span className="text-2xl font-bold text-cyan-400">
                               {service.pricing.starter}
@@ -248,7 +223,6 @@ const Homepage2044: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-24 px-4 relative">
             <div className="max-w-7xl mx-auto">
@@ -264,7 +238,6 @@ const Homepage2044: React.FC = () => {
                   Experience the future of technology with our cutting-edge solutions that transform businesses and drive innovation
                 </p>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI with emotional intelligence and consciousness", color: "from-purple-500 to-pink-500" },
@@ -289,16 +262,13 @@ const Homepage2044: React.FC = () => {
                           {service.type}
                         </span>
                       </div>
-                      
                       <div className="relative z-10">
                         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mb-6">
                           <feature.icon className="w-8 h-8 text-white" />
                         </div>
-                        
                         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        
                         <p className="text-gray-400 text-sm leading-relaxed">
                           {feature.description}
                         </p>
@@ -309,7 +279,6 @@ const Homepage2044: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="py-24 px-4 relative">
             <div className="max-w-7xl mx-auto">
@@ -339,9 +308,7 @@ const Homepage2044: React.FC = () => {
         </main>
       </Layout>
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default Homepage2044;
 </div></div></div></div></div>

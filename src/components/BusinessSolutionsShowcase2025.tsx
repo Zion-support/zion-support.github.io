@@ -1,13 +1,6 @@
 import React from 'react';
-
 const BusinessSolutionsShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessSolutionsShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
     >
@@ -27,7 +20,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             across every aspect of your organization.
           </p>
         </div>
-
         {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
@@ -49,7 +41,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Solutions Grid */}
           <div
             key={activeCategory}
@@ -72,7 +63,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     {solution.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
@@ -85,7 +75,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
@@ -97,7 +86,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     <div className="text-xs text-gray-500">Time to Value</div>
                   </div>
                 </div>
-
                 {/* Action Button */}
                 <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
                   <span>Learn More</span>
@@ -107,7 +95,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Success Stories */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
@@ -116,7 +103,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                 Join thousands of businesses that have transformed their operations
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">10,000+</div>
@@ -133,7 +119,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -156,8 +141,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
         </div>
       </div>
     </divsection>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default BusinessSolutionsShowcase2025;

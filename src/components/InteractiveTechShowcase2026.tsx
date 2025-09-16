@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveTechShowcase2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const demos = [
     {
       id: 'ai-consciousness',
@@ -40,14 +31,11 @@ import {
   Pause,
   RotateCcw
 } from 'lucide-react';
-
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
-
   const techDemos = [
-
   const showcases = [
     {
       id: 'ai-systems',
@@ -68,7 +56,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       icon: '🧬',
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
@@ -114,17 +101,14 @@ const InteractiveTechShowcase2026: React.FC = () => {
       link: '/pages/NextGenTechRevolution2026'
     }
   ];
-
   const startDemo = () => {
     setIsRunning(true);
     setTimeout(() => setIsRunning(false), 3000);
   };
-
   return (
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </motion.div>
-
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
             Experience the Future
           </h2>
@@ -150,7 +134,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Demo Visualization */}
           <motion.div 
@@ -177,7 +160,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
               {/* Progress Bar */}
               <div className="w-full bg-gray-700 rounded-full h-2 mb-6">
                 <motion.div 
@@ -188,7 +170,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </div>
             </div>
           ))}
-
           {/* Demo Display */}
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30">
             <AnimatePresence mode="wait">
@@ -210,7 +191,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p>
                 </div>
-
                 {/* Demo Features */}
                 <div className="space-y-4 mb-8">
                   <h4 className="text-xl font-bold text-white mb-4">Features:</h4>
@@ -227,11 +207,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 {/* Interactive Demo Area */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
                   <h4 className="text-xl font-bold text-white mb-4">Live Demo</h4>
-                  
                   {activeDemo === 'ai-consciousness' && (
                     <div className="space-y-4">
                       <div className="bg-white/20 rounded-lg p-4">
@@ -255,7 +233,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                       </div>
                     </div>
                   )}
-
                   {activeDemo === 'quantum-computing' && (
                     <div className="space-y-4">
                       <div className="text-center">
@@ -286,7 +263,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                       </motion.button>
                     </div>
                   )}
-
                   {activeDemo === 'neural-interfaces' && (
                     <div className="space-y-4">
                       <div className="text-center">
@@ -312,7 +288,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                       </motion.button>
                     </div>
                   )}
-
                   {activeDemo === 'synthetic-reality' && (
                     <div className="space-y-4">
                       <div className="text-center">
@@ -335,7 +310,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     </div>
                   )}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex space-x-4">
                   <motion.a
@@ -372,7 +346,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       bgColor: 'from-orange-600/30 to-red-600/30',
     },
   ];
-
             {/* Technology Details */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
@@ -384,7 +357,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   <p className="text-gray-300">{currentTech.description}</p>
                 </div>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
                   <h5 className="font-semibold text-sm text-gray-400 mb-2">Features</h5>
@@ -403,7 +375,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   <div className="text-sm text-gray-400">Starting price</div>
                 </div>
               </div>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -415,7 +386,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -436,7 +406,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
           </motion.div>
         </div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-16"
@@ -461,9 +430,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechShowcase2026;

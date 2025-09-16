@@ -1,12 +1,6 @@
 import React from 'react';
-
 const PromotionalBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">PromotionalBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="relative overflow-hidden"
@@ -24,7 +18,6 @@ const PromotionalBanner: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-
         {/* Banner Content */}
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
@@ -41,7 +34,6 @@ const PromotionalBanner: React.FC = () => {
                 </p>
               </div>
             </div>
-            
             <div className="flex items-center space-x-4">
               <a
                 href={banners[currentBanner].link}
@@ -49,7 +41,6 @@ const PromotionalBanner: React.FC = () => {
               >
                 {banners[currentBanner].cta}
               </a>
-              
               {/* Banner Indicators */}
               <div className="flex space-x-2">
                 {banners.map((_, index) => (
@@ -65,7 +56,6 @@ const PromotionalBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
@@ -73,9 +63,7 @@ const PromotionalBanner: React.FC = () => {
           <div className="absolute bottom-0 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default PromotionalBanner;

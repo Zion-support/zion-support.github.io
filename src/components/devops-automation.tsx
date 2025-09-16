@@ -1,22 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const devops-automation: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">devops-automation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default devops-automation;
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-
 export default function DevOpsAutomationPage() {
   const features = [
     {
@@ -385,4 +371,3 @@ export default function DevOpsAutomationPage() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,17 +1,6 @@
 import React from 'react';
-
 const site-health: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">site-health</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default site-health;
-=======
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Site Health — A11y, Performance, Links</title>
@@ -74,4 +63,3 @@ export default site-health;
               <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Pipelines</a>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

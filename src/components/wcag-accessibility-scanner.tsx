@@ -1,23 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const wcag-accessibility-scanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">wcag-accessibility-scanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default wcag-accessibility-scanner;
-=======
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
@@ -52,4 +38,3 @@ export default function WCAGScannerPage() {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

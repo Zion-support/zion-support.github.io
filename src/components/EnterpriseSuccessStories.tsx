@@ -1,12 +1,6 @@
 import React from 'react';
-
 const EnterpriseSuccessStories: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnterpriseSuccessStories</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -27,7 +21,6 @@ const EnterpriseSuccessStories: React.FC = () => {
             See how leading enterprises have transformed their operations and achieved unprecedented growth with our AI solutions.
           </p>
         </div>
-
         {/* Key Metrics */}
         <div
           className="grid md:grid-cols-4 gap-6 mb-16"
@@ -46,7 +39,6 @@ const EnterpriseSuccessStories: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Story Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -65,7 +57,6 @@ const EnterpriseSuccessStories: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Active Story Display */}
         <div
           key={activeStory}
@@ -88,7 +79,6 @@ const EnterpriseSuccessStories: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Story Content */}
           <div className="p-8">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -96,11 +86,9 @@ const EnterpriseSuccessStories: React.FC = () => {
               <div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Challenge</h4>
                 <p className="text-gray-600 mb-6">{successStories[activeStory].challenge}</p>
-                
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Solution</h4>
                 <p className="text-gray-600">{successStories[activeStory].solution}</p>
               </div>
-
               {/* Results */}
               <div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Results</h4>
@@ -124,7 +112,6 @@ const EnterpriseSuccessStories: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Quote */}
             <div className="bg-gray-50 rounded-2xl p-6">
               <Quote className="w-8 h-8 text-gray-400 mb-4" />
@@ -135,7 +122,6 @@ const EnterpriseSuccessStories: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Benefits Section */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
@@ -152,7 +138,6 @@ const EnterpriseSuccessStories: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -176,9 +161,7 @@ const EnterpriseSuccessStories: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnterpriseSuccessStories;

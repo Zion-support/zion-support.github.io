@@ -1,12 +1,6 @@
 import React from 'react';
-
 const EnhancedPerformanceMonitor2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedPerformanceMonitor2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -18,7 +12,6 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
             <p className="text-sm text-gray-400">Real-time system metrics and analytics</p>
           </div>
         </div>
-        
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Clock className="w-4 h-4" />
@@ -36,7 +29,6 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
           </button>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
           {metrics.map((metricindex) => (
@@ -54,7 +46,6 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
                   {getTrendIcon(metric.trend)}
                 </div>
               </div>
-              
               <div className="mb-3">
                 <div className="flex items-baseline gap-1">
                   <span className="text-2xl font-bold text-white">
@@ -66,7 +57,6 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
                   {metric.status.charAt(0).toUpperCase() + metric.status.slice(1)}
                 </div>
               </div>
-              
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div
                   className={`h-2 rounded-full bg-gradient-to-r ${metric.color}`}
@@ -76,7 +66,6 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* System Status */}
       <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
         <div className="flex items-center justify-between">
@@ -90,9 +79,7 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnhancedPerformanceMonitor2026;

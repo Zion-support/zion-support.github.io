@@ -1,14 +1,6 @@
 import React from 'react';
-
 const RevolutionaryContentCarousel2037: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2037</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const slides = [
     {
       id: 1,
@@ -51,14 +43,12 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
       link: "/pages/UltimateTechBreakthrough2037"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -72,7 +62,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
             Discover the most advanced technologies that will reshape humanity's future
           </p>
         </div>
-        
         {/* Carousel Container */}
         <div className="relative overflow-hidden rounded-xl">
           <div 
@@ -88,7 +77,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
                       {slide.description}
                     </p>
                   </div>
-                  
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     {slide.features.map((feature, index) => (
                       <div key={index} className="bg-gradient-to-r from-white/20 to-white/10 rounded-lg p-4 text-center">
@@ -97,7 +85,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="text-center">
                     <a 
                       href={slide.link}
@@ -111,7 +98,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-2 mt-8">
           {slides.map((_, index) => (
@@ -126,7 +112,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Navigation Arrows */}
         <button
           onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
@@ -145,10 +130,8 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
           </svg>
         </button>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentCarousel2037;
 </p></p>

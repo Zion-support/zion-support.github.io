@@ -1,22 +1,14 @@
 import React from 'react';
-
 const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -29,7 +21,6 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Revolutionary Technology 2025</span>
             </div>
-
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -39,14 +30,12 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                 Future of Technology
               </span>
             </divh1>
-
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
             </divp>
-
             {/* Rotating Features */}
             <div
               className="mb-8"
@@ -62,7 +51,6 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -77,7 +65,6 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Right Content - Stats & Visual */}
           <div
             className="relative"
@@ -95,7 +82,6 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
@@ -108,18 +94,15 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Floating Elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-400/30 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-pink-400/30 rounded-full animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 -right-6 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-500"></div>
             </div>
-
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl blur-3xl -z-10"></div>
           </div>
         </div>
-
         {/* Bottom Stats Bar */}
         <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -143,10 +126,8 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2025PromotionBanner;
 </div></div>

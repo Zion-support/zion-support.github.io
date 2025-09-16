@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentPromotionalBanner2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentPromotionalBanner2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -42,7 +36,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
           ></div>
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <div
@@ -59,7 +52,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             quantum mechanics, and synthetic reality converge to create the impossible.
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative max-w-8xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
@@ -80,7 +72,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                         </div>
                       </div>
                       <p className="text-2xl opacity-90 mb-8 leading-relaxed">{ultimateContent[currentSlide].description}</p>
-                      
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {ultimateContent[currentSlide].features.map((feature, index) => (
                           <div
@@ -91,7 +82,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                      
                       <div className="flex gap-6">
                         <a
                           href={ultimateContent[currentSlide].link}
@@ -104,7 +94,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                         </button>
                       </div>
                     </div>
-                    
                     <div className="relative">
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-10">
                         <h4 className="text-3xl font-bold mb-6">Why This Matters</h4>
@@ -137,7 +126,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Controls */}
           <button
             onClick={prevSlide}
@@ -147,7 +135,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
@@ -156,7 +143,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Play/Pause Button */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -173,7 +159,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             )}
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-4 mt-12">
           {ultimateContent.map((_, index) => (
@@ -186,7 +171,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-20">
           <h3 className="text-4xl font-bold text-center mb-12">Quick Access to All Ultimate Content</h3>
@@ -216,7 +200,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,10 +225,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentPromotionalBanner2027;
 </p></p></p></p>

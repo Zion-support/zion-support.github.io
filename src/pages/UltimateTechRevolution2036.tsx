@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const UltimateTechRevolution2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -8,15 +7,6 @@ const UltimateTechRevolution2036: React.FC = () => {
         <title>UltimateTechRevolution2036 | Zion Tech Group</title>
         <meta name="description" content="UltimateTechRevolution2036 - Revolutionary technology solutions" />
       </Helmet>
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateTechRevolution2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -43,7 +33,6 @@ const UltimateTechRevolution2036: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <motion.div
@@ -68,7 +57,6 @@ const UltimateTechRevolution2036: React.FC = () => {
               Explore Reality →
             </a>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,7 +79,6 @@ const UltimateTechRevolution2036: React.FC = () => {
               Discover Quantum →
             </a>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +102,6 @@ const UltimateTechRevolution2036: React.FC = () => {
             </a>
           </motion.div>
         </div>
-
         {/* Advanced Technologies */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔬 Advanced Technologies 2036</h2>
@@ -135,7 +121,6 @@ const UltimateTechRevolution2036: React.FC = () => {
                 Explore Dimensions →
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -151,7 +136,6 @@ const UltimateTechRevolution2036: React.FC = () => {
                 Explore Energy →
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -167,7 +151,6 @@ const UltimateTechRevolution2036: React.FC = () => {
                 Explore Time →
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -185,7 +168,6 @@ const UltimateTechRevolution2036: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Revolution Impact Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-3xl p-16 mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">📊 Revolution Impact 2036</h2>
@@ -212,7 +194,6 @@ const UltimateTechRevolution2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Predictions */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2036</h2>
@@ -236,7 +217,6 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Universal physics control</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -257,7 +237,6 @@ const UltimateTechRevolution2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
@@ -279,11 +258,8 @@ const UltimateTechRevolution2036: React.FC = () => {
           </div>
         </motion.div>
       </main>
-      
       <Footer />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateTechRevolution2036;

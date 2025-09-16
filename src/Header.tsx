@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const Header: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Header</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import NotificationSystem from './components/NotificationSystem';
 import NewContentNavigation2026 from './components/NewContentNavigation2026';
-
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -27,7 +17,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -38,7 +27,6 @@ const Header: React.FC = () => {
               </span>
             </a>
           </div>
-
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -71,7 +59,6 @@ const Header: React.FC = () => {
             {/* New Content Navigation */}
             <NewContentNavigation2026 />
           </nav>
-
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             <NotificationSystem />
@@ -82,8 +69,6 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default Header;

@@ -1,22 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const TechnologyShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>TechnologyShowcase2025 | Zion Tech Group</title>
-        <meta name="description" content="TechnologyShowcase2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">TechnologyShowcase2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
@@ -44,7 +29,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -63,7 +47,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Tabs */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -78,7 +61,6 @@ const TechnologyShowcase2025: React.FC = () => {
               Dive deep into the technologies that are defining the future of business and society.
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 rounded-lg p-2">
@@ -98,7 +80,6 @@ const TechnologyShowcase2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           <div
             key={activeTab}
@@ -113,7 +94,6 @@ const TechnologyShowcase2025: React.FC = () => {
                 {technologies[activeTab as keyof typeof technologies].description}
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
                 <div
@@ -147,7 +127,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Interactive Demos Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
@@ -162,7 +141,6 @@ const TechnologyShowcase2025: React.FC = () => {
               Experience our technologies in action through interactive demonstrations and real-world applications.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
               <div
@@ -195,7 +173,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Innovation Timeline */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -210,10 +187,8 @@ const TechnologyShowcase2025: React.FC = () => {
               Track the evolution of breakthrough technologies and their impact on society.
             </p>
           </div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500"></div>
-            
             {[
               { year: "2024", title: "AI Foundation", description: "Large language models achieve human-level performance" },
               { year: "2025", title: "Quantum Breakthrough", description: "First practical quantum computers enter commercial use" },
@@ -242,7 +217,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -266,9 +240,7 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default TechnologyShowcase2025;

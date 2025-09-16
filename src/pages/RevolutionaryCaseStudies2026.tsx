@@ -1,25 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const RevolutionaryCaseStudies2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryCaseStudies2026 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryCaseStudies2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryCaseStudies2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Zap, Shield, Brain } from 'lucide-react';
-
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
     {
@@ -75,7 +58,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -83,7 +65,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
         <meta name="description" content="Explore groundbreaking case studies showcasing how our revolutionary AI, quantum computing, and cybersecurity solutions transformed businesses across industries." />
         <meta name="keywords" content="AI case studies, quantum computing success, cybersecurity solutions, business transformation, Zion Tech Group" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <motion.div 
           className="text-center mb-16"
@@ -98,7 +79,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
             Discover how our cutting-edge AI, quantum computing, and cybersecurity solutions are transforming businesses across multiple dimensions and industries.
           </p>
         </motion.div>
-
         <div className="space-y-12">
           {caseStudies.map((study, index) => (
             <motion.div
@@ -115,19 +95,16 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-2">{study.company}</h3>
                   <p className="text-xl text-cyan-400 font-semibold mb-4">{study.industry}</p>
-                  
                   <div className="bg-white/5 rounded-xl p-4">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300">{study.challenge}</p>
                   </div>
                 </div>
-
                 <div className="lg:w-2/3">
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300 text-lg">{study.solution}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -144,7 +121,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         <motion.div 
           className="text-center mt-20"
           initial={{ opacity: 0, y: 20 }}
@@ -170,10 +146,8 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
             </Link>
           </div>
         </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default RevolutionaryCaseStudies2026;

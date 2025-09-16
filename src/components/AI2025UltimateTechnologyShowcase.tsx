@@ -1,19 +1,12 @@
 import React from 'react';
-
 const AI2025UltimateTechnologyShowcase: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025UltimateTechnologyShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -43,7 +36,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
             </span>
           </div>
         </div>
-
         {/* Technology Tabs */}
         <div
           className="mb-12"
@@ -68,7 +60,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Active Technology Display */}
         <div
           key={activeTab}
@@ -85,7 +76,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
                   <p className="text-gray-300">{currentTech.description}</p>
                 </div>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/10 rounded-xl p-4 text-center">
                   <div className="text-3xl font-bold text-white mb-2">{currentTech.stats.value}</div>
@@ -96,7 +86,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
                   <div className="text-gray-400 text-sm">Launch Year</div>
                 </div>
               </div>
-
               <a
                 href={currentTech.link}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -105,7 +94,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-
             <div>
               <h4 className="text-xl font-semibold text-white mb-6">Key Features</h4>
               <div className="grid grid-cols-1 gap-3">
@@ -119,7 +107,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div
           className="mb-16"
@@ -139,7 +126,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
@@ -166,9 +152,7 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AI2025UltimateTechnologyShowcase;

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const InteractiveCaseStudiesShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveCaseStudiesShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -29,7 +23,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
             See the measurable impact on their business.
           </p>
         </div>
-
         {/* Industry Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +48,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Case Study Details */}
@@ -86,7 +78,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                 </div>
               )}
             </div>
-
             {/* Challenge & Solution */}
             <div className="space-y-6">
               <div>
@@ -98,7 +89,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                   {currentStudy?.challenge}
                 </p>
               </div>
-
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                   <Zap className="w-5 h-5 mr-2 text-blue-500" />
@@ -109,7 +99,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Results Grid */}
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(currentStudy?.results || {}).map(([keyvalue]) => (
@@ -123,7 +112,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Technologies */}
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -140,7 +128,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Project Details */}
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
@@ -153,7 +140,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Visual Content */}
           <div
             key={`visual-${currentStudy?.id}`}
@@ -178,7 +164,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Testimonial */}
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
               <Quote className="w-8 h-8 text-blue-500 mb-4" />
@@ -203,7 +188,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -216,7 +200,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
           >
             <ArrowRight className="w-5 h-5 text-gray-600 rotate-180" />
           </button>
-
           <div className="flex space-x-2">
             {filteredStudies.map((_index) => (
               <button
@@ -228,7 +211,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
               />
             ))}
           </div>
-
           <button
             onClick={() => setActiveStudy(Math.min(filteredStudies.length - 1activeStudy + 1))}
             disabled={activeStudy === filteredStudies.length - 1}
@@ -237,7 +219,6 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
             <ArrowRight className="w-5 h-5 text-gray-600" />
           </button>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -263,9 +244,7 @@ const InteractiveCaseStudiesShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveCaseStudiesShowcase2025;

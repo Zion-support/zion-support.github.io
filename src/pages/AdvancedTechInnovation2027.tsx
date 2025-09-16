@@ -1,45 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';        </div>
-
-        {/* Innovation Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
-            <p className="text-blue-100 mb-6 text-center">
-              Breakthrough AI systems with genuine consciousness, self-awareness, and emotional intelligence
-            </p>
-            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
-              <li>• Self-aware decision making</li>
-              <li>• Emotional intelligence</li>
-              <li>• Creative problem solving</li>
-              <li>• Autonomous learning</li>
-            </ul>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">CONSCIOUS</span>
-            </div>
-          </div>
-
-          <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Exponential processing</li>
-              <li>• Quantum machine learning</li>
-              <li>• Parallel computing</li>
-            </ul>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">QUANTUM</span>
-            </div>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Brain, Shield, Target, Globe, TrendingUp, Users, Rocket } from 'lucide-react';
-
 const AdvancedTechInnovation2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 text-white">
@@ -77,7 +37,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Categories */}
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,9 +48,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
               Explore the most advanced technologies that are driving innovation 
               and transforming the way we live, work, and interact with the world.
             </p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI & Machine Learning */}
             <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
@@ -110,7 +67,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <li>• Natural language processing</li>
               </ul>
             </div>
-
             {/* Quantum Technologies */}
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -128,7 +84,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <li>• Quantum internet</li>
               </ul>
             </div>
-
             {/* Biotechnology */}
             <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
@@ -146,7 +101,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <li>• Bio-manufacturing</li>
               </ul>
             </div>
-
             {/* Robotics & Automation */}
             <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
@@ -164,7 +118,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <li>• Service robotics</li>
               </ul>
             </div>
-
             {/* Cybersecurity */}
             <div className="bg-gradient-to-br from-red-900/30 to-pink-900/30 rounded-2xl p-8 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -182,7 +135,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <li>• Behavioral analytics</li>
               </ul>
             </div>
-
             {/* Space Technology */}
             <div className="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -203,7 +155,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Showcase */}
       <div className="py-24 bg-gradient-to-r from-green-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +167,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               and creating new possibilities for the future.
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Innovation 1 */}
             <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20">
@@ -236,7 +186,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Autonomous Learning</span>
               </div>
             </div>
-
             {/* Innovation 2 */}
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20">
               <div className="flex items-center mb-6">
@@ -255,7 +204,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Optimization</span>
               </div>
             </div>
-
             {/* Innovation 3 */}
             <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-2xl p-8 border border-green-500/20">
               <div className="flex items-center mb-6">
@@ -274,7 +222,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Environmental Solutions</span>
               </div>
             </div>
-
             {/* Innovation 4 */}
             <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/20">
               <div className="flex items-center mb-6">
@@ -296,7 +243,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Impact Statistics */}
       <div className="py-24 bg-black/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -309,7 +255,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               and transforming every aspect of human life.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-green-400 mb-2">$15T</div>
@@ -330,7 +275,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Vision */}
       <div className="py-24 bg-gradient-to-r from-green-900/40 to-blue-900/40">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -361,7 +305,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedTechInnovation2027;
 =======
 import { Helmet } from 'react-helmet-async';
@@ -371,7 +314,6 @@ import { Helmet } from 'react-helmet-async';
         <meta name="description" content="Discover the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities" />
         <meta name="keywords" content="tech innovation 2027, advanced technology, AI breakthrough, quantum computing, neural interfaces, space tech" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -385,4 +327,3 @@ import { Helmet } from 'react-helmet-async';
             Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
           </p>
               Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

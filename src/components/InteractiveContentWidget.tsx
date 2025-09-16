@@ -1,13 +1,6 @@
 import React from 'react';
-
 const InteractiveContentWidget: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
         <div
@@ -20,7 +13,6 @@ const InteractiveContentWidget: React.FC = () => {
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
         </div>
-
         {/* Category Selector */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -40,7 +32,6 @@ const InteractiveContentWidget: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
           <div
             key={selectedCategory}
@@ -62,17 +53,14 @@ const InteractiveContentWidget: React.FC = () => {
                     🔥 FEATURED
                   </div>
                 )}
-                
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-3xl mb-2">{contentCategories[selectedCategory].icon}</div>
                   {item.featured && (
                     <div className="text-yellow-400 text-2xl">⭐</div>
                   )}
                 </div>
-                
                 <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
                 <p className="text-gray-300 mb-6">{item.description}</p>
-                
                 <a 
                   href={item.link}
                   className={`inline-flex items-center font-semibold transition-colors duration-300 ${
@@ -83,7 +71,6 @@ const InteractiveContentWidget: React.FC = () => {
                 >
                   Explore Now →
                 </a>
-                
                 {hoveredItem === item.title && (
                   <div
                     className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
@@ -93,7 +80,6 @@ const InteractiveContentWidget: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -107,8 +93,6 @@ const InteractiveContentWidget: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveContentWidget;

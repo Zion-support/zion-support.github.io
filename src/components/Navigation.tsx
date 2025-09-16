@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Navigation: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Navigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default Navigation;
-=======
 "use client";
-
 import React, { useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
@@ -29,10 +14,8 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-
 import React, { useState } from './react';
 import Link from './next / link';
-
 import {
   Menu,
   X,
@@ -44,7 +27,6 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-
   Instagram,
   Github,
   ArrowRight,
@@ -54,32 +36,23 @@ import {
   Shield,
   Zap,
   Globe,
-
 ursor/integrate-build-improve-and-re-verify-8f7d
-
   BarChart3,
   Search,;
-
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
   BarChart3
 } from 'lucide-react;
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-
-
 import React, { useState } from "react";
 import Link from "next/link";
 import {
 origin/automation-improvements-final
-
-
   Menu
   X
   ChevronDown
@@ -103,7 +76,6 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
 origin/main
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1156,4 +1128,3 @@ origin/automation-improvements-final
       />;
     </>);
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function Contact() {
   const { showToast: toast } = useToast();
 import React, { useState } from 'react';
@@ -13,25 +12,6 @@ import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import React from 'react';
 const Contact: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>Contact | Zion Tech Group</title>
-        <meta name="description" content="Contact - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Contact</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-=======
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -262,5 +242,4 @@ const Contact: React.FC = () => {
             ))}
   );
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default Contact;

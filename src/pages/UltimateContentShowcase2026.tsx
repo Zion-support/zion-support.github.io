@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const UltimateContentShowcase2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>UltimateContentShowcase2026 | Zion Tech Group</title>
-        <meta name="description" content="UltimateContentShowcase2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateContentShowcase2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -31,7 +12,6 @@ import {
   Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const UltimateContentShowcase2026 = () => {
   const contentFeatures = [
     {
@@ -77,7 +57,6 @@ const UltimateContentShowcase2026 = () => {
       color: "from-pink-500 to-rose-500"
     }
   ];
-
   const successStories = [
     {
       company: "TechCorp Global",
@@ -98,7 +77,6 @@ const UltimateContentShowcase2026 = () => {
       description: "Autonomous business intelligence transformed their decision-making processes."
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -150,7 +128,6 @@ const UltimateContentShowcase2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Content Features Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -167,7 +144,6 @@ const UltimateContentShowcase2026 = () => {
               Explore our comprehensive suite of cutting-edge content and technology solutions designed to transform your business
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentFeatures.map((feature, index) => (
               <motion.div
@@ -191,7 +167,6 @@ const UltimateContentShowcase2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
@@ -208,7 +183,6 @@ const UltimateContentShowcase2026 = () => {
               See how leading companies are achieving unprecedented results with our solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -236,7 +210,6 @@ const UltimateContentShowcase2026 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -271,9 +244,7 @@ const UltimateContentShowcase2026 = () => {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentShowcase2026;

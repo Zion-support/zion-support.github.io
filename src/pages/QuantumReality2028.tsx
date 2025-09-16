@@ -1,22 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const QuantumReality2028: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumReality2028 | Zion Tech Group</title>
-        <meta name="description" content="QuantumReality2028 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumReality2028</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
-
 const QuantumReality2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
@@ -33,7 +15,6 @@ const QuantumReality2028: React.FC = () => {
             Step into a reality where quantum mechanics meets consciousness, creating infinite possibilities
           </p>
         </div>
-
         {/* Quantum Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -52,7 +33,6 @@ const QuantumReality2028: React.FC = () => {
               <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Wave Computing</h3>
@@ -69,7 +49,6 @@ const QuantumReality2028: React.FC = () => {
               <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">REVOLUTIONARY</span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Prediction Engine</h3>
@@ -86,7 +65,6 @@ const QuantumReality2028: React.FC = () => {
               <span className="px-3 py-1 bg-indigo-500/50 rounded-full text-xs font-semibold">FUTURISTIC</span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Entanglement Network</h3>
@@ -103,7 +81,6 @@ const QuantumReality2028: React.FC = () => {
               <span className="px-3 py-1 bg-purple-500/50 rounded-full text-xs font-semibold">GROUNDBREAKING</span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Engine</h3>
@@ -120,7 +97,6 @@ const QuantumReality2028: React.FC = () => {
               <span className="px-3 py-1 bg-pink-500/50 rounded-full text-xs font-semibold">TRANSCENDENT</span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Simulation Universe</h3>
@@ -138,7 +114,6 @@ const QuantumReality2028: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Quantum Applications</h2>
@@ -164,7 +139,6 @@ const QuantumReality2028: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
               <h3 className="text-2xl font-bold mb-6 text-center">🌌 Reality Manipulation</h3>
               <div className="space-y-4">
@@ -188,7 +162,6 @@ const QuantumReality2028: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Metrics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-cyan-400/30">
           <h2 className="text-3xl font-bold text-center mb-8">📊 Quantum Performance Metrics</h2>
@@ -215,7 +188,6 @@ const QuantumReality2028: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Vision */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">🔮 The Quantum Future</h2>
@@ -231,7 +203,6 @@ const QuantumReality2028: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Enter Quantum Reality?</h2>
@@ -250,10 +221,8 @@ const QuantumReality2028: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default QuantumReality2028;

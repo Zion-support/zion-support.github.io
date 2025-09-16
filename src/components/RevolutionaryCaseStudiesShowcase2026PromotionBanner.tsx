@@ -1,12 +1,6 @@
 import React from 'react';
-
 const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryCaseStudiesShowcase2026PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
@@ -16,7 +10,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,92,246,0.2),transparent_50%)]"></div>
         </div>
-
         {/* Floating Success Icons */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_i) => (
@@ -38,7 +31,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
             />
           ))}
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             {/* Left Content */}
@@ -51,20 +43,17 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   SUCCESS STORIES
                 </span>
               </div>
-
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
               </divh2>
-
               <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
               </divp>
-
               {/* Rotating Case Study Display */}
               <div
                 key={currentStat}
@@ -79,7 +68,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
               </div>
-
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -91,7 +79,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -103,7 +90,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -119,7 +105,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Right Content - Animated Success Icons */}
             <div
               className="hidden lg:flex items-center space-x-4"
@@ -142,7 +127,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={() => setIsDismissed(true)}
@@ -150,16 +134,13 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         {/* Pulse Effect */}
         <div
           className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20"
         />
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
 </div></div></div></div>

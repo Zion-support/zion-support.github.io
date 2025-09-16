@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AdvancedNewsletter: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedNewsletter</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React{ useState } from 'react';
 MailSendCheckCircle
-
 export default function AdvancedNewsletter() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -77,8 +65,6 @@ export default function AdvancedNewsletter() {
           <div className="mt-8 text-white/60 text-sm">
             <p>
               By subscribingyou agree to our privacy policy. Unsubscribe at any time.
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AdvancedNewsletter;

@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AnalyticsMonitor: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AnalyticsMonitor</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default AnalyticsMonitor;
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
-
 /**
  * Analytics and Monitoring Component
  * 
@@ -25,14 +10,12 @@ import React{ useEffectuseState } from 'react';
  * - User behavior analytics
  * - Real-time metrics
  */
-
 interface AnalyticsConfig {
   ga4MeasurementId?: string;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
 }
-
 interface PerformanceMetrics {
   pageLoadTime: number;
   firstContentfulPaint: number;
@@ -41,7 +24,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
-
 interface UserBehavior {
   sessionId: string;
   pageViews: number;
@@ -49,7 +31,6 @@ interface UserBehavior {
   bounceRate: number;
   conversionEvents: number;
 }
-
 export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID,
   enablePerformanceMonitoring = true,
@@ -59,7 +40,6 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   const [metricsetMetrics] = useState<PerformanceMetrics | null>(null);
   const [userBehaviorsetUserBehavior] = useState<UserBehavior | null>(null);
   const [errorsetErrors] = useState<any[]>([]);
-
   useEffect(() => {
     // Initialize Google Analytics 4
     if (ga4MeasurementId && typeof window !== 'undefined') {
@@ -67,32 +47,26 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
       document.head.appendChild(script);
-
       window.gtag = window.gtag || function() {
         (window.gtag as any).q = (window.gtag as any).q || [];
         (window.gtag as any).q.push(arguments);
       };
-      
       (window.gtag as any)(', 'js', 'new Date());
       (window.gtag as any)(', 'config', 'ga4MeasurementId);
     }
-
     // Performance monitoring
     if (enablePerformanceMonitoring) {
       initializePerformanceMonitoring();
     }
-
     // Error tracking
     if (enableErrorTracking) {
       initializeErrorTracking();
     }
-
     // User behavior tracking
     if (enableUserBehaviorTracking) {
       initializeUserBehaviorTracking();
     }
   }[ga4MeasurementIdenablePerformanceMonitoringenableErrorTrackingenableUserBehaviorTracking]);
-
   const initializePerformanceMonitoring = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Core Web Vitals
@@ -101,28 +75,23 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           setMetrics(prev => ({ ...prevcumulativeLayoutShift: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'cls'metric.value);
         });
-
         getFID((metric) => {
           setMetrics(prev => ({ ...prevfirstInputDelay: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'fid'metric.value);
         });
-
         getFCP((metric) => {
           setMetrics(prev => ({ ...prevfirstContentfulPaint: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'fcp'metric.value);
         });
-
         getLCP((metric) => {
           setMetrics(prev => ({ ...prevlargestContentfulPaint: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'lcp'metric.value);
         });
-
         getTTFB((metric) => {
           setMetrics(prev => ({ ...prevtimeToInteractive: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'ttfb'metric.value);
         });
       });
-
       // Page load time
       window.addEventListener('load'() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -132,7 +101,6 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
       });
     }
   };
-
   const initializeErrorTracking = () => {
     if (typeof window !== 'undefined') {
       // JavaScript errors
@@ -145,37 +113,31 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           error: event.error,
           timestamp: new Date().toISOString()
         };
-        
         setErrors(prev => [...preverror]);
         trackEvent(', 'error', 'javascript_error'error.message);
       });
-
       // Unhandled promise rejections
       window.addEventListener('unhandledrejection'(event) => {
         const error = {
           reason: event.reason,
           timestamp: new Date().toISOString()
         };
-        
         setErrors(prev => [...preverror]);
         trackEvent(', 'error', 'unhandled_promise_rejection'event.reason);
       });
     }
   };
-
   const initializeUserBehaviorTracking = () => {
     if (typeof window !== 'undefined') {
       const sessionId = generateSessionId();
       let pageViews = 0;
       let timeOnSite = 0;
       let startTime = Date.now();
-
       // Track page views
       const trackPageView = () => {
         pageViews++;
         timeOnSite += Date.now() - startTime;
         startTime = Date.now();
-
         setUserBehavior({
           sessionId,
           pageViews,
@@ -183,11 +145,9 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           bounceRate: calculateBounceRate(),
           conversionEvents: 0
         });
-
         trackEvent(', 'user_behavior', 'page_view'pageViews);
       };
 import React{ useEffect } from 'react';
-
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -196,7 +156,6 @@ interface AnalyticsEvent {
   value?: number;
   timestamp: number;
 }
-
 export default function AnalyticsMonitor() {
   useEffect(() => {
     // Initialize analytics tracking
@@ -514,4 +473,3 @@ export default AnalyticsMonitor;
   }[]);
   return null;
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

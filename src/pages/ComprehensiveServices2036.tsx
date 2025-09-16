@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServices2036: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServices2036 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServices2036 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2036</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
-
 const ComprehensiveServices2036: React.FC = () => {
   const services = [
     {
@@ -110,7 +91,6 @@ const ComprehensiveServices2036: React.FC = () => {
       category: "Reality Technology"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -134,7 +114,6 @@ const ComprehensiveServices2036: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service) => (
@@ -147,7 +126,6 @@ const ComprehensiveServices2036: React.FC = () => {
                 </div>
                 <p className="text-purple-100 mb-6">{service.description}</p>
               </div>
-              
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
@@ -159,7 +137,6 @@ const ComprehensiveServices2036: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div className="border-t border-purple-400/30 pt-4">
                 <div className="text-center mb-4">
                   <div className="text-lg font-semibold text-purple-300">{service.pricing}</div>
@@ -168,7 +145,6 @@ const ComprehensiveServices2036: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-              
               <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="flex items-center space-x-2 mb-3">
                   <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full font-bold">99.99%</span>
@@ -184,7 +160,6 @@ const ComprehensiveServices2036: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -193,7 +168,6 @@ const ComprehensiveServices2036: React.FC = () => {
               Our comprehensive services have achieved unprecedented success across all industries
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-pink-400 mb-2">500+</div>
@@ -217,7 +191,6 @@ const ComprehensiveServices2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -226,7 +199,6 @@ const ComprehensiveServices2036: React.FC = () => {
               Hear from industry leaders who have transformed their businesses with our services
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <div className="text-4xl mb-4">"</div>
@@ -236,7 +208,6 @@ const ComprehensiveServices2036: React.FC = () => {
               <div className="font-semibold">Sarah Johnson</div>
               <div className="text-sm opacity-80">CEO, TechCorp Global</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <div className="text-4xl mb-4">"</div>
               <p className="text-lg mb-6 italic">
@@ -245,7 +216,6 @@ const ComprehensiveServices2036: React.FC = () => {
               <div className="font-semibold">Dr. Michael Chen</div>
               <div className="text-sm opacity-80">CTO, Quantum Solutions Inc.</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <div className="text-4xl mb-4">"</div>
               <p className="text-lg mb-6 italic">
@@ -256,7 +226,6 @@ const ComprehensiveServices2036: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -274,13 +243,11 @@ const ComprehensiveServices2036: React.FC = () => {
               Contact Us
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default ComprehensiveServices2036;
 =======
               <ul className="space-y-3 mb-8">
@@ -319,4 +286,3 @@ export default ComprehensiveServices2036;
             <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
               View Showcase
             </a>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

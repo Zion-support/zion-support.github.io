@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentDiscoveryWidget: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ContentDiscoveryWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -24,7 +12,6 @@ interface ContentItem {
   badge?: string;
   icon: string;
 }
-
 export default function ContentDiscoveryWidget() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentItemsetCurrentItem] = useState(0);
@@ -159,8 +146,6 @@ export default function ContentDiscoveryWidget() {
               aria-label={`Go to content ${index + 1}`}
             />
           ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ContentDiscoveryWidget;

@@ -1,18 +1,11 @@
 import React from 'react';
-
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsInteractiveDemo2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -23,20 +16,17 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <Sparkles className="w-4 h-4" />
                 <span>New Interactive Demo</span>
               </div>
-              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Experience AI Tools
                 <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Live in Action
                 </span>
               </h2>
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Testexploreand discover 24+ cutting-edge AI tools with live demonstrations. 
                 See how AI can transform your workflow in real-time.
               </p>
             </div>
-
             {/* Features List */}
             <div
               className="space-y-4"
@@ -53,7 +43,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -63,12 +52,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <span>Start Interactive Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 View All Tools
               </button>
             </div>
-
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
@@ -87,7 +74,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Right Content - Interactive Demo Preview */}
           <div
             className="relative"
@@ -101,7 +87,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-sm text-gray-400">Live</span>
                 </div>
               </div>
-
               {/* Tool Showcase */}
               <div className="space-y-4">
                 {tools.map((toolindex) => (
@@ -138,7 +123,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Progress Bar */}
               <div className="mt-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
@@ -152,7 +136,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
                 y: [0-10],
@@ -166,7 +149,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
-
             <div
                 y: [010],
                 rotate: [0-50]
@@ -183,12 +165,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIToolsInteractiveDemo2025PromotionBanner;

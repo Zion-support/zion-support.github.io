@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessSuccessStories2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessSuccessStories2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -20,7 +14,6 @@ const BusinessSuccessStories2025: React.FC = () => {
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -35,7 +28,6 @@ const BusinessSuccessStories2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {successStories.map((storyindex) => (
@@ -60,7 +52,6 @@ const BusinessSuccessStories2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -72,7 +63,6 @@ const BusinessSuccessStories2025: React.FC = () => {
                   <p className="text-gray-700">{story.solution}</p>
                 </div>
               </div>
-
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {Object.entries(story.results).map(([keyvalue]) => (
@@ -82,7 +72,6 @@ const BusinessSuccessStories2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Testimonial */}
               <div className="border-l-4 border-green-500 pl-4 mb-4">
                 <p className="text-gray-700 italic mb-2">"{story.testimonial}"</p>
@@ -90,7 +79,6 @@ const BusinessSuccessStories2025: React.FC = () => {
                   <span className="font-semibold">{story.author}</span>{story.role}
                 </div>
               </div>
-
               {/* CTA */}
               <a
                 href={`/case-study/${story.id}`}
@@ -102,7 +90,6 @@ const BusinessSuccessStories2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Industries Served */}
         <div
           className="mb-16"
@@ -126,7 +113,6 @@ const BusinessSuccessStories2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
@@ -155,9 +141,7 @@ const BusinessSuccessStories2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessSuccessStories2025;

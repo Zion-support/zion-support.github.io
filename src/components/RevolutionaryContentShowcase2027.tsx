@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const RevolutionaryContentShowcase2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -15,7 +9,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const featuredContent = [
     {
       title: "Revolutionary Tech Trends 2027",
@@ -45,13 +38,7 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
       badge: "REVOLUTIONARY"
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-12 text-white relative overflow-hidden mb-16">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -61,7 +48,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
         <div className="absolute bottom-20 left-32 w-24 h-24 bg-pink-500/30 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-32 right-10 w-12 h-12 bg-emerald-500/30 rounded-full animate-pulse delay-3000"></div>
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -75,7 +61,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             Experience the most advanced and revolutionary content showcasing breakthrough technologies that will reshape our future
           </p>
         </div>
-
         {/* Dynamic Content Carousel */}
         <div className="relative mb-12">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
@@ -95,7 +80,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                   <p className="text-xl opacity-90 mb-6 leading-relaxed">
                     {featuredContent[currentSlide].description}
                   </p>
-                  
                   <div className="space-y-2 mb-6">
                     {featuredContent[currentSlide].features.map((feature, index) => (
                       <div key={index} className="flex items-center text-purple-200">
@@ -104,7 +88,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   <a 
                     href={featuredContent[currentSlide].link}
                     className={`inline-block bg-gradient-to-r ${featuredContent[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
@@ -112,7 +95,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                     Explore Content →
                   </a>
                 </div>
-
                 {/* Visual Element */}
                 <div className="text-center">
                   <div className="relative">
@@ -130,7 +112,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center gap-3 mt-8">
             {featuredContent.map((_, index) => (
@@ -146,7 +127,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {featuredContent.map((content, index) => (
@@ -166,7 +146,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-6">Ready to Explore the Future?</h3>
@@ -183,9 +162,7 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase2027;

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateTechShowcase2026Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechShowcase2026Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -14,7 +8,6 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <div
@@ -25,20 +18,17 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
             <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">2026 Ultimate Technology Showcase</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Experience the
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Future</span>
             <br />
             of Technology
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
           </p>
         </div>
-
         {/* Technology Showcase */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,11 +53,9 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {tech.description}
               </p>
-              
               <div className="space-y-3">
                 <div className="flex justify-between text-sm text-gray-400">
                   <span>Development Progress</span>
@@ -83,7 +71,6 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Achievements */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +79,6 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
           <h3 className="text-3xl font-bold text-center text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {achievements.map((achievementindex) => (
               <div
@@ -111,7 +97,6 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,12 +106,10 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking organizations already using our 
               cutting-edge technology to revolutionize their operations and achieve unprecedented growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
@@ -137,7 +120,6 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </divbutton>
-              
               <divbutton
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
               >
@@ -147,10 +129,8 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateTechShowcase2026Banner;
 </div></div>

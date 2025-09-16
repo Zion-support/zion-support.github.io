@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const NextGenTechTrends2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenTechTrends2026 | Zion Tech Group</title>
-        <meta name="description" content="NextGenTechTrends2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenTechTrends2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
@@ -35,7 +19,6 @@ import {
   Star,
   CheckCircle
 } from 'lucide-react';
-
 const NextGenTechTrends2026: React.FC = () => {
   const trends = [
     {
@@ -141,7 +124,6 @@ const NextGenTechTrends2026: React.FC = () => {
       growthRate: "+290%"
     }
   ];
-
   const insights = [
     {
       title: "Market Acceleration",
@@ -162,7 +144,6 @@ const NextGenTechTrends2026: React.FC = () => {
       icon: CheckCircle
     }
   ];
-
   const predictions = [
     {
       year: "2026",
@@ -189,13 +170,11 @@ const NextGenTechTrends2026: React.FC = () => {
       impact: "Breakthrough"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -232,7 +211,6 @@ const NextGenTechTrends2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Key Insights */}
       <section className="py-16 bg-black/20">
         <div className="container mx-auto px-6">
@@ -256,7 +234,6 @@ const NextGenTechTrends2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Trends Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -271,7 +248,6 @@ const NextGenTechTrends2026: React.FC = () => {
               Discover the cutting-edge technologies that will reshape our world and transform how we live, work, and interact with digital systems.
             </p>
           </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-8">
             {trends.map((trend, index) => (
               <motion.div
@@ -307,11 +283,9 @@ const NextGenTechTrends2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {trend.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
                   <ul className="space-y-2">
@@ -323,7 +297,6 @@ const NextGenTechTrends2026: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex justify-between items-center">
                   <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-lg p-3">
                     <div className="text-sm text-green-400 font-semibold">Market Size</div>
@@ -339,10 +312,8 @@ const NextGenTechTrends2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </section>
-
       {/* Predictions Timeline */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-6">
@@ -357,12 +328,10 @@ const NextGenTechTrends2026: React.FC = () => {
               Our expert predictions for the next five years of technological advancement and market adoption.
             </p>
           </motion.div>
-
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
-              
               {predictions.map((prediction, index) => (
                 <motion.div
                   key={index}
@@ -375,7 +344,6 @@ const NextGenTechTrends2026: React.FC = () => {
                   <div className="relative z-10 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold text-lg">{prediction.year}</span>
                   </div>
-                  
                   {/* Content */}
                   <div className="flex-1 bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6">
                     <div className="flex items-center gap-3 mb-3">
@@ -394,7 +362,6 @@ const NextGenTechTrends2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -432,5 +399,4 @@ const NextGenTechTrends2026: React.FC = () => {
     </div>
   );
 };
-
 export default NextGenTechTrends2026;

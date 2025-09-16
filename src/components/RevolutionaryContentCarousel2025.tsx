@@ -1,17 +1,10 @@
 import React from 'react';
-
 const RevolutionaryContentCarousel2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -24,7 +17,6 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl">
@@ -61,7 +53,6 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -80,7 +71,6 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {slides.map((_, index) => (
@@ -93,7 +83,6 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Action Buttons */}
         <div className="flex justify-center space-x-4 mt-8">
           <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -104,10 +93,8 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
           </button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryContentCarousel2025;
 </p></p>

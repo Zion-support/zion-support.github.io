@@ -1,16 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const TransdimensionalAI2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>TransdimensionalAI2026 | Zion Tech Group</title>
-        <meta name="description" content="TransdimensionalAI2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -45,13 +36,11 @@ const TransdimensionalAI2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Dimensional Capabilities */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
           Dimensional AI Capabilities
         </h2>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌌</div>
@@ -63,7 +52,6 @@ const TransdimensionalAI2026: React.FC = () => {
               Available Q2 2026
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌀</div>
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Reality Manipulation</h3>
@@ -74,7 +62,6 @@ const TransdimensionalAI2026: React.FC = () => {
               Available Q3 2026
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-cyan-300">Temporal Intelligence</h3>
@@ -85,7 +72,6 @@ const TransdimensionalAI2026: React.FC = () => {
               Available Q1 2026
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-emerald-300">Dimensional Shifting</h3>
@@ -96,7 +82,6 @@ const TransdimensionalAI2026: React.FC = () => {
               Available Q4 2026
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-rose-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-rose-300">Quantum Consciousness</h3>
@@ -107,7 +92,6 @@ const TransdimensionalAI2026: React.FC = () => {
               Available Q2 2026
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm p-8 rounded-2xl border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-yellow-300">Cosmic Intelligence</h3>
@@ -120,14 +104,12 @@ const TransdimensionalAI2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Deep Dive */}
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             Transdimensional Technology Stack
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-cyan-300">Dimensional Processing Units</h3>
@@ -179,13 +161,11 @@ const TransdimensionalAI2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Revolutionary Applications
         </h2>
-        
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
@@ -195,7 +175,6 @@ const TransdimensionalAI2026: React.FC = () => {
                 bringing impossible treatments to our reality.
               </p>
             </div>
-            
             <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/20">
               <h3 className="text-2xl font-bold mb-4 text-purple-300">Climate Solutions</h3>
               <p className="text-gray-300">
@@ -203,7 +182,6 @@ const TransdimensionalAI2026: React.FC = () => {
                 successfully reversed, implementing proven strategies.
               </p>
             </div>
-            
             <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/20">
               <h3 className="text-2xl font-bold mb-4 text-cyan-300">Space Exploration</h3>
               <p className="text-gray-300">
@@ -212,7 +190,6 @@ const TransdimensionalAI2026: React.FC = () => {
               </p>
             </div>
           </div>
-          
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 p-6 rounded-xl border border-emerald-400/20">
               <h3 className="text-2xl font-bold mb-4 text-emerald-300">Energy Revolution</h3>
@@ -221,7 +198,6 @@ const TransdimensionalAI2026: React.FC = () => {
                 have been solved, transforming our power infrastructure.
               </p>
             </div>
-            
             <div className="bg-gradient-to-r from-rose-800/30 to-pink-800/30 p-6 rounded-xl border border-rose-400/20">
               <h3 className="text-2xl font-bold mb-4 text-rose-300">Consciousness Expansion</h3>
               <p className="text-gray-300">
@@ -229,7 +205,6 @@ const TransdimensionalAI2026: React.FC = () => {
                 unlocking untapped mental potential.
               </p>
             </div>
-            
             <div className="bg-gradient-to-r from-yellow-800/30 to-orange-800/30 p-6 rounded-xl border border-yellow-400/20">
               <h3 className="text-2xl font-bold mb-4 text-yellow-300">Reality Engineering</h3>
               <p className="text-gray-300">
@@ -240,9 +215,7 @@ const TransdimensionalAI2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">TransdimensionalAI2026</h1>
@@ -252,9 +225,6 @@ const TransdimensionalAI2026: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-=======
 export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 export default TransdimensionalAI2026;
@@ -262,5 +232,4 @@ export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default TransdimensionalAI2026;

@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const NextGenInnovationHub2037: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenInnovationHub2037 | Zion Tech Group</title>
-        <meta name="description" content="NextGenInnovationHub2037 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenInnovationHub2037</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2037
@@ -27,15 +8,12 @@ const NextGenInnovationHub2037: React.FC = () => {
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
-
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -59,7 +37,6 @@ const NextGenInnovationHub2037: React.FC = () => {
               Enter AI Lab →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Research Center</h3>
@@ -76,7 +53,6 @@ const NextGenInnovationHub2037: React.FC = () => {
               Enter Quantum Center →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Multiverse Research Lab</h3>
@@ -93,16 +69,13 @@ const NextGenInnovationHub2037: React.FC = () => {
               Enter Multiverse Lab →
             </button>
           </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         </div>
-
         {/* Active Projects Section */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🔬 Active Research Projects</h2>
             <p className="text-xl opacity-90">Currently working on groundbreaking innovations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -116,7 +89,6 @@ const NextGenInnovationHub2037: React.FC = () => {
                   <div className="bg-emerald-500 h-2 rounded-full" style={{width: '87%'}}></div>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">⚡ Project: Quantum Reality Engine</h3>
                 <p className="text-gray-300 mb-4">Building quantum computers that can manipulate physical reality</p>
@@ -129,7 +101,6 @@ const NextGenInnovationHub2037: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">🌌 Project: Multiverse Gateway</h3>
@@ -142,7 +113,6 @@ const NextGenInnovationHub2037: React.FC = () => {
                   <div className="bg-purple-500 h-2 rounded-full" style={{width: '65%'}}></div>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">🧬 Project: Neural Interface 2.0</h3>
                 <p className="text-gray-300 mb-4">Advanced brain-computer interface technology</p>
@@ -157,7 +127,6 @@ const NextGenInnovationHub2037: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">

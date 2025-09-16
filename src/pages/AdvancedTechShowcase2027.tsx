@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const AdvancedTechShowcase2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedTechShowcase2027 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedTechShowcase2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedTechShowcase2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-=======
           </div>
         </div>
-
         {/* Advanced Applications */}
         <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">🌟 Revolutionary Applications</h2>
             <p className="text-2xl text-indigo-200">Transforming industries with next-generation technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🏥 Medical Holography</h3>
@@ -47,7 +23,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 <li>• Dimensional health monitoring</li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🚀 Space-Time Exploration</h3>
               <p className="text-indigo-200 mb-4">
@@ -60,7 +35,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 <li>• Multi-dimensional exploration</li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🎓 Educational Holography</h3>
               <p className="text-indigo-200 mb-4">
@@ -73,7 +47,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 <li>• Time-compressed education</li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🏭 Industrial Revolution</h3>
               <p className="text-indigo-200 mb-4">
@@ -89,21 +62,15 @@ const AdvancedTechShowcase2027: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AdvancedTechShowcase2027;
 =======
-
     <>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -130,7 +97,6 @@ export default AdvancedTechShowcase2027;
               Cutting-edge innovations that push the boundaries of what's possible
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <divdiv
@@ -141,7 +107,6 @@ export default AdvancedTechShowcase2027;
                 <div className="text-6xl mb-4 text-center">{tech.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
                 <p className="text-purple-100 mb-6 text-center">{tech.description}</p>
-                
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Key Features:</h4>
                   <ul className="text-sm space-y-1">
@@ -153,7 +118,6 @@ export default AdvancedTechShowcase2027;
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex justify-between items-center text-sm">
                   <span className={`px-3 py-1 rounded-full ${
                     tech.status === 'In Development' ? 'bg-yellow-500/20 text-yellow-300' :
@@ -170,7 +134,6 @@ export default AdvancedTechShowcase2027;
             ))}
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 py-20">
           <div className="container mx-auto px-4">
@@ -180,7 +143,6 @@ export default AdvancedTechShowcase2027;
                 Real results from our revolutionary technologies
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
                 <divdiv
@@ -212,4 +174,3 @@ export default AdvancedTechShowcase2027;
         </div>
       </div>
     </>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

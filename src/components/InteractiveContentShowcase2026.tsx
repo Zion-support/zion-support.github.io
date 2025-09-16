@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveContentShowcase2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -28,12 +18,10 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
-
 const InteractiveContentShowcase2026 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
-
   const categories = [
     { id: 'all', name: 'All Categories', count: 60 },
     { id: 'synthetic-intelligence', name: 'Synthetic Intelligence', count: 15 },
@@ -41,7 +29,6 @@ const InteractiveContentShowcase2026 = () => {
     { id: 'consciousness-tech', name: 'Consciousness Technology', count: 8 },
     { id: 'space-ai', name: 'Space AI', count: 6 }
   ];
-
   const content = [
     {
       id: 51,
@@ -92,21 +79,18 @@ const InteractiveContentShowcase2026 = () => {
       likes: 923
     }
   ];
-
   const filteredContent = content.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const formatNumber = (num) => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -122,7 +106,6 @@ const InteractiveContentShowcase2026 = () => {
             Discover, filter, and interact with the most groundbreaking technologies and innovations.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -167,7 +150,6 @@ const InteractiveContentShowcase2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div className={viewMode === 'grid' 
           ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' 
@@ -196,7 +178,6 @@ const InteractiveContentShowcase2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-purple-400 text-sm font-semibold capitalize">
@@ -205,20 +186,16 @@ const InteractiveContentShowcase2026 = () => {
                     <span className="text-gray-400">•</span>
                     <span className="text-gray-400 text-sm">{post.readTime}</span>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                     {post.title}
                   </h3>
-
                   <p className="text-gray-300 text-sm mb-4">
                     {post.excerpt}
                   </p>
-
                   <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
                     <span>{post.author}</span>
                     <span>{formatNumber(post.views)} views</span>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/blog/${post.slug}`}
@@ -227,7 +204,6 @@ const InteractiveContentShowcase2026 = () => {
                       Read Article
                       <ArrowRight className="w-4 h-4" />
                     </Link>
-
                     <div className="flex items-center gap-2">
                       <button className="p-2 rounded-full bg-slate-700 text-gray-400 hover:bg-slate-600 hover:text-red-500 transition-colors">
                         <Heart className="w-4 h-4" />
@@ -246,11 +222,9 @@ const InteractiveContentShowcase2026 = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveContentShowcase2026;
 =======
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
@@ -275,7 +249,6 @@ export default InteractiveContentShowcase2026;
                 <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center mt-12">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -297,4 +270,3 @@ export default InteractiveContentShowcase2026;
             🚀 Ultimate Revolution →
           </a>
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

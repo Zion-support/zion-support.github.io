@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveTechShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
-
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 1,
@@ -44,11 +33,9 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
-
       ]
     }
   };
-
   return (
     <div className="max-w-7xl mx-auto">
       {/* Technology Selector */}
@@ -68,7 +55,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </divbutton>
         ))}
       </div>
-
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
@@ -80,7 +66,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-6xl mb-4">{technologies[activeTech].icon}</div>
             <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
             <p className="text-xl opacity-90 mb-6">{technologies[activeTech].description}</p>
-            
             <div className="grid grid-cols-2 gap-4 mb-6">
               {technologies[activeTech].features.map((feature, index) => (
                 <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -88,7 +73,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
-
             <div className="flex space-x-4">
               <a
                 href={technologies[activeTech].link}
@@ -101,7 +85,6 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Interactive Demo Area */}
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
             <h4 className="text-2xl font-bold text-gray-800 mb-4">Interactive Demo</h4>
@@ -120,7 +103,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <div className="text-sm text-gray-600 mb-2">System Status</div>
                 <div className="flex items-center space-x-2">
@@ -131,7 +113,6 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
@@ -147,7 +128,6 @@ const InteractiveTechShowcase: React.FC = () => {
               <div className="text-4xl mb-3">{tech.icon}</div>
               <h4 className="text-lg font-bold text-gray-800 mb-2">{tech.name}</h4>
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
-              
               {hoveredCard === index && (
                 <div
                   className="space-y-2"
@@ -164,7 +144,6 @@ const InteractiveTechShowcase: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -213,17 +192,14 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
-
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 1,
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -232,10 +208,8 @@ const InteractiveTechShowcase: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const currentTech = technologies[activeTech];
     quantum: {
       title: "Quantum Computing",
@@ -298,7 +272,6 @@ const InteractiveTechShowcase: React.FC = () => {
       ]
     }
   };
-
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -312,12 +285,9 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
-
-
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 1,
@@ -356,10 +326,8 @@ const InteractiveTechShowcase: React.FC = () => {
       stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-  
   const technologies = {
     ai: {
       title: "Artificial Intelligence",
@@ -383,7 +351,6 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -392,12 +359,9 @@ const InteractiveTechShowcase: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const currentTech = technologies[activeTech];
-
   const currentTech = technologies[activeTech];
     quantum: {
       title: "Quantum Computing",
@@ -460,7 +424,6 @@ const InteractiveTechShowcase: React.FC = () => {
       ]
     }
   };
-
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -474,9 +437,7 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
-
   const currentTech = technologies[activeTech];
-
   return (
     <div className="mb-16">
       <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
@@ -484,7 +445,6 @@ const InteractiveTechShowcase: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6">Interactive Technology Showcase</h2>
           <p className="text-xl text-gray-300">Click through our revolutionary technologies</p>
         </div>
-
         {/* Technology Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
@@ -507,7 +467,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 <span className="text-2xl mr-3">{tech.icon}</span>
                 {tech.name}
               </button>
-
               {/* Demo Button */}
               <div className="text-center">
                 <motion.a
@@ -524,7 +483,6 @@ const InteractiveTechShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
@@ -537,7 +495,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   {currentTech.icon}
                 </div>
               </div>
-              
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
@@ -562,7 +519,6 @@ const InteractiveTechShowcase: React.FC = () => {
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
               <h4 className="text-3xl font-bold mb-6 text-center">Interactive Demo</h4>
-              
               {/* Demo Visualization */}
               <div className="relative mb-8">
                 <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/20 flex items-center justify-center">
@@ -574,13 +530,11 @@ const InteractiveTechShowcase: React.FC = () => {
                     <p className="text-sm text-gray-500 mt-2">Click to interact</p>
                   </div>
                 </div>
-                
                 {/* Floating Elements */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
                 <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
                 <div className="absolute top-1/2 left-4 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
               </div>
-
               {/* Demo Controls */}
               <div className="space-y-4">
                 <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -593,7 +547,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   Schedule Live Demo
                 </button>
               </div>
-
               {/* Real-time Data */}
               <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
                 <h5 className="text-lg font-bold mb-3 text-center">Real-time Data</h5>
@@ -635,7 +588,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   {currentTech.icon}
                 </motion.div>
               </div>
-              
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
@@ -662,7 +614,6 @@ const InteractiveTechShowcase: React.FC = () => {
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
               <h4 className="text-3xl font-bold mb-6 text-center">Interactive Demo</h4>
-              
               {/* Demo Visualization */}
               <div className="relative mb-8">
                 <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/20 flex items-center justify-center">
@@ -674,13 +625,11 @@ const InteractiveTechShowcase: React.FC = () => {
                     <p className="text-sm text-gray-500 mt-2">Click to interact</p>
                   </div>
                 </div>
-                
                 {/* Floating Elements */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
                 <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
                 <div className="absolute top-1/2 left-4 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
               </div>
-
               {/* Demo Controls */}
               <div className="space-y-4">
                 <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -693,7 +642,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   Schedule Live Demo
                 </button>
               </div>
-
               {/* Real-time Data */}
               <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
                 <h5 className="text-lg font-bold mb-3 text-center">Real-time Data</h5>
@@ -721,7 +669,6 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -742,14 +689,9 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default InteractiveTechShowcase;
-=======
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -792,12 +734,10 @@ export default InteractiveTechShowcase;
               </tbody>
             </table>
           </div>
-
               </div>
             </div>
           </div>
         </div>
-
             <motion.div
               whileHover={{ scale: 1.05 }}
             <div
@@ -810,7 +750,6 @@ export default InteractiveTechShowcase;
                 Start Simulation
               </button>
             </div>
-
             <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
@@ -832,4 +771,3 @@ export default InteractiveTechShowcase;
                 >
                   <span className="mr-2">{currentTech.demo}</span>
                   <span>→</span>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

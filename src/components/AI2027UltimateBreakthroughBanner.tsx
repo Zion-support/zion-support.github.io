@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -14,42 +11,29 @@ import {
   Users,
   CheckCircle
 } from 'lucide-react';
-
 const AI2027UltimateBreakthroughBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "Conscious AI Systems",
     "Quantum Neural Networks", 
     "500% Performance Boost",
     "Global AI Ecosystem"
   ];
-
   const stats = [
     { icon: Brain, value: "99.9%", label: "Accuracy" },
     { icon: Users, value: "10M+", label: "Users" },
     { icon: TrendingUp, value: "500%", label: "Boost" },
     { icon: Zap, value: "24/7", label: "Uptime" }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   if (!isVisible) return null;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2027UltimateBreakthroughBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: -100 }}
@@ -60,7 +44,6 @@ const AI2027UltimateBreakthroughBanner = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -80,7 +63,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                 </div>
                 <span className="text-yellow-400 text-sm font-medium ml-2">Revolutionary AI Breakthrough 2027</span>
               </motion.div>
-
               <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -89,7 +71,6 @@ const AI2027UltimateBreakthroughBanner = () => {
               >
                 The Ultimate AI Breakthrough is Here!
               </motion.h2>
-
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -109,7 +90,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                   </motion.span>
                 </AnimatePresence>
               </motion.div>
-
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -119,7 +99,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                 Experience conscious AI systems, quantum neural networks, and unprecedented capabilities 
                 that will transform how you work, live, and think.
               </motion.p>
-
               {/* Stats */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -135,7 +114,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -161,7 +139,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                 </motion.button>
               </motion.div>
             </div>
-
             {/* Right Content - Visual Element */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -185,7 +162,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                 >
                   <Brain className="w-16 h-16 md:w-20 md:h-20 text-white" />
                 </motion.div>
-                
                 {/* Orbiting Elements */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -205,7 +181,6 @@ const AI2027UltimateBreakthroughBanner = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Close Button */}
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -215,7 +190,6 @@ const AI2027UltimateBreakthroughBanner = () => {
         >
           <X className="w-5 h-5" />
         </motion.button>
-
         {/* Progress Bar */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -226,8 +200,6 @@ const AI2027UltimateBreakthroughBanner = () => {
         />
       </motion.div>
     </AnimatePresence>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2027UltimateBreakthroughBanner;

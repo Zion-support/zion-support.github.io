@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RevolutionaryAdBanner2035: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAdBanner2035</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -19,7 +12,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           <motion.div
@@ -30,7 +22,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
           >
             🌟 REVOLUTIONARY ADVERTISEMENT • JANUARY 2035
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +30,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
           >
             🚀 REVOLUTIONARY TECHNOLOGY 2035
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,7 +40,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             Interdimensional computing, consciousness transfer, and reality manipulation technologies 
             that will reshape reality itself. Don't miss out on the future!
           </motion.p>
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,7 +66,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             </a>
           </motion.div>
         </div>
-        
         {/* Feature Highlights Grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -134,7 +122,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -165,8 +152,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryAdBanner2035;

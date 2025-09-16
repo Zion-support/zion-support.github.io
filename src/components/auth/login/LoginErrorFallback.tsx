@@ -1,17 +1,6 @@
 import React from 'react';
-
 const LoginErrorFallback: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LoginErrorFallback</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default LoginErrorFallback;
-=======
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">
         <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -35,4 +24,3 @@ export default LoginErrorFallback;
           Try Again
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

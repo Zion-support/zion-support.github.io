@@ -1,26 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumReality2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumReality2025 | Zion Tech Group</title>
-        <meta name="description" content="QuantumReality2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumReality2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div
             className="text-center mb-16"
@@ -29,20 +15,17 @@ const QuantumReality2025: React.FC = () => {
               <Atom className="w-6 h-6" />
               <span>QUANTUM REALITY 2025</span>
             </div>
-            
             <h1 className="text-7xl md:text-9xl font-bold text-white mb-8 leading-tight">
               Enter the
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Quantum Reality
               </span>
             </h1>
-            
             <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
               Experience the quantum revolution that's reshaping reality itself. 
               From quantum supremacy to reality manipulation, discover the infinite 
               possibilities of quantum technology.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Explore Quantum World
@@ -55,7 +38,6 @@ const QuantumReality2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Stats */}
       <div className="py-24 bg-black/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -77,7 +59,6 @@ const QuantumReality2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Technologies */}
       <div className="py-24">
         <div className="container mx-auto px-4">
@@ -92,7 +73,6 @@ const QuantumReality2025: React.FC = () => {
               every aspect of human existence and opening infinite possibilities.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {quantumTechnologies.map((tech, index) => (
               <div
@@ -105,17 +85,14 @@ const QuantumReality2025: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white">{tech.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-xl leading-relaxed">
                   {tech.description}
                 </p>
-                
                 <div className="mb-6">
                   <div className="flex items-center space-x-2 text-green-400 font-bold text-lg mb-4">
                     <CheckCircle className="w-6 h-6" />
                     <span>{tech.impact}</span>
                   </div>
-                  
                   <div className="space-y-2">
                     {tech.capabilities.map((capability, capIndex) => (
                       <div key={capIndex} className="flex items-center space-x-2 text-gray-300">
@@ -130,7 +107,6 @@ const QuantumReality2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Principles */}
       <div className="py-24 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
@@ -145,7 +121,6 @@ const QuantumReality2025: React.FC = () => {
               so revolutionary and powerful.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {quantumPrinciples.map((principle, index) => (
               <div
@@ -162,7 +137,6 @@ const QuantumReality2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications */}
       <div className="py-24">
         <div className="container mx-auto px-4">
@@ -177,7 +151,6 @@ const QuantumReality2025: React.FC = () => {
               and solving previously impossible problems.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumApplications.map((app, index) => (
               <div
@@ -197,7 +170,6 @@ const QuantumReality2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -210,7 +182,6 @@ const QuantumReality2025: React.FC = () => {
               Be part of the quantum revolution that's reshaping reality itself. 
               Experience infinite possibilities with quantum technology.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="bg-white text-cyan-600 px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Explore Quantum World
@@ -221,11 +192,9 @@ const QuantumReality2025: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default QuantumReality2025;

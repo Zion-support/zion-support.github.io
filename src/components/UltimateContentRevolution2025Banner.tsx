@@ -1,12 +1,6 @@
 import React from 'react';
-
 const UltimateContentRevolution2025Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateContentRevolution2025Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 overflow-hidden"
@@ -16,12 +10,10 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-pulse" />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-blue-500/5 to-transparent" />
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-ping" />
         <div className="absolute top-8 right-8 w-1 h-1 bg-purple-400 rounded-full animate-pulse" />
         <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" />
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             {/* Left Content */}
@@ -41,11 +33,9 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                 Ultimate Content Revolution 2025
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">
                   <div
                     key={currentFeature}
@@ -58,13 +48,11 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <p className="text-gray-300 text-sm md:text-base max-w-2xl">
                 Discover revolutionary AI breakthroughsenterprise solutionsand future technology predictions 
                 that are transforming industries worldwide. Join 500+ companies already experiencing the AI revolution.
               </p>
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 items-center">
               <a
@@ -75,7 +63,6 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </a>
-
               <a
                 href="/ai-2025-ultimate-breakthrough"
                 className="group inline-flex items-center px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/30 transition-all duration-300"
@@ -85,7 +72,6 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -94,14 +80,12 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
               <X className="h-5 w-5" />
             </button>
           </div>
-
           {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">
             <div
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
             />
           </div>
-
           {/* Stats Row */}
           <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="flex items-center justify-center gap-2">
@@ -122,14 +106,11 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateContentRevolution2025Banner;
 </div></div></div></div></div></div></div>

@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RevolutionaryAdvertisingBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAdvertisingBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <AnimatePresence>
       {isVisible && (
         <motion.div
@@ -22,7 +15,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
             </div>
-
             <div className="container mx-auto relative z-10">
               <div className="flex flex-col lg:flex-row items-center justify-between">
                 {/* Content */}
@@ -49,7 +41,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                       </div>
                       <p className="text-lg mb-2 text-white/90">{currentContent.subtitle}</p>
                       <p className="text-sm mb-4 text-white/80 max-w-2xl">{currentContent.description}</p>
-                      
                       {/* Features */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {currentContent.features.map((feature, index) => (
@@ -58,7 +49,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                           </span>
                         ))}
                       </div>
-
                       {/* Price and Urgency */}
                       <div className="flex items-center space-x-4 mb-4">
                         <div className="flex items-center space-x-2">
@@ -72,7 +62,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                     </div>
                   </motion.div>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex-shrink-0">
                   <Link
@@ -85,7 +74,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -96,7 +84,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Progress Indicators */}
           <div className="bg-gray-100 py-2">
             <div className="container mx-auto px-4">
@@ -116,8 +103,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
         </motion.div>
       )}
     </AnimatePresence>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryAdvertisingBanner2026;

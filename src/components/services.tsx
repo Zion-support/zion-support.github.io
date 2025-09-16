@@ -1,5 +1,4 @@
 import React from 'react';
-
 const services: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const services: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default services;
-=======
 const serviceCategories: Array<{
   id: string;
   title: string;
@@ -177,7 +172,6 @@ const serviceCategories: Array<{
   }
 ];
 import { realVerifiedServices } from '../data/real-verified-services';
-
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -584,4 +578,3 @@ export default function ServicesPage() {
       <UltraFuturisticFooter2029 />
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>SyntheticBiologyRevolution2027 | Zion Tech Group</title>
-        <meta name="description" content="SyntheticBiologyRevolution2027 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">SyntheticBiologyRevolution2027</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div>
       {/* Hero Section */}
         <div className="text-center mb-20">
@@ -57,7 +44,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
@@ -91,7 +77,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Explore Living Systems →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🏥</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Synthetic Medicine</h3>
@@ -108,7 +93,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Explore Medicine →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">💊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Manufacturing</h3>
@@ -124,7 +108,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Start Manufacturing →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
             <p className="text-teal-100 mb-6 text-center">
@@ -167,7 +150,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             that creates new life forms and transforms human existence.
           </p>
         </div>
-
         {/* Revolutionary Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -199,7 +181,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Enhance Biology →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Living Materials</h3>
@@ -229,7 +210,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
@@ -272,7 +252,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
@@ -301,13 +280,11 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
     </div>
   );
 };
-
 export default SyntheticBiologyRevolution2027;
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

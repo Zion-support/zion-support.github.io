@@ -1,28 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
-
 const RevolutionaryTech2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryTech2026 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryTech2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryTech2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -42,7 +22,6 @@ const RevolutionaryTech2026: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
         </div>
       </div>
-
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-6 py-20">
           whileInView={{ opacity: 1 }}
@@ -158,7 +137,6 @@ const RevolutionaryTech2026: React.FC = () => {
             </button>
         </div>
       </div>
-
       {/* Impact Section */}
       <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border-t border-b border-cyan-400/30">
         <div className="container mx-auto px-6 py-20">
@@ -192,7 +170,6 @@ const RevolutionaryTech2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-6 py-20 text-center">
           whileInView={{ opacity: 1, y: 0 }}
@@ -221,13 +198,8 @@ const RevolutionaryTech2026: React.FC = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
-<<<<<<< HEAD
-=======
 export default RevolutionaryTech2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default RevolutionaryTech2026;

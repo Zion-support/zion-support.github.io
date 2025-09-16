@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const ComprehensiveServices2025: React.FC = () => {
   const services = [
     {
@@ -131,7 +130,6 @@ const ComprehensiveServices2025: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -156,21 +154,8 @@ const ComprehensiveServices2025: React.FC = () => {
           </motion.div>
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const ComprehensiveServices2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServices2025 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServices2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -184,7 +169,6 @@ const ComprehensiveServices2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
             <p className="text-blue-100">Cutting-edge technology solutions</p>
           </div>
-
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
@@ -201,7 +185,6 @@ const ComprehensiveServices2025: React.FC = () => {
                   {serviceCategories[activeCategory as keyof typeof serviceCategories].description}
                 </p>
               </div>
-
               <div className="grid md:grid-cols-3 gap-8">
                 {services[activeCategory as keyof typeof services].map((service, index) => (
                   <motion.div
@@ -222,7 +205,6 @@ const ComprehensiveServices2025: React.FC = () => {
         <meta name="description" content="Explore our comprehensive range of revolutionary technology services for 2025, including AI, quantum computing, and interdimensional technology." />
         <meta name="keywords" content="technology services, AI services, quantum computing, neural interfaces, interdimensional technology" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -236,7 +218,6 @@ const ComprehensiveServices2025: React.FC = () => {
             Transform your business with our revolutionary technology services that push the boundaries of what's possible
           </p>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -253,11 +234,9 @@ const ComprehensiveServices2025: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default ComprehensiveServices2025;

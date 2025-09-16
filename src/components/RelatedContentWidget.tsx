@@ -1,13 +1,6 @@
 import React from 'react';
-
 const RelatedContentWidget: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RelatedContentWidget</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{title}</h2>
@@ -27,8 +20,6 @@ const RelatedContentWidget: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {post.excerpt}
           ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RelatedContentWidget;

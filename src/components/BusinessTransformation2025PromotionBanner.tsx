@@ -1,12 +1,6 @@
 import React from 'react';
-
 const BusinessTransformation2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BusinessTransformation2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
@@ -17,7 +11,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
           <div className="absolute -bottom-4 -right-4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl animate-ping" />
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left side - Main content */}
@@ -36,15 +29,12 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
                   <span className="text-sm font-semibold">Live Data</span>
                 </div>
               </div>
-
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
                 🚀 Business Transformation 2025
               </h2>
-              
               <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl">
                 Real results from real businesses. See how companies achieve 340% revenue growth with AI and automation.
               </p>
-
               {/* Rotating metrics showcase */}
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
                 <div
@@ -59,7 +49,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
                   <span className="text-sm">500+ Companies</span>
                 </div>
               </div>
-
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
                 <div className="flex items-center text-yellow-400">
                   <Star className="w-4 h-4 mr-1" />
@@ -75,7 +64,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Right side - CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <divbutton
@@ -85,7 +73,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
                 View Success Stories
                 <ChevronRight className="w-4 h-4 ml-2" />
               </divbutton>
-              
               <divbutton
                 className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
@@ -93,7 +80,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
                 Calculate ROI
               </divbutton>
             </div>
-
             {/* Close button */}
             <divbutton
               onClick={() => setIsDismissed(true)}
@@ -102,7 +88,6 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
               <X className="w-6 h-6" />
             </divbutton>
           </div>
-
           {/* Metric indicators */}
           <div className="flex justify-center lg:justify-start mt-4 space-x-2">
             {metrics.map((_index) => (
@@ -115,16 +100,13 @@ const BusinessTransformation2025PromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Floating elements */}
         <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce" />
         <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" />
         <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default BusinessTransformation2025PromotionBanner;
 </div></div></div></div></div></div></div></div></div></div>

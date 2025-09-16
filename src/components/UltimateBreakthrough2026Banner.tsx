@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const UltimateBreakthrough2026Banner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateBreakthrough2026Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -47,7 +35,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
             Discover the most advanced technologies that are reshaping the future of human civilization
           </motion.p>
         </div>
-
         {/* Content Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
@@ -97,8 +84,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
                 </div>
               </div>
             </div>
-          
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
             {breakthroughContent.map((_, index) => (
@@ -114,7 +99,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Links */}
         <div
           initial={{ opacity: 0, y: 20 }}
@@ -132,7 +116,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
             </a>
           ))}
         </div>
-
         {/* Statistics */}
         <div
           initial={{ opacity: 0, y: 20 }}
@@ -158,9 +141,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateBreakthrough2026Banner;

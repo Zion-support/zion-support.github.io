@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServices2025= () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ComprehensiveServices2025 | Zion Tech Group</title>
-        <meta name="description" content="ComprehensiveServices2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -26,7 +8,6 @@ const ComprehensiveServices2025= () => {
             Complete technology solutions for modern businesses
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-indigo-400/20">
             <h3 className="text-2xl font-bold mb-4 text-indigo-300">Cloud Solutions</h3>
@@ -39,7 +20,6 @@ const ComprehensiveServices2025= () => {
               <li>• Cloud security</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">AI Integration</h3>
             <p className="text-gray-300 mb-4">
@@ -51,7 +31,6 @@ const ComprehensiveServices2025= () => {
               <li>• Computer vision</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 rounded-xl p-6 backdrop-blur-sm border border-pink-400/20">
             <h3 className="text-2xl font-bold mb-4 text-pink-300">Data Analytics</h3>
             <p className="text-gray-300 mb-4">
@@ -64,18 +43,15 @@ const ComprehensiveServices2025= () => {
             </ul>
           </div>
         </div>
-        
         <div className="text-center mt-16">
           <button className="bg-gradient-to-r from-indigo-500 to-pink-600 hover:from-indigo-600 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Explore Services
           </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default ComprehensiveServices2025;
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -83,4 +59,3 @@ export default ComprehensiveServices2025;
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">ComprehensiveServices2025</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

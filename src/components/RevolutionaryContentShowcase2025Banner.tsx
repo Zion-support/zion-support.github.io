@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const RevolutionaryContentShowcase2025Banner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentShowcase2025Banner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
-
 export default function RevolutionaryContentShowcase2025Banner() {
   const contentTypes = [
     { icon: BookOpename: "Articles"count: "150+"color: "blue" },
@@ -111,8 +101,6 @@ export default function RevolutionaryContentShowcase2025Banner() {
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">Live Event</span>
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default RevolutionaryContentShowcase2025Banner;

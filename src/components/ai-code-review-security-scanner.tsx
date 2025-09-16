@@ -1,17 +1,6 @@
 import React from 'react';
-
 const ai-code-review-security-scanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ai-code-review-security-scanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ai-code-review-security-scanner;
-=======
     <>
       <SEO 
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
@@ -20,7 +9,6 @@ export default ai-code-review-security-scanner;
         ogImage="https://ziontechgroup.com/og-ai-code-review.jpg"
         canonical="https://ziontechgroup.com/ai-code-review-security-scanner"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -33,17 +21,14 @@ export default ai-code-review-security-scanner;
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Development Security
               </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI-Powered Code Review & 
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Security Scanner</span>
               </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
                 suggests improvements, and ensures code quality across multiple programming languages.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
@@ -51,14 +36,12 @@ export default ai-code-review-security-scanner;
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </divbutton>
-                
                 <divbutton
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </divbutton>
               </div>
-              
               <div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
@@ -76,7 +59,6 @@ export default ai-code-review-security-scanner;
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +74,6 @@ export default ai-code-review-security-scanner;
                 to protect your applications and improve development efficiency.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -141,7 +122,6 @@ export default ai-code-review-security-scanner;
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,7 +137,6 @@ export default ai-code-review-security-scanner;
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -227,7 +206,6 @@ export default ai-code-review-security-scanner;
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
@@ -236,7 +214,6 @@ export default ai-code-review-security-scanner;
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -245,7 +222,6 @@ export default ai-code-review-security-scanner;
                       </li>
                     ))}
                   </ul>
-                  
                   <divbutton
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
@@ -260,7 +236,6 @@ export default ai-code-review-security-scanner;
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,7 +251,6 @@ export default ai-code-review-security-scanner;
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
@@ -311,7 +285,6 @@ export default ai-code-review-security-scanner;
                   </div>
                 ))}
               </div>
-              
               <div className="space-y-8">
                 {[
                   {
@@ -348,7 +321,6 @@ export default ai-code-review-security-scanner;
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -364,7 +336,6 @@ export default ai-code-review-security-scanner;
                 to protect their applications and improve code quality.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
@@ -390,7 +361,6 @@ export default ai-code-review-security-scanner;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -404,7 +374,6 @@ export default ai-code-review-security-scanner;
                 Join thousands of development teams who trust our AI-powered platform to protect their applications 
                 and improve code quality. Start your free trial today.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -412,21 +381,18 @@ export default ai-code-review-security-scanner;
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </divbutton>
-                
                 <divbutton
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Contact Sales
                 </divbutton>
               </div>
-              
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -443,7 +409,6 @@ export default ai-code-review-security-scanner;
                   <p>Mobile: +1 302 464 0950</p>
                   <p>Email: kleber@ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Globe className="w-6 h-6" />
@@ -451,7 +416,6 @@ export default ai-code-review-security-scanner;
                   <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
                   <p>https://ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Award className="w-6 h-6" />
@@ -468,7 +432,5 @@ export default ai-code-review-security-scanner;
     </>
   );
 };
-
 export default AICodeReviewSecurityScanner;
 </div></div></div></div></div></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

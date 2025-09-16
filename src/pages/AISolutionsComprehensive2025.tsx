@@ -1,20 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const AISolutionsComprehensive2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AISolutionsComprehensive2025 | Zion Tech Group</title>
-        <meta name="description" content="AISolutionsComprehensive2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-=======
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -51,7 +38,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             </motion.p>
           </div>
         </div>
-
       {/* Category Filter */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -76,7 +62,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
           ))}
         </div>
       </motion.div>
-
       {/* Solutions Grid */}
       <motion.div
         variants={containerVariants}
@@ -107,10 +92,8 @@ const AISolutionsComprehensive2025: React.FC = () => {
                       <div className="text-sm opacity-80">Efficiency</div>
                     </div>
                   </div>
-                  
                   <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
                   <p className="text-lg opacity-90 mb-6">{solution.description}</p>
-                  
                   <div className="space-y-3 mb-6">
                     {solution.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
@@ -119,7 +102,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center">
                       <div className="text-lg font-bold">{solution.stats.roi || solution.stats.autonomy || solution.stats.speed || solution.stats.integration || solution.stats.quality || solution.stats.protection}</div>
@@ -134,11 +116,9 @@ const AISolutionsComprehensive2025: React.FC = () => {
                       <div className="text-xs opacity-80">Potential</div>
                     </div>
                   </div>
-                  
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-white/90">{solution.pricing}</div>
                   </div>
-                  
                   <button className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Get Started →
                   </button>
@@ -148,7 +128,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
           </motion.div>
         </AnimatePresence>
       </motion.div>
-
       {/* Stats Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -161,7 +140,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
             <p className="text-xl opacity-80">Join thousands of organizations transforming with AI</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">10,000+</div>
@@ -181,7 +159,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             </div>
           </div>
         </div>
-
       {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -189,7 +166,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
         transition={{ duration: 1, delay: 1.4 }}
         className="container mx-auto px-4 py-16"
       >
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AISolutionsComprehensive2025</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
@@ -198,5 +174,4 @@ const AISolutionsComprehensive2025: React.FC = () => {
     </div>
   );
 };
-
 export default AISolutionsComprehensive2025;

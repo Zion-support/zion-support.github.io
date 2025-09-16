@@ -1,18 +1,11 @@
 import React from 'react';
-
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechAnnouncementBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
@@ -32,7 +25,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Be among the first to experience the transformation.
               </p>
             </div>
-
             {/* Animated Announcement */}
             <div
               key={currentAnnouncement}
@@ -55,7 +47,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -75,14 +66,12 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Stats */}
           <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Revolution Impact</h3>
-              
               {/* Stats Grid */}
               <div className="grid grid-cols-1 gap-6">
                 {stats.map((statindex) => (
@@ -98,7 +87,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Urgency Indicator */}
               <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
@@ -110,9 +98,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechAnnouncementBanner;

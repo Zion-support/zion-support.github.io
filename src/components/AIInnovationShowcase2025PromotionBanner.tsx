@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIInnovationShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
@@ -29,7 +23,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Center Features */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
@@ -45,7 +38,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
                 <span className="text-sm">99.9% Accuracy</span>
               </div>
             </div>
-
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <a
@@ -65,7 +57,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Features */}
           <div className="md:hidden pb-4">
             <div className="flex items-center justify-center gap-4 text-white/80">
@@ -84,7 +75,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
@@ -110,10 +100,8 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
           />
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIInnovationShowcase2025PromotionBanner;
 </div></div>

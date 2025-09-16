@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryInnovationHub2025 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryInnovationHub2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryInnovationHub2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -39,7 +25,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Innovation Categories */}
         <section id="innovations" className="mb-16">
           <h2 className="text-5xl font-bold text-center mb-12">🔬 Innovation Categories</h2>
@@ -60,7 +45,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
                 Enter AI Lab →
               </a>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">⚛️</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Quantum Lab</h3>
@@ -77,7 +61,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
                 Enter Quantum Lab →
               </a>
             </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Neural Lab</h3>
@@ -94,7 +77,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
                 Enter Neural Lab →
               </a>
             </div>
-
             <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Lab</h3>
@@ -113,7 +95,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Virtual Lab Tour */}
         <section id="lab" className="mb-16">
           <h2 className="text-5xl font-bold text-center mb-12">🏛️ Virtual Innovation Lab Tour</h2>
@@ -167,7 +148,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Research Projects */}
         <section className="mb-16">
           <h2 className="text-5xl font-bold text-center mb-12">🔬 Active Research Projects</h2>
@@ -189,7 +169,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30">
               <h3 className="text-3xl font-bold mb-4">Project: Quantum Reality Engine</h3>
               <p className="text-rose-100 mb-6 text-lg">
@@ -209,7 +188,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Innovation Statistics */}
         <section className="mb-16">
           <h2 className="text-5xl font-bold text-center mb-12">📊 Innovation Impact</h2>
@@ -236,7 +214,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <h2 className="text-5xl font-bold mb-6">Join the Innovation Revolution</h2>
@@ -253,10 +230,8 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
             </a>
           </div>
         </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
     </div>
   );
 };
-
 export default RevolutionaryInnovationHub2025;

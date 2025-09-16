@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIToolsShowcase2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIToolsShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -33,7 +27,6 @@ const AIToolsShowcase2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -51,7 +44,6 @@ const AIToolsShowcase2026: React.FC = () => {
             Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.
           </p>
         </div>
-
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -77,7 +69,6 @@ const AIToolsShowcase2026: React.FC = () => {
             );
           })}
         </div>
-
         {/* Tools Grid */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -110,16 +101,13 @@ const AIToolsShowcase2026: React.FC = () => {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   {/* Tool Info */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {tool.name}
                   </h3>
-                  
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {tool.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {tool.features.slice(02).map((featureIndex) => (
@@ -129,7 +117,6 @@ const AIToolsShowcase2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-1">
@@ -140,7 +127,6 @@ const AIToolsShowcase2026: React.FC = () => {
                       {tool.users} users
                     </div>
                   </div>
-
                   {/* Price */}
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">
@@ -151,7 +137,6 @@ const AIToolsShowcase2026: React.FC = () => {
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
-
                   {/* Hover Overlay */}
                   <div>
                     {hoveredTool === tool.id && (
@@ -169,7 +154,6 @@ const AIToolsShowcase2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -192,9 +176,7 @@ const AIToolsShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIToolsShowcase2026;

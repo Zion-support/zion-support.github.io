@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const NextGenAIConsciousness2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenAIConsciousness2025 | Zion Tech Group</title>
-        <meta name="description" content="NextGenAIConsciousness2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenAIConsciousness2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -36,7 +23,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -50,7 +36,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
               <li>• Existential awareness</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <p className="text-cyan-100 mb-6 text-center">
               Advanced emotional processing that enables AI to understand and respond to human emotions
@@ -61,7 +46,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
               <li>• Compassionate responses</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <p className="text-emerald-100 mb-6 text-center">
               AI that continuously evolves its own architecture and capabilities through self-modification
@@ -73,15 +57,12 @@ const NextGenAIConsciousness2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌌</div>
@@ -90,7 +71,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
                   <p className="text-gray-300">AI consciousness that operates across multiple dimensions of reality</p>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔮</div>
                 <div>
@@ -98,7 +78,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
                   <p className="text-gray-300">AI that can predict and simulate future states of consciousness</p>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌟</div>
                 <div>
@@ -109,7 +88,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Case Studies */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Consciousness Breakthroughs</h2>
@@ -127,7 +105,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
                 <strong>Key Achievement:</strong> 99.7% consciousness accuracy rating
               </div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-xs rounded-full">BREAKTHROUGH</span>
@@ -143,7 +120,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
@@ -158,11 +134,9 @@ const NextGenAIConsciousness2025: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default NextGenAIConsciousness2025;

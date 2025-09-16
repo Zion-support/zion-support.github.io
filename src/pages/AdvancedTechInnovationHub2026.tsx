@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedTechInnovationHub2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AdvancedTechInnovationHub2026 | Zion Tech Group</title>
-        <meta name="description" content="AdvancedTechInnovationHub2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AdvancedTechInnovationHub2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
-
-
 const AdvancedTechInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -52,7 +32,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Categories */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -66,7 +45,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             Explore our cutting-edge research and development across multiple technology domains
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
           <div
@@ -94,7 +72,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Quantum Computing */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -121,7 +98,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Neural Interfaces */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -148,7 +124,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Biotechnology */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -175,7 +150,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Space Technology */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -202,7 +176,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Cybersecurity */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -231,7 +204,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Research Labs */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -246,7 +218,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               State-of-the-art research facilities where breakthrough innovations are born
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               initial={{ opacity: 0, y: 50 }}
@@ -261,7 +232,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-green-400">Active</span>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -275,7 +245,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-green-400">Active</span>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -289,7 +258,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-green-400">Active</span>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -303,7 +271,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-green-400">Active</span>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -317,7 +284,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-green-400">Active</span>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -334,7 +300,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Statistics */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -348,7 +313,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             Our research and development efforts are making a real impact on the world
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -388,7 +352,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -411,9 +374,7 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AdvancedTechInnovationHub2026;

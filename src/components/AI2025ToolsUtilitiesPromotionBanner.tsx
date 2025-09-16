@@ -1,13 +1,6 @@
 import React from 'react';
-
 const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AI2025ToolsUtilitiesPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-16 bg-gradient-to-r from-slate-900 via-indigo-900 to-blue-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -15,7 +8,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -27,20 +19,17 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
               <Wrench className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-indigo-300 font-medium">AI Tools & Utilities</span>
             </div>
-
             {/* Main Heading */}
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Powerful AI Tools for
                 <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent"> Every Need</span>
               </h2>
-              
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
                 Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
                 boost productivityand drive innovation across all aspects of your business.
               </p>
             </div>
-
             {/* Key Benefits */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -60,7 +49,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 <span className="text-gray-300 text-lg">99.9% Uptime Guarantee</span>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <divbutton
@@ -69,7 +57,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 Explore All Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
               </divbutton>
-              
               <divbutton
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
@@ -78,7 +65,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Right Content - Featured Tools */}
           <div
             className="space-y-6"
@@ -89,7 +75,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">Featured Tool</h3>
                 <p className="text-gray-300">Most popular this week</p>
               </div>
-
               <div
                 key={currentTool}
                 className="text-center"
@@ -97,10 +82,8 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${featuredTools[currentTool].color} mb-4`}>
                   <featuredTools[currentTool].icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h4 className="text-lg font-semibold text-white mb-2">{featuredTools[currentTool].name}</h4>
                 <p className="text-gray-300 text-sm mb-4">{featuredTools[currentTool].description}</p>
-                
                 <div className="flex items-center justify-center space-x-4 mb-4">
                   <div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -108,7 +91,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                   </div>
                   <div className="text-gray-400 text-sm">{featuredTools[currentTool].users} users</div>
                 </div>
-
                 <div className="flex justify-center space-x-2">
                   <button className="p-2 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 transition-colors">
                     <Play className="w-4 h-4 text-indigo-300" />
@@ -121,7 +103,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Tool Indicators */}
               <div className="flex justify-center space-x-2 mt-6">
                 {featuredTools.map((_index) => (
@@ -134,7 +115,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((statindex) => (
@@ -152,7 +132,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
           className="text-center mt-16"
@@ -171,9 +150,7 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default AI2025ToolsUtilitiesPromotionBanner;
 </div></div></div>

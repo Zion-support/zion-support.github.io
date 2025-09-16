@@ -1,22 +1,11 @@
         </div>
-
-<<<<<<< HEAD
-const RevolutionaryTechBanner2025: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
           </div>
         </div>
       </div>
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryTechBanner2025: React.FC = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
-
   const bannerMessages = [
     "🚀 NEW: Revolutionary Tech Breakthrough 2025 - Experience AI Consciousness!",
     "⚡ BREAKTHROUGH: Quantum Reality Engine - Manipulate Reality Itself!",
@@ -24,14 +13,12 @@ const RevolutionaryTechBanner2025: React.FC = () => {
     "🌟 BREAKTHROUGH: Consciousness Transfer - Achieve Digital Immortality!",
     "🌌 NEW: Interdimensional Computing - Access Parallel Universe Power!"
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % bannerMessages.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [bannerMessages.length]);
-
   return (
     <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -47,33 +34,28 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             Discover the most revolutionary technologies reshaping our world with infinite possibilities
           </p>
         </div>
-        
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-4 border border-blue-400/30 text-center">
             <div className="text-3xl mb-2">🤖</div>
             <h3 className="text-lg font-bold mb-1">Autonomous AI</h3>
             <p className="text-blue-100 text-xs">Self-operating systems</p>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30 text-center">
             <div className="text-3xl mb-2">⚛️</div>
             <h3 className="text-lg font-bold mb-1">Quantum Neural</h3>
             <p className="text-purple-100 text-xs">Infinite processing</p>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/30 text-center">
             <div className="text-3xl mb-2">🧬</div>
             <h3 className="text-lg font-bold mb-1">Neural Interface</h3>
             <p className="text-emerald-100 text-xs">Thought control</p>
           </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-4 border border-orange-400/30 text-center">
             <div className="text-3xl mb-2">🌌</div>
             <h3 className="text-lg font-bold mb-1">Interdimensional</h3>
             <p className="text-orange-100 text-xs">Multi-dimensional</p>
           </div>
         </div>
-
         {/* Additional Features */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
@@ -97,7 +79,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             <p className="text-sm opacity-80">Built for tomorrow's challenges</p>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <a 
@@ -112,7 +93,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-      
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between">
@@ -122,7 +102,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
               {bannerMessages[currentMessage]}
             </div>
           </div>
-          
           {/* Action Buttons */}
           <div className="flex space-x-4 ml-8">
             <a
@@ -140,11 +119,9 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechBanner2025;
 =======
         {/* Call to Action */}
@@ -169,7 +146,6 @@ export default RevolutionaryTechBanner2025;
             Experience the most advanced technologies that are reshaping our world: AI Consciousness, Quantum Reality, and Neural Interfaces
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -187,7 +163,6 @@ export default RevolutionaryTechBanner2025;
               Explore AI Consciousness →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality</h3>
@@ -204,7 +179,6 @@ export default RevolutionaryTechBanner2025;
               Enter Quantum Reality →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
@@ -222,7 +196,6 @@ export default RevolutionaryTechBanner2025;
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -240,4 +213,3 @@ export default RevolutionaryTechBanner2025;
           </div>
         </div>
       </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

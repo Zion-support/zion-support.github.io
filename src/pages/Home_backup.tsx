@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-const Home_backup: React.FC = () => {
-=======
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
-
   useEffect(() => {
     // Welcome notification
     addNotification({
@@ -16,21 +11,12 @@ const Home: React.FC = () => {
       duration: 5000
     });
   }, [addNotification]);
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>Home_backup | Zion Tech Group</title>
         <meta name="description" content="Home_backup - Revolutionary technology solutions" />
       </Helmet>
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Home_backup</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -60,7 +46,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -71,7 +56,6 @@ const Home: React.FC = () => {
               From machine learning to autonomous systems.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +72,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
@@ -104,7 +87,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
@@ -120,7 +102,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -136,7 +117,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
@@ -152,7 +132,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
@@ -169,7 +148,6 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
@@ -224,15 +202,9 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default Home_backup;
-=======
 export default Home;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

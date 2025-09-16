@@ -1,25 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Brain, Shield, Globe, Target, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const QuantumAIRevolution2026 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>QuantumAIRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="QuantumAIRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumAIRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -54,7 +37,6 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Capabilities */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +48,6 @@ const QuantumAIRevolution2026 = () => {
               Harness the power of quantum mechanics for unprecedented AI performance
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -146,10 +127,8 @@ const QuantumAIRevolution2026 = () => {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +140,6 @@ const QuantumAIRevolution2026 = () => {
               Revolutionary applications powered by quantum artificial intelligence
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {[
               {
@@ -235,7 +213,6 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Performance Metrics */}
       <div className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,7 +224,6 @@ const QuantumAIRevolution2026 = () => {
               Measurable improvements over classical AI systems
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { metric: "10,000x", label: "Faster Processing", description: "Quantum speed advantage" },
@@ -273,7 +249,6 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-purple-600/30 to-pink-600/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -304,5 +279,4 @@ const QuantumAIRevolution2026 = () => {
     </div>
   );
 };
-
 export default QuantumAIRevolution2026;

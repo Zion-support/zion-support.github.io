@@ -1,17 +1,10 @@
 import React from 'react';
-
 const NewContentPromotion2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentPromotion2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
@@ -23,7 +16,6 @@ const NewContentPromotion2025: React.FC = () => {
             Discover our latest breakthrough technologies and innovative solutions that are reshaping the future
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
@@ -73,7 +65,6 @@ const NewContentPromotion2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {promotions.map((_, index) => (
@@ -87,7 +78,6 @@ const NewContentPromotion2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Links */}
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {promotions.map((promo, index) => (
@@ -101,9 +91,7 @@ const NewContentPromotion2025: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NewContentPromotion2025;

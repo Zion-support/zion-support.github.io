@@ -1,33 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const 2025-comprehensive-services-showcase-v2: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2025-comprehensive-services-showcase-v2</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 import SEO from '../components/SEO';
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react';
-
 // Import our new 2025 V2 innovative services
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
 };
-
 const staggerContainer = {
   animate: {
     transition: {
@@ -35,7 +23,6 @@ const staggerContainer = {
     }
   }
 };
-
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
     ...innovativeMicroSaas2025ExpansionV2,
@@ -261,8 +248,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               Visit Website
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default 2025-comprehensive-services-showcase-v2;

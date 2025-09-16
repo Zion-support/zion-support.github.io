@@ -1,17 +1,6 @@
 import React from 'react';
-
 const aws-cost-anomaly-monitor: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">aws-cost-anomaly-monitor</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default aws-cost-anomaly-monitor;
-=======
     <Layout>
       <Head>
         <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>
@@ -30,4 +19,3 @@ export default aws-cost-anomaly-monitor;
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

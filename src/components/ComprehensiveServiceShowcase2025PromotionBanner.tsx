@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ComprehensiveServiceShowcase2025PromotionBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ComprehensiveServiceShowcase2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Brain
@@ -32,7 +21,6 @@ import {
   Clock,
   DollarSign
 } from 'lucide-react';
-
 export default function ComprehensiveServiceShowcase2025PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentServicesetCurrentService] = useState(0);
@@ -231,8 +219,6 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
       <div className="absolute bottom-0 left-0 w-full">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 fill-slate-900">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default ComprehensiveServiceShowcase2025PromotionBanner;

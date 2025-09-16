@@ -1,12 +1,6 @@
 import React from 'react';
-
 const RevolutionaryTechAdvertisingBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryTechAdvertisingBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
@@ -60,9 +54,7 @@ const RevolutionaryTechAdvertisingBanner: React.FC = () => {
           <span className="bg-white/20 px-3 py-1 rounded-full">🚀 Future Innovation</span>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryTechAdvertisingBanner;

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const NewsletterSignupForm: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewsletterSignupForm</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React{ useState } from 'react';
 MailSendCheckCircleStarZapGiftArrowRight
-
 const benefits = [
   "Exclusive access to new content",
   "Early bird pricing on services",
@@ -19,7 +8,6 @@ const benefits = [
   "Free consultation calls",
   "Priority support & updates"
 ];
-
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -34,7 +22,6 @@ const testimonials = [
     rating: 5
   }
 ];
-
 export default function NewsletterSignupForm() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -146,8 +133,6 @@ export default function NewsletterSignupForm() {
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4" />
                   <span>4.9/5 rating</span>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default NewsletterSignupForm;

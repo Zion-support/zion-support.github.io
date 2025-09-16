@@ -1,19 +1,12 @@
 import React from 'react';
-
 const NewsletterSignup2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewsletterSignup2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
-      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
@@ -35,7 +28,6 @@ const NewsletterSignup2026: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Close Button */}
         <button
@@ -44,7 +36,6 @@ const NewsletterSignup2026: React.FC = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
@@ -54,19 +45,16 @@ const NewsletterSignup2026: React.FC = () => {
               <Bell className="w-4 h-4 mr-2" />
               NEWSLETTER 2026
             </div>
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead of the
               <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Revolution
               </span>
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join 50,000+ innovatorsresearchersand technology leaders who get exclusive access 
               to the latest AI breakthroughsautomation insightsand future predictions.
             </p>
-
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {benefits.map((benefitindex) => {
@@ -87,7 +75,6 @@ const NewsletterSignup2026: React.FC = () => {
                 );
               })}
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
@@ -101,7 +88,6 @@ const NewsletterSignup2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Right Content - Newsletter Form */}
           <div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
@@ -121,7 +107,6 @@ const NewsletterSignup2026: React.FC = () => {
                       Enter your email to join our exclusive community
                     </p>
                   </div>
-
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -137,7 +122,6 @@ const NewsletterSignup2026: React.FC = () => {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       />
                     </div>
-
                     {error && (
                       <div
                         className="text-red-400 text-sm"
@@ -145,7 +129,6 @@ const NewsletterSignup2026: React.FC = () => {
                         {error}
                       </div>
                     )}
-
                     <button
                       type="submit"
                       disabled={isLoading}
@@ -164,7 +147,6 @@ const NewsletterSignup2026: React.FC = () => {
                         </>
                       )}
                     </button>
-
                     <div className="flex items-center text-sm text-gray-400">
                       <Shield className="w-4 h-4 mr-2" />
                       <span>We respect your privacy. Unsubscribe at any time.</span>
@@ -179,16 +161,13 @@ const NewsletterSignup2026: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Welcome to the Future! 🚀
                   </h3>
-                  
                   <p className="text-gray-300 mb-6">
                     'You', 're now part of our exclusive community. Check your email for a confirmation 
                     and get ready for amazing content delivered to your inbox.
                   </p>
-
                   <div className="bg-white/10 rounded-lg p-4 mb-6">
                     <h4 className="text-white font-medium mb-2">'What', 's Next?</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
@@ -198,7 +177,6 @@ const NewsletterSignup2026: React.FC = () => {
                       <li>• Invitation to our private Discord</li>
                     </ul>
                   </div>
-
                   <button
                     onClick={() => setIsSubscribed(false)}
                     className="text-purple-400 hover:text-purple-300 text-sm font-medium"
@@ -210,7 +188,6 @@ const NewsletterSignup2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
           className="text-center mt-12"
@@ -240,10 +217,8 @@ const NewsletterSignup2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NewsletterSignup2026;
 </div></div></div>

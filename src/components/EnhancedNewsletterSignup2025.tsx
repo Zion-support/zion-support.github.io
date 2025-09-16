@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const EnhancedNewsletterSignup2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedNewsletterSignup2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import React, { useState } from 'react';
-
 const EnhancedNewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
   };
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
@@ -49,7 +34,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12 text-white mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -65,7 +49,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             AI consciousness updates, and quantum computing innovations.
           </p>
         </div>
-
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 mb-8">
             <input
@@ -105,7 +88,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               Join 50,000+ tech enthusiasts and industry leaders
             </p>
           </form>
-
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-4xl mb-3">🧠</div>
@@ -123,7 +105,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <p className="text-sm opacity-90">Metaverse and omniversal access</p>
             </div>
           </div>
-
           <div className="text-center">
             <p className="text-lg opacity-90 mb-4">
               Join <span className="font-bold text-cyan-400">50,000+</span> innovators already transforming the future
@@ -136,7 +117,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -164,8 +144,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <h3 className="text-xl font-bold mb-2 text-purple-300">AI Consciousness Updates</h3>
               <p className="text-purple-100 text-sm">
                 Be the first to know about breakthroughs in artificial consciousness and self-aware AI systems.
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
           {/* Social Proof */}
           <div className="mt-12">
             <p className="text-lg opacity-90 mb-6">Trusted by pioneers worldwide</p>

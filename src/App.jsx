@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const App= () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">App</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-=======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
@@ -19,23 +6,19 @@ import { ChatAssistant } from './components/ChatAssistant';
 import ErrorBoundary from './components/ErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const AIInnovationHub2026 = React.lazy(() => import('./pages/AIInnovationHub2026'));
 const TechTrends2026 = React.lazy(() => import('./pages/UltimateTechTrends2026'));
 const ComprehensiveTechInsights2026 = React.lazy(() => import('./pages/ComprehensiveTechInsights2026'));
-
 // Loading component
 const LoadingFallback = () => <LoadingSpinner size="large" text="Loading page..." className="min-h-screen" />;
-
 function App() {
     return (
       <ErrorBoundary>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
               <AppHeader />
-
               <main className="flex-1">
                 <Suspense fallback={<LoadingFallback />}>
                   <Routes>
@@ -46,7 +29,6 @@ function App() {
                   </Routes>
                 </Suspense>
               </main>
-              
               <Footer />
               <ChatAssistant />
               <NotificationSystem />
@@ -55,6 +37,4 @@ function App() {
       </ErrorBoundary>
     );
 }
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default App;

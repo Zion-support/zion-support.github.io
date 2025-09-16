@@ -1,23 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const audit-log-vault: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">audit-log-vault</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default audit-log-vault;
-=======
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
-
 export default function AuditLogVaultPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -67,4 +53,3 @@ export default function AuditLogVaultPage() {
                 <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

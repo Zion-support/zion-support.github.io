@@ -1,12 +1,6 @@
 import React from 'react';
-
 const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2025PromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div>
       {isVisible && (
         <div
@@ -17,7 +11,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left Content */}
@@ -31,28 +24,23 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                     <Play className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
-
                   {/* Title */}
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {demos[currentDemo].title}
                   </h2>
-
                   {/* Subtitle */}
                   <p className="text-lg text-indigo-200 font-medium">
                     {demos[currentDemo].subtitle}
                   </p>
-
                   {/* Description */}
                   <p className="text-gray-300 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
-
                   {/* Metrics */}
                   <div className="flex items-center text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     <span>{demos[currentDemo].metrics}</span>
                   </div>
-
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
                     {features.slice(0, 3).map((feature, index) => {
@@ -65,7 +53,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                       );
                     })}
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
                     <button 
@@ -83,7 +70,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
                 <div
@@ -101,7 +87,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                         <p className="text-gray-300 text-sm">Interactive Experience</p>
                       </div>
                     </div>
-                    
                     {/* Demo Visualization */}
                     <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
                       {/* Animated Elements */}
@@ -123,7 +108,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
@@ -145,7 +129,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
@@ -167,7 +150,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
@@ -187,7 +169,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                         )}
                       </div>
                     </div>
-
                     {/* Demo Controls */}
                     <div className="flex items-center justify-center space-x-2">
                       <button 
@@ -204,14 +185,12 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Floating Elements */}
                   <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-
                   <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
@@ -220,7 +199,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {demos.map((_, index) => (
@@ -236,7 +214,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -246,10 +223,8 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
           </button>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default InteractiveTechDemo2025PromotionBanner;
 </div></div></div></div></div></div>

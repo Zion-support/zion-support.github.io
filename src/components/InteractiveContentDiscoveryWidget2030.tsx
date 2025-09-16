@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const InteractiveContentDiscoveryWidget2030: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveContentDiscoveryWidget2030</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -22,7 +11,6 @@ interface ContentItem {
   featured: boolean;
   tags: string[];
 }
-
 const contentItems: ContentItem[] = [
   {
     id: 'ai-trends-2025-2030',
@@ -85,7 +73,6 @@ const contentItems: ContentItem[] = [
     tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
   }
 ];
-
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
   const [searchTermsetSearchTerm] = useState<string>(', ');
@@ -225,8 +212,6 @@ export default function InteractiveContentDiscoveryWidget2030() {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Our Services
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default InteractiveContentDiscoveryWidget2030;

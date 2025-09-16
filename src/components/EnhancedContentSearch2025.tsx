@@ -1,12 +1,6 @@
 import React from 'react';
-
 const EnhancedContentSearch2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedContentSearch2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="w-full max-w-4xl mx-auto">
       {/* Search Form */}
       <divform
@@ -17,7 +11,6 @@ const EnhancedContentSearch2025: React.FC = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-2">🔍 Discover Revolutionary Content</h2>
           <p className="text-gray-600">Search through our comprehensive library of cutting-edge technology content</p>
         </div>
-
         <div className="space-y-4">
           {/* Search Input */}
           <div className="relative">
@@ -37,7 +30,6 @@ const EnhancedContentSearch2025: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap gap-2">
             {Object.entries(categories).map(([key, label]) => (
@@ -57,7 +49,6 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         </div>
       </divform>
-
       {/* Search Results */}
       <div>
         {showResults && (
@@ -77,7 +68,6 @@ const EnhancedContentSearch2025: React.FC = () => {
                 </svg>
               </button>
             </div>
-
             {filteredResults.length === 0 ? (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">🔍</div>
@@ -127,7 +117,6 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Quick Access */}
       <div
         className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6"
@@ -153,9 +142,7 @@ const EnhancedContentSearch2025: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default EnhancedContentSearch2025;

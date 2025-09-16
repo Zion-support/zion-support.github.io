@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-
-const RevolutionaryAdBanner2026: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAdBanner2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import { Link } from 'react-router-dom';
-
 const RevolutionaryAdBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
@@ -19,7 +8,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center text-white">
           <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-4">
@@ -32,7 +20,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
             Discover the latest breakthroughs in AI consciousness, quantum computing, neural interfaces, 
             and more. See how leading organizations are transforming their industries with our cutting-edge solutions.
           </p>
-          
           {/* Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -46,7 +33,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                 Learn More →
               </Link>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-3">⚛️</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Revolution</h3>
@@ -58,7 +44,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                 Explore →
               </Link>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-3">📊</div>
               <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
@@ -71,7 +56,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link 
@@ -93,7 +77,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               Get Started
             </Link>
           </div>
-
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -115,11 +98,9 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2026;
 =======
 import { motion } from 'framer-motion';
@@ -134,4 +115,3 @@ import { motion } from 'framer-motion';
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
         </div>
     </motion.div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

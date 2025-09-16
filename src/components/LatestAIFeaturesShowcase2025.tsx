@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const LatestAIFeaturesShowcase2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LatestAIFeaturesShowcase2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle
-
 export default function LatestAIFeaturesShowcase2025() {
   const features = [
     {
@@ -169,8 +159,6 @@ export default function LatestAIFeaturesShowcase2025() {
                 <Users className="w-5 h-5 mr-2" />
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default LatestAIFeaturesShowcase2025;

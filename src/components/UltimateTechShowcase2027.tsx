@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
 const UltimateTechShowcase2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">UltimateTechShowcase2027</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">
         {/* Header */}
@@ -33,7 +22,6 @@ const UltimateTechShowcase2027: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {showcaseItems.map((item, index) => (
@@ -53,7 +41,6 @@ const UltimateTechShowcase2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Display */}
         <AnimatePresence mode="wait">
           <div
@@ -74,7 +61,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                 <p className="text-xl opacity-90 mb-8">
                   {showcaseItems[activeTab].description}
                 </p>
-                
                 <div className="space-y-4 mb-8">
                   {showcaseItems[activeTab].features.map((feature, index) => (
                     <div
@@ -89,7 +75,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-4">
                   <motion.a
                     href={showcaseItems[activeTab].link}
@@ -108,7 +93,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Right Visual */}
               <div className="relative">
                 <div
@@ -141,8 +125,6 @@ const UltimateTechShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-        
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 30 }}
@@ -174,9 +156,7 @@ const UltimateTechShowcase2027: React.FC = () => {
         </div>
         </AnimatePresence>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default UltimateTechShowcase2027;

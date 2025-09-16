@@ -24,7 +24,6 @@
                   <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-xl p-12 text-center`}>
                     <h3 className="text-3xl font-bold mb-6">{slide.title}</h3>
                     <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">{slide.description}</p>
-                    
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                       {slide.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -32,7 +31,6 @@
                         </div>
                       ))}
                     </div>
-                    
                     <a 
                       href={slide.link}
                       className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
@@ -57,17 +55,7 @@
             </svg>
           </button>
         </div>
-
-<<<<<<< HEAD
-const RevolutionaryContentCarousel2039: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2039</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
@@ -91,30 +79,24 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
       features: ["Transcendent AI Consciousness", "Infinite Quantum Mastery", "Universal Reality Engine"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -125,7 +107,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             Explore our latest revolutionary technology content featuring the most advanced breakthroughs in AI, quantum computing, and reality manipulation
           </p>
         </div>
-
         <div className="relative">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -143,9 +124,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
               ))}
             </div>
           </div>
-
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
@@ -162,8 +141,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             />
           ))}
         </div>
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
         {/* Quick Access Links */}
         <div className="mt-8 text-center">
           <div className="inline-flex items-center space-x-4">

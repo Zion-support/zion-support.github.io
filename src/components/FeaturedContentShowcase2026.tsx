@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock, User, TrendingUp, Eye, Heart } from 'lucide-react';
-
 const FeaturedContentShowcase2026: React.FC = () => {
   const featuredContent = [
     {
@@ -50,21 +49,13 @@ const FeaturedContentShowcase2026: React.FC = () => {
       link: "/quantum-computing-guide-2026"
     }
   ];
-
   const categories = [
     { name: "AI Innovation", count: 24, color: "bg-purple-500" },
     { name: "Technology", count: 18, color: "bg-blue-500" },
     { name: "Quantum Computing", count: 12, color: "bg-green-500" },
     { name: "Future Tech", count: 8, color: "bg-pink-500" }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FeaturedContentShowcase2026</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -84,7 +75,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
             Discover our most popular and groundbreaking content that's shaping the future of technology
           </p>
         </motion.div>
-
         {/* Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
@@ -112,17 +102,14 @@ const FeaturedContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                     {content.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {content.excerpt}
                   </p>
-
                   {/* Author Info */}
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
@@ -133,7 +120,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
                       <p className="text-gray-400 text-sm">{content.authorRole}</p>
                     </div>
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-4">
@@ -151,7 +137,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
                       <span>{content.likes}K</span>
                     </div>
                   </div>
-
                   {/* Read More */}
                   <div className="flex items-center text-cyan-400 group-hover:text-white transition-colors duration-300">
                     <span className="font-semibold mr-2">Read More</span>
@@ -162,7 +147,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
             </motion.article>
           ))}
         </div>
-
         {/* Categories Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -173,7 +157,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             Popular Categories
           </h3>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {categories.map((category, index) => (
               <motion.div
@@ -192,7 +175,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -207,8 +189,6 @@ const FeaturedContentShowcase2026: React.FC = () => {
         </motion.div>
       </div>
     </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default FeaturedContentShowcase2026;

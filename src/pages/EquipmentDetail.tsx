@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const EquipmentDetail: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>EquipmentDetail | Zion Tech Group</title>
-        <meta name="description" content="EquipmentDetail - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">EquipmentDetail</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default EquipmentDetail;
-=======
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -39,13 +15,10 @@ import { equipmentListings } from '@/data/listings';
 import { ProductListing } from '@/types/listings';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface EquipmentSpecification {
   name: string;
   value: string;
 }
-
 interface EquipmentDetails {
   id: string;
   name: string;
@@ -65,7 +38,6 @@ interface EquipmentDetails {
   warranty?: string;
   returnPolicy?: string;
 }
-
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
   return {
@@ -91,14 +63,12 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     returnPolicy: '30-day return policy'
   };
 }
-
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc;
   }, {} as { [key: string]: EquipmentDetails });
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -409,4 +379,3 @@ export default function EquipmentDetail() {
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

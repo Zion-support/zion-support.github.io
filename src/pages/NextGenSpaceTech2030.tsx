@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const NextGenSpaceTech2030: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NextGenSpaceTech2030 | Zion Tech Group</title>
-        <meta name="description" content="NextGenSpaceTech2030 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NextGenSpaceTech2030</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
-
-
 const NextGenSpaceTech2030: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
@@ -52,7 +32,6 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Space Technology Categories */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -66,7 +45,6 @@ const NextGenSpaceTech2030: React.FC = () => {
             Cutting-edge space technologies that will revolutionize space exploration and colonization
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Advanced Propulsion Systems */}
           <div
@@ -91,7 +69,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Propulsion →
             </button>
           </div>
-
           {/* Space Habitats */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -115,7 +92,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Habitats →
             </button>
           </div>
-
           {/* Asteroid Mining */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -139,7 +115,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Mining →
             </button>
           </div>
-
           {/* Interplanetary Communication */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -163,7 +138,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Communication →
             </button>
           </div>
-
           {/* Space Manufacturing */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -187,7 +161,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Manufacturing →
             </button>
           </div>
-
           {/* Space Defense */}
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -213,7 +186,6 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mission Timeline */}
       <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -228,7 +200,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               Our roadmap for space exploration and colonization through 2030
             </p>
           </div>
-
           <div className="space-y-8">
             <div
               initial={{ opacity: 0, x: -50 }}
@@ -242,7 +213,6 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Establishment of the first permanent lunar base with 50 residents</p>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -255,7 +225,6 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Launch of the first crewed mission to Mars with advanced life support systems</p>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -268,7 +237,6 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Begin commercial asteroid mining operations with automated systems</p>
               </div>
             </div>
-
             <div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -284,7 +252,6 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -298,7 +265,6 @@ const NextGenSpaceTech2030: React.FC = () => {
             Revolutionary space technologies currently in development
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -325,7 +291,6 @@ const NextGenSpaceTech2030: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -353,7 +318,6 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -376,9 +340,7 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NextGenSpaceTech2030;

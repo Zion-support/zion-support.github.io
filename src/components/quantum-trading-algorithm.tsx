@@ -1,5 +1,4 @@
 import React from 'react';
-
 const quantum-trading-algorithm: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,6 @@ const quantum-trading-algorithm: React.FC = () => {
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default quantum-trading-algorithm;
-=======
 const features = [
   'Quantum-enhanced market prediction algorithms',
   'Real-time market data processing',
@@ -22,7 +17,6 @@ const features = [
   'Custom strategy builder',
   'Performance analytics dashboard'
 ];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -46,7 +40,6 @@ const pricingPlans = [
     popular: false
   }
 ];
-
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>
@@ -204,4 +197,3 @@ export default function QuantumTradingAlgorithm() {
               <p className="text-gray-300">{contactInfo.address}</p>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

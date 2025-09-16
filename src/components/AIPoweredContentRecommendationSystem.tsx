@@ -1,12 +1,6 @@
 import React from 'react';
-
 const AIPoweredContentRecommendationSystem: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AIPoweredContentRecommendationSystem</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -17,20 +11,17 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
             <Brain className="w-4 h-4 mr-2" />
             AI-Powered Recommendations
           </div>
-          
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Intelligent Content
             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Recommendation System
             </span>
           </h1>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover the most relevant content tailored to your interests using our advanced AI algorithms. 
             Get personalized recommendations that match your reading patterns and preferences.
           </p>
         </div>
-
         {/* AI Stats */}
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
@@ -50,7 +41,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Category Filter */}
         <div
           className="mb-8"
@@ -75,7 +65,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* AI Processing Indicator */}
         {isLoading && (
           <div
@@ -87,7 +76,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Recommendations Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -128,13 +116,10 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
                         )}
                       </div>
                     </div>
-                    
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                       {item.title}
                     </h3>
-                    
                     <p className="text-sm text-gray-600 mb-4">by {item.author}</p>
-                    
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.tags.slice(03).map((tagIndex) => (
                         <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
@@ -143,7 +128,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* AI Insights */}
                   <div className="p-6 bg-gray-50">
                     <div className="flex items-center justify-between mb-4">
@@ -155,9 +139,7 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
                         {item.confidence}% match
                       </div>
                     </div>
-                    
                     <p className="text-sm text-gray-600 mb-4">{item.reason}</p>
-                    
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
                         <span className="text-sm text-gray-500 mr-2">AI Score:</span>
@@ -171,7 +153,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="p-6 bg-white">
                     <div className="flex items-center justify-between">
@@ -200,7 +181,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Load More */}
         <div
           className="text-center mt-12"
@@ -214,9 +194,7 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
           </button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default AIPoweredContentRecommendationSystem;

@@ -1,13 +1,6 @@
 import React from 'react';
-
 const PerformanceOptimizations: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">PerformanceOptimizations</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <>
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -56,8 +49,6 @@ const PerformanceOptimizations: React.FC = () => {
         }}
       />
     </>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
-
 export default PerformanceOptimizations;

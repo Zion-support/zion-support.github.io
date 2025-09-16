@@ -1,15 +1,8 @@
 import React from 'react';
-
 const RevolutionaryServicesBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryServicesBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-8 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -19,7 +12,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
           <div className="absolute bottom-10 right-10 w-28 h-28 bg-pink-500/10 rounded-full animate-pulse delay-500"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         <div
           className="text-center mb-12"
@@ -35,7 +27,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
             From AI and quantum computing to space technology and neural interfaces.
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
@@ -56,7 +47,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -80,9 +70,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryServicesBanner;

@@ -1,12 +1,6 @@
 import React from 'react';
-
 const RevolutionaryAIServices2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">RevolutionaryAIServices2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -20,7 +14,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             Experience the future of artificial intelligence with our breakthrough services that transcend traditional boundaries and achieve unprecedented capabilities.
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
@@ -30,32 +23,26 @@ const RevolutionaryAIServices2025: React.FC = () => {
             >
               {/* Gradient Background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
-              
               {/* Category Badge */}
               <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 mb-4">
                 {service.category}
               </div>
-
               {/* Icon */}
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6`}>
                 <service.icon className="w-8 h-8 text-white" />
               </div>
-
               {/* Content */}
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
                 {service.title}
               </h3>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Pricing */}
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-3xl font-bold text-green-400">{service.price}</span>
                 <span className="text-gray-400 line-through">{service.marketPrice}</span>
               </div>
-
               {/* Features */}
               <div className="space-y-2 mb-6">
                 <h4 className="text-white font-semibold">Key Features:</h4>
@@ -66,7 +53,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Benefits */}
               <div className="space-y-2 mb-8">
                 <h4 className="text-white font-semibold">Benefits:</h4>
@@ -77,7 +63,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* CTA Button */}
               <a href="/contact" className="block w-full">
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
@@ -88,7 +73,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <div
           className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-600/10 backdrop-blur-lg rounded-2xl p-12 border border-white/10"
@@ -114,9 +98,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default RevolutionaryAIServices2025;

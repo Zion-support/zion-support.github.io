@@ -1,19 +1,12 @@
 import React from 'react';
-
 const NextGenAIInnovationPromotionBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NextGenAIInnovationPromotionBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white"
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-        
         {/* Floating Elements */}
         <div
             y: [0-20],
@@ -27,7 +20,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
         >
           <Brain className="w-6 h-6 text-blue-400" />
         </div>
-        
         <div
             y: [0150],
             rotate: [0-50]
@@ -42,7 +34,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
           <Zap className="w-5 h-5 text-purple-400" />
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Left Content */}
@@ -54,7 +45,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
             </div>
-            
             <div className="flex-1 min-w-0">
                 <div
                   key={currentSlide}
@@ -70,7 +60,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Center Action Button */}
           <divbutton
             className={`hidden md:flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-lg rounded-full font-semibold transition-all duration-300`}
@@ -79,7 +68,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
             {currentAnnouncement.action}
             <ArrowRight className="w-4 h-4" />
           </divbutton>
-
           {/* Right Stats */}
           <div className="hidden lg:flex items-center gap-6 text-sm">
             <div className="text-center">
@@ -95,7 +83,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
               <div className="text-gray-400">Operation</div>
             </div>
           </div>
-
           {/* Close Button */}
           <divbutton
             onClick={() => setIsVisible(false)}
@@ -104,7 +91,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
             <X className="w-4 h-4" />
           </divbutton>
         </div>
-
         {/* Mobile Action Button */}
         <div
           className="md:hidden mt-4"
@@ -117,7 +103,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
             <ArrowRight className="w-4 h-4" />
           </divbutton>
         </div>
-
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
           <div
@@ -125,10 +110,8 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
           />
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default NextGenAIInnovationPromotionBanner;
 </div></div></div>

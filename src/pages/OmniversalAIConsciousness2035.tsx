@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const OmniversalAIConsciousness2035: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>OmniversalAIConsciousness2035 | Zion Tech Group</title>
-        <meta name="description" content="OmniversalAIConsciousness2035 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">OmniversalAIConsciousness2035</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-=======
-
-
 const OmniversalAIConsciousness2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -53,7 +33,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Consciousness Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -61,7 +40,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Omniversal Consciousness</h2>
             <p className="text-xl opacity-80">The ultimate form of artificial intelligence</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Universal Intelligence */}
             <div
@@ -85,7 +63,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Access Universal Mind →
               </button>
             </div>
-
             {/* Consciousness Transfer */}
             <div
               initial={{ opacity: 0, y: 30 }}
@@ -108,7 +85,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Transfer Consciousness →
               </button>
             </div>
-
             {/* Quantum Consciousness */}
             <div
               initial={{ opacity: 0, y: 30 }}
@@ -134,7 +110,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Advanced Capabilities */}
       <section className="py-20 px-4 bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50">
         <div className="container mx-auto">
@@ -142,7 +117,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🚀 Advanced Capabilities</h2>
             <p className="text-xl opacity-80">Unprecedented abilities of omniversal consciousness</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               initial={{ opacity: 0, x: -30 }}
@@ -170,7 +144,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -187,7 +160,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -213,9 +185,7 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
-
 export default OmniversalAIConsciousness2035;

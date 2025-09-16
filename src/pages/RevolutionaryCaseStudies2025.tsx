@@ -1,26 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryCaseStudies2025: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RevolutionaryCaseStudies2025 | Zion Tech Group</title>
-        <meta name="description" content="RevolutionaryCaseStudies2025 - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RevolutionaryCaseStudies2025</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryCaseStudies2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Industries', icon: '🌟' },
     { id: 'ai', name: 'AI Solutions', icon: '🤖' },
@@ -29,9 +13,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     { id: 'blockchain', name: 'Blockchain', icon: '🔗' },
     { id: 'cloud', name: 'Cloud Services', icon: '☁️' }
   ];
-
 import React from 'react';
-
 const RevolutionaryCaseStudies2025: React.FC = () => {
   const caseStudies = [
     {
@@ -143,7 +125,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
       color: "from-yellow-600 to-orange-600"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -163,7 +144,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -183,7 +163,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -224,7 +203,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   SUCCESS
                 </div>
               </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -240,7 +218,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <p className="text-gray-300 text-sm">{study.description}</p>
                 </div>
               </div>
-
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -252,7 +229,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <div className="text-sm opacity-75">Annual Savings</div>
                 </div>
               </div>
-
               {/* Technologies Used */}
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Technologies Used:</h4>
@@ -264,7 +240,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* CTA */}
               <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 View Detailed Case Study →
@@ -272,7 +247,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </div>
           ))}
         </div>
-
       {/* Statistics Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
@@ -283,7 +257,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Overall Success Metrics</h2>
             <p className="text-xl opacity-90">Combined results across all our revolutionary AI implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-green-400 mb-2">+400%</div>
@@ -306,7 +279,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -326,11 +298,9 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               Schedule Consultation
             </button>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryCaseStudies2025;
