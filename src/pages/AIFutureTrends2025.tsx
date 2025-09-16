@@ -230,7 +230,7 @@ const AIFutureTrends2025: React.FC = () => {
             >
               <div className="flex items-start space-x-6">
                 <div className={`w-20 h-20 bg-gradient-to-r ${trends[activeTrend].color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                  <trends[activeTrend].icon className="w-10 h-10 text-white" />
+                  {React.createElement(trends[activeTrend].icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-white mb-4">{trends[activeTrend].title}</h3>

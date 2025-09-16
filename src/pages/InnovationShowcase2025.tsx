@@ -259,7 +259,7 @@ const InnovationShowcase2025: React.FC = () => {
             >
               <div className="flex items-start space-x-6">
                 <div className={`w-20 h-20 bg-gradient-to-r ${innovations[activeInnovation].color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                  <innovations[activeInnovation].icon className="w-10 h-10 text-white" />
+                  {React.createElement(innovations[activeInnovation].icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-white mb-4">{innovations[activeInnovation].title}</h3>
