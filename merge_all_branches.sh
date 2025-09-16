@@ -1,88 +1,58 @@
 #!/bin/bash
 
-echo "🚀 Starting automated branch merge process..."
+# Script to merge all open branches and resolve conflicts
+set -e
 
-# Get all remote branches (excluding main)
-branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
+echo "🚀 Starting systematic merge of all branches..."
 
-echo "🔍 Found branches to merge:"
-echo "$branches"
+# Get list of unmerged branches
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -E "(cursor|feature)" | head -20)
 
-# Counter for processed branches
-processed=0
-merged=0
-conflicts=0
+echo "Found unmerged branches:"
+echo "$UNMERGED_BRANCHES"
 
-for branch in $branches; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    echo "🔄 Attempting to merge $branch..."
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-ff -m "Merge branch $branch into main" 2>/dev/null; then
+    # Try to merge
+    if git merge "$branch" --no-commit; then
         echo "✅ Successfully merged $branch"
-        merged=$((merged + 1))
+        git commit -m "Merge $branch into main - resolved conflicts automatically"
+        return 0
     else
-        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
+        echo "⚠️  Merge conflict in $branch, resolving..."
         
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts by keeping main branch version..."
-            
-            # Find all conflicted files
-            conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
-            
-            for file in $conflicted_files; do
-                echo "   Resolving: $file"
-                
-                # For binary files, just add them
-                if file "$file" | grep -q "binary"; then
-                    git add "$file"
-                    continue
-                fi
-                
-                # For text files, use git checkout to keep main branch version
-                git checkout --ours "$file"
-                git add "$file"
-            done
-            
-            # Handle modify/delete conflicts
-            git status --porcelain | grep "^DU\|^UD" | while read status file; do
-                if [ "$status" = "DU" ]; then
-                    git rm "$file"
-                else
-                    git add "$file"
-                fi
-            done
-            
-            # Commit the resolved conflicts
-            if git commit --no-verify -m "🔧 Resolve merge conflicts in $branch - keep main branch version"; then
-                echo "✅ Successfully resolved conflicts and merged $branch"
-                merged=$((merged + 1))
-            else
-                echo "❌ Failed to resolve conflicts in $branch"
-                git merge --abort
-                conflicts=$((conflicts + 1))
-            fi
-        else
-            echo "❌ Failed to merge $branch (no conflicts detected)"
-            git merge --abort
-            conflicts=$((conflicts + 1))
-        fi
+        # Check what files have conflicts
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        echo "Conflicted files: $CONFLICT_FILES"
+        
+        # Resolve conflicts by keeping our version (main branch)
+        for file in $CONFLICT_FILES; do
+            echo "Resolving conflict in $file..."
+            git checkout --ours "$file"
+            git add "$file"
+        done
+        
+        # Commit the merge
+        git commit -m "Merge $branch into main - resolved conflicts by keeping main branch version"
+        echo "✅ Resolved conflicts and merged $branch"
+        return 0
     fi
-    
-    processed=$((processed + 1))
-    
-    # Safety check - don't process too many branches at once
-    if [ $processed -ge 10 ]; then
-        echo "⚠️  Reached safety limit of 10 branches processed"
-        break
-    fi
+}
+
+# Merge each branch
+for branch in $UNMERGED_BRANCHES; do
+    echo "Processing $branch..."
+    merge_branch "$branch"
+    echo "---"
 done
 
-echo ""
-echo "📊 Merge Summary:"
-echo "   Total branches processed: $processed"
-echo "   Successfully merged: $merged"
-echo "   Conflicts encountered: $conflicts"
-echo ""
-echo "✅ Branch merge process completed!"
+echo "🎉 All branches merged successfully!"
+
+# Push to remote
+echo "📤 Pushing to remote..."
+git push origin main
+
+echo "✅ All done!"
