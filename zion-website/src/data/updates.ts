@@ -23,6 +23,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Case Studies'
   },
   {
+    title: 'Release: Production-Ready Agent Guardrails v1.0',
+    summary: 'Executable policies, scoped tooling, and eval gates for safe agent deployments.',
+    href: '/updates/production-ready-agent-guardrails-1-0',
+    date: '2025-09-16',
+    tag: 'Release'
+  },
+  {
     title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
     summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
     href: '/updates/real-time-rag-benchmark-suite-1-0',
