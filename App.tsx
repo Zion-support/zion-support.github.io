@@ -40,6 +40,9 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import FeaturedContentSection2026 from './src/components/FeaturedContentSection2026';
+import RevolutionaryAIServices2026 from './src/pages/RevolutionaryAIServices2026';
+import NextGenTechSolutions2026 from './src/pages/NextGenTechSolutions2026';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
@@ -310,6 +313,9 @@ export default function App(): JSX.Element {
                 
                 {/* Featured Content Section */}
                 <FeaturedContentSection />
+                
+                {/* NEW: Featured Content Section 2026 - Revolutionary Content */}
+                <FeaturedContentSection2026 />
                 
                 {/* Dynamic Content Carousel */}
                 <DynamicContentCarousel />
@@ -1578,6 +1584,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+          <Route path="/revolutionary-ai-services-2026" element={<RevolutionaryAIServices2026 />} />
+          <Route path="/next-gen-tech-solutions-2026" element={<NextGenTechSolutions2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />

@@ -1,200 +1,156 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Rocket, Brain, Globe } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-e058
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  X, 
+  Brain, 
+  Rocket, 
+  Zap, 
+  Globe,
+  Star,
+  CheckCircle
+} from 'lucide-react';
 
-const RevolutionaryContentBanner2026: React.FC = () => {
-  const features = [
+const RevolutionaryContentBanner2026 = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const bannerContent = [
     {
+      id: 1,
+      title: "Revolutionary AI Services 2026",
+      subtitle: "Experience the future of artificial intelligence",
+      description: "From synthetic intelligence to holographic reality, discover cutting-edge AI services that transcend traditional limitations.",
       icon: Brain,
-      title: "AI Consciousness",
-      description: "True self-aware AI systems",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-600 to-pink-600",
+      link: "/revolutionary-ai-services-2026",
+      features: ["Synthetic Intelligence", "Holographic Reality", "Quantum-Neural Fusion"]
     },
     {
-      icon: Globe,
-      title: "Space Technology",
-      description: "Interplanetary business solutions",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Zap,
-      title: "Holographic Computing",
-      description: "3D immersive interfaces",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-<<<<<<< HEAD
+      id: 2,
+      title: "Next-Gen Tech Solutions",
+      subtitle: "The future is here today",
+      description: "Interdimensional computing, omniversal AI consciousness, and space technology solutions reshaping reality itself.",
       icon: Rocket,
-      title: "Biotech AI",
-      description: "Personalized medicine at scale",
-      color: "from-orange-500 to-red-500"
+      color: "from-blue-600 to-purple-600",
+      link: "/next-gen-tech-solutions-2026",
+      features: ["Interdimensional Computing", "Omniversal AI", "Space Technology"]
+    },
+    {
+      id: 3,
+      title: "Revolutionary Blog Content",
+      subtitle: "Latest insights and breakthroughs",
+      description: "Stay ahead with our revolutionary blog posts covering the latest in AI consciousness, quantum computing, and future technology.",
+      icon: Zap,
+      color: "from-green-600 to-blue-600",
+      link: "/blog",
+      features: ["AI Consciousness", "Quantum Computing", "Future Tech"]
     }
   ];
-
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-            <Star className="w-4 h-4 text-yellow-400 mr-2" />
-            <span className="text-sm font-medium text-white">Revolutionary 2026 Technology</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Future is{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Here
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the most advanced AI, space technology, and biotech solutions that are reshaping the world in 2026. 
-            Join the revolution that's transforming industries and creating unprecedented opportunities.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
-            >
-              Explore Revolutionary Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </motion.button>
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View Case Studies
-            </motion.button>
-          </div>
-        </motion.div>
-=======
-      id: 4,
-    }
-  ];
-
-  const items = contentItems.length > 0 ? contentItems : defaultContent;
 
   useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentContent = bannerContent[currentSlide];
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto">
-      {/* Main Banner */}
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            {/* Content */}
+            <div className="flex-1 flex items-center gap-6">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center gap-4"
+              >
+                <div className={`p-3 bg-gradient-to-r ${currentContent.color} rounded-lg`}>
+                  <currentContent.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <Sparkles className="w-4 h-4 text-purple-400" />
+                    <span className="text-purple-400 text-sm font-medium">NEW</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">{currentContent.title}</h3>
+                  <p className="text-gray-300 text-sm">{currentContent.subtitle}</p>
+                </div>
+              </motion.div>
+
+              <div className="hidden md:block">
+                <p className="text-gray-300 text-sm max-w-md">
+                  {currentContent.description}
+                </p>
+              </div>
+
+              <div className="hidden lg:flex items-center gap-2">
+                {currentContent.features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-1 bg-slate-800/50 px-2 py-1 rounded-full">
+                    <CheckCircle className="w-3 h-3 text-green-400" />
+                    <span className="text-xs text-gray-300">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Image */}
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                      {getCategoryIcon(currentItem.category)}
-                    </div>
-                    <p className="text-sm opacity-80">Featured Content</p>
-                  </div>
-                </div>
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
+            {/* CTA Buttons */}
+            <div className="flex items-center gap-3">
+              <a
+                href={currentContent.link}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2"
+              >
+                Explore Now
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-4 gap-2">
+            {bannerContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-purple-400 w-8' : 'bg-gray-600'
+                }`}
+              />
+            ))}
           </div>
         </div>
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-e058
 
-        {/* Feature Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
-            >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-300 text-sm">
-                {feature.description}
-              </p>
-              
-              <div className="absolute top-4 right-4">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-        >
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">500+</div>
-            <div className="text-gray-300">Revolutionary Projects</div>
-          </div>
-          
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">$2.3B+</div>
-            <div className="text-gray-300">Revenue Generated</div>
-          </div>
-          
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <div className="text-3xl font-bold text-white mb-2">99%</div>
-            <div className="text-gray-300">Client Satisfaction</div>
-          </div>
-        </motion.div>
-=======
-      {/* Content Preview Grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {items.slice(0, 4).map((item, index) => (
-          <div
-            key={item.id}
-            className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
-              index === currentIndex
-                ? 'border-blue-500 bg-blue-50'
-                : 'border-gray-200 hover:border-gray-300 bg-white hover:shadow-md'
-            }`}
-            onClick={() => goToSlide(index)}
-          >
->>>>>>> cursor/create-and-deploy-new-content-e058
-      </div>
-    </div>
+        {/* Floating Elements */}
+        <div className="absolute top-2 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-4 right-20 w-1 h-1 bg-pink-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-2000"></div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
