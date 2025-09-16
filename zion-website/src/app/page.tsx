@@ -34,8 +34,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Autonomous Change Approvals —
-            <a href="/updates/autonomous-change-approvals-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            New: Agent Posture Monitor —
+            <a href="/updates/real-time-agent-posture-monitor-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Safety Red‑Team Playbooks —
             <a href="/updates/agent-safety-redteam-playbooks-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
@@ -49,8 +49,8 @@ export default function HomePage() {
             Agentic Evidence Hub —
             <a href="/updates/agentic-evidence-hub-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Postmortems — Evidence‑First Templates —
-            <a href="/updates/production-agent-postmortems-evidence-first" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            Evidence‑Driven Rollback Playbook —
+            <a href="/updates/evidence-driven-rollback-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             New: Real‑Time Agent FinOps Dashboard —
             <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
@@ -153,8 +153,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Autonomous Change Approvals —
-            <a href="/updates/autonomous-change-approvals-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            Fresh: Agent Posture Monitor —
+            <a href="/updates/real-time-agent-posture-monitor-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Safety Red‑Team Playbooks —
             <a href="/updates/agent-safety-redteam-playbooks-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
@@ -165,8 +165,8 @@ export default function HomePage() {
             Fresh: Real‑Time Agent Benchmark Suite —
             <a href="/updates/real-time-agent-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Postmortems — Evidence‑First Templates —
-            <a href="/updates/production-agent-postmortems-evidence-first" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            Evidence‑Driven Rollback Playbook —
+            <a href="/updates/evidence-driven-rollback-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Fresh: Real‑Time Agent FinOps Dashboard —
             <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
