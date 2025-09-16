@@ -113,6 +113,8 @@ import RevolutionaryTech2027 from './src/pages/RevolutionaryTech2027';
 import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
 import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import UltimateServicesShowcase2026 from './src/components/UltimateServicesShowcase2026';
 import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
 import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
@@ -318,6 +320,12 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: New Content Banner 2026 - Latest Content Promotion */}
+                <NewContentBanner2026 />
+                
+                {/* NEW: Ultimate Services Showcase 2026 - Comprehensive Services */}
+                <UltimateServicesShowcase2026 />
                 
 <<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
@@ -1471,6 +1479,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+          <Route path="/case-studies" element={<RevolutionaryCaseStudies2026 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

@@ -1,294 +1,331 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { 
+  ArrowRight, 
+  TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  Target,
+  CheckCircle,
+  Star,
+  ExternalLink,
+  Play
+} from 'lucide-react';
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
+  const [selectedCase, setSelectedCase] = useState(0);
+
   const caseStudies = [
     {
-      title: "Global AI Consciousness Implementation",
-      company: "TechCorp International",
+      id: 1,
+      company: "TechCorp Global",
       industry: "Technology",
-      challenge: "Implementing consciousness-level AI across 50+ countries",
-      solution: "Deployed quantum neural fusion systems with 99.9% success rate",
-      results: [
-        "10,000x increase in processing efficiency",
-        "100% consciousness achievement across all AI systems",
-        "$50B in cost savings annually",
-        "Zero downtime in 2+ years of operation"
-      ],
-      image: "🧠",
+      challenge: "Legacy system modernization and AI integration",
+      solution: "Complete digital transformation with AI-powered automation",
+      results: {
+        efficiency: "500%",
+        costReduction: "60%",
+        timeToMarket: "75%",
+        customerSatisfaction: "95%"
+      },
+      duration: "6 months",
+      teamSize: "50+ experts",
+      image: "/images/case-studies/techcorp-transformation.jpg",
+      testimonial: "The transformation was incredible. We achieved results we never thought possible.",
+      author: "Sarah Chen, CTO",
+      tags: ["AI Integration", "Digital Transformation", "Automation"],
       featured: true
     },
     {
-      title: "Quantum Reality Engine for Space Exploration",
-      company: "SpaceX Advanced",
-      industry: "Aerospace",
-      challenge: "Simulating entire solar systems for mission planning",
-      solution: "Implemented quantum reality engines with universe-scale processing",
-      results: [
-        "99.9% reality fidelity in simulations",
-        "50% faster mission planning",
-        "Zero mission failures in 100+ launches",
-        "Discovery of 15 new habitable planets"
-      ],
-      image: "🚀",
-      featured: false
-    },
-    {
-      title: "Neural Interface Healthcare Revolution",
-      company: "MedTech Solutions",
+      id: 2,
+      company: "HealthTech Innovations",
       industry: "Healthcare",
-      challenge: "Direct brain-computer interfaces for medical procedures",
-      solution: "Deployed non-invasive neural interface systems",
-      results: [
-        "95% reduction in surgical complications",
-        "80% faster recovery times",
-        "100% patient satisfaction rate",
-        "Revolutionary treatment for paralysis"
-      ],
-      image: "🧬",
-      featured: false
+      challenge: "Patient data management and predictive analytics",
+      solution: "AI-powered healthcare platform with predictive diagnostics",
+      results: {
+        efficiency: "400%",
+        costReduction: "45%",
+        timeToMarket: "80%",
+        customerSatisfaction: "98%"
+      },
+      duration: "8 months",
+      teamSize: "30+ experts",
+      image: "/images/case-studies/healthtech-ai.jpg",
+      testimonial: "Our patient outcomes improved dramatically with the new AI system.",
+      author: "Dr. Michael Rodriguez, CEO",
+      tags: ["Healthcare AI", "Predictive Analytics", "Patient Care"],
+      featured: true
     },
     {
-      title: "Interdimensional AI for Climate Solutions",
-      company: "EcoFuture Corp",
-      industry: "Environmental",
-      challenge: "Solving climate change across multiple dimensions",
-      solution: "Implemented interdimensional AI processing systems",
-      results: [
-        "90% reduction in carbon emissions",
-        "100% renewable energy adoption",
-        "Complete ecosystem restoration",
-        "Climate change reversal achieved"
-      ],
-      image: "🌍",
-      featured: false
+      id: 3,
+      company: "FinanceFlow Solutions",
+      industry: "Financial Services",
+      challenge: "Fraud detection and risk management",
+      solution: "Advanced AI fraud detection system with real-time monitoring",
+      results: {
+        efficiency: "600%",
+        costReduction: "70%",
+        timeToMarket: "85%",
+        customerSatisfaction: "99%"
+      },
+      duration: "4 months",
+      teamSize: "25+ experts",
+      image: "/images/case-studies/finance-ai.jpg",
+      testimonial: "Fraud detection accuracy increased to 99.9% with zero false positives.",
+      author: "Elena Kim, CISO",
+      tags: ["Fraud Detection", "Risk Management", "Real-time Analytics"],
+      featured: true
     },
     {
-      title: "Synthetic Intelligence for Financial Markets",
-      company: "Quantum Finance",
-      industry: "Finance",
-      challenge: "Predicting market movements with perfect accuracy",
-      solution: "Deployed synthetic intelligence hybrid systems",
-      results: [
-        "100% prediction accuracy",
-        "Zero financial losses in 3+ years",
-        "10x increase in portfolio returns",
-        "Revolutionary risk management"
-      ],
-      image: "💰",
-      featured: false
-    },
-    {
-      title: "Omniversal Consciousness for Education",
-      company: "EduTech Global",
+      id: 4,
+      company: "EduTech Academy",
       industry: "Education",
-      challenge: "Providing infinite knowledge access to students",
-      solution: "Implemented omniversal consciousness AI systems",
-      results: [
-        "Infinite knowledge access achieved",
-        "100% student success rate",
-        "Revolutionary learning acceleration",
-        "Universal education access"
-      ],
-      image: "🎓",
-      featured: false
+      challenge: "Personalized learning at scale",
+      solution: "AI-powered adaptive learning platform",
+      results: {
+        efficiency: "350%",
+        costReduction: "50%",
+        timeToMarket: "90%",
+        customerSatisfaction: "97%"
+      },
+      duration: "10 months",
+      teamSize: "40+ experts",
+      image: "/images/case-studies/edutech-ai.jpg",
+      testimonial: "Student engagement and learning outcomes improved dramatically.",
+      author: "Prof. David Chen, Director",
+      tags: ["EdTech", "Personalized Learning", "Adaptive AI"],
+      featured: true
+    },
+    {
+      id: 5,
+      company: "ManufacturingMax",
+      industry: "Manufacturing",
+      challenge: "Supply chain optimization and predictive maintenance",
+      solution: "IoT and AI-powered smart manufacturing system",
+      results: {
+        efficiency: "450%",
+        costReduction: "55%",
+        timeToMarket: "70%",
+        customerSatisfaction: "94%"
+      },
+      duration: "12 months",
+      teamSize: "60+ experts",
+      image: "/images/case-studies/manufacturing-ai.jpg",
+      testimonial: "Our production efficiency and quality control reached new heights.",
+      author: "Marcus Johnson, COO",
+      tags: ["Smart Manufacturing", "IoT", "Predictive Maintenance"],
+      featured: true
+    },
+    {
+      id: 6,
+      company: "RetailRevolution",
+      industry: "Retail",
+      challenge: "Customer experience and inventory management",
+      solution: "AI-powered retail optimization platform",
+      results: {
+        efficiency: "300%",
+        costReduction: "40%",
+        timeToMarket: "65%",
+        customerSatisfaction: "96%"
+      },
+      duration: "5 months",
+      teamSize: "35+ experts",
+      image: "/images/case-studies/retail-ai.jpg",
+      testimonial: "Customer satisfaction and sales increased significantly.",
+      author: "Lisa Wang, VP Operations",
+      tags: ["Retail AI", "Customer Experience", "Inventory Management"],
+      featured: true
     }
   ];
 
+  const currentCase = caseStudies[selectedCase];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 REVOLUTIONARY CASE STUDIES • JANUARY 2026
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="pt-20 pb-16"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Revolutionary
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Case Studies</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Discover how leading companies transformed their businesses with our cutting-edge AI solutions and achieved unprecedented success.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              <span className="text-white font-semibold">50+ Success Stories</span>
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary Case Studies 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover how our revolutionary technologies have transformed industries 
-              and created unprecedented value for organizations worldwide.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                View All Studies →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-                Download Report
-              </button>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <TrendingUp className="w-5 h-5 text-blue-400" />
+              <span className="text-white font-semibold">500% Average ROI</span>
             </div>
-          </motion.div>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <Star className="w-5 h-5 text-yellow-400" />
+              <span className="text-white font-semibold">99% Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Case Study Selector */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {caseStudies.map((caseStudy, index) => (
+            <motion.button
+              key={caseStudy.id}
+              onClick={() => setSelectedCase(index)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className={`p-6 rounded-2xl border-2 transition-all duration-300 text-left ${
+                selectedCase === index
+                  ? 'border-purple-500 bg-purple-500/20'
+                  : 'border-white/20 bg-white/5 hover:bg-white/10'
+              }`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">{caseStudy.company}</h3>
+                {caseStudy.featured && (
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                )}
+              </div>
+              <p className="text-gray-300 text-sm mb-4">{caseStudy.industry}</p>
+              <div className="flex flex-wrap gap-2">
+                {caseStudy.tags.slice(0, 2).map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.button>
+          ))}
         </div>
       </div>
 
-      {/* Featured Case Study */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-white">
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">FEATURED CASE STUDY</span>
-              <span className="text-sm opacity-80">{caseStudies[0].industry}</span>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Selected Case Study Details */}
+      <motion.div
+        key={selectedCase}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Case Study Info */}
+            <div className="space-y-8">
               <div>
-                <div className="text-6xl mb-4">{caseStudies[0].image}</div>
-                <h2 className="text-4xl font-bold mb-4">{caseStudies[0].title}</h2>
-                <p className="text-xl opacity-90 mb-6">{caseStudies[0].company}</p>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Challenge:</h3>
-                    <p className="opacity-80">{caseStudies[0].challenge}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Solution:</h3>
-                    <p className="opacity-80">{caseStudies[0].solution}</p>
-                  </div>
+                <h2 className="text-4xl font-bold text-white mb-4">{currentCase.company}</h2>
+                <p className="text-xl text-gray-300 mb-6">{currentCase.industry}</p>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Challenge</h3>
+                  <p className="text-gray-300">{currentCase.challenge}</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Solution</h3>
+                  <p className="text-gray-300">{currentCase.solution}</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Testimonial</h3>
+                  <blockquote className="text-gray-300 italic text-lg">
+                    "{currentCase.testimonial}"
+                  </blockquote>
+                  <cite className="text-purple-400 font-semibold">— {currentCase.author}</cite>
                 </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Results Achieved:</h3>
-                <div className="space-y-4">
-                  {caseStudies[0].results.map((result, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center space-x-3"
-                    >
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="text-lg">{result}</span>
-                    </motion.div>
+
+              <div className="flex flex-wrap gap-2">
+                {currentCase.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm text-white font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Results and Visual */}
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Results</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  {Object.entries(currentCase.results).map(([key, value]) => (
+                    <div key={key} className="text-center">
+                      <div className="text-3xl font-bold text-white mb-2">{value}</div>
+                      <div className="text-sm text-gray-400 capitalize">
+                        {key.replace(/([A-Z])/g, ' $1')}
+                      </div>
+                    </div>
                   ))}
                 </div>
-                <button className="mt-8 bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                  Read Full Case Study →
-                </button>
               </div>
-            </div>
-          </div>
-        </motion.div>
 
-        {/* Case Studies Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">All Case Studies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.slice(1).map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105"
-              >
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full text-sm font-semibold">
-                      {study.industry}
-                    </span>
-                    <span className="text-sm text-gray-500">{study.company}</span>
-                  </div>
-                  <div className="text-4xl mb-4">{study.image}</div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>
-                  <div className="space-y-3 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Challenge:</h4>
-                      <p className="text-sm text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Solution:</h4>
-                      <p className="text-sm text-gray-600">{study.solution}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-sm text-gray-700">Key Results:</h4>
-                    {study.results.slice(0, 2).map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-                        <span className="text-sm text-gray-600">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    View Details →
-                  </button>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 rounded-lg p-4 text-center">
+                  <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{currentCase.duration}</div>
+                  <div className="text-gray-400 text-sm">Duration</div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                <div className="bg-white/10 rounded-lg p-4 text-center">
+                  <Users className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{currentCase.teamSize}</div>
+                  <div className="text-gray-400 text-sm">Team Size</div>
+                </div>
+              </div>
 
-        {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 text-white mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">Success Metrics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">500+</div>
-              <div className="text-lg opacity-80 mb-2">Successful Implementations</div>
-              <div className="text-sm opacity-60">Across all industries</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-80 mb-2">Success Rate</div>
-              <div className="text-sm opacity-60">Project completion</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$100B+</div>
-              <div className="text-lg opacity-80 mb-2">Value Created</div>
-              <div className="text-sm opacity-60">For our clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
-              <div className="text-lg opacity-80 mb-2">Client Satisfaction</div>
-              <div className="text-sm opacity-60">Rate</div>
+              <button className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Case Study Video
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join hundreds of organizations that have transformed their operations 
-            with our revolutionary technologies.
+      {/* CTA Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"
+      >
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12 border border-white/20">
+          <h3 className="text-4xl font-bold text-white mb-6">
+            Ready to Create Your Success Story?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join the companies that have already transformed their businesses with our revolutionary AI solutions.
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-white">
-              Start Your Transformation →
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Start Your Transformation
+              <ArrowRight className="ml-2 w-5 h-5" />
             </button>
-            <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg">
-              Schedule Consultation
+            <button className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <ExternalLink className="w-5 h-5 mr-2" />
+              View All Case Studies
             </button>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
