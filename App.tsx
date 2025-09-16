@@ -67,7 +67,6 @@ import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
-<<<<<<< HEAD
 import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
@@ -400,7 +399,6 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
-<<<<<<< HEAD
                         <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">BREAKTHROUGH</span>
                         <span className="text-sm text-gray-500">January 25, 2025</span>
                       </div>
@@ -565,7 +563,6 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* NEW: Ultimate Technology Showcase 2026 */}
                 <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -709,8 +706,6 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-edd2
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
