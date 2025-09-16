@@ -2,28 +2,28 @@ import React from 'react';
 
 const AdvancedAISolutions2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🤖 ADVANCED AI SOLUTIONS 2026
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🤖 ADVANCED AI SOLUTIONS • JANUARY 2026
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Next-Generation AI Solutions
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Advanced AI Solutions 2026
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Harness the power of advanced artificial intelligence with our cutting-edge solutions 
-              that deliver unprecedented performance, accuracy, and business value.
+              Harness the power of next-generation artificial intelligence with our comprehensive suite 
+              of AI solutions designed to transform your business operations
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore AI Solutions
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                🚀 Get Started
               </button>
               <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                Request Demo
+                📊 View Demo
               </button>
             </div>
           </div>
@@ -32,231 +32,190 @@ const AdvancedAISolutions2026: React.FC = () => {
 
       {/* AI Solutions Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🧠 Advanced AI Solutions</h2>
-          <p className="text-xl opacity-90">Comprehensive AI solutions for every business need</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Autonomous AI Agents */}
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Agents</h3>
+            <p className="text-blue-100 mb-6 text-center">
+              Self-learning AI agents that can perform complex tasks without human intervention
+            </p>
+            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
+              <li>• Natural Language Processing</li>
+              <li>• Decision Making</li>
+              <li>• Task Automation</li>
+              <li>• Continuous Learning</li>
+            </ul>
+            <button className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
+              Learn More →
+            </button>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🎨</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Generative AI 3.0</h3>
             <p className="text-purple-100 mb-6 text-center">
-              Self-governing AI agents that work independently to complete complex tasks and make intelligent decisions.
+              Advanced content generation with unprecedented creativity and accuracy
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• 24/7 autonomous operation</li>
-              <li>• Self-learning capabilities</li>
-              <li>• Multi-task coordination</li>
-              <li>• Human-like decision making</li>
+              <li>• Text Generation</li>
+              <li>• Image Creation</li>
+              <li>• Video Production</li>
+              <li>• Code Generation</li>
             </ul>
-            <div className="bg-purple-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-purple-200 mb-2">Performance Metrics:</div>
-              <div className="text-xs text-purple-300">• 99.7% task completion rate</div>
-              <div className="text-xs text-purple-300">• 85% cost reduction</div>
-              <div className="text-xs text-purple-300">• 300% efficiency improvement</div>
-            </div>
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Deploy Agents →
+              Explore →
             </button>
           </div>
-
-          {/* Predictive Analytics Engine */}
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">📊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics Engine</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Advanced machine learning models that predict future trends, behaviors, and outcomes with unprecedented accuracy.
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Real-time predictions</li>
-              <li>• Multi-dimensional analysis</li>
-              <li>• Automated insights</li>
-              <li>• Risk assessment</li>
-            </ul>
-            <div className="bg-cyan-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-cyan-200 mb-2">Accuracy Metrics:</div>
-              <div className="text-xs text-cyan-300">• 94.2% prediction accuracy</div>
-              <div className="text-xs text-cyan-300">• 0.3s response time</div>
-              <div className="text-xs text-cyan-300">• 50+ data sources</div>
-            </div>
-            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Start Predicting →
-            </button>
-          </div>
-
-          {/* Natural Language Processing */}
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">💬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Advanced NLP</h3>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔍</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              State-of-the-art natural language processing that understands context, emotion, and intent with human-level accuracy.
+              Advanced machine learning models for accurate business forecasting
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Multi-language support</li>
-              <li>• Sentiment analysis</li>
-              <li>• Intent recognition</li>
-              <li>• Context understanding</li>
+              <li>• Market Analysis</li>
+              <li>• Risk Assessment</li>
+              <li>• Customer Behavior</li>
+              <li>• Trend Prediction</li>
             </ul>
-            <div className="bg-emerald-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-emerald-200 mb-2">Language Support:</div>
-              <div className="text-xs text-emerald-300">• 100+ languages</div>
-              <div className="text-xs text-emerald-300">• 98.5% accuracy</div>
-              <div className="text-xs text-emerald-300">• Real-time processing</div>
-            </div>
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Process Language →
-            </button>
-          </div>
-
-          {/* Computer Vision */}
-          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">👁️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Computer Vision</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Advanced visual recognition systems that can identify, analyze, and understand visual content with superhuman accuracy.
-            </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Object detection</li>
-              <li>• Facial recognition</li>
-              <li>• Scene understanding</li>
-              <li>• Quality inspection</li>
-            </ul>
-            <div className="bg-orange-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-orange-200 mb-2">Vision Capabilities:</div>
-              <div className="text-xs text-orange-300">• 99.9% object accuracy</div>
-              <div className="text-xs text-orange-300">• 0.1s processing time</div>
-              <div className="text-xs text-orange-300">• 4K+ resolution support</div>
-            </div>
-            <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-              Enable Vision →
-            </button>
-          </div>
-
-          {/* Generative AI */}
-          <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🎨</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Generative AI</h3>
-            <p className="text-indigo-100 mb-6 text-center">
-              Creative AI systems that generate original content, designs, and solutions across multiple domains.
-            </p>
-            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
-              <li>• Content generation</li>
-              <li>• Creative design</li>
-              <li>• Code generation</li>
-              <li>• Music composition</li>
-            </ul>
-            <div className="bg-indigo-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-indigo-200 mb-2">Creative Output:</div>
-              <div className="text-xs text-indigo-300">• 10+ content types</div>
-              <div className="text-xs text-indigo-300">• Human-level quality</div>
-              <div className="text-xs text-indigo-300">• Instant generation</div>
-            </div>
-            <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
-              Generate Content →
-            </button>
-          </div>
-
-          {/* AI-Powered Automation */}
-          <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚙️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Automation</h3>
-            <p className="text-pink-100 mb-6 text-center">
-              Intelligent automation systems that streamline workflows and eliminate manual processes with AI-driven efficiency.
-            </p>
-            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
-              <li>• Workflow automation</li>
-              <li>• Process optimization</li>
-              <li>• Error reduction</li>
-              <li>• Resource optimization</li>
-            </ul>
-            <div className="bg-pink-500/20 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-pink-200 mb-2">Efficiency Gains:</div>
-              <div className="text-xs text-pink-300">• 90% time savings</div>
-              <div className="text-xs text-pink-300">• 95% error reduction</div>
-              <div className="text-xs text-pink-300">• 24/7 operation</div>
-            </div>
-            <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
-              Automate Now →
+              Discover →
             </button>
           </div>
         </div>
-      </div>
 
-      {/* AI Implementation Process */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🚀 AI Implementation Process</h2>
-          <p className="text-xl opacity-90">Our proven methodology for successful AI deployment</p>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">1</div>
-            <h3 className="text-xl font-semibold mb-2">Assessment</h3>
-            <p className="text-sm opacity-90">Analyze your current systems and identify AI opportunities</p>
+        {/* AI Capabilities Section */}
+        <div className="bg-gradient-to-r from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">🚀 Advanced AI Capabilities</h2>
+            <p className="text-xl opacity-90">Cutting-edge AI technologies that drive innovation</p>
           </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">2</div>
-            <h3 className="text-xl font-semibold mb-2">Strategy</h3>
-            <p className="text-sm opacity-90">Develop a comprehensive AI strategy tailored to your needs</p>
-          </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">3</div>
-            <h3 className="text-xl font-semibold mb-2">Implementation</h3>
-            <p className="text-sm opacity-90">Deploy AI solutions with minimal disruption to operations</p>
-          </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">4</div>
-            <h3 className="text-xl font-semibold mb-2">Optimization</h3>
-            <p className="text-sm opacity-90">Continuously optimize and scale AI solutions for maximum impact</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Success Stories */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🏆 AI Success Stories</h2>
-          <p className="text-xl opacity-90">Real results from our AI implementations</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">🏭</div>
-            <h3 className="text-xl font-semibold mb-2">Manufacturing Giant</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Implemented AI-powered predictive maintenance that reduced downtime by 75% and saved $50M annually.
-            </p>
-            <div className="text-xs text-purple-300">
-              <div>• 75% downtime reduction</div>
-              <div>• $50M annual savings</div>
-              <div>• 99.5% prediction accuracy</div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🎯</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
+                  <p className="text-gray-300">Advanced image and video analysis with 99.9% accuracy</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🗣️</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Natural Language Understanding</h3>
+                  <p className="text-gray-300">Deep comprehension of human language and context</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🔄</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Reinforcement Learning</h3>
+                  <p className="text-gray-300">AI systems that learn through trial and error</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🧩</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Neural Architecture Search</h3>
+                  <p className="text-gray-300">Automated design of optimal neural networks</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">⚡</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Edge AI Processing</h3>
+                  <p className="text-gray-300">Real-time AI inference at the edge of networks</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🔒</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Federated Learning</h3>
+                  <p className="text-gray-300">Privacy-preserving collaborative AI training</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <div className="text-4xl mb-4">🏦</div>
-            <h3 className="text-xl font-semibold mb-2">Financial Services</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Deployed AI fraud detection that prevented $200M in fraudulent transactions with 99.8% accuracy.
-            </p>
-            <div className="text-xs text-cyan-300">
-              <div>• $200M fraud prevented</div>
-              <div>• 99.8% accuracy rate</div>
-              <div>• 0.1s detection time</div>
+        </div>
+
+        {/* Industry Applications */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">🏭 Industry Applications</h2>
+            <p className="text-xl opacity-90">AI solutions tailored for every industry</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl mb-4 text-center">🏥</div>
+              <h3 className="text-xl font-bold mb-3 text-center">Healthcare</h3>
+              <ul className="text-sm space-y-2">
+                <li>• Medical Diagnosis</li>
+                <li>• Drug Discovery</li>
+                <li>• Treatment Planning</li>
+                <li>• Patient Monitoring</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl mb-4 text-center">🏦</div>
+              <h3 className="text-xl font-bold mb-3 text-center">Finance</h3>
+              <ul className="text-sm space-y-2">
+                <li>• Fraud Detection</li>
+                <li>• Algorithmic Trading</li>
+                <li>• Credit Scoring</li>
+                <li>• Risk Management</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl mb-4 text-center">🚗</div>
+              <h3 className="text-xl font-bold mb-3 text-center">Automotive</h3>
+              <ul className="text-sm space-y-2">
+                <li>• Autonomous Vehicles</li>
+                <li>• Predictive Maintenance</li>
+                <li>• Traffic Optimization</li>
+                <li>• Safety Systems</li>
+              </ul>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <div className="text-4xl mb-4">🏥</div>
-            <h3 className="text-xl font-semibold mb-2">Healthcare Provider</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI-powered diagnostic assistance improved patient outcomes by 40% and reduced misdiagnosis by 60%.
-            </p>
-            <div className="text-xs text-emerald-300">
-              <div>• 40% better outcomes</div>
-              <div>• 60% fewer misdiagnoses</div>
-              <div>• 30% faster diagnosis</div>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">📊 Performance Metrics</h2>
+            <p className="text-xl opacity-90">Proven results across all AI solutions</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold mb-1">Accuracy</div>
+              <div className="text-sm opacity-80">AI Model Performance</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>
+              <div className="text-lg font-semibold mb-1">Faster</div>
+              <div className="text-sm opacity-80">Processing Speed</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">50%</div>
+              <div className="text-lg font-semibold mb-1">Cost Reduction</div>
+              <div className="text-sm opacity-80">Operational Efficiency</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-lg font-semibold mb-1">Availability</div>
+              <div className="text-sm opacity-80">Continuous Operation</div>
             </div>
           </div>
         </div>
@@ -264,14 +223,14 @@ const AdvancedAISolutions2026: React.FC = () => {
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform with AI?</h2>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the AI revolution and unlock unprecedented opportunities for growth, efficiency, and innovation. 
-            Our expert team is ready to help you implement cutting-edge AI solutions.
+            Join thousands of companies already using our advanced AI solutions to drive innovation, 
+            increase efficiency, and achieve unprecedented results.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your AI Journey
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
