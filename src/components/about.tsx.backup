@@ -3,11 +3,7 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-MailPhoneMapPinShieldCheckRocketSparklesGlobeCpuBrain
-=======
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function AboutPage() {
 	const contactInfo = {
@@ -18,28 +14,17 @@ export default function AboutPage() {
 	};
 
 	const pillars = [
-<<<<<<< HEAD
-		{ title: 'AI-first 'Engineering', 'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' },
-		{ title: 'Platform and 'SRE', 'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' },
-		{ title: 'Quantum R&'D', 'icon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
-		{ title: 'Global 'Delivery', 'icon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' }
-=======
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
->>>>>>> origin/auto/autonomy-17186719616
 	];
 
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">
 			<Head>
 				<title>About Us - Zion Tech Group</title>
-<<<<<<< HEAD
-				<meta name="description" content="Zion Tech Group builds outcome-driven AImicro SaaSand platform engineering solutions with transparent pricing and 24/7 support." />
-=======
 				<meta name="description" content="Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support." />
->>>>>>> origin/auto/autonomy-17186719616
 			</Head>
 			<section className="relative py-24 px-4">
 				<div className="max-w-6xl mx-auto">
@@ -48,11 +33,7 @@ export default function AboutPage() {
 							We build practical AI and platform solutions
 						</h1>
 						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-							From micro SaaS accelerators to enterprise AI serviceswe focus on measurable outcomes: faster deliveryhigher reliabilityand lower cost.
-=======
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
->>>>>>> origin/auto/autonomy-17186719616
 						</p>
 					</div>
 
@@ -73,11 +54,7 @@ export default function AboutPage() {
 							</div>
 							<ul className="list-disc list-inside text-gray-300 space-y-2">
 								<li>Productized service tiers with clear SLAs</li>
-<<<<<<< HEAD
-								<li>Securitycomplianceand FinOps baked in</li>
-=======
 								<li>Security, compliance, and FinOps baked in</li>
->>>>>>> origin/auto/autonomy-17186719616
 								<li>Build-operate-transfer options for in-house teams</li>
 								<li>Transparent pricing and usage-based add-ons</li>
 							</ul>
@@ -97,11 +74,7 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="flex items-center gap-3 text-cyan-400">
 								<Phone className="w-5 h-5" />
-<<<<<<< HEAD
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`} className="hover:text-white">{contactInfo.mobile}</a>
-=======
 								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">{contactInfo.mobile}</a>
->>>>>>> origin/auto/autonomy-17186719616
 							</div>
 							<div className="flex items-center gap-3 text-purple-400">
 								<Mail className="w-5 h-5" />
@@ -125,10 +98,7 @@ export default function AboutPage() {
 }
 
 import React from 'react';
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -140,57 +110,27 @@ export default function AboutPage() {
       title: 'Innovation',
       description: 'Constantly pushing boundaries and exploring new frontiers in technology',
       color: 'text-cyan-400',
-<<<<<<< HEAD
-      gradient: 'from-cyan-400 to-blue-500'},
-=======
       gradient: 'from-cyan-400 to-blue-500',
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: '🤖',
       title: 'Autonomy',
       description: 'Building systems that can operate independently and make intelligent decisions',
       color: 'text-fuchsia-400',
-<<<<<<< HEAD
-      gradient: 'from-fuchsia-400 to-purple-500'},
-=======
       gradient: 'from-fuchsia-400 to-purple-500',
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: '🌍',
       title: 'Impact',
       description: 'Creating technology that makes a positive difference in the world',
       color: 'text-green-400',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'}];
-=======
       gradient: 'from-green-400 to-emerald-500',
     },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const services = [
     {
       title: 'AI Development',
-<<<<<<< HEAD
-      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.',
-      icon: '🧠',
-      color: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500'},
-    {
-      title: 'Automation Systems',
-      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.',
-      icon: '⚙️',
-      color: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500'}];
-
-  const achievements = [
-    { number: '600+'label: ''Services', 'color: 'text-cyan-400' },
-    { number: '1000%'label: ''ROI', 'color: 'text-fuchsia-400' },
-    { number: '24/7'label: ''Support', 'color: 'text-green-400' },
-    { number: '99.9%'label: ''SLA', 'color: 'text-blue-400' }];
-=======
       description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
       icon: '🧠',
       color: 'text-cyan-400',
@@ -211,7 +151,6 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support', color: 'text-green-400' },
     { number: '99.9%', label: 'SLA', color: 'text-blue-400' },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -222,14 +161,6 @@ export default function AboutPage() {
 
   return (
       {/* Mission & Vision */}
-<<<<<<< HEAD
-    <>
-      <Head>
-        <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech 'Group', 's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
-        <meta property="og:title" content="About Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech 'Group', 's mission and vision." />
-=======
 =======
     <>
       <Head>
@@ -237,7 +168,6 @@ export default function AboutPage() {
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
         <meta property="og:title" content="About Zion Tech Group" />
         <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
@@ -266,27 +196,16 @@ export default function AboutPage() {
             <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-<<<<<<< HEAD
-                To create a world where technology operates autonomouslycontinuously improving and innovating without human intervention.
-              </p>
-              <p className="text-gray-400 leading-relaxed">
-                We believe in the power of AI to solve complex problemsautomate routine tasksand unlock new possibilities for humanity.
-=======
                 To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
             <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-<<<<<<< HEAD
-                To be the leading force in autonomous technologycreating systems that thinklearnand evolve independently.
-=======
                 To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress.
@@ -305,11 +224,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {values.map((valueindex) => (
-=======
             {values.map((value, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -333,11 +248,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
-            {services.map((serviceindex) => (
-=======
             {services.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -359,11 +270,7 @@ export default function AboutPage() {
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-<<<<<<< HEAD
-            {achievements.map((achievementindex) => (
-=======
             {achievements.map((achievement, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div key={index} className="text-center group">
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
                 <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>

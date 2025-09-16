@@ -3,31 +3,14 @@ import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  StarBrainAtomShieldZapTrendingUpGlobe
-  RocketLockPaletteFactoryDatabaseCloud
-  CpuEyeTargetUsersBarChart3
-=======
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
   Rocket, Lock, Palette, Factory, Database, Cloud, 
   Cpu, Eye, Target, Users, BarChart3
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
-<<<<<<< HEAD
-    { name: 'AI & 'Marketing', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum & 'Finance', 'icon: Atomcolor: 'from-cyan-500 to-blue-500' },
-    { name: 'Space 'Technology', 'icon: Rocketcolor: 'from-indigo-500 to-purple-500' },
-    { name: 'Metaverse & 'AI', 'icon: Globecolor: 'from-green-500 to-teal-500' },
-    { name: ''Cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-orange-500' },
-    { name: 'Supply Chain & 'AI', 'icon: Factorycolor: 'from-yellow-500 to-orange-500' },
-    { name: 'Quantum & 'Healthcare', 'icon: Cpucolor: 'from-violet-500 to-purple-500' },
-    { name: 'AI & 'Creativity', 'icon: Palettecolor: 'from-pink-500 to-rose-500' },
-    { name: 'AI & 'Robotics', 'icon: Databasecolor: 'from-emerald-500 to-green-500' }
-=======
     { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
     { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
@@ -37,7 +20,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const getCategoryIcon = (category: string) => {
@@ -54,11 +36,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     <Layout>
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
-<<<<<<< HEAD
-        description="Discover our cutting-edge 2025 innovative micro SAAS servicesIT solutionsand AI platforms. Quantum computingspace technologyand autonomous systems."
-=======
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
->>>>>>> origin/auto/autonomy-17186719616
         keywords={[
           'innovative services 2025',
           'micro SAAS',
@@ -89,15 +67,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           >
             {/* Enhanced Company Badge */}
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0scale: 0.8 }}
-              animate={{ opacity: 1scale: 1 }}
-              transition={{ duration: 0.6delay: 0.2 }}
-=======
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
               <Star className="w-5 h-5" />
@@ -108,22 +80,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               2025 Innovative Services
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Pioneering the future with cutting-edge micro SAAS servicesquantum computing solutionsand autonomous AI platforms
-=======
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             
             {/* Enhanced Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.4 }}
-=======
               transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
@@ -167,22 +131,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {categories.map((categoryindex) => {
-=======
             {categories.map((category, index) => {
->>>>>>> origin/auto/autonomy-17186719616
               const IconComponent = category.icon;
               return (
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -223,22 +179,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {innovative2025MicroSaasBatch.filter(service => service.popular).map((serviceindex) => {
-=======
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
->>>>>>> origin/auto/autonomy-17186719616
               const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -262,11 +210,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                     
                     <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                      {service.features.slice(04).map((featureidx) => (
-=======
                       {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                           <span>{feature}</span>
@@ -311,22 +255,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {innovative2025MicroSaasBatch.map((serviceindex) => {
-=======
             {innovative2025MicroSaasBatch.map((service, index) => {
->>>>>>> origin/auto/autonomy-17186719616
               const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.05 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.05 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -388,11 +324,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </div>
             
             <div className="text-sm text-gray-400">
-<<<<<<< HEAD
-              <p>Address: 364 E Main St STE 1008Middletown DE 19709</p>
-=======
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> origin/auto/autonomy-17186719616
               <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </motion.div>

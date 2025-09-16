@@ -27,12 +27,13 @@ const EnhancedNavigation: React.FC = () => {
     {
       title: 'Quantum Computing',
       path: '/quantum',
-      icon: '⚡',
-      description: 'Quantum computing solutions',
+      icon: '⚛️',
+      description: 'Quantum technology solutions',
       subItems: [
-        { title: 'Quantum Revolution', path: '/pages/QuantumComputingRevolution2026' },
-        { title: 'Quantum Neural Fusion', path: '/pages/QuantumNeuralFusion2026' },
-        { title: 'Advanced Quantum', path: '/pages/AdvancedQuantumComputing2026' }
+        { title: 'Quantum Revolution 2026', path: '/pages/QuantumComputingRevolution2026' },
+        { title: 'Advanced Quantum', path: '/pages/AdvancedQuantumComputing2026' },
+        { title: 'Quantum-Neural Fusion', path: '/pages/QuantumNeuralFusion2026' },
+        { title: 'Quantum Internet', path: '/pages/QuantumInternet2026' }
       ]
     },
     {
@@ -41,8 +42,25 @@ const EnhancedNavigation: React.FC = () => {
       icon: '🧬',
       description: 'Brain-computer interfaces',
       subItems: [
-        { title: 'Neural Revolution', path: '/pages/NeuralInterfaceRevolution2026' },
-        { title: 'Advanced Neural', path: '/pages/AdvancedNeuralInterface2026' }
+        { title: 'Neural Revolution 2026', path: '/pages/NeuralInterfaceRevolution2026' },
+        { title: 'Consciousness AI', path: '/pages/ConsciousnessAI2026' },
+        { title: 'Meta Intelligence', path: '/pages/MetaIntelligence2026' }
+      ]
+    },
+    {
+      title: 'Future Tech',
+      path: '/future',
+      icon: '🚀',
+      description: 'Revolutionary technologies',
+      subItems: [
+        { title: 'Ultimate Revolution 2026', path: '/pages/UltimateTechRevolution2026' },
+        { title: 'Next-Gen Showcase', path: '/pages/NextGenTechShowcase2026' },
+        { title: 'Revolutionary AI', path: '/pages/RevolutionaryAIBreakthrough2026' },
+        { title: 'Advanced AI 2027', path: '/pages/AdvancedAIRevolution2027' },
+        { title: 'Quantum Reality 2028', path: '/pages/QuantumRealityManipulation2028' },
+        { title: 'Transcendent Consciousness 2029', path: '/pages/TranscendentConsciousness2029' },
+        { title: 'Universal Tech 2030', path: '/pages/UniversalTechMastery2030' },
+        { title: 'Ultimate Tech 2033', path: '/pages/UltimateTechRevolution2033' }
       ]
     },
     {
@@ -59,132 +77,111 @@ const EnhancedNavigation: React.FC = () => {
     },
     {
       title: 'Biotech & Space',
-      path: '/biotech-space',
-      icon: '🚀',
-      description: 'Biotechnology and space technology',
+      path: '/biotech',
+      icon: '🧬',
+      description: 'Biotechnology and space tech',
       subItems: [
-        { title: 'Biotech Revolution', path: '/pages/AdvancedBiotechRevolution2026' },
+        { title: 'Advanced Biotech', path: '/pages/AdvancedBiotechRevolution2026' },
         { title: 'Space Innovation', path: '/pages/SpaceTechInnovation2026' },
-        { title: 'Advanced Robotics', path: '/pages/AdvancedRobotics2026' }
+        { title: 'Next-Gen Space', path: '/pages/NextGenSpaceTech2026' }
       ]
     },
     {
-      title: 'Tech Blog',
-      path: '/blog',
-      icon: '📝',
-      description: 'Latest technology insights',
+      title: 'Robotics',
+      path: '/robotics',
+      icon: '🤖',
+      description: 'Advanced robotics solutions',
       subItems: [
-        { title: 'Revolutionary Tech Blog', path: '/pages/RevolutionaryTechBlog2026' },
-        { title: 'Comprehensive Insights', path: '/pages/ComprehensiveTechInsights2026' }
+        { title: 'Advanced Robotics', path: '/pages/AdvancedRobotics2026' },
+        { title: 'Robotics Revolution', path: '/pages/AdvancedRoboticsRevolution2026' }
+      ]
+    },
+    {
+      title: 'Resources',
+      path: '/resources',
+      icon: '📚',
+      description: 'Learning and insights',
+      subItems: [
+        { title: 'Tech Insights 2026', path: '/pages/ComprehensiveTechInsights2026' },
+        { title: 'Revolutionary Blog', path: '/pages/RevolutionaryTechBlog2026' },
+        { title: 'AI Innovation Guide', path: '/pages/AIInnovationGuide2025' },
+        { title: 'Quantum Applications', path: '/pages/QuantumComputingApplications2025' }
       ]
     }
   ];
 
-  const isActivePath = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
+  const isActive = (path: string) => {
+    return location.pathname === path;
   };
 
   return (
-    <nav className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-lg border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl">🚀</span>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
-                <div key={item.title} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      isActivePath(item.path)
-                        ? 'bg-purple-100 text-purple-700'
-                        : 'text-gray-700 hover:text-purple-600 hover:bg-gray-50'
-                    }`}
-                  >
-                    <span className="mr-1">{item.icon}</span>
-                    {item.title}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="relative group">
+                <Link
+                  to={item.path}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.title}</span>
                   {item.subItems && (
-                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="py-1">
-                        <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
-                          <p className="text-xs text-gray-500 font-medium">{item.description}</p>
-                        </div>
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors duration-150"
-                          >
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   )}
-                </div>
-              ))}
-            </div>
-          </div>
+                </Link>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
                   <Link
                     to={item.path}
-                    className={`block px-3 py-2 rounded-md text-base font-medium ${
-                      isActivePath(item.path)
-                        ? 'bg-purple-100 text-purple-700'
-                        : 'text-gray-700 hover:text-purple-600 hover:bg-gray-50'
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <span className="mr-2">{item.icon}</span>
-                    {item.title}
+                    <div className="flex items-center space-x-2">
+                      <span>{item.icon}</span>
+                      <span>{item.title}</span>
+                    </div>
                   </Link>
+                  
+                  {/* Mobile Submenu */}
                   {item.subItems && (
-                    <div className="ml-4 space-y-1">
-                      {item.subItems.map((subItem) => (
+                    <div className="ml-6 mt-1 space-y-1">
+                      {item.subItems.map((subItem, subIndex) => (
                         <Link
-                          key={subItem.title}
+                          key={subIndex}
                           to={subItem.path}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+                          className={`block px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
+                            isActive(subItem.path)
+                              ? 'text-blue-600 bg-blue-50'
+                              : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.title}
