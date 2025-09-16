@@ -1,260 +1,153 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-}
-
-interface SEOOptimizerProps {
-  data: SEOData;
-  children: React.ReactNode;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ data, children }) => {
-  // Generate structured data for the page
-  const generateStructuredData = () => {
-    const baseUrl = window.location.origin;
-    const currentUrl = window.location.href;
-    
-    const defaultStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": baseUrl,
-      "logo": `${baseUrl}/logo.png`,
-      "description": data.description,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/zion-tech-group",
-        "https://github.com/Zion-Holdings"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer service",
-        "availableLanguage": "English"
+const SEOOptimizer: React.FC = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading the future of technology with AI, blockchain, and innovative solutions. Revolutionary tech breakthroughs 2028-2029 featuring conscious AI, quantum computing, and interdimensional technology.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Revolutionary Tech Breakthrough 2028",
+        "description": "Conscious AI, quantum consciousness, and interdimensional computing solutions",
+        "url": "https://ziontechgroup.com/pages/RevolutionaryTechBreakthrough2028"
+      },
+      {
+        "@type": "Offer",
+        "name": "Ultimate Tech Revolution 2029",
+        "description": "Synthetic intelligence, quantum reality, and interdimensional AI technology",
+        "url": "https://ziontechgroup.com/pages/UltimateTechRevolution2029"
       }
-    };
-
-    // Add page-specific structured data
-    if (data.title.includes('AI')) {
-      return {
-        ...defaultStructuredData,
-        "@type": "TechArticle",
-        "headline": data.title,
-        "description": data.description,
-        "author": {
-          "@type": "Organization",
-          "name": "Zion Tech Group"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${baseUrl}/logo.png`
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Revolutionary Technology Solutions",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Conscious AI Systems",
+            "description": "Self-aware artificial intelligence with emotional capabilities"
           }
         },
-        "datePublished": new Date().toISOString(),
-        "dateModified": new Date().toISOString(),
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": currentUrl
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum Consciousness Technology",
+            "description": "Quantum computing that processes consciousness and reality"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Interdimensional Computing",
+            "description": "Technology operating across multiple dimensions and realities"
+          }
         }
-      };
+      ]
     }
-
-    return { ...defaultStructuredData, ...data.structuredData };
   };
 
-  // Generate meta tags
-  const generateMetaTags = () => {
-    const baseUrl = window.location.origin;
-    const currentUrl = data.canonical || window.location.href;
-    const ogImage = data.ogImage || `${baseUrl}/og-image.png`;
-
-    return {
-      title: data.title,
-      description: data.description,
-      keywords: data.keywords.join(', '),
-      canonical: currentUrl,
-      ogTitle: data.title,
-      ogDescription: data.description,
-      ogImage: ogImage,
-      ogUrl: currentUrl,
-      ogType: data.ogType || 'website',
-      twitterCard: data.twitterCard || 'summary_large_image',
-      twitterTitle: data.title,
-      twitterDescription: data.description,
-      twitterImage: ogImage
-    };
-  };
-
-  const metaTags = generateMetaTags();
-  const structuredData = generateStructuredData();
-
-  // Track page view for analytics
-  useEffect(() => {
-    // Google Analytics 4 tracking
-    if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: data.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname
-      });
-    }
-
-    // Custom analytics tracking
-    if (typeof window !== 'undefined' && window.analytics) {
-      window.analytics.track('Page View', {
-        title: data.title,
-        path: window.location.pathname,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }, [data.title]);
+  const keywords = [
+    "revolutionary technology 2028",
+    "conscious AI systems",
+    "quantum consciousness",
+    "interdimensional computing",
+    "synthetic intelligence",
+    "quantum reality engine",
+    "neural interface technology",
+    "consciousness transfer",
+    "reality manipulation",
+    "advanced AI solutions",
+    "quantum computing breakthrough",
+    "neural reality engine",
+    "interdimensional AI",
+    "ultimate tech revolution 2029",
+    "technology innovation",
+    "AI transformation",
+    "quantum neural fusion",
+    "consciousness computing",
+    "reality synthesis engine",
+    "Zion Tech Group"
+  ];
 
   return (
-    <>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{metaTags.title}</title>
-        <meta name="description" content={metaTags.description} />
-        <meta name="keywords" content={metaTags.keywords} />
-        <link rel="canonical" href={metaTags.canonical} />
-
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={metaTags.ogTitle} />
-        <meta property="og:description" content={metaTags.ogDescription} />
-        <meta property="og:image" content={metaTags.ogImage} />
-        <meta property="og:url" content={metaTags.ogUrl} />
-        <meta property="og:type" content={metaTags.ogType} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content={metaTags.twitterCard} />
-        <meta name="twitter:title" content={metaTags.twitterTitle} />
-        <meta name="twitter:description" content={metaTags.twitterDescription} />
-        <meta name="twitter:image" content={metaTags.twitterImage} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-
-        {/* Additional SEO Tags */}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-        {/* Performance Hints */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* Theme and PWA */}
-        <meta name="theme-color" content="#1e40af" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-
-        {/* Preload Critical Resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
-      </Helmet>
-
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
-        }}
-      />
-
-      {children}
-    </>
+    <Helmet>
+      <title>Zion Tech Group - Revolutionary Technology Breakthrough 2028-2029 | Conscious AI, Quantum Computing, Interdimensional Technology</title>
+      <meta name="description" content="Experience the most advanced technological revolution featuring conscious AI, quantum consciousness, and interdimensional computing. Revolutionary tech breakthroughs 2028-2029 by Zion Tech Group." />
+      <meta name="keywords" content={keywords.join(", ")} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content="Zion Tech Group - Revolutionary Technology Breakthrough 2028-2029" />
+      <meta property="og:description" content="Experience the most advanced technological revolution featuring conscious AI, quantum consciousness, and interdimensional computing." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com" />
+      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Zion Tech Group - Revolutionary Technology Breakthrough 2028-2029" />
+      <meta name="twitter:description" content="Experience the most advanced technological revolution featuring conscious AI, quantum consciousness, and interdimensional computing." />
+      <meta name="twitter:image" content="https://ziontechgroup.com/twitter-card.jpg" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#8B5CF6" />
+      <meta name="msapplication-TileColor" content="#8B5CF6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href="https://ziontechgroup.com" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
+      {/* Additional Meta Tags for Better SEO */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="bing-site-verification" content="your-bing-verification-code" />
+      
+      {/* Preconnect to external domains for better performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+    </Helmet>
   );
-};
-
-// SEO data for different page types
-export const seoData = {
-  home: {
-    title: "Zion Tech Group - Revolutionary Technology Solutions | AI, Quantum Computing, Cybersecurity",
-    description: "Leading-edge technology solutions in AI, quantum computing, and cybersecurity. Transform your business with our innovative services and cutting-edge technology.",
-    keywords: [
-      "AI solutions",
-      "quantum computing",
-      "cybersecurity",
-      "technology consulting",
-      "digital transformation",
-      "artificial intelligence",
-      "machine learning",
-      "blockchain",
-      "cloud computing",
-      "data analytics"
-    ],
-    ogType: "website"
-  },
-
-  aiBreakthrough: {
-    title: "AI Revolutionary Breakthrough 2026 - First AGI Implementation | Zion Tech Group",
-    description: "Discover the first Artificial General Intelligence (AGI) implementation in 2026. Revolutionary AI breakthrough with human-level intelligence and self-improvement capabilities.",
-    keywords: [
-      "AGI",
-      "artificial general intelligence",
-      "AI breakthrough 2026",
-      "machine consciousness",
-      "AI revolution",
-      "neural networks",
-      "deep learning",
-      "AI transformation"
-    ],
-    ogType: "article"
-  },
-
-  futureTech: {
-    title: "Future Technology Innovations 2026 - Metaverse 2.0, Quantum Internet | Zion Tech Group",
-    description: "Explore cutting-edge technologies shaping 2026: Metaverse 2.0, Quantum Internet, Synthetic Biology, Space Technology, and Neuromorphic Computing.",
-    keywords: [
-      "future technology 2026",
-      "metaverse 2.0",
-      "quantum internet",
-      "synthetic biology",
-      "space technology",
-      "neuromorphic computing",
-      "advanced robotics",
-      "technology trends"
-    ],
-    ogType: "article"
-  },
-
-  businessAutomation: {
-    title: "Business Automation Guide 2025 - 90-Day Roadmap to 80% Automation | Zion Tech Group",
-    description: "Complete 90-day roadmap to automate 80% of your business operations. Achieve +300% productivity gains and -50% cost reduction with our proven automation strategies.",
-    keywords: [
-      "business automation",
-      "process automation",
-      "workflow automation",
-      "RPA",
-      "AI automation",
-      "digital transformation",
-      "productivity optimization",
-      "cost reduction"
-    ],
-    ogType: "article"
-  }
 };
 
 export default SEOOptimizer;

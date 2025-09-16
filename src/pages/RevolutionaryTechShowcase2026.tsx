@@ -6,7 +6,10 @@ import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -435,7 +438,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/main
             </button>
           </div>
         </div>
