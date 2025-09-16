@@ -2454,6 +2454,36 @@ export const newContent2026 = [
     slug: "exec-guide-eval-gates-ship-tomorrow"
   },
   {
+    id: 9511,
+    title: "Playbook: Safe Agent Rollouts in 7 Days",
+    excerpt: "A day‑by‑day plan with eval gates, scorecards, and rollback drills.",
+    content: "This practical 7‑day rollout plan helps teams ship autonomous features safely. It includes CI eval gates, service‑level scorecards, error budgets, canary policies, and incident rehearsal checklists with success metrics and failure criteria.",
+    author: "Riley Chen",
+    authorRole: "Director of Reliability Engineering",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Governance",
+    tags: ["Rollouts", "Scorecards", "Reliability"],
+    featured: true,
+    imageUrl: "/images/blog/safe-agent-rollouts-7-days.jpg",
+    slug: "playbook-safe-agent-rollouts-7-days"
+  },
+  {
+    id: 9512,
+    title: "Blueprint: Cost‑Aware Model Routing That Holds Quality",
+    excerpt: "Reduce spend 30%+ with confidence‑tier routing and online evals.",
+    content: "An actionable blueprint for multi‑model routing with quality safeguards. Covers confidence tiers, latency SLO bands, fallback ladders, and online groundedness evals. Includes policy snippets and dashboards to keep quality stable while cutting cost.",
+    author: "Amina Patel",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["Routing", "Cost Optimization", "Quality"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-routing-blueprint.jpg",
+    slug: "blueprint-cost-aware-model-routing"
+  },
+  {
     id: 9502,
     title: "FinServ Case Study: 35% Savings With Policy Routing",
     excerpt: "Spend bands, confidence ladders, and online evals—quality held, cost down 35%.",
