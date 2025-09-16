@@ -1,5 +1,20 @@
 export const blogPosts = [
   {
+    id: 62,
+    title: "AI 2026: Evaluation-Driven Release Engineering",
+    excerpt: "Ship safer autonomy with eval-gated rollouts, canary scorecards, and automated rollback.",
+    content: "Evaluation-driven release engineering hardens autonomous systems by gating each lifecycle step with objective signals. This article shows how to wire pre-merge checks, shadow runs, and progressive delivery to an evaluation hub. You will learn how to define pass/fail policy as code, track real-time scorecards (safety, quality, cost), and trigger automated rollback when guardrails breach. We include reference metrics, traces, and a minimal example you can adapt to your stack.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Evaluations", "Release Engineering", "Safety", "Autonomy"],
+    featured: true,
+    imageUrl: "/images/blog/evaluation-driven-release-engineering-2026.jpg",
+    slug: "ai-2026-evaluation-driven-release-engineering"
+  },
+  {
     id: 59,
     title: "AI 2026: Real-World Guardrails — Patterns That Ship",
     excerpt: "Battle‑tested guardrail patterns for shipping reliable agent features in production.",
