@@ -3,17 +3,58 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-operational-evals-blueprint',
+    title: 'AI 2026: Operational Evals Blueprint',
+    summary:
+      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-risk-and-guardrails-operating-model',
+    title: 'AI 2026: Risk & Guardrails Operating Model',
+    summary:
+      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
+  },
+  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-trustworthy-model-routing',
+    title: 'AI 2026: Trustworthy Model Routing — Field Guide',
+    summary:
+      'Evidence-backed routing with eval gates, risk tiers, and explicit budgets.'
+  },
+  {
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
     summary:
-      'Reference architecture, safety gates, and rollout checklist for AI commerce.'
+      'Reference architecture, safety gates, and rollout checklist for AI commerce.',
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
+    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
+  },
+  {
+    slug: 'ai-2026-autonomous-ops-sre-for-agents',
+    title: 'AI 2026: Autonomous Ops and SRE for Agents',
+    summary:
+      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
+    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
+  },
+  {
+    slug: 'ai-2026-autonomous-ops-sre-for-agents',
+    title: 'AI 2026: Autonomous Ops and SRE for Agents',
+    summary:
+      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
   },
   {
     slug: 'ai-2026-realtime-evals-at-scale',
@@ -34,6 +75,9 @@ const posts = [
       'From sourcing to contract ops with policy-as-code and measurable savings.'
   },
   {
+    slug: 'ai-2026-governed-tool-use-blueprint',
+    title: 'AI 2026: Governed Tool Use — Blueprint',
+    summary: 'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
   },
   {
     slug: 'ai-2026-production-agent-postmortems',
@@ -76,10 +120,12 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+  },
+  {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.',
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',

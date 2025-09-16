@@ -1,4 +1,5 @@
 import React from 'react';
+import LatestContentPromotion from '@/components/LatestContentPromotion';
 
 const Blog: React.FC = () => {
   return (
@@ -11,6 +12,10 @@ const Blog: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Revolutionary technology solutions and insights for the future
           </p>
+        </div>
+        {/* Promote freshest content */}
+        <div className="mb-12">
+          <LatestContentPromotion />
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,6 +56,10 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     </div>
   );
 };

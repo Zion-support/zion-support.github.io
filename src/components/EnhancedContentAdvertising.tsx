@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { 
   ArrowRight, 
   Star, 
@@ -46,6 +45,15 @@ const EnhancedContentAdvertising: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       badge: "REVOLUTIONARY",
       features: ["Quantum Propulsion", "Space Colonies", "Asteroid Mining"]
+    },
+    {
+      title: "Latest Articles 2026",
+      description: "Read our newest insights across AI, quantum, biotech, and more",
+      icon: Zap,
+      href: "/pages/Blog",
+      color: "from-cyan-500 to-blue-500",
+      badge: "UPDATED",
+      features: ["Fresh Weekly", "Expert Authors", "Deep Dives"]
     }
   ];
 
@@ -82,9 +90,6 @@ const EnhancedContentAdvertising: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -106,9 +111,6 @@ const EnhancedContentAdvertising: React.FC = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
@@ -125,9 +127,6 @@ const EnhancedContentAdvertising: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">
@@ -167,9 +166,6 @@ const EnhancedContentAdvertising: React.FC = () => {
         {/* Testimonials Section */}
         <div className="mb-20">
           <div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">What Our Partners Say</h3>
@@ -180,9 +176,6 @@ const EnhancedContentAdvertising: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
               >
                 <div className="flex items-center mb-4">
@@ -202,9 +195,6 @@ const EnhancedContentAdvertising: React.FC = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30"
         >
           <h3 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h3>

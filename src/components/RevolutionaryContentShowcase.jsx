@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const RevolutionaryContentShowcase = () => {
   const [activeContent, setActiveContent] = useState(0);
 
@@ -68,11 +67,8 @@ const RevolutionaryContentShowcase = () => {
         </div>
 
         {/* Active Content Display */}
-        <div
+        <divdiv
           key={activeContent}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -121,7 +117,7 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

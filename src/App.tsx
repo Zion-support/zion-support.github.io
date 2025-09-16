@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
+import ContentSpotlight from './components/ContentSpotlight';
 import Footer from './Footer';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
@@ -32,6 +33,7 @@ import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub2026';
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
@@ -77,6 +79,17 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
+<<<<<<< HEAD
+import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
+import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
+import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
+import NewAIResearchBreakthrough2026 from './pages/NewAIResearchBreakthrough2026';
+import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
+=======
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import RevolutionaryCaseStudies2026 from './pages/RevolutionaryCaseStudies2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
 const App: React.FC = () => {
   return (
@@ -91,6 +104,11 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
               
+              {/* New Content Promo Banner */}
+              <div className="mb-12">
+                <NewlyAddedContentPromo />
+              </div>
+
               {/* NEW: Advanced Tech Breakthrough Banner */}
               <div className="mb-12">
                 <AdvancedTechBreakthroughBanner />
@@ -103,6 +121,9 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
+
+              {/* Latest Content Spotlight */}
+              <ContentSpotlight />
               
               {/* Dynamic Content Carousel */}
               <DynamicContentCarousel />
@@ -243,6 +264,8 @@ const App: React.FC = () => {
           
           {/* Routes for all pages */}
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
+          <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
+          <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />

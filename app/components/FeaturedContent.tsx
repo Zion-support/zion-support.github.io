@@ -21,6 +21,24 @@ const featuredContent = [
     tags: ["AI", "Cybersecurity", "Threat Detection", "2025"]
   },
   {
+    title: "AI 2026: Production Evals Best Practices",
+    description: "Evaluation-first patterns, SLOs, and safeguards to run AI safely in production.",
+    href: "/blog/ai-2026-production-evals-best-practices",
+    category: "Evaluations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["AI", "Evaluations", "Reliability", "2026"]
+  },
+  {
+    title: "Trustworthy Autonomous Agents Blueprint (2026)",
+    description: "Governance-by-design: evals-as-code, policy-as-code, safety telemetry, and risk-tiered autonomy.",
+    href: "/blog/ai-2026-trustworthy-autonomous-agents-blueprint",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Agents", "Safety", "Governance", "2026"]
+  },
+  {
     title: "Fortune 500 AI Transformation: 340% ROI Success Story",
     description: "How a Fortune 500 company achieved 340% ROI increase through comprehensive AI transformation, reducing operational costs by 60%.",
     href: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story",

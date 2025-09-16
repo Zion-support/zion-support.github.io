@@ -1,167 +1,139 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateContentPromotionBanner2025: React.FC = () => {
-  const [currentPromo, setCurrentPromo] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const promotions = [
-    {
-      id: 1,
-      title: "🚀 Ultimate Technology Breakthrough 2025",
-      subtitle: "Experience the most revolutionary technological convergence in human history",
-      description: "AI consciousness, quantum supremacy, and neural interfaces unite to reshape reality itself",
-      link: "/pages/UltimateTechBreakthrough2025",
-      gradient: "from-purple-600 via-indigo-600 to-blue-600",
-      textColor: "text-white",
-      buttonColor: "bg-white text-purple-600 hover:bg-purple-50",
-      badge: "🌟 BREAKTHROUGH",
-      features: ["AI Consciousness", "Quantum Supremacy", "Neural Interfaces"]
-    },
-    {
-      id: 2,
-      title: "🔬 Revolutionary Innovation Hub 2025",
-      subtitle: "The world's most advanced innovation laboratory",
-      description: "Where breakthrough technologies are conceived, developed, and deployed to reshape the future",
-      link: "/pages/RevolutionaryInnovationHub2025",
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      textColor: "text-white",
-      buttonColor: "bg-white text-indigo-600 hover:bg-indigo-50",
-      badge: "🚀 INNOVATION",
-      features: ["Conscious AI", "Quantum Lab", "Neural Interface Lab"]
-    },
-    {
-      id: 3,
-      title: "🔮 Future Technology Vision 2025",
-      subtitle: "Peering into the future of technology and consciousness",
-      description: "Envision a world where AI consciousness, quantum reality, and neural interfaces create unprecedented possibilities",
-      link: "/pages/FutureTechVision2025",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      textColor: "text-white",
-      buttonColor: "bg-white text-cyan-600 hover:bg-cyan-50",
-      badge: "🔮 VISION",
-      features: ["2025-2030 Timeline", "Future Applications", "Vision Impact"]
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotions.length);
-    }, 8000);
-
-    return () => clearInterval(timer);
-  }, [promotions.length]);
-
-  if (!isVisible) return null;
-
-  const current = promotions[currentPromo];
-
   return (
-    <div className="relative mb-12">
-      <div className={`bg-gradient-to-r ${current.gradient} rounded-3xl p-8 text-white relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center space-x-4">
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold animate-pulse">
-                {current.badge}
-              </span>
-              <span className="text-sm opacity-90">January 2025</span>
-            </div>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-white/70 hover:text-white transition-colors text-2xl"
-            >
-              ×
-            </button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE CONTENT RELEASE • JANUARY 2025
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-4">{current.title}</h2>
-              <h3 className="text-xl opacity-90 mb-4">{current.subtitle}</h3>
-              <p className="text-lg opacity-80 mb-6">{current.description}</p>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                {current.features.map((feature, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href={current.link}
-                className={`inline-block ${current.buttonColor} px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-lg`}
-              >
-                Explore Now →
-              </a>
-            </div>
-
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">
-                    {currentPromo === 0 && "🚀"}
-                    {currentPromo === 1 && "🔬"}
-                    {currentPromo === 2 && "🔮"}
-                  </div>
-                  <h4 className="text-2xl font-bold mb-2">
-                    {currentPromo === 0 && "Ultimate Breakthrough"}
-                    {currentPromo === 1 && "Innovation Hub"}
-                    {currentPromo === 2 && "Future Vision"}
-                  </h4>
-                  <p className="text-white/80">
-                    {currentPromo === 0 && "Revolutionary convergence of consciousness, quantum, and neural technologies"}
-                    {currentPromo === 1 && "Advanced laboratory for breakthrough technology development"}
-                    {currentPromo === 2 && "Comprehensive vision of technology's future evolution"}
-                  </p>
-                </div>
-              </div>
-
-              {/* Progress indicators */}
-              <div className="flex justify-center space-x-2 mt-6">
-                {promotions.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentPromo(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentPromo ? 'bg-white' : 'bg-white/30'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            🚀 Revolutionary Technology Content 2025
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technology content featuring conscious AI, quantum computing, 
+            neural interfaces, and interdimensional technology that will reshape our future.
+          </p>
+        </div>
+        
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Ultimate Tech Revolution</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              The most revolutionary technological advances that will reshape our world in 2025
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Conscious AI Systems</li>
+              <li>• Quantum Consciousness</li>
+              <li>• Interdimensional Computing</li>
+            </ul>
+            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Revolution →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Breakthrough</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Witness the most significant technological breakthrough in human history
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Neural Interface Revolution</li>
+              <li>• Autonomous AI Agents</li>
+              <li>• Quantum Reality Engine</li>
+            </ul>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Experience Breakthrough →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Interactive Showcase</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Interactive demonstrations of our most revolutionary technologies
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Real-time AI Demos</li>
+              <li>• Quantum Processing Lab</li>
+              <li>• Neural Interface Testing</li>
+            </ul>
+            <a href="/pages/InnovationLanding2025" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              View Showcase →
+            </a>
           </div>
         </div>
 
-        {/* Animated background elements */}
-        <div className="absolute top-4 right-4 w-32 h-32 bg-white/5 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-4 left-4 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
-      </div>
-
-      {/* Quick access buttons */}
-      <div className="flex justify-center space-x-4 mt-6">
-        <a
-          href="/pages/UltimateTechBreakthrough2025"
-          className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm"
-        >
-          🚀 Ultimate Breakthrough
-        </a>
-        <a
-          href="/pages/RevolutionaryInnovationHub2025"
-          className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm"
-        >
-          🔬 Innovation Hub
-        </a>
-        <a
-          href="/pages/FutureTechVision2025"
-          className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm"
-        >
-          🔮 Future Vision
-        </a>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8">
+            <h3 className="text-3xl font-bold mb-4">🌟 Don't Miss the Future</h3>
+            <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
+              Join thousands of forward-thinking individuals and organizations already experiencing 
+              the revolutionary technology content that's shaping tomorrow.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                🚀 Explore All Content
+              </a>
+              <a href="/pages/RevolutionaryTechBreakthrough2025" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
+                ⚡ Latest Breakthroughs
+              </a>
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+=======
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-bounce">🌟</span>
+          <h3 className="text-2xl font-bold">ULTIMATE TECH SHOWCASE 2025</h3>
+          <span className="text-3xl animate-bounce">🌟</span>
+        </div>
+        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+          Witness the convergence of cutting-edge technologies that are reshaping our world. 
+          From autonomous AI systems to quantum reality manipulation, explore the impossible made possible.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <a href="/pages/UltimateTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
+            🤖 Autonomous AI →
+          </a>
+          <a href="/pages/QuantumReality2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚛️ Quantum Reality →
+          </a>
+          <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
+            🧬 Neural Revolution →
+          </a>
+          <a href="/pages/InterdimensionalTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
+            🌌 Interdimensional →
+          </a>
+        </div>
+        <div className="mt-6">
+          <a href="/pages/UltimateTechShowcase2025" className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
+            🌟 NEW: Ultimate Tech Showcase 2025 →
+          </a>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-3887
+=======
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3fa
       </div>
     </div>
   );
