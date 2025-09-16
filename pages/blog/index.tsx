@@ -47,6 +47,10 @@ posts.unshift(
   { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
   { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
 )
+// New article (Sept 2025) — Enterprise Agent Risk Mitigation
+posts.unshift(
+  { slug: 'ai-2026-enterprise-agent-risk-mitigation', title: 'Enterprise Agent Risk Mitigation (2026)', excerpt: 'Practical patterns to reduce safety, reliability, cost, and compliance risks.' }
+)
 
 export default function BlogIndexPage() {
   return (
