@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
-<<<<<<< HEAD
 import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -264,12 +256,6 @@ export default function Index() {
 		</>
 	)
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/feature/blog-promos
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react';
 import Homepage2025 from '../components/Homepage2025';
 

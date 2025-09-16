@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -60,10 +56,6 @@ const BlogIndex: NextPage = () => {
       tags: ["Machine Learning", "Enterprise", "Software Development"]
     }
   ];
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -81,13 +73,6 @@ const posts = [
   { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
   { slug: 'cloud-cost-optimization-2025', title: 'Cloud Cost Optimization 2025', excerpt: 'Modern FinOps patterns for resilient, cost-efficient platforms.' }
 ]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/feature/blog-promos
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 
 export default function BlogIndexPage() {
   return (
@@ -106,10 +91,6 @@ export default function BlogIndexPage() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Featured Post */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8">Featured Article</h2>
@@ -149,41 +130,17 @@ export default function BlogIndexPage() {
                   </Link>
                 </div>
               </div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/feature/blog-promos
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
             </div>
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
-  )
-}
->>>>>>> origin/feature/blog-promos
-=======
-  )
-}
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 
