@@ -44,6 +44,9 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
@@ -1139,6 +1142,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
