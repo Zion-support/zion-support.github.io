@@ -183,6 +183,12 @@ import UltimateContentBanner2036 from './src/components/UltimateContentBanner203
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
 import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2026 from './src/components/UltimateContentBanner2026';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 
 export default function App(): JSX.Element {
   return (
@@ -210,6 +216,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2026 */}
+                <UltimateContentBanner2026 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
@@ -514,6 +523,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology</p>
                   </div>
                   <RevolutionaryContentCarousel2027 />
+                </div>
+
+                {/* Enhanced Content Carousel 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentCarousel2025 />
                 </div>
 
                 {/* Enhanced Content Carousel 2032 */}
@@ -969,9 +983,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
           <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
-          <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2027" element={<RevolutionaryTechShowcase2027 />} />
