@@ -2586,8 +2586,114 @@ export const newContent2026 = [
   }
 ];
 
+// Additional fresh content (2029 preview)
+export const extraContent2029 = [
+  {
+    id: 9901,
+    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
+    excerpt:
+      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
+    content:
+      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Evidence", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-native-engineering-2029.jpg",
+    slug: "ai-2029-evidence-native-engineering"
+  },
+  {
+    id: 9902,
+    title: "Trusted RAG 2029: Live Freshness Windows and Budget Guardrails",
+    excerpt:
+      "Blueprint for continuously-grounded retrieval with freshness, drift monitors, and spend caps.",
+    content:
+      "Ground answers in sources you can verify. This blueprint shows how to implement freshness windows, detect semantic drift, and enforce budget guardrails for retrieval-heavy systems. Includes copy-paste checks, example policies, and dashboards to track grounding quality over time.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-guardrails-2029.jpg",
+    slug: "trusted-rag-2029-guardrails"
+  },
+  {
+    id: 9903,
+    title: "Agent SLOs 2029: Minimal Set That Scales Across Teams",
+    excerpt:
+      "A pragmatic SLO set for safety, groundedness, reliability, and budget with ready-to-ship templates.",
+    content:
+      "Cut through noise with four SLOs that matter. We provide targets, templates, and wiring guidance so drift blocks risky changes automatically. Works across agent teams without bespoke dashboards for each.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["SLOs", "Reliability", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/agent-slos-2029.jpg",
+    slug: "agent-slos-2029-minimal-set"
+  },
+  {
+    id: 9904,
+    title: "Exec Guide: Evals + Guardrails You Can Ship Tomorrow",
+    excerpt:
+      "Leaders’ playbook to gate changes with evals, policy, and reversible rollouts.",
+    content:
+      "A concise executive guide to ship safely now. We cover the minimum evals to run, the policy gates to enforce, and a deterministic rollback recipe—all in a copy-paste friendly format.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy", "Evals", "Rollbacks"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-evals-guardrails-2026.jpg",
+    slug: "exec-guide-eval-gates-ship-tomorrow"
+  },
+  {
+    id: 9905,
+    title: "FinServ Case Study: Policy Routing Cuts Spend by 35%",
+    excerpt:
+      "How routing bands, budgets, and scorecards preserved quality while saving millions.",
+    content:
+      "A real-world FinServ case study implementing banded routing with budget caps. We include the policy, dashboards, and before/after metrics so you can replicate the savings without compromising quality.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-savings-2026.jpg",
+    slug: "finserv-case-study-policy-routing-35-savings"
+  },
+  {
+    id: 9906,
+    title: "Journey Scorecards Starter: KPIs You Can Adopt Today",
+    excerpt:
+      "Ready-to-use KPI JSON, thresholds, and dashboards for safe, cost-aware AI.",
+    content:
+      "Kickstart journey scorecards with copy-paste KPI JSON, example thresholds, and Grafana panels. Shows how to connect signals to rollout gates so you don't ship blind.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "journey-scorecards-starter-kpis"
+  }
+];
+
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026];
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
