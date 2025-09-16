@@ -141,6 +141,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Freshly Added — Approvals Blueprint + Incident Command Center */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-approvals-blueprint-starter" className="bg-white rounded-xl shadow p-6 border border-amber-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Approvals Blueprint Starter — Copy‑Paste Policies</h3>
+              <p className="text-gray-600">Risk‑tiered approvals with evidence fields that flow to scorecards.</p>
+            </Link>
+            <Link href="/blog/ai-2026-incident-command-center" className="bg-white rounded-xl shadow p-6 border border-amber-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Incident Command Center — Operational Playbook</h3>
+              <p className="text-gray-600">Triage, containment, and learning loops with audit‑ready evidence.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Policy‑as‑Code Approvals Starter (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
