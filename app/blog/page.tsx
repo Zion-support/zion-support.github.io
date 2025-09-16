@@ -1,7 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
   { href: '/blog/ai-2026-evidence-hub-architecture', title: 'Production Evidence Hub Architecture (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },
