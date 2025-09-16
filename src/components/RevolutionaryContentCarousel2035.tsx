@@ -95,9 +95,13 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+<<<<<<< HEAD
         <div className="absolute inset-0 opacity-30">
           <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-blue-500/10"></div>
         </div>
+=======
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
+>>>>>>> cursor/create-and-deploy-new-content-ef04
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
