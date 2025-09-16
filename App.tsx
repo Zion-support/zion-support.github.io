@@ -80,6 +80,8 @@ import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTech
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import NewContentPromoBanner from './src/components/NewContentPromoBanner';
+import FeaturedContentShowcase from './src/components/FeaturedContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -108,6 +110,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* New Content Promotional Banner */}
+                <NewContentPromoBanner />
 
                 {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -392,6 +397,9 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
+
+                {/* Featured Content Showcase */}
+                <FeaturedContentShowcase />
 
                 {/* REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */}
                 <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
