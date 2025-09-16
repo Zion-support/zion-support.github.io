@@ -1178,6 +1178,36 @@ export const newContent2026 = [
     slug: "2025-q3-practical-eval-gated-rollouts"
   },
   {
+    id: 8201,
+    title: "Operational Evidence Hubs: From Evals to Exec Decisions",
+    excerpt: "How to centralize evals, incidents, approvals, and cost into one page that actually drives change.",
+    content: "This pragmatic guide shows how high-signal evidence hubs turn telemetry into decisions. We cover minimal schemas, ingestion from traces and incidents, scorecard thresholds, and publishing weekly reports executives will actually read. Includes copy-paste JSON schemas and a small reference service.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Evidence Hubs", "Scorecards", "Operations"],
+    featured: true,
+    imageUrl: "/images/blog/operational-evidence-hubs-2026.jpg",
+    slug: "operational-evidence-hubs-from-evals-to-decisions"
+  },
+  {
+    id: 8202,
+    title: "Trusted RAG in Prod: Freshness Windows That Work",
+    excerpt: "A lightweight freshness policy with temporal pinning and budget-aware fallbacks.",
+    content: "Keep retrieval grounded and affordable with a freshness window that adapts to traffic and cost. We share the simplest useful policy, how to pin temporal ranges for sensitive content, and how to wire rollbacks when groundedness drifts. Includes a policy-as-code example and test fixtures.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "Budget"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-freshness-windows-2026.jpg",
+    slug: "trusted-rag-freshness-windows-that-work"
+  },
+  {
     id: 8002,
     title: "Cost-Aware Routing: 30% Savings Without Quality Loss",
     excerpt: "A simple routing policy that cut spend while holding SLOs and groundedness.",
