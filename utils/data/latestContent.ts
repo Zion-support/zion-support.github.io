@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "agentic-product-playbooks",
+    title: "Agentic Product Playbooks",
+    summary: "Blueprints to ship agentic workflows with eval gates and observability.",
+    href: "/blog/agentic-product-playbooks",
+    tag: "Playbook",
+    date: "2025-09-16",
+  },
+  {
+    id: "evals-and-guardrails",
+    title: "Evals, Guardrails, and Safety",
+    summary: "Stand up eval suites and policy guardrails for production agents.",
+    href: "/blog/evals-and-guardrails",
+    tag: "Safety",
+    date: "2025-09-16",
+  },
+  {
     id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
     title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
     summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
