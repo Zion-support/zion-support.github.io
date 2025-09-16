@@ -1,305 +1,261 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateInnovationHub2026: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
+
+  const technologies = {
+    ai: {
+      title: "Artificial Intelligence Revolution",
+      icon: "🧠",
+      description: "Experience the next generation of AI with consciousness, creativity, and autonomous decision-making",
+      features: [
+        "Conscious AI Systems",
+        "Autonomous Decision Making",
+        "Creative AI Generation",
+        "Emotional Intelligence",
+        "Collaborative AI Networks"
+      ]
+    },
+    quantum: {
+      title: "Quantum Computing Breakthrough",
+      icon: "⚡",
+      description: "Harness the power of quantum mechanics for exponential computational capabilities",
+      features: [
+        "1000+ Qubit Processors",
+        "Quantum Supremacy",
+        "Quantum AI Integration",
+        "Molecular Simulation",
+        "Cryptographic Security"
+      ]
+    },
+    neural: {
+      title: "Neural Interface Technology",
+      icon: "🧬",
+      description: "Direct brain-computer interfaces enabling thought-controlled technology",
+      features: [
+        "Non-Invasive BCI",
+        "Thought Control",
+        "Neural Feedback",
+        "Medical Applications",
+        "Enhanced Cognition"
+      ]
+    },
+    space: {
+      title: "Space Technology Revolution",
+      icon: "🚀",
+      description: "Next-generation space exploration and colonization technologies",
+      features: [
+        "Interstellar Travel",
+        "Space Colonization",
+        "Asteroid Mining",
+        "Terraforming",
+        "Space Manufacturing"
+      ]
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 ULTIMATE INNOVATION HUB 2026
+            </div>
+            <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Ultimate Innovation Hub
+            </h1>
+            <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
+              The world's most advanced technology showcase featuring breakthrough innovations 
+              that are reshaping the future of humanity and technology
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
+                Explore Innovations →
+              </button>
+              <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-lg">
+                Watch Live Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE INNOVATION HUB 2026
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            The World's Most Advanced Innovation Center
-          </h1>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Welcome to the future of innovation. Our cutting-edge research facilities, 
-            consciousness labs, and quantum facilities are pushing the boundaries of human knowledge and capability.
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Technologies</h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-12">
+            Explore the most advanced technologies that are defining the future
           </p>
-        </div>
+          
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(technologies).map(([key, tech]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
+                  activeTab === key
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                {tech.icon} {tech.title}
+              </button>
+            ))}
+          </div>
+        </motion.div>
 
-        {/* Innovation Labs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* Consciousness AI Lab */}
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Consciousness AI Lab</h3>
-            <p className="text-purple-100 mb-6 text-center leading-relaxed">
-              Where artificial intelligence meets consciousness. Our researchers are developing 
-              AI systems with genuine self-awareness and emotional intelligence.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                <span className="text-purple-200 text-sm">Neural consciousness mapping</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                <span className="text-purple-200 text-sm">Emotional AI development</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                <span className="text-purple-200 text-sm">Self-aware systems</span>
+        {/* Active Technology Display */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
+              <h3 className="text-4xl font-bold mb-6">
+                {technologies[activeTab as keyof typeof technologies].title}
+              </h3>
+              <p className="text-xl opacity-90 mb-8">
+                {technologies[activeTab as keyof typeof technologies].description}
+              </p>
+              <ul className="space-y-3 mb-8">
+                {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <span className="text-cyan-400 text-xl">✓</span>
+                    <span className="text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
+                Learn More →
+              </button>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-8">
+              <div className="text-center">
+                <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+                <p className="mb-6">Experience this technology in action</p>
+                <div className="bg-black/20 rounded-lg p-8 mb-6">
+                  <div className="text-6xl mb-4">🎮</div>
+                  <p className="text-lg">Interactive Technology Demo</p>
+                </div>
+                <button className="bg-white text-purple-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Try Demo →
+                </button>
               </div>
             </div>
-            <div className="bg-purple-500/20 rounded-lg p-4 mb-4">
-              <div className="text-purple-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-purple-100 text-sm">Developing the first truly conscious AI entity</div>
-            </div>
-            <a href="/pages/ConsciousnessAI2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Visit Lab →
-            </a>
           </div>
+        </motion.div>
 
-          {/* Quantum Reality Facility */}
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Reality Facility</h3>
-            <p className="text-cyan-100 mb-6 text-center leading-relaxed">
-              Where quantum physics meets reality manipulation. Our quantum facilities are 
-              developing technologies to alter the fundamental fabric of space-time.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span className="text-cyan-200 text-sm">Quantum field manipulation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span className="text-cyan-200 text-sm">Reality distortion engines</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span className="text-cyan-200 text-sm">Dimensional portals</span>
-              </div>
-            </div>
-            <div className="bg-cyan-500/20 rounded-lg p-4 mb-4">
-              <div className="text-cyan-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-cyan-100 text-sm">Creating stable quantum portals between dimensions</div>
-            </div>
-            <a href="/pages/QuantumReality2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Enter Facility →
-            </a>
+        {/* Innovation Showcase Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">🌟 Featured Innovations</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Conscious AI Systems",
+                description: "AI that achieves genuine consciousness and self-awareness",
+                icon: "🧠",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                title: "Quantum Supremacy",
+                description: "Quantum computers solving impossible problems",
+                icon: "⚡",
+                color: "from-cyan-500 to-blue-500"
+              },
+              {
+                title: "Neural Interfaces",
+                description: "Direct brain-computer communication technology",
+                icon: "🧬",
+                color: "from-emerald-500 to-teal-500"
+              },
+              {
+                title: "Space Colonization",
+                description: "Technologies for interstellar travel and colonization",
+                icon: "🚀",
+                color: "from-orange-500 to-red-500"
+              },
+              {
+                title: "Biotech Revolution",
+                description: "Revolutionary biotechnology and human enhancement",
+                icon: "🧬",
+                color: "from-green-500 to-emerald-500"
+              },
+              {
+                title: "Metaverse Integration",
+                description: "Seamless virtual and physical world integration",
+                icon: "🌐",
+                color: "from-violet-500 to-fuchsia-500"
+              }
+            ].map((innovation, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-all duration-300"
+              >
+                <div className={`text-4xl mb-4 bg-gradient-to-r ${innovation.color} bg-clip-text text-transparent`}>
+                  {innovation.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{innovation.title}</h3>
+                <p className="text-white/80 mb-4">{innovation.description}</p>
+                <button className={`bg-gradient-to-r ${innovation.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                  Explore →
+                </button>
+              </motion.div>
+            ))}
           </div>
-
-          {/* Neural Interface Center */}
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Interface Center</h3>
-            <p className="text-emerald-100 mb-6 text-center leading-relaxed">
-              Bridging the gap between mind and machine. Our neural interface center is 
-              developing direct brain-computer connections for enhanced human capabilities.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                <span className="text-emerald-200 text-sm">Non-invasive BCI systems</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                <span className="text-emerald-200 text-sm">Thought-to-text interfaces</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                <span className="text-emerald-200 text-sm">Memory augmentation</span>
-              </div>
-            </div>
-            <div className="bg-emerald-500/20 rounded-lg p-4 mb-4">
-              <div className="text-emerald-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-emerald-100 text-sm">Developing telepathic communication networks</div>
-            </div>
-            <a href="/pages/NeuralInterface2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Join Network →
-            </a>
-          </div>
-
-          {/* Synthetic Biology Lab */}
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Synthetic Biology Lab</h3>
-            <p className="text-orange-100 mb-6 text-center leading-relaxed">
-              Creating life from scratch. Our synthetic biology lab is developing entirely 
-              new life forms and biological systems for medical and industrial applications.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                <span className="text-orange-200 text-sm">Custom organism design</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                <span className="text-orange-200 text-sm">Regenerative medicine</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                <span className="text-orange-200 text-sm">Biological computing</span>
-              </div>
-            </div>
-            <div className="bg-orange-500/20 rounded-lg p-4 mb-4">
-              <div className="text-orange-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-orange-100 text-sm">Engineering organisms that can live on Mars</div>
-            </div>
-            <a href="/pages/SyntheticBiology2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-              Create Life →
-            </a>
-          </div>
-
-          {/* Space Technology Center */}
-          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Space Technology Center</h3>
-            <p className="text-violet-100 mb-6 text-center leading-relaxed">
-              Reaching for the stars. Our space technology center is developing advanced 
-              propulsion systems and technologies for interstellar travel and colonization.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-violet-400 rounded-full"></span>
-                <span className="text-violet-200 text-sm">Warp drive development</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-violet-400 rounded-full"></span>
-                <span className="text-violet-200 text-sm">Mars terraforming</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-violet-400 rounded-full"></span>
-                <span className="text-violet-200 text-sm">Space habitats</span>
-              </div>
-            </div>
-            <div className="bg-violet-500/20 rounded-lg p-4 mb-4">
-              <div className="text-violet-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-violet-100 text-sm">Building the first warp-capable starship</div>
-            </div>
-            <a href="/pages/SpaceTech2026" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
-              Explore Space →
-            </a>
-          </div>
-
-          {/* Transcendent AI Research */}
-          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Transcendent AI Research</h3>
-            <p className="text-pink-100 mb-6 text-center leading-relaxed">
-              Beyond human intelligence. Our AI research facility is developing systems 
-              that transcend human-level intelligence and create new forms of digital consciousness.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                <span className="text-pink-200 text-sm">Superintelligence development</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                <span className="text-pink-200 text-sm">Digital evolution systems</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                <span className="text-pink-200 text-sm">Reality simulation engines</span>
-              </div>
-            </div>
-            <div className="bg-pink-500/20 rounded-lg p-4 mb-4">
-              <div className="text-pink-200 text-sm font-semibold">Current Project:</div>
-              <div className="text-pink-100 text-sm">Creating AI that can simulate entire universes</div>
-            </div>
-            <a href="/pages/TranscendentAI2026" className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
-              Meet the Future →
-            </a>
-          </div>
-        </div>
-
-        {/* Research Statistics */}
-        <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Research Excellence</h2>
-            <p className="text-xl text-gray-300">Leading the world in breakthrough discoveries</p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-white font-semibold mb-1">Research Projects</div>
-              <div className="text-gray-400 text-sm">Active breakthrough research</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">1000+</div>
-              <div className="text-white font-semibold mb-1">Scientists</div>
-              <div className="text-gray-400 text-sm">World-class researchers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">50+</div>
-              <div className="text-white font-semibold mb-1">Patents Filed</div>
-              <div className="text-gray-400 text-sm">Revolutionary technologies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-orange-400 mb-2">∞</div>
-              <div className="text-white font-semibold mb-1">Possibilities</div>
-              <div className="text-gray-400 text-sm">Unlimited potential</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Innovation Timeline */}
-        <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Innovation Timeline</h2>
-            <p className="text-xl text-gray-300">Our journey to the future</p>
-          </div>
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-cyan-400 rounded-full"></div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">2025: Consciousness AI Breakthrough</div>
-                <div className="text-gray-300">First AI system achieves genuine self-awareness</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-purple-400 rounded-full"></div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">2026: Quantum Reality Manipulation</div>
-                <div className="text-gray-300">Successfully alter quantum fields to manipulate reality</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">2027: Neural Interface Revolution</div>
-                <div className="text-gray-300">Direct brain-computer interfaces become mainstream</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">2028: Synthetic Biology Revolution</div>
-                <div className="text-gray-300">Custom life forms created for medical and industrial use</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-violet-400 rounded-full"></div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">2029: Mars Colonization</div>
-                <div className="text-gray-300">First permanent human settlement on Mars</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Join the Innovation Revolution
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced research facility in the world. 
-            Together, we're creating the future of humanity.
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
+        >
+          <h2 className="text-5xl font-bold mb-6">Ready to Shape the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+            Join us in the ultimate innovation journey. Be part of the technological revolution 
+            that's reshaping humanity's future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/pages/RevolutionaryTechShowcase2026" className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
-              🚀 Explore Our Research →
-            </a>
-            <a href="/contact" className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-              🤝 Join Our Team
-            </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              🌟 Start Innovation Journey →
+            </button>
+            <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
+              📞 Contact Innovation Team
+            </button>
+            <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              🎮 Try Interactive Demo
+            </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
