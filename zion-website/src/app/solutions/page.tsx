@@ -7,11 +7,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -40,17 +43,23 @@ import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBar
 const flagshipSolutions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 
 const flagshipSolutions = [
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
   {
     name: 'AI Research Assistant',
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Natural Language Processing',
       'Multi-modal Learning',
@@ -85,6 +94,9 @@ const flagshipSolutions = [
     icon: ShieldCheckIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Asset Discovery',
       'Lifecycle Management',
@@ -190,8 +202,11 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
       {/* Flagship Solutions */}
 =======
 >>>>>>> origin/feature/updates-2025-09
@@ -252,6 +267,9 @@ export default function SolutionsPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Transforming Every Sector</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
             Our AI solutions are designed to adapt and excel across diverse industries, 
             delivering measurable results and competitive advantages.
 =======
@@ -307,6 +325,9 @@ export default function SolutionsPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Proven Process</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
             From initial assessment to ongoing optimization, we guide you through every step 
             of your AI transformation journey.
 =======
@@ -355,6 +376,9 @@ export default function SolutionsPage() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
             Let's discuss how our AI solutions can accelerate your growth and give you a 
             competitive edge in your industry.
 =======
@@ -414,6 +438,7 @@ export default function SolutionsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1025,3 +1050,5 @@ export default function SolutionsPage() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new

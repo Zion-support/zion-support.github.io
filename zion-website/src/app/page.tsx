@@ -528,7 +528,43 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+<<<<<<< HEAD
             {latest.map((item) => (
+=======
+            {[
+              {
+                title: 'New Course: Advanced Blockchain Development',
+                summary:
+                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                href: '/updates'
+              },
+              {
+                title: 'Community Challenge: Build a DApp',
+                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                href: '/updates'
+              },
+              {
+                title: 'New Learning Path: Web3 Fundamentals',
+                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                href: '/updates'
+              },
+              {
+                title: 'Announcement: AI Research Lab Launch',
+                summary: 'We launched our AI Research Lab to accelerate innovation and open collaboration.',
+                href: '/updates'
+              },
+              {
+                title: 'Case Study: 60% Cost Savings with Automation',
+                summary: 'How a client reduced operating costs with our AI process automation suite.',
+                href: '/updates'
+              },
+              {
+                title: 'Event: Zion Tech Summit 2025',
+                summary: 'Register for our upcoming summit featuring workshops and product showcases.',
+                href: '/updates'
+              }
+            ].map((item) => (
+>>>>>>> origin/feat/updates-and-home-whats-new
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">

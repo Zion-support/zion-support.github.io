@@ -5,11 +5,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/feat/content-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 const navigation = {
   main: [
 =======
@@ -278,6 +281,7 @@ export default function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -565,3 +569,5 @@ export default function Footer() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new

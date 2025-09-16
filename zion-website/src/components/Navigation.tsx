@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 'use client'
+=======
+"use client"
+>>>>>>> origin/feat/updates-and-home-whats-new
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,7 +98,11 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research' },
+<<<<<<< HEAD
   { name: 'News', href: '/news' },
+=======
+  { name: 'Updates', href: '/updates' },
+>>>>>>> origin/feat/updates-and-home-whats-new
   { name: 'Contact', href: '/contact' },
 >>>>>>> origin/feat/news-and-fixes
 ]
@@ -106,6 +114,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/news-and-fixes
 =======
@@ -113,6 +122,8 @@ export default function Navigation() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -286,6 +297,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -417,3 +429,5 @@ export default function Navigation() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 =======
@@ -18,6 +19,8 @@ import React from 'react'
 >>>>>>> origin/feat/new-content-home-20250915
 =======
 >>>>>>> origin/feat/new-updates-ads
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 import { 
 	UserGroupIcon, 
 	LightBulbIcon, 
@@ -34,7 +37,11 @@ const values = [
 <<<<<<< HEAD
   {
     name: 'Innovation First',
+<<<<<<< HEAD
     description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
+=======
+    description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.",
+>>>>>>> origin/feat/updates-and-home-whats-new
     icon: LightBulbIcon,
   },
   {
@@ -58,7 +65,7 @@ const team = [
   {
     name: 'Dr. Sarah Chen',
     role: 'Chief Executive Officer',
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
+    bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
     image: '/images/team/sarah-chen.jpg',
   },
   {
@@ -85,11 +92,14 @@ const team = [
   { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
   { name: 'Research Excellence', description: 'Our researchers drive breakthrough discoveries and innovations.', icon: AcademicCapIcon },
 ]
+<<<<<<< HEAD
 =======
 import React from 'react'
 >>>>>>> origin/feat/research-article-promo
 =======
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 
 const values = [
   { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
@@ -154,6 +164,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
 =======
               About{' '}
@@ -162,6 +173,9 @@ export default function AboutPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems,
 >>>>>>> origin/feat/updates-and-fixes
+=======
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+>>>>>>> origin/feat/updates-and-home-whats-new
               dedicated to transforming industries and advancing human potential through technology.
 =======
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential.
@@ -190,6 +204,7 @@ export default function AboutPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +212,9 @@ export default function AboutPage() {
 =======
 
 >>>>>>> origin/feat/updates-and-fixes
+=======
+
+>>>>>>> origin/feat/updates-and-home-whats-new
       {/* Mission & Vision */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -231,6 +249,7 @@ export default function AboutPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-gray-300">
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
                 intelligent, efficient, and sustainable world for generations to come.
@@ -239,6 +258,11 @@ export default function AboutPage() {
                 A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent,
                 efficient, and sustainable world for generations to come.
 >>>>>>> origin/feat/updates-and-fixes
+=======
+              <p className="text-gray-300">
+                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                intelligent, efficient, and sustainable world for generations to come.
+>>>>>>> origin/feat/updates-and-home-whats-new
               </p>
 =======
               <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world.</p>
@@ -251,6 +275,7 @@ export default function AboutPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,6 +345,8 @@ export default function AboutPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
       {/* Values */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -401,8 +428,11 @@ export default function AboutPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
       {/* CTA section */}
 =======
 >>>>>>> origin/feat/case-studies-content
@@ -429,6 +459,7 @@ export default function AboutPage() {
               View Careers <span aria-hidden="true">→</span>
             </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
@@ -444,12 +475,15 @@ export default function AboutPage() {
 >>>>>>> origin/feat/content-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
           </div>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -900,3 +934,5 @@ export default function AboutPage() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new

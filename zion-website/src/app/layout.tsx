@@ -81,11 +81,14 @@ export const metadata: Metadata = {
   description:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: [
     'AI',

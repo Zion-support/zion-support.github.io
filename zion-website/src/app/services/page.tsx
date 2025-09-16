@@ -6,11 +6,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, CogIcon, ShieldCheckIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 =======
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 import { 
   UserGroupIcon, 
   LightBulbIcon, 
@@ -32,6 +35,9 @@ const professionalServices = [
     icon: LightBulbIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Technology Assessment',
       'ROI Analysis',
@@ -52,6 +58,9 @@ const professionalServices = [
     icon: CogIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Custom Algorithm Development',
       'Integration Services',
@@ -72,6 +81,9 @@ const professionalServices = [
     icon: RocketLaunchIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'System Integration',
       'API Development',
@@ -92,6 +104,9 @@ const professionalServices = [
     icon: AcademicCapIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Technical Training',
       'Best Practices',
@@ -119,6 +134,9 @@ const professionalServices = [
     icon: ChartBarIcon,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
     features: [
       'Compliance Assessment',
       'Ethical AI Review',
@@ -222,6 +240,7 @@ export default function ServicesPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -239,15 +258,26 @@ export default function ServicesPage() {
           <p className="mt-6 text-lg leading-8 text-gray-300">We offer end-to-end AI services designed to accelerate your digital transformation and drive measurable outcomes.</p>
 >>>>>>> origin/feat/case-studies-content
 =======
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
 
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Services</h2>
+<<<<<<< HEAD
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Comprehensive AI Solutions</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation and drive measurable
             business outcomes.
+=======
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Comprehensive AI Solutions
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We offer end-to-end AI services designed to accelerate your digital transformation 
+            and drive measurable business outcomes.
+>>>>>>> origin/feat/updates-and-home-whats-new
           </p>
 >>>>>>> origin/feat/updates-and-fixes
         </div>
@@ -285,6 +315,7 @@ export default function ServicesPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Service Process */}
 >>>>>>> origin/feat/updates-and-fixes
@@ -302,13 +333,25 @@ export default function ServicesPage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
 >>>>>>> origin/feat/case-studies-content
 =======
+=======
+      {/* Service Process */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            How We Deliver Results
+          </p>
+>>>>>>> origin/feat/updates-and-home-whats-new
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value from your AI investment.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
+<<<<<<< HEAD
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
             {serviceProcess.map((step, index) => (
               <div key={step.step} className="relative">
                 {index < serviceProcess.length - 1 && (
@@ -324,6 +367,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -968,6 +1012,8 @@ export default function ServicesPage() {
               Professional <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI Services</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">From strategy to implementation, our comprehensive AI services help you navigate the complexities of artificial intelligence and achieve transformative results.</p>
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
           </div>
         </div>
       </div>
@@ -1035,7 +1081,10 @@ export default function ServicesPage() {
 <<<<<<< HEAD
 =======
       {/* Why Choose Us */}
+<<<<<<< HEAD
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
@@ -1067,6 +1116,7 @@ export default function ServicesPage() {
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?</h2>
 <<<<<<< HEAD
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let's discuss how our AI services can transform your business and accelerate your growth.</p>
@@ -1074,6 +1124,11 @@ export default function ServicesPage() {
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Schedule Consultation</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
 =======
+=======
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to get started?
+          </h2>
+>>>>>>> origin/feat/updates-and-home-whats-new
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI services can transform your business and accelerate your growth.
           </p>
@@ -1084,7 +1139,10 @@ export default function ServicesPage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
+<<<<<<< HEAD
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
           </div>
         </div>
 =======
@@ -1123,6 +1181,7 @@ export default function ServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/feat/content-promo
 =======
 }
@@ -1137,3 +1196,5 @@ export default function ServicesPage() {
 >>>>>>> origin/feat/research-article-promo
 =======
 >>>>>>> origin/feat/updates-and-fixes
+=======
+>>>>>>> origin/feat/updates-and-home-whats-new
