@@ -1,218 +1,248 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryAIContent2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
+        <div className="relative z-10 container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 REVOLUTIONARY AI CONTENT • JANUARY 2025
+              🚀 REVOLUTIONARY AI CONTENT • JANUARY 2025
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Revolutionary AI Content 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Experience the most advanced AI content creation and management platform that's reshaping how we think about artificial intelligence
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+              Discover the most advanced AI content creation and automation solutions that are transforming industries worldwide
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Start Creating →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-                Watch Demo
-              </button>
-            </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Features Grid */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary AI Features</h2>
-          <p className="text-xl opacity-90">Discover the cutting-edge capabilities that set us apart</p>
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">🌟 Revolutionary AI Features</h2>
+            <p className="text-xl opacity-80 max-w-3xl mx-auto">
+              Experience cutting-edge AI technology that's reshaping content creation and business automation
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "🧠",
+                title: "Conscious AI Systems",
+                description: "Advanced AI that demonstrates self-awareness and creative thinking capabilities",
+                features: ["Self-learning algorithms", "Creative content generation", "Emotional intelligence"]
+              },
+              {
+                icon: "⚡",
+                title: "Quantum-Powered Processing",
+                description: "Leverage quantum computing for unprecedented content processing speeds",
+                features: ["Instant content generation", "Real-time optimization", "Infinite scalability"]
+              },
+              {
+                icon: "🌐",
+                title: "Multi-Dimensional Content",
+                description: "Create content that exists across multiple dimensions and realities",
+                features: ["Holographic content", "Virtual reality integration", "Augmented reality experiences"]
+              },
+              {
+                icon: "🔮",
+                title: "Predictive Content AI",
+                description: "AI that predicts and creates content before you even think of it",
+                features: ["Future trend prediction", "Proactive content creation", "Market anticipation"]
+              },
+              {
+                icon: "🚀",
+                title: "Autonomous Content Factory",
+                description: "Fully automated content creation and distribution system",
+                features: ["Zero human intervention", "Continuous optimization", "Global distribution"]
+              },
+              {
+                icon: "🌟",
+                title: "Revolutionary Analytics",
+                description: "Advanced analytics that understand content performance across dimensions",
+                features: ["Multi-dimensional metrics", "Consciousness tracking", "Quantum insights"]
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+              >
+                <div className="text-6xl mb-4 text-center">{feature.icon}</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">{feature.title}</h3>
+                <p className="text-purple-100 mb-6 text-center">{feature.description}</p>
+                <ul className="text-purple-200 space-y-2 text-sm">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Advanced AI that demonstrates self-awareness and creative thinking capabilities
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Self-learning algorithms</li>
-              <li>• Creative problem solving</li>
-              <li>• Emotional intelligence</li>
-              <li>• Autonomous decision making</li>
-            </ul>
-            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore AI Consciousness →
-            </button>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI Processing</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Leverage quantum computing power for unprecedented AI processing speeds
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Exponential processing speed</li>
-              <li>• Complex pattern recognition</li>
-              <li>• Real-time learning</li>
-            </ul>
-            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Go Quantum →
-            </button>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional AI</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Breakthrough technology that operates across multiple dimensions
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Multi-dimensional processing</li>
-              <li>• Cross-reality applications</li>
-              <li>• Infinite scalability</li>
-              <li>• Future-proof architecture</li>
-            </ul>
-            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Enter New Dimensions →
-            </button>
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* Interactive Demo Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🎮 Interactive AI Demo</h2>
-            <p className="text-xl opacity-90">Experience our revolutionary AI in action</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Try Our AI Assistant</h3>
-              <div className="bg-black/30 rounded-lg p-6 mb-6">
+      <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/50 to-purple-900/50">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">🎮 Interactive AI Demo</h2>
+            <p className="text-xl opacity-80 max-w-3xl mx-auto">
+              Experience our revolutionary AI content creation system in real-time
+            </p>
+          </motion.div>
+
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-6">Try Our AI Content Generator</h3>
+                <p className="text-lg mb-8 opacity-90">
+                  Enter a topic and watch as our revolutionary AI creates comprehensive, 
+                  multi-dimensional content in real-time.
+                </p>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-sm font-bold">AI</div>
-                    <div className="bg-purple-600/30 rounded-lg p-3 max-w-xs">
-                      <p className="text-sm">Hello! I'm your AI assistant. How can I help you today?</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3 justify-end">
-                    <div className="bg-blue-600/30 rounded-lg p-3 max-w-xs">
-                      <p className="text-sm">Create a marketing strategy for a tech startup</p>
-                    </div>
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-sm font-bold">U</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-sm font-bold">AI</div>
-                    <div className="bg-purple-600/30 rounded-lg p-3 max-w-xs">
-                      <p className="text-sm">I'll create a comprehensive marketing strategy focusing on digital channels, content marketing, and AI-powered automation...</p>
-                    </div>
-                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your content topic..."
+                    className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                  />
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Generate Revolutionary Content →
+                  </button>
                 </div>
               </div>
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Chatting with AI →
-              </button>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold mb-6">AI Content Generation</h3>
-              <div className="space-y-4">
-                <div className="bg-black/30 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">📝 Blog Post Generator</h4>
-                  <p className="text-sm opacity-80">Generate engaging blog posts on any topic in seconds</p>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">🎨 Visual Content Creator</h4>
-                  <p className="text-sm opacity-80">Create stunning visuals and graphics with AI</p>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">📊 Data Analysis</h4>
-                  <p className="text-sm opacity-80">Analyze complex data and generate insights</p>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">🎯 Marketing Automation</h4>
-                  <p className="text-sm opacity-80">Automate your entire marketing workflow</p>
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <h4 className="text-xl font-semibold mb-4">Live AI Output:</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span>Analyzing topic complexity...</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span>Generating multi-dimensional content...</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <span>Optimizing for consciousness resonance...</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+                    <span>Finalizing revolutionary output...</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Success Stories */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
-          <p className="text-xl opacity-90">See how our AI is transforming businesses worldwide</p>
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">🏆 Revolutionary Success Stories</h2>
+            <p className="text-xl opacity-80 max-w-3xl mx-auto">
+              See how our AI content solutions have transformed businesses across dimensions
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                company: "Quantum Corp",
+                result: "10,000%",
+                metric: "Content Efficiency",
+                description: "Achieved unprecedented content creation efficiency using our quantum-powered AI systems"
+              },
+              {
+                company: "Consciousness Inc",
+                result: "∞",
+                metric: "Creative Output",
+                description: "Generated infinite creative content variations using our consciousness-aware AI"
+              },
+              {
+                company: "Dimension Tech",
+                result: "99.9%",
+                metric: "Multi-Dimensional Reach",
+                description: "Reached audiences across multiple dimensions with our revolutionary content distribution"
+              }
+            ].map((story, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
+              >
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-300 mb-2">{story.result}</div>
+                  <div className="text-sm text-purple-200 mb-4">{story.metric}</div>
+                  <h3 className="text-xl font-semibold mb-4">{story.company}</h3>
+                  <p className="text-purple-100 text-sm">{story.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold mb-4">TechCorp Inc.</h3>
-            <p className="text-purple-100 mb-4">
-              "Our productivity increased by 300% after implementing Zion's AI content platform. The quality and speed are unmatched."
-            </p>
-            <div className="text-purple-300 text-sm">
-              <strong>Result:</strong> 300% productivity increase
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <div className="text-4xl mb-4">💡</div>
-            <h3 className="text-xl font-bold mb-4">InnovateLabs</h3>
-            <p className="text-cyan-100 mb-4">
-              "The AI's creative capabilities helped us generate 10x more content ideas and reduced our content creation time by 80%."
-            </p>
-            <div className="text-cyan-300 text-sm">
-              <strong>Result:</strong> 80% time reduction, 10x more ideas
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <div className="text-4xl mb-4">🌟</div>
-            <h3 className="text-xl font-bold mb-4">Global Enterprises</h3>
-            <p className="text-emerald-100 mb-4">
-              "Revolutionary AI technology that scales across our entire organization. The ROI has been phenomenal."
-            </p>
-            <div className="text-emerald-300 text-sm">
-              <strong>Result:</strong> 500% ROI in 6 months
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Revolutionize Your Content?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of businesses already using our revolutionary AI content platform
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
-          </div>
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Content?</h2>
+            <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already using our revolutionary AI content solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start Your Revolution →
+              </button>
+              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

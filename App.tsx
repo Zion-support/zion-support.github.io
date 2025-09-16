@@ -174,6 +174,12 @@ import NextGenInnovationHub2036 from './src/pages/NextGenInnovationHub2036';
 import UltimateContentBanner2036 from './src/components/UltimateContentBanner2036';
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
+import RevolutionaryAIContent2025 from './src/pages/RevolutionaryAIContent2025';
+import QuantumComputingRevolutionary2025 from './src/pages/QuantumComputingRevolutionary2025';
+import InteractiveTechDemo2025 from './src/components/InteractiveTechDemo2025';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 
 export default function App(): JSX.Element {
   return (
@@ -198,6 +204,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -486,6 +495,12 @@ export default function App(): JSX.Element {
                     <a href="/pages/NextGenInnovationHub2036" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 NEW: Innovation Hub 2036 →
                     </a>
+                    <a href="/pages/RevolutionaryAIContent2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 NEW: Revolutionary AI Content 2025 →
+                    </a>
+                    <a href="/pages/QuantumComputingRevolutionary2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Quantum Revolutionary 2025 →
+                    </a>
                   </div>
                 </div>
 
@@ -496,6 +511,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
@@ -525,6 +545,11 @@ export default function App(): JSX.Element {
                 {/* Interactive Tech Demo 2033 */}
                 <div className="mb-12">
                   <InteractiveTechDemo2033 />
+                </div>
+
+                {/* NEW: Interactive Tech Demo 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2025 />
                 </div>
 
                 {/* Revolutionary Content Showcase */}
@@ -870,6 +895,11 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <EnhancedContentShowcase2030 />
                 </div>
+
+                {/* NEW: Enhanced Content Showcase 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase2025 />
+                </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -1007,6 +1037,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/pages/RevolutionaryAIContent2025" element={<RevolutionaryAIContent2025 />} />
+          <Route path="/pages/QuantumComputingRevolutionary2025" element={<QuantumComputingRevolutionary2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
