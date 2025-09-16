@@ -80,10 +80,18 @@ const Home: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 py-16">
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
-            <p className="text-gray-300 mb-6">A concise guide for leaders to adopt AI responsibly and effectively.</p>
-            <Link to="/pages/AIExecutiveStrategy2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Read the Strategy →</Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
+              <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
+              <p className="text-gray-300 mb-6">A concise guide for leaders to adopt AI responsibly and effectively.</p>
+              <Link to="/pages/AIExecutiveStrategy2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Read the Strategy →</Link>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-8 text-center">
+              <h3 className="text-3xl font-bold text-white mb-4">🚀 AI 2026: Enterprise Automation</h3>
+              <p className="text-gray-300 mb-6">Transform your business with next-generation AI automation that learns and scales autonomously.</p>
+              <Link to="/pages/AI2026EnterpriseAutomation" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Now →</Link>
+            </div>
           </div>
         </div>
 
