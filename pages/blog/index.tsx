@@ -27,6 +27,8 @@ const posts = [
   ,{ slug: 'ai-2026-secure-tooling-permissions-blueprint', title: 'Secure Tooling Permissions — Blueprint (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.' }
   ,{ slug: 'ai-2026-guardrailed-tooling-risk-tiers', title: 'Guardrailed Tooling: Risk Tiers (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe tool actions.' }
   ,{ slug: 'ai-2026-real-time-rag-architectures', title: 'Real-Time RAG Architectures (2026)', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' }
+  ,{ slug: 'ai-2026-runtime-guardrails-blueprint', title: 'AI 2026: Runtime Guardrails Blueprint', excerpt: 'Runtime checks, policy-as-code, and safe tool envelopes.' }
+  ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
 ]
 
 export default function BlogIndexPage() {
