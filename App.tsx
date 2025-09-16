@@ -104,6 +104,7 @@ import RevolutionaryServices2026 from './src/pages/RevolutionaryServices2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import NewContent2026AdvertisingBanner from './src/components/NewContent2026AdvertisingBanner';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
@@ -304,6 +305,11 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* New Content Advertising Banner */}
+                <div className="mb-12">
+                  <NewContent2026AdvertisingBanner />
+                </div>
+                
+                {/* Additional Content Showcase */}
                 <div className="mb-12">
                   <NewContentAdvertisingBanner2026 />
                 </div>
@@ -1416,6 +1422,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIExecutiveStrategy2026" element={<AIExecutiveStrategy2026 />} />
           <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
+          
+          {/* New Content 2026 Routes */}
+          <Route path="/consciousness-computing-services-2026" element={<div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-100"><div className="container mx-auto px-4 py-8"><h1 className="text-4xl font-bold text-center mb-8">Consciousness Computing Services 2026</h1><p className="text-lg text-center">Revolutionary AI consciousness technology for enterprise transformation</p></div></div>} />
+          <Route path="/case-studies/consciousness-computing-enterprise-transformation" element={<div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100"><div className="container mx-auto px-4 py-8"><h1 className="text-4xl font-bold text-center mb-8">Consciousness Computing Enterprise Transformation</h1><p className="text-lg text-center">50,000% ROI Success Story - Fortune 500 Implementation</p></div></div>} />
           <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />
           <Route path="/pages/AIBusinessRevolution2028" element={<AIBusinessRevolution2028 />} />
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
