@@ -60,7 +60,11 @@ import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPr
 import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
 import NewContentShowcase2027 from './components/NewContentShowcase2027';
 import RevolutionaryServicesBanner2027 from './components/RevolutionaryServicesBanner2027';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import AIBusinessSolutionsPromoBanner2026 from './components/AIBusinessSolutionsPromoBanner2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
+import AI2026LatestTrends from './pages/AI2026LatestTrends';
+import AIBusinessSolutions2026 from './pages/AIBusinessSolutions2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
@@ -175,6 +179,16 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Services Banner 2027 */}
               <div className="mb-12">
                 <RevolutionaryServicesBanner2027 />
+              </div>
+
+              {/* NEW: AI 2026 Latest Trends Promotion Banner */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2026 />
+              </div>
+
+              {/* NEW: AI Business Solutions Promotion Banner */}
+              <div className="mb-12">
+                <AIBusinessSolutionsPromoBanner2026 />
               </div>
 
               {/* NEW: Content Showcase 2027 */}
@@ -492,6 +506,10 @@ const App: React.FC = () => {
           
           {/* NEW: Advanced AI Solutions 2027 */}
           <Route path="/advanced-ai-solutions-2027" element={<AdvancedAISolutions2027 />} />
+          
+          {/* NEW: AI 2026 Latest Trends and Business Solutions */}
+          <Route path="/ai-2026-latest-trends" element={<AI2026LatestTrends />} />
+          <Route path="/ai-business-solutions-2026" element={<AIBusinessSolutions2026 />} />
         </Routes>
         
         <Footer />
