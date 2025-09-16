@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 
 const posts = [
@@ -126,6 +127,8 @@ export default function NewsPage() {
       </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 import Link from 'next/link'
 
 export const metadata = {
@@ -169,9 +172,12 @@ export default function NewsIndexPage() {
           ))}
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> origin/feature/add-news-and-promo
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     </div>
   )
 }
