@@ -79,12 +79,6 @@ const solutions = [
 export default function HomePage() {
   const latest = getLatestUpdates(6)
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="bg-black min-h-screen">
-=======
-    <div className="bg-black">
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 =======
     <div className="bg-black">
 >>>>>>> cursor/create-and-deploy-new-content-a12c
