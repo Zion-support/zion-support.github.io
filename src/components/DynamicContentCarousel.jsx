@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -49,15 +46,8 @@ const DynamicContentCarousel = () => {
 
     return () => clearInterval(interval);
   }, [carouselItems.length]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-const DynamicContentCarousel= () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">DynamicContentCarousel</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -115,7 +105,6 @@ const DynamicContentCarousel= () => {
           ))}
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

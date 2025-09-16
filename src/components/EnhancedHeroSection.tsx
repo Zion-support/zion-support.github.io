@@ -5,11 +5,6 @@ import { ArrowRight, Sparkles, Brain, Atom, Zap } from 'lucide-react';
 
 const EnhancedHeroSection: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedHeroSection</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
       <div className="container mx-auto px-4 text-center">
         <Badge className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white mb-6 animate-pulse">
@@ -87,7 +82,6 @@ const EnhancedHeroSection: React.FC = () => {
           </Button>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
