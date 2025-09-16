@@ -19,8 +19,6 @@ import RevolutionaryContentBanner2026 from './src/components/RevolutionaryConten
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import RevolutionaryAIServices2026 from './src/pages/RevolutionaryAIServices2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
-import ConsciousAIRevolution2026 from './src/pages/ConsciousAIRevolution2026';
-import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 
 // Import existing pages
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
@@ -97,8 +95,6 @@ const App: React.FC = () => {
               {/* 2026 Pages */}
               <Route path="/pages/RevolutionaryAIServices2026" element={<RevolutionaryAIServices2026 />} />
               <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-              <Route path="/pages/ConsciousAIRevolution2026" element={<ConsciousAIRevolution2026 />} />
-              <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
               
               {/* Case Study */}
               <Route path="/case-study/:id" element={<CaseStudyPage />} />
