@@ -46,6 +46,9 @@ import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryCont
 import SEOAnalyzer from './src/components/SEOAnalyzer';
 import SEOOptimizer from './src/components/SEOOptimizer';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import NeuralConsensus2026PromotionBanner from './src/components/NeuralConsensus2026PromotionBanner';
+import SyntheticIntelligence2026Showcase from './src/components/SyntheticIntelligence2026Showcase';
+import NewContent2026Carousel from './src/components/NewContent2026Carousel';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import AIExecutiveStrategy2026 from './src/pages/AIExecutiveStrategy2026';
@@ -744,6 +747,21 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2025 - Breakthrough Technology */}
                 <div className="mb-12">
                   <RevolutionaryContentBanner2025 />
+                </div>
+
+                {/* NEW: Neural Consensus 2026 Promotion Banner - Latest AI Breakthrough */}
+                <div className="mb-12">
+                  <NeuralConsensus2026PromotionBanner />
+                </div>
+
+                {/* NEW: New Content 2026 Carousel - Revolutionary AI Content Collection */}
+                <div className="mb-12">
+                  <NewContent2026Carousel />
+                </div>
+
+                {/* NEW: Synthetic Intelligence 2026 Showcase - AI Beyond Human Limits */}
+                <div className="mb-12">
+                  <SyntheticIntelligence2026Showcase />
                 </div>
 
                 {/* NEW: Revolutionary Content Banner 2027 - Consciousness Revolution */}
