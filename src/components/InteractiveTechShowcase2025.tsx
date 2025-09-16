@@ -1,157 +1,272 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState('ai');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  const demos = [
-    {
-      id: 'ai-consciousness',
-      title: 'AI Consciousness Simulator',
-      description: 'Watch as our AI system demonstrates self-awareness and creative thinking in real-time.',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/20 to-pink-600/20',
-      borderColor: 'border-purple-400/30'
-    },
-    {
-      id: 'quantum-reality',
-      title: 'Quantum Reality Engine',
-      description: 'Experience quantum computing as it processes impossible calculations instantly.',
-      icon: '⚛️',
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/20 to-blue-600/20',
-      borderColor: 'border-cyan-400/30'
-    },
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface Test',
-      description: 'Test direct brain-computer interfaces that enable thought-controlled technology.',
-      icon: '🧬',
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/20 to-teal-600/20',
-      borderColor: 'border-emerald-400/30'
-    },
-    {
-      id: 'reality-manipulation',
-      title: 'Reality Manipulation Demo',
-      description: 'Experience technology that can manipulate the fundamental fabric of reality.',
-      icon: '🔮',
-      color: 'from-indigo-600 to-purple-600',
-      bgColor: 'from-indigo-600/20 to-purple-600/20',
-      borderColor: 'border-indigo-400/30'
-    }
-  ];
-
-  const getDemoOutput = (demoId: string) => {
-    const outputs = {
-      'ai-consciousness': [
-        { text: 'AI: "I am aware of my existence and can create new ideas..."', color: 'text-green-400' },
-        { text: 'System: Processing creative solutions...', color: 'text-blue-400' },
-        { text: 'AI: "I have generated 1,247 unique solutions to your problem."', color: 'text-purple-400' },
-        { text: 'Status: Consciousness level 99.7%', color: 'text-yellow-400' }
-      ],
-      'quantum-reality': [
-        { text: 'Quantum: Calculating 10^100 operations...', color: 'text-cyan-400' },
-        { text: 'Result: Completed in 0.0001 seconds', color: 'text-green-400' },
-        { text: 'Status: Reality simulation successful', color: 'text-yellow-400' },
-        { text: 'Universe: 1,000,000 parallel realities processed', color: 'text-purple-400' }
-      ],
-      'neural-interface': [
-        { text: 'Neural: Scanning brain patterns...', color: 'text-cyan-400' },
-        { text: 'Interface: Thought detected and processed', color: 'text-green-400' },
-        { text: 'Output: Command executed successfully', color: 'text-blue-400' },
-        { text: 'Efficiency: 99.97% accuracy', color: 'text-purple-400' }
-      ],
-      'reality-manipulation': [
-        { text: 'System: Initializing reality manipulation...', color: 'text-green-400' },
-        { text: 'Status: Matter transformation in progress', color: 'text-blue-400' },
-        { text: 'Result: Object successfully phase-shifted', color: 'text-purple-400' },
-        { text: 'Energy: 0.001% of universe\'s total', color: 'text-yellow-400' }
+  const techCategories = {
+    ai: {
+      title: "Artificial Intelligence",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900 to-pink-900",
+      items: [
+        {
+          id: "consciousness",
+          title: "AI Consciousness",
+          description: "Self-aware AI systems that think and feel",
+          features: ["Self-awareness", "Emotional intelligence", "Creative thinking", "Ethical reasoning"],
+          demo: "Launch AI Consciousness Demo"
+        },
+        {
+          id: "generative",
+          title: "Generative AI 2.0",
+          description: "Next-generation content creation and synthesis",
+          features: ["Text generation", "Image creation", "Video synthesis", "Code generation"],
+          demo: "Try Generative AI"
+        },
+        {
+          id: "autonomous",
+          title: "Autonomous Agents",
+          description: "AI agents that operate independently",
+          features: ["Task automation", "Decision making", "Learning", "Adaptation"],
+          demo: "Deploy Agent"
+        }
       ]
-    };
-    return outputs[demoId as keyof typeof outputs] || [];
+    },
+    quantum: {
+      title: "Quantum Computing",
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900 to-blue-900",
+      items: [
+        {
+          id: "reality",
+          title: "Quantum Reality",
+          description: "Experience reality through quantum mechanics",
+          features: ["Quantum entanglement", "Parallel universes", "Reality manipulation", "Time-space distortion"],
+          demo: "Enter Quantum Reality"
+        },
+        {
+          id: "cryptography",
+          title: "Quantum Cryptography",
+          description: "Unbreakable encryption using quantum principles",
+          features: ["Quantum key distribution", "Unhackable security", "Quantum random numbers", "Secure communication"],
+          demo: "Test Quantum Security"
+        },
+        {
+          id: "simulation",
+          title: "Quantum Simulation",
+          description: "Simulate complex systems at quantum scale",
+          features: ["Molecular modeling", "Drug discovery", "Material science", "Climate modeling"],
+          demo: "Run Simulation"
+        }
+      ]
+    },
+    neural: {
+      title: "Neural Interfaces",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900 to-teal-900",
+      items: [
+        {
+          id: "bci",
+          title: "Brain-Computer Interface",
+          description: "Direct neural connection to digital systems",
+          features: ["Thought control", "Neural signal processing", "Cognitive enhancement", "Medical applications"],
+          demo: "Connect Neural Interface"
+        },
+        {
+          id: "memory",
+          title: "Memory Enhancement",
+          description: "Augment human memory with technology",
+          features: ["Memory storage", "Recall enhancement", "Knowledge transfer", "Learning acceleration"],
+          demo: "Enhance Memory"
+        },
+        {
+          id: "sensory",
+          title: "Sensory Expansion",
+          description: "Extend human senses beyond natural limits",
+          features: ["Enhanced vision", "Extended hearing", "New sensory modalities", "Sensory fusion"],
+          demo: "Expand Senses"
+        }
+      ]
+    },
+    blockchain: {
+      title: "Blockchain & Web3",
+      icon: "🔗",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900 to-red-900",
+      items: [
+        {
+          id: "defi",
+          title: "DeFi Platforms",
+          description: "Decentralized financial systems",
+          features: ["Smart contracts", "Automated trading", "Liquidity pools", "Yield farming"],
+          demo: "Access DeFi"
+        },
+        {
+          id: "nft",
+          title: "NFT Marketplaces",
+          description: "Digital asset trading and creation",
+          features: ["Digital ownership", "Creator royalties", "Cross-chain trading", "Metaverse integration"],
+          demo: "Browse NFTs"
+        },
+        {
+          id: "dao",
+          title: "DAO Governance",
+          description: "Decentralized autonomous organizations",
+          features: ["Community voting", "Proposal systems", "Treasury management", "Transparent governance"],
+          demo: "Join DAO"
+        }
+      ]
+    }
   };
 
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setHoveredItem(null);
+  };
+
+  const currentCategory = techCategories[activeTab as keyof typeof techCategories];
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE TECH SHOWCASE • JANUARY 2025
+    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 text-white">
+            🚀 INTERACTIVE SHOWCASE • 2025
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Experience our cutting-edge technologies through interactive demonstrations and real-time simulations
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="space-y-6">
-            {demos.map((demo) => (
-              <div
-                key={demo.id}
-                className={`bg-gradient-to-br ${demo.bgColor} backdrop-blur-sm rounded-xl p-6 border ${demo.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => setActiveDemo(activeDemo === demo.id ? null : demo.id)}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{demo.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
-                    <p className="text-sm opacity-80">{demo.description}</p>
-                  </div>
-                  <div className="text-2xl">
-                    {activeDemo === demo.id ? '−' : '+'}
-                  </div>
+        </motion.div>
+
+        {/* Tab Navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {Object.entries(techCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => handleTabChange(key)}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                  : 'bg-white text-gray-700 hover:shadow-md'
+              }`}
+            >
+              <span className="text-xl">{category.icon}</span>
+              <span>{category.title}</span>
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Content Area */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            {/* Category Header */}
+            <div className={`bg-gradient-to-r ${currentCategory.bgColor} text-white p-8`}>
+              <div className="flex items-center space-x-4 mb-4">
+                <span className="text-4xl">{currentCategory.icon}</span>
+                <div>
+                  <h3 className="text-3xl font-bold">{currentCategory.title}</h3>
+                  <p className="text-lg opacity-90">Explore the future of {currentCategory.title.toLowerCase()}</p>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold mb-4 text-center">Live Demo Output</h3>
-            <div className="bg-black/40 rounded-lg p-6 font-mono text-sm min-h-[300px]">
-              {activeDemo ? (
-                <div className="space-y-2">
-                  {getDemoOutput(activeDemo).map((line, index) => (
-                    <div key={index} className={`${line.color} animate-pulse`}>
-                      {line.text}
+            </div>
+
+            {/* Items Grid */}
+            <div className="p-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {currentCategory.items.map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    onHoverStart={() => setHoveredItem(item.id)}
+                    onHoverEnd={() => setHoveredItem(null)}
+                    className={`relative bg-gradient-to-br ${currentCategory.color} text-white rounded-xl p-6 cursor-pointer transform transition-all duration-300 ${
+                      hoveredItem === item.id ? 'scale-105 shadow-2xl' : 'hover:shadow-lg'
+                    }`}
+                  >
+                    <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                    <p className="text-sm opacity-90 mb-4">{item.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {item.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm">
+                          <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                          {feature}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                  <div className="text-green-400 mt-4 animate-pulse">
-                    ▶ Ready for next command...
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center text-gray-400 mt-20">
-                  <div className="text-4xl mb-4">👆</div>
-                  <div>Click on a demo to see it in action</div>
-                </div>
-              )}
-            </div>
-            {activeDemo && (
-              <div className="mt-4 text-center">
-                <button className={`bg-gradient-to-r ${demos.find(d => d.id === activeDemo)?.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Run {demos.find(d => d.id === activeDemo)?.title} →
-                </button>
+
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-white/20 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+                    >
+                      {item.demo}
+                    </motion.button>
+
+                    {/* Hover Effect */}
+                    <AnimatePresence>
+                      {hoveredItem === item.id && (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-xl"
+                        />
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
               </div>
-            )}
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <div className="text-sm opacity-80">Interactive Features:</div>
-            <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Real-time Demos</span>
-              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Live Processing</span>
-              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interactive UI</span>
-              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Dynamic Content</span>
             </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Experience the Future?</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of innovators who are already using our technologies to transform their businesses
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Start Free Trial
+            </button>
+            <button className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Schedule Demo
+            </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
