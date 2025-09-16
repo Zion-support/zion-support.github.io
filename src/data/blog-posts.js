@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9101,
+    title: "AI 2026: Policy‑as‑Code Blueprint",
+    excerpt: "Encode approvals, risk tiers, and eval gates as versioned policy.",
+    content: "This concise blueprint shows how to represent approvals, risk tiers, and evaluation gates as code. You will learn a minimal policy schema, how to thread policies through CI/CD, and how to wire pass/fail outcomes to release scorecards and automated rollback. Includes copy‑paste examples you can adopt today.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy-as-Code", "Approvals", "Risk Tiers", "Eval Gates"],
+    featured: true,
+    imageUrl: "/images/blog/policy-as-code-blueprint-2026.jpg",
+    slug: "ai-2026-policy-as-code-blueprint"
+  },
+  {
+    id: 9102,
+    title: "Agentic Observability — Executive Overview",
+    excerpt: "Traces, evals, incidents, and KPIs to operate agent platforms.",
+    content: "An executive‑level overview of the observability stack required for autonomous agents: end‑to‑end traces, online evaluations, incident telemetry, and evidence hubs that drive decisions. Learn which KPIs matter and how to make them gate change.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Observability",
+    tags: ["Observability", "Evals", "Incidents", "KPIs"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-observability-overview-2026.jpg",
+    slug: "ai-2026-agentic-observability-overview"
+  },
+  {
     id: 9001,
     title: "AI 2026: Agent Platform SLOs — Best Practices",
     excerpt: "A concise SLO set for safety, quality, reliability, and cost—ready to adopt.",
@@ -1302,5 +1332,7 @@ export const newContent2026 = [
 
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026];
-
+// Keep compatibility export; prefer BLOG_POSTS as unified list
+export const BLOG_POSTS_ALL = allBlogPosts;
+// Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
