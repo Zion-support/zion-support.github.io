@@ -1,101 +1,95 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-  });
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateMetric = (metric: any) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
-      }));
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+
+      // Get Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as any;
+            if (!clsEntry.hadRecentInput) {
+              setMetrics(prev => ({
+                ...prev!,
+                cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry.value
+              }));
+            }
+          } else if (entry.entryType === 'first-input') {
+            const fidEntry = entry as any;
+            setMetrics(prev => ({
+              ...prev!,
+              firstInputDelay: fidEntry.processingStart - fidEntry.startTime
+            }));
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['layout-shift', 'first-input'] });
+
+      setMetrics({
+        loadTime,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0
+      });
+
+      // Show performance panel after 3 seconds
+      setTimeout(() => setIsVisible(true), 3000);
     };
 
-    getCLS(updateMetric);
-    getFID(updateMetric);
-    getFCP(updateMetric);
-    getLCP(updateMetric);
-    getTTFB(updateMetric);
-
-    // Show performance monitor in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
-  if (!isVisible) return null;
-
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
-    if (value === null) return 'text-gray-500';
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  const formatValue = (value: number | null, unit: string = 'ms') => {
-    if (value === null) return 'N/A';
-    return `${value.toFixed(2)}${unit}`;
-  };
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance Metrics</h3>
+        <h3 className="font-bold">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
+          className="text-gray-400 hover:text-white"
+          aria-label="Close performance monitor"
         >
           ×
         </button>
       </div>
-      <div className="space-y-1 text-xs">
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {formatValue(metrics.cls, '')}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {formatValue(metrics.fid)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {formatValue(metrics.fcp)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {formatValue(metrics.lcp)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {formatValue(metrics.ttfb)}
-          </span>
-        </div>
+      <div className="space-y-1">
+        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+        <div>FCP: {metrics.firstContentfulPaint.toFixed(0)}ms</div>
+        <div>LCP: {metrics.largestContentfulPaint.toFixed(0)}ms</div>
+        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
+        <div>FID: {metrics.firstInputDelay.toFixed(0)}ms</div>
       </div>
     </div>
   );

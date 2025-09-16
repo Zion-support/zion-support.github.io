@@ -7,6 +7,9 @@ import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { OrganizationStructuredData, WebSiteStructuredData, WebPageStructuredData } from './components/StructuredData';
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
@@ -57,6 +60,11 @@ import ConsciousAIRevolution2027 from './pages/ConsciousAIRevolution2027';
 export default function App(): JSX.Element {
   return (
     <Router>
+      <AccessibilityEnhancer />
+      <PerformanceMonitor />
+      <OrganizationStructuredData />
+      <WebSiteStructuredData />
+      <WebPageStructuredData />
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
