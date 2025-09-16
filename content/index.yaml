@@ -315,7 +315,6 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
->>>>>>> origin/feat/new-content-2026-evals
       featured: true
       is_new: true
       metrics:
@@ -723,13 +722,21 @@ content_index:
         review_time: "-50%"
         coverage: "100% gated"
 
-<<<<<<< HEAD
     - id: "ai-2026-agent-evidence-hub-starter"
       type: "resource"
       title: "AI 2026: Agent Evidence Hub — Starter Kit"
       file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
       url: "/resources/ai-2026-agent-evidence-hub-starter"
-=======
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evidence", "Operations", "Governance", "Audit", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        integration_time: "< 1 day"
+        audit_ready: true
+        coverage: "Incidents, Evals, Approvals"
+
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"
       title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
@@ -774,6 +781,7 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
+
     - id: "ai-2026-secure-agent-operations-blueprint"
       type: "blog"
       title: "AI 2026: Secure Agent Operations — Blueprint"
@@ -788,6 +796,7 @@ content_index:
         incident_reduction: "40%"
         rollback_time: "< 5 min"
         audit_ready: true
+
     - id: "ai-2026-agent-operations-checklist"
       type: "resource"
       title: "AI 2026: Agent Operations Checklist"
@@ -1060,9 +1069,5 @@ content_index:
         downtime_reduction: "85%"
         cost_savings: "60%"
         prediction_accuracy: "95%"
-<<<<<<< HEAD
       reading_time: "18 min read"
-=======
-      reading_time: "18 min read"
-<<<<<<< HEAD
  
