@@ -62,6 +62,16 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/blog/ai-2026-safe-autonomy-in-production" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Autonomy • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Safe Autonomy in Production</h3>
+                  <p className="text-white/80">Deploy agents with guardrails, SLOs, and audit‑ready evidence.</p>
+                </Link>
+                <Link href="/blog/ai-2026-evidence-hub-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Evidence Hub in Practice</h3>
+                  <p className="text-white/80">Centralize evals, traces, and policy events to ship safely.</p>
+                </Link>
                 <Link href="/blog/ai-2026-agent-observability-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Agent Observability Scorecards</h3>
