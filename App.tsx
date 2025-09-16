@@ -199,6 +199,10 @@ import UltimateTechBanner2035 from './src/components/UltimateTechBanner2035';
 import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
 import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
 import RevolutionaryAdBanner2035 from './src/components/RevolutionaryAdBanner2035';
+import AdvancedPerformanceMonitor2025 from './src/components/AdvancedPerformanceMonitor2025';
+import AdvancedAnalyticsDashboard2025 from './src/components/AdvancedAnalyticsDashboard2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import UserEngagementTracker2025 from './src/components/UserEngagementTracker2025';
 
 export default function App(): JSX.Element {
   return (
@@ -215,6 +219,10 @@ export default function App(): JSX.Element {
         <EnhancedAccessibilityPanel />
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
+        <AdvancedPerformanceMonitor2025 />
+        <AdvancedAnalyticsDashboard2025 />
+        <AdvancedSEOOptimizer2025 />
+        <UserEngagementTracker2025 />
         <Header />
         
         <Routes>
