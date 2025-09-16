@@ -31,6 +31,8 @@ import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
 import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import NewContentBanner2026 as NewContentBanner2026New from './src/components/NewContentBanner2026';
+import ComprehensiveContentShowcase2026 from './src/components/ComprehensiveContentShowcase2026';
 import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 import NotificationSystem from './src/components/NotificationSystem';
@@ -94,6 +96,8 @@ import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
+import AIRevolutionaryBreakthrough2026 from './src/pages/AIRevolutionaryBreakthrough2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
@@ -221,6 +225,8 @@ export default function App(): JSX.Element {
         <SEOAnalyzer />
         <ErrorMonitoringSystem />
         <NewContentBanner2026 />
+        <NewContentBanner2026New />
+        <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner2026 />
         <AdvancedPerformanceOptimizer2025 />
         <AdvancedSEOOptimizer2025 />
@@ -1405,6 +1411,8 @@ export default function App(): JSX.Element {
           
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
+          <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
+          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
           
           <Route path="*" element={
