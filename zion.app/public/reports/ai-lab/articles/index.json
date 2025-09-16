@@ -183,6 +183,21 @@
   }
   ,
   {
+    "title": "Agent Incident Postmortems — Evidence‑First Templates",
+    "url": "/reports/ai-lab/articles/agent-incident-postmortems-evidence-first-templates-1758087000000.md",
+    "createdAt": "2025-09-16T23:30:00.000Z",
+    "tags": ["operations", "reliability", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Billing Controls — Policy‑Aware Budgets",
+    "url": "/reports/ai-lab/articles/agent-billing-controls-policy-aware-budgets-1758088800000.md",
+    "createdAt": "2025-09-17T00:00:00.000Z",
+    "tags": ["cost", "governance", "policy"],
+    "source": "Zion AI Lab"
+  }
+  ,
+  {
     "title": "Zero‑Downtime Agent Releases: Blue/Green, Canary, Eval Gates",
     "url": "/reports/ai-lab/articles/zero-downtime-agent-releases-1758081600000.md",
     "createdAt": "2025-09-16T22:00:00.000Z",
