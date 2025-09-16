@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -192,10 +190,6 @@ const SyntheticIntelligence2026: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { motion } from 'framer-motion';
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 
 const SyntheticIntelligence2026: React.FC = () => {
   return (
@@ -206,7 +200,6 @@ const SyntheticIntelligence2026: React.FC = () => {
           <p className="text-xl text-gray-600">Coming soon - SyntheticIntelligence2026 content</p>
         </div>
       </div>
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
     </div>
   );
 };
