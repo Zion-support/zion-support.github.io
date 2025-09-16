@@ -3,6 +3,7 @@ import React from 'react';
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
 <<<<<<< HEAD
@@ -12,6 +13,13 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> cursor/create-and-deploy-new-content-3a26
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -204,6 +212,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Start Manufacturing →
             </a>
+<<<<<<< HEAD
           </div>
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
@@ -225,6 +234,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 =======
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -273,10 +285,13 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Longevity treatments</li>
               <li>• Cognitive enhancement</li>
             </ul>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Enhance Biology →
             </button>
@@ -394,11 +409,15 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Ecosystem restoration</li>
             </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Create Living Materials →
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
             <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Restoration →
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -411,10 +430,17 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+          </div>
+        </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-3a26
         {/* Call to Action */}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -485,6 +511,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         <div className="text-center">
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -513,6 +542,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -533,6 +563,11 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+              Learn More
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             </button>
           </div>
         </div>

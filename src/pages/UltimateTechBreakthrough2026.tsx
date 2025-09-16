@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
@@ -321,8 +324,11 @@ const UltimateTechBreakthrough2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             </button>
           </div>
         </div>

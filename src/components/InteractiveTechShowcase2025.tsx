@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
 =======
 <<<<<<< HEAD
@@ -298,6 +299,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
           status: "Concept Phase"
         }
       ]
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -306,13 +309,20 @@ const InteractiveTechShowcase2025: React.FC = () => {
         }
       ]
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+  const [activeTab, setActiveTab] = useState('ai');
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
     }
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -534,12 +544,19 @@ const InteractiveTechShowcase2025: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         </div>
 
               Schedule Demo
             </button>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -547,20 +564,27 @@ const InteractiveTechShowcase2025: React.FC = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Interactive Technology Showcase 2025</h2>
         <p className="text-xl opacity-90">Experience our cutting-edge technologies with interactive demonstrations</p>
+=======
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
+        <p className="text-xl text-purple-200">Explore our revolutionary technologies with interactive features</p>
+>>>>>>> cursor/create-and-deploy-new-content-3a26
       </div>
 
-      {/* Interactive Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {Object.entries(technologies).map(([key, tech]) => (
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {techCategories.map((category, index) => (
           <button
-            key={key}
-            onClick={() => setActiveTab(key)}
-            className={`px-8 py-4 rounded-lg font-bold transition-all duration-300 ${
-              activeTab === key
-                ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg scale-105`
-                : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+            key={index}
+            onClick={() => setActiveTab(index)}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              activeTab === index
+                ? `bg-gradient-to-r ${category.color} text-white`
+                : 'bg-white/20 text-white hover:bg-white/30'
             }`}
           >
+<<<<<<< HEAD
             <span className="text-2xl mr-3">{tech.icon}</span>
             {tech.title}
 =======
@@ -587,10 +611,15 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <span className="mr-2">{category.icon}</span>
             {category.title}
 >>>>>>> cursor/create-and-deploy-new-content-9601
+=======
+            <span className="mr-2">{category.icon}</span>
+            {category.title}
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </button>
         ))}
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Active Technology Display */}
       <div className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].bgGradient} backdrop-blur-sm rounded-2xl p-8 mb-12`}>
@@ -719,14 +748,18 @@ const InteractiveTechShowcase2025: React.FC = () => {
       {/* Interactive Features Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {interactiveFeatures.map((feature, index) => (
+=======
+      {/* Technology Cards */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {techCategories[activeTab].technologies.map((tech, index) => (
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           <div
             key={index}
-            className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer ${
-              hoveredCard === feature.title ? 'bg-white/20' : ''
-            }`}
-            onMouseEnter={() => setHoveredCard(feature.title)}
+            className={`bg-gradient-to-br ${techCategories[activeTab].color}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
+            onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
+<<<<<<< HEAD
             <div className="text-4xl mb-4">{feature.icon}</div>
             <div className="text-3xl font-bold mb-2 text-cyan-400">{feature.metric}</div>
             <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
@@ -741,6 +774,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -748,8 +783,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
               </div>
               <div className="text-4xl opacity-60">{techCategories[activeTab].icon}</div>
             </div>
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 
             {/* Features List */}
             <div className="mb-6">
@@ -789,13 +827,17 @@ const InteractiveTechShowcase2025: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl pointer-events-none"></div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-9601
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         ))}
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Interactive Demo Section */}
@@ -832,6 +874,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
               Connect Mind
             </button>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -852,6 +896,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
           </div>
@@ -908,6 +953,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-9601
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         </div>
       </div>

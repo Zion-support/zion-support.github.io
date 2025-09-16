@@ -186,8 +186,11 @@ export const latestContent: ContentItem[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-011f
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
     tag: "Blueprint",
     date: "2025-09-15",
   },

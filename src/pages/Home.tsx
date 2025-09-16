@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 =======
@@ -7,6 +8,8 @@ import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,6 +17,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -34,6 +38,11 @@ import React from 'react';
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+import React from 'react';
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useNotifications } from '../components/NotificationSystem';
@@ -59,15 +68,19 @@ import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 <<<<<<< HEAD
@@ -80,6 +93,9 @@ import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertising
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -359,6 +375,7 @@ const Home: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
@@ -369,6 +386,9 @@ const Home: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -393,6 +413,16 @@ const Home: React.FC = () => {
               Comprehensive cybersecurity solutions to protect your business 
               from evolving threats in the digital landscape.
             </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
+            </ul>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
             <Link 
               to="/pages/ComprehensiveTechInsights2026" 
               className="text-green-400 hover:text-green-300 font-semibold"
@@ -417,6 +447,7 @@ const Home: React.FC = () => {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -424,6 +455,9 @@ const Home: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         </div>
         </motion.section>

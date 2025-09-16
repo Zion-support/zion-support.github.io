@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -385,7 +391,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </a>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+<<<<<<< HEAD
 >>>>>>> main
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
     </div>

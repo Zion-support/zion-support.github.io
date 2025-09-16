@@ -184,6 +184,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Join the Biotech Revolution</h2>
           <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
@@ -438,6 +442,26 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
             </button>
+<<<<<<< HEAD
+=======
+=======
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Biology?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join us in the biotech revolution and be part of the future where human potential 
+              is unlimited and diseases are a thing of the past.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
+                Start Your Journey →
+              </a>
+              <a href="/pages/ComprehensiveServices2025" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-teal-900 transition-all duration-300 font-bold text-lg">
+                Learn More
+              </a>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-261d
+>>>>>>> cursor/create-and-deploy-new-content-3a26
           </div>
         </div>
       </div>
