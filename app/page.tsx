@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
+import WhatsNew from './components/WhatsNew';
 
 // Import new advanced AI components
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
@@ -548,8 +549,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What's New dynamic section (disabled: component not present) */}
-      {/* <WhatsNew highlightOnly limit={8} /> */}
+      {/* What's New dynamic section (enabled) */}
+      <WhatsNew highlightOnly limit={8} />
       
       <div className='min-h-screen bg-white'>
         {/* NEW FEATURED: AI 2026 Breakthrough Banners */}
@@ -770,8 +771,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* What's New dynamic section (disabled) */}
-      {/* <WhatsNew highlightOnly limit={8} /> */}
+      {/* What's New dynamic section */}
+      <WhatsNew highlightOnly limit={8} />
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
