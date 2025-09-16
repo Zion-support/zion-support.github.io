@@ -5,6 +5,7 @@ const page: React.FC = () => {
 =======
 const posts = [
   {
+<<<<<<< HEAD
     slug: 'ai-2026-runtime-policy-enforcement-blueprint',
     title: 'AI 2026: Runtime Policy Enforcement — Blueprint',
     summary:
@@ -95,10 +96,52 @@ const posts = [
       'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
   },
   {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+<<<<<<< HEAD
   },
   {
     slug: 'ai-2026-trustworthy-model-routing',
@@ -184,6 +227,10 @@ const posts = [
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
   },
   {
+=======
+  },
+  {
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     slug: 'ai-2026-autonomous-workflow-architecture',
     title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
     summary:
@@ -200,12 +247,121 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
   },
   {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+  },
+  {
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+  },
+  {
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
+    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
@@ -416,6 +572,7 @@ const posts = [
 ]
 
 export default function BlogIndexPage() {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -426,3 +583,34 @@ export default function BlogIndexPage() {
 };
 
 export default page;
+=======
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
+          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="text-gray-600">{post.summary}</p>
+                <div className="mt-4">
+                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
+                    Read →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5

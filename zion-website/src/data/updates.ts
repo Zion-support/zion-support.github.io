@@ -3,6 +3,7 @@
 export const siteUpdates: SiteUpdate[] = [
 export const updates: UpdateItem[] = [
   {
+<<<<<<< HEAD
 =======
 export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release' | 'Blueprint' | 'Field Guide' | 'Blog'
 
@@ -202,6 +203,44 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -226,6 +265,7 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -235,11 +275,34 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+<<<<<<< HEAD
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
@@ -258,6 +321,28 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -271,8 +356,17 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
@@ -314,12 +408,21 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
@@ -327,25 +430,44 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/autonomous-security-copilot-1-0',
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -366,12 +488,21 @@ export const siteUpdates: SiteUpdate[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -383,8 +514,20 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+<<<<<<< HEAD
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
@@ -437,20 +580,33 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 =======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -1648,6 +1804,7 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .slice(0, limit)
 }
 
+<<<<<<< HEAD
 =======
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
@@ -2427,3 +2584,5 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
 ]
 
 >>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
