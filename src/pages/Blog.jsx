@@ -14,6 +14,18 @@ const posts = [
     summary: 'Deterministic and probabilistic routing strategies that balance cost, latency, and safety.',
     date: '2025-09-16',
   },
+  {
+    slug: 'ai-2026-safe-agent-rollouts-checklist',
+    title: 'AI 2026: Safe Agent Rollouts Checklist',
+    summary: 'Preflight, canary, and rollback steps to ship agent features safely.',
+    date: '2025-09-16',
+  },
+  {
+    slug: 'ai-2026-evidence-hubs-blueprint',
+    title: 'AI 2026: Production Evidence Hubs — Blueprint',
+    summary: 'Capture traces, artifacts, and policy events for auditable AI.',
+    date: '2025-09-16',
+  },
 ];
 
 export default function Blog() {
