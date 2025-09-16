@@ -5,6 +5,9 @@ const NewContentBanner2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-cyan-900 text-white py-12 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
@@ -194,6 +197,9 @@ const NewContentBanner2025: React.FC = () => {
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>
