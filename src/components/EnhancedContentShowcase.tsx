@@ -5,6 +5,10 @@ const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
   const showcaseItems = [
     {
       id: 1,
@@ -12,6 +16,7 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -106,6 +111,35 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
+=======
+      link: "/pages/AdvancedAITransformation2026",
+      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
+      category: "AI & Machine Learning",
+      year: "2026"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+    },
+    {
+      id: 2,
+      title: "Advanced Quantum Computing 2026",
+      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
+      icon: "⚡",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/AdvancedQuantumComputing2026",
+      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
+    },
+    {
+      id: 3,
+<<<<<<< HEAD
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/NextGenTechShowcase2026",
+      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
+      category: "Technology Showcase",
+      year: "2026"
+>>>>>>> cursor/create-and-deploy-new-content-502e
     },
     {
       id: 4,
@@ -270,6 +304,7 @@ const EnhancedContentShowcase: React.FC = () => {
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
       icon: "🧬",
+<<<<<<< HEAD
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
@@ -334,6 +369,9 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -368,6 +406,10 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -723,6 +765,7 @@ const EnhancedContentShowcase: React.FC = () => {
             </a>
           </motion.div>
         ))}
+<<<<<<< HEAD
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -822,6 +865,11 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
       </div>
     </div>
   );
