@@ -199,18 +199,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Promo: New — Billing Controls Deep Dive + Observability Overview */}
+      {/* Promo: New — Executive AI Security Playbook */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-pink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
             <div>
               <p className="text-sm font-semibold text-emerald-700">New on the blog</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Predictable Costs + Executive Observability</h2>
-              <p className="text-gray-600 mt-2">Budgets and approvals for agents, plus what to measure to keep autonomy safe.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Executive AI Security Playbook</h2>
+              <p className="text-gray-600 mt-2">Board-ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-agentic-billing-controls-deep-dive" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Billing Controls</Link>
-              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Observability Overview</Link>
+              <Link href="/blog/ai-2026-executive-ai-security-playbook" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Playbook</Link>
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Policy‑as‑Code</Link>
             </div>
           </div>
         </div>
