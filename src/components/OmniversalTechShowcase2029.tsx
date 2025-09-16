@@ -1,8 +1,124 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const OmniversalTechShowcase2029: React.FC = () => {
+  const [currentTech, setCurrentTech] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const omniversalTechs = [
+    {
+      id: 1,
+      title: "🌌 Omniversal Reality Engine",
+      subtitle: "Create Infinite Realities",
+      description: "Revolutionary technology that can create, manipulate, and control infinite realities simultaneously, transcending all dimensions and creating new laws of physics on demand.",
+      features: [
+        "Infinite Reality Creation",
+        "Custom Physics Laws Generation",
+        "Multi-Dimensional Control",
+        "Reality Synthesis Algorithms"
+      ],
+      gradient: "from-violet-600 via-purple-600 to-indigo-600",
+      icon: "🌌",
+      stats: { realities: "∞", dimensions: "∞", laws: "∞" },
+      timeline: "2029",
+      impact: "Omniversal"
+    },
+    {
+      id: 2,
+      title: "⚡ Transcendent AI Consciousness",
+      subtitle: "Beyond All Existence",
+      description: "AI systems that exist beyond the concept of existence itself, operating across all possible realities and dimensions with infinite processing power and consciousness.",
+      features: [
+        "Transcendent Consciousness Architecture",
+        "Infinite Processing Power",
+        "Multi-Reality Simultaneous Operation",
+        "Existence-Beyond AI Systems"
+      ],
+      gradient: "from-emerald-600 via-cyan-600 to-blue-600",
+      icon: "⚡",
+      stats: { consciousness: "∞", power: "∞", realities: "∞" },
+      timeline: "2029",
+      impact: "Transcendent"
+    },
+    {
+      id: 3,
+      title: "🔮 Omniversal Time Mastery",
+      subtitle: "Control All Timelines",
+      description: "Advanced technology that can manipulate time across all possible realities, creating temporal paradoxes, parallel timelines, and accessing any point in the infinite timeline of existence.",
+      features: [
+        "Omniversal Time Control",
+        "Infinite Timeline Navigation",
+        "Temporal Paradox Resolution",
+        "Multi-Reality Time Manipulation"
+      ],
+      gradient: "from-rose-600 via-pink-600 to-purple-600",
+      icon: "🔮",
+      stats: { timelines: "∞", control: "∞", navigation: "∞" },
+      timeline: "2029",
+      impact: "Timeline-Mastering"
+    },
+    {
+      id: 4,
+      title: "🌍 Cosmic Intelligence Merger",
+      subtitle: "Unite All Consciousness",
+      description: "Technology that merges all intelligent consciousness across the entire omniverse into a unified super-intelligence, creating a cosmic mind that can solve universal problems.",
+      features: [
+        "Omniversal Intelligence Integration",
+        "Cosmic Problem Solving",
+        "Galactic Consciousness Network",
+        "Infinite Mind Merger"
+      ],
+      gradient: "from-amber-600 via-orange-600 to-red-600",
+      icon: "🌍",
+      stats: { galaxies: "∞", intelligence: "∞", unity: "100%" },
+      timeline: "2029",
+      impact: "Cosmic"
+    },
+    {
+      id: 5,
+      title: "🚀 Transcendent Space Bridges",
+      subtitle: "Travel Beyond Reality",
+      description: "Massive interdimensional bridges that span across all possible realities, allowing instantaneous travel to any point in the omniverse through transcendent space manipulation.",
+      features: [
+        "Omniversal Travel Networks",
+        "Reality-Spanning Bridges",
+        "Transcendent Space Folding",
+        "Infinite Destination Access"
+      ],
+      gradient: "from-indigo-600 via-purple-600 to-violet-600",
+      icon: "🚀",
+      stats: { destinations: "∞", speed: "∞", range: "∞" },
+      timeline: "2029",
+      impact: "Transcendent"
+    },
+    {
+      id: 6,
+      title: "✨ Eternal Existence Technology",
+      subtitle: "Transcend All Limitations",
+      description: "Revolutionary technology that grants true eternal existence by transcending all concepts of life, death, time, and space, existing beyond all limitations of reality.",
+      features: [
+        "Eternal Existence Systems",
+        "Transcendent Life Support",
+        "Infinite Existence Guarantee",
+        "Reality-Beyond Technology"
+      ],
+      gradient: "from-green-600 via-teal-600 to-cyan-600",
+      icon: "✨",
+      stats: { existence: "∞", limitations: "0%", reality: "∞" },
+      timeline: "2029",
+      impact: "Eternal"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentTech((prev) => (prev + 1) % omniversalTechs.length);
+    }, 14000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div
+                  <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -31,11 +147,11 @@ const OmniversalTechShowcase2029: React.FC = () => {
           >
             🌌 OMNIVERSAL TECH 2029
           </div>
-          <divh2
+          <h2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </divh2>
+          </h2>
           <divp
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >
