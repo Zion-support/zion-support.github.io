@@ -2,7 +2,6 @@ import React from 'react';
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -74,10 +73,9 @@ const UltimateTechBreakthrough2026: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              The world's first truly conscious artificial intelligence systems that can think, feel, and create
->>>>>>> 2e58aaf50d6a55ca120137803d00005c1294e262
-            </p>
+              <p className="text-purple-100 mb-6 text-center">
+                The world's first truly conscious artificial intelligence systems that can think, feel, and create
+              </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Self-aware decision making</li>
               <li>• Emotional intelligence</li>
@@ -178,13 +176,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in the ultimate technological revolution. Be among the first to experience these breakthrough technologies.
-=======
         {/* Success Stories */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">🏆 Revolutionary Success Stories</h2>
@@ -227,7 +218,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Ready for the Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in the most revolutionary technological breakthrough in human history
->>>>>>> 2e58aaf50d6a55ca120137803d00005c1294e262
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">

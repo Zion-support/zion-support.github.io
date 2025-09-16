@@ -143,7 +143,6 @@ const DynamicContentCarousel = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Navigation Dots */}
       <div className="flex justify-center mt-6 space-x-2">
         {carouselItems.map((_, index) => (
@@ -155,7 +154,8 @@ const DynamicContentCarousel = () => {
             }`}
           />
         ))}
-=======
+      </div>
+
       {/* Quick Access Panel */}
       <div className="bg-gradient-to-r from-gray-900 to-purple-900 text-white py-8">
         <div className="container mx-auto px-4">
@@ -183,7 +183,6 @@ const DynamicContentCarousel = () => {
             ))}
           </div>
         </div>
->>>>>>> 2e58aaf50d6a55ca120137803d00005c1294e262
       </div>
     </div>
   );
