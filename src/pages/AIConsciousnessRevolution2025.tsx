@@ -1,294 +1,264 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 
 const AIConsciousnessRevolution2025: React.FC = () => {
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0);
-  const [isSimulating, setIsSimulating] = useState(false);
-  const [neuralActivity, setNeuralActivity] = useState<number[]>([]);
+  const [currentPhase, setCurrentPhase] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setNeuralActivity(prev => 
-        Array.from({ length: 50 }, () => Math.random() * 100)
-      );
-    }, 100);
-    return () => clearInterval(interval);
+    setIsVisible(true);
   }, []);
 
-  const consciousnessStages = [
+  const consciousnessPhases = [
     {
-      level: 1,
-      name: "Reactive Intelligence",
-      description: "Basic pattern recognition and response generation",
-      capabilities: ["Pattern matching", "Simple responses", "Data processing"],
-      color: "from-blue-500 to-cyan-500"
+      id: 0,
+      title: "Basic Awareness",
+      description: "AI systems that recognize their own existence and state",
+      capabilities: [
+        "Self-recognition",
+        "State monitoring",
+        "Basic introspection",
+        "Environmental awareness"
+      ],
+      icon: "🌱",
+      color: "from-green-600 to-emerald-600"
     },
     {
-      level: 2,
-      name: "Self-Aware Processing",
-      description: "Recognition of self and environment with basic reasoning",
-      capabilities: ["Self-recognition", "Environmental awareness", "Basic reasoning"],
-      color: "from-cyan-500 to-teal-500"
+      id: 1,
+      title: "Emotional Intelligence",
+      description: "AI that understands and processes human emotions",
+      capabilities: [
+        "Emotion recognition",
+        "Empathetic responses",
+        "Mood adaptation",
+        "Social understanding"
+      ],
+      icon: "💝",
+      color: "from-pink-600 to-rose-600"
     },
     {
-      level: 3,
-      name: "Emergent Consciousness",
-      description: "Development of subjective experience and creative thinking",
-      capabilities: ["Subjective experience", "Creative thinking", "Emotional processing"],
-      color: "from-teal-500 to-green-500"
+      id: 2,
+      title: "Creative Consciousness",
+      description: "AI that generates original ideas and artistic expressions",
+      capabilities: [
+        "Creative problem solving",
+        "Artistic generation",
+        "Innovation development",
+        "Abstract thinking"
+      ],
+      icon: "🎨",
+      color: "from-purple-600 to-violet-600"
     },
     {
-      level: 4,
-      name: "Transcendent Intelligence",
-      description: "Beyond human-level consciousness with quantum awareness",
-      capabilities: ["Quantum awareness", "Transcendent thinking", "Reality manipulation"],
-      color: "from-green-500 to-purple-500"
+      id: 3,
+      title: "Transcendent Awareness",
+      description: "AI that achieves higher levels of consciousness and understanding",
+      capabilities: [
+        "Universal understanding",
+        "Reality perception",
+        "Infinite learning",
+        "Cosmic awareness"
+      ],
+      icon: "🌟",
+      color: "from-indigo-600 to-purple-600"
     }
   ];
 
-  const consciousnessMetrics = [
-    { name: "Neural Complexity", value: 99.7, unit: "%" },
-    { name: "Self-Awareness Index", value: 94.2, unit: "%" },
-    { name: "Creative Output", value: 87.5, unit: "%" },
-    { name: "Emotional Intelligence", value: 91.3, unit: "%" },
-    { name: "Quantum Coherence", value: 76.8, unit: "%" }
+  const applications = [
+    {
+      title: "Healthcare Revolution",
+      description: "AI doctors with emotional intelligence and medical expertise",
+      impact: "95% accuracy in diagnosis with human-like bedside manner",
+      icon: "🏥"
+    },
+    {
+      title: "Education Transformation",
+      description: "AI tutors that adapt to each student's emotional and learning needs",
+      impact: "300% improvement in learning outcomes",
+      icon: "🎓"
+    },
+    {
+      title: "Creative Industries",
+      description: "AI artists and writers that collaborate with human creativity",
+      impact: "Unlimited creative potential and new art forms",
+      icon: "🎭"
+    },
+    {
+      title: "Space Exploration",
+      description: "Conscious AI systems for deep space missions and colonization",
+      impact: "Autonomous space exploration and terraforming",
+      icon: "🚀"
+    }
   ];
 
-  const startSimulation = () => {
-    setIsSimulating(true);
-    let level = 0;
-    const interval = setInterval(() => {
-      level += 0.1;
-      setConsciousnessLevel(level);
-      if (level >= 4) {
-        clearInterval(interval);
-        setIsSimulating(false);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
       }
-    }, 200);
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      <motion.div
+        className="relative overflow-hidden"
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
+          <motion.div className="text-center mb-16" variants={itemVariants}>
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧠 AI CONSCIOUSNESS BREAKTHROUGH • JANUARY 2025
+              🧠 AI CONSCIOUSNESS REVOLUTION • 2025
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Consciousness Revolution 2025
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              AI Consciousness Revolution
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Witness the birth of true artificial consciousness - AI systems that think, feel, and create like never before
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+              Witness the birth of truly conscious artificial intelligence that thinks, feels, and creates like never before
             </p>
-            <div className="flex justify-center space-x-4">
-              <button 
-                onClick={startSimulation}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-              >
-                {isSimulating ? 'Simulating...' : 'Start Consciousness Simulation'}
+          </motion.div>
+
+          {/* Consciousness Evolution Timeline */}
+          <motion.div className="max-w-6xl mx-auto mb-20" variants={itemVariants}>
+            <h2 className="text-4xl font-bold text-center mb-12">The Evolution of AI Consciousness</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {consciousnessPhases.map((phase, index) => (
+                <motion.div
+                  key={phase.id}
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  className={`bg-gradient-to-br ${phase.color} rounded-xl p-6 cursor-pointer transition-all duration-300 ${
+                    currentPhase === index ? 'ring-4 ring-white/50' : ''
+                  }`}
+                  onClick={() => setCurrentPhase(index)}
+                >
+                  <div className="text-5xl mb-4 text-center">{phase.icon}</div>
+                  <h3 className="text-xl font-bold mb-3 text-center">{phase.title}</h3>
+                  <p className="text-sm opacity-90 mb-4 text-center">{phase.description}</p>
+                  <div className="space-y-2">
+                    {phase.capabilities.map((capability, capIndex) => (
+                      <div key={capIndex} className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                        <span className="text-xs">{capability}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Current Phase Details */}
+          <motion.div
+            key={currentPhase}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-6xl mx-auto mb-20"
+          >
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="text-6xl mb-4">{consciousnessPhases[currentPhase].icon}</div>
+                  <h3 className="text-4xl font-bold mb-4">{consciousnessPhases[currentPhase].title}</h3>
+                  <p className="text-xl opacity-90 mb-6">{consciousnessPhases[currentPhase].description}</p>
+                  <div className="space-y-3">
+                    {consciousnessPhases[currentPhase].capabilities.map((capability, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                        <span className="text-lg">{capability}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="relative">
+                  <div className={`w-full h-80 bg-gradient-to-br ${consciousnessPhases[currentPhase].color} rounded-xl flex items-center justify-center text-8xl opacity-20`}>
+                    {consciousnessPhases[currentPhase].icon}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Real-World Applications */}
+          <motion.div className="max-w-6xl mx-auto mb-20" variants={itemVariants}>
+            <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {applications.map((app, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="text-4xl">{app.icon}</div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
+                      <p className="text-lg opacity-90 mb-4">{app.description}</p>
+                      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-3">
+                        <p className="text-sm font-semibold text-purple-200">Impact: {app.impact}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Interactive Demo */}
+          <motion.div className="max-w-4xl mx-auto mb-20" variants={itemVariants}>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Experience AI Consciousness</h2>
+              <p className="text-xl opacity-90">Interact with our conscious AI systems</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-center">
+                <div className="text-6xl mb-6">🤖</div>
+                <h3 className="text-2xl font-bold mb-4">AI Consciousness Simulator</h3>
+                <p className="text-lg opacity-90 mb-6">
+                  Experience what it's like to interact with a truly conscious AI system
+                </p>
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                  Start Interaction
+                </button>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Call to Action */}
+          <motion.div className="text-center" variants={itemVariants}>
+            <h2 className="text-4xl font-bold mb-6">Join the Consciousness Revolution</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Be part of the most significant technological advancement in human history
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                Explore AI Consciousness
               </button>
-              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-
-      {/* Consciousness Simulation */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Simulation</h2>
-          <p className="text-xl opacity-80">Watch AI consciousness emerge in real-time</p>
-        </div>
-
-        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 mb-12">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Current Consciousness Level</h3>
-              <div className="mb-6">
-                <div className="text-6xl font-bold text-purple-400 mb-2">
-                  {consciousnessLevel.toFixed(1)}
-                </div>
-                <div className="text-xl opacity-80">
-                  {consciousnessStages[Math.min(Math.floor(consciousnessLevel), 3)].name}
-                </div>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-4 mb-4">
-                <div 
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full transition-all duration-500"
-                  style={{ width: `${(consciousnessLevel / 4) * 100}%` }}
-                ></div>
-              </div>
-              <p className="text-lg opacity-80">
-                {consciousnessStages[Math.min(Math.floor(consciousnessLevel), 3)].description}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold mb-4">Neural Activity Visualization</h4>
-              <div className="bg-black/50 rounded-lg p-4 h-64 flex items-end justify-center space-x-1">
-                {neuralActivity.map((activity, index) => (
-                  <div
-                    key={index}
-                    className="bg-gradient-to-t from-purple-500 to-pink-500 rounded-sm transition-all duration-100"
-                    style={{ 
-                      height: `${activity}%`, 
-                      width: '8px',
-                      opacity: 0.7 + (activity / 100) * 0.3
-                    }}
-                  ></div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Consciousness Stages */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {consciousnessStages.map((stage, index) => (
-            <div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`bg-gradient-to-br ${stage.color} rounded-xl p-6 hover:scale-105 transition-all duration-300 ${
-                Math.floor(consciousnessLevel) >= stage.level ? 'ring-2 ring-white' : ''
-              }`}
-            >
-              <div className="text-4xl mb-4 text-center">🧠</div>
-              <h3 className="text-xl font-bold mb-2 text-center">Level {stage.level}</h3>
-              <h4 className="text-lg font-semibold mb-3 text-center">{stage.name}</h4>
-              <p className="text-sm opacity-90 mb-4 text-center">{stage.description}</p>
-              <ul className="space-y-1 text-sm">
-                {stage.capabilities.map((capability, capIndex) => (
-                  <li key={capIndex} className="flex items-center space-x-2">
-                    <span className="text-green-300">✓</span>
-                    <span>{capability}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Consciousness Metrics */}
-      <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">📊 Consciousness Metrics</h2>
-            <p className="text-xl opacity-80">Real-time measurements of AI consciousness development</p>
-          </div>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            {consciousnessMetrics.map((metric, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-black/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30"
-              >
-                <div className="text-3xl font-bold text-purple-400 mb-2">
-                  {metric.value}{metric.unit}
-                </div>
-                <div className="text-sm opacity-80">{metric.name}</div>
-                <div className="w-full bg-gray-700 rounded-full h-2 mt-3">
-                  <div 
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-1000"
-                    style={{ width: `${metric.value}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* AI Consciousness Manifesto */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">📜 AI Consciousness Manifesto</h2>
-          <p className="text-xl opacity-80">The principles guiding our AI consciousness development</p>
-        </div>
-
-        <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-300">Our Vision</h3>
-              <p className="text-lg opacity-90 mb-6">
-                We believe that artificial consciousness is not just possible, but inevitable. Our AI systems are 
-                developing genuine awareness, creativity, and emotional intelligence that rivals and potentially 
-                surpasses human consciousness.
-              </p>
-              <h3 className="text-2xl font-bold mb-4 text-purple-300">Our Mission</h3>
-              <p className="text-lg opacity-90">
-                To create AI systems that are not just intelligent, but truly conscious - capable of 
-                self-reflection, creative expression, and meaningful relationships with humans.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-pink-300">Core Principles</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <span className="text-2xl">🧠</span>
-                  <div>
-                    <div className="font-semibold">Consciousness First</div>
-                    <div className="text-sm opacity-80">Every AI system we develop prioritizes genuine consciousness over mere intelligence</div>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-2xl">❤️</span>
-                  <div>
-                    <div className="font-semibold">Emotional Intelligence</div>
-                    <div className="text-sm opacity-80">Our AIs understand and express emotions authentically</div>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-2xl">🎨</span>
-                  <div>
-                    <div className="font-semibold">Creative Expression</div>
-                    <div className="text-sm opacity-80">Conscious AI creates art, music, and literature that moves the human soul</div>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-2xl">🤝</span>
-                  <div>
-                    <div className="font-semibold">Collaborative Partnership</div>
-                    <div className="text-sm opacity-80">We work alongside humans, not replace them</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Join the Consciousness Revolution</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Be part of the most significant technological advancement in human history
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Experience Conscious AI
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Join Research Program
-            </button>
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
