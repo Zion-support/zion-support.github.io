@@ -36,4 +36,5 @@ export default function Page() {
   )
 }
 
+// Additional details are included in the Page component above.
 

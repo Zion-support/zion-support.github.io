@@ -106,6 +106,22 @@ export default function HomePage() {
         url="/"
       />
       {/* New Promos: Sept 16, 2025 */}
+      {/* Promo: Real‑World Eval Gates Case Studies (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
+            <div>
+              <p className="text-sm font-semibold text-indigo-700">New case studies</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Real‑World Eval Gates — Case Studies</h2>
+              <p className="text-gray-600 mt-2">Production patterns: scorecards, rollback contracts, and evidence hubs.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-real-world-eval-gates-case-studies" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Case Studies</Link>
+              <Link href="/blog/ai-2026-release-scorecards" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Scorecards</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
@@ -164,6 +180,22 @@ export default function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/reports/ai-lab/articles/production-eval-gates-in-the-wild-1758049200000.md" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Brief</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Eval Gates Metrics + Agent Runbooks (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-teal-50 to-emerald-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Eval Gates Metrics + Agent Runbooks</h2>
+              <p className="text-gray-600 mt-2">Measure what matters and standardize incident response for reliable autonomy.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-eval-gates-success-metrics" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Eval Metrics</Link>
+              <Link href="/blog/ai-2026-agent-runbooks-checklists" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Runbooks</Link>
             </div>
           </div>
         </div>

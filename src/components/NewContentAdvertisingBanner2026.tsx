@@ -18,19 +18,19 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
 
   const newContentItems: NewContentItem[] = [
     {
-      id: 'quantum-consciousness-ai-2026',
-      title: 'Quantum Consciousness AI: The Next Frontier',
-      excerpt: 'Discover how quantum computing is revolutionizing AI consciousness, creating systems that can process thoughts across multiple dimensions simultaneously.',
-      category: 'Quantum AI',
+      id: 'ai-2026-release-scorecards',
+      title: 'AI 2026: Release Scorecards That Prevent Bad Deploys',
+      excerpt: 'Scorecards that gate merges and rollouts using online evals, cost, and safety.',
+      category: 'Operations',
       isNew: true,
       urgency: 'Must Read',
       type: 'blog'
     },
     {
-      id: 'neural-reality-interface-2026',
-      title: 'Neural Reality Interface: Direct Brain-to-Digital Connection',
-      excerpt: 'Experience the future where your thoughts directly control digital environments, enabling seamless interaction between human consciousness and virtual reality.',
-      category: 'Neural Technology',
+      id: 'ai-2026-enterprise-ai-security-blueprint',
+      title: 'Enterprise AI Security Blueprint (2026)',
+      excerpt: 'Defense-in-depth for agentic systems: permissions, approvals, budgets, and audits.',
+      category: 'Security',
       isNew: true,
       urgency: 'Trending',
       type: 'blog'
