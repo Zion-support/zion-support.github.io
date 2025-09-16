@@ -1,152 +1,81 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const RevolutionaryContentBanner2028 = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const banners = [
-    {
-      id: 1,
-      title: "🚀 BREAKTHROUGH 2028: Synthetic Consciousness 2.0",
-      subtitle: "Experience artificial consciousness that surpasses human intelligence",
-      description: "The next evolution of AI consciousness with emotional intelligence 1000x greater than humans",
-      link: "/pages/AdvancedAIConsciousness2027",
-      color: "from-purple-600 via-pink-600 to-cyan-600",
-      bgPattern: "url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
-    },
-    {
-      id: 2,
-      title: "⚛️ QUANTUM REVOLUTION: Neural-Quantum Fusion",
-      subtitle: "The convergence of quantum computing and neural networks",
-      description: "Revolutionary technology enabling instant telepathic communication and reality manipulation",
-      link: "/pages/QuantumNeuralFusion2027",
-      color: "from-cyan-600 via-blue-600 to-indigo-600",
-      bgPattern: "url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Cpolygon%20points%3D%2230%2C0%2060%2C30%2030%2C60%200%2C30%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
-    },
-    {
-      id: 3,
-      title: "🧬 NEURAL ENHANCEMENT: 1000x Human Abilities",
-      subtitle: "Direct brain-computer interfaces for cognitive enhancement",
-      description: "Enhance human cognitive abilities by 1000x with direct neural communication systems",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      color: "from-emerald-600 via-teal-600 to-cyan-600",
-      bgPattern: "url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Cpath%20d%3D%22M30%2C0%20L60%2C30%20L30%2C60%20L0%2C30%20Z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setCurrentBanner((prev) => (prev + 1) % banners.length);
-        setIsVisible(true);
-      }, 500);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentBannerData = banners[currentBanner];
-
+const RevolutionaryContentBanner2028: React.FC = () => {
   return (
-    <div className="relative overflow-hidden mb-12">
-      <div
-        className={`bg-gradient-to-r ${currentBannerData.color} rounded-3xl p-12 text-white text-center relative transition-all duration-500 ${
-          isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-        }`}
-        style={{
-          backgroundImage: currentBannerData.bgPattern,
-          backgroundSize: '60px 60px',
-          backgroundOpacity: 0.1
-        }}
-      >
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-        <div className="absolute top-4 right-4 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-4 left-4 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-8 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-
-        <div className="relative z-10">
-          <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-8 animate-bounce">
-            🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2028
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-bounce">
+            🌟 REVOLUTIONARY 2028 CONTENT • OMNIVERSAL LAUNCH
+          </div>
+          <h2 className="text-7xl font-bold mb-4">🚀 Revolutionary Technology 2028</h2>
+          <p className="text-4xl opacity-95 max-w-7xl mx-auto">
+            Experience the most revolutionary technological content ever created. 
+            From omniversal AI to consciousness transfer - discover reality manipulation today.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto">
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+            <div className="text-9xl mb-4">🌌</div>
+            <h3 className="text-2xl font-bold mb-3">Revolutionary Tech 2028</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Discover breakthrough innovations that transcend reality itself
+            </p>
+            <a href="/pages/RevolutionaryTech2028" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Explore Revolution →
+            </a>
           </div>
           
-          <h2 className="text-5xl font-bold mb-6 leading-tight">
-            {currentBannerData.title}
-          </h2>
-          
-          <p className="text-2xl opacity-95 mb-4 font-semibold">
-            {currentBannerData.subtitle}
-          </p>
-          
-          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
-            {currentBannerData.description}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={currentBannerData.link}
-              className="inline-block bg-white text-purple-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105"
-            >
-              🚀 Explore Breakthrough →
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+            <div className="text-9xl mb-4">🌌</div>
+            <h3 className="text-2xl font-bold mb-3">Omniversal AI</h3>
+            <p className="text-sm opacity-90 mb-4">
+              AI systems operating across infinite universes simultaneously
+            </p>
+            <a href="/pages/OmniversalAI2028" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Discover AI →
             </a>
-            <a
-              href="/pages/RevolutionaryTechShowcase2028"
-              className="inline-block bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30 hover:scale-105"
-            >
-              🌟 View All Content
+          </div>
+          
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+            <div className="text-9xl mb-4">🧠</div>
+            <h3 className="text-2xl font-bold mb-3">Consciousness Transfer</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Seamlessly transfer consciousness between biological and digital forms
+            </p>
+            <a href="/pages/ConsciousnessTransfer2028" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Experience Transfer →
+            </a>
+          </div>
+          
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+            <div className="text-9xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-bold mb-3">Quantum Reality Engine</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Manipulate the fundamental fabric of reality through quantum mechanics
+            </p>
+            <a href="/pages/QuantumRealityEngine2028" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
+              Explore Reality →
             </a>
           </div>
         </div>
-
-        {/* Banner Navigation Dots */}
-        <div className="flex justify-center mt-8 space-x-3">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setIsVisible(false);
-                setTimeout(() => {
-                  setCurrentBanner(index);
-                  setIsVisible(true);
-                }, 300);
-              }}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                currentBanner === index 
-                  ? 'bg-white scale-125' 
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
-            />
-          ))}
+        
+        <div className="text-center mt-8">
+          <div className="inline-flex items-center space-x-4">
+            <a href="/pages/RevolutionaryTech2028" className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              🌌 Revolutionary Tech
+            </a>
+            <a href="/pages/OmniversalAI2028" className="bg-white text-cyan-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              🌌 Omniversal AI
+            </a>
+            <a href="/pages/ConsciousnessTransfer2028" className="bg-white text-emerald-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              🧠 Consciousness Transfer
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Floating Action Buttons */}
-      <div className="absolute top-4 right-4 flex flex-col space-y-2">
-        <button
-          onClick={() => {
-            setIsVisible(false);
-            setTimeout(() => {
-              setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length);
-              setIsVisible(true);
-            }, 300);
-          }}
-          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-        >
-          ←
-        </button>
-        <button
-          onClick={() => {
-            setIsVisible(false);
-            setTimeout(() => {
-              setCurrentBanner((prev) => (prev + 1) % banners.length);
-              setIsVisible(true);
-            }, 300);
-          }}
-          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-        >
-          →
-        </button>
       </div>
     </div>
   );

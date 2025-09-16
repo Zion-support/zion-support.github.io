@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-// Production logger utility
-export const productionLogger = {
-  log: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(message, ...args);
-    }
-  },
-  
-  error: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error(message, ...args);
-    }
-  },
-  
-  warn: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(message, ...args);
-    }
-  },
-  
-  info: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.info(message, ...args);
-=======
->>>>>>> cursor/create-and-deploy-new-content-7857
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -69,10 +41,6 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d952
->>>>>>> cursor/create-and-deploy-new-content-7857
     }
   }
 };
