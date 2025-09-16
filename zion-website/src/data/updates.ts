@@ -10,31 +10,45 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
-<<<<<<< HEAD
+    // New content (2025-09-16 - batch 3)
+    {
+        title: 'Launch: Agentic Evidence Hub v1.0',
+        summary: 'Central place to browse, search, and share signed evidence bundles and scorecards.',
+        href: '/updates/agentic-evidence-hub-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Report: State of Enterprise Agent Safety (2026 Preview)',
+        summary: 'Key risks, posture trends, and control patterns from early enterprise deployments.',
+        href: '/updates/state-of-enterprise-agent-safety-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
     // Newly added updates (2025-09-16 - batch 2)
     {
         title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
         summary: 'Drop-in UI widgets for live safety, latency and quality guardrails with alerts.',
         href: '/updates/real-time-agent-metrics-widgets-1-0',
-=======
-    // Fresh content (2025-09-16 - new additions)
-    {
-        title: 'Launch: Autonomous Change Approvals v1.0',
-        summary: 'Policy-gated approvals with eval signals and signed evidence for AI changes.',
-        href: '/updates/autonomous-change-approvals-1-0',
->>>>>>> cursor/create-and-deploy-new-content-b8ee
         date: '2025-09-16',
         tag: 'Launch',
     },
     {
-<<<<<<< HEAD
         title: 'Guide: Incident Simulation Toolkit v1.1',
         summary: 'Run realistic failure drills with eval gates, evidence capture, and rollback practice.',
         href: '/updates/incident-simulation-toolkit-1-1',
         date: '2025-09-16',
         tag: 'Guide',
     },
-=======
+    // Fresh content (2025-09-16 - new additions)
+    {
+        title: 'Launch: Autonomous Change Approvals v1.0',
+        summary: 'Policy-gated approvals with eval signals and signed evidence for AI changes.',
+        href: '/updates/autonomous-change-approvals-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
         title: 'Guide: Agent Safety Red‑Team Playbooks (2026)',
         summary: 'Reusable red‑team scenarios, risk tiers, and remediation patterns for agents.',
         href: '/updates/agent-safety-redteam-playbooks-2026',
@@ -48,7 +62,6 @@ export const updates: UpdateItem[] = [
         date: '2025-09-16',
         tag: 'Blueprint',
     },
->>>>>>> cursor/create-and-deploy-new-content-b8ee
     // Newly added updates (2025-09-16 - additional)
     {
         title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',

@@ -46,6 +46,9 @@ export default function HomePage() {
             New: Real‑Time Agent Benchmark Suite —
             <a href="/updates/real-time-agent-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Agentic Evidence Hub —
+            <a href="/updates/agentic-evidence-hub-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Postmortems — Evidence‑First Templates —
             <a href="/updates/production-agent-postmortems-evidence-first" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -288,6 +291,8 @@ export default function HomePage() {
             Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Failure Analysis Toolkit</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            New report: <a href="/updates/state-of-enterprise-agent-safety-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Enterprise Agent Safety (2026)</a>
           </p>
         </div>
       </div>
