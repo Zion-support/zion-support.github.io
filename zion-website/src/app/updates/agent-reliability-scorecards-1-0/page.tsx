@@ -1,5 +1,43 @@
 import React from 'react'
 
+export const metadata = {
+  title: 'Agent Reliability Scorecards v1.0 — Launch',
+  description:
+    'Standardized SLIs, risk signals, and trend analytics to measure and improve agent reliability at scale.',
+}
+
+export default function Page() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-16 text-gray-200">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white">Agent Reliability Scorecards v1.0</h1>
+      <p className="mt-4 text-lg text-gray-300">
+        Establish a shared language for reliability across teams with SLIs like task success rate, policy violation
+        rate, latency budgets adherence, and drift indicators. Track trends and regressions with exec-ready views.
+      </p>
+
+      <section className="mt-10 space-y-6">
+        <h2 className="text-2xl font-semibold text-white">Included Metrics</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Success rate, deflection rate, escalation rate by scenario.</li>
+          <li>Policy violations, guardrail interventions, and exception workflows.</li>
+          <li>Latency budget adherence and tail performance (p95/p99).</li>
+          <li>Data/behavior drift signals and remediation lead time.</li>
+        </ul>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-2xl font-semibold text-white">Rollout</h2>
+        <p className="text-gray-300">
+          Connect your observability pipeline and evals to populate scorecards automatically. Use weekly reviews to
+          prioritize fixes, experiment safely, and gate releases.
+        </p>
+      </section>
+    </main>
+  )
+}
+
+import React from 'react'
+
 export default function AgentReliabilityScorecardsPage() {
   return (
     <div className="bg-black min-h-screen">
