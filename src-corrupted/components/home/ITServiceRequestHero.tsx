@@ -55,7 +55,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';export function 
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import React, { useState } from 'react';
-
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';";
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },";
@@ -156,7 +156,7 @@ import { motion  } from 'framer-motion'
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"

@@ -1,5 +1,5 @@
 import React from 'react';'''
-'''
+import {motion} from 'framer-motion';'''
 import Link from 'next/link';'''
 import {Link} from 'react-router-dom';'''
 import {Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play} from 'lucide-react';

@@ -1,5 +1,5 @@
 import React from 'react';'''
-'''
+import {motion} from 'framer-motion';'''
 import {Link} from 'react-router-dom';
 import {Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database} from 'lucide-react';
 ;

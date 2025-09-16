@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Atom, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
   Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 

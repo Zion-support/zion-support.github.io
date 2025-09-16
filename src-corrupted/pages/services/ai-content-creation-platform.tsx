@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, PenTool, Image, Video, Mic, Globe, TrendingUp, Target, Zap, 
   CheckCircle, ArrowRight, Users, Activity, Database, Lock, BarChart3, 

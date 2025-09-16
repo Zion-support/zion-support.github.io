@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Zap, Brain, Atom, Bot, Heart, Shield, Rocket, TrendingUp, Users, CheckCircle, Play, Sparkles, Globe, Cpu, Database, Network, Cloud, Lock, Eye, Target, BarChart3, Lightbulb, Code, TestTube, Leaf, Car, Microscope, BrainCircuit, Award, Clock, DollarSign, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function UltraAdvancedHero2026V2() {

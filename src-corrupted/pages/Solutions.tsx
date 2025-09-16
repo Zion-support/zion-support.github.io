@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Building, Cpu, Brain, Shield, Cloud, Code, Users, Globe, 

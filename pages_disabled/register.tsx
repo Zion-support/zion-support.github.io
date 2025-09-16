@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Layout from '../components/Layout';

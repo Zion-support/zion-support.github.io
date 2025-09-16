@@ -1,4 +1,4 @@
-
+import { AnimatePresence, motion } from 'framer-motion';
 import { Accessibility, Volume2, VolumeX } from 'lucide-react';
 import React, { ReactNode, createContext, useContext, useEffect, useState } from 'react';
 

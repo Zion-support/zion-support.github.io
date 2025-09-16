@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Shield, Brain, Globe, Cpu, Database, Atom, Bot, Cloud, Network } from 'lucide-react';
 import Link from 'next/link';
 

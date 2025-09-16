@@ -8,7 +8,7 @@ import {Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle,
 import {ENHANCED_INNOVATIVE_SERVICES} from '@/data/enhancedInnovativeServices';
 import {COMPREHENSIVE_SERVICES} from '@/data/comprehensiveServices';
 import {INNOVATIVE_MICRO_SAAS_SERVICES} from '@/data/innovativeMicroSaasServices';
-
+import {motion} from 'framer-motion';
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,

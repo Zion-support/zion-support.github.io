@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const NeuralRealityEngine2027: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const NeuralRealityEngine2027: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,13 +31,13 @@ const NeuralRealityEngine2027: React.FC = () => {
                 Try Neural Interface
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Neural Interface Technologies */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -47,10 +47,10 @@ const NeuralRealityEngine2027: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Discover the most advanced brain-computer interfaces that enable direct communication between mind and machine
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -70,9 +70,9 @@ const NeuralRealityEngine2027: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Try BCI Interface →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -92,9 +92,9 @@ const NeuralRealityEngine2027: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Enter VR World →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -114,14 +114,14 @@ const NeuralRealityEngine2027: React.FC = () => {
             <button className="w-full bg-white text-fuchsia-600 py-3 rounded-lg hover:bg-fuchsia-50 transition-colors font-semibold">
               Connect with AI →
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Neural Applications */}
       <div className="bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50 py-20">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -131,10 +131,10 @@ const NeuralRealityEngine2027: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               Explore how neural interfaces are transforming healthcare, education, and human-computer interaction
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -150,9 +150,9 @@ const NeuralRealityEngine2027: React.FC = () => {
                 <li>• Cognitive therapy</li>
                 <li>• Pain management</li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -168,14 +168,14 @@ const NeuralRealityEngine2027: React.FC = () => {
                 <li>• Language learning</li>
                 <li>• Memory enhancement</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Future Vision */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -185,10 +185,10 @@ const NeuralRealityEngine2027: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Imagine a world where the boundaries between human consciousness and artificial intelligence have completely dissolved
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -199,9 +199,9 @@ const NeuralRealityEngine2027: React.FC = () => {
             <p className="text-violet-100">
               A global network where minds can connect and share experiences directly
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -212,9 +212,9 @@ const NeuralRealityEngine2027: React.FC = () => {
             <p className="text-purple-100">
               The ability to backup and transfer human consciousness to digital platforms
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -225,13 +225,13 @@ const NeuralRealityEngine2027: React.FC = () => {
             <p className="text-fuchsia-100">
               Direct mind-to-mind communication without the need for spoken language
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -249,7 +249,7 @@ const NeuralRealityEngine2027: React.FC = () => {
               Learn Neural Interfaces
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

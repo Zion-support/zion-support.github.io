@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +31,7 @@ const UltimateTechRevolution2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -44,7 +43,7 @@ const UltimateTechRevolution2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -64,9 +63,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Learn More →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -86,9 +85,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Explore Quantum →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -108,9 +107,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Enter Dimensions →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -130,9 +129,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Space →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -152,9 +151,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
               Enhance DNA →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -174,7 +173,7 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Connect All →
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -219,61 +218,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-          </p>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-4xl mb-4">🌟</div>
-              <h3 className="text-xl font-bold mb-2">Ultimate Convergence</h3>
-              <p className="text-sm opacity-80 mb-4">Experience all technologies working together</p>
-              <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold mb-2">Space Revolution</h3>
-              <p className="text-sm opacity-80 mb-4">Control spacecraft with your mind</p>
-              <button className="bg-white text-cyan-600 px-4 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Consciousness AI</h3>
-              <p className="text-sm opacity-80 mb-4">Chat with conscious AI</p>
-              <button className="bg-white text-emerald-600 px-4 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-2">Quantum Computing</h3>
-              <p className="text-sm opacity-80 mb-4">Witness quantum supremacy</p>
-              <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                Try Demo →
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">🌟 Join the Ultimate Revolution</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Be part of the most significant technological revolution in human history
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
-              🚀 Get Early Access
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
-              📞 Schedule Demo
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
             </button>

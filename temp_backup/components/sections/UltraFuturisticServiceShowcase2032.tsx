@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { futuristicAIServices2032 } from '../../data/2032-futuristic-ai-services';
 import { quantumEmergingTechServices2032 } from '../../data/2032-quantum-emerging-tech-services';
 import { enterpriseITServices2032 } from '../../data/2032-enterprise-it-services';

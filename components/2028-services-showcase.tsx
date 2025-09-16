@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
-
+import { motion } from 'framer-motion';
 
 
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
@@ -81,7 +81,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget
 import Layout from '../components/Layout';
 

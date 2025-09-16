@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Star, TrendingUp, Clock, DollarSign, ArrowRight, ExternalLink, Phone, Mail, MapPin, Zap, Brain, Rocket, Globe, Cpu, Lock, Eye, Shield, Target, Users, Award } from 'lucide-react';
 import Button from './Button';
 

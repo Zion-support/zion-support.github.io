@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
 } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';

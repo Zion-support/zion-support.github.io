@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -310,9 +310,9 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+        <AnimatePresence>
           {sortedContent.map((itemindex) => (
-            <div
+            <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -415,14 +415,14 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        
+        </AnimatePresence>
       </div>
 
       {/* No Results */}
       {sortedContent.length === 0 && (
-        <div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-center py-12"
@@ -432,7 +432,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           </div>
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
           <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-        </div>
+        </motion.div>
       )}
     </div>
   );
