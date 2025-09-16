@@ -15,12 +15,6 @@ const posts = [
       'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
   },
   {
-    slug: 'ai-2026-agentic-slo-dashboards-blueprint',
-    title: 'AI 2026: Agentic SLO Dashboards — Blueprint',
-    summary:
-      'Define SLIs, wire eval gates, and link traces/policy events to incidents.'
-  },
-  {
     slug: 'ai-2026-risk-and-guardrails-operating-model',
     title: 'AI 2026: Risk & Guardrails Operating Model',
     summary:
@@ -31,6 +25,12 @@ const posts = [
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-trustworthy-model-routing',
+    title: 'AI 2026: Trustworthy Model Routing — Field Guide',
+    summary:
+      'Evidence-backed routing with eval gates, risk tiers, and explicit budgets.'
   },
   {
     slug: 'ai-2026-sovereign-ai-commerce',
