@@ -212,21 +212,21 @@
     ,
     {
       "title": "Executive Brief — Governed Agent Rollouts (2026)",
-      "href": "/blog/ai-2026-governed-agent-rollouts",
+      "href": "/blog/ai-2026-governed-agent-rollouts.md",
       "desc": "Preflight, canary, and rollback with evidence-first scorecards.",
       "createdAt": "2025-09-16T17:20:00.000Z",
       "source": "blog"
     },
     {
       "title": "Deep Dive — Real-Time Guardrails for Tool Use (2026)",
-      "href": "/blog/ai-2026-real-time-guardrails-tool-use",
+      "href": "/blog/ai-2026-real-time-guardrails-tool-use.md",
       "desc": "Risk tiers, scoped creds, approvals, and runtime checks in practice.",
       "createdAt": "2025-09-16T17:25:00.000Z",
       "source": "blog"
     },
     {
       "title": "Playbook — Evidence Hubs for AI Ops (2026)",
-      "href": "/blog/ai-2026-evidence-hubs-ai-ops",
+      "href": "/blog/ai-2026-evidence-hubs-ai-ops.md",
       "desc": "Wire traces, evals, and policy events into auditable bundles.",
       "createdAt": "2025-09-16T17:30:00.000Z",
       "source": "blog"
