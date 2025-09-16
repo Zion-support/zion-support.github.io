@@ -16,15 +16,10 @@
           />
         </Button>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
-=======
       
->>>>>>> origin/auto/autonomy-17186719616
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -35,7 +30,6 @@
 
 
 
-=======
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
@@ -43,4 +37,3 @@
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

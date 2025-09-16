@@ -1,171 +1,22 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain
-  Zap
-  Rocket
-  Star
-  Play
-  Download
-  Share2
-  Heart,
-  BookOpen,
-  Users,
-  Clock,
-  ArrowRight,
-  ChevronRight,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Sparkles,
-  Target,
-  Award,
-  TrendingUp,
-  Globe,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Laptop
-} from 'lucide-react';
-
-const InteractiveAIToolsShowcase2027 = () => {
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedToolsetSelectedTool] = useState(null);
-  const [isPlayingsetIsPlaying] = useState(false);
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'icon: Gridcolor: 'from-purple-600 to-pink-600' },
-    { id: 'ai-'assistants', 'name: 'AI 'Assistants', 'icon: Braincolor: 'from-blue-600 to-cyan-600' },
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-600 to-emerald-600' },
-    { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUpcolor: 'from-orange-600 to-red-600' },
-    { id: ''development', 'name: ''Development', 'icon: Cpucolor: 'from-indigo-600 to-purple-600' },
-    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-600 to-pink-600' }
-  ];
-
-  const aiTools = [
-    {
-      id: 1,
-      name: "Neural Consciousness AI",
-      description: "Advanced AI system with near-human consciousness capabilitiescapable of complex reasoning and emotional intelligence.",
-      category: "ai-assistants",
-      image: "/api/placeholder/400/300",
-      rating: 4.9,
-      downloads: "2.3M",
-      price: "Free",
-      tags: ["AI"Consciousness"Neural Networks"2027"],
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"Learning Capabilities"],
-      demo: true,
-      featured: true
-    },
-    {
-      id: 2,
-      name: "Quantum Automation Suite",
-      description: "Revolutionary automation platform powered by quantum computing for unprecedented processing speeds.",
-      category: "automation",
-      image: "/api/placeholder/400/300",
-      rating: 4.8,
-      downloads: "1.8M",
-      price: "$299/month",
-      tags: ["Quantum"Automation"High Performance"2027"],
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"Advanced Analytics"],
-      demo: true,
-      featured: true
-    },
-    {
-      id: 3,
-      name: "Predictive Analytics Engine",
-      description: "AI-powered analytics platform that predicts future trends and behaviors with 99.7% accuracy.",
-      category: "analytics",
-      image: "/api/placeholder/400/300",
-      rating: 4.7,
-      downloads: "3.1M",
-      price: "$199/month",
-      tags: ["Analytics"Prediction"Machine Learning"2027"],
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"API Integration"],
-      demo: true,
-      featured: false
-    },
-    {
-      id: 4,
-      name: "Code Generation AI",
-      description: "Advanced AI that generatesreviewsand optimizes code in multiple programming languages.",
-      category: "development",
-      image: "/api/placeholder/400/300",
-      rating: 4.9,
-      downloads: "4.2M",
-      price: "Free",
-      tags: ["Development"Code Generation"AI"2027"],
-      features: ["Multi-language Support"Code Review"Optimization"Documentation"],
-      demo: true,
-      featured: true
-    },
-    {
-      id: 5,
-      name: "Quantum Security Vault",
-      description: "Next-generation security platform using quantum encryption to protect against all known threats.",
-      category: "security",
-      image: "/api/placeholder/400/300",
-      rating: 4.8,
-      downloads: "1.5M",
-      price: "$399/month",
-      tags: ["Security"Quantum"Encryption"2027"],
-      features: ["Quantum Encryption"Threat Detection"Zero Trust"Compliance"],
-      demo: false,
-      featured: false
-    },
-    {
-      id: 6,
-      name: "Neural Interface SDK",
-      description: "Development kit for creating brain-computer interface applications and neural control systems.",
-      category: "development",
-      image: "/api/placeholder/400/300",
-      rating: 4.6,
-      downloads: "890K",
-      price: "$599/month",
-      tags: ["Neural Interface"SDK"BCI"2027"],
-      features: ["Neural Signal Processing"Real-time Control"Multi-platform"Documentation"],
-      demo: true,
-      featured: false
-    }
-  ];
-
-  const filteredTools = aiTools.filter(tool => {
-    const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
-    const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         tool.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const featuredTools = filteredTools.filter(tool => tool.featured);
-
+const InteractiveAIToolsShowcase2027: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
-            animate={{
               x: [0Math.random() * 1000],
               y: [0Math.random() * 1000],
               scale: [010],
             }}
-            transition={{
               duration: Math.random() * 12 + 8,
               repeat: Infinity,
               delay: Math.random() * 6,
@@ -180,10 +31,7 @@ const InteractiveAIToolsShowcase2027 = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -204,13 +52,10 @@ const InteractiveAIToolsShowcase2027 = () => {
             Discover and interact with the most advanced AI tools and technologies 
             that are transforming industries in 2027.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="mb-12"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -269,14 +114,11 @@ const InteractiveAIToolsShowcase2027 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Tools */}
         {featuredTools.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.4 }}
+          <div
             className="mb-16"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -286,11 +128,8 @@ const InteractiveAIToolsShowcase2027 = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredTools.map((toolindex) => (
-                <motion.div
+                <div
                   key={tool.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => setSelectedTool(tool)}
                 >
@@ -321,13 +160,11 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </div>
                     {tool.demo && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
+                        <divbutton
                           className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                         >
                           <Play className="w-6 h-6 text-white ml-1" />
-                        </motion.button>
+                        </divbutton>
                       </div>
                     )}
                   </div>
@@ -367,17 +204,14 @@ const InteractiveAIToolsShowcase2027 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* All Tools Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white">All AI Tools</h2>
@@ -392,11 +226,8 @@ const InteractiveAIToolsShowcase2027 = () => {
               : 'grid-cols-1'
           }`}>
             {filteredTools.map((toolindex) => (
-              <motion.div
+              <div
                 key={tool.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.05 }}
                 className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -419,13 +250,11 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                   {tool.demo && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
+                      <divbutton
                         className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                       >
                         <Play className="w-5 h-5 text-white ml-1" />
-                      </motion.button>
+                      </divbutton>
                     </div>
                   )}
                 </div>
@@ -479,16 +308,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-3xl p-12 backdrop-blur-sm border border-white/20">
@@ -511,23 +337,17 @@ const InteractiveAIToolsShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Tool Detail Modal */}
-      <AnimatePresence>
+      <div>
         {selectedTool && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedTool(null)}
           >
-            <motion.div
-              initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8opacity: 0 }}
+            <div
               className="bg-slate-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -606,12 +426,13 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 };
 
 export default InteractiveAIToolsShowcase2027;
+</div></div></div>

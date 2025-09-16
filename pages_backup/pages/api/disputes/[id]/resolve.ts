@@ -127,11 +127,9 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   res && res.setHeader("Allow", "POST");
@@ -143,7 +141,6 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     try {
       ensure_admin (user);
@@ -175,10 +172,8 @@ export default async function handler(req, res) {
   return res.status (405).end ("Method Not Allowed");
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

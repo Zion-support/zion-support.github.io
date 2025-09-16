@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { X, Filter } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label",
-
-interface BrowseFiltersProps {
-  type: "jobs" | "talents"
-}
-
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]),
-  
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]),
-    }
-  },
-  
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -54,7 +25,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter));
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-3">
@@ -71,11 +41,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-<<<<<<< HEAD
-              <div className='py-6 space-y-6'>
-                {type === 'jobs' ? (
-=======
->>>>>>> origin/auto/autonomy-17186719616
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
@@ -204,9 +169,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -14,9 +14,7 @@
 
 
 
-=======
       
->>>>>>> origin/auto/autonomy-17186719616
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input

@@ -5,9 +5,6 @@
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -51,8 +48,5 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

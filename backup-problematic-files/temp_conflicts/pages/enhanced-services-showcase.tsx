@@ -1,6 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const enhanced-services-showcase: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>enhanced-services-showcase | Zion Tech Group</title>
+        <meta name="description" content="enhanced-services-showcase - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">enhanced-services-showcase</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+
 import { ;
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
   DollarSign, Users, Clock, CheckCircle, ArrowRight,;
@@ -561,51 +581,8 @@ export default function EnhancedServicesShowcase() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticMatrixBackground>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
-;
-// Button component (if not imported);
-const Button = ({ ;
-  href, ;
-  variant = 'primary', ;
-  size = 'md', ;
-  className = '', ;
-  children, ;
-  onClick ;
-} {;
-  href?:string,;
-  variant?:'primary' | 'secondary',;
-  size?:'sm' | 'md' | 'lg',;
-  className?:string,;
-  children:React.ReactNode,;
-  onClick?:() => void;
-}) => {;
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',;
-  ;
-  const variantClasses = {;
-    primary:'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',;
-    secondary:'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500';
-  },;
-  ;
-  const sizeClasses = {;
-    sm:'px-4 py-2 text-sm',;
-    md:'px-6 py-3 text-base',;
-    lg:'px-8 py-4 text-lg';
-  },;
-;
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,;
-;
-  if (href) {;
-    return (;
-      <a href={href} className={classes}>;
-        {children}
-      </a>;
-    ),;
-  }
-;
-  return (;
-    <button onClick={onClick} className={classes}>;
-      {children}
-    </button>;
+};
 
-
+export default enhanced-services-showcase;

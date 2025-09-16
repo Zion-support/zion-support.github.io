@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+async function handler(req, res) {;
+  if (req.method !== 'GET') {'';    res.setHeader('Allow', GET');;    res.end('Method Not Allowed');;    console.error('Wallet API error:', error);;    res.json({ error: error.message || Failed to fetch wallet' });
+>>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

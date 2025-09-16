@@ -1,7 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { 
   Home, 
@@ -16,91 +19,22 @@ import {
   Globe, 
   ArrowRight 
 } from 'lucide-react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-const sitemapData = [
-  {
-    category: 'Main Pages',
-    pages: [
-      { name: 'Home', url: '/', icon: Home },
-      { name: 'About', url: '/about', icon: Users },
-      { name: 'Contact', url: '/contact', icon: Globe },
-      { name: 'Services', url: '/services', icon: Settings }
-    ]
-  },
-  {
-    category: 'Services',
-    pages: [
-      { name: 'AI Services', url: '/ai-services', icon: Brain },
-      { name: 'IT Services', url: '/it-services', icon: Network },
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ]
-  },
-  {
-    category: 'Solutions',
-    pages: [
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ]
-  },
-  {
-    category: 'Resources',
-    pages: [
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
-    ]
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-const sitemapData = [;
-  {;
-    category: 'Main Pages',;
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },;
-      { name: 'About', url: '/about', icon: Users },;
-      { name: 'Contact', url: '/contact', icon: Globe },;
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
-  },;
-  {;
-    category: 'Services',;
-    pages: [;
-      { name: 'AI Services', url: '/ai-services', icon: Brain },;
-      { name: 'IT Services', url: '/it-services', icon: Network },;
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ];
-  },;
-  {;
-    category: 'Solutions',;
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ];
-  },;
-  {;
-    category: 'Resources',;
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },;
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
-      { name: 'Guides', url: '/guides', icon: Globe },;
-
-
-  }
-];
-
-export default function SitemapPage() {
+const sitemap: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>sitemap | Zion Tech Group</title>
+        <meta name="description" content="sitemap - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">sitemap</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
     <>
       <Head>
         <title>Sitemap - Zion Tech Group</title>
@@ -113,10 +47,10 @@ export default function SitemapPage() {
           <div className="max-w-7xl mx-auto px-4">
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+
 import Link from 'next/link';
 import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -648,10 +582,11 @@ const Page = () => {
         <div className="max-w-7xl mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
-    </MainLayout>
+    </div>
   );
 };
 
-export default Page;
+export default sitemap;

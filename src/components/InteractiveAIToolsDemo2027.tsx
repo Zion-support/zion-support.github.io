@@ -1,68 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Zap
-  Brain
-  Code
-  BarChart3
-  Image,
-  FileText,
-  Music,
-  Video,
-  Download,
-  Share2,
-  Star,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2027 = () => {
-  const [activeToolsetActiveTool] = useState(0);
-  const [isRunningsetIsRunning] = useState(false);
-  const [progressetProgress] = useState(0);
-  const [resultsetResults] = useState<any[]>([]);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const aiTools = [
-    {
-      id: 'code-generator',
-      name: 'AI Code Generator',
-      description: 'Generate production-ready code from natural language descriptions',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500',
-      demo: {
-        input: 'Create a React component for a user profile card with avatarnameand bio',
-        output: `import React from 'react';
-import { Avatar } from './ui/avatar';
-
-interface UserProfileCardProps {
-  user: {
-    name: string;
-    bio: string;
-    avatar: string;
-  };
-}
-
-export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
+const InteractiveAIToolsDemo2027: React.FC = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 max-w-sm">
-      <div className="flex items-center space-x-4">
-        <Avatar src={user.avatar} alt={user.name} />
-        <div>
-          <h3 className="text-lg font-semibold">{user.name}</h3>
-          <p className="text-gray-600">{user.bio}</p>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2027</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };`,
@@ -204,10 +146,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -221,14 +160,11 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
             Experience the power of our AI tools with interactive demonstrations. 
             See how artificial intelligence can transform your workflow in real-time.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tool Selection */}
-          <motion.div
-            initial={{ opacity: 0x: -30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <div
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Choose an AI Tool</h3>
@@ -259,13 +195,10 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Demo Interface */}
-          <motion.div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.4 }}
+          <div
             className="bg-white rounded-2xl shadow-xl p-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -311,10 +244,9 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                   <span>{Math.round(progress)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <motion.div
+                  <div
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                     style={{ width: `${progress}%` }}
-                    transition={{ duration: 0.1 }}
                   />
                 </div>
               </div>
@@ -326,12 +258,9 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 AI Output
               </label>
               <div className="bg-gray-900 rounded-lg p-4 border min-h-[200px]">
-                <AnimatePresence>
+                <div>
                   {results.length > 0 ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
+                    <div
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-2 text-green-400 text-sm">
@@ -351,24 +280,21 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                           Share
                         </button>
                       </div>
-                    </motion.div>
+                    </div>
                   ) : (
                     <div className="text-gray-500 text-center py-8">
                       <Brain className="w-12 h-12 mx-auto mb-4 opacity-50" />
                       <p>Click "Run Demo" to see AI magic in action</p>
                     </div>
                   )}
-                </AnimatePresence>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
@@ -389,7 +315,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

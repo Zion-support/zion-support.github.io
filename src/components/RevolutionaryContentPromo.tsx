@@ -1,80 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
 const RevolutionaryContentPromo: React.FC = () => {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  const contentItems = [
-    {
-      title: "Ultimate Tech Showcase 2026",
-      description: "Experience the most advanced technologies that will reshape our world",
-      icon: "🚀",
-      link: "/pages/UltimateTechShowcase2026",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-600/20 to-pink-600/20",
-      borderColor: "border-purple-400/30",
-      features: ["Interactive demos", "Live technology previews", "Expert insights"]
-    },
-    {
-      title: "Future Tech Trends 2026",
-      description: "Discover the revolutionary technologies that will shape our future",
-      icon: "🔮",
-      link: "/pages/FutureTechTrends2026",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-600/20 to-blue-600/20",
-      borderColor: "border-cyan-400/30",
-      features: ["Trend analysis", "Future predictions", "Industry impact"]
-    },
-    {
-      title: "Consciousness Computing",
-      description: "The next frontier where AI achieves true consciousness and self-awareness",
-      icon: "🧠",
-      link: "/pages/AIConsciousnessEvolution2026",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-600/20 to-teal-600/20",
-      borderColor: "border-emerald-400/30",
-      features: ["AI consciousness", "Emotional intelligence", "Creative AI"]
-    },
-    {
-      title: "Quantum Supremacy",
-      description: "Exponential computing power that solves impossible problems",
-      icon: "⚡",
-      link: "/pages/QuantumComputingRevolution2026",
-      color: "from-violet-600 to-purple-600",
-      bgColor: "from-violet-600/20 to-purple-600/20",
-      borderColor: "border-violet-400/30",
-      features: ["1000+ qubits", "Quantum algorithms", "Supremacy achieved"]
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer communication and enhancement",
-      icon: "🧬",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-600/20 to-red-600/20",
-      borderColor: "border-orange-400/30",
-      features: ["Brain-computer interface", "Thought control", "Neural enhancement"]
-    },
-    {
-      title: "Space Technology Innovation",
-      description: "Revolutionary space exploration and colonization",
-      icon: "🌌",
-      link: "/pages/SpaceTechInnovation2026",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-600/20 to-purple-600/20",
-      borderColor: "border-indigo-400/30",
-      features: ["Mars colonization", "Space habitats", "Interstellar travel"]
-    }
-  ];
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -87,16 +18,13 @@ const RevolutionaryContentPromo: React.FC = () => {
             Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing, 
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className={`bg-gradient-to-br ${item.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${item.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
@@ -133,21 +61,16 @@ const RevolutionaryContentPromo: React.FC = () => {
 
               {/* Hover Effect */}
               {hoveredCard === index && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"
                 />
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Interactive Features Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 mb-16"
         >
           <div className="text-center mb-8">
@@ -172,13 +95,10 @@ const RevolutionaryContentPromo: React.FC = () => {
               <p className="text-purple-200">Get AI-powered predictions about technology trends</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <div
           className="text-center"
         >
           <h3 className="text-4xl font-bold text-white mb-6">Ready to Explore the Future?</h3>
@@ -194,7 +114,7 @@ const RevolutionaryContentPromo: React.FC = () => {
               Download All Content
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

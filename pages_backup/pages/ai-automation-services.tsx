@@ -1,9 +1,32 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
+const ai-automation-services: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-automation-services | Zion Tech Group</title>
+        <meta name="description" content="ai-automation-services - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-automation-services</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-automation-services;
+=======
 import React from 'react',
 import Head from 'next/head',
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import { Zap, Brain, Code, Shield, Users, TrendingUp;
   CheckCircle, ArrowRight, Star, Clock, Target;
@@ -92,7 +115,7 @@ const benefits = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
@@ -183,11 +206,10 @@ const benefits = [;
     title: '80% Reduction in Manual Work',
     description: 'Automate repetitive tasks and focus on high - value activities',
     icon: Zap,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-import { motion } from 'framer-motion';
+
 import {;
   Zap, Brain, Code, Shield, Users, TrendingUp,;
   CheckCircle, ArrowRight, Star, Clock, Target,;
@@ -308,7 +330,6 @@ export default function AIAutomationServices() {
     color: 'text-pink-400',;
   },];
 export default function AIAutomationServices() {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <Layout>
@@ -465,7 +486,6 @@ export default function AIAutomationServices() {;
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 AI Automation
               </span>
               <br />
@@ -489,8 +509,6 @@ export default function AIAutomationServices() {;
                   <span>Get Started</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -509,12 +527,10 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -558,14 +574,10 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -584,12 +596,8 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <span>Get Started</span>
@@ -773,13 +781,9 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1009,7 +1013,6 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1029,12 +1032,10 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     </Link>
@@ -1213,7 +1214,6 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1240,7 +1240,6 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1262,11 +1261,9 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1284,12 +1281,8 @@ export default function AIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               <div>
@@ -1409,3 +1402,4 @@ export default function AIAutomationServices() {;
 
 
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

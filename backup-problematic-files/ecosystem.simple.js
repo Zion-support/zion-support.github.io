@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 module.exports = {
   apps: [;
@@ -646,9 +644,7 @@ module.exports = {
       env: {
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
 
@@ -695,7 +691,6 @@ module.exports = {
       env: {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         NODE_ENV: "development"
         PM2_PROCESS_NAME: "code-quality-monitor"
@@ -766,5 +761,4 @@ module.exports = {
   ],
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

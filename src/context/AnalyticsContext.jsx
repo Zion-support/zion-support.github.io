@@ -1,55 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react';
 
-const AnalyticsContext = createContext();
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
+const AnalyticsContext= () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AnalyticsContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
-export const AnalyticsProvider = ({ children }) => {
-<<<<<<< HEAD
-=======
-  const [analytics, setAnalytics] = useState({
-    pageViews: 0,
-    events: [],
-  });
-
-  const trackEvent = (eventName, properties = {}) => {
-    const event = {
-      name: eventName,
-      properties,
-      timestamp: new Date().toISOString(),
-    };
-    
-    setAnalytics(prev => ({
-      ...prev,
-      events: [...prev.events, event],
-    }));
-  };
-
-  const trackPageView = (page) => {
-    setAnalytics(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
-    }));
->>>>>>> cursor/create-and-deploy-new-content-c963
-  };
-
-  const value = {
-    analytics,
-    trackEvent,
-<<<<<<< HEAD
-=======
-    trackPageView,
->>>>>>> cursor/create-and-deploy-new-content-c963
-  };
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
+export default AnalyticsContext;

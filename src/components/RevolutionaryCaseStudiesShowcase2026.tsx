@@ -1,152 +1,11 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Users
-  DollarSign,
-  Clock,
-  Target,
-  Award,
-  Star,
-  ExternalLink,
-  Play,
-  BarChart3,
-  Zap,
-  Shield,
-  Globe
-} from 'lucide-react';
-
-const RevolutionaryCaseStudiesShowcase2026 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeCasetActiveCase] = useState(0);
-  const [isVideoPlayingsetIsVideoPlaying] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)300);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const caseStudies = [
-    {
-      id: 'fintech-transformation',
-      title: 'FinTech Revolution: 500% ROI in 6 Months',
-      company: 'PayFlow Solutions',
-      industry: 'Financial Technology',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-600',
-      challenge: 'Legacy payment processing system causing 40% transaction failures and customer churn',
-      solution: 'Implemented AI-powered fraud detectionreal-time processingand automated compliance',
-      results: {
-        roi: '500%',
-        efficiency: '300%',
-        costReduction: '60%',
-        customerSatisfaction: '95%'
-      },
-      timeline: '6 months',
-      team: '15 experts',
-      technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'],
-      testimonial: {
-        name: 'Sarah Chen',
-        role: 'CTO',
-        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'
-      }
-    },
-    {
-      id: 'healthcare-ai',
-      title: 'Healthcare AI: Diagnosing 10x Faster',
-      company: 'MediTech Innovations',
-      industry: 'Healthcare Technology',
-      icon: Shield,
-      color: 'from-blue-500 to-cyan-600',
-      challenge: 'Manual diagnosis processes taking 2-3 dayscausing delayed treatments and patient dissatisfaction',
-      solution: 'Deployed AI diagnostic toolsautomated patient triageand predictive health analytics',
-      results: {
-        roi: '400%',
-        efficiency: '1000%',
-        costReduction: '45%',
-        customerSatisfaction: '98%'
-      },
-      timeline: '8 months',
-      team: '20 experts',
-      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'],
-      testimonial: {
-        name: 'Dr. Michael Rodriguez',
-        role: 'Chief Medical Officer',
-        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'
-      }
-    },
-    {
-      id: 'ecommerce-automation',
-      title: 'E-commerce Automation: $50M Revenue Boost',
-      company: 'ShopGlobal',
-      industry: 'E-commerce',
-      icon: Globe,
-      color: 'from-purple-500 to-pink-600',
-      challenge: 'Manual inventory management and customer service causing 30% lost sales opportunities',
-      solution: 'Implemented AI-driven inventory optimizationautomated customer serviceand dynamic pricing',
-      results: {
-        roi: '600%',
-        efficiency: '400%',
-        costReduction: '50%',
-        customerSatisfaction: '92%'
-      },
-      timeline: '10 months',
-      team: '25 experts',
-      technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'],
-      testimonial: {
-        name: 'Jennifer Walsh',
-        role: 'CEO',
-        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'
-      }
-    },
-    {
-      id: 'manufacturing-iot',
-      title: 'Smart Manufacturing: Zero Downtime Achievement',
-      company: 'AutoParts Pro',
-      industry: 'Manufacturing',
-      icon: Zap,
-      color: 'from-orange-500 to-red-600',
-      challenge: 'Unplanned downtime costing $2M monthly and 15% production efficiency loss',
-      solution: 'Deployed IoT sensorspredictive maintenance AIand real-time production optimization',
-      results: {
-        roi: '350%',
-        efficiency: '250%',
-        costReduction: '40%',
-        customerSatisfaction: '97%'
-      },
-      timeline: '12 months',
-      team: '18 experts',
-      technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'],
-      testimonial: {
-        name: 'Robert Kim',
-        role: 'Operations Director',
-        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'
-      }
-    }
-  ];
-
-  const overallStats = [
-    { label: 'Projects 'Completed', 'value: '200+'icon: CheckCircle },
-    { label: 'Average 'ROI', 'value: '450%'icon: TrendingUp },
-    { label: 'Client 'Satisfaction', 'value: '96%'icon: Star },
-    { label: 'Years 'Experience', 'value: '8+'icon: Award }
-  ];
-
-  if (!isVisible) return null;
-
+const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -155,13 +14,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Overall Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -173,13 +29,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Case Study Selector */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {caseStudies.map((caseStudyindex) => (
@@ -200,16 +53,11 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               <p className="text-xs text-gray-500 mt-1">{caseStudy.industry}</p>
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Active Case Study Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCase}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-12"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -295,14 +143,11 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -324,7 +169,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

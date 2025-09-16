@@ -1,9 +1,7 @@
 import React from 'react';
 
 
-=======
 import Head from 'next/head';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function LeadershipPage() {
 	return (

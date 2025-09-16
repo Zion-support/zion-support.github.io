@@ -1,95 +1,16 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Zap
-  Brain
-  Rocket
-  ArrowRight,
-  X,
-  ChevronRight,
-  Award,
-  Users,
-  Clock,
-  TrendingUp,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const InteractiveTechDemo2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const demos = [
-    {
-      icon: Brain,
-      title: 'AI Quantum Processing',
-      description: '1.2M ops/sec',
-      color: 'from-purple-500 to-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'Autonomous Automation',
-      description: '847 tasks automated',
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Neural Interface',
-      description: '12ms response time',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const features = [
-    'Real-time Processing',
-    'Interactive Controls',
-    'Live Metrics',
-    'Step-by-step Guide'
-  ];
-
-  const stats = [
-    { value: '99.97%'label: 'Accuracy' },
-    { value: '2.3k 'hrs', 'label: 'Time Saved' },
-    { value: '0.02%'label: 'Error Rate' },
-    { value: '$1.2'M', 'label: 'Cost Saved' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (isDismissed) return null;
-
+const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <motion.div
+            <div
               className="absolute inset-0 opacity-30"
-              animate={{
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                   'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
@@ -97,7 +18,6 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                 ]
               }}
-              transition={{ duration: 6repeat: Infinity }}
             />
           </div>
 
@@ -129,13 +49,8 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
                 {/* Rotating Demo Features */}
                 <div className="flex items-center gap-4 mb-4">
-                  <AnimatePresence mode="wait">
-                    <motion.div
+                    <div
                       key={currentDemo}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center gap-2"
                     >
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${demos[currentDemo].color}`}>
@@ -149,8 +64,8 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                           {demos[currentDemo].description}
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -218,10 +133,11 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 
 export default InteractiveTechDemo2027PromotionBanner;
+</div></div></div></div>

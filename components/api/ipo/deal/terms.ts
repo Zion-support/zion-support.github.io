@@ -7,17 +7,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
     leadInvestor: 'TBD',
   });
   res.status(200).json(terms);
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -45,5 +45,3 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 }),;
-
-

@@ -32,10 +32,8 @@ export const use_auth = () =>: any {
   useEffect(() => {
     // Simulate auth check
     setLoading(false);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useAuth.ts
   }, []);
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return {
     user

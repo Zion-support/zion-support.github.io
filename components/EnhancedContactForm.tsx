@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -29,11 +32,15 @@ import { motion } from 'framer-motion';
         animate={{ opacity: 1, scale: 1 }}
     );
   }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const EnhancedContactForm: React.FC = () => {
   return (
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedContactForm</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-        {/* Contact Form */}
+export default EnhancedContactForm;

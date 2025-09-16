@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const LazyWrapper: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LazyWrapper</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default LazyWrapper;
+=======
 import React, {useState, useEffect, useRef} from 'react';';
-import {motion, useInView} from 'framer-motion';
+
 import {EnhancedLoading} from "./EnhancedLoading";';
 const LazyWrapper = ("props": "any) => {"}
 export default function Page("props": "any) {"}
@@ -52,3 +66,4 @@ export {LazyWrapper};
 export {LazyWrapper, Page};
 ;
 </motion>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

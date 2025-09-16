@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-export default function DarkModeToggle() {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    const isDark = localStorage.getItem('theme') === 'dark';
-    setEnabled(isDark);
-    document.documentElement.classList.toggle('dark', isDark);
-  }, []);
-
-  const toggle = () => {
-    const next = !enabled;
-    setEnabled(next);
-    localStorage.setItem('theme', next ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', next);
-  };
-
+const DarkModeToggle: React.FC = () => {
   return (
-    <button onClick={toggle} className="text-sm px-2 py-1 rounded bg-gray-100 dark:bg-gray-900">
-      {enabled ? 'Light' : 'Dark'}
-    </button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">DarkModeToggle</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default DarkModeToggle;

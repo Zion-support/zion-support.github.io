@@ -1,86 +1,14 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
-
-const AI2025LatestInnovationsShowcase = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % innovations.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const innovations = [
-    {
-      id: 1,
-      title: "Quantum-Neural AI Fusion",
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
-      icon: Brain,
-      stats: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      id: 2,
-      title: "Autonomous Business Orchestration",
-      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
-      icon: Target,
-      stats: "95% efficiency increase",
-      color: "from-green-600 to-teal-600"
-    },
-    {
-      id: 3,
-      title: "Synthetic Intelligence Platforms",
-      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
-      icon: Sparkles,
-      stats: "Self-evolving capabilities",
-      color: "from-orange-600 to-red-600"
-    },
-    {
-      id: 4,
-      title: "Global Transformation Engine",
-      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
-      icon: Globe,
-      stats: "15,000% ROI average",
-      color: "from-indigo-600 to-purple-600"
-    }
-  ];
-
-  const features = [
-    {
-      icon: TrendingUp,
-      title: "Exponential Growth",
-      description: "Achieve unprecedented business growth with AI-driven strategies"
-    },
-    {
-      icon: Users,
-      title: "Global Impact",
-      description: "Transform organizations worldwide with our proven methodologies"
-    },
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Implement solutions in daysnot monthswith our rapid deployment"
-    }
-  ];
-
+const AI2025LatestInnovationsShowcase: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -96,18 +24,13 @@ const AI2025LatestInnovationsShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
-                initial={{ opacity: 0scale: 1.1 }}
-                animate={{ opacity: 1scale: 1 }}
-                exit={{ opacity: 0scale: 0.9 }}
-                transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
                 <div className={`h-full bg-gradient-to-br ${innovations[currentSlide].color} relative overflow-hidden`}>
@@ -133,8 +56,8 @@ const AI2025LatestInnovationsShowcase = () => {
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
                   <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -154,10 +77,7 @@ const AI2025LatestInnovationsShowcase = () => {
         </div>
 
         {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.3 }}
+        <div
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {features.map((featureindex) => (
@@ -172,13 +92,10 @@ const AI2025LatestInnovationsShowcase = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -198,7 +115,7 @@ const AI2025LatestInnovationsShowcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

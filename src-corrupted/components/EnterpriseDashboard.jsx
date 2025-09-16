@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const EnterpriseDashboard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnterpriseDashboard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnterpriseDashboard;
+=======
 import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
+'''
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
 export const EnterpriseDashboard = (props: any) => {
@@ -1667,3 +1681,4 @@ export default Component
 </nav>
 </div>
 </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

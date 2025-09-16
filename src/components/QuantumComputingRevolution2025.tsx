@@ -1,66 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-CpuZapAtomShieldTargetTrendingUpGlobeLock
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const QuantumComputingRevolution2025: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeFeaturesetActiveFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % 4);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const quantumFeatures = [
-    {
-      title: "Error-Corrected Quantum Computers",
-      description: "Breakthrough quantum error correction enabling stable quantum computation at scale",
-      icon: Cpu,
-      metrics: "99.99% Quantum Fidelity",
-      color: "from-blue-600 to-cyan-600"
-    },
-    {
-      title: "Quantum Supremacy Achievement",
-      description: "Quantum computers solving problems impossible for classical computers",
-      icon: Zap,
-      metrics: "10^18 Operations/Second",
-      color: "from-purple-600 to-pink-600"
-    },
-    {
-      title: "Quantum Internet Infrastructure",
-      description: "Global quantum communication network with unbreakable encryption",
-      icon: Globe,
-      metrics: "Instant Global Transfer",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "Quantum-AI Fusion",
-      description: "Revolutionary combination of quantum computing and artificial intelligence",
-      icon: Atom,
-      metrics: "Exponential AI Acceleration",
-      color: "from-orange-600 to-red-600"
-    }
-  ];
-
-  const capabilities = [
-    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" },
-    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" },
-    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" },
-    { icon: Locktext: "Secure Communications"description: "Quantum key distribution" }
-  ];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"
     >
       {/* Quantum Background Effects */}
@@ -72,10 +14,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.2duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -88,14 +27,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the dawn of the quantum era with our revolutionary quantum computing breakthroughs that are reshaping the boundaries of computational possibility.
           </p>
-        </motion.div>
+        </div>
 
         {/* Active Feature Showcase */}
-        <motion.div
+        <div
           key={activeFeature}
-          initial={{ opacity: 0scale: 0.9 }}
-          animate={{ opacity: 1scale: 1 }}
-          transition={{ duration: 0.6 }}
           className="mb-16"
         >
           <div className="max-w-4xl mx-auto">
@@ -111,16 +47,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
-              transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className={`group relative cursor-pointer ${activeFeature === index ? 'scale-105' : ''}`}
               onClick={() => setActiveFeature(index)}
             >
@@ -136,25 +69,19 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{feature.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{feature.metrics}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Quantum Capabilities */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.8duration: 0.8 }}
+        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Quantum Computing Capabilities</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {capabilities.map((capabilityindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
-                transition={{ delay: 1 + index * 0.1duration: 0.5 }}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl mb-4">
@@ -162,16 +89,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 </div>
                 <h3 className="text-white font-semibold mb-2">{capability.text}</h3>
                 <p className="text-gray-400 text-sm">{capability.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ delay: 1.2duration: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -192,9 +116,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join the quantum revolution - Limited access to quantum computing resources
           </p>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

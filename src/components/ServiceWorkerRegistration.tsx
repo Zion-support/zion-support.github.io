@@ -1,116 +1,12 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
+import React from 'react';
 
-interface ServiceWorkerRegistrationProps {
-  onUpdateAvailable?: () => void;
-  onUpdateInstalled?: () => void;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  onUpdateAvailable,
-  onUpdateInstalled
-}) => {
-  const [isInstalling, setIsInstalling] = useState(false);
-  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
-  const [isUpdateInstalled, setIsUpdateInstalled] = useState(false);
-  const [registration, setRegistration] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      registerServiceWorker();
-    }
-  }, []);
-
-  const registerServiceWorker = async () => {
-    try {
-      const swRegistration = await navigator.serviceWorker.register('/sw.js');
-      setRegistration(swRegistration);
-      
-      // Check for updates
-      swRegistration.addEventListener('updatefound', () => {
-        const newWorker = swRegistration.installing;
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              setIsUpdateAvailable(true);
-              onUpdateAvailable?.();
-            }
-          });
-        }
-      });
-
-      // Handle controller change (update installed)
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        setIsUpdateInstalled(true);
-        onUpdateInstalled?.();
-        
-        // Reload after a short delay to ensure the new service worker is active
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
-      });
-
-      // Handle service worker messages
-      navigator.serviceWorker.addEventListener('message', (event) => {
-        if (event.data && event.data.type === 'SW_VERSION') {
-          console.log('Service Worker version:', event.data.version);
-        }
-      });
-
-    } catch (error) {
-      console.error('Service worker registration failed:', error);
-      setError('Failed to register service worker');
-    }
-  };
-
-  const handleUpdate = async () => {
-    if (!registration) return;
-
-    setIsInstalling(true);
-    setError(null);
-
-    try {
-      // Send message to service worker to skip waiting
-      if (registration.waiting) {
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-      }
-
-      // Check for updates
-      await registration.update();
-      
-      // Force reload to activate new service worker
-      window.location.reload();
-    } catch (error) {
-      console.error('Update failed:', error);
-      setError('Failed to update application');
-    } finally {
-      setIsInstalling(false);
-    }
-  };
-
-  const handleDismiss = () => {
-    setIsUpdateAvailable(false);
-    setIsUpdateInstalled(false);
-  };
-
-  // Don't render anything if service worker is not supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return null;
-  }
-
+const ServiceWorkerRegistration: React.FC = () => {
   return (
-    <AnimatePresence>
+    <div>
       {/* Update Available Notification */}
       {isUpdateAvailable && (
-        <motion.div
+        <div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -157,17 +53,13 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Update Installed Notification */}
       {isUpdateInstalled && (
-        <motion.div
+        <div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -197,17 +89,13 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Error Notification */}
       {error && (
-        <motion.div
+        <div
           className="fixed bottom-4 right-4 bg-red-900 border border-red-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -230,9 +118,9 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -48,7 +45,6 @@ const milestonesData = [;
     dueDate: "Dec 30, 2023";
     status: "pending" as const
     paymentStatus: "pending" as const
-=======
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -61,7 +57,6 @@ const projectData = {
   client: {
     name: "TechCorp Inc.",
     avatar: ""
->>>>>>> origin/auto/autonomy-17186719616
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -102,14 +97,11 @@ export function MobileProjects() {
         showBack
       />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
+
+
       
       <main className="py-4">
         <MobileProjectView 
@@ -122,4 +114,3 @@ export function MobileProjects() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
