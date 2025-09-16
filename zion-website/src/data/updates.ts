@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: Agentic SLO Dashboards (2026 Preview)',
+		summary: 'Define and operate SLOs for agents with drill‑downs to traces, evals, and incidents.',
+		href: '/updates/agentic-slo-dashboards-2026',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Grounded Generation Blueprint (2026 Preview)',
+		summary: 'Techniques to ensure factual, traceable outputs with retrieval, constraints, and eval gates.',
+		href: '/updates/grounded-generation-blueprint-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
 		title: 'Launch: Production RAG Observability Suite v1.0',
 		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
 		href: '/updates/production-rag-observability-suite-1-0',
