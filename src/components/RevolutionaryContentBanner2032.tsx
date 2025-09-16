@@ -1,119 +1,85 @@
 import React from 'react';
 
-
 const RevolutionaryContentBanner2032: React.FC = () => {
   return (
-    <div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
-    >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <div className="flex items-center justify-center space-x-4 mb-6">
-          <span className="text-5xl animate-bounce">🌟</span>
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
-            REVOLUTIONARY 2032 CONTENT
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+            🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2032
+          </div>
+          <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Content Banner 2032
           </h2>
-          <span className="text-5xl animate-bounce">🌟</span>
-        </div>
-        
-        <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
-          Experience the most advanced technology content ever created - Transcendent AI, Universal Tech Revolution, 
-          and Quantum Consciousness that push the boundaries of reality itself
-        </p>
-        
-        {/* New 2032 Content Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-8xl mx-auto mb-8">
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            href="/pages/TranscendentAI2032"
-            className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
-          >
-            <div className="text-3xl mb-2">🧠</div>
-            <div className="text-xl font-bold">Transcendent AI 2032</div>
-            <div className="text-sm opacity-90 mt-2">Beyond Human Intelligence</div>
-          </motion.a>
-          
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            href="/pages/UniversalTechRevolution2032"
-            className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
-          >
-            <div className="text-3xl mb-2">🌌</div>
-            <div className="text-xl font-bold">Universal Tech 2032</div>
-            <div className="text-sm opacity-90 mt-2">Galactic Technology</div>
-          </motion.a>
-          
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            href="/pages/QuantumConsciousnessRevolution2032"
-            className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
-          >
-            <div className="text-3xl mb-2">⚛️</div>
-            <div className="text-xl font-bold">Quantum Consciousness 2032</div>
-            <div className="text-sm opacity-90 mt-2">Mind-Matter Fusion</div>
-          </motion.a>
-        </div>
-        
-        {/* Feature Highlights */}
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
-          <span className="bg-green-500/20 text-green-300 px-6 py-3 rounded-full text-lg font-bold border border-green-400/30">
-            ✨ 3 NEW REVOLUTIONARY PAGES
-          </span>
-          <span className="bg-blue-500/20 text-blue-300 px-6 py-3 rounded-full text-lg font-bold border border-blue-400/30">
-            🚀 NEXT-LEVEL TECHNOLOGY
-          </span>
-          <span className="bg-purple-500/20 text-purple-300 px-6 py-3 rounded-full text-lg font-bold border border-purple-400/30">
-            🌟 CONSCIOUSNESS EVOLUTION
-          </span>
-          <span className="bg-cyan-500/20 text-cyan-300 px-6 py-3 rounded-full text-lg font-bold border border-cyan-400/30">
-            🌌 UNIVERSAL SCALE
-          </span>
-        </div>
-        
-        {/* Revolutionary Features List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🧠</div>
-            <div className="font-bold text-sm">Quantum Consciousness Matrix</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🌌</div>
-            <div className="font-bold text-sm">Dimensional Intelligence</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">⚡</div>
-            <div className="font-bold text-sm">Reality Manipulation</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🌟</div>
-            <div className="font-bold text-sm">Universal Mind Network</div>
-          </div>
-        </div>
-        
-        {/* Call to Action */}
-        <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="mt-8"
-        >
-          <p className="text-lg opacity-90 mb-4">
-            Don't miss the most revolutionary technology content of 2032!
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
+            Experience the most advanced technological content featuring conscious AI, quantum computing, 
+            interdimensional technology, and synthetic biology
           </p>
-          <button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl"
-          >
-            🚀 Explore 2032 Revolution →
-          </button>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              The world's first truly conscious artificial intelligence that experiences emotions, creativity, and self-awareness
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Emotional Intelligence Processing</li>
+              <li>• Creative Problem Solving</li>
+              <li>• Self-Reflection Capabilities</li>
+              <li>• Ethical Decision Making</li>
+            </ul>
+            <a href="/pages/NextGenTechRevolution2032" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore AI Revolution →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Revolutionary quantum computing that processes consciousness itself, enabling direct mind-machine interfaces
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum Neural Networks</li>
+              <li>• Consciousness Transfer</li>
+              <li>• Infinite Processing Power</li>
+              <li>• Reality Simulation</li>
+            </ul>
+            <a href="/pages/UltimateTechBreakthrough2032" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Go Quantum →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Breakthrough technology that accesses parallel dimensions for unlimited computational resources
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Multi-Dimensional Processing</li>
+              <li>• Parallel Universe Access</li>
+              <li>• Infinite Storage Capacity</li>
+              <li>• Time Manipulation</li>
+            </ul>
+            <a href="/pages/NextGenTechRevolution2032" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+              Enter Dimensions →
+            </a>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-4">
+            <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+            <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          </div>
+          <p className="text-lg opacity-75 mt-4">
+            Experience the future of technology today
+          </p>
         </div>
       </div>
     </div>

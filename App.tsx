@@ -98,6 +98,10 @@ import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
 import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
 import UltimateTechBreakthrough2028 from './src/pages/UltimateTechBreakthrough2028';
+import NextGenTechRevolution2032 from './src/pages/NextGenTechRevolution2032';
+import UltimateTechBreakthrough2032 from './src/pages/UltimateTechBreakthrough2032';
+import RevolutionaryContentBanner2032 from './src/components/RevolutionaryContentBanner2032';
+import RevolutionaryTechShowcase2032 from './src/pages/RevolutionaryTechShowcase2032';
 
 export default function App(): JSX.Element {
   return (
@@ -153,10 +157,13 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Tech Banner 2030 */}
                 <RevolutionaryTechBanner2030 />
 
+                {/* NEW: Revolutionary Content Banner 2032 */}
+                <RevolutionaryContentBanner2032 />
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-lg font-bold mb-4 animate-pulse">
-                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2029
+                    🚀 NEW: Revolutionary Tech Breakthrough 2032 - The Future is Here!
                   </div>
                   <h1 className="text-5xl font-bold text-gray-900 mb-6">
                     Welcome to Zion Tech Group
@@ -233,6 +240,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryTechShowcase2031" className="bg-gradient-to-r from-cyan-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Revolutionary Tech Showcase 2031 →
+                    </a>
+                    <a href="/pages/NextGenTechRevolution2032" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Next-Gen Tech Revolution 2032 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 NEW: Ultimate Tech Breakthrough 2032 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2032" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🎮 NEW: Revolutionary Tech Showcase 2032 →
                     </a>
                     <a href="/pages/RevolutionaryTechShowcase2028" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 NEW: Revolutionary Tech 2028 →
@@ -695,6 +711,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
           <Route path="/pages/RevolutionaryTechShowcase2031" element={<RevolutionaryTechShowcase2031 />} />
           <Route path="/pages/UltimateTechBreakthrough2028" element={<UltimateTechBreakthrough2028 />} />
+          <Route path="/pages/NextGenTechRevolution2032" element={<NextGenTechRevolution2032 />} />
+          <Route path="/pages/UltimateTechBreakthrough2032" element={<UltimateTechBreakthrough2032 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2032" element={<RevolutionaryTechShowcase2032 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
