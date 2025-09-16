@@ -19,6 +19,28 @@ const ContentHub: React.FC = () => {
 
   const featuredContent = [
     {
+      id: 19,
+      title: 'Agentic Evidence Graphs',
+      excerpt: 'Connect evals, traces, policy events, and incidents into an auditable graph.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
+      id: 18,
+      title: 'Reliable Agent Change Windows',
+      excerpt: 'Define and enforce safe change windows tied to SLOs and eval gates.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
       id: 17,
       title: 'Governed Agent Operations Checklist',
       excerpt: 'A pragmatic, audit‑ready checklist for safe, observable agent operations.',
@@ -109,6 +131,26 @@ const ContentHub: React.FC = () => {
   ];
 
   const recentContent = [
+    {
+      id: 20,
+      title: 'Agentic Evidence Graphs',
+      excerpt: 'Connect evals, traces, policy events, and incidents into an auditable graph.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      image: '/api/placeholder/300/200',
+    },
+    {
+      id: 19,
+      title: 'Reliable Agent Change Windows',
+      excerpt: 'Define and enforce safe change windows tied to SLOs and eval gates.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      image: '/api/placeholder/300/200',
+    },
     {
       id: 18,
       title: 'Governed Agent Operations Checklist',
