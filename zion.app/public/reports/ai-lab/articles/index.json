@@ -181,4 +181,19 @@
     "tags": ["cost", "governance", "product"],
     "source": "Zion AI Lab"
   }
+  ,
+  {
+    "title": "Zero‑Downtime Agent Releases: Blue/Green, Canary, Eval Gates",
+    "url": "/reports/ai-lab/articles/zero-downtime-agent-releases-1758081600000.md",
+    "createdAt": "2025-09-16T22:00:00.000Z",
+    "tags": ["release", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Safe Tooling Permissions: Tiered Adapters and Runtime Policy Checks",
+    "url": "/reports/ai-lab/articles/safe-tooling-permissions-1758085200000.md",
+    "createdAt": "2025-09-16T23:00:00.000Z",
+    "tags": ["governance", "safety", "tooling"],
+    "source": "Zion AI Lab"
+  }
 ]
