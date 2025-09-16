@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/create-and-deploy-new-content-ec50
 
 export type SEOProps = {
   title?: string;
@@ -21,7 +18,6 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://zion.app',
   type = 'website'
 }) => {
-<<<<<<< HEAD
   return (
     <Helmet>
       <title>{title}</title>
@@ -40,7 +36,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Helmet>
   );
-=======
   React.useEffect(() => {
     // Update document title
     document.title = title;
@@ -124,7 +119,6 @@ const SEO: React.FC<SEOProps> = ({
   }, [title, description, keywords, image, url, type]);
 
   return null; // This component doesn't render anything
->>>>>>> cursor/create-and-deploy-new-content-ec50
 };
 
 export default SEO;
