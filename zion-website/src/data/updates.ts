@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Guide: Agent Evidence Bundles — 2026 Blueprint',
+        summary: 'Design signed evidence bundles with provenance, policy checks, and eval signals.',
+        href: '/blog/ai-2026-agent-evidence-bundles-blueprint',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Enterprise Agent Risk Scorecards',
+        summary: 'Standardize cross-team risk metrics, thresholds, and alerts for autonomous agents.',
+        href: '/blog/ai-2026-enterprise-agent-risk-scorecards',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Launch: Autonomous Ops Control Center v2.4',
         summary: 'New playbooks, real-time eval gates, and risk scorecards for safer ops.',
         href: '/updates/autonomous-ops-control-center-2-4',

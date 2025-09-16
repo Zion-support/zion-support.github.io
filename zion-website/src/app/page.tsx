@@ -34,11 +34,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Autonomous Ops Control Center v2.4 —
-            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
+            New: Agent Evidence Bundles —
+            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Agent Observability Blueprint (2026) —
-            <a href="/updates/agent-observability-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
+            Enterprise Agent Risk Scorecards —
+            <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Production Evals Control Plane —
             <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
@@ -75,11 +75,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Autonomous Ops Control Center v2.4 —
-            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            Fresh: Agent Evidence Bundles —
+            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Production Evals Control Plane —
-            <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Enterprise Agent Risk Scorecards —
+            <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Multimodal Guardrails —
             <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
