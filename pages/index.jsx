@@ -72,21 +72,6 @@ const Home = () => {
                   <h3 className="text-2xl font-semibold mb-2">AI 2026: Evidence-Driven Governance</h3>
                   <p className="text-white/80">Make governance operational with evidence hubs and audit-ready workflows.</p>
                 </Link>
-                <Link href="/blog/ai-2026-reliable-autonomy-operations" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">AI Ops • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Reliable Autonomy Operations (2026)</h3>
-                  <p className="text-white/80">Operate agents safely with SLOs, eval gates, incident playbooks, and governed tool use.</p>
-                </Link>
-                <Link href="/blog/ai-2026-agent-safety-playbook" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Safety • 9 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Agent Safety Playbook</h3>
-                  <p className="text-white/80">Actionable patterns to ship safe, governed, and trustworthy agentic systems.</p>
-                </Link>
-                <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Observability • 8 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Production Evidence Hub Blueprint</h3>
-                  <p className="text-white/80">Unify traces, evals, policy events, and incidents for audit-ready AI.</p>
-                </Link>
                 <Link href="/blog/ai-2026-agentic-systems-risk-matrix" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Governance • 7 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">AI 2026: Agentic Systems Risk Matrix</h3>
