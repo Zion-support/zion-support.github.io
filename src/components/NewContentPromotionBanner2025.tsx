@@ -1,158 +1,141 @@
-"use client";
-'use client';
-
 import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-const NewContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+const NewContentPromotionBanner2025: React.FC = () => {
+  const [currentPromo, setCurrentPromo] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  const features = [
+  const promotions = [
     {
-      title: 'Interactive Demos',
-      description: 'Experience AI in action with our hands-on demonstrations',
-      icon: '🎮',
-      color: 'from-blue-500 to-purple-500'
+      id: 1,
+      title: "🚀 NEW: Revolutionary AI Services 2025",
+      description: "Experience the future of artificial intelligence with our groundbreaking services",
+      cta: "Explore AI Services",
+      link: "/pages/RevolutionaryAIServices2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
     },
     {
-      title: 'Success Stories',
-      description: 'Real case studies with measurable ROI results',
-      icon: '📈',
-      color: 'from-green-500 to-blue-500'
+      id: 2,
+      title: "⚡ BREAKTHROUGH: Quantum Computing Solutions",
+      description: "Unlock unprecedented processing power with quantum technology",
+      cta: "Discover Quantum AI",
+      link: "/pages/QuantumComputingSolutions2025",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900/90 to-blue-900/90"
     },
     {
-      title: 'Expert Insights',
-      description: 'Latest AI trends and industry analysis from our experts',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-500'
+      id: 3,
+      title: "🧠 INNOVATION: Neural Interface Technology",
+      description: "Connect your mind directly to AI systems for seamless control",
+      cta: "Try Neural Interface",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
     },
     {
-      title: 'Interactive Tools',
-      description: 'ROI calculators and assessment tools to explore your potential',
-      icon: '🛠️',
-      color: 'from-orange-500 to-red-500'
+      id: 4,
+      title: "🌟 ULTIMATE: Interactive Tech Showcase",
+      description: "Experience cutting-edge technologies with interactive demonstrations",
+      cta: "Start Interactive Demo",
+      link: "/interactive-showcase",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900/90 to-red-900/90"
     }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentPromo((prev) => (prev + 1) % promotions.length);
+    }, 6000);
+
     return () => clearInterval(interval);
-  }, [features.length]);
+  }, [promotions.length]);
+
+  const currentPromotion = promotions[currentPromo];
+
+  if (!isVisible) return null;
 
   return (
-    <div className={`py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Main Content */}
-          <div>
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
+    <div className={`relative overflow-hidden bg-gradient-to-r ${currentPromotion.bgColor} backdrop-blur-sm border border-white/20 rounded-2xl mb-8 transition-all duration-500`}>
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+      
+      {/* Close Button */}
+      <button
+        onClick={() => setIsVisible(false)}
+        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div className="relative z-10 p-6">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Content */}
+          <div className="flex-1 mb-4 md:mb-0">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold text-yellow-300">LIVE NOW</span>
             </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                AI Content
-              </span>
-            </h2>
-            
-            <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Explore interactive demos, success stories, expert insights, and powerful tools 
-              that showcase the future of AI in business transformation.
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              {currentPromotion.title}
+            </h3>
+            <p className="text-white/90 text-lg mb-4">
+              {currentPromotion.description}
             </p>
-
-            {/* Feature Highlight */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className={`text-4xl bg-gradient-to-r ${features[currentFeature].color} bg-clip-text text-transparent`}>
-                  {features[currentFeature].icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">
-                    {features[currentFeature].title}
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    {features[currentFeature].description}
-                  </p>
-                </div>
+            <div className="flex items-center space-x-4">
+              <a
+                href={currentPromotion.link}
+                className={`bg-gradient-to-r ${currentPromotion.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold inline-flex items-center space-x-2`}
+              >
+                <span>{currentPromotion.cta}</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <div className="text-white/70 text-sm">
+                <span className="font-semibold">Limited Time:</span> 50% off first month
               </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/content"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
-              >
-                Explore New Content
-              </a>
-              <a
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
-              >
-                Try Interactive Demo
-              </a>
             </div>
           </div>
 
-          {/* Right Side - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`group bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 hover:bg-opacity-20 hover:transform hover:scale-105 ${
-                  index === currentFeature ? 'ring-2 ring-white ring-opacity-50' : ''
-                }`}
-                onClick={() => setCurrentFeature(index)}
-              >
-                <div className={`text-3xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
-                  {feature.description}
-                </p>
-                <div className="mt-4 flex items-center text-sm text-yellow-300 group-hover:text-white transition-colors">
-                  <span>Learn More</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
+          {/* Visual Element */}
+          <div className="flex-shrink-0 ml-6">
+            <div className="relative">
+              <div className="w-32 h-32 bg-gradient-to-r from-white/20 to-white/10 rounded-full flex items-center justify-center animate-spin-slow">
+                <div className="w-24 h-24 bg-gradient-to-r from-white/30 to-white/20 rounded-full flex items-center justify-center">
+                  <div className="text-4xl">
+                    {currentPromo === 0 && "🤖"}
+                    {currentPromo === 1 && "⚡"}
+                    {currentPromo === 2 && "🧠"}
+                    {currentPromo === 3 && "🌟"}
+                  </div>
                 </div>
               </div>
-            ))}
+              {/* Floating particles */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-cyan-400 rounded-full animate-bounce delay-300"></div>
+              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-700"></div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-yellow-300 mb-2">50+</div>
-            <div className="text-sm opacity-90">New Articles</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-green-300 mb-2">25+</div>
-            <div className="text-sm opacity-90">Case Studies</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-blue-300 mb-2">10+</div>
-            <div className="text-sm opacity-90">Interactive Tools</div>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6">
-            <div className="text-3xl font-bold text-purple-300 mb-2">5+</div>
-            <div className="text-sm opacity-90">Live Demos</div>
-          </div>
+        {/* Progress Indicator */}
+        <div className="mt-4 flex space-x-2">
+          {promotions.map((_, index) => (
+            <div
+              key={index}
+              className={`h-1 flex-1 rounded-full transition-all duration-300 ${
+                index === currentPromo ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
         </div>
       </div>
+
+      {/* Animated Border */}
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
     </div>
   );
 };
