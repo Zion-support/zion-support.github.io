@@ -711,6 +711,21 @@ const solutions = [
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 ]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function HomePage() {
+  const latest = getLatestUpdates(6)
+  return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 const whatsNew = [
   { title: 'ContentForge AI v2', description: 'Major upgrade with SEO briefs, brand voice trainer, and new templates.', href: '/services', badge: 'New' },
   { title: 'SecureShield Audit Playbooks', description: 'Actionable remediation guides added to all cybersecurity audits.', href: '/services', badge: 'Update' },
@@ -731,10 +746,17 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -772,6 +794,11 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -790,6 +817,7 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
     <div className="bg-black">
@@ -841,14 +869,45 @@ export default function HomePage() {
 =======
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
     <div className="bg-black">
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+=======
+    <div className="bg-black">
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">

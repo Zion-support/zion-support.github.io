@@ -246,10 +246,123 @@ const InteractiveTechShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
     },
+<<<<<<< HEAD
 
   const currentTech = technologies[activeTech];
 
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+<<<<<<< HEAD
+    {
+      id: 4,
+      name: "Synthetic Intelligence",
+      icon: "🤖",
+      description: "Hybrid biological-digital intelligence with unprecedented capabilities",
+      features: ["Hybrid intelligence", "Biological integration", "Adaptive learning", "Consciousness transfer"],
+      gradient: "from-cyan-600 to-blue-600",
+      stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const techCategories = [
+    {
+      id: 0,
+      name: "AI Revolution",
+      icon: "🤖",
+      color: "from-purple-600 to-pink-600",
+      description: "Experience the future of artificial intelligence",
+      features: [
+        "Autonomous AI Agents",
+        "Quantum-Enhanced AI",
+        "Synthetic Intelligence",
+        "Edge AI Networks"
+      ]
+    },
+    {
+      id: 1,
+      name: "Quantum Computing",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      description: "Unlock exponential computing power",
+      features: [
+        "Exponential Speed",
+        "Quantum Cryptography",
+        "Molecular Simulation",
+        "Optimization Problems"
+      ]
+    },
+    {
+      id: 2,
+      name: "Neural Interfaces",
+      icon: "🧬",
+      color: "from-green-600 to-emerald-600",
+      description: "Bridge the gap between mind and machine",
+      features: [
+        "Brain-Computer Interfaces",
+        "Neural Implants",
+        "Thought-Controlled Systems",
+        "Cognitive Enhancement"
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
+  
+  const technologies = {
+    ai: {
+      title: "Artificial Intelligence",
+      subtitle: "Consciousness-Level AI Systems",
+      icon: "🧠",
+      color: "from-blue-500 to-purple-500",
+      description: "Experience the next generation of AI with consciousness-like capabilities, emotional intelligence, and autonomous decision-making.",
+      features: [
+        "Self-aware AI systems",
+        "Emotional intelligence processing",
+        "Autonomous problem solving",
+        "Human-AI collaboration",
+        "Real-time learning adaptation",
+        "Ethical decision making"
+      ],
+      stats: [
+        { label: "Processing Power", value: "10x faster", icon: "⚡" },
+        { label: "Accuracy Rate", value: "99.9%", icon: "🎯" },
+        { label: "Learning Speed", value: "1000x", icon: "📈" }
+      ]
+    },
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTech((prev) => (prev + 1) % technologies.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const currentTech = technologies[activeTech];
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-39c9
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -308,10 +421,20 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Treatment Success", value: "95%", icon: "💊" },
         { label: "Diagnosis Speed", value: "10x faster", icon: "⚡" },
         { label: "Cost Reduction", value: "80%", icon: "💰" }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       ]
     }
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       color: "from-purple-600 to-pink-600",
@@ -458,8 +581,14 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
   const currentTech = technologies[activeTech];
 
+<<<<<<< HEAD
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
   return (
     <div className="mb-16">
       <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
@@ -662,6 +791,20 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-3xl font-bold text-white mb-2">∞</div>
             <div className="text-gray-300">Learning Capacity</div>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </motion.div>
+          ))}
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
         </div>
 <<<<<<< HEAD
       {/* Technology Grid */}
@@ -886,6 +1029,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+<<<<<<< HEAD
 =======
 export default InteractiveTechShowcase;
 
@@ -911,6 +1055,83 @@ export default InteractiveTechShowcase;
         </div>
 
 <<<<<<< HEAD
+=======
+          </div>
+
+          {/* Technology Display */}
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTech}
+                initial={{ opacity: 0, x: 50, rotateY: 90 }}
+                animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                exit={{ opacity: 0, x: -50, rotateY: -90 }}
+                transition={{ duration: 0.5 }}
+                className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl shadow-2xl`}
+              >
+                <div className="text-center mb-8">
+                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
+                  <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].name}</h3>
+                  <p className="text-xl opacity-90">{technologies[activeTech].description}</p>
+                </div>
+
+                {/* Features Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {technologies[activeTech].features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
+                    >
+                      <span className="text-sm font-semibold">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Performance Stats */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.performance}</div>
+                    <div className="text-xs opacity-90">Performance</div>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.accuracy}</div>
+                    <div className="text-xs opacity-90">Accuracy</div>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.speed}</div>
+                    <div className="text-xs opacity-90">Speed</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        {/* Interactive Demo Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">🎮</div>
+              <h4 className="text-xl font-bold mb-3">Virtual Reality Demo</h4>
+              <p className="text-sm opacity-90 mb-4">Experience our technologies in immersive VR environments</p>
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Launch VR Demo
+              </button>
+            </motion.div>
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
@@ -937,7 +1158,21 @@ export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
 =======
+<<<<<<< HEAD
 export default InteractiveTechShowcase;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 
               {/* Demo Button */}
               <div className="text-center">
@@ -959,6 +1194,14 @@ export default InteractiveTechShowcase;
           </div>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9

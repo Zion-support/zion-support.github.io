@@ -8,6 +8,61 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
   const techCategories = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+<<<<<<< HEAD
+<<<<<<< HEAD
+      id: 'ai-revolution',
+      title: 'Next-Gen AI Revolution 2027',
+      description: 'Conscious AI systems with quantum-enhanced processing',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      borderColor: 'border-purple-400',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      link: '/pages/NextGenAIRevolution2027'
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution 2027',
+      description: '1000+ qubit quantum computers achieving true supremacy',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      borderColor: 'border-cyan-400',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      link: '/pages/QuantumComputingRevolution2027'
+    },
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Revolution 2027',
+      description: 'Direct brain-computer communication and thought control',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      borderColor: 'border-emerald-400',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      link: '/pages/NeuralInterfaceRevolution2027'
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       id: 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,6 +458,30 @@ const InteractiveTechShowcase2027: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Schedule Private Demo
             </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
           </div>
         </div>
       </div>

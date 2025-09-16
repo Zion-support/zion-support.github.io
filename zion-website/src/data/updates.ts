@@ -548,19 +548,26 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
@@ -605,18 +612,25 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (brand new content)
@@ -649,20 +663,27 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 <<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
@@ -670,6 +691,10 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
@@ -682,6 +707,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -696,6 +722,9 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 >>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {

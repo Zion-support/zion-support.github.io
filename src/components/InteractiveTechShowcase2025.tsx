@@ -9,10 +9,22 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState('ai');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  const techCategories = {
+    ai: {
+      title: "AI Consciousness Revolution",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
   const [activeTab, setActiveTab] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 =======
+<<<<<<< HEAD
     }
   };
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -46,6 +58,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const techCategories = {
     ai: {
       title: "AI Consciousness Revolution",
+=======
+      title: "AI & Consciousness",
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
       items: [
@@ -143,12 +159,29 @@ const InteractiveTechShowcase2025: React.FC = () => {
           status: "Concept Phase"
         }
       ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
     }
   };
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+=======
+<<<<<<< HEAD
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+=======
+<<<<<<< HEAD
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       <div className="container mx-auto px-4">
 =======
 <<<<<<< HEAD
@@ -289,6 +322,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
           </div>
           
           <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -576,11 +610,19 @@ const InteractiveTechShowcase2025: React.FC = () => {
             ))}
           </div>
 
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
           </div>
         </div>
 
               Schedule Demo
             </button>
+<<<<<<< HEAD
       </div>
 
       {/* Tab Navigation */}
@@ -595,6 +637,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 : 'bg-white/20 text-white hover:bg-white/30'
             }`}
           >
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -724,6 +771,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
           </div>
         </div>
       </div>

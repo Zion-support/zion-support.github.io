@@ -1,10 +1,45 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+import React from 'react';
+>>>>>>> main
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 import { motion } from 'framer-motion';
 
 =======
@@ -296,10 +331,38 @@ const RevolutionaryTech2026: React.FC = () => {
             </button>
 =======
             </motion.button>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
             </motion.button>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/pages/AdvancedAISolutions2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore AI Solutions
+            </a>
+            <a href="/pages/AdvancedQuantumComputing2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Discover Quantum Computing
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+              Contact Us
+            </a>
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
           </div>
         </motion.div>
       </div>
@@ -308,3 +371,26 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9

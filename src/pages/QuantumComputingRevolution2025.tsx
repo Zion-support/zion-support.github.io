@@ -169,6 +169,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -193,9 +194,16 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Explore Quantum Solutions
               </button>
+=======
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
               <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
 =======
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -364,6 +372,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -801,6 +814,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 =======
         </motion.div>
 
@@ -1070,6 +1084,19 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       </div>
     </div>
   );
