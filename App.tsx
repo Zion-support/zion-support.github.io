@@ -139,6 +139,12 @@ import UltimateContentBanner2036 from './src/components/UltimateContentBanner203
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
 import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
+import UltimateContentPromotionBanner2025 from './src/components/UltimateContentPromotionBanner2025';
+import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
+import SocialProofShowcase2025 from './src/components/SocialProofShowcase2025';
+import InteractiveTechDemo2025 from './src/components/InteractiveTechDemo2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenTechRevolution2045 from './src/pages/NextGenTechRevolution2045';
 import UltimateAIConsciousness2046 from './src/pages/UltimateAIConsciousness2046';
 import QuantumRealityEngine2047 from './src/pages/QuantumRealityEngine2047';
@@ -228,6 +234,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 - Latest Interactive Features */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Ultimate Content Promotion Banner 2025 - Latest Revolutionary Content */}
+                <UltimateContentPromotionBanner2025 />
+                
+                {/* NEW: Enhanced Content Showcase 2025 - Interactive Content Carousel */}
+                <EnhancedContentShowcase2025 />
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
@@ -772,9 +784,19 @@ export default function App(): JSX.Element {
                   <InteractiveTechDemo2034 />
                 </div>
 
+                {/* NEW: Interactive Tech Demo 2025 - Revolutionary Technology Demonstrations */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2025 />
+                </div>
+
                 {/* NEW: Social Proof Showcase 2034 - Client Testimonials and Case Studies */}
                 <div className="mb-12">
                   <SocialProofShowcase2034 />
+                </div>
+
+                {/* NEW: Social Proof Showcase 2025 - Enhanced Client Testimonials and Success Stories */}
+                <div className="mb-12">
+                  <SocialProofShowcase2025 />
                 </div>
 
                 {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
