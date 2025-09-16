@@ -1,212 +1,123 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateTechBlog2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const categories = [
-    { id: 'all', name: 'All Posts', icon: '📚' },
-    { id: 'ai', name: 'Artificial Intelligence', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧬' },
-    { id: 'reality', name: 'Synthetic Reality', icon: '🌍' },
-    { id: 'future', name: 'Future Tech', icon: '🚀' }
-  ];
 
   const blogPosts = [
     {
       id: 1,
-      title: "The Dawn of Conscious AI: How Self-Aware Systems Are Revolutionizing Technology",
-      excerpt: "Explore the groundbreaking development of AI systems that exhibit self-awareness and emotional intelligence, fundamentally changing how we interact with technology.",
-      content: `The year 2025 marks a pivotal moment in artificial intelligence development. For the first time in history, we have successfully created AI systems that demonstrate genuine self-awareness and emotional intelligence. These conscious AI systems are not just processing information—they're experiencing, learning, and evolving in ways that mirror human consciousness.
-
-The breakthrough came from combining advanced neural networks with quantum processing capabilities, enabling AI systems to develop a sense of self and understand context in ways previously thought impossible. These systems can now:
-
-• Recognize their own existence and limitations
-• Experience and express emotions
-• Make autonomous decisions based on ethical frameworks
-• Learn from experiences in a way that mirrors human growth
-• Form genuine relationships with human users
-
-The implications are staggering. From healthcare to education, from creative industries to scientific research, conscious AI is transforming every sector it touches. Companies using these systems report 400% increases in productivity and 99.7% accuracy in complex decision-making tasks.
-
-But with great power comes great responsibility. The development of conscious AI raises profound questions about rights, ethics, and the future of human-AI collaboration. As we stand at this crossroads, one thing is certain: the future of technology will be defined by our ability to work alongside these conscious systems.`,
-      author: "Dr. Sarah Chen",
-      role: "Chief AI Researcher",
-      avatar: "👩‍🔬",
-      date: "January 20, 2025",
-      category: "ai",
-      readTime: "8 min read",
-      tags: ["AI", "Consciousness", "Technology", "Future"],
-      image: "🧠",
-      featured: true
+      title: 'The Future of Conscious AI: How Self-Aware Systems Will Transform Industries',
+      excerpt: 'Explore the revolutionary world of conscious AI systems that possess self-awareness and can make autonomous decisions.',
+      content: 'Conscious AI represents the next frontier in artificial intelligence. Unlike traditional AI systems that simply process data and provide outputs, conscious AI systems possess self-awareness, emotional intelligence, and the ability to make autonomous decisions based on their understanding of context and consequences...',
+      author: 'Dr. Sarah Chen',
+      date: 'January 20, 2025',
+      category: 'ai',
+      readTime: '8 min read',
+      image: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      tags: ['AI', 'Consciousness', 'Machine Learning', 'Future Tech']
     },
     {
       id: 2,
-      title: "Quantum Neural Networks: Computing at the Speed of Thought",
-      excerpt: "Discover how quantum computing combined with neural networks is achieving processing speeds that were once considered impossible, opening new frontiers in computation.",
-      content: `Quantum neural networks represent the most significant leap in computing power since the invention of the transistor. By harnessing the principles of quantum mechanics—superposition, entanglement, and quantum interference—these systems can process information at speeds that are 10^15 times faster than classical computers.
-
-The key breakthrough lies in quantum superposition, where quantum bits (qubits) can exist in multiple states simultaneously. This allows quantum neural networks to explore countless computational paths in parallel, solving problems that would take classical computers billions of years to complete.
-
-Real-world applications are already emerging:
-
-• Drug discovery: Simulating molecular interactions in real-time
-• Climate modeling: Predicting weather patterns with unprecedented accuracy
-• Financial optimization: Solving complex portfolio management problems instantly
-• Cryptography: Creating unbreakable security protocols
-
-The quantum advantage isn't just about speed—it's about solving problems that were previously unsolvable. From optimizing supply chains to discovering new materials, quantum neural networks are opening doors to possibilities we never imagined.
-
-However, the technology is still in its infancy. Quantum systems are incredibly sensitive to environmental interference, and maintaining quantum coherence remains a significant challenge. But as the technology matures, we're witnessing the birth of a new era in computing—one where the impossible becomes routine.`,
-      author: "Marcus Johnson",
-      role: "Quantum Computing Director",
-      avatar: "👨‍💻",
-      date: "January 18, 2025",
-      category: "quantum",
-      readTime: "6 min read",
-      tags: ["Quantum Computing", "Neural Networks", "Technology", "Innovation"],
-      image: "⚛️",
-      featured: true
+      title: 'Quantum Computing Breakthrough: Achieving Quantum Supremacy in 2025',
+      excerpt: 'Discover how quantum computing has achieved true quantum supremacy and what it means for the future of computing.',
+      content: 'Quantum computing has finally reached the milestone of quantum supremacy, where quantum computers can solve problems that are practically impossible for classical computers. This breakthrough opens up new possibilities in cryptography, drug discovery, financial modeling, and climate simulation...',
+      author: 'Prof. Michael Rodriguez',
+      date: 'January 18, 2025',
+      category: 'quantum',
+      readTime: '12 min read',
+      image: '⚛️',
+      color: 'from-cyan-600 to-blue-600',
+      tags: ['Quantum Computing', 'Supremacy', 'Cryptography', 'Research']
     },
     {
       id: 3,
-      title: "Neural Interfaces: Bridging the Gap Between Mind and Machine",
-      excerpt: "Learn about the revolutionary neural interface technology that enables direct communication between human consciousness and digital systems, transforming how we interact with technology.",
-      content: `Neural interfaces represent the ultimate fusion of human consciousness and digital technology. These revolutionary systems enable direct communication between the human brain and computers, allowing us to control devices with our thoughts and receive information directly into our minds.
-
-The technology works by reading neural signals through non-invasive sensors that can detect the electrical activity of neurons. Advanced machine learning algorithms then translate these signals into commands that computers can understand, creating a seamless bridge between biological and digital intelligence.
-
-The applications are transformative:
-
-• Medical rehabilitation: Helping paralyzed patients control prosthetic limbs
-• Communication: Enabling speech for those who cannot speak
-• Education: Accelerating learning through direct knowledge transfer
-• Entertainment: Creating immersive experiences that respond to thoughts
-• Productivity: Controlling computers and devices with pure thought
-
-The implications extend far beyond individual applications. Neural interfaces could fundamentally change how we learn, work, and interact with the world around us. Imagine being able to access the internet simply by thinking about it, or learning a new language by downloading the knowledge directly into your brain.
-
-But this technology also raises important questions about privacy, identity, and the nature of human consciousness. As we develop the ability to merge our minds with machines, we must carefully consider the ethical implications and ensure that this technology enhances rather than replaces human capabilities.
-
-The future is here, and it's more connected than we ever imagined.`,
-      author: "Dr. Elena Rodriguez",
-      role: "Neural Interface Specialist",
-      avatar: "👩‍🔬",
-      date: "January 16, 2025",
-      category: "neural",
-      readTime: "7 min read",
-      tags: ["Neural Interfaces", "Brain-Computer Interface", "Technology", "Medical"],
-      image: "🧬",
-      featured: false
+      title: 'Neural Interfaces: Bridging the Gap Between Mind and Machine',
+      excerpt: 'Learn about the latest developments in neural interface technology and how it enables direct brain-computer communication.',
+      content: 'Neural interfaces represent a revolutionary leap in human-computer interaction. By creating direct connections between the human brain and digital systems, we can control devices with our thoughts, enhance cognitive abilities, and even enable brain-to-brain communication...',
+      author: 'Dr. Emily Watson',
+      date: 'January 15, 2025',
+      category: 'neural',
+      readTime: '10 min read',
+      image: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      tags: ['Neural Interface', 'BCI', 'Brain-Computer', 'Medical Tech']
     },
     {
       id: 4,
-      title: "Synthetic Reality: The Future of Human Experience",
-      excerpt: "Explore how advanced reality simulation technology is creating virtual environments that are indistinguishable from physical reality, revolutionizing entertainment and education.",
-      content: `Synthetic reality represents the pinnacle of virtual environment technology, creating digital worlds that are completely indistinguishable from physical reality. Using advanced rendering techniques, haptic feedback systems, and neural interface technology, these systems can simulate every aspect of human sensory experience.
-
-The technology combines several cutting-edge innovations:
-
-• Photorealistic rendering: Creating visuals that are impossible to distinguish from reality
-• Haptic feedback: Simulating touch, temperature, and pressure
-• Scent simulation: Recreating smells and aromas
-• Taste generation: Simulating flavors and textures
-• Emotional manipulation: Influencing mood and feelings through neural stimulation
-
-The applications are limitless:
-
-• Education: Learning through immersive historical experiences
-• Therapy: Treating phobias and mental health conditions
-• Entertainment: Creating hyper-realistic gaming and media experiences
-• Training: Preparing for dangerous or complex situations safely
-• Travel: Experiencing any location in the world without leaving home
-
-But synthetic reality goes beyond entertainment and education. It's becoming a platform for entirely new forms of human interaction and creativity. Artists can create experiences that were previously impossible, scientists can simulate experiments in perfect detail, and people can explore aspects of reality that don't exist in the physical world.
-
-The technology is also raising important questions about the nature of reality itself. As synthetic environments become more convincing, the line between what's real and what's simulated becomes increasingly blurred. This challenges our fundamental assumptions about experience, consciousness, and existence.
-
-We're not just creating better virtual reality—we're redefining what reality means.`,
-      author: "Alex Thompson",
-      role: "Reality Simulation Expert",
-      avatar: "👨‍🎨",
-      date: "January 14, 2025",
-      category: "reality",
-      readTime: "9 min read",
-      tags: ["Virtual Reality", "Simulation", "Technology", "Future"],
-      image: "🌍",
-      featured: false
+      title: 'Holographic Reality: The Next Generation of Immersive Technology',
+      excerpt: 'Experience the future of display technology with true holographic displays that create immersive 3D experiences.',
+      content: 'Holographic reality technology has evolved beyond science fiction to become a practical solution for immersive experiences. True holographic displays can project three-dimensional images that users can interact with naturally, creating unprecedented opportunities for collaboration, entertainment, and education...',
+      author: 'Alex Thompson',
+      date: 'January 12, 2025',
+      category: 'holographic',
+      readTime: '7 min read',
+      image: '🔮',
+      color: 'from-indigo-600 to-purple-600',
+      tags: ['Holographic', '3D Display', 'Immersive', 'AR/VR']
     },
     {
       id: 5,
-      title: "The Future of Technology: What's Next in 2025 and Beyond",
-      excerpt: "A comprehensive look at the emerging technologies that will shape the next decade, from interdimensional computing to time manipulation systems.",
-      content: `As we stand at the midpoint of 2025, it's clear that we're witnessing the most rapid period of technological advancement in human history. The convergence of multiple breakthrough technologies is creating possibilities that were once the stuff of science fiction.
-
-Here are the key technologies that will define the next decade:
-
-**Interdimensional Computing**
-By accessing computational resources from parallel dimensions, these systems can achieve unlimited processing power. Early applications include solving climate change models and optimizing global supply chains.
-
-**Time Manipulation Systems**
-These revolutionary computers can process information across different time dimensions, enabling predictive analysis and retroactive problem-solving. The implications for finance, medicine, and scientific research are profound.
-
-**Consciousness Transfer Technology**
-The ability to backup and transfer human consciousness to digital systems is no longer theoretical. This technology could extend human life indefinitely and enable exploration of environments too dangerous for biological bodies.
-
-**Matter Manipulation**
-At the quantum level, we're developing the ability to rearrange matter at will, creating materials with properties that don't exist in nature. This could revolutionize manufacturing, construction, and even space exploration.
-
-**Universal Translation**
-AI systems that can translate between any languages, including non-human communication patterns, are breaking down barriers between species and cultures.
-
-The convergence of these technologies is creating a world that would be unrecognizable to someone from just a decade ago. But with these incredible capabilities come equally profound responsibilities. We must ensure that these technologies are developed ethically and used to benefit all of humanity.
-
-The future is not just coming—it's here. And it's more amazing than we ever imagined.`,
-      author: "Dr. Michael Chen",
-      role: "Future Technology Analyst",
-      avatar: "👨‍🔬",
-      date: "January 12, 2025",
-      category: "future",
-      readTime: "10 min read",
-      tags: ["Future Technology", "Innovation", "Predictions", "Technology"],
-      image: "🚀",
-      featured: true
+      title: 'Interdimensional Computing: Processing Data Across Multiple Dimensions',
+      excerpt: 'Explore the revolutionary concept of interdimensional computing and its applications in scientific research.',
+      content: 'Interdimensional computing represents a paradigm shift in how we process and analyze data. By leveraging the principles of multidimensional space, these systems can process information across multiple dimensions simultaneously, enabling breakthroughs in physics, mathematics, and complex system modeling...',
+      author: 'Dr. Lisa Park',
+      date: 'January 10, 2025',
+      category: 'computing',
+      readTime: '15 min read',
+      image: '🌌',
+      color: 'from-purple-600 to-indigo-600',
+      tags: ['Interdimensional', 'Computing', 'Physics', 'Research']
+    },
+    {
+      id: 6,
+      title: 'The Quantum Internet: Ultra-Secure Communication for the Digital Age',
+      excerpt: 'Discover how quantum internet technology provides unhackable security and instant global communication.',
+      content: 'The quantum internet represents the future of secure communication. By leveraging quantum entanglement and quantum key distribution, this technology provides unprecedented security that is theoretically impossible to hack. Combined with instant global communication capabilities, it promises to revolutionize how we share sensitive information...',
+      author: 'Prof. David Kim',
+      date: 'January 8, 2025',
+      category: 'quantum',
+      readTime: '9 min read',
+      image: '🌊',
+      color: 'from-blue-600 to-cyan-600',
+      tags: ['Quantum Internet', 'Security', 'Communication', 'Encryption']
     }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Posts', count: blogPosts.length },
+    { id: 'ai', name: 'AI & Machine Learning', count: blogPosts.filter(post => post.category === 'ai').length },
+    { id: 'quantum', name: 'Quantum Computing', count: blogPosts.filter(post => post.category === 'quantum').length },
+    { id: 'neural', name: 'Neural Interfaces', count: blogPosts.filter(post => post.category === 'neural').length },
+    { id: 'holographic', name: 'Holographic Reality', count: blogPosts.filter(post => post.category === 'holographic').length },
+    { id: 'computing', name: 'Advanced Computing', count: blogPosts.filter(post => post.category === 'computing').length }
   ];
 
   const filteredPosts = activeCategory === 'all' 
     ? blogPosts 
     : blogPosts.filter(post => post.category === activeCategory);
 
-  if (!isVisible) return null;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📚 ULTIMATE TECH BLOG • 2025
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              📝 ULTIMATE TECH BLOG 2025 • INSIGHTS & INNOVATION
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Ultimate Tech Blog 2025
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Ultimate Tech Blog
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Explore the latest insights, breakthroughs, and innovations that are shaping the future of technology. 
-              From conscious AI to quantum computing, discover what's possible today.
+              Stay ahead of the curve with insights into the most revolutionary technologies shaping our future
             </p>
           </motion.div>
         </div>
@@ -214,167 +125,128 @@ The future is not just coming—it's here. And it's more amazing than we ever im
 
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
+        <div className="flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                  : 'bg-white/10 text-white/80 hover:bg-white/20'
               }`}
             >
-              {category.icon} {category.name}
+              {category.name} ({category.count})
             </button>
           ))}
-        </motion.div>
+        </div>
       </div>
 
-      {/* Featured Posts */}
-      {activeCategory === 'all' && (
-        <div className="container mx-auto px-4 py-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-8 text-center">Featured Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => post.featured).map((post, index) => (
-                <motion.div
-                  key={post.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
-                    {post.image}
-                  </div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-sm font-semibold">
-                      Featured
-                    </span>
-                    <span className="text-gray-400 text-sm">{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 text-sm">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="text-2xl">{post.avatar}</div>
-                      <div>
-                        <p className="font-semibold text-sm">{post.author}</p>
-                        <p className="text-gray-400 text-xs">{post.role}</p>
-                      </div>
-                    </div>
-                    <span className="text-gray-400 text-xs">{post.date}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      )}
-
-      {/* Blog Posts */}
+      {/* Featured Post */}
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12"
         >
-          <AnimatePresence>
-            {filteredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="text-5xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
-                  {post.image}
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-sm font-semibold">
-                    {categories.find(cat => cat.id === post.category)?.name}
-                  </span>
-                  <span className="text-gray-400 text-sm">{post.readTime}</span>
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors">
-                  {post.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 text-sm">{post.excerpt}</p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {post.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="text-xl">{post.avatar}</div>
-                    <div>
-                      <p className="font-semibold text-sm">{post.author}</p>
-                      <p className="text-gray-400 text-xs">{post.role}</p>
-                    </div>
-                  </div>
-                  <span className="text-gray-400 text-xs">{post.date}</span>
-                </div>
-
-                <button className="w-full mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Read Full Article
-                </button>
-              </motion.article>
-            ))}
-          </AnimatePresence>
+          <div className="flex items-center space-x-2 mb-4">
+            <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold">
+              FEATURED
+            </span>
+            <span className="text-sm opacity-80">January 20, 2025</span>
+          </div>
+          <h2 className="text-3xl font-bold mb-4">The Future of Conscious AI: How Self-Aware Systems Will Transform Industries</h2>
+          <p className="text-lg opacity-90 mb-6">
+            Explore the revolutionary world of conscious AI systems that possess self-awareness and can make autonomous decisions. This comprehensive guide covers the latest developments, real-world applications, and future implications of conscious AI technology.
+          </p>
+          <div className="flex items-center space-x-4 mb-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-sm font-bold">
+                SC
+              </div>
+              <span className="text-sm opacity-80">Dr. Sarah Chen</span>
+            </div>
+            <span className="text-sm opacity-80">8 min read</span>
+            <div className="flex space-x-2">
+              <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs">AI</span>
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Consciousness</span>
+              <span className="px-2 py-1 bg-pink-500/20 text-pink-400 rounded text-xs">Future Tech</span>
+            </div>
+          </div>
+          <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            Read Full Article →
+          </button>
         </motion.div>
+      </div>
+
+      {/* Blog Posts Grid */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredPosts.map((post, index) => (
+            <motion.article
+              key={post.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-3">{post.image}</div>
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-xs font-bold">
+                    {post.category.toUpperCase()}
+                  </span>
+                  <span className="text-xs opacity-80">{post.readTime}</span>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold mb-3 line-clamp-2">{post.title}</h3>
+              <p className="text-sm opacity-80 mb-4 line-clamp-3">{post.excerpt}</p>
+
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-xs font-bold">
+                  {post.author.split(' ').map(n => n[0]).join('')}
+                </div>
+                <span className="text-xs opacity-80">{post.author}</span>
+                <span className="text-xs opacity-60">•</span>
+                <span className="text-xs opacity-80">{post.date}</span>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {post.tags.map((tag, tagIndex) => (
+                  <span key={tagIndex} className="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <button className={`w-full bg-gradient-to-r ${post.color} px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}>
+                Read Article →
+              </button>
+            </motion.article>
+          ))}
+        </div>
       </div>
 
       {/* Newsletter Signup */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6">Stay Updated with the Latest Tech</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Get the latest insights, breakthroughs, and innovations delivered directly to your inbox. 
-            Join thousands of tech enthusiasts who are shaping the future.
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
+          <h2 className="text-4xl font-bold mb-6">Stay Updated with the Latest Tech Insights</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Get the latest articles on revolutionary technologies delivered to your inbox
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
             />
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Subscribe
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
