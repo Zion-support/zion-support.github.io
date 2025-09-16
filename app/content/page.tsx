@@ -13,6 +13,32 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* New items added September 2025 - Real-Time Governance + Routing */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-realtime-governance-blueprint" className="hover:underline">
+              AI 2026: Real-Time Governance Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Policy-as-code with streaming evals and automated approvals for safe operations.
+          </p>
+          <Link href="/content/ai-2026-realtime-governance-blueprint" className="text-purple-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Routing</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-realtime-model-routing" className="hover:underline">
+              AI 2026: Real-Time Model Routing
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Latency, cost, and risk-aware decisions with live SLOs, failover, and shadow tests.
+          </p>
+          <Link href="/content/ai-2026-realtime-model-routing" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
