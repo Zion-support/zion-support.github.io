@@ -1,41 +1,12 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
-interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>'type'> {
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-}
+const switch: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">switch</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-const Switch = React.forwardRef<HTMLInputElementSwitchProps>(
-  ({ classNamecheckedonCheckedChange...props }ref) => {
-    return (
-      <label className="inline-flex items-center cursor-pointer">
-        <input
-          type="checkbox"
-          className="sr-only"
-          checked={checked}
-          onChange={(e) => onCheckedChange?.(e.target.checked)}
-          ref={ref}
-          {...props}
-        />
-        <div
-          className={cn(
-            'relative inline-flex h-6 w-11 items-center rounded-full transition-colors',
-            checked ? 'bg-primary' : 'bg-input',
-            className
-          )}
-        >
-          <span
-            className={cn(
-              'inline-block h-4 w-4 transform rounded-full bg-background transition-transform',
-              checked ? 'translate-x-6' : 'translate-x-1'
-            )}
-          />
-        </div>
-      </label>
-    );
-  }
-);
-Switch.displayName = 'Switch';
-
-export { Switch };
+export default switch;

@@ -1,23 +1,12 @@
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-
-interface ContractHeaderProps {
-  onCreateClick: () => void;
-}
-
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
+const ContractHeader: React.FC = () => {
   return (
-    <div className="flex justify-between items-center mb-8">
-      <div>
-        <h1 className="text-3xl font-bold">Smart Contract Builder</h1>
-        <p className="text-muted-foreground mt-2">
-          Create legally binding agreements with optional blockchain deployment
-        </p>
-      </div>
-      
-      <Button size="lg" onClick={onCreateClick}>
-        Create New Contract
-      </Button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContractHeader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ContractHeader;

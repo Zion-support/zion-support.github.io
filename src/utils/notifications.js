@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// Notifications utility for handling browser notifications
-
 export const notifications = {
   // Request notification permission
   requestPermission: async () => {
@@ -66,8 +62,4 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-  }
-};
-
 export default notifications;

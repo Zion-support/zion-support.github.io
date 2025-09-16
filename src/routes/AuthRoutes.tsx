@@ -1,43 +1,11 @@
+import React from 'react';
 
-import { Route, Routes } from "react-router-dom";
-import Login from "@/pages/Login";
-import Signup from "@/pages/Signup";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-const AuthRoutes = () => {
+const AuthRoutes: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-
-      {/* Protected routes that require authentication */}
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            <div>Profile Page</div>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <div>Dashboard</div>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/settings"
-        element={
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AuthRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

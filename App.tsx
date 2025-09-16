@@ -41,7 +41,6 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
-import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
@@ -145,14 +144,12 @@ import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarouse
 import RevolutionaryTechTrends2027 from './src/pages/RevolutionaryTechTrends2027';
 import NextGenAIBreakthrough2027 from './src/pages/NextGenAIBreakthrough2027';
 import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
-import UltimateTechInnovation2028 from './src/pages/UltimateTechInnovation2028';
 import NextGenTechRevolution2028 from './src/pages/NextGenTechRevolution2028';
 import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
 import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
 import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
 import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
 import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
-import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
 import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
 import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
 import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
@@ -169,7 +166,6 @@ import UltimateTechBreakthrough2033 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2033 from './src/pages/RevolutionaryTechShowcase2033';
 import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
 import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
-import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechRevolution2039 from './src/pages/UltimateTechRevolution2039';
 import RevolutionaryTechBreakthrough2040 from './src/pages/RevolutionaryTechBreakthrough2040';
 import NextGenInnovationHub2041 from './src/pages/NextGenInnovationHub2041';
@@ -1059,10 +1055,6 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2027 />
                 </div>
 
-                {/* Interactive Technology Showcase 2028 */}
-                <div className="mb-12">
-                  <InteractiveTechShowcase2028 />
-                </div>
 
                 {/* NEW: Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
@@ -1198,15 +1190,13 @@ export default function App(): JSX.Element {
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
-          <Route path="/pages/UltimateTechInnovation2028" element={<UltimateTechInnovation2028 />} />
           <Route path="/pages/NextGenTechRevolution2028" element={<NextGenTechRevolution2028 />} />
           <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
           <Route path="/pages/RevolutionaryTechShowcase2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/pages/NextGenInnovationHub2029" element={<NextGenInnovationHub2029 />} />
-          <Route path="/pages/RevolutionaryCaseStudies2029" element={<RevolutionaryCaseStudies2029 />} />
-          <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
+                    <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
           <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
@@ -1218,8 +1208,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateAIConsciousness2032" element={<UltimateAIConsciousness2032 />} />
           <Route path="/pages/RevolutionaryCaseStudies2032" element={<RevolutionaryCaseStudies2032 />} />
           <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
-          <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
-          <Route path="/pages/UltimateTechRevolution2039" element={<UltimateTechRevolution2039 />} />
+                    <Route path="/pages/UltimateTechRevolution2039" element={<UltimateTechRevolution2039 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2040" element={<RevolutionaryTechBreakthrough2040 />} />
           <Route path="/pages/NextGenInnovationHub2041" element={<NextGenInnovationHub2041 />} />
           <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />

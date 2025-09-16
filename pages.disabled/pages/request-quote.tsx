@@ -1,2 +1,22 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const request-quote: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>request-quote | Zion Tech Group</title>
+        <meta name="description" content="request-quote - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">request-quote</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default request-quote;

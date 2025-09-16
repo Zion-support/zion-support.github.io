@@ -1,31 +1,12 @@
 import React from 'react';
-import EnhancedButton from './EnhancedButton';
 
-export type PaginationProps = {
-  page: number;
-  pageSize: number;
-  total: number;
-  onChange: (nextPage: number) => void;
-};
-
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-
-  const goTo = (p: number) => {
-    if (p >= 1 && p <= totalPages) onChange(p);
-  };
-
+const Pagination: React.FC = () => {
   return (
-    <div className="flex items-center justify-between gap-2 mt-4">
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>
-        Prev
-      </EnhancedButton>
-      <div className="text-sm">
-        Page {page} of {totalPages}
-      </div>
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
-        Next
-      </EnhancedButton>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Pagination</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default Pagination;

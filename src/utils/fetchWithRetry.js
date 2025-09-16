@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// Fetch with retry utility for robust API calls
-
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
   const defaultOptions = {
     method: 'GET',
@@ -31,7 +27,4 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
     }
   }
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-};
-
 export default fetchWithRetry;

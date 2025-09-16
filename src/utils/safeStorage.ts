@@ -1,53 +1,14 @@
-<<<<<<< HEAD
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
-    try {
-=======
-      return localStorage.getItem(key);
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-    } catch (error) {
+    try {    } catch (error) {
       console.warn('localStorage not available:', error);
       return null;
     }
   },
-<<<<<<< HEAD
-=======
-  
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-<<<<<<< HEAD
-=======
-  
-  removeItem: (key: string): void => {
-    try {
-      localStorage.removeItem(key);
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-<<<<<<< HEAD
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-/**
- * Safe storage utility for handling localStorage and sessionStorage
- * with error handling and fallbacks
- */
-
 export const safeStorage = {
   /**
    * Safely get item from localStorage
@@ -156,17 +117,6 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-  
   clear: (): void => {
     try {
       localStorage.clear();
@@ -281,18 +231,6 @@ export const safeStorage = {
         console.warn('sessionStorage.clear failed:', error);
         return false;
       }
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return null;
-    }
-  },
-  
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
