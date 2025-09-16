@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Simple git operations
+# Basic resolve script
 cd /workspace
 
-echo "Starting simple git operations..."
+echo "Basic resolve starting..."
 
 # Check status
-git status --short
+git status
 
 # Switch to main
 git checkout main
@@ -28,4 +28,4 @@ fi
 # Push
 git push origin main
 
-echo "Done"
+echo "Basic resolve done"

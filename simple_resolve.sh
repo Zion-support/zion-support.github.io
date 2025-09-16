@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Simple git operations
+# Simple script to resolve merge conflicts
 cd /workspace
 
-echo "Starting simple git operations..."
+echo "Starting simple resolve..."
 
 # Check status
 git status --short
