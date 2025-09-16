@@ -49,7 +49,17 @@ done
 
 echo "All merge conflicts resolved!"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-36c0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d7eb
 >>>>>>> origin/cursor/create-and-deploy-new-content-6eae
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36c0
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900

@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -78,6 +93,8 @@
 // Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const solutions = [
@@ -85,6 +102,15 @@ const solutions = [
   { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing for next-generation AI.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
   { name: 'Autonomous Business Operations', description: 'Self-optimizing processes with predictive intelligence.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization.', icon: ShieldCheckIcon, href: '/solutions/it-asset-management' }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -125,6 +151,8 @@ const solutions = [
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 // Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
 // Conflict resolved
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -245,8 +273,8 @@ const implementationSteps = [
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
     icon: ShieldCheckIcon,
   },
-// Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
-// Conflict resolved
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+=======
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 
@@ -254,6 +282,18 @@ const solutions = [
   { title: 'AI Research Assistant', desc: 'Autonomous research to accelerate discovery.', icon: LightBulbIcon, href: '/solutions/ai-autonomous-research' },
   { title: 'Quantum Neural Networks', desc: 'Hybrid quantum-classical ML systems.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
   { title: 'Autonomous Business Ops', desc: 'Automate processes with multi-agent AI.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
+>>>>>>> origin/backup-main-20250915-074228
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
+=======
 // Conflict resolvedorigin/backup-main-20250915-074228
 // Conflict resolved
 // Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
@@ -294,12 +334,23 @@ const solutions = [
 // Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 ]
 
 export default function SolutionsPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -340,9 +391,11 @@ export default function SolutionsPage() {
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 // Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
 // Conflict resolved
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
-// Conflict resolved
+<<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -361,6 +414,18 @@ export default function SolutionsPage() {
 
       {/* Flagship Solutions */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
+=======
 // Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
 // Conflict resolved
 // Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
@@ -401,6 +466,8 @@ export default function SolutionsPage() {
 // Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">Cutting-edge AI solutions for enterprise challenges.</p>
@@ -423,6 +490,13 @@ export default function SolutionsPage() {
       </div>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -466,8 +540,10 @@ export default function SolutionsPage() {
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
 // Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 }
-// Conflict resolved
+=======
         <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-44 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Solutions</h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">Production-ready solutions to power intelligent enterprises.</p>
@@ -487,9 +563,20 @@ export default function SolutionsPage() {
     </div>
   )
 }
-// Conflict resolvedorigin/backup-main-20250915-074228
-// Conflict resolved
+>>>>>>> origin/backup-main-20250915-074228
+=======
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
+=======
 // Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 // Conflict resolved
 // Conflict resolved
@@ -538,3 +625,5 @@ export default function SolutionsPage() {
 // Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
 // Conflict resolved
 // Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
