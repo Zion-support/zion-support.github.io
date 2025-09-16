@@ -81,16 +81,11 @@ import NewContent2026UltimateShowcaseBanner from './components/NewContent2026Ult
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
-<<<<<<< HEAD
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-=======
-
 // Import new 2026 breakthrough promotional banners
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
-import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
-
->>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -301,6 +296,23 @@ export default function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/reports/ai-lab/articles/production-eval-gates-in-the-wild-1758049200000.md" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Brief</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Sept 16, 2025 — Fresh AI Lab Briefs */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">AI Lab</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Fresh Research and Playbooks</h2>
+              <p className="text-gray-600 mt-2">Evidence hub overview, reliable autonomy with billing controls, and real‑world eval gate case studies.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/reports/ai-lab/articles/agentic-evidence-hub-executive-overview-1758052800000.md" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Evidence Hub</Link>
+              <Link href="/reports/ai-lab/articles/reliable-autonomy-and-billing-controls-1758052860000.md" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Billing Controls</Link>
+              <Link href="/reports/ai-lab/articles/real-world-eval-gates-case-studies-1758052920000.md" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Eval Gates</Link>
             </div>
           </div>
         </div>
@@ -992,8 +1004,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-=======
         {/* New Content Promo: Multimodal Agents Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
