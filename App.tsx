@@ -41,6 +41,8 @@ import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrou
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
+import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
+import AdvancedTechInnovationHub2027 from './src/pages/AdvancedTechInnovationHub2027';
 
 // Component imports
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
@@ -52,6 +54,7 @@ import NewContentBanner2025 from './src/components/NewContentBanner2025';
 import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 
 function App() {
   return (
@@ -87,6 +90,9 @@ function App() {
                   {/* Revolutionary Content */}
                   <RevolutionaryContentBanner2026 />
                   <RevolutionaryServicesShowcase2026 />
+                  
+                  {/* New Content Showcase */}
+                  <NewContentShowcase2026 />
                 </main>
               </div>
             } />
@@ -113,6 +119,8 @@ function App() {
             <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
             <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
             <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+            <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
+            <Route path="/pages/AdvancedTechInnovationHub2027" element={<AdvancedTechInnovationHub2027 />} />
             
             {/* Case Study Route */}
             <Route path="/case-study/:id" element={<CaseStudyPage />} />
