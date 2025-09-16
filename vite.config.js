@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   resolve: {
@@ -12,21 +11,7 @@ export default defineConfig({
     global: 'globalThis',
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-transform-class-properties', { loose: true }]
-        ]
-      }
-    }),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
+    react()
   ],
   build: {
     rollupOptions: {
@@ -34,7 +19,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
+          ui: ['framer-motion', 'lucide-react', 'react-helmet-async'],
           router: ['react-router-dom']
         }
       }
