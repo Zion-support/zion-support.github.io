@@ -1,11 +1,5 @@
 {
-  "timestamp": "2025-09-16T02:44:01.288Z",
-  "optimizations": 8,
-  "status": "completed",
-  "recommendations": [
-    "Implement service worker for offline functionality",
-    "Add preloading for critical resources",
-    "Optimize third-party scripts loading",
-    "Implement progressive web app features"
-  ]
-}
+  "timestamp": "2025-09-01T12:00:42.429Z",
+  "buildSize": 0,
+  "largeFiles": [],
+  "summary": "Performance monitoring completed"}

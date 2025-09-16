@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, Send, Bot, User, Loader, 
   X, Minimize2, Maximize2, HelpCircle,

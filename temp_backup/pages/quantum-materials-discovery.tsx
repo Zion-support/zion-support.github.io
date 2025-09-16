@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Atom, Beaker, Zap, Target, Users, Globe, ArrowRight, Search } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 

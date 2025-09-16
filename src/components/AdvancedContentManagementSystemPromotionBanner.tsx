@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Settings
   BarChart3
@@ -79,7 +79,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -114,10 +114,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Stats Grid */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -132,10 +132,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -154,10 +154,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Content Types Showcase */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -179,10 +179,10 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -209,7 +209,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

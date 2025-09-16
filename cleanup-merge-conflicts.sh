@@ -1,21 +1,83 @@
 #!/bin/bash
 
-echo "Cleaning up merge conflict markers..."
+echo "🚀 Starting comprehensive merge conflict cleanup..."
 
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -l "<<<<<<< HEAD" . -r --exclude-dir=node_modules --exclude-dir=.git --exclude="*.backup*" --exclude="*.log" 2>/dev/null | head -20)
+# Function to clean merge conflicts from a file
+clean_conflicts() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        echo "🧹 Cleaning conflicts in: $file"
+        
+        # Create backup
+        cp "$file" "${file}.cleanup-backup.$(date +%s)"
+        
+        # Remove all merge conflict markers
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+        
+        # Remove any remaining incomplete markers
+        sed -i '/^<<<<<<< HEAD/d' "$file"
+        sed -i '/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+        
+        echo "✅ Cleaned: $file"
+    fi
+}
 
-for file in $files_with_conflicts; do
-    echo "Cleaning $file..."
-    
-    # For each file, remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+echo "📁 Cleaning conflicts in critical files..."
+
+# Clean critical files
+clean_conflicts "package.json"
+clean_conflicts "package-lock.json"
+clean_conflicts "tsconfig.json"
+clean_conflicts "next.config.js"
+clean_conflicts "tailwind.config.js"
+clean_conflicts "vite.config.ts"
+
+echo "📁 Cleaning conflicts in source files..."
+
+# Clean source files
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        clean_conflicts "$file"
+    fi
 done
 
-echo "Cleanup complete!"
+echo "📁 Cleaning conflicts in page files..."
+
+# Clean page files
+find pages -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" 2>/dev/null | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        clean_conflicts "$file"
+    fi
+done
+
+echo "📁 Cleaning conflicts in other important files..."
+
+# Clean other important files
+find . -maxdepth 1 -name "*.md" -o -name "*.json" -o -name "*.js" -o -name "*.ts" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        clean_conflicts "$file"
+    fi
+done
+
+echo "🔍 Checking for remaining conflicts..."
+
+# Check if there are any remaining conflicts
+remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -eq 0 ]; then
+    echo "✅ All conflicts cleaned!"
+    
+    echo "📝 Adding cleaned files..."
+    git add .
+    
+    echo "💾 Committing cleaned state..."
+    git commit -m "Clean up all merge conflict markers - comprehensive cleanup"
+    
+    echo "🎉 Successfully cleaned all conflicts!"
+else
+    echo "⚠️  Still have $remaining_conflicts conflicts to clean"
+    echo "Files with remaining conflicts:"
+    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -20
+fi

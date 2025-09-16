@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Search, TrendingUp, BarChart3, Target, Eye, 
   Globe, Smartphone, Monitor, Zap, CheckCircle,

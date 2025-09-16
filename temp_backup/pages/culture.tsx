@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
   Users, Heart, Star, Award, Globe, 
   ArrowRight, CheckCircle, TrendingUp, Infinity, 

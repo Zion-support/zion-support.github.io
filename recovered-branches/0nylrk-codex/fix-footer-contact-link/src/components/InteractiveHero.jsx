@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [
     { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },

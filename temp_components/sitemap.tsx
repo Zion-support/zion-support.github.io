@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Globe, Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   Award, BookOpen, Phone, Mail, MapPin, Twitter, Linkedin, 

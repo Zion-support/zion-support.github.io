@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Target, Star,
   ArrowRight, Check, Phone, Mail, MapPin, ExternalLink,

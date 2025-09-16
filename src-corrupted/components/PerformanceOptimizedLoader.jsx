@@ -1,4 +1,4 @@
-
+import {motion} from 'framer-motion';
 export function PerformanceOptimizedLoader(props: any) {
     const sizeClasses = {
   sm: 'w-6 h-6',

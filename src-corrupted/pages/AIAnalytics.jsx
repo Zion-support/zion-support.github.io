@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {motion} from 'framer-motion';
 import {Brain,
   BarChart3,
   TrendingUp,

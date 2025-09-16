@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Rocket, Zap, Shield, Cpu, Database, Users, 
   ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe

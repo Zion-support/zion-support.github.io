@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
 import { Helmet } from 'react-helmet-async';
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
@@ -255,9 +253,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-      </main>
-      
-      <Footer />
       </div>
     </div>
   );

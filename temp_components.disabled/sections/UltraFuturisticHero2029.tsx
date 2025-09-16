@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Star, Phone, Mail, MapPin } from 'lucide-react';
 

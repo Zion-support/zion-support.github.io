@@ -4,7 +4,7 @@ import { useNavigate  } from 'react-router-dom';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
  from 'framer-motion';
-
+import { motion, AnimatePresence  } from 'framer-motion';
 
   icon?: React.ComponentType < any>}
 ];

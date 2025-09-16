@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -72,9 +72,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <AnimatePresence>
       {isVisible && (
-        <div
+        <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -88,7 +88,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_i) => (
-              <div
+              <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                 style={{
@@ -112,7 +112,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
-                <div
+                <motion.div
                   initial={{ opacity: 0x: -30 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: 0.2 }}
@@ -134,10 +134,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     Expert predictions and probability assessments for the most significant 
                     technological breakthroughs expected in 2026.
                   </p>
-                </div>
+                </motion.div>
 
                 {/* Rotating Predictions */}
-                <div
+                <motion.div
                   key={currentPrediction}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -163,12 +163,12 @@ const AITrends2026PredictionsPromotionBanner = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-8">
                   {stats.map((statindex) => (
-                    <div
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0scale: 0.8 }}
                       animate={{ opacity: 1scale: 1 }}
@@ -180,7 +180,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
                       </div>
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-sm text-gray-300">{stat.label}</div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -206,7 +206,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
               </div>
 
               {/* Right Content - Prediction Cards */}
-              <div
+              <motion.div
                 initial={{ opacity: 0x: 30 }}
                 animate={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: 0.4 }}
@@ -214,7 +214,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
               >
                 <div className="grid grid-cols-1 gap-4">
                   {predictions.map((predictionindex) => (
-                    <div
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -246,10 +246,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
                         </div>
                         <Star className="w-4 h-4 text-yellow-400" />
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -260,9 +260,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
           >
             <X className="w-4 h-4 text-white" />
           </button>
-        </div>
+        </motion.div>
       )}
-    
+    </AnimatePresence>
   );
 };
 
