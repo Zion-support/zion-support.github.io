@@ -41,7 +41,7 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
-import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+// import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
@@ -137,14 +137,14 @@ import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarouse
 import RevolutionaryTechTrends2027 from './src/pages/RevolutionaryTechTrends2027';
 import NextGenAIBreakthrough2027 from './src/pages/NextGenAIBreakthrough2027';
 import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
-import UltimateTechInnovation2028 from './src/pages/UltimateTechInnovation2028';
-import NextGenTechRevolution2028 from './src/pages/NextGenTechRevolution2028';
+// import UltimateTechInnovation2028 from './src/pages/UltimateTechInnovation2028';
+// import NextGenTechRevolution2028 from './src/pages/NextGenTechRevolution2028';
 import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
 import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
 import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
 import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
 import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
-import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
+// import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
 import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
 import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
 import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
@@ -161,7 +161,7 @@ import UltimateTechBreakthrough2033 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2033 from './src/pages/RevolutionaryTechShowcase2033';
 import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
 import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
-import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
+// import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechRevolution2039 from './src/pages/UltimateTechRevolution2039';
 import RevolutionaryTechBreakthrough2040 from './src/pages/RevolutionaryTechBreakthrough2040';
 import NextGenInnovationHub2041 from './src/pages/NextGenInnovationHub2041';
@@ -959,9 +959,9 @@ export default function App(): JSX.Element {
                 </div>
 
                 {/* Interactive Technology Showcase 2028 */}
-                <div className="mb-12">
+                {/* <div className="mb-12">
                   <InteractiveTechShowcase2028 />
-                </div>
+                </div> */}
 
                 {/* Revolutionary Tech Showcase 2029 */}
                 <div className="mb-12">
