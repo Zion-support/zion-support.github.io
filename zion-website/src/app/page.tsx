@@ -34,14 +34,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: Autonomous Analytics Copilot v1.1 —
+            <a href="/updates/autonomous-analytics-copilot-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Launch: Autonomous Marketing Copilot —
-            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">details</a>
+            Report: Agent Benchmark Suite v3 —
+            <a href="/updates/agent-benchmark-suite-v3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: State of AI Evaluations (2026 Preview) —
-            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            Also: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">details</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -72,14 +72,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: Autonomous Analytics Copilot v1.1 —
+            <a href="/updates/autonomous-analytics-copilot-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Launch: Autonomous Marketing Copilot —
-            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
+            Report: Agent Benchmark Suite v3 —
+            <a href="/updates/agent-benchmark-suite-v3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">details</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: State of AI Evaluations —
-            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">preview</a>
+            Also: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>

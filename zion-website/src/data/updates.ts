@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: Autonomous Analytics Copilot v1.1',
+		summary: 'Upgraded insights with eval-gated dashboards, anomaly detection, and KPI copilots.',
+		href: '/updates/autonomous-analytics-copilot-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Report: Agent Benchmark Suite v3',
+		summary: 'Expanded real-world tasks, safety gates, and cost-quality curves for agents.',
+		href: '/updates/agent-benchmark-suite-v3',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
