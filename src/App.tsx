@@ -21,6 +21,7 @@ import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBan
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
+import AI2025BreakthroughAutomation from './pages/AI2025BreakthroughAutomation';
 import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
@@ -80,6 +81,8 @@ import NewsletterSignup from './components/NewsletterSignup';
 import PromotionalBanner from './components/PromotionalBanner';
 import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
 import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServicesShowcase';
+import LatestContentPromoBanner from './components/LatestContentPromoBanner';
+import FeaturedContentShowcase2025 from './components/FeaturedContentShowcase2025';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
@@ -164,6 +167,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* Latest Content Promo Banner */}
+              <div className="mb-12">
+                <LatestContentPromoBanner />
+              </div>
+
+              {/* Featured Content Showcase 2025 */}
+              <div className="mb-12">
+                <FeaturedContentShowcase2025 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -408,6 +421,7 @@ const App: React.FC = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/sep-2025-exec-guide-evals-guardrails" element={<BlogPost_Sep2025_AIExecGuide />} />
           <Route path="/blog/sep-2025-finserv-model-routing-case-study" element={<BlogPost_Sep2025_CaseStudy />} />
+          <Route path="/blog/ai-2025-breakthrough-automation" element={<AI2025BreakthroughAutomation />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
           <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />

@@ -1,394 +1,166 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  ArrowRight, 
-  Calendar,
-  Star,
-  Users,
-  Clock,
-  ExternalLink,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Target,
-  Award
-} from 'lucide-react';
-
-interface FeaturedContent {
-  id: string;
-  title: string;
-  type: 'guide' | 'case-study' | 'blog' | 'whitepaper';
-  description: string;
-  publishDate: string;
-  readTime: string;
-  featured: boolean;
-  url: string;
-  category: string;
-  tags: string[];
-  imageUrl?: string;
-  priority: 'high' | 'medium' | 'low';
-  metrics: {
-    views?: number;
-    rating?: number;
-    downloads?: number;
-  };
-}
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Calendar, Clock, User, TrendingUp, Star } from 'lucide-react';
+import { latestContent2025 } from '../data/latestContent2025';
 
 const FeaturedContentShowcase2025: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const featuredContent = latestContent2025.filter(post => post.featured);
 
-  const featuredContent: FeaturedContent[] = [
-    {
-      id: 'ai-transformation-guide',
-      title: 'AI Transformation Guide 2025: Your Complete Roadmap to Digital Revolution',
-      type: 'guide',
-      description: 'Master the art of AI implementation with our comprehensive guide covering autonomous operations, quantum computing, and consciousness computing. Learn proven strategies from industry leaders.',
-      publishDate: '2025-01-15',
-      readTime: '12 min read',
-      featured: true,
-      url: '/blog/ai-transformation-2025-guide',
-      category: 'AI Strategy',
-      tags: ['AI Implementation', 'Digital Transformation', 'Business Strategy', 'Leadership'],
-      priority: 'high',
-      metrics: {
-        views: 15420,
-        rating: 4.9,
-        downloads: 3240
-      }
-    },
-    {
-      id: 'quantum-breakthrough',
-      title: 'Quantum Computing Breakthrough 2025: The Future is Now',
-      type: 'blog',
-      description: 'Discover how quantum computing is revolutionizing industries with 99.9% error correction, 1000+ qubit systems, and real-world applications across finance, healthcare, and logistics.',
-      publishDate: '2025-01-14',
-      readTime: '8 min read',
-      featured: true,
-      url: '/blog/quantum-computing-breakthrough-2025',
-      category: 'Quantum Computing',
-      tags: ['Quantum Computing', 'Technology Innovation', 'Future Tech', 'Research'],
-      priority: 'high',
-      metrics: {
-        views: 12850,
-        rating: 4.8,
-        downloads: 2100
-      }
-    },
-    {
-      id: 'autonomous-operations-case-study',
-      title: 'Autonomous Business Operations: A Complete Transformation Success Story',
-      type: 'case-study',
-      description: 'Learn how TechCorp Global achieved 85% reduction in manual processes and $2.5B in cost savings through autonomous operations. Real results from real implementation.',
-      publishDate: '2025-01-13',
-      readTime: '15 min read',
-      featured: true,
-      url: '/case-studies/autonomous-business-operations-success',
-      category: 'Case Study',
-      tags: ['Autonomous Operations', 'Business Transformation', 'ROI', 'Success Story'],
-      priority: 'high',
-      metrics: {
-        views: 9870,
-        rating: 4.9,
-        downloads: 1800
-      }
-    },
-    {
-      id: 'ai-implementation-checklist',
-      title: 'AI Implementation Checklist 2025: Your Complete Success Guide',
-      type: 'guide',
-      description: 'Ensure AI implementation success with our comprehensive checklist covering strategy, data, infrastructure, and optimization. Avoid common pitfalls and maximize ROI.',
-      publishDate: '2025-01-12',
-      readTime: '10 min read',
-      featured: true,
-      url: '/guides/ai-implementation-checklist-2025',
-      category: 'Implementation',
-      tags: ['AI Implementation', 'Best Practices', 'Checklist', 'Success'],
-      priority: 'medium',
-      metrics: {
-        views: 11200,
-        rating: 4.7,
-        downloads: 2800
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
       }
     }
-  ];
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'guide': return <BookOpen className="w-5 h-5" />;
-      case 'case-study': return <FileText className="w-5 h-5" />;
-      case 'blog': return <TrendingUp className="w-5 h-5" />;
-      default: return <FileText className="w-5 h-5" />;
-    }
   };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'guide': return 'from-blue-500 to-blue-600';
-      case 'case-study': return 'from-green-500 to-green-600';
-      case 'blog': return 'from-purple-500 to-purple-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
-
-  const getPriorityBadge = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'bg-red-100 text-red-800 border-red-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
-    setIsAutoPlaying(false);
-  };
-
-  React.useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
-      }, 6000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, featuredContent.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
-            <Zap className="w-4 h-4" />
-            <span className="text-sm font-medium">Featured Content</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Star className="w-6 h-6 text-yellow-500 fill-current" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
+              Featured Content
+            </span>
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest Insights & Success Stories
+            Latest AI Insights & Breakthroughs
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge research, proven strategies, and real-world case studies 
+            Stay ahead of the curve with our cutting-edge research, case studies, and practical guides 
             that are transforming businesses worldwide.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Main Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl shadow-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="relative"
-              >
-                <div className={`bg-gradient-to-r ${getTypeColor(featuredContent[currentIndex].type)} p-8 md:p-12`}>
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    {/* Content Info */}
-                    <div className="text-white">
-                      {/* Type Badge */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                          {getTypeIcon(featuredContent[currentIndex].type)}
-                          <span className="text-sm font-medium capitalize">
-                            {featuredContent[currentIndex].type.replace('-', ' ')}
-                          </span>
-                        </div>
-                        <div className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityBadge(featuredContent[currentIndex].priority)}`}>
-                          {featuredContent[currentIndex].priority.toUpperCase()}
-                        </div>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                        {featuredContent[currentIndex].title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                        {featuredContent[currentIndex].description}
-                      </p>
-
-                      {/* Meta Information */}
-                      <div className="flex flex-wrap items-center gap-6 text-white/80 text-sm mb-6">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>{new Date(featuredContent[currentIndex].publishDate).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>{featuredContent[currentIndex].readTime}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>{featuredContent[currentIndex].category}</span>
-                        </div>
-                        {featuredContent[currentIndex].metrics.rating && (
-                          <div className="flex items-center gap-2">
-                            <Star className="w-4 h-4 fill-current text-yellow-300" />
-                            <span>{featuredContent[currentIndex].metrics.rating}</span>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Metrics */}
-                      {featuredContent[currentIndex].metrics && (
-                        <div className="flex gap-6 mb-6">
-                          {featuredContent[currentIndex].metrics.views && (
-                            <div className="text-center">
-                              <div className="text-2xl font-bold">{featuredContent[currentIndex].metrics.views.toLocaleString()}</div>
-                              <div className="text-sm text-white/80">Views</div>
-                            </div>
-                          )}
-                          {featuredContent[currentIndex].metrics.downloads && (
-                            <div className="text-center">
-                              <div className="text-2xl font-bold">{featuredContent[currentIndex].metrics.downloads.toLocaleString()}</div>
-                              <div className="text-sm text-white/80">Downloads</div>
-                            </div>
-                          )}
-                        </div>
-                      )}
-
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {featuredContent[currentIndex].tags.slice(0, 4).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-sm text-white/90"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* CTA Button */}
-                      <Link
-                        to={featuredContent[currentIndex].url}
-                        className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
-                      >
-                        Read Full Article
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-
-                    {/* Visual Element */}
-                    <div className="relative">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-                        <div className="w-24 h-24 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                          {getTypeIcon(featuredContent[currentIndex].type)}
-                        </div>
-                        <h4 className="text-white text-lg font-semibold mb-2">
-                          {featuredContent[currentIndex].type === 'guide' && 'Complete Guide'}
-                          {featuredContent[currentIndex].type === 'case-study' && 'Success Story'}
-                          {featuredContent[currentIndex].type === 'blog' && 'Latest Insights'}
-                        </h4>
-                        <p className="text-white/80 text-sm">
-                          {featuredContent[currentIndex].type === 'guide' && 'Step-by-step implementation roadmap'}
-                          {featuredContent[currentIndex].type === 'case-study' && 'Real results from real companies'}
-                          {featuredContent[currentIndex].type === 'blog' && 'Cutting-edge research and trends'}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-6">
-            {/* Previous Button */}
-            <button
-              onClick={prevSlide}
-              className="flex items-center gap-2 bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md hover:bg-gray-50 transition-colors"
+        {/* Content Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {featuredContent.map((content, index) => (
+            <motion.article
+              key={content.id}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              <ChevronLeft className="w-4 h-4" />
-              <span>Previous</span>
-            </button>
-
-            {/* Dots */}
-            <div className="flex gap-2">
-              {featuredContent.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentIndex(index);
-                    setIsAutoPlaying(false);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex
-                      ? 'bg-blue-600 scale-125'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Next Button */}
-            <button
-              onClick={nextSlide}
-              className="flex items-center gap-2 bg-white text-gray-700 px-4 py-2 rounded-lg shadow-md hover:bg-gray-50 transition-colors"
-            >
-              <span>Next</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Additional Content Grid */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            More Featured Content
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featuredContent.slice(0, 3).map((content, index) => (
-              <motion.div
-                key={content.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <div className={`p-2 rounded-lg ${getTypeColor(content.type)} text-white`}>
-                    {getTypeIcon(content.type)}
-                  </div>
-                  <span className="text-sm font-medium text-gray-600 capitalize">
-                    {content.type.replace('-', ' ')}
+              {/* Image placeholder */}
+              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-white/90 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+                    {content.category}
                   </span>
                 </div>
-                <h4 className="font-bold text-lg mb-2 line-clamp-2">{content.title}</h4>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{content.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-gray-500">
-                    <Clock className="w-3 h-3" />
+                <div className="absolute bottom-4 right-4">
+                  <TrendingUp className="w-8 h-8 text-white/80" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(content.publishDate).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Clock className="w-4 h-4" />
                     <span>{content.readTime}</span>
                   </div>
-                  <Link
-                    to={content.url}
-                    className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
-                  >
-                    Read More
-                    <ExternalLink className="w-3 h-3" />
-                  </Link>
                 </div>
-              </motion.div>
-            ))}
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {content.title}
+                </h3>
+
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {content.description}
+                </p>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4 text-gray-400" />
+                    <span className="text-sm text-gray-600">{content.author}</span>
+                  </div>
+                  
+                  <motion.button
+                    whileHover={{ x: 5 }}
+                    className="flex items-center space-x-1 text-blue-600 font-semibold group-hover:text-blue-700 transition-colors"
+                  >
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.button>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {content.tags.slice(0, 3).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="bg-blue-50 text-blue-600 px-2 py-1 rounded-full text-xs font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Want More Insights?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Get exclusive access to our latest research, case studies, and AI breakthroughs. 
+              Join thousands of professionals who are staying ahead of the curve.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                Explore All Content
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Subscribe to Updates
+              </motion.button>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
