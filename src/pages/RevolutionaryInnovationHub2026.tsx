@@ -169,8 +169,14 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Innovating
             </button>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+            </button>
+          </div>
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-36c0
       </div>
     </div>
   );

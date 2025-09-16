@@ -175,6 +175,7 @@ const RevolutionaryTech2026: React.FC = () => {
             <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Us
             </a>
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -470,6 +471,8 @@ const RevolutionaryTech2026: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold text-lg">
               Contact Us
             </button>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36c0
           </div>
         </div>
       </div>

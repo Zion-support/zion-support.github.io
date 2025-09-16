@@ -7,15 +7,24 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-  // Added 2025-09-15 (latest content)
+  // Fresh content added 2025-09-15
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
+    href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Complete Guide: Autonomous Business Operations (2026)',
+    summary:
+      'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
+    href: '/blog/ai-2026-autonomous-business-operations-complete-guide',
+    date: '2025-09-15',
+    tag: 'Complete Guide'
+  },
+  {
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -38,21 +47,14 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
+  },
+  {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+    date: '2025-09-15',
+    tag: 'Launch'
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
