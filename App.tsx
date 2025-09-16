@@ -44,6 +44,9 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryTechDemo2025 from './src/components/RevolutionaryTechDemo2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import './src/index.css';
@@ -253,6 +256,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
+                
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
@@ -276,6 +282,13 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Revolutionary Tech Demo 2025 */}
+                <RevolutionaryTechDemo2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 */}
+                <UltimateContentBanner2025 />
+                
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
 
