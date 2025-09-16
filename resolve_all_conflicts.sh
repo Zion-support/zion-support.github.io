@@ -2,6 +2,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
 echo "🔧 Resolving ALL remaining merge conflicts..."
 
 # Find all files with merge conflicts
@@ -33,8 +36,11 @@ done
 
 echo "🎉 All conflict resolution complete!"
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
@@ -66,8 +72,13 @@ for file in $conflicted_files; do
 done
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-87a1
 =======
 echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-87a1
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
