@@ -29,6 +29,7 @@
     "paths": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
@@ -92,6 +93,14 @@
     "**/*.js",
     "**/*.jsx",
 >>>>>>> origin/feature/new-content-and-promotions
+=======
+      "@/*": ["./*"]
+    },
+    "types": ["vite/client", "node"]
+  },
+  "include": [
+    "**/*",
+>>>>>>> origin/feat/content-promo
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -99,6 +108,7 @@
     "node_modules",
     "dist",
     "build",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "coverage",
     "**/*.test.ts",
@@ -110,6 +120,10 @@
 >>>>>>> origin/feature/new-content-and-promotions
   ]
 <<<<<<< HEAD
+=======
+    "coverage"
+  ]
+>>>>>>> origin/feat/content-promo
 }
 =======
     "types": ["vite/client", "node"]

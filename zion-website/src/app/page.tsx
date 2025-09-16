@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -13,6 +14,15 @@ import {
   ShieldCheckIcon,
   ChartBarIcon,
 >>>>>>> origin/feat/case-studies-content
+=======
+import React from 'react'
+import {
+  LightBulbIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+>>>>>>> origin/feat/content-promo
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
@@ -54,6 +64,7 @@ const features = [
       'World-class researchers and engineers pushing the boundaries of technology.',
     icon: UserGroupIcon
   }
+<<<<<<< HEAD
 =======
   { name: 'AI-Powered Research', description: 'Cutting-edge AI that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for complex problem solving.', icon: CpuChipIcon },
@@ -62,6 +73,8 @@ const features = [
   { name: 'Data Analytics', description: 'Advanced analytics and insights driving decisions.', icon: ChartBarIcon },
   { name: 'Expert Team', description: 'World-class researchers and engineers pushing boundaries.', icon: UserGroupIcon },
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
 ]
 
 const stats = [
@@ -93,6 +106,7 @@ const solutions = [
     description: 'Intelligent management of digital infrastructure.',
     href: '/solutions/it-asset-management'
   }
+<<<<<<< HEAD
 =======
   { name: 'Global Clients', value: '1,000+' },
   { name: 'Patents Filed', value: '25+' },
@@ -104,6 +118,8 @@ const solutions = [
   { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
 ]
 
 export default function HomePage() {
@@ -152,6 +168,7 @@ export default function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
+<<<<<<< HEAD
               </a>
               <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
@@ -170,6 +187,8 @@ export default function HomePage() {
               >
                 Blueprint: Policy‑as‑Code in Production
                 <span aria-hidden>→</span>
+=======
+>>>>>>> origin/feat/content-promo
               </a>
               <a
                 href="/blog/ai-2026-real-time-retrieval-architectures"
@@ -178,6 +197,7 @@ export default function HomePage() {
                 New: Real‑Time Retrieval Architectures
                 <span aria-hidden>→</span>
               </a>
+<<<<<<< HEAD
               <a
                 href="/blog/ai-2026-sovereign-ai-commerce"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
@@ -362,18 +382,24 @@ export default function HomePage() {
               <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
             </div>
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/content-promo
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
           </p>
         </div>
@@ -404,12 +430,16 @@ export default function HomePage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             New articles on enterprise AI, security, and autonomous systems.
+=======
+            Fresh content, announcements, and courses from Zion Academy.
+>>>>>>> origin/feat/content-promo
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,15 +474,26 @@ export default function HomePage() {
                   'Practical guardrails for deploying autonomous AI with verifiable policy and audits.',
                 href: '/blog/ai-governance-blueprint-2025'
 >>>>>>> origin/feature/new-content-2025
+=======
+                title: 'New Course: Advanced Blockchain Development',
+                summary:
+                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                href: '/updates',
+>>>>>>> origin/feat/content-promo
               },
               {
                 title: 'Community Challenge: Build a DApp',
                 summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+<<<<<<< HEAD
                 href: '/updates/dapp-challenge'
+=======
+                href: '/updates',
+>>>>>>> origin/feat/content-promo
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+<<<<<<< HEAD
                 href: '/updates/web3-learning-path'
 >>>>>>> origin/feature/updates-content
 =======
@@ -474,6 +515,25 @@ export default function HomePage() {
                 href: '/blog/ai-2026-generative-ai-risk-register'
 >>>>>>> origin/feat/content-policy-as-code
               }
+=======
+                href: '/updates',
+              },
+              {
+                title: 'Whitepaper: Autonomous IT Operations 2025',
+                summary: 'A strategic blueprint for AI-driven IT ops, cost savings, and resiliency.',
+                href: '/updates',
+              },
+              {
+                title: 'Case Study: 40% Faster Deployments',
+                summary: 'How a fintech scaled CI/CD with DevOps Flow to ship faster and safer.',
+                href: '/updates',
+              },
+              {
+                title: 'Launch: InsightAI Analytics 2.0',
+                summary: 'Major release with natural language insights and real-time streaming.',
+                href: '/updates',
+              },
+>>>>>>> origin/feat/content-promo
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
@@ -544,9 +604,12 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Trusted by leading organizations worldwide
             </h2>
+<<<<<<< HEAD
 =======
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
             <p className="mt-4 text-lg leading-8 text-gray-300">Our track record speaks for itself</p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
@@ -560,6 +623,7 @@ export default function HomePage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA section */}
 =======
@@ -606,6 +670,9 @@ export default function HomePage() {
       </div>
 
 >>>>>>> origin/feat/case-studies-content
+=======
+      {/* CTA section */}
+>>>>>>> origin/feat/content-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
@@ -621,10 +688,13 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
+<<<<<<< HEAD
 =======
             <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
           </div>
         </div>
       </div>
@@ -632,6 +702,10 @@ export default function HomePage() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/feat/case-studies-content
+=======
+
+>>>>>>> origin/feat/content-promo

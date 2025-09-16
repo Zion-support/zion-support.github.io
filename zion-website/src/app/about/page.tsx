@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 =======
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
 import { 
   UserGroupIcon, 
   LightBulbIcon, 
@@ -15,6 +18,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 const values = [
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     name: 'Innovation First',
@@ -76,6 +80,19 @@ const team = [
   { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics.', image: '/images/team/elena-petrov.jpg' },
   { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Specialist in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
 >>>>>>> origin/feat/case-studies-content
+=======
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon },
+]
+
+const team = [
+  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.", image: '/images/team/sarah-chen.jpg' },
+  { name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg' },
+  { name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg' },
+  { name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg' },
+>>>>>>> origin/feat/content-promo
 ]
 
 export default function AboutPage() {
@@ -85,6 +102,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+<<<<<<< HEAD
               About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -94,15 +112,25 @@ export default function AboutPage() {
 =======
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential.
 >>>>>>> origin/feat/case-studies-content
+=======
+              About{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
+>>>>>>> origin/feat/content-promo
             </p>
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Mission & Vision */}
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
@@ -123,6 +151,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-gray-300">
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
                 intelligent, efficient, and sustainable world for generations to come.
@@ -130,15 +159,21 @@ export default function AboutPage() {
 =======
               <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world.</p>
 >>>>>>> origin/feat/case-studies-content
+=======
+              <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world for generations to come.</p>
+>>>>>>> origin/feat/content-promo
             </div>
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Company Story */}
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
@@ -146,6 +181,7 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-lg text-gray-300 mb-6">
               Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
@@ -168,14 +204,22 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300 mb-6">What began as a research lab has grown into a global technology powerhouse with teams across the world, pushing the boundaries of what's possible.</p>
             <p className="text-lg text-gray-300">Today, we serve organizations worldwide, helping them harness the power of AI to transform operations and accelerate growth.</p>
 >>>>>>> origin/feat/case-studies-content
+=======
+            <p className="text-lg text-gray-300 mb-6">Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge research and real-world applications.</p>
+            <p className="text-lg text-gray-300 mb-6">What started as a small research lab has grown into a global technology powerhouse, with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ researchers, engineers, and business professionals work tirelessly to push the boundaries of what's possible.</p>
+            <p className="text-lg text-gray-300">Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative startups, helping them harness the power of AI to transform their operations and accelerate their growth.</p>
+>>>>>>> origin/feat/content-promo
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Values */}
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
@@ -199,6 +243,7 @@ export default function AboutPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Leadership Team */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -216,6 +261,13 @@ export default function AboutPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">Researchers, engineers, and business leaders driving innovation.</p>
 >>>>>>> origin/feat/case-studies-content
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet Our Team</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.</p>
+>>>>>>> origin/feat/content-promo
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {team.map((person) => (
@@ -235,6 +287,7 @@ export default function AboutPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA section */}
 =======
@@ -258,12 +311,22 @@ export default function AboutPage() {
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/case-studies-content
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Ready to be part of the AI revolution? Let's discuss how we can work together to transform your organization.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
+>>>>>>> origin/feat/content-promo
           </div>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -414,3 +477,5 @@ export default function AboutPage() {
 }
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo

@@ -241,6 +241,7 @@ export default function Navigation() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -250,3 +251,5 @@ export default function Navigation() {
 >>>>>>> origin/feature/content-updates-and-merge-fixes
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo

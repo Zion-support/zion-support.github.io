@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
+=======
+>>>>>>> origin/feat/content-promo
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -19,6 +22,7 @@ import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBar
 >>>>>>> origin/feature/updates-2025-09
 
 const flagshipSolutions = [
+<<<<<<< HEAD
   {
     name: 'AI Research Assistant',
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
@@ -65,6 +69,12 @@ const flagshipSolutions = [
 >>>>>>> origin/feature/updates-2025-09
     href: '/solutions/it-asset-management',
   },
+=======
+  { name: 'AI Research Assistant', description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.', icon: LightBulbIcon, features: ['Natural Language Processing', 'Multi-modal Learning', 'Real-time Collaboration', 'Advanced Analytics'], href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing technology for next-generation AI applications.', icon: CpuChipIcon, features: ['Quantum Supremacy', 'Neural Architecture Search', 'Hybrid Classical-Quantum', 'Scalable Architecture'], href: '/solutions/quantum-neural-networks' },
+  { name: 'Autonomous Business Operations', description: 'Self-optimizing business processes that adapt and improve automatically.', icon: RocketLaunchIcon, features: ['Process Automation', 'Predictive Analytics', 'Continuous Optimization', 'Real-time Monitoring'], href: '/solutions/autonomous-business' },
+  { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.', icon: ShieldCheckIcon, features: ['Asset Discovery', 'Lifecycle Management', 'Security Compliance', 'Cost Optimization'], href: '/solutions/it-asset-management' },
+>>>>>>> origin/feat/content-promo
 ]
 
 const industryApplications = [
@@ -93,6 +103,7 @@ export default function SolutionsPage() {
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Every Industry</span>
             </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Discover our cutting-edge AI and technology solutions designed to transform your business 
               operations and drive unprecedented growth and innovation.
@@ -100,19 +111,29 @@ export default function SolutionsPage() {
 =======
             <p className="mt-6 text-lg leading-8 text-gray-300">Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.</p>
 >>>>>>> origin/feature/updates-2025-09
+=======
+            <p className="mt-6 text-lg leading-8 text-gray-300">Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.</p>
+>>>>>>> origin/feat/content-promo
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Flagship Solutions */}
 =======
 >>>>>>> origin/feature/updates-2025-09
+=======
+>>>>>>> origin/feat/content-promo
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Flagship AI Platforms</p>
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+=======
+          <p className="mt-6 text-lg leading-8 text-gray-300">Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence.</p>
+>>>>>>> origin/feat/content-promo
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
@@ -139,6 +160,7 @@ export default function SolutionsPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Industry Applications */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -157,6 +179,13 @@ export default function SolutionsPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Transforming Every Sector</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">Our AI solutions excel across diverse industries, delivering measurable results.</p>
 >>>>>>> origin/feature/updates-2025-09
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Transforming Every Sector</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">Our AI solutions are designed to adapt and excel across diverse industries, delivering measurable results and competitive advantages.</p>
+>>>>>>> origin/feat/content-promo
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -184,6 +213,7 @@ export default function SolutionsPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Implementation Process */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -202,14 +232,19 @@ export default function SolutionsPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Proven Process</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">From assessment to optimization, we guide you at every step.</p>
 >>>>>>> origin/feature/updates-2025-09
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Proven Process</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">From initial assessment to ongoing optimization, we guide you through every step of your AI transformation journey.</p>
+>>>>>>> origin/feat/content-promo
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
             {implementationSteps.map((step, index) => (
               <div key={step.step} className="relative">
-                {index < implementationSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
-                )}
+                {index < implementationSteps.length - 1 && (<div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>)}
                 <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
                     <step.icon className="h-8 w-8 text-blue-400" />
@@ -224,6 +259,7 @@ export default function SolutionsPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -243,6 +279,14 @@ export default function SolutionsPage() {
 >>>>>>> origin/feature/updates-2025-09
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200 hover:scale-105">Get Started</a>
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let's discuss how our AI solutions can accelerate your growth and give you a competitive edge in your industry.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
+>>>>>>> origin/feat/content-promo
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Services <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -250,6 +294,7 @@ export default function SolutionsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -578,3 +623,5 @@ export default function SolutionsPage() {
   )
 }
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/content-promo

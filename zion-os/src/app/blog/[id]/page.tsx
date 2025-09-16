@@ -15,6 +15,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
   'agentic-safety-patterns-2025': {
@@ -136,6 +137,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     ]
   },
 >>>>>>> origin/feature/add-ai-agent-safety-post
+=======
+>>>>>>> origin/feat/content-promo
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
@@ -144,13 +147,20 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     category: 'AI Governance',
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
+<<<<<<< HEAD
     readTime: '9 min read',
+=======
+    readTime: '8 min read',
+>>>>>>> origin/feat/content-promo
     content: [
       'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
       'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/content-promo
   'edge-ai-marketplaces': {
     id: 'edge-ai-marketplaces',
     title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -163,6 +173,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
       'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+<<<<<<< HEAD
 >>>>>>> origin/feature/new-content-2025-09-15
     ]
 =======
@@ -245,6 +256,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     ]
   },
 >>>>>>> origin/feat/blog-ai-governance
+=======
+    ]
+  },
+>>>>>>> origin/feat/content-promo
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

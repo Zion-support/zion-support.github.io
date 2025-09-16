@@ -454,6 +454,7 @@ export default function HomePage() {
 >>>>>>> origin/feat/blog-content-ads
               <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
+<<<<<<< HEAD
 >>>>>>> origin/feature/new-content-2025-09-15
 =======
               <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
@@ -475,6 +476,8 @@ export default function HomePage() {
               <a href="/blog/ai-safety-audit-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Safety Audit 2025
 >>>>>>> origin/feat/blog-content-and-promo
+=======
+>>>>>>> origin/feat/content-promo
               </a>
 >>>>>>> origin/feature/new-content-promotion
             </div>
