@@ -6,6 +6,7 @@ const posts = [
   { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
+  { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
@@ -17,6 +18,7 @@ const posts = [
   { slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' },
   { slug: 'ai-2026-cost-optimization-blueprint', title: 'AI 2026: Cost Optimization Blueprint', excerpt: 'Budgets, routing, and FinOps for predictable AI spend.' },
   { slug: 'genai-2025-practical-compliance-patterns', title: 'GenAI for Regulated Industries (2025)', excerpt: 'Practical compliance patterns for GenAI rollouts in regulated sectors.' },
+  { slug: 'genai-2025-evidence-driven-ai-governance', title: 'Evidence‑Driven AI Governance (2025)', excerpt: 'Policies, evals, approvals, and audit‑ready evidence across the AI lifecycle.' },
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
   { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' },
   { slug: 'ai-2026-operationalizing-agentic-workflows', title: 'Operationalizing Agentic Workflows (2026)', excerpt: 'Design SLIs/SLOs, guardrails, and evals to ship reliable agentic systems.' }
