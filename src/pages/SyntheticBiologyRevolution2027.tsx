@@ -91,6 +91,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-hydrogen production</li>
               <li>• Self-repairing energy infrastructure</li>
             </ul>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
             <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Explore Bio-Energy →
             </a>

@@ -45,7 +45,6 @@ Object.define_property (window, 'match_media', {
 
 
   })),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 });
@@ -93,5 +92,4 @@ afterAll(() => {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 

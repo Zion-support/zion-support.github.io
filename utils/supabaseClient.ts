@@ -31,7 +31,6 @@ export type ZionSupabase = SupabaseClient | undefined;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '';
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     // Server-side: create a new client per call to avoid cross-request state;
@@ -78,4 +77,3 @@ export function getSupabaseClient(): ZionSupabase {
     return undefined;
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

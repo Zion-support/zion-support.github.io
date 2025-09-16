@@ -1,5 +1,7 @@
 #!/usr/bin/env node _console.log('🚀 Starting automation...'); try { const ComprehensiveAutomation = require('./comprehensive-automation.js';); const automation = new ComprehensiveAutomation;(;); automation.run().then(() => { _console.log('✅ Automation completed successfully'); process.exit(0)}).catch(error => { _console.error('❌ Automation "failed": '',',error); process.exit(1)})} catch(error) { _console.error('❌ Failed to load "automation": '',',error); process.exit(1) }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
@@ -52,3 +54,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 #!/usr/bin/env node _console.log('🚀 Starting automation...'); try { const ComprehensiveAutomation = require('./comprehensive-automation.js';); const automation = new ComprehensiveAutomation;(;); automation.run().then(() => { _console.log('✅ Automation completed successfully'); process.exit(0)}).catch(error => { _console.error('❌ Automation "failed": '',',error); process.exit(1)})} catch(error) { _console.error('❌ Failed to load "automation": '',',error); process.exit(1) }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

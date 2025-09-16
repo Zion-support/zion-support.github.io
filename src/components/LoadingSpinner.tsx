@@ -1,46 +1,52 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'blue' | 'white' | 'gray' | 'purple';
   text?: string;
-  className?: string;
+  fullScreen?: boolean;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  className = '' 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'blue',
+  text,
+  fullScreen = false
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full`}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
+  const colorClasses = {
+    blue: 'text-blue-600',
+    white: 'text-white',
+    gray: 'text-gray-600',
+    purple: 'text-purple-600'
+  };
+
+  const spinner = (
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <div className={`animate-spin rounded-full border-4 border-gray-200 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`}></div>
       {text && (
-        <motion.p
-          className="mt-4 text-gray-600 text-sm"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
+        <p className={`text-sm font-medium ${colorClasses[color]}`}>
           {text}
-        </motion.p>
+        </p>
       )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+        {spinner}
+      </div>
+    );
+  }
+
+  return spinner;
 };
 
 export default LoadingSpinner;

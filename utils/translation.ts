@@ -63,8 +63,6 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
   if (throw new Error ('Translation API failed')) {
   $2
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   return res.json ();
 }
@@ -74,7 +72,6 @@ export function getSelectedLanguage (): string {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const res = await fetch('/api/translate', {;
@@ -100,13 +97,10 @@ export function getSelectedLanguage(): string {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -131,4 +125,3 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
 export function getSelectedLanguage(): string {
   return i18n.resolvedLanguage || i18n.language || 'en';
 }
->>>>>>> origin/auto/autonomy-17186719616

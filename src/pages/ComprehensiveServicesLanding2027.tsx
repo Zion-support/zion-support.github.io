@@ -48,10 +48,6 @@ import {
   CpuIcon,
   ZapIcon,
   ShieldIcon,
-  CloudIcon,
-  BrainIcon,
-  RocketIcon,
-  LeafIcon,
   GlobeIcon,
   CodeIcon,
   DatabaseIcon,
@@ -95,6 +91,14 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
+<<<<<<< HEAD
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
+  Leaf as LeafIconDup
+=======
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Cloud as CloudIcon,
@@ -125,6 +129,7 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
+>>>>>>> cursor/create-and-deploy-new-content-376e
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';

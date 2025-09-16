@@ -31,7 +31,6 @@ export function getUserFromRequest(req: any): User | null {// Mock implementatio
 >>>>>>> origin/merge-pr-12271
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -75,4 +74,3 @@ export function requireUser(
   }
   return user;
 }
->>>>>>> origin/auto/autonomy-17186719616

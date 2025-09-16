@@ -57,7 +57,6 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       setShowEscalation(true);
     } catch {}
   }

@@ -9,7 +9,6 @@ import { ProductListing } from "@/types/listings",
 =======
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
->>>>>>> origin/auto/autonomy-17186719616
 
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [

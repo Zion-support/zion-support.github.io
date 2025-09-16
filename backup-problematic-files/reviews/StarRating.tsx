@@ -24,7 +24,6 @@ type Props = {
   onChange: (val: number) => void,
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   size?: number;
   readOnly?: boolean
@@ -97,7 +96,4 @@ export default StarRating;              width={size}
 export default StarRating;
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

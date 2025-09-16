@@ -71,12 +71,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -106,6 +103,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
 }
+<<<<<<< HEAD:components/api/ipo/updates/export.ts
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
   doc.fontSize(14).text('KPIs');
@@ -164,3 +163,4 @@ function handler() {if () return) {$2;
   doc.end();
   doc.end();
 >>>>>>> origin/merge-pr-12271:components-disabled/components/api/ipo/updates/export.ts
+>>>>>>> cursor/create-and-deploy-new-content-376e:components-disabled/components/api/ipo/updates/export.ts

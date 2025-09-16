@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -63,6 +62,8 @@ export interface NewMessageInput {
   attachmentName?: string; // optional filename
   context?: ConversationContext;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
 export type UserRole = "admin" | "user" | "guest";export type UserRole = "admin" | "user" | "guest";
@@ -70,3 +71,4 @@ export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin'
 ursor/automate-test-improve-and-merge-code-646c;
 export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

@@ -453,12 +453,15 @@ export const realServicesQ32025: Q3Service[] = [
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
     contactInfo: contact
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -496,7 +499,6 @@ export const realServicesQ32025: Q3Service[] = [
     useCases: ['Reduce churn', 'Price optimization', 'Board-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
->>>>>>> origin/auto/autonomy-17186719616
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',

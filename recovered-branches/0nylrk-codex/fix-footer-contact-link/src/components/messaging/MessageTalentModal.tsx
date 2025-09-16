@@ -156,7 +156,6 @@ export function MessageTalentModal({
     
     try {
       setIsSubmitting(true);
->>>>>>> origin/auto/autonomy-17186719616
       
       // Create context data for the conversation
       const contextData = {
@@ -184,7 +183,6 @@ export function MessageTalentModal({
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

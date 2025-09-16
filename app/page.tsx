@@ -107,6 +107,8 @@ export default function HomePage() {
         url="/"
       />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,6 +126,7 @@ export default function HomePage() {
               <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Best Practices</Link>
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-376e
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,6 +144,8 @@ export default function HomePage() {
         </div>
       </section>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/feature/content-sept-2025
 =======
       {/* What's New dynamic section */}
@@ -149,12 +154,15 @@ export default function HomePage() {
 >>>>>>> origin/feat/new-content-2026-evals
 =======
 >>>>>>> origin/feat/new-content-sept-15-2025
+>>>>>>> cursor/create-and-deploy-new-content-376e
       
       <div className='min-h-screen bg-white'>
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
+<<<<<<< HEAD
+=======
         {/* Promo: Fresh Content */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -454,6 +462,7 @@ export default function HomePage() {
         </section>
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-376e
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
@@ -663,6 +672,8 @@ export default function HomePage() {
                 <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
               </div>
               <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
+<<<<<<< HEAD
+=======
 =======
         {/* New Content Promo: Multimodal Agents Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
@@ -675,6 +686,7 @@ export default function HomePage() {
               </div>
               <Link href="/blog/ai-2026-multimodal-agents-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
 >>>>>>> origin/feature/multimodal-agents-blueprint-2026
+>>>>>>> cursor/create-and-deploy-new-content-376e
                 Read the Blueprint →
               </Link>
             </div>
@@ -713,6 +725,8 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -811,6 +825,7 @@ export default function HomePage() {
 >>>>>>> origin/feat/new-content-ads
 
 >>>>>>> origin/feature/new-content-and-promotions
+>>>>>>> cursor/create-and-deploy-new-content-376e
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

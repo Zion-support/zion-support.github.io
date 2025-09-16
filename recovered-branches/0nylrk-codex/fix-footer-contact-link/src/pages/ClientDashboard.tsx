@@ -53,7 +53,6 @@ function ClientDashboardContent() {
       <SEO 
         title="Client Dashboard | Zion AI Marketplace" 
         description="Manage your jobs and talent requests in the Zion AI Marketplace." 
->>>>>>> origin/auto/autonomy-17186719616
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -106,12 +105,9 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -164,7 +160,6 @@ function ClientDashboardContent() {
                     </p>
                   </div>
                 )}
->>>>>>> origin/auto/autonomy-17186719616
               </div>
             </div>
           </div>

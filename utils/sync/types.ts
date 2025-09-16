@@ -67,7 +67,6 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -204,4 +203,3 @@ export interface MultiverseState {
   proposalMerkleById: Record<string, string>;
   events: SyncEvent[];
 }
->>>>>>> origin/auto/autonomy-17186719616

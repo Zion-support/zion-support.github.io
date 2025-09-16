@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
 =======
 
@@ -23,6 +26,8 @@ export default function Login({ }: LoginProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
@@ -125,3 +130,4 @@ export default function Login(): any ({}: LoginProps) {return (<div>;
 }
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

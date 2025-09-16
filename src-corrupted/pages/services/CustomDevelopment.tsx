@@ -33,7 +33,6 @@
       stack['Node.js', 'Python', 'Java', 'C#', 'Go']}, {
 '
       title: 'Mobile','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphon e,
       stack['React Native',Flutter',Swift',Kotlin',Xamarin']}, {

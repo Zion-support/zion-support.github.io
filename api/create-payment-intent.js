@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 import Stripe from stripe';;const PROD_DOMAIN = app.ziontechgroup.com';;  if (context && context !== 'production') {'';  const url = process.env.URL || ;;  if (req.method !== 'POST') {'';    res.setHeader('Allow', POST');;    res.end('Method Not Allowed');;  if (typeof amount !== 'number') {'';    res.json({ error: Invalid amount' });;    const liveKey = process.env.STRIPE_SECRET_KEY || ;;      process.env.STRIPE_TEST_MODE === true' ||'';      (!isProdDomain() && liveKey.startsWith('sk_live'));;    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {'';      throw new Error('Refusing to use live Stripe key on non-production domain');;      apiVersion: 2025-06-30.basil',;      currency: 'usd',;    console.error('Create payment intent error:', error);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
 ursor/automate-test-improve-and-merge-code-646c;
@@ -136,3 +138,4 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

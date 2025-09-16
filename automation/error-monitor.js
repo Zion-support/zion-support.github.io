@@ -43,12 +43,15 @@ class ErrorMonitor {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
 
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     // Initial health check
     await this.performHealthCheck();
 
@@ -92,7 +95,10 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
         timestamp: new Date().toISOString(),
 =======
         timestamp: new Date().toISOString()
@@ -214,13 +220,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
             timestamp: new Date().toISOString()
@@ -229,6 +236,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     }ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     return errors;
   }
 
@@ -246,7 +254,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           column: parseInt(match[3]),
           message: match[4].trim(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
           timestamp: new Date().toISOString(),
 =======
           timestamp: new Date().toISOString()
@@ -255,6 +266,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
@@ -275,6 +288,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     return errors;
   }
 
@@ -300,6 +314,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
@@ -321,6 +337,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -347,7 +364,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >>>>>>> origin/merge-pr-12271
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -355,7 +371,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         type: 'error_fixer_failure',
         message: error.message,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
         timestamp: new Date().toISOString(),
 =======
         timestamp: new Date().toISOString()
@@ -397,12 +416,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
 
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 

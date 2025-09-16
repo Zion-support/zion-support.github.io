@@ -130,7 +130,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
             </p>;

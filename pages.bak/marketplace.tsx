@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
 
 interface MarketplaceProps {
@@ -35,6 +38,8 @@ export default function Marketplace({}: MarketplaceProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
@@ -113,3 +118,4 @@ export default function Marketplace(): any ({}: MarketplaceProps) {return (<div>
 }
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

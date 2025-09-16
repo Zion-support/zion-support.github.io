@@ -148,9 +148,7 @@ export default function Revolutionary2028Pricing() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Service Pricing */}
@@ -171,7 +169,6 @@ export default function Revolutionary2028Pricing() {
 =======
       {/* Service Pricing */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
->>>>>>> origin/auto/autonomy-17186719616
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -189,7 +186,6 @@ export default function Revolutionary2028Pricing() {
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -197,7 +193,6 @@ export default function Revolutionary2028Pricing() {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
                           </div>
                         </div>
                       </div>
@@ -211,12 +206,10 @@ export default function Revolutionary2028Pricing() {
                 ))}
               </div>
             </div>
->>>>>>> origin/auto/autonomy-17186719616
           ))}
         </div>
       </section>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       {/* Value Proposition */}
@@ -235,14 +228,11 @@ export default function Revolutionary2028Pricing() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
       {/* Value Proposition */}
 
 
@@ -268,7 +258,6 @@ export default function Revolutionary2028Pricing() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Our Pricing</span>
             </h2>
->>>>>>> origin/auto/autonomy-17186719616
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               We offer the best value in the market with transparent pricing and unmatched features.
             </p>
@@ -277,16 +266,11 @@ export default function Revolutionary2028Pricing() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -305,7 +289,6 @@ export default function Revolutionary2028Pricing() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -341,7 +324,6 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
                 Our prices are 30% lower than market average while providing 
->>>>>>> origin/auto/autonomy-17186719616
                 superior technology and features.
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
@@ -382,7 +364,6 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay, 
->>>>>>> origin/auto/autonomy-17186719616
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -422,7 +403,6 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">
                 Enterprise-grade technology with premium support and features 
->>>>>>> origin/auto/autonomy-17186719616
                 that justify every penny of investment.
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
@@ -437,10 +417,7 @@ export default function Revolutionary2028Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             initial={{ opacity: 0, y: 30 }}
@@ -458,7 +435,6 @@ export default function Revolutionary2028Pricing() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -550,7 +526,6 @@ export default function Revolutionary2028Pricing() {
                 <span>No Credit Card Required</span>
               </div>
               <div className="flex items-center space-x-2">
->>>>>>> origin/auto/autonomy-17186719616
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Cancel Anytime</span>
               </div>

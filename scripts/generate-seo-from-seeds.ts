@@ -1,9 +1,6 @@
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -44,6 +41,8 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
   const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,;
@@ -139,3 +138,4 @@ const outDir = path.join (process.cwd (), 'datapage-metadataseo')fs.mkdirSync (o
   }
 }main().catch((e) => { console.error(e), process.exit(1) })
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

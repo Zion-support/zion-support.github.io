@@ -12,6 +12,10 @@ export type WhatsNewItem = {
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
 <<<<<<< HEAD
+    id: "zero-trust-agent-architecture-2026",
+    title: "AI 2026: Zero-Trust Agent Architecture",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +127,7 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     id: "autonomous-evals-blueprint-2026",
     title: "AI 2026: Autonomous Evals Blueprint",
 >>>>>>> origin/feat/new-content-2025-09-15
+>>>>>>> cursor/create-and-deploy-new-content-376e
     description:
       "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
     ctaLabel: "Read Architecture",

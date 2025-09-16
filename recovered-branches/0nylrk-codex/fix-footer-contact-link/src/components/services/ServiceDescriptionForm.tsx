@@ -56,7 +56,6 @@ const formSchema = z.object({
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
                   <FormControl>
                     <Textarea 
->>>>>>> origin/auto/autonomy-17186719616
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"

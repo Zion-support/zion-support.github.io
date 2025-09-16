@@ -443,7 +443,6 @@ export type CuttingEdgeAIService = {
 	id: string;
 	name: string;
 	description: string;
->>>>>>> origin/auto/autonomy-17186719616
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'

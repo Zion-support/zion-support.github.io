@@ -307,4 +307,3 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

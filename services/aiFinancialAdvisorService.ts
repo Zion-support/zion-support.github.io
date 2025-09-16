@@ -655,7 +655,6 @@ export class AIFinancialAdvisorService {
   }
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -664,4 +663,3 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 =======
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> origin/auto/autonomy-17186719616

@@ -4,7 +4,6 @@ interface EmailValidationResult {
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface EmailValidationResult {
   email: string;

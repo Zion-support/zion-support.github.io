@@ -937,4 +937,3 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     reviews: 1400
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

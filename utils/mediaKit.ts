@@ -1,6 +1,5 @@
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
@@ -76,7 +75,6 @@ export function buildPressRelease(
 
 
     companyName: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
     raiseAmount?: string;
     tokenName?: string;
@@ -136,7 +134,6 @@ function titleCase(s: string) {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 function titleCase(s: string) {
@@ -182,13 +179,10 @@ function title_case() {
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -301,4 +295,3 @@ export function buildTimeline(startDate: Date) {
 function titleCase(s: string) {
   return s.replace(/\w\S*/g, (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
 }
->>>>>>> origin/auto/autonomy-17186719616

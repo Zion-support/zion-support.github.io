@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
@@ -18,6 +20,7 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
 
 interface 404.routeProps {
@@ -134,4 +137,3 @@ export default function 404.route({}: 404.routeProps) {
     </div>
   );
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 
 interface MobileOptimizerProps {
   children: React.ReactNode;
@@ -8,180 +8,166 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [touchDevice, setTouchDevice] = useState(false);
 
-  useEffect(() => {
-    const checkDevice = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      
-      setIsMobile(width < 768);
-      setIsTablet(width >= 768 && width < 1024);
-      setOrientation(height > width ? 'portrait' : 'landscape');
-      setTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-    };
-
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-    window.addEventListener('orientationchange', checkDevice);
-
-    return () => {
-      window.removeEventListener('resize', checkDevice);
-      window.removeEventListener('orientationchange', checkDevice);
-    };
+  // Detect device type and orientation
+  const detectDevice = useCallback(() => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    
+    setIsMobile(width < 768);
+    setIsTablet(width >= 768 && width < 1024);
+    setOrientation(height > width ? 'portrait' : 'landscape');
   }, []);
 
-  useEffect(() => {
-    // Apply mobile-specific optimizations
+  // Optimize touch interactions
+  const optimizeTouchInteractions = useCallback(() => {
+    // Add touch-friendly classes
     if (isMobile) {
-      // Prevent zoom on input focus
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-      }
-
-      // Add touch-friendly classes
-      document.body.classList.add('touch-device');
+      document.body.classList.add('mobile-device');
     } else {
-      document.body.classList.remove('touch-device');
+      document.body.classList.remove('mobile-device');
     }
 
-    // Apply orientation-specific styles
-    document.body.classList.toggle('portrait', orientation === 'portrait');
-    document.body.classList.toggle('landscape', orientation === 'landscape');
+    if (isTablet) {
+      document.body.classList.add('tablet-device');
+    } else {
+      document.body.classList.remove('tablet-device');
+    }
 
-    // Apply device-specific classes
-    document.body.classList.toggle('mobile', isMobile);
-    document.body.classList.toggle('tablet', isTablet);
-    document.body.classList.toggle('desktop', !isMobile && !isTablet);
+    // Add orientation classes
+    document.body.classList.add(`${orientation}-orientation`);
   }, [isMobile, isTablet, orientation]);
 
-  // Add touch event optimizations
-  useEffect(() => {
-    if (touchDevice) {
-      // Add passive event listeners for better performance
-      const addPassiveListener = (element: HTMLElement, event: string, handler: EventListener) => {
-        element.addEventListener(event, handler, { passive: true });
-      };
-
-      // Optimize scroll performance
-      const handleTouchMove = (e: TouchEvent) => {
-        // Prevent default on touch move to avoid scrolling issues
-        if (e.target instanceof HTMLElement && e.target.closest('.no-scroll')) {
-          e.preventDefault();
+  // Optimize images for mobile
+  const optimizeImagesForMobile = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+      if (isMobile) {
+        // Add mobile-specific attributes
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+        
+        // Add responsive image handling
+        if (!img.hasAttribute('data-mobile-optimized')) {
+          img.setAttribute('data-mobile-optimized', 'true');
+          
+          // Create responsive image sources
+          const src = img.src;
+          const srcset = img.getAttribute('srcset');
+          
+          if (!srcset && src) {
+            // Generate srcset for different screen sizes
+            const baseSrc = src.replace(/\.(jpg|jpeg|png|webp)$/, '');
+            const extension = src.match(/\.(jpg|jpeg|png|webp)$/)?.[0] || '.jpg';
+            
+            const newSrcset = [
+              `${baseSrc}-320w${extension} 320w`,
+              `${baseSrc}-640w${extension} 640w`,
+              `${baseSrc}-1024w${extension} 1024w`,
+              `${baseSrc}-1920w${extension} 1920w`
+            ].join(', ');
+            
+            img.setAttribute('srcset', newSrcset);
+            img.setAttribute('sizes', '(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px');
+          }
         }
-      };
+      }
+    });
+  }, [isMobile]);
 
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-
-      return () => {
-        document.removeEventListener('touchmove', handleTouchMove);
-      };
+  // Optimize font sizes for mobile
+  const optimizeFontSizes = useCallback(() => {
+    const root = document.documentElement;
+    
+    if (isMobile) {
+      root.style.fontSize = '14px';
+    } else if (isTablet) {
+      root.style.fontSize = '15px';
+    } else {
+      root.style.fontSize = '16px';
     }
-  }, [touchDevice]);
+  }, [isMobile, isTablet]);
 
-  // Add mobile-specific CSS
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .touch-device * {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      
-      .touch-device input,
-      .touch-device textarea,
-      .touch-device [contenteditable] {
-        -webkit-user-select: text;
-        -khtml-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
-      }
-      
-      .mobile .mobile-optimized {
-        font-size: 16px; /* Prevent zoom on iOS */
-      }
-      
-      .mobile .touch-target {
-        min-height: 44px;
-        min-width: 44px;
-      }
-      
-      .mobile .swipeable {
-        touch-action: pan-x;
-      }
-      
-      .mobile .scrollable {
-        -webkit-overflow-scrolling: touch;
-        overflow-scrolling: touch;
-      }
-      
-      .portrait .portrait-only {
-        display: block;
-      }
-      
-      .portrait .landscape-only {
-        display: none;
-      }
-      
-      .landscape .portrait-only {
-        display: none;
-      }
-      
-      .landscape .landscape-only {
-        display: block;
-      }
-      
-      @media (max-width: 767px) {
-        .mobile-hidden {
-          display: none !important;
-        }
-        
-        .mobile-full {
-          width: 100% !important;
-        }
-        
-        .mobile-center {
-          text-align: center !important;
-        }
-      }
-      
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .tablet-hidden {
-          display: none !important;
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .desktop-hidden {
-          display: none !important;
-        }
-      }
-    `;
+  // Add mobile-specific CSS classes
+  const addMobileClasses = useCallback(() => {
+    const body = document.body;
     
-    document.head.appendChild(style);
+    // Remove existing device classes
+    body.classList.remove('mobile-device', 'tablet-device', 'desktop-device');
+    body.classList.remove('portrait-orientation', 'landscape-orientation');
     
-    return () => {
-      document.head.removeChild(style);
+    // Add current device class
+    if (isMobile) {
+      body.classList.add('mobile-device');
+    } else if (isTablet) {
+      body.classList.add('tablet-device');
+    } else {
+      body.classList.add('desktop-device');
+    }
+    
+    // Add orientation class
+    body.classList.add(`${orientation}-orientation`);
+  }, [isMobile, isTablet, orientation]);
+
+  // Handle viewport changes
+  const handleViewportChange = useCallback(() => {
+    detectDevice();
+  }, [detectDevice]);
+
+  // Optimize scroll performance for mobile
+  const optimizeScrollPerformance = useCallback(() => {
+    if (isMobile) {
+      // Add smooth scrolling
+      document.documentElement.style.scrollBehavior = 'smooth';
+      
+      // Add touch scrolling optimization
+      document.body.style.webkitOverflowScrolling = 'touch';
+    }
+  }, [isMobile]);
+
+  // Add mobile-specific event listeners
+  const addMobileEventListeners = useCallback(() => {
+    // Handle orientation change
+    const handleOrientationChange = () => {
+      setTimeout(detectDevice, 100); // Small delay to ensure accurate dimensions
     };
-  }, []);
+
+    // Handle resize
+    const handleResize = () => {
+      detectDevice();
+    };
+
+    window.addEventListener('orientationchange', handleOrientationChange);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [detectDevice]);
+
+  useEffect(() => {
+    // Initial setup
+    detectDevice();
+    
+    // Add event listeners
+    const cleanup = addMobileEventListeners();
+    
+    return cleanup;
+  }, [detectDevice, addMobileEventListeners]);
+
+  useEffect(() => {
+    // Run optimizations when device type changes
+    optimizeTouchInteractions();
+    optimizeImagesForMobile();
+    optimizeFontSizes();
+    addMobileClasses();
+    optimizeScrollPerformance();
+  }, [optimizeTouchInteractions, optimizeImagesForMobile, optimizeFontSizes, addMobileClasses, optimizeScrollPerformance]);
 
   return (
-    <div 
-      className={`
-        mobile-optimizer
-        ${isMobile ? 'mobile' : ''}
-        ${isTablet ? 'tablet' : ''}
-        ${orientation}
-        ${touchDevice ? 'touch-device' : ''}
-      `}
-    >
+    <div className={`mobile-optimizer ${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ${orientation}`}>
       {children}
     </div>
   );

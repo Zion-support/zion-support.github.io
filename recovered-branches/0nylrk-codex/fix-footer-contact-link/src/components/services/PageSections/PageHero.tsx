@@ -1,18 +1,15 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import {GradientHeading} from "@/components/GradientHeading";
 import {Clock, Map, DollarSign} from "lucide-react";
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function PageHero() {
   return (
@@ -32,9 +29,7 @@ export function PageHero() {
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -45,4 +40,3 @@ export function PageHero() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

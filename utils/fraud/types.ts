@@ -13,7 +13,6 @@ export interface AdminAction {
   id: string;
   case_id: string;
   type: AdminActionType;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   admin_id: string;
@@ -37,7 +36,6 @@ export interface AdminAction {
 }
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 =======
 export interface FraudDetectionResult  {is_fraud: boolean;}}export interface FraudDetectionResult  {isFraud: boolean;
@@ -97,7 +95,6 @@ export interface FraudDetectionResult {
 
 
   isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
 
@@ -112,7 +109,6 @@ export interface FraudDetectionConfig {}
 >>>>>>> origin/merge-pr-12271
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   enabled: boolean;
@@ -160,17 +156,16 @@ export interface FraudDetectionConfig {}
 >>>>>>> origin/merge-pr-12271
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -245,6 +240,8 @@ export interface MonthlyReport {
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -256,3 +253,4 @@ ursor/automate-test-improve-and-merge-code-646c;
   }}}
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

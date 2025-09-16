@@ -2,7 +2,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";

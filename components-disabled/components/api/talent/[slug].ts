@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -7,7 +6,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -51,4 +49,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

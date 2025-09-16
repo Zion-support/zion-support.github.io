@@ -21,7 +21,10 @@ const fs = require('fs')const path = require('path')const { OpenAI } = require('
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
 
 =======
@@ -278,14 +281,10 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 main ().catch ((e) => { console.error (e), process.exit (1) }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -357,4 +356,3 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
->>>>>>> origin/auto/autonomy-17186719616

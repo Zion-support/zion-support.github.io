@@ -91,7 +91,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
+<<<<<<< HEAD
+=======
       impact: "Revolutionary"
+>>>>>>> cursor/create-and-deploy-new-content-376e
     },
     {
       id: 4,
@@ -114,16 +117,22 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
+<<<<<<< HEAD
+=======
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+>>>>>>> cursor/create-and-deploy-new-content-376e
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
+<<<<<<< HEAD
+=======
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
+>>>>>>> cursor/create-and-deploy-new-content-376e
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -131,19 +140,25 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
+<<<<<<< HEAD
+=======
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+>>>>>>> cursor/create-and-deploy-new-content-376e
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
+<<<<<<< HEAD
+=======
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
+>>>>>>> cursor/create-and-deploy-new-content-376e
       status: "Live Now",
       impact: "Transformative"
     }
@@ -181,163 +196,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
   const currentContent = revolutionaryContent[currentSlide];
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto">
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-3xl">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
-          >
-            {/* Animated Background */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
-              <div className="absolute top-0 left-0 w-full h-full">
-                {[...Array(100)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-1 h-1 bg-white rounded-full opacity-30"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                    animate={{
-                      y: [0, -200, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
-                    }}
-                    transition={{
-                      duration: 4 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 3,
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="relative z-10 p-12 md:p-16">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                {/* Content */}
-                <div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mb-6"
-                  >
-                    <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
-                      <Sparkles className="w-4 h-4" />
-                      <span className="text-sm font-semibold">{currentContent.status}</span>
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold mb-4">
-                      {currentContent.title}
-                    </h2>
-                    <p className="text-xl md:text-2xl text-white/90 mb-6">
-                      {currentContent.subtitle}
-                    </p>
-                    <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                      {currentContent.description}
-                    </p>
-                  </motion.div>
-
-                  {/* Features */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mb-8"
-                  >
-                    <ul className="space-y-3">
-                      {currentContent.features.map((feature, index) => (
-                        <motion.li
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                          className="flex items-center space-x-3"
-                        >
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
-                          <span className="text-white/90">{feature}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
-
-                  {/* CTA Buttons */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4"
-                  >
-                    <a
-                      href={currentContent.link}
-                      className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-white/90 transition-all duration-300 font-semibold text-lg group"
-                    >
-                      <Play className="w-5 h-5" />
-                      <span>Explore Content</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <button className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                      <span>Learn More</span>
-                    </button>
-                  </motion.div>
-                </div>
-
-                {/* Visual */}
-                <div className="relative">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="relative"
-                  >
-                    <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
-                      <currentContent.icon className="w-16 h-16 text-white" />
-                    </div>
-                    
-                    {/* Floating Elements */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
-                    <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 z-20"
-        >
-          <ArrowLeft className="w-6 h-6 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 z-20"
-        >
-          <ArrowRight className="w-6 h-6 text-white" />
-        </button>
-
-        {/* Play/Pause Button */}
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 z-20"
-        >
-          {isAutoPlaying ? (
-            <div className="w-4 h-4 bg-white rounded-sm"></div>
-          ) : (
-            <Play className="w-4 h-4 text-white ml-0.5" />
-          )}
-        </button>
       </div>
+<<<<<<< HEAD
+=======
 
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
@@ -378,6 +239,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
+>>>>>>> cursor/create-and-deploy-new-content-376e
     </div>
   );
 };

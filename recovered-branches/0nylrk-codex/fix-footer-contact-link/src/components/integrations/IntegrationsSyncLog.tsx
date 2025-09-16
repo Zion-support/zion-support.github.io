@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -158,7 +155,6 @@ export function IntegrationsSyncLog() {
     }
   };
   
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card>
       <div className="p-4">
@@ -188,13 +184,10 @@ export function IntegrationsSyncLog() {
         </Table>
       </div>
     </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -260,4 +253,3 @@ const sync_logs = [;
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

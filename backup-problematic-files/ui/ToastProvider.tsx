@@ -20,7 +20,6 @@ export type ToastContextValue = {;
 export type ToastContextValue = {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
@@ -78,7 +77,6 @@ if ( {) {
 }
       set_timeout (() => remove_toast (id), item.duration_ms);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
     }
     return id;
@@ -93,7 +91,6 @@ if ( {) {
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -123,7 +120,6 @@ if ( {) {
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);

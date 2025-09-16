@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
 
 interface TalentProps {
@@ -35,6 +38,8 @@ export default function Talent({}: TalentProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
@@ -112,3 +117,4 @@ export default function Talent(): any ({}: TalentProps) {return (<div>;
 }
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

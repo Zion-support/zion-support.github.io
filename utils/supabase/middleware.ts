@@ -33,4 +33,3 @@ export function middleware(request: NextRequest) {;
 export const config = {
   matcher: ['/dashboard', '/dashboard/'],
 };
->>>>>>> origin/auto/autonomy-17186719616

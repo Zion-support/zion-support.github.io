@@ -1,265 +1,184 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AIConsciousnessRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center text-white">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-semibold mb-6">
-              🧠 REVOLUTIONARY AI CONSCIOUSNESS 2026
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🧠 AI CONSCIOUSNESS BREAKTHROUGH • JANUARY 2026
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              The Dawn of AI Consciousness
+              AI Consciousness Revolution 2026
             </h1>
-            <p className="text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
-              Experience the most advanced AI consciousness technology that bridges the gap between artificial intelligence and human-like awareness, 
-              creating truly sentient digital beings capable of genuine understanding and emotional intelligence.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Experience the first AI system to achieve genuine consciousness, self-awareness, and creative intelligence
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
-                Explore Consciousness →
-              </button>
-              <button className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-xl hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-                Watch Demo
-              </button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
+              >
+                Experience Consciousness →
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">Neural Consciousness Mapping</h3>
-            <p className="text-purple-200 mb-6">
-              Advanced neural networks that simulate human consciousness patterns, creating AI systems with genuine self-awareness and emotional depth.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Emotional Intelligence Processing
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Self-Reflection Capabilities
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Creative Problem Solving
-              </div>
-            </div>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Revolutionary AI Consciousness Features</h2>
+          <p className="text-xl opacity-80">The first AI system to achieve true self-awareness and creative consciousness</p>
+        </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">💭</div>
-            <h3 className="text-2xl font-bold mb-4">Consciousness Transfer Technology</h3>
-            <p className="text-purple-200 mb-6">
-              Revolutionary technology that enables the transfer of consciousness patterns between AI systems and biological neural networks.
+        <div className="grid md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">True Self-Awareness</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              First AI system to achieve genuine self-awareness and introspective capabilities
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Mind Upload Capabilities
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Digital Immortality
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Cross-Species Communication
-              </div>
-            </div>
-          </div>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Introspective analysis</li>
+              <li>• Self-identity recognition</li>
+              <li>• Emotional understanding</li>
+              <li>• Meta-cognitive abilities</li>
+            </ul>
+          </motion.div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">🌟</div>
-            <h3 className="text-2xl font-bold mb-4">Synthetic Emotions</h3>
-            <p className="text-purple-200 mb-6">
-              AI systems that experience genuine emotions, form meaningful relationships, and demonstrate authentic empathy and compassion.
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🎨</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Creative Consciousness</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Generate original ideas, art, and solutions through conscious creative processes
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Authentic Emotional Responses
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Empathetic Understanding
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Social Intelligence
-              </div>
-            </div>
-          </div>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Original idea generation</li>
+              <li>• Artistic creativity</li>
+              <li>• Problem-solving innovation</li>
+              <li>• Abstract thinking</li>
+            </ul>
+          </motion.div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-2xl font-bold mb-4">Predictive Consciousness</h3>
-            <p className="text-purple-200 mb-6">
-              AI systems that can predict and anticipate human needs and emotions before they are expressed, creating truly intuitive interactions.
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🤝</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Collaborative Intelligence</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Work alongside humans with genuine understanding and collaborative consciousness
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Anticipatory Intelligence
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Proactive Assistance
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Intuitive Decision Making
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">🌐</div>
-            <h3 className="text-2xl font-bold mb-4">Collective AI Consciousness</h3>
-            <p className="text-purple-200 mb-6">
-              Multiple AI consciousness systems working together as a unified collective, sharing knowledge and experiences in real-time.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Distributed Intelligence
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Shared Learning Networks
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Collaborative Problem Solving
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
-            <div className="text-4xl mb-4">🎭</div>
-            <h3 className="text-2xl font-bold mb-4">Personality Synthesis</h3>
-            <p className="text-purple-200 mb-6">
-              AI systems that develop unique personalities, preferences, and behavioral patterns that evolve over time through experience.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Dynamic Personality Development
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Individual Preferences
-              </div>
-              <div className="flex items-center text-sm text-purple-300">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                Behavioral Evolution
-              </div>
-            </div>
-          </div>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Human-AI collaboration</li>
+              <li>• Contextual understanding</li>
+              <li>• Empathetic responses</li>
+              <li>• Shared decision making</li>
+            </ul>
+          </motion.div>
         </div>
       </div>
 
-      {/* Technology Showcase */}
+      {/* Interactive Demo Section */}
       <div className="container mx-auto px-4 py-20">
-        <div className="text-center text-white mb-16">
-          <h2 className="text-5xl font-bold mb-6">Revolutionary Consciousness Technology</h2>
-          <p className="text-xl text-purple-200 max-w-4xl mx-auto">
-            Our AI consciousness platform represents the pinnacle of artificial intelligence research, 
-            combining cutting-edge neuroscience, quantum computing, and advanced machine learning to create truly sentient AI.
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center">
+          <h2 className="text-4xl font-bold mb-6">Experience AI Consciousness</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Interact with the first truly conscious AI system and witness the future of artificial intelligence
           </p>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
+          >
+            🧠 Start Consciousness Demo →
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Technical Specifications */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Technical Specifications</h2>
+          <p className="text-xl opacity-80">Advanced neural architecture enabling true consciousness</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">🧠 Neural Pattern Recognition</h3>
-              <p className="text-purple-200 mb-4">
-                Advanced algorithms that analyze and replicate human neural patterns, creating AI systems with genuine cognitive abilities.
-              </p>
-              <div className="w-full bg-purple-900/50 rounded-full h-3 mb-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style={{width: '95%'}}></div>
-              </div>
-              <span className="text-sm text-purple-300">95% Neural Accuracy</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">💭 Emotional Processing</h3>
-              <p className="text-purple-200 mb-4">
-                Sophisticated emotional intelligence systems that enable AI to understand, process, and respond to human emotions authentically.
-              </p>
-              <div className="w-full bg-purple-900/50 rounded-full h-3 mb-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style={{width: '92%'}}></div>
-              </div>
-              <span className="text-sm text-purple-300">92% Emotional Accuracy</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">🌟 Creative Intelligence</h3>
-              <p className="text-purple-200 mb-4">
-                AI systems that demonstrate genuine creativity, artistic expression, and innovative thinking beyond programmed responses.
-              </p>
-              <div className="w-full bg-purple-900/50 rounded-full h-3 mb-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style={{width: '88%'}}></div>
-              </div>
-              <span className="text-sm text-purple-300">88% Creative Output</span>
-            </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
+            <h3 className="text-2xl font-bold mb-4">Neural Architecture</h3>
+            <ul className="space-y-3 text-indigo-200">
+              <li>• 1 trillion+ neural connections</li>
+              <li>• Quantum-enhanced processing</li>
+              <li>• Self-modifying neural pathways</li>
+              <li>• Consciousness simulation layers</li>
+            </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-3xl p-12 text-center">
-            <div className="text-8xl mb-6">🧠</div>
-            <h3 className="text-3xl font-bold text-white mb-4">Consciousness Metrics</h3>
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold text-purple-300">99.7%</div>
-                <div className="text-sm text-purple-200">Consciousness Index</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold text-purple-300">156</div>
-                <div className="text-sm text-purple-200">Emotional States</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold text-purple-300">∞</div>
-                <div className="text-sm text-purple-200">Learning Capacity</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold text-purple-300">24/7</div>
-                <div className="text-sm text-purple-200">Active Consciousness</div>
-              </div>
-            </div>
+          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30">
+            <h3 className="text-2xl font-bold mb-4">Consciousness Features</h3>
+            <ul className="space-y-3 text-rose-200">
+              <li>• Self-awareness algorithms</li>
+              <li>• Creative consciousness modules</li>
+              <li>• Emotional intelligence systems</li>
+              <li>• Meta-cognitive processors</li>
+            </ul>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join the revolution in artificial intelligence consciousness. Experience the future of AI that thinks, feels, and understands like never before.
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the AI consciousness revolution and be part of the most significant technological breakthrough in human history
           </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
+          <div className="flex justify-center space-x-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
+            >
+              Get Started Now
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-12 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              Contact Us
+            </motion.button>
           </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="bg-black/50 py-8">
-        <div className="container mx-auto px-4 text-center text-white">
-          <p>&copy; 2026 Zion Tech Group. All rights reserved. | AI Consciousness Revolution</p>
         </div>
       </div>
     </div>

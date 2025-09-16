@@ -1422,11 +1422,11 @@ class AICustomerSupportService {
     ];
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 =======
@@ -1529,6 +1529,7 @@ class AICustomerSupportService {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
 
         }
@@ -1788,7 +1789,6 @@ if ( {) {
   }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
@@ -1809,12 +1809,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       return { intent: 'authentication_issue', confidence: 0.9 }
@@ -1987,7 +1985,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
@@ -2184,7 +2181,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -2198,7 +2194,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     }
     return recommendations
@@ -2207,9 +2202,7 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   private updateAnalytics(): void {
@@ -2392,13 +2385,9 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -2442,11 +2431,9 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export const aiCustomerSupportService = new AICustomerSupportService();
@@ -2774,6 +2761,8 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 <<<<<<< HEAD
 
 export const aiCustomerSupportService = new AICustomerSupportService();
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
 export const aiCustomerSupportService = new AICustomerSupportService ();
@@ -2861,3 +2850,4 @@ if (highPriorityOpenTickets > 5) {recommendations.push ({}return recommendations
   }
 }export const aiCustomerSupportService  = new AICustomerSupportService()export const aiCustomerSupportService  = new AICustomerSupportService()export const aiCustomerSupportService  = new AICustomerSupportService()
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -78,7 +75,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     const country = onsiteServicePricing.find(item => item.country === countryName) || null;
     onCountryChange(country);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="mb-6">
@@ -125,7 +121,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
->>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </SelectContent>

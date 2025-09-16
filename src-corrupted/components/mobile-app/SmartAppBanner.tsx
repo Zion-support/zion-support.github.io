@@ -86,7 +86,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   
   // Detect iOS or Android

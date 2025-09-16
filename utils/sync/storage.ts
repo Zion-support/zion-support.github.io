@@ -122,7 +122,6 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
->>>>>>> origin/auto/autonomy-17186719616
   return state;
 }
 
@@ -210,6 +209,8 @@ if ( {) {
   }
   return events;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/auto/autonomy-17186719616
 =======
     return events.filter (e => e.type === 'proposal' || e.type === 'dao_endorsement')}
@@ -223,3 +224,4 @@ if ( {) {$2;
   return events;export function reset_state (): void {state = { ...default_state }
 }return events;
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

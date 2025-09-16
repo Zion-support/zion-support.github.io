@@ -125,7 +125,6 @@ export function getAllProjects (): Project[] {return projects;
 }
 export function getAllProjects(): Project[] {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -139,10 +138,8 @@ export function getAllProjects(): Project[] {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -432,4 +429,3 @@ export function updateMilestone(
   saveProject(project);
   return next;
 }
->>>>>>> origin/auto/autonomy-17186719616

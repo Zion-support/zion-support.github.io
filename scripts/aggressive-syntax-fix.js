@@ -183,7 +183,6 @@ class AggressiveSyntaxFixer {
 
     async fixAllSyntaxErrors() {
         this.log('🔧 Starting aggressive syntax error fixing...');
->>>>>>> origin/auto/autonomy-17186719616
 
         try {
             // Get all TypeScript and JavaScript files
@@ -339,13 +338,10 @@ const ${validFileName} = {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality
 }`
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -534,11 +530,8 @@ process.on ('SIGTERM', () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -615,5 +608,4 @@ process.on('SIGTERM', () => {
   // Add cleanup logic here
   process.exit(0);
 });
->>>>>>> origin/auto/autonomy-17186719616
 

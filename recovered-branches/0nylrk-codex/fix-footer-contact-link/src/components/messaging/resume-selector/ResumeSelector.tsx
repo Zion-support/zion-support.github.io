@@ -50,7 +50,6 @@
           description: "Please upload a PDF file",;
           variant: "destructive",;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -87,16 +86,13 @@
         file: file
       };
       
->>>>>>> origin/auto/autonomy-17186719616
       setCustomFile(file);
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -116,12 +112,8 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <div className="flex items-center space-x-2">
@@ -138,12 +130,8 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <div className="flex items-center space-x-2">
@@ -384,12 +372,8 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           resume={resume}
@@ -412,7 +396,6 @@ if ( {) {
       {selectedOption === "select" && (
         <SelectResumeSection
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
       {selectedOption === 'select' && (;
@@ -422,12 +405,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 =======
   };
@@ -511,7 +492,6 @@ if ( {) {
       
       {selectedOption === 'select' && (
         <SelectResumeSection
->>>>>>> origin/auto/autonomy-17186719616
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -526,12 +506,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           customFile={customFile}
           onFileUpload={handleFileUpload}
@@ -543,13 +521,8 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Generate Resume Now button */}
@@ -617,7 +590,6 @@ if ( {) {
         <Button 
           variant="outline"
           onClick={handleGenerateResume}
->>>>>>> origin/auto/autonomy-17186719616
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />

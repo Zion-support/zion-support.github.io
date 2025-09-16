@@ -111,7 +111,6 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {co
 >>>>>>> origin/merge-pr-12271
 
 export function writeJsonFile<T>(fileName: string, data: T): void {
->>>>>>> origin/auto/autonomy-17186719616
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
@@ -119,15 +118,12 @@ export function writeJsonFile<T>(fileName: string, data: T): void {
 }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -137,9 +133,12 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   writeJsonFile<T[]>(fileName, items);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
 =======
 
 }
 }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

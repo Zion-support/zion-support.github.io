@@ -11,10 +11,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -24,4 +22,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text });
 }
->>>>>>> origin/auto/autonomy-17186719616

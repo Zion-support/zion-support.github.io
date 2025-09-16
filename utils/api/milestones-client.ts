@@ -216,13 +216,10 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -256,4 +253,3 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 }
->>>>>>> origin/auto/autonomy-17186719616

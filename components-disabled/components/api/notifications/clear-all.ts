@@ -5,9 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .eq('user_id', userId);
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -18,4 +16,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: 'Unexpected error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

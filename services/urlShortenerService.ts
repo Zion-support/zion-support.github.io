@@ -448,7 +448,6 @@ class UrlShortenerService {
     urlClicks.push(clickEvent);
     this.clicks.set(shortCode, urlClicks);
 
->>>>>>> origin/auto/autonomy-17186719616
     const analytics = this.analytics.get(shortCode);
     if (analytics) {
       analytics.totalClicks++;
@@ -602,9 +601,7 @@ if (return null) {$2;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return url;
   }
@@ -681,7 +678,6 @@ if ( {) {
 <<<<<<< HEAD
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       
       if (!analytics.referrers.includes(clickData.referrer)) {
@@ -728,7 +724,6 @@ if ( {) {
     let result = '';
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
->>>>>>> origin/auto/autonomy-17186719616
     }
     return result;
   }
@@ -790,4 +785,3 @@ export const urlShortenerService = new UrlShortenerService();
 }
 
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> origin/auto/autonomy-17186719616

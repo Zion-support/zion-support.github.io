@@ -11,6 +11,8 @@ export type TrackEventPayload = {
   at?: string;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 =======
 },export async /**;
@@ -26,6 +28,7 @@ function track_event() {try {await fetch ('/api / analytics / events / track', {
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }}
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
 
 =======
@@ -43,4 +46,3 @@ export async function trackEvent(payload: TrackEventPayload) {
     // swallow
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

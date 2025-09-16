@@ -304,7 +304,6 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return skipLink;
 

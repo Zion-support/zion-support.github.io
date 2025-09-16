@@ -53,7 +53,6 @@
   );
 };
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 };

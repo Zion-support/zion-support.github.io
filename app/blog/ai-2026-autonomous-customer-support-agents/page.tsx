@@ -4,6 +4,9 @@ import SEO from '../../components/SEO';
 
 export const metadata = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
   title: 'AI 2026: Autonomous Customer Support Agents',
   description:
     'Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs.',
@@ -74,6 +77,8 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
           <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Evaluation Harness →</Link>
           <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="text-purple-600 font-semibold hover:text-purple-800">Observability Guide →</Link>
           <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss a Pilot</Link>
+<<<<<<< HEAD
+=======
 =======
   title: 'AI 2026: Autonomous Customer Support Agents | Zion Tech Group',
   description:
@@ -150,6 +155,7 @@ const AutonomousCustomerSupportAgents2026: React.FC = () => {
             </div>
           </div>
 >>>>>>> origin/feat/new-content-2025-09-15
+>>>>>>> cursor/create-and-deploy-new-content-376e
         </div>
       </article>
     </div>
@@ -159,8 +165,12 @@ const AutonomousCustomerSupportAgents2026: React.FC = () => {
 <<<<<<< HEAD
 export default AutonomousCustomerSupportAgentsPage;
 =======
+<<<<<<< HEAD
+export default AutonomousCustomerSupportAgentsPage;
+=======
 export default AutonomousCustomerSupportAgents2026;
 >>>>>>> origin/feat/new-content-2025-09-15
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
 import React from 'react';
 import Link from 'next/link';

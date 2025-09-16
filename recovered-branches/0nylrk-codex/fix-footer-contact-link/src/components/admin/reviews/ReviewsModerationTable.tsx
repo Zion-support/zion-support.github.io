@@ -78,12 +78,9 @@ import {
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         src={review.reviewer_profile.avatar_url}
@@ -91,7 +88,6 @@ import {
 
 =======
                         alt={review.reviewer_profile.display_name || ""}
->>>>>>> origin/auto/autonomy-17186719616
                       />
                     ) : (
                       <AvatarFallback>
@@ -115,11 +111,8 @@ import {
                 </div>
               </TableCell>
             </TableRow>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           ))}
@@ -502,5 +495,4 @@ import {
       )}
     </>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -45,7 +45,6 @@ export default function HelpCenter() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   onCategorySelect={handleCategorySelect}
 
 
@@ -54,7 +53,6 @@ export default function HelpCenter() {
 
 =======
               
->>>>>>> origin/auto/autonomy-17186719616
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -164,7 +162,6 @@ export default function HelpCenter() {
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.
->>>>>>> origin/auto/autonomy-17186719616
                     </p>
                   </div>
                 </div>
@@ -198,4 +195,3 @@ export default function HelpCenter() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

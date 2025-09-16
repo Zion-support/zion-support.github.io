@@ -175,9 +175,7 @@ export default function GlobalMapPage() {;
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

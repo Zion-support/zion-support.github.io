@@ -3,7 +3,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -70,7 +69,6 @@ export interface Offer {}export interface Offer  {ursor/fix-website-loading-erro
 export interface Offer {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   id: string;
@@ -118,7 +116,6 @@ export interface Offer {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -138,9 +135,7 @@ export interface Application {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   id: string;
   projectId: string;
@@ -165,10 +160,8 @@ export interface Message {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -200,10 +193,13 @@ export interface Message {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 =======
   is_read: boolean
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 }
 
 
@@ -212,9 +208,7 @@ export interface Conversation {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   id: string;
   participants: string[];
@@ -908,7 +902,6 @@ export async function getProject(id: string): Promise<Project | null> {
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -956,7 +949,6 @@ export async function getOffer(id: string): Promise<Offer | null> {
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1004,7 +996,6 @@ export async function getApplication(id: string): Promise<Application | null> {
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1056,7 +1047,6 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1175,6 +1165,8 @@ export async function deleteMessage(id: string): Promise<boolean> {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 // Singleton instance;
@@ -1245,16 +1237,13 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = pat
   } else {db.projects.push(project)}
   writeDb(db)return project;export function getProjectById(id: string): Project | undefined {const db = readDb()return db.projects.find(p => p.id === id)
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1336,4 +1325,3 @@ export function getProjectById(id: string): Project | undefined {
   const db = readDb();
   return db.projects.find((p) => p.id === id);
 }
->>>>>>> origin/auto/autonomy-17186719616

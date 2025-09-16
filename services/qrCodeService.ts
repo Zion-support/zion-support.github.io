@@ -587,13 +587,9 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -735,7 +731,6 @@ if (.length === 0) {) {$2;
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
       throw new Error('Margin must be between 0 and 10');
->>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
@@ -750,7 +745,10 @@ if (.length === 0) {) {$2;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
     }
 =======
@@ -906,7 +904,6 @@ if (.length === 0) {) {$2;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   private generateGeoString(data: any): string {
@@ -999,13 +996,9 @@ if ( {) {$2;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -1125,13 +1118,9 @@ export const qrCodeService  = new QRCodeService ()saveQRCode(qrCode: QRCodeResul
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1265,7 +1254,6 @@ export const qrCodeService = new QRCodeService ();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1364,4 +1352,3 @@ export const qrCodeService = new QRCodeService();
 }
 
 export const qrCodeService = new QRCodeService();
->>>>>>> origin/auto/autonomy-17186719616

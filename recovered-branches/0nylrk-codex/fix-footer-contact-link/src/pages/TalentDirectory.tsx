@@ -68,7 +68,6 @@
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Results */}
@@ -105,7 +104,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -164,7 +162,6 @@
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
->>>>>>> origin/auto/autonomy-17186719616
                     <Button
                       variant="ghost"
                       size="sm"

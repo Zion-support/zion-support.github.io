@@ -1,8 +1,8 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 =======
@@ -13,6 +13,7 @@ export interface Offer {;
 
 export interface Offer {;
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 
 
   id: string;
@@ -148,7 +149,6 @@ export type Offer = {
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
 
 export type ProjectDocument = {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   url?: string;

@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 =======
 
@@ -63,7 +62,6 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   title: string;
   description?: string;
 
@@ -75,12 +73,10 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export interface UpdateMilestoneRequest {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   title?: string;
@@ -116,8 +112,6 @@ export function isOverdue(milestone: Milestone): boolean {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -189,4 +183,3 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid'
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

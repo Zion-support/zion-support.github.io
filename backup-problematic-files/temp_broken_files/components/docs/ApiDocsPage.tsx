@@ -30,7 +30,6 @@ export default function ApiDocsPage() {
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
@@ -52,7 +51,6 @@ export default function ApiDocsPage() {
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
@@ -110,7 +108,5 @@ function ChangelogWidget() {
 
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 

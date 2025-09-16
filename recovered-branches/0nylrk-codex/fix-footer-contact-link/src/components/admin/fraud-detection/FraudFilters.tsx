@@ -26,7 +26,6 @@
       </div>
       
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> origin/auto/autonomy-17186719616
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -61,7 +60,6 @@
         </SelectContent>
       </Select>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -73,4 +71,3 @@
     </div>
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

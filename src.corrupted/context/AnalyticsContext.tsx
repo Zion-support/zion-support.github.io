@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 import _React,{ createContext,useContext,ReactNode } from 'react'; interface AnalyticsContextType { "trackEvent": (event: string,properties?: Record<string,any>) => void; "trackPageView": (page: string) => void} } const "defaultContext": AnalyticsContextType = { trackEvent: () => {},"trackPageView": () => {}}; const AnalyticsContext = createContext<AnalyticsContextType>(defaultContext); export const useAnalytics = (): AnalyticsContextType => { const context = useContext(AnalyticsContext); if (!context) { throw new Error('useAnalytics must be used within an AnalyticsProvider')} return context}; export const AnalyticsProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const trackEvent = ("event": 'string',properties?: Record<string,any>) => { _console.log('Analytics "event": ',event,properties)}; const trackPageView = ("page": string) => { _console.log('Page view:',page)}; return ( <AnalyticsContext.Provider value={{ trackEvent,trackPageView }}> {children} </AnalyticsContext.Provider> )};
+<<<<<<< HEAD
+=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 import _React,{ createContext,useContext,ReactNode } from 'react'; interface AnalyticsContextType { "trackEvent": (event: string,properties?: Record<string,any>) => void; "trackPageView": (page: string) => void} } const "defaultContext": AnalyticsContextType = { trackEvent: () => {},"trackPageView": () => {}}const AnalyticsContext = createContext<AnalyticsContextType>(defaultContext)export const useAnalytics = (): AnalyticsContextType => { const context = useContext(AnalyticsContext)if (!context) { throw new Error('useAnalytics must be used within an AnalyticsProvider')} return context}export const AnalyticsProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const trackEvent = ("event": 'string',properties?: Record<string,any>) => { _console.log('Analytics "event": ',event,properties)}const trackPageView = ("page": string) => { _console.log('Page view:',page)}return ( <AnalyticsContext.Provider value={{ trackEvent,trackPageView }}> {children} </AnalyticsContext.Provider> )}ursor/automate-test-improve-and-merge-code-646c;
@@ -31,3 +33,4 @@ const React,{ createContext,useContext,ReactNode } from "react"; interface Analy
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

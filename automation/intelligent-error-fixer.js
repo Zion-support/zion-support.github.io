@@ -314,6 +314,8 @@ class IntelligentErrorFixer {
         }
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >:automation/intelligent-error-fixer.js;
@@ -368,6 +370,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
 const fs = require('fs');
 const path = require('path');
 const {
@@ -412,6 +415,8 @@ const {
           }},
         "mergeConflicts": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
@@ -423,6 +428,7 @@ const {
             // Remove merge conflict markers
             return content
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -447,6 +453,8 @@ const {
     async runBuildCheck() {
       try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
@@ -456,6 +464,7 @@ const {
 
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -482,7 +491,10 @@ const {
         return { "success": false, "output": error.stdout || error.message };
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
     }
     async runTypeCheck() {
       try {
@@ -779,6 +791,8 @@ if (require.main === module) {
 }
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+<<<<<<< HEAD
+=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 
@@ -835,3 +849,4 @@ module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs')const path = require('path')const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log')this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' )this.errorPatterns = this.initializeErrorPatterns()fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||;
 #!/usr/bin/env node const fs = require('fs')const path = require('path')const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log')this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' )this.errorPatterns = this.initializeErrorPatterns()fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||;
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

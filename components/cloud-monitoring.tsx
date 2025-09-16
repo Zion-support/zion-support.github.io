@@ -2,10 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 =======
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function CloudMonitoringPage() {
   const features = [
@@ -220,7 +218,6 @@ export default function CloudMonitoringPage() {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Monitoring Capabilities */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

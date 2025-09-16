@@ -51,6 +51,8 @@ class CodeQualityChecker {
 }
 new CodeQualityChecker().run();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
@@ -81,3 +83,4 @@ const fs = require('fs')const path = require('path')class CodeQualityChecker { c
 }
 new CodeQualityChecker().run()const fs = require('fs')const path = require('path')class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath)if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd())console.log(`Found ${this.issues.length} code quality issues`)this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run()
 >>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

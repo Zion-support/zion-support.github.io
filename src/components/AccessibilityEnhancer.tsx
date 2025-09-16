@@ -1,77 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
-
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    setIsHighContrast(prefersHighContrast);
-
-    // Listen for changes in preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Apply accessibility styles
-    const root = document.documentElement;
-    
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    if (reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Apply font size
-    root.style.fontSize = `${fontSize}px`;
-  }, [isHighContrast, reducedMotion, fontSize]);
-
   // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          event.preventDefault();
-        }
-      }
+  const enhanceKeyboardNavigation = useCallback(() => {
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        const focusable = document.querySelectorAll(focusableElements);
+        const firstFocusable = focusable[0] as HTMLElement;
+        const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
 
-      // Skip to navigation
-      if (event.key === 'Tab' && !event.shiftKey && event.target === document.body) {
-        const navigation = document.querySelector('nav, [role="navigation"]');
-        if (navigation) {
-          (navigation as HTMLElement).focus();
-          event.preventDefault();
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusable) {
+            lastFocusable.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusable) {
+            firstFocusable.focus();
+            e.preventDefault();
+          }
         }
       }
     };
@@ -80,97 +33,111 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Focus management
-  useEffect(() => {
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
     
-    const handleTabKey = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        const focusable = Array.from(document.querySelectorAll(focusableElements)) as HTMLElement[];
-        const firstFocusable = focusable[0];
-        const lastFocusable = focusable[focusable.length - 1];
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }, []);
 
-        if (event.shiftKey) {
-          if (document.activeElement === firstFocusable) {
-            lastFocusable?.focus();
-            event.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastFocusable) {
-            firstFocusable?.focus();
-            event.preventDefault();
-          }
-        }
+  // High contrast mode detection
+  const detectHighContrastMode = useCallback(() => {
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+    
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast');
+        announceToScreenReader('High contrast mode enabled');
+      } else {
+        document.body.classList.remove('high-contrast');
+        announceToScreenReader('High contrast mode disabled');
       }
     };
 
-    document.addEventListener('keydown', handleTabKey);
-    return () => document.removeEventListener('keydown', handleTabKey);
+    prefersHighContrast.addEventListener('change', handleContrastChange);
+    
+    // Initial check
+    if (prefersHighContrast.matches) {
+      document.body.classList.add('high-contrast');
+    }
+
+    return () => {
+      prefersHighContrast.removeEventListener('change', handleContrastChange);
+    };
+  }, [announceToScreenReader]);
+
+  // Reduced motion detection
+  const detectReducedMotion = useCallback(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('reduced-motion');
+        announceToScreenReader('Reduced motion mode enabled');
+      } else {
+        document.body.classList.remove('reduced-motion');
+        announceToScreenReader('Reduced motion mode disabled');
+      }
+    };
+
+    prefersReducedMotion.addEventListener('change', handleMotionChange);
+    
+    // Initial check
+    if (prefersReducedMotion.matches) {
+      document.body.classList.add('reduced-motion');
+    }
+
+    return () => {
+      prefersReducedMotion.removeEventListener('change', handleMotionChange);
+    };
+  }, [announceToScreenReader]);
+
+  // Focus management
+  const manageFocus = useCallback(() => {
+    const focusableElements = document.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    
+    focusableElements.forEach((element, index) => {
+      element.setAttribute('tabindex', index.toString());
+    });
   }, []);
 
-  return (
-    <>
-      {children}
-      
-      {/* Skip links */}
-      <div className="sr-only focus-within:not-sr-only">
-        <a
-          href="#main-content"
-          className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 z-50 focus:top-4 focus:left-4"
-        >
-          Skip to main content
-        </a>
-        <a
-          href="#navigation"
-          className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 z-50 focus:top-16 focus:left-4"
-        >
-          Skip to navigation
-        </a>
-      </div>
+  // ARIA labels enhancement
+  const enhanceARIALabels = useCallback(() => {
+    // Add ARIA labels to interactive elements without them
+    const interactiveElements = document.querySelectorAll('button:not([aria-label]), [role="button"]:not([aria-label])');
+    
+    interactiveElements.forEach((element) => {
+      const text = element.textContent?.trim();
+      if (text && !element.getAttribute('aria-label')) {
+        element.setAttribute('aria-label', text);
+      }
+    });
+  }, []);
 
-      {/* Accessibility controls */}
-      <div className="fixed bottom-4 left-4 z-40">
-        <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
-          <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>
-          
-          <div className="space-y-2">
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={isHighContrast}
-                onChange={(e) => setIsHighContrast(e.target.checked)}
-                className="rounded"
-              />
-              <span className="text-sm text-gray-700">High contrast</span>
-            </label>
-            
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={reducedMotion}
-                onChange={(e) => setReducedMotion(e.target.checked)}
-                className="rounded"
-              />
-              <span className="text-sm text-gray-700">Reduce motion</span>
-            </label>
-            
-            <div className="space-y-1">
-              <label className="text-sm text-gray-700">Font size</label>
-              <input
-                type="range"
-                min="12"
-                max="24"
-                value={fontSize}
-                onChange={(e) => setFontSize(Number(e.target.value))}
-                className="w-full"
-              />
-              <div className="text-xs text-gray-500 text-center">{fontSize}px</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+  useEffect(() => {
+    const keyboardCleanup = enhanceKeyboardNavigation();
+    const contrastCleanup = detectHighContrastMode();
+    const motionCleanup = detectReducedMotion();
+    
+    // Initial setup
+    manageFocus();
+    enhanceARIALabels();
+
+    return () => {
+      keyboardCleanup();
+      contrastCleanup();
+      motionCleanup();
+    };
+  }, [enhanceKeyboardNavigation, detectHighContrastMode, detectReducedMotion, manageFocus, enhanceARIALabels]);
+
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
