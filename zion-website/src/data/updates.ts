@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New content (2025-09-16 - batch 3)
+    {
+        title: 'Launch: Agentic Evidence Hub v1.0',
+        summary: 'Central place to browse, search, and share signed evidence bundles and scorecards.',
+        href: '/updates/agentic-evidence-hub-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Report: State of Enterprise Agent Safety (2026 Preview)',
+        summary: 'Key risks, posture trends, and control patterns from early enterprise deployments.',
+        href: '/updates/state-of-enterprise-agent-safety-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
     // Newly added updates (2025-09-16 - batch 2)
     {
         title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
@@ -40,7 +55,7 @@ export const updates: UpdateItem[] = [
         date: '2025-09-16',
         tag: 'Guide',
     },
-=======
+    
     // Fresh content (2025-09-16)
     {
         title: 'Blueprint: Agent Posture Management — Continuous Controls',
