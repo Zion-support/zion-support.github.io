@@ -15,6 +15,18 @@ export default function ContentIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-posture-management" className="hover:underline">
+              AI 2026: Agent Posture Management — Practical Guide
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Continuously assess and harden agents across identity, tools, data, and runtime with evaluation gates and policy-as-code.
+          </p>
+          <Link href="/content/ai-2026-agent-posture-management" className="text-fuchsia-700 font-semibold">Read Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
               Secure Agentic Data Pipelines (2026)
