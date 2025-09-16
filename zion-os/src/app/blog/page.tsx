@@ -19,17 +19,6 @@ export default function BlogPage() {
       featured: true
     },
     {
-      id: 'ai-safety-governance-blueprint-2025',
-      title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
-      excerpt: 'Operationalize AI safety with policy, red‑teaming, guardrails, and monitoring at scale.',
-      category: 'AI Solutions',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-14',
-      readTime: '11 min read',
-      image: '/blog/ai-safety-governance.jpg',
-      featured: true
-    },
-    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -77,6 +66,26 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'edge-ai-compliance-2025',
+      title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
+      excerpt: 'Deploy edge AI with privacy-by-design, verifiable audit trails, and policy controls.',
+      category: 'AI Solutions',
+      author: 'Dr. Maria Garcia',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/edge-ai-compliance.jpg'
+    },
+    {
+      id: 'ai-accessibility-2025',
+      title: 'AI Accessibility 2025: Designing Inclusive Autonomous Experiences',
+      excerpt: 'Patterns for multimodal access, adjustable autonomy, and explainable interactions.',
+      category: 'Accessibility',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/ai-accessibility-2025.jpg'
+    },
+    {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
       excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
@@ -85,16 +94,6 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
-    },
-    {
-      id: 'edge-ai-inference-acceleration',
-      title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
-      excerpt: 'Achieve sub‑100ms inference with quantization, batching, caching, and split inference.',
-      category: 'Infrastructure',
-      author: 'Michael Rodriguez',
-      date: '2025-09-13',
-      readTime: '8 min read',
-      image: '/blog/edge-ai-inference.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -186,7 +185,8 @@ export default function BlogPage() {
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Infrastructure', count: 2, active: false },
+    { name: 'Accessibility', count: 1, active: false },
+    { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];
 
@@ -213,13 +213,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-safety-governance-blueprint-2025"
+            href="/blog/sovereign-ai-commerce-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AG
+                SA
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -227,10 +227,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises
+                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  How to implement policy, evals, guardrails, and monitoring without slowing delivery.
+                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>

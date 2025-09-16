@@ -102,9 +102,6 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
-              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
-                ✅ New: AI Safety & Governance 2025
-              </a>
             </div>
           </div>
         </div>
@@ -150,8 +147,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Agent Safety Playbook 2025
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Edge AI Compliance 2025
               </a>
             </div>
           </div>
