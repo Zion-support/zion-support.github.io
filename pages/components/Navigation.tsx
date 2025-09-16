@@ -1,52 +1,41 @@
-import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
+import { useState } from 'react';
+
+import {
   ArrowRight,
-  Award,
   BarChart3,
-  Shield,
-  Code,
-  Zap,
-  Globe,
-  Home,
-  Building,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
   BookOpen,
   Brain,
-  Calculator,
-  Camera,
-  CheckCircle,
+  Building,
+  Calendar,
+  Car,
   ChevronDown,
-  Clock,
   Cloud,
-  CreditCard,
+  Code,
+  Cpu,
   DollarSign,
   Eye,
-  Gamepad2,
+  FileText,
+  Globe,
+  GraduationCap,
   Heart,
+  Home,
   Lock,
   Mail,
-  MapPin,
   Menu,
-  Music,
+  MessageSquare,
   Network,
   Phone,
   Rocket,
   Settings,
-  Star,
+  Shield,
+  ShoppingCart,
+  Sprout,
   Target,
   TrendingUp,
-  Cpu,
-  Car,
-  Sprout,
-  Wifi,
-  GraduationCap,
   Users,
-  Truck
+  Wifi,
+  Zap
 } from 'lucide-react';
 
 const navigationItems = [
@@ -411,6 +400,9 @@ export default function Navigation() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              <Link href="/blog/ai-2026-agent-release-health-scorecards" className="bg-white text-blue-700 rounded-full px-3 py-1 font-medium hover:bg-blue-50 transition-colors">
+                New: Agent Release Health Scorecards →
+              </Link>
               <Link href="/contact" className="hover:text-blue-200 transition-colors">
                 Get Free Consultation
               </Link>

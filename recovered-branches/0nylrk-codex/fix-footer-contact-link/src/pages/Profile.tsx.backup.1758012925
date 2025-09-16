@@ -1,0 +1,25 @@
+
+      navigate("/login?redirect=/profile");
+    }
+  }, [user, isLoading, navigate]);
+
+                >
+                  Logout
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+
+
+  );
+}

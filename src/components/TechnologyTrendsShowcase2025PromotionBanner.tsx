@@ -1,161 +1,48 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Globe
-  ArrowRight,
-  X,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
-
-const TechnologyTrendsShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentTrendsetCurrentTrend] = useState(0);
-
-  const trends = [
-    { name: "AI-Powered Automation"icon: Brainadoption: "85%" },
-    { name: "Edge Computing"icon: Zapadoption: "70%" },
-    { name: "Quantum Security"icon: Globeadoption: "60%" },
-    { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
+const COMPONENT: React.FC = () => {
   return (
-    <divdiv
-      className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20" />
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000" />
-          <div className="absolute bottom-6 left-12 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500" />
-          <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-700" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
         </div>
-      </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Left Content */}
-            <div className="flex-1 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
-                  className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
-                >
-                  <TrendingUp className="w-3 h-3" />
-                </divdiv>
-                <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
-                  NEW: Technology Trends Showcase 2025
-                </span>
-              </div>
-
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                The Future of Technology is Here Today
-              </h2>
-              
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
-                <span className="text-lg opacity-90">Trending:</span>
-                <divdiv
-                  key={currentTrend}
-                  className="flex items-center gap-2"
-                >
-                  <trends[currentTrend].icon className="w-4 h-4" />
-                  <span className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full">
-                    {trends[currentTrend].name} ({trends[currentTrend].adoption})
-                  </span>
-                </divdiv>
-              </div>
-
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
-                <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
-                  <span>AI Automation</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
-                  <span>Edge Computing</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
-                  <span>Quantum Security</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Center - Rotating Trends */}
-            <div className="hidden md:flex items-center gap-8">
-              {trends.map((trendindex) => {
-                const Icon = trend.icon;
-                return (
-                  <divdiv
-                    key={index}
-                      scale: currentTrend === index ? 1.1 : 1,
-                      opacity: currentTrend === index ? 1 : 0.7
-                    }}
-                    className="text-center"
-                  >
-                    <Icon className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-xs font-medium">{trend.name}</div>
-                    <div className="text-lg font-bold">{trend.adoption}</div>
-                  </divdiv>
-                );
-              })}
-            </div>
-
-            {/* Right Content - CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-3">
-              <divbutton
-                className="flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                <Lightbulb className="w-4 h-4" />
-                Explore Trends
-                <ArrowRight className="w-4 h-4" />
-              </divbutton>
-              
-              <divbutton
-                className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                <Rocket className="w-4 h-4" />
-                Future Ready
-              </divbutton>
-            </div>
-
-            {/* Close Button */}
-            <divbutton
-              onClick={() => setIsVisible(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
-            >
-              <X className="w-5 h-5" />
-            </divbutton>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
           </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="h-1 bg-white/20">
-          <divdiv
-            className="h-full bg-white"
-          />
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
-export default TechnologyTrendsShowcase2025PromotionBanner;
+export default COMPONENT;

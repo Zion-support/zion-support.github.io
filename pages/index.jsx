@@ -1,7 +1,11 @@
+import fs from 'fs';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import path from 'path';
 import Layout from './components/Layout';
+const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
-const Home = () => {
+const Home = ({ featuredItems = [] }) => {
   return (
     <Layout 
       title="Zion Tech Group - Leading Technology Solutions Provider"
@@ -27,6 +31,8 @@ const Home = () => {
               </Link>
             </div>
             
+            <ContentShowcaseBanner2026 />
+
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
@@ -51,6 +57,23 @@ const Home = () => {
                 <Link href="/services/micro-saas" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
                   Learn More →
                 </Link>
+              </div>
+            </div>
+
+            {/* Latest Insights Promo */}
+            <div className="mt-20 text-left">
+              <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {featuredItems.map((item) => (
+                  <Link key={item.href} href={item.href} className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                    <div className="text-sm text-blue-200 mb-2">Latest • 5-8 min read</div>
+                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-white/80">{item.desc}</p>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-6">
+                <Link href="/blog" className="text-blue-200 hover:text-white font-semibold">View all articles →</Link>
               </div>
             </div>
 
@@ -81,3 +104,20 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  try {
+    const registryPath = path.join(process.cwd(), 'public', 'automation', 'new-content-registry.json');
+    const raw = fs.readFileSync(registryPath, 'utf-8');
+    const data = JSON.parse(raw);
+    const items = Array.isArray(data.items) ? data.items : [];
+    const featuredItems = items
+      .filter((i) => typeof i.title === 'string' && typeof i.href === 'string')
+      .sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0))
+      .slice(0, 12);
+
+    return { props: { featuredItems }, revalidate: 3600 };
+  } catch (e) {
+    return { props: { featuredItems: [] }, revalidate: 3600 };
+  }
+}

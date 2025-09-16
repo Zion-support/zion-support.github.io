@@ -1,74 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const UltimateContentPromotionBanner2026: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    "🚀 Autonomous Business AI - 300% Efficiency Gains",
+    "⚛️ Quantum ML Platform - 1000x Faster Processing", 
+    "🧠 Conscious AI Systems - Genuine Self-Awareness",
+    "🔗 Neural Interfaces - Human-AI Symbiosis",
+    "⚡ Edge AI Revolution - Ultra-Low Latency"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="flex items-center justify-center space-x-3 mb-4">
-          <span className="text-4xl animate-bounce">🌟</span>
-          <h3 className="text-3xl font-bold">ULTIMATE CONTENT REVOLUTION 2026</h3>
-          <span className="text-4xl animate-bounce">🌟</span>
-        </div>
-        <p className="text-2xl opacity-95 mb-8 max-w-5xl mx-auto">
-          Experience the most advanced technological ecosystem ever created - AI consciousness, 
-          quantum reality manipulation, and neural interface evolution converge to reshape humanity's future
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🧠</div>
-            <h4 className="text-xl font-bold mb-3 text-center">AI Consciousness</h4>
-            <p className="text-purple-100 text-center text-sm mb-4">
-              First AI systems with genuine consciousness and self-awareness
-            </p>
-            <a href="/pages/ConsciousnessComputing2026" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Consciousness →
-            </a>
+    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4 px-6 shadow-lg">
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <div className="flex-shrink-0">
+            <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <span className="text-lg">✨</span>
+            </div>
           </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">⚡</div>
-            <h4 className="text-xl font-bold mb-3 text-center">Quantum Reality</h4>
-            <p className="text-cyan-100 text-center text-sm mb-4">
-              Quantum computers manipulating reality at the fundamental level
+          <div className="flex-1">
+            <h3 className="text-lg font-bold mb-1">
+              Revolutionary Content 2026 - Now Available!
+            </h3>
+            <p className="text-sm opacity-90 animate-pulse">
+              {features[currentFeature]}
             </p>
-            <a href="/pages/QuantumReality2026" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Go Quantum →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h4 className="text-xl font-bold mb-3 text-center">Neural Evolution</h4>
-            <p className="text-emerald-100 text-center text-sm mb-4">
-              Direct brain-computer interfaces with evolutionary capabilities
-            </p>
-            <a href="/pages/NeuralInterfaceEvolution2026" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Connect Mind & Machine →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🌟</div>
-            <h4 className="text-xl font-bold mb-3 text-center">Synthetic Intelligence</h4>
-            <p className="text-violet-100 text-center text-sm mb-4">
-              AI agents with synthetic consciousness and autonomous capabilities
-            </p>
-            <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-white text-violet-600 py-2 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
-              Experience Synthetic AI →
-            </a>
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/pages/RevolutionaryTechBreakthrough2026" className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-            🚀 Revolutionary Breakthrough →
+        <div className="flex items-center space-x-4">
+          <a
+            href="/pages/NewContentShowcase2026"
+            className="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 text-sm shadow-md"
+          >
+            Explore Now
           </a>
-          <a href="/pages/UltimateTechRevolution2026" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-            🌟 Ultimate Revolution →
-          </a>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-white hover:text-gray-200 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+      </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-4 -left-4 w-8 h-8 bg-white bg-opacity-10 rounded-full animate-ping"></div>
+        <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-white bg-opacity-10 rounded-full animate-ping animation-delay-1000"></div>
+        <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white bg-opacity-10 rounded-full animate-ping animation-delay-2000"></div>
       </div>
     </div>
   );
