@@ -45,6 +45,36 @@ export const blogPosts = [
     slug: "exec-dashboards-evidence-hubs"
   },
   {
+    id: 6004,
+    title: "AI 2026: Reliable Autonomy Operations",
+    excerpt: "Evaluation gates, runtime guardrails, and evidence-led operations for safe scale.",
+    content: "Run autonomy reliably at enterprise scale with lifecycle evaluation gates, runtime guardrails, and evidence-led operations. This guide covers defining SLOs for agent systems, wiring scorecards to releases, implementing rollback contracts, and centralizing evidence for audit-ready ops.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Reliability", "Guardrails", "Evals", "Operations"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-reliable-autonomy-operations.jpg",
+    slug: "ai-2026-reliable-autonomy-operations"
+  },
+  {
+    id: 6005,
+    title: "AI 2026: Agentic Billing Controls",
+    excerpt: "Keep costs predictable with budgets, approvals, and cost-aware routing for agents.",
+    content: "Design agentic billing controls that make spend predictable: per-tenant budgets, approvals for high-risk actions, cost-aware model routing, and automated kill-switches. Includes reference dashboards and policy bundles you can adapt today.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["FinOps", "Budgets", "Approvals", "Routing"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-agentic-billing-controls.jpg",
+    slug: "ai-2026-agentic-billing-controls"
+  },
+  {
     id: 5001,
     title: "AI 2026: Release Scorecards That Prevent Bad Deploys",
     excerpt: "Scorecards that gate merges and rollouts using online evals, cost, and safety.",
