@@ -9,8 +9,8 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-4 text-sm">
             <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: Revolutionary Tech Insights 2026 & Case Studies Available</span>
-            <a href="/pages/RevolutionaryTechInsights2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
+            <span className="font-semibold">NEW: Ultimate Content Showcase 2026 - 60+ Revolutionary Articles</span>
+            <a href="/ultimate-content-showcase-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
               Explore Now →
             </a>
             <span className="animate-pulse">🚀</span>
@@ -42,6 +42,9 @@ const Header: React.FC = () => {
             </a>
             <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Case Studies
+            </a>
+            <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+              Content Showcase
             </a>
             <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Services
