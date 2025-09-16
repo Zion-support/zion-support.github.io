@@ -86,6 +86,24 @@ const Home: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 py-16">
+        {/* New Blog Promo — Sept 16, 2025 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-2">Production Agent Postmortems — Playbook</h3>
+            <p className="text-gray-300 mb-4">Blameless, evidence‑driven postmortems that improve safety and speed.</p>
+            <Link to="/blog/ai-2026-production-agent-postmortems-playbook" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-2">Agent Release Scorecards — Evidence‑First</h3>
+            <p className="text-gray-300 mb-4">Executive scorecards wired to SLOs, evals, incidents, and budgets.</p>
+            <Link to="/blog/ai-2026-agent-release-scorecards" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-2">Agent Rollback Patterns — Safe Recovery</h3>
+            <p className="text-gray-300 mb-4">Staged deploys, eval gates, evidence bundles, and containment.</p>
+            <Link to="/blog/ai-2026-agent-rollback-patterns" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
+          </div>
+        </div>
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
