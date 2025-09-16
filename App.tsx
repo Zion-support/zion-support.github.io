@@ -126,6 +126,14 @@ import TranscendentTechRevolution2035 from './src/pages/TranscendentTechRevoluti
 import UltimateTechBreakthrough2035 from './src/pages/UltimateTechBreakthrough2035';
 import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
 import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
+import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
+import UltimateContentBanner2037 from './src/components/UltimateContentBanner2037';
+import RevolutionaryContentCarousel2038 from './src/components/RevolutionaryContentCarousel2038';
+import TranscendentTechRevolution2036 from './src/pages/TranscendentTechRevolution2036';
+import UltimateTechBreakthrough2037 from './src/pages/UltimateTechBreakthrough2037';
+import RevolutionaryTechShowcase2038 from './src/pages/RevolutionaryTechShowcase2038';
+import NextGenInnovationHub2039 from './src/pages/NextGenInnovationHub2039';
+import UltimateTechRevolution2040 from './src/pages/UltimateTechRevolution2040';
 
 export default function App(): JSX.Element {
   return (
@@ -205,10 +213,19 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Carousel 2035 */}
                 <RevolutionaryContentCarousel2035 />
 
+                {/* NEW: Revolutionary Content Banner 2036 */}
+                <RevolutionaryContentBanner2036 />
+
+                {/* NEW: Ultimate Content Banner 2037 */}
+                <UltimateContentBanner2037 />
+
+                {/* NEW: Revolutionary Content Carousel 2038 */}
+                <RevolutionaryContentCarousel2038 />
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-lg font-bold mb-4 animate-pulse">
-                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2035 - Transcendent Evolution, Interdimensional Technology & Ultimate Breakthrough
+                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2040 - Transcendent Evolution, Interdimensional Technology & Ultimate Breakthrough
                   </div>
                   <h1 className="text-5xl font-bold text-gray-900 mb-6">
                     Welcome to Zion Tech Group
@@ -336,6 +353,21 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateTechBreakthrough2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Ultimate Breakthrough 2035 →
+                    </a>
+                    <a href="/pages/TranscendentTechRevolution2036" className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Transcendent Revolution 2036 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2037" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Breakthrough 2037 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2038" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Revolutionary Showcase 2038 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2039" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Innovation Hub 2039 →
+                    </a>
+                    <a href="/pages/UltimateTechRevolution2040" className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Revolution 2040 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -881,6 +913,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
           <Route path="/pages/TranscendentTechRevolution2035" element={<TranscendentTechRevolution2035 />} />
           <Route path="/pages/UltimateTechBreakthrough2035" element={<UltimateTechBreakthrough2035 />} />
+          <Route path="/pages/TranscendentTechRevolution2036" element={<TranscendentTechRevolution2036 />} />
+          <Route path="/pages/UltimateTechBreakthrough2037" element={<UltimateTechBreakthrough2037 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2038" element={<RevolutionaryTechShowcase2038 />} />
+          <Route path="/pages/NextGenInnovationHub2039" element={<NextGenInnovationHub2039 />} />
+          <Route path="/pages/UltimateTechRevolution2040" element={<UltimateTechRevolution2040 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
