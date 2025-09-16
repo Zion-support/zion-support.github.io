@@ -77,7 +77,61 @@ const RevolutionaryContentBanner2026: React.FC = () => {
   return (
     <div className="relative mb-12 overflow-hidden">
       {/* Main Banner */}
+<<<<<<< HEAD
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 text-white relative overflow-hidden">
+=======
+      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+            <h3 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2026</h3>
+            <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+          </div>
+          <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
+          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+            {contentSlides[currentSlide].description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href={contentSlides[currentSlide].link}
+              className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30"
+            >
+              🌟 Explore Now →
+            </a>
+            <a 
+              href="/pages/UltimateTechRevolution2026"
+              className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30"
+            >
+              🚀 View All Content →
+            </a>
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {contentSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-purple-600 scale-125' 
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+<<<<<<< HEAD
+=======
+=======
+      {/* Dynamic Content Carousel */}
+      <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+>>>>>>> cursor/create-and-deploy-new-content-079e
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10">
           <div className="text-center mb-8">

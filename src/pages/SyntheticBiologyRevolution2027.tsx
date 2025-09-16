@@ -2,8 +2,12 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
+=======
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> cursor/create-and-deploy-new-content-079e
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -70,8 +74,22 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
+<<<<<<< HEAD
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
+=======
+            <p className="text-purple-100 mb-6 text-center">
+              Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Pollution-eating bacteria</li>
+              <li>• Carbon capture organisms</li>
+              <li>• Ocean cleanup systems</li>
+              <li>• Ecosystem restoration</li>
+            </ul>
+            <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Restoration →
+>>>>>>> cursor/create-and-deploy-new-content-079e
             </a>
           </div>
         </div>
