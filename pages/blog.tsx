@@ -65,6 +65,18 @@ export default function Blog() {
       image: '/blog/agentic-crm-2025.jpg'
     },
     {
+      id: 'ai-2026-evidence-led-operations-blueprint',
+      title: 'Evidence‑Led Operations Blueprint (2026)',
+      excerpt: 'Centralize evals, incidents, KPIs, and customer signals to drive safer, faster decisions.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Operations',
+      tags: ['Evals', 'Incidents', 'SLOs', 'Governance'],
+      featured: true,
+      image: '/blog/evidence-led-ops-2026.jpg'
+    },
+    {
       id: 'cloud-native-security',
       title: 'Building Secure Cloud-Native Applications',
       excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.',
