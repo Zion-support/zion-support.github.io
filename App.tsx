@@ -66,6 +66,12 @@ import UltimateTechRevolution2029 from './src/pages/UltimateTechRevolution2029';
 import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
 import RevolutionaryContentBanner2028 from './src/components/RevolutionaryContentBanner2028';
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+// New 2031 Revolutionary Content
+import UltimateTechRevolution2031 from './src/pages/UltimateTechRevolution2031';
+import RevolutionaryAIBreakthrough2031 from './src/pages/RevolutionaryAIBreakthrough2031';
+import NextGenSpaceTech2031 from './src/pages/NextGenSpaceTech2031';
+import RevolutionaryContentBanner2031 from './src/components/RevolutionaryContentBanner2031';
+import InteractiveTechShowcase2031 from './src/components/InteractiveTechShowcase2031';
 
 export default function App(): JSX.Element {
   return (
@@ -78,6 +84,14 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* ULTRA-PROMINENT NEW 2031 CONTENT BANNER */}
+                <RevolutionaryContentBanner2031 />
+
+                {/* INTERACTIVE TECH SHOWCASE 2031 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2031 />
+                </div>
+
                 {/* ULTRA-PROMINENT NEW 2028-2030 CONTENT BANNER */}
                 <RevolutionaryContentBanner2028 />
 
@@ -120,13 +134,22 @@ export default function App(): JSX.Element {
                   <div className="relative z-10">
                     <div className="flex items-center justify-center space-x-4 mb-6">
                       <span className="text-4xl animate-bounce">🌟</span>
-                      <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026-2030</h3>
+                      <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026-2031</h3>
                       <span className="text-4xl animate-bounce">🌟</span>
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technological breakthroughs that will reshape the future of humanity
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
+                      <a href="/pages/UltimateTechRevolution2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🚀 Ultimate Tech Revolution 2031 →
+                      </a>
+                      <a href="/pages/RevolutionaryAIBreakthrough2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🧠 Revolutionary AI Breakthrough 2031 →
+                      </a>
+                      <a href="/pages/NextGenSpaceTech2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌌 Next-Gen Space Tech 2031 →
+                      </a>
                       <a href="/pages/UltimateTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🚀 Ultimate Tech Revolution 2030 →
                       </a>
@@ -135,15 +158,6 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/UltimateTechRevolution2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🚀 Ultimate Tech Revolution 2028 →
-                      </a>
-                      <a href="/pages/RevolutionaryAIBreakthrough2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🧠 Revolutionary AI Breakthrough 2028 →
-                      </a>
-                      <a href="/pages/NextGenSpaceTech2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🌌 Next-Gen Space Tech 2028 →
-                      </a>
-                      <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🚀 Ultimate Tech Revolution 2027 →
                       </a>
                     </div>
                   </div>
@@ -169,6 +183,11 @@ export default function App(): JSX.Element {
               </main>
             </div>
           } />
+          
+          {/* New 2031 Revolutionary Content Routes */}
+          <Route path="/pages/UltimateTechRevolution2031" element={<UltimateTechRevolution2031 />} />
+          <Route path="/pages/RevolutionaryAIBreakthrough2031" element={<RevolutionaryAIBreakthrough2031 />} />
+          <Route path="/pages/NextGenSpaceTech2031" element={<NextGenSpaceTech2031 />} />
           
           {/* New 2028-2030 Revolutionary Content Routes */}
           <Route path="/pages/UltimateTechRevolution2028" element={<UltimateTechRevolution2028 />} />
