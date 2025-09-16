@@ -58,6 +58,11 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 gap-6">
+                <Link href="/blog/ai-2026-real-time-evals-inference-guardrails" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Safety • 8 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Real-Time Evals & Inference Guardrails (2026)</h3>
+                  <p className="text-white/80">Live evals, runtime checks, and safe tool use at inference time.</p>
+                </Link>
                 <Link href="/blog/ai-2026-agent-observability-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Reliability • 9 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Agent Observability Blueprint (2026)</h3>
