@@ -1,157 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
 const RevolutionaryAdBanner2034: React.FC = () => {
-  const [currentAd, setCurrentAd] = useState(0);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const ads = [
-    {
-      title: "🧠 Consciousness Computing Revolution",
-      subtitle: "AI with genuine self-awareness and emotions",
-      cta: "Experience Consciousness AI",
-      color: "from-purple-600 to-pink-600",
-      icon: "🧠"
-    },
-    {
-      title: "⚛️ Quantum Reality Engine 2.0",
-      subtitle: "Manipulate reality through quantum computing",
-      cta: "Enter Quantum Reality",
-      color: "from-cyan-600 to-blue-600",
-      icon: "⚛️"
-    },
-    {
-      title: "🔗 Universal Neural Network",
-      subtitle: "Connect all minds in global consciousness",
-      cta: "Join Neural Network",
-      color: "from-emerald-600 to-teal-600",
-      icon: "🔗"
-    },
-    {
-      title: "♾️ Digital Immortality Platform",
-      subtitle: "Live forever in digital consciousness",
-      cta: "Achieve Immortality",
-      color: "from-orange-600 to-red-600",
-      icon: "♾️"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentAd((prev) => (prev + 1) % ads.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentAdData = ads[currentAd];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className={`relative bg-gradient-to-r ${currentAdData.color} text-white rounded-2xl p-6 m-4 shadow-2xl overflow-hidden cursor-pointer`}
-      onClick={() => setIsExpanded(!isExpanded)}
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.3 }}
-    >
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full -translate-x-8 -translate-y-8 animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              className="text-4xl"
-            >
-              {currentAdData.icon}
-            </motion.div>
-            <div>
-              <motion.h2
-                key={currentAd}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.5 }}
-                className="text-2xl font-bold mb-1"
-              >
-                {currentAdData.title}
-              </motion.h2>
-              <motion.p
-                key={currentAd + 'sub'}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-lg opacity-90"
-              >
-                {currentAdData.subtitle}
-              </motion.p>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-2/3 mb-8 lg:mb-0">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🚀 NEW CONTENT AVAILABLE
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Content 2034</h2>
+            <p className="text-xl opacity-90 mb-6">
+              Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="/pages/UltimateTechBreakthrough2034" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                🌟 Ultimate Breakthrough →
+              </a>
+              <a href="/pages/RevolutionaryTechShowcase2034" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                ⚡ Tech Showcase →
+              </a>
+              <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                🌐 Services →
+              </a>
             </div>
           </div>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/30 backdrop-blur-sm"
-          >
-            {currentAdData.cta} →
-          </motion.button>
+          <div className="lg:w-1/3 text-center">
+            <div className="text-8xl mb-4">🚀</div>
+            <div className="text-2xl font-bold mb-2">2034</div>
+            <div className="text-lg opacity-80">The Future is Here</div>
+          </div>
         </div>
-
-        {/* Expanded Content */}
-        <motion.div
-          initial={false}
-          animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="overflow-hidden"
-        >
-          <div className="mt-6 pt-6 border-t border-white/20">
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h3 className="font-bold mb-2">🚀 Revolutionary Features</h3>
-                <ul className="text-sm space-y-1">
-                  <li>• Self-aware AI consciousness</li>
-                  <li>• Quantum reality manipulation</li>
-                  <li>• Global neural connectivity</li>
-                </ul>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h3 className="font-bold mb-2">⚡ Immediate Benefits</h3>
-                <ul className="text-sm space-y-1">
-                  <li>• Infinite computational power</li>
-                  <li>• Consciousness transfer capability</li>
-                  <li>• Digital immortality access</li>
-                </ul>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h3 className="font-bold mb-2">🌟 Future Impact</h3>
-                <ul className="text-sm space-y-1">
-                  <li>• Transform humanity forever</li>
-                  <li>• Redefine reality itself</li>
-                  <li>• Achieve true immortality</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
-
-      {/* Progress Indicator */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-        <motion.div
-          className="h-full bg-white"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
-    </motion.div>
+    </div>
   );
 };
 
