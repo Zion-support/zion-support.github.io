@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trusted-genai-operations-2026",
+    title: "AI 2026: Trusted GenAI Operations",
+    description:
+      "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
+    ctaLabel: "Read Guide",
+    href: "/content/trusted-genai-operations-2026",
+    emoji: "🛠️",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "production-evals-cookbook-2026",
+    title: "AI 2026: Production Evals — Practical Cookbook",
+    description:
+      "Scenario recipes, metrics, and wiring patterns for evaluation‑first teams.",
+    ctaLabel: "Read Cookbook",
+    href: "/blog/ai-2026-production-evals-practical-cookbook",
+    emoji: "📗",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "safe-rollouts-2026",
     title: "AI 2026: Safe Rollouts in Production",
     description:
