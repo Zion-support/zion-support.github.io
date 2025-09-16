@@ -509,6 +509,36 @@ content_index:
         coverage: "> 70% initial"
         gate_pass_rate: "> 95%"
         audit_ready: true
+    - id: "ai-2026-reliable-agent-upgrades-blueprint"
+      type: "blog"
+      title: "AI 2026: Reliable Agent Upgrades — Canary Scorecards and Rollback Contracts"
+      file_path: "/content/blog/ai-2026-reliable-agent-upgrades-blueprint.md"
+      url: "/blog/ai-2026-reliable-agent-upgrades-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Change Management", "Progressive Delivery", "Evaluations", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "14 min read"
+      metrics:
+        change_failure_rate: "< 3%"
+        rollback_time: "< 5 min"
+        gate_pass_rate: "> 95%"
+    - id: "ai-2026-release-scorecards-starter-kit"
+      type: "resource"
+      title: "AI 2026: Release Scorecards — Starter Kit"
+      file_path: "/content/resources/ai-2026-release-scorecards-starter-kit.md"
+      url: "/resources/ai-2026-release-scorecards-starter-kit"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "Tooling", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "10 min read"
+      metrics:
+        audit_ready: true
+        coverage: "> 70% initial"
+        rollback_time: "< 5 min"
 =======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
