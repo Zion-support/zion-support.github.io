@@ -637,6 +637,12 @@ export default function HomePage() {
         {/* New Content 2025 Ultimate Banner - FEATURED */}
         <NewContent2025UltimateBanner />
         
+        {/* New Content 2026 Ultimate Banner - NEW FEATURED */}
+        <NewContent2026UltimateBanner />
+        
+        {/* AI 2026 Breakthrough Showcase - NEW FEATURED */}
+        <AI2026BreakthroughShowcase />
+        
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
