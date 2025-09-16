@@ -40,6 +40,12 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import RevolutionaryContentCarousel2026 from './src/components/RevolutionaryContentCarousel2026';
+import TrendingTopicsWidget2026 from './src/components/TrendingTopicsWidget2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryAIConsciousness2026 from './src/pages/RevolutionaryAIConsciousness2026';
+import QuantumComputingBreakthrough2026 from './src/pages/QuantumComputingBreakthrough2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,6 +675,21 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Services Showcase 2026 */}
                 <RevolutionaryServicesShowcase2026 />
+                
+                {/* Revolutionary Content Carousel 2026 */}
+                <div className="mb-16">
+                  <RevolutionaryContentCarousel2026 />
+                </div>
+                
+                {/* Trending Topics Widget 2026 */}
+                <div className="mb-16">
+                  <TrendingTopicsWidget2026 />
+                </div>
+                
+                {/* Interactive Tech Showcase 2026 */}
+                <div className="mb-16">
+                  <InteractiveTechShowcase2026 />
+                </div>
                 
                 {/* Enhanced Hero Section */}
                 <EnhancedHeroSection />
@@ -2773,6 +2794,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
+          <Route path="/revolutionary-ai-consciousness-2026" element={<RevolutionaryAIConsciousness2026 />} />
+          <Route path="/quantum-computing-breakthrough-2026" element={<QuantumComputingBreakthrough2026 />} />
+          <Route path="/neural-interface-revolution-2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />

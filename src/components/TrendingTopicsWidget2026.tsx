@@ -1,280 +1,326 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Clock, Eye, Heart, MessageCircle, Share2 } from 'lucide-react';
-import { REVOLUTIONARY_BLOG_POSTS_2026 } from '../data/revolutionaryContent2026';
+import { motion } from 'framer-motion';
+import { TrendingUp, Fire, Star, Clock, ArrowUpRight, Eye } from 'lucide-react';
 
-interface TrendingTopic {
-  id: string;
-  title: string;
-  category: string;
-  engagement: number;
-  growth: number;
-  isHot: boolean;
-  isNew: boolean;
-  color: string;
-  icon: string;
-}
+const TrendingTopicsWidget2026 = () => {
+  const [activeTab, setActiveTab] = useState('trending');
 
-const TrendingTopicsWidget2026: React.FC = () => {
-  const [trendingTopics, setTrendingTopics] = useState<TrendingTopic[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const trendingTopics = [
+    {
+      id: 1,
+      title: "AI Consciousness Breakthrough",
+      category: "Breakthrough Technology",
+      views: "2.3M",
+      growth: "+45%",
+      trend: "up",
+      tags: ["AI Consciousness", "Breakthrough", "Future Tech"],
+      description: "Revolutionary AI that experiences genuine emotions and self-awareness",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing Revolution",
+      category: "Quantum Computing",
+      views: "1.8M",
+      growth: "+38%",
+      trend: "up",
+      tags: ["Quantum Computing", "Technology", "Revolutionary"],
+      description: "Million-qubit processors operating at room temperature",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 3,
+      title: "Neural Interface Technology",
+      category: "Neural Technology",
+      views: "1.5M",
+      growth: "+52%",
+      trend: "up",
+      tags: ["Neural Interfaces", "Brain-Computer", "Technology"],
+      description: "Direct brain-computer communication with 99.8% accuracy",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      id: 4,
+      title: "Consciousness Computing",
+      category: "AI Consciousness",
+      views: "1.2M",
+      growth: "+67%",
+      trend: "up",
+      tags: ["Consciousness Computing", "AI Evolution", "Self-Awareness"],
+      description: "AI systems achieving genuine self-awareness and emotional understanding",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      id: 5,
+      title: "Quantum-Neural Fusion",
+      category: "Fusion Technology",
+      views: "980K",
+      growth: "+73%",
+      trend: "up",
+      tags: ["Quantum-Neural", "Fusion Technology", "Future Computing"],
+      description: "Ultimate convergence of quantum computing and neural interfaces",
+      color: "from-red-500 to-pink-500"
+    }
+  ];
 
-  useEffect(() => {
-    // Generate trending topics based on our new content
-    const topics: TrendingTopic[] = [
-      {
-        id: 'ai-consciousness',
-        title: 'AI Consciousness Revolution',
-        category: 'AI',
-        engagement: 95,
-        growth: 340,
-        isHot: true,
-        isNew: true,
-        color: 'from-purple-500 to-pink-500',
-        icon: '🧠'
-      },
-      {
-        id: 'quantum-computing',
-        title: 'Quantum Computing Breakthrough',
-        category: 'Quantum',
-        engagement: 88,
-        growth: 280,
-        isHot: true,
-        isNew: true,
-        color: 'from-blue-500 to-cyan-500',
-        icon: '⚛️'
-      },
-      {
-        id: 'neural-interfaces',
-        title: 'Neural Interface Technology',
-        category: 'Neural',
-        engagement: 92,
-        growth: 420,
-        isHot: true,
-        isNew: true,
-        color: 'from-green-500 to-teal-500',
-        icon: '🔗'
-      },
-      {
-        id: 'metaverse-ai',
-        title: 'Metaverse AI Ecosystem',
-        category: 'Metaverse',
-        engagement: 85,
-        growth: 190,
-        isHot: false,
-        isNew: true,
-        color: 'from-orange-500 to-red-500',
-        icon: '🌐'
-      },
-      {
-        id: 'autonomous-systems',
-        title: 'Autonomous Business AI',
-        category: 'Automation',
-        engagement: 90,
-        growth: 310,
-        isHot: true,
-        isNew: true,
-        color: 'from-indigo-500 to-purple-500',
-        icon: '🤖'
-      },
-      {
-        id: 'synthetic-intelligence',
-        title: 'Synthetic Intelligence',
-        category: 'AI',
-        engagement: 87,
-        growth: 250,
-        isHot: false,
-        isNew: true,
-        color: 'from-pink-500 to-rose-500',
-        icon: '✨'
-      },
-      {
-        id: 'digital-twins',
-        title: 'Digital Twins Technology',
-        category: 'IoT',
-        engagement: 82,
-        growth: 180,
-        isHot: false,
-        isNew: true,
-        color: 'from-cyan-500 to-blue-500',
-        icon: '👥'
-      },
-      {
-        id: 'edge-computing',
-        title: 'Edge Computing Revolution',
-        category: 'Infrastructure',
-        engagement: 79,
-        growth: 160,
-        isHot: false,
-        isNew: true,
-        color: 'from-emerald-500 to-green-500',
-        icon: '⚡'
-      }
-    ];
+  const hotTopics = [
+    {
+      id: 1,
+      title: "Interdimensional AI Computing",
+      views: "3.1M",
+      trend: "hot",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      id: 2,
+      title: "Omniversal AI Consciousness",
+      views: "2.7M",
+      trend: "hot",
+      color: "from-pink-500 to-purple-500"
+    },
+    {
+      id: 3,
+      title: "Holographic Reality Technology",
+      views: "2.4M",
+      trend: "hot",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      id: 4,
+      title: "Space-Time Computing",
+      views: "2.1M",
+      trend: "hot",
+      color: "from-emerald-500 to-green-500"
+    }
+  ];
 
-    setTrendingTopics(topics);
-  }, []);
+  const featuredTopics = [
+    {
+      id: 1,
+      title: "Revolutionary AI Consciousness 2026",
+      author: "Dr. Elena Rodriguez",
+      readTime: "12 min",
+      featured: true,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing Breakthrough",
+      author: "Prof. Marcus Chen",
+      readTime: "10 min",
+      featured: true,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 3,
+      title: "Neural Interface Revolution",
+      author: "Dr. Sarah Kim",
+      readTime: "11 min",
+      featured: true,
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
 
-  const categories = ['all', 'AI', 'Quantum', 'Neural', 'Metaverse', 'Automation', 'IoT', 'Infrastructure'];
-  
-  const filteredTopics = selectedCategory === 'all' 
-    ? trendingTopics 
-    : trendingTopics.filter(topic => topic.category === selectedCategory);
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return <TrendingUp className="w-4 h-4 text-green-400" />;
+      case 'hot':
+        return <Fire className="w-4 h-4 text-orange-400" />;
+      default:
+        return <TrendingUp className="w-4 h-4 text-gray-400" />;
+    }
+  };
 
-  const hotTopics = trendingTopics.filter(topic => topic.isHot);
-  const newTopics = trendingTopics.filter(topic => topic.isNew);
-
-  return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <TrendingUp className="w-6 h-6" />
-            <h2 className="text-2xl font-bold">Trending Topics 2026</h2>
-          </div>
-          <div className="flex items-center gap-2 text-sm">
-            <Clock className="w-4 h-4" />
-            <span>Live</span>
-          </div>
-        </div>
-        <p className="text-purple-100 mt-2">Discover what's revolutionizing technology today</p>
-      </div>
-
-      {/* Category Filter */}
-      <div className="p-4 border-b border-gray-100">
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {category === 'all' ? 'All Topics' : category}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Hot Topics Section */}
-      <div className="p-6">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-          <h3 className="text-lg font-semibold text-gray-800">🔥 Hot Right Now</h3>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {hotTopics.slice(0, 4).map((topic, index) => (
-            <motion.div
-              key={topic.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 border border-gray-200 hover:shadow-md transition-all duration-300"
-            >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{topic.icon}</span>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">{topic.title}</h4>
-                    <span className="text-sm text-gray-500">{topic.category}</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1 text-red-500">
-                  <TrendingUp className="w-4 h-4" />
-                  <span className="text-sm font-medium">+{topic.growth}%</span>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-1">
-                    <Eye className="w-4 h-4" />
-                    <span>{topic.engagement}%</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Heart className="w-4 h-4" />
-                    <span>2.3k</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MessageCircle className="w-4 h-4" />
-                    <span>156</span>
-                  </div>
-                </div>
-                <button className="p-2 hover:bg-gray-200 rounded-full transition-colors duration-300">
-                  <Share2 className="w-4 h-4 text-gray-500" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* All Topics Grid */}
-        <div className="mb-4">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">All Trending Topics</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <AnimatePresence>
-              {filteredTopics.map((topic, index) => (
-                <motion.div
-                  key={topic.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all duration-300 cursor-pointer group"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">{topic.icon}</span>
-                      <div>
-                        <h4 className="font-medium text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'trending':
+        return (
+          <div className="space-y-4">
+            {trendingTopics.map((topic, index) => (
+              <motion.div
+                key={topic.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
                           {topic.title}
-                        </h4>
-                        <span className="text-xs text-gray-500">{topic.category}</span>
+                        </h3>
+                        {getTrendIcon(topic.trend)}
+                      </div>
+                      <p className="text-sm text-gray-400 mb-3">
+                        {topic.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {topic.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-3 py-1 rounded-full text-xs font-medium bg-slate-700/50 text-gray-300"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <div className="flex gap-1">
-                      {topic.isNew && (
-                        <span className="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full font-medium">
-                          New
-                        </span>
-                      )}
-                      {topic.isHot && (
-                        <span className="px-2 py-1 bg-red-100 text-red-600 text-xs rounded-full font-medium">
-                          Hot
-                        </span>
-                      )}
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${topic.color} flex items-center justify-center`}>
+                      <ArrowUpRight className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
                         <Eye className="w-4 h-4" />
-                        <span>{topic.engagement}%</span>
+                        <span>{topic.views} views</span>
                       </div>
-                      <div className="flex items-center gap-1 text-green-600">
-                        <TrendingUp className="w-4 h-4" />
-                        <span>+{topic.growth}%</span>
+                      <div className="flex items-center gap-1 text-green-400">
+                        <span className="font-semibold">{topic.growth}</span>
+                        <span>this week</span>
                       </div>
                     </div>
-                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${topic.color}`} />
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                      {topic.category}
+                    </span>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        );
+      
+      case 'hot':
+        return (
+          <div className="space-y-4">
+            {hotTopics.map((topic, index) => (
+              <motion.div
+                key={topic.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${topic.color} flex items-center justify-center`}>
+                        <Fire className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white group-hover:text-orange-300 transition-colors duration-300">
+                          {topic.title}
+                        </h3>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Eye className="w-4 h-4" />
+                          <span>{topic.views} views</span>
+                        </div>
+                      </div>
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors duration-300" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        );
+      
+      case 'featured':
+        return (
+          <div className="space-y-4">
+            {featuredTopics.map((topic, index) => (
+              <motion.div
+                key={topic.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                  <div className="flex items-start gap-4">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${topic.color} flex items-center justify-center`}>
+                      <Star className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
+                          {topic.title}
+                        </h3>
+                        <span className="px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
+                          Featured
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-400 mb-3">
+                        by {topic.author}
+                      </p>
+                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{topic.readTime} read</span>
+                        </div>
+                      </div>
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors duration-300" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        );
+      
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-700/50">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              Trending Topics 2026
+            </h2>
+            <p className="text-gray-400">
+              Discover the most revolutionary technologies and breakthroughs
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Fire className="w-6 h-6 text-orange-400" />
+            <span className="text-sm font-semibold text-orange-400">Live</span>
           </div>
         </div>
 
-        {/* View All Button */}
-        <div className="text-center">
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
-            View All Trending Topics
-          </button>
+        {/* Tabs */}
+        <div className="flex gap-2 mb-8">
+          {[
+            { id: 'trending', label: 'Trending', icon: TrendingUp },
+            { id: 'hot', label: 'Hot', icon: Fire },
+            { id: 'featured', label: 'Featured', icon: Star }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                  : 'text-gray-400 hover:text-white hover:bg-slate-700/50'
+              }`}
+            >
+              <tab.icon className="w-4 h-4" />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Content */}
+        <div className="min-h-[400px]">
+          {renderContent()}
         </div>
       </div>
     </div>
