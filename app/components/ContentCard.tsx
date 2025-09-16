@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-interface ContentCardProps {
+export interface ContentCardProps {
   title: string;
   description: string;
   href: string;
@@ -12,7 +11,7 @@ interface ContentCardProps {
   tags?: string[];
 }
 
-export default function ContentCard({
+const ContentCard = ({
   title,
   description,
   href,
@@ -21,7 +20,7 @@ export default function ContentCard({
   featured = false,
   image,
   tags = []
-}: ContentCardProps) {
+}: ContentCardProps): JSX.Element => {
   return (
     <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${featured ? 'ring-2 ring-purple-500' : ''}`}>
       {image && (
@@ -74,4 +73,6 @@ export default function ContentCard({
       </div>
     </div>
   );
-}
+};
+
+export default ContentCard;
