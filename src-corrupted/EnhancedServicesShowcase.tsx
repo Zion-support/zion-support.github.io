@@ -29,7 +29,9 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+=======
 import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices';
+=======
 import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
 
 export default function EnhancedServicesShowcase() {
@@ -38,6 +40,7 @@ export default function EnhancedServicesShowcase() {
   const filteredServices = selectedCategory === 'all' 
     ? comprehensiveServices 
     : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+=======
     ? ENHANCED_SERVICES 
     : ENHANCED_SERVICES.filter(service => 
         SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
@@ -113,7 +116,9 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
+=======
           {serviceCategories.map((category) => (
+=======
           {SERVICE_CATEGORIES.map((category) => (
             <Button
               key={category.id}
@@ -348,6 +353,7 @@ function ServiceCard({ service }: { service: any }) {
             ))}
           </div>
 
+=======
           {/* Availability */}
           <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
@@ -378,6 +384,7 @@ function ServiceCard({ service }: { service: any }) {
                   </AccordionTrigger>
                   <AccordionContent className="text-zion-cyan-light">
                     <div className="space-y-2">
+=======
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-green-400" />
                         <span>Advanced AI algorithms</span>
@@ -403,6 +410,7 @@ function ServiceCard({ service }: { service: any }) {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <Phone className="h-4 w-4 text-zion-cyan" />
+=======
                           <span>+1 302 464 0950</span>
                         </div>
                         <div className="flex items-center gap-2">

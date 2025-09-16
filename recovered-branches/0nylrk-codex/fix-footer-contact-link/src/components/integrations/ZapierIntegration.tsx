@@ -18,6 +18,7 @@ export function ZapierIntegration() {
 
 
 
+=======
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -52,6 +53,7 @@ export function ZapierIntegration() {
 
 
 
+=======
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
             </p>
             
@@ -82,6 +84,7 @@ export function ZapierIntegration() {
 
 
 
+=======
         
         <Card>
           <CardHeader>
@@ -119,6 +122,7 @@ export function ZapierIntegration() {
 
 
 
+=======
       
       <Card>
         <CardHeader>
@@ -131,6 +135,7 @@ export function ZapierIntegration() {
 
 
           <div className="grid md: grid-cols-3 gap-4">
+=======
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
           
@@ -144,6 +149,7 @@ export function ZapierIntegration() {
 
 
 
+=======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
             
@@ -156,6 +162,7 @@ export function ZapierIntegration() {
 
 
 
+=======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
             
@@ -178,5 +185,6 @@ export function ZapierIntegration() {
 }
 ;
 
+=======
   );
 }

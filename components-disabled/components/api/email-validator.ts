@@ -2,6 +2,7 @@ interface EmailValidationResult {
   email: string;
   is_valid: boolean;
 
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface EmailValidationResult {

@@ -30,6 +30,7 @@ const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveSe
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
 
+=======
 ;
 // Lazy load pages for better performance;
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": "module.HomePage "})));
@@ -195,6 +196,7 @@ const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing').t
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
 // New innovative services pages
 // Additional service components
+=======
     >;
       <Router>;
         <div className="min-h-screen bg-gray-50 flex">;
@@ -338,6 +340,7 @@ const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServices
 });
 ;
 export default App;
+=======
 
 export default function App(props: any) {
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
@@ -500,6 +503,7 @@ export default function App() {
     </EnhancedErrorBoundary>
   );
 }
+=======
     </ErrorBoundary>
   );
 }

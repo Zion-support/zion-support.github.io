@@ -20,6 +20,7 @@ export function FilterSidebar({
 
 
 
+=======
           onClick={onClearFilters}
         >
           Clear All

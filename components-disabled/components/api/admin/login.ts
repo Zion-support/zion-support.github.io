@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
     return
+=======
 import { setSessionCookie } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,6 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
 
+=======
     res.status(200).json({ ok: true });
   } else {
     res.status(401).json({ error: 'Invalid credentials' });

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -152,7 +151,7 @@ const Home: React.FC = () => {
         <InteractiveTechShowcase />
 
         {/* Call to Action */}
-        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <divsection className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
 >>>>>>> cursor/create-and-deploy-new-content-376e
           <div className="text-center">

@@ -10,6 +10,7 @@
 
 
 
+=======
   resetFilters,
 }) => {
   return (
@@ -62,6 +63,7 @@
 
 
 
+=======
       
       <Button variant="outline" onClick={resetFilters} className="md:w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters

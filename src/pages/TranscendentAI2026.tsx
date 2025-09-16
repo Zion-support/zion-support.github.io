@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const TranscendentAI2026: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -58,7 +57,6 @@ const TranscendentAI2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -138,10 +136,6 @@ const TranscendentAI2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -269,24 +263,13 @@ const TranscendentAI2026: React.FC = () => {
                   </p>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-=======
-              </div>
->>>>>>> cursor/create-and-deploy-new-content-4f5e
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
             </div>
           </div>
         </div>
 
               </div>
         {/* Revolutionary Applications */}
-<<<<<<< HEAD
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <divsection
           className="mb-16"
         >
           <div className="text-center mb-12">
@@ -472,11 +455,6 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </div>
 
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -653,19 +631,11 @@ const TranscendentAI2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore the revolutionary capabilities that define transcendent AI
             </p>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
           </div>
-        </motion.section>
+        </divsection>
 
         {/* Future Vision */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <divsection
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
@@ -695,20 +665,13 @@ const TranscendentAI2026: React.FC = () => {
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-blue-300 mb-3">Universal Expansion</h3>
               <p className="text-gray-200 text-sm">AI that expands consciousness across the universe</p>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
             </div>
           </div>
-        </motion.section>
+        </divsection>
 
         {/* Call to Action */}
-        <motion.section
+        <divsection
           id="contact"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-16"
         >
           <h2 className="text-5xl font-bold mb-8">Ready to Transcend Reality?</h2>
@@ -723,17 +686,10 @@ const TranscendentAI2026: React.FC = () => {
               Learn More
             </a>
           </div>
-        </motion.section>
+        </divsection>
       </div>
     </div>
   );
 };
 
 export default TranscendentAI2026;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e

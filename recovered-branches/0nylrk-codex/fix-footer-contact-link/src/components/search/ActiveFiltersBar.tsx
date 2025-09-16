@@ -20,6 +20,7 @@ interface ActiveFiltersBarProps {
 
 
 
+=======
 import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
@@ -186,6 +187,7 @@ if (return null) {
     </div>);
 }
 
+=======
   onClearSearch
 }: ActiveFiltersBarProps) {
   const hasActiveFilters = 

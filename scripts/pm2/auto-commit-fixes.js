@@ -9,6 +9,7 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 
 
 
+=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

@@ -28,6 +28,7 @@ interface QuotesTableProps {
 
 
 
+=======
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { 
@@ -156,6 +157,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 };
 
+=======
                   </div>
                 </TableCell>
                 <TableCell className="text-white">

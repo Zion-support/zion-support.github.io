@@ -36,6 +36,7 @@
   }
   },
 
+=======
       navigate("/login?redirect=/content-generator");
     }
   }, [user, isLoading, navigate]);
@@ -116,6 +117,7 @@
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
+=======
       return;
     }
     
@@ -225,6 +227,7 @@
 
 
 
+=======
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />

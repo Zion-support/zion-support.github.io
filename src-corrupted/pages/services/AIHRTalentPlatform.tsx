@@ -37,6 +37,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
+=======
     'Talent Acquisition','
     'Performance Management',;'
     'Learning & Development',;'

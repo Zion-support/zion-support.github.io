@@ -28,6 +28,7 @@ import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
+=======
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -37,10 +38,12 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
+=======
 
 
 
 
+=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -75,6 +78,7 @@ export default function AIServices() {
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
+=======
 import React from './react';
 import Layout from "../components / Layout";
 export default /**
@@ -106,10 +110,12 @@ function AIServices() {
         </div>;
       </div>;
 
+=======
     </Layout>;
   );
 
 
+=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -301,8 +307,10 @@ export default function AIServices() {
 
           {/* Category Filter */}
 
+=======
 }
 
+=======
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -616,9 +624,12 @@ export default function AIServices() {
 
 }
 
+=======
 
 }
+=======
 }
+=======
     </Layout>);
 }
 

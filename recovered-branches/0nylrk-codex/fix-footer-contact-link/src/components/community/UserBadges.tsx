@@ -4,6 +4,7 @@
 const iconMap = {;
 
 
+=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react";
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -21,6 +22,7 @@ interface UserBadgesProps {
 };
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
+=======
 
 const iconMap = {
   Trophy,
@@ -53,6 +55,7 @@ const iconMap = {
 
 export default UserBadges;
 
+=======
         );
       })}
     </div>

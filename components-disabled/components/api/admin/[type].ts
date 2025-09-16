@@ -36,6 +36,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
       }
 
+=======
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
@@ -60,6 +61,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
+=======
     const { id, updates } = req.body as { id: string; updates: Record<string, any> };
     if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
@@ -197,6 +199,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
 
+=======
       return res.status(200).json({ ok: true });
     } else {
       const list = MOCK_DATA[type] || [];

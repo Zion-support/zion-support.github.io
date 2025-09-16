@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
   const showcaseItems = [
     {
       id: 1,
@@ -16,7 +11,6 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
-<<<<<<< HEAD
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -111,35 +105,6 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
-=======
-      link: "/pages/AdvancedAITransformation2026",
-      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
-      category: "AI & Machine Learning",
-      year: "2026"
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-    },
-    {
-      id: 2,
-      title: "Advanced Quantum Computing 2026",
-      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/AdvancedQuantumComputing2026",
-      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
-    },
-    {
-      id: 3,
-<<<<<<< HEAD
-      title: "Next-Gen Tech Showcase 2026",
-      description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
-      image: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/NextGenTechShowcase2026",
-      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
-      category: "Technology Showcase",
-      year: "2026"
->>>>>>> cursor/create-and-deploy-new-content-502e
     },
     {
       id: 4,
@@ -304,7 +269,6 @@ const EnhancedContentShowcase: React.FC = () => {
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
       icon: "🧬",
-<<<<<<< HEAD
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
@@ -369,9 +333,6 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -379,10 +340,7 @@ const EnhancedContentShowcase: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center text-white"
           >
             {/* Category Header */}
@@ -402,14 +360,10 @@ const EnhancedContentShowcase: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Experience our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
             </p>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -480,13 +434,8 @@ const EnhancedContentShowcase: React.FC = () => {
         {/* Carousel Container */}
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <divdiv
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
               >
                 <div className="flex-1 text-white">
@@ -513,7 +462,6 @@ const EnhancedContentShowcase: React.FC = () => {
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
-                transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
               >
                 <div className={`w-full h-full bg-gradient-to-br ${contentSlides[currentSlide].bgGradient} backdrop-blur-sm rounded-xl p-8 border ${contentSlides[currentSlide].borderColor}`}>
@@ -588,8 +536,8 @@ const EnhancedContentShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </divdiv>
+            </div>
           </div>
 
           {/* Navigation Controls */}
@@ -648,11 +596,8 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Quick Access Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {showcaseItems.map((item, index) => (
-              <motion.div
+              <divdiv
                 key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -667,7 +612,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 >
                   Explore →
                 </a>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -746,11 +691,9 @@ const EnhancedContentShowcase: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
-          <motion.div
+          <divdiv
             key={slide.id}
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
             className={`bg-gradient-to-br ${slide.bgGradient} backdrop-blur-sm rounded-xl p-6 border ${slide.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
             onClick={() => goToSlide(index)}
           >
@@ -763,18 +706,13 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               Explore Now →
             </a>
-          </motion.div>
+          </divdiv>
         ))}
-<<<<<<< HEAD
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
                   onHoverStart={() => setHoveredCard(index)}
                   onHoverEnd={() => setHoveredCard(null)}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 cursor-pointer relative overflow-hidden"
@@ -830,25 +768,21 @@ const EnhancedContentShowcase: React.FC = () => {
                       </div>
                     </div>
                     
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <divbutton
                       className={`w-full bg-gradient-to-r ${contentCategories[activeCategory].color} py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                     >
                       Explore Content →
-                    </motion.button>
+                    </divbutton>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 backdrop-blur-sm rounded-2xl p-12 text-center mt-20"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
@@ -864,12 +798,7 @@ const EnhancedContentShowcase: React.FC = () => {
               Create Account
             </button>
           </div>
-        </motion.div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
+        </divdiv>
       </div>
     </div>
   );

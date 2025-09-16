@@ -40,6 +40,7 @@ const MobileLaunchPage: React.FC = () => {
     <AppLayout>;
 
       <SEO
+=======
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout";
@@ -64,6 +65,7 @@ const MobileLaunchPage: React.FC = () => {
 
 export default MobileLaunchPage;
 
+=======
       
       <MobileLaunchHero />
       

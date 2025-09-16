@@ -19,6 +19,7 @@
   
         'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
       ],;
+=======
       features[;'
         'Up to 1,000 transactions/month','
         'Basic compliance monitoring','

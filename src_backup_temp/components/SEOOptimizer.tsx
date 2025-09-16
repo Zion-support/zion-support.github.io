@@ -28,6 +28,7 @@ autoAnalyze: tru e,;
   const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
+=======
 ;
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({;
@@ -391,6 +392,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <div className="flex space-x-1">;
                 {['all',content',technical',performance',accessibility'].map((category) => (;
                   <button;
+=======
                     key={category}
                         : 'bg-zion-slate/10 text-zion-slate "hover": "b g-zion-slate/20'`;
                     "}`}
@@ -410,6 +412,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <AnimatePresence>
                 {filteredIssues.map((issue) => (<motion.div
                     key={issue.id}
+=======
   { "opacity": "1",;
   "y": "0;
 "}}
@@ -497,6 +500,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 animate = {;
   { opacity: 1,;
   height: 'auto';
+=======
   { "opacity": "0",;
   "height": "0;
 "}}
@@ -621,6 +625,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     optimizePage;
     optimizePage
   }};
+=======
 '"`
 ;,"}
     );,})";

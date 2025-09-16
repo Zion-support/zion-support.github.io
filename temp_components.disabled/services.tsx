@@ -239,6 +239,7 @@ const serviceCategories: Array<{
     description: 'Quantum-powered data analytics and insights'
   }
 ];
+=======
 import { realVerifiedServices } from '../data/real-verified-services';
 
 export default function ServicesPage() {
@@ -253,6 +254,7 @@ export default function ServicesPage() {
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029
+=======
     ...additionalEnhancedServices,
     ...newRealServices,
     ...industryRealServices,

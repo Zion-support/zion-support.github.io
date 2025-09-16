@@ -1,7 +1,6 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentWidget = () => {
   const [selectedCategorysetSelectedCategory] = useState('ai');
@@ -53,10 +52,7 @@ const InteractiveContentWidget = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -65,13 +61,10 @@ const InteractiveContentWidget = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Category Selector */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
+        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(contentCategories).map(([keycategory]) => (
@@ -88,24 +81,16 @@ const InteractiveContentWidget = () => {
               {category.title}
             </button>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <divdiv
             key={selectedCategory}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
           >
             {contentCategories[selectedCategory].items.map((itemindex) => (
-              <motion.div
+              <divdiv
                 key={item.title}
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 onHoverStart={() => setHoveredItem(item.title)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
@@ -142,22 +127,17 @@ const InteractiveContentWidget = () => {
                 </a>
                 
                 {hoveredItem === item.title && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                  <divdiv
                     className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
                   />
                 )}
-              </motion.div>
+              </divdiv>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <divdiv
           className="text-center mt-16"
         >
           <a 
@@ -166,7 +146,7 @@ const InteractiveContentWidget = () => {
           >
             🚀 Access Full Content Library
           </a>
-        </motion.div>
+        </divdiv>
       </div>
     </section>
   );

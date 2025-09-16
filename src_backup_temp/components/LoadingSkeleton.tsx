@@ -29,6 +29,7 @@ const Skeleton: React.FC < SkeletonProps> = ({;
     return <div className={classes}  />} ;
   return ();
     <motion.div;
+=======
       className={classes}
       animate={{
         opacity: [0.5, 1, 0.5]}}
@@ -52,6 +53,7 @@ interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {;
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({;
   type = 'card',;
+=======
             {/* Header */"}";
             <div className="flex space-x-4 p-4 bg-gray-50 "dark": "anyb g-gray-800 rounded-t-lg">;
               {Array.from({ "length": 4 "}).map((_, index)  => (";
@@ -134,6 +136,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                   <Skeleton height="h-4" width="w-24"   />";
                   <Skeleton height="h-10" width="w-full"   />;
                 </div>;
+=======
               ))}
             </div>"
             <div className="flex space-x-4 pt-4">"
@@ -174,5 +177,6 @@ export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (";
 export default LoadingSkeleton;'"`;
 </LoadingSkeletonProps>;
 </motion>;
+=======
 </LoadingSkeletonProps>
 </motion>

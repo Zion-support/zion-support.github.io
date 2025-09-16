@@ -22,6 +22,7 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
 
 
 
+=======
   const dir = path.resolve(process.cwd(), 'data/cloud-automations');
   const data: Record<string, any> = {};
   try {
@@ -52,6 +53,7 @@ res.status(200).json({ ok: true, data });
 }
   res.status(200).json({ ok: true, data });
 
+=======
     // ignore
   }
   res.status(200).json({ ok: true, data });

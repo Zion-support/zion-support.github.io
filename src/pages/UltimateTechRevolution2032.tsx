@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Globe, Rocket, Shield, Cpu, Database } from 'lucide-react';
 
 const UltimateTechRevolution2032: React.FC = () => {
@@ -53,10 +52,7 @@ const UltimateTechRevolution2032: React.FC = () => {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          <divdiv
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-8">
               Ultimate Tech Revolution 2032
@@ -66,32 +62,26 @@ const UltimateTechRevolution2032: React.FC = () => {
               The future is now, and it's beyond imagination.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
               >
                 Begin Transformation <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </divbutton>
+              <divbutton
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Explore Innovations
-              </motion.button>
+              </divbutton>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Innovations Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -100,16 +90,13 @@ const UltimateTechRevolution2032: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the groundbreaking innovations that will reshape reality itself
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -10 }}
                 className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 hover:border-purple-400/40 transition-all group"
               >
                 <div className="text-purple-400 mb-6 group-hover:text-purple-300 transition-colors">
@@ -129,7 +116,7 @@ const UltimateTechRevolution2032: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -138,10 +125,8 @@ const UltimateTechRevolution2032: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+          <divdiv
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -150,14 +135,12 @@ const UltimateTechRevolution2032: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the pioneers of tomorrow's technology. Experience innovations that transcend the boundaries of reality itself.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <divbutton
               className="bg-gradient-to-r from-purple-600 to-blue-600 px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 mx-auto hover:shadow-lg hover:shadow-purple-500/25 transition-all"
             >
               Transform Your Reality <ArrowRight className="w-6 h-6" />
-            </motion.button>
-          </motion.div>
+            </divbutton>
+          </divdiv>
         </div>
       </section>
     </div>

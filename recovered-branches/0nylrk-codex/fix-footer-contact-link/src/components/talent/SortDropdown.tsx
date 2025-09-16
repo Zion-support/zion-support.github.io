@@ -13,6 +13,7 @@ interface SortDropdownProps {
 }
 
 export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {
+=======
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {

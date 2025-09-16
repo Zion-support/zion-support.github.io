@@ -56,6 +56,7 @@ export function ChatBotPanel() {
     try {
       // Call the OpenAI-powered support function
       const response = await sendToAIAssistant(text),
+=======
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
@@ -89,6 +90,7 @@ export function ChatBotPanel() {
         id: `bot-${Date.now()}`,
         content: response.message || "Sorry, I couldn't process your request. Please try again.",
         sender: "bot",
+=======
         timestamp: new Date(),
       };
       
@@ -151,6 +153,7 @@ export function ChatBotPanel() {
     }
   },
 
+=======
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,6 +206,7 @@ export function ChatBotPanel() {
 
 
 
+=======
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}

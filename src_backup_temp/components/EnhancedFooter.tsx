@@ -274,6 +274,7 @@ import {;
   CreditCard as CreditCardIcon,;
   Globe2 as Globe2Icon,;
   ShieldCheck as ShieldCheckIcon;
+=======
   Globe2 as Globe2Icon, 
   ShieldCheck as ShieldCheckIcon 
 } from 'lucide-react';
@@ -363,6 +364,7 @@ export const EnhancedFooter: React.FC = () => {
       {/* Trust Indicators */}
 ;
 export default EnhancedFooter;
+=======
 "};
 ;
       <div className="border-t border-gray-800 bg-gray-800">

@@ -1,5 +1,6 @@
 import React from 'react';
 interface DataSyncProps {;
+=======
 "}
 ;
 const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) => {;
@@ -173,6 +174,7 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
 ;
 export default DataSync;
 </DataSyncProps>;
+=======
 };
 export default DataSync;';
 </DataSyncProps>;';';

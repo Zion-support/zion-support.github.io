@@ -134,6 +134,7 @@ import React, { useState } from 'react';
     </div>
   );
 }
+=======
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
 
 interface LayoutProps {

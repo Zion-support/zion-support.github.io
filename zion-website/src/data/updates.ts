@@ -11,10 +11,6 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
   // Fresh content added 2025-09-15
   {
 <<<<<<< HEAD
@@ -146,14 +142,6 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Governance Toolkit (v2)',
 >>>>>>> origin/feature/content-updates-2025-09-15
-<<<<<<< HEAD
-=======
-=======
-  // Fresh content added 2025-09-15
-  {
-    title: 'Deep Dive: Enterprise Agent Observability (2026)',
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -176,14 +164,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Blueprint'
   },
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,11 +234,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-de62
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -306,12 +283,11 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-0dce
   },
   {
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    title: 'Launch: AI Lab Open Benchmarks Portal',
     summary:
-<<<<<<< HEAD
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
 =======
@@ -1378,10 +1354,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
-=======
-      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
-    href: '/updates/ai-autonomous-workflow-engine-1-0',
->>>>>>> cursor/create-and-deploy-new-content-502e
     date: '2025-09-15',
     tag: 'Launch'
   }
@@ -1637,10 +1609,6 @@ export const siteUpdates: SiteUpdate[] = [
 ]
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -1835,11 +1803,3 @@ export const getLatestUpdates = (limit = 6) => {
 
 >>>>>>> origin/feat/updates-content-and-advertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-=======
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e

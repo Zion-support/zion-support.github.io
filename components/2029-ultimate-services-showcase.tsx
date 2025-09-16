@@ -24,6 +24,7 @@ export default function UltimateServicesShowcase2029() {
 
 
 
+=======
     visible: {
       opacity: 1,
       y: 0,
@@ -130,6 +131,7 @@ export default function UltimateServicesShowcase2029() {
 
             {/* Stats */}
 
+=======
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
@@ -168,6 +170,7 @@ export default function UltimateServicesShowcase2029() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />;
 
 
+=======
       {/* Filters Section */}
       <section className="py-16 bg-gray-900/50 border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,6 +226,7 @@ export default function UltimateServicesShowcase2029() {
       {/* Services Grid */}
 
 
+=======
                 >
                   <div className="flex items-center space-x-2">
                     <category.icon className="h-4 w-4" />
@@ -278,6 +282,7 @@ export default function UltimateServicesShowcase2029() {
                           <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
 
 
+=======
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -311,6 +316,7 @@ export default function UltimateServicesShowcase2029() {
 
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size: </span>
+=======
                   {/* Market Info */}
                   <div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
@@ -381,6 +387,7 @@ export default function UltimateServicesShowcase2029() {
             </div>;
 
 
+=======
                   {/* Hover Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
@@ -399,6 +406,7 @@ export default function UltimateServicesShowcase2029() {
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
+=======
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
@@ -419,6 +427,7 @@ export default function UltimateServicesShowcase2029() {
               </button>
             </div>
 
+=======
           )}
         </div>
       </section>
@@ -456,6 +465,7 @@ export default function UltimateServicesShowcase2029() {
 Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
+=======
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -500,6 +510,7 @@ Join the future of technology with our revolutionary services.
 
 
 
+=======
 
       <UltraFuturisticFooter2029 />
     </>

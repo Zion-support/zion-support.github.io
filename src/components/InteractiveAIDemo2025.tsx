@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Bot
   MessageCircle
@@ -134,21 +133,16 @@ const InteractiveAIDemo2025 = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
       </div>
 
-      <motion.div
+      <divdiv
         className="relative z-10 container mx-auto px-4 py-16"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
       >
         {/* Header */}
-        <motion.div variants={itemVariants} className="text-center mb-12">
-          <motion.div
+          <divdiv
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
           >
             <Bot className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
-          </motion.div>
+          </divdiv>
           
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Chat with the
@@ -162,11 +156,10 @@ const InteractiveAIDemo2025 = () => {
             Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
             quantum computingbusiness automationand future predictions.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Chat Interface */}
-        <motion.div
-          variants={itemVariants}
+        <divdiv
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
         >
           {/* Chat Header */}
@@ -188,13 +181,10 @@ const InteractiveAIDemo2025 = () => {
 
           {/* Messages Container */}
           <div className="h-96 overflow-y-auto p-6 space-y-6">
-            <AnimatePresence>
+            <div>
               {messages.map((message) => (
-                <motion.div
+                <divdiv
                   key={message.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-xs lg:max-w-md ${
@@ -221,22 +211,20 @@ const InteractiveAIDemo2025 = () => {
                       {message.timestamp.toLocaleTimeString()}
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
-            </AnimatePresence>
+            </div>
 
             {/* Typing Indicator */}
             {isTyping && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+              <divdiv
                 className="flex justify-start"
               >
                 <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
                   <Loader2 className="w-4 h-4 animate-spin" />
                   <span className="text-sm">AI is thinking...</span>
                 </div>
-              </motion.div>
+              </divdiv>
             )}
           </div>
 
@@ -254,12 +242,10 @@ const InteractiveAIDemo2025 = () => {
                   disabled={isTyping}
                 />
               </div>
-              <motion.button
+              <divbutton
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {isTyping ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -267,14 +253,13 @@ const InteractiveAIDemo2025 = () => {
                   <Send className="w-4 h-4" />
                 )}
                 Send
-              </motion.button>
+              </divbutton>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Features Showcase */}
-        <motion.div
-          variants={itemVariants}
+        <divdiv
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
@@ -285,21 +270,20 @@ const InteractiveAIDemo2025 = () => {
           ].map((featureindex) => {
             const Icon = feature.icon;
             return (
-              <motion.div
+              <divdiv
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                whileHover={{ y: -5scale: 1.02 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-purple-300 text-sm">{feature.description}</p>
-              </motion.div>
+              </divdiv>
             );
           })}
-        </motion.div>
-      </motion.div>
+        </divdiv>
+      </divdiv>
     </div>
   );
 };

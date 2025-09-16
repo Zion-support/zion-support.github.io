@@ -25,6 +25,7 @@
 
 export default ReputationDisplay;
 
+=======
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
       </div>
     </div>

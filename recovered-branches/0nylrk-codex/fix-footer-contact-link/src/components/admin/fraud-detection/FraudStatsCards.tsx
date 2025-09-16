@@ -21,6 +21,7 @@ interface FraudStatsCardsProps {
 }
 
 
+=======
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
@@ -43,6 +44,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 
 
 
+=======
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -63,6 +65,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
             <CardTitle className="text-2xl font-bold text-amber-500">
               {stats.suspicious_count}
             </CardTitle>
+=======
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -83,6 +86,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
             <CardTitle className="text-2xl font-bold text-red-500">
               {stats.dangerous_count}
             </CardTitle>
+=======
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -230,6 +234,7 @@ export default FraudStatsCards;
 
 
 
+=======
       
       <Card>
         <CardHeader className="pb-2">

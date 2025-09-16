@@ -297,6 +297,7 @@ import {
   FileText,
 import React, { useState } from 'react';
 import Link from 'next/link';
+=======
   TrendingUp,
   Briefcase,
   Newspaper,
@@ -438,6 +439,7 @@ import {
 } from 'lucide-react';
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
+=======
   Search,
   BarChart,
   Users2,
@@ -455,6 +457,7 @@ export default function Footer(props: any) {
     const handleScroll = (props: any) => {
   Facebook, 
   Instagram,
+=======
   Youtube,
   ArrowRight,
   Shield,
@@ -611,11 +614,14 @@ export function Footer(props: any) {
   FileText,
   Users,
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+=======
   Palette,
   ChevronDown
+=======
   DollarSign,
   ExternalLink
 } from 'lucide-react';
+=======
   Clock
 } from 'lucide-react';
 
@@ -1044,6 +1050,7 @@ const Footer = () => {
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
+=======
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
@@ -1225,6 +1232,7 @@ export function Footer(props: any) {
     );
   };
 
+=======
   const footerSections = [
     {
       title: "Services",
@@ -1288,7 +1296,9 @@ export function Footer(props: any) {
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
   ];
 
+=======
   return (
+=======
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
@@ -1308,6 +1318,7 @@ export function Footer(props: any) {
           </div>
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
@@ -1538,6 +1549,8 @@ export default Footer;
               <span>© 2024 Zion Tech Group. Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
               <span>for innovation.</span>
+=======
+=======
     <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -1729,6 +1742,7 @@ export default Footer;
               </div>
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
+=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
               <ul className="space-y-2">
@@ -1746,6 +1760,7 @@ export default Footer;
               </ul>
             </div>
           ))}
+=======
         </div>
 
         {/* Stats Section */}
@@ -1803,6 +1818,7 @@ export default Footer;
             </div>
           </div>
         </div>
+=======
       </div>
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
@@ -1835,9 +1851,11 @@ export default Footer;
     </footer>
   );
 }
+=======
 }
 ;';;';
 }
+=======
 };
 
 export default Footer;

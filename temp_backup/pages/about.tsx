@@ -98,6 +98,7 @@ export default function AboutPage() {
 }
 
 import React from 'react';
+=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -160,6 +161,7 @@ export default function AboutPage() {
 
   return (
       {/* Mission & Vision */}
+=======
     <>
       <Head>
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>

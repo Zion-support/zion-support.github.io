@@ -1,3 +1,4 @@
+=======
 import React, { useState } from 'react',;',';';
     ;
 import { motion } from 'framer-motion';
@@ -99,6 +100,8 @@ export const "ContactForm": "React.FC = () => {';';';
     ';';';
           onClick={() => setSubmitStatus('idle')
       )}
+=======
+=======
     </div>
     );
 }
@@ -440,6 +443,7 @@ export const "ContactForm": "React.FC = () => {';';';
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';
               placeholder="Tell us about your project and how we can help..."';';
              />';';';
+=======
           </div>',';';
     ';';' {submitStatus === 'error' && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
@@ -480,6 +484,7 @@ export const "ContactForm": "React.FC = () => {';';';
       </div>';
     </div>';';
   );';';';
+=======
 };"';';';';
 </motion>
 </textarea>

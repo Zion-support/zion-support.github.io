@@ -222,6 +222,7 @@ const optionalFiles = [
   }
 
   printResults() {
+    logger.warn('📊 Diagnostic Results');    logger.warn('==========================================\n');    
     // Overall status
     const statusEmoji = {
       excellent: 🟢',      good: 🟡',      fair: 🟠',      poor: 🔴',      failed: ❌'    };

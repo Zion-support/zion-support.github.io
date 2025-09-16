@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
 import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
@@ -16,6 +17,8 @@ import {
   Users, 
 import SEOHead from '../../components/SEOHead';
 import { motion } from 'framer-motion';
+=======
+=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -39,6 +42,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Brain, BarChart3, TrendingUp, Users, Shield, Zap, ArrowRight, CheckCircle, Star } from 'lucide-react';
+=======
   Globe, 
   CheckCircle, 
   Star, 
@@ -62,6 +66,7 @@ import { Brain, BarChart3, TrendingUp, Users, Shield, Zap, ArrowRight, CheckCirc
   GraduationCap,
   Home
 } from 'lucide-react';
+=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -79,6 +84,7 @@ import {
   DollarSign,
   Award
 } from 'lucide-react';
+=======
 import { SEO } from '../../components/SEO';
 import { 
   Brain, 
@@ -95,12 +101,14 @@ import {
   Activity,
   CheckCircle
 } from 'lucide-react';
+=======
 
 export default function AIBusinessIntelligence() {
   const features = [
     {
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
+=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -141,6 +149,7 @@ const AIBusinessIntelligence = () => {
       icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights in your data"
+=======
   Database, 
   Shield, 
   Zap,
@@ -158,6 +167,7 @@ const AIBusinessIntelligence = () => {
       icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights in your data."
+=======
       icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
@@ -166,19 +176,23 @@ const AIBusinessIntelligence = () => {
       icon: BarChart3,
       title: "Real-Time Dashboards",
       description: "Live, interactive dashboards that provide instant visibility into business performance and KPIs"
+=======
       description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
+=======
       description: "Live monitoring and visualization of key performance indicators with instant updates and alerts."
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast future trends and outcomes using historical data and AI models."
+=======
       description: "Forecast future trends and outcomes using historical data and AI models for better decision-making."
     },
     {
       icon: Database,
       title: "Data Integration",
       description: "Seamlessly connect and consolidate data from multiple sources for comprehensive analysis."
+=======
       description: "Forecast future trends, customer behavior, and business outcomes with high accuracy"
     },
     {
@@ -190,6 +204,7 @@ const AIBusinessIntelligence = () => {
       icon: Users,
       title: "Customer Intelligence",
       description: "Deep insights into customer behavior, preferences, and lifetime value for targeted strategies"
+=======
       description: "Seamlessly connect and consolidate data from multiple sources for comprehensive analysis."
     },
     {
@@ -203,6 +218,7 @@ const AIBusinessIntelligence = () => {
       icon: TrendingUp,
       title: "Real-time Insights",
       description: "Instant access to key performance indicators and business metrics through interactive dashboards."
+=======
       description: "Generate intelligent reports automatically with AI-generated insights and recommendations."
     },
     {
@@ -305,6 +321,7 @@ const AIBusinessIntelligence = () => {
       description: "Monitor business operations in real-time and identify efficiency improvements",
       icon: Activity,
       metrics: ["Process monitoring", "Efficiency metrics", "Bottleneck identification", "Performance optimization"]
+=======
       title: "Predictive Analytics",
       description: "AI-powered forecasting for sales, market trends, and customer behavior",
       icon: TrendingUp,
@@ -373,11 +390,13 @@ const AIBusinessIntelligence = () => {
       description: "Real-time monitoring and optimization of business operations and processes",
       icon: Activity,
       features: ["Process monitoring", "Efficiency tracking", "Resource optimization", "Quality control"]
+=======
       description: "Monitor progress towards business objectives with AI-powered performance tracking."
     }
   ];
 
   const benefits = [
+=======
     "Make data-driven decisions with confidence",
     "Identify hidden opportunities and risks",
     "Optimize business processes automatically",
@@ -389,6 +408,7 @@ const AIBusinessIntelligence = () => {
   const useCases = [
     {
 import { Brain, TrendingUp, BarChart3, PieChart, LineChart, Target, Users, DollarSign, Zap, Shield, Globe, Database } from 'lucide-react';
+=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -455,6 +475,7 @@ const AIBusinessIntelligence = () => {
         "Training & onboarding"
       ],
       popular: false
+=======
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
       benefits: ["Predictive analytics", "Anomaly detection", "Pattern recognition", "Automated insights"]
@@ -470,6 +491,7 @@ const AIBusinessIntelligence = () => {
       title: "Predictive Modeling",
       description: "Forecast future trends and outcomes using historical data and advanced statistical models",
       benefits: ["Sales forecasting", "Demand prediction", "Risk assessment", "Trend analysis"]
+=======
       description: "Monitor progress towards business objectives with automated alerts and performance scoring."
     },
     {
@@ -522,6 +544,7 @@ const AIBusinessIntelligence = () => {
       }
     }
   };
+=======
       industry: "Healthcare",
       title: "Patient Outcome Prediction",
       description: "Predict patient outcomes and optimize treatment plans using AI-powered analytics",
@@ -593,6 +616,7 @@ const AIBusinessIntelligence = () => {
         "Email support",
         "Basic AI insights"
       ],
+=======
       price: "$299/month",
       description: "Perfect for small businesses getting started with BI",
       features: [
@@ -614,6 +638,7 @@ const AIBusinessIntelligence = () => {
       icon: Zap,
       title: "Automated Reporting",
       description: "AI-powered report generation that adapts to your business needs and schedule."
+=======
       description: "Seamlessly connect and analyze data from multiple sources and systems."
     },
     {
@@ -636,6 +661,7 @@ const AIBusinessIntelligence = () => {
     },
     {
       name: "Enterprise",
+=======
       title: "Sales & Marketing",
       description: "Optimize campaigns, predict customer behavior, and maximize ROI with AI-driven insights.",
       icon: TrendingUp
@@ -728,6 +754,7 @@ const AIBusinessIntelligence = () => {
       description: "Market analysis, property valuation, and investment insights",
       icon: Home,
       color: "from-gray-500 to-blue-500"
+=======
       description: "Tailored solutions for large organizations with complex requirements",
       features: [
         "Unlimited data sources",
@@ -747,6 +774,7 @@ const AIBusinessIntelligence = () => {
       icon: Zap,
       title: 'Automated Insights',
       description: 'AI-powered automated reporting and intelligent alerting systems.'
+=======
       description: "Enterprise-grade security with encryption, access controls, and compliance features."
     },
     {
@@ -799,6 +827,7 @@ const AIBusinessIntelligence = () => {
     "Financial Systems",
     "Web Analytics",
     "Social Media"
+=======
     "Make data-driven decisions with confidence",
     "Identify hidden opportunities and risks",
     "Improve operational efficiency by 30-50%",
@@ -869,10 +898,12 @@ const AIBusinessIntelligence = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="text-center max-w-4xl mx-auto">
+=======
       price: "$1,999/month",
       description: "For large organizations requiring enterprise-grade BI solutions",
       features: [
@@ -943,6 +974,7 @@ const AIBusinessIntelligence = () => {
             <div className="flex items-center justify-center mb-6">
               <BarChart3 className="w-12 h-12 text-cyan-400 mr-3" />
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -963,6 +995,7 @@ const AIBusinessIntelligence = () => {
               <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
                 <Play className="mr-2 w-5 h-5" />
                 Platform Demo
+=======
               Transform your business data into actionable intelligence with our advanced AI-powered analytics platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1021,6 +1054,7 @@ const AIBusinessIntelligence = () => {
               <div className="text-gray-400 text-sm">Real-time Monitoring</div>
             </div>
           </div>
+=======
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1035,6 +1069,7 @@ const AIBusinessIntelligence = () => {
       description: "Identify and mitigate risks before they impact your business with advanced risk modeling.",
       icon: Shield,
       color: "from-red-500 to-orange-500"
+=======
     }
   ];
 
@@ -1071,7 +1106,10 @@ const AIBusinessIntelligence = () => {
                   {step.duration}
                 </span>
               </motion.div>
+=======
       {/* Features Section */}
+=======
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1123,10 +1161,12 @@ const AIBusinessIntelligence = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Business Intelligence platform combines advanced analytics with artificial intelligence 
               to deliver insights that transform your business decisions
+=======
               Powerful Features for Modern Business
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Business Intelligence platform combines cutting-edge technology with intuitive design to deliver insights that drive growth.
+=======
             </p>
           </div>
           
@@ -1168,6 +1208,7 @@ const AIBusinessIntelligence = () => {
                 Get Demo
               </a>
             </div>
+=======
             ))}
           </div>
         </div>
@@ -1207,6 +1248,7 @@ const AIBusinessIntelligence = () => {
                 </div>
               </div>
             ))}
+=======
             ))}
           </div>
         </div>
@@ -1215,6 +1257,7 @@ const AIBusinessIntelligence = () => {
       {/* Benefits Section */}
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
+=======
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1439,6 +1482,7 @@ const AIBusinessIntelligence = () => {
         </div>
       </section>
     </div>
+=======
           </div>
         </section>
       </div>
@@ -1447,7 +1491,9 @@ const AIBusinessIntelligence = () => {
 };
 
 export default AIBusinessIntelligence;
+=======
       {/* Benefits Section */}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1501,6 +1547,7 @@ export default AIBusinessIntelligence;
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
+=======
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -1554,6 +1601,7 @@ export default AIBusinessIntelligence;
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
+=======
               </div>
             ))}
           </div>
@@ -1618,12 +1666,14 @@ export default AIBusinessIntelligence;
                 <h3 className="text-lg font-semibold text-white">{source}</h3>
               </div>
             ))}
+=======
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1765,6 +1815,7 @@ export default AIBusinessIntelligence;
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join leading organizations that are already leveraging AI-powered insights 
             to drive growth and competitive advantage.
+=======
             Join the future of business analytics with our AI-powered Business Intelligence platform. 
             Start making data-driven decisions today.
           </p>
@@ -1802,6 +1853,7 @@ export default AIBusinessIntelligence;
                     <div key={metricIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                       <span>{metric}</span>
+=======
 
         {/* Use Cases */}
         <div className="mb-20">
@@ -1860,6 +1912,7 @@ const AIBusinessIntelligence: React.FC = () => {
             <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300">
               Watch Demo
             </button>
+=======
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
@@ -1903,6 +1956,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
+=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1965,6 +2019,7 @@ const AIBusinessIntelligence: React.FC = () => {
             <Link
               to="/case-studies"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
+=======
               to="/case-studies"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
             >
@@ -2011,6 +2066,7 @@ const AIBusinessIntelligence: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               See real results with our AI Business Intelligence solutions that deliver 
               quantifiable improvements across all aspects of your business.
+=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2273,6 +2329,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our cutting-edge AI solutions today.
+=======
 
         {/* CTA Section */}
         <div className="text-center">
@@ -2297,6 +2354,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300"
               >
                 Explore All Services
+=======
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -2311,7 +2369,9 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
         </div>
 }
+=======
       </section>
+=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Demo
@@ -2322,6 +2382,7 @@ const AIBusinessIntelligence: React.FC = () => {
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
               View Pricing
+=======
       </section>
 
       {/* CTA Section */}
@@ -2396,10 +2457,12 @@ const AIBusinessIntelligence: React.FC = () => {
 };
 
 export default AIBusinessIntelligence;
+=======
       </div>
     </div>
   );
 }
+=======
       </section>
 
       {/* CTA Section */}
@@ -2432,5 +2495,7 @@ export default AIBusinessIntelligence;
     </div>
   );
 }
+=======
 export default AIBusinessIntelligence;
+=======
 }

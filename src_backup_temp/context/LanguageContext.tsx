@@ -32,6 +32,7 @@ const defaultLanguageContext: LanguageContextTyp e = {;
   changeLanguage: asyn c () => {},;
   isRTL: fals e,;
   supportedLanguages;
+=======
 };
 const LanguageContext = createContext(defaultLanguageContext);
 
@@ -69,6 +70,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   // TODO: Add dependencies if needed;
   return () => {;
     // Cleanup function;
+=======
   };
 }, []);, []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
@@ -84,6 +86,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {;
     // Cleanup function;
   "};
+=======
   }, [i18n]); // i18n is a dependency here
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -94,6 +97,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   // TODO: Add dependencies if needed;
   return () => {;
     // Cleanup function;
+=======
   };
 }, []);, []);
     setIsRTL(i18n.dir() === 'rtl');
@@ -104,6 +108,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     } else {
       document.documentElement.classList.remove('rtl');
     }
+=======
     const syncLanguageWithProfile = async () => {;
       if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
         try {;
@@ -177,6 +182,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 </any>;
 </SupportedLanguage>;
 </LanguageProviderProps>;
+=======
 
 </LanguageContext>
 </any>

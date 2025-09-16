@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -170,19 +169,17 @@ const AdvancedTechTrends2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(150)].map((_, i) => (
-            <motion.div
+            <divdiv
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
               }}
-              transition={{
                 duration: 5 + Math.random() * 4,
                 repeat: Infinity,
                 delay: Math.random() * 4,
@@ -218,21 +215,15 @@ const AdvancedTechTrends2026: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
         >
           <div className="mb-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <divdiv
               className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300">Future Technology Trends</span>
-            </motion.div>
+            </divdiv>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -245,49 +236,40 @@ const AdvancedTechTrends2026: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <divbutton
               className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
               <span>Explore Trends</span>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </divbutton>
+            <divbutton
               className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
             >
               View Timeline
-            </motion.button>
+            </divbutton>
           </div>
 
           {/* Breakthrough Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {breakthroughStats.map((stat, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-indigo-400/20"
               >
                 <stat.icon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
       </section>
 
       {/* Trends Section */}
       <section id="trends" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -297,15 +279,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               The most groundbreaking technology trends that will define 2026 and beyond
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {techTrends2026.map((trend, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
               >
@@ -353,7 +333,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                   <span>Explore Trend</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -362,10 +342,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* Industry Transformations Section */}
       <section id="transformations" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -375,15 +353,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               How these revolutionary trends will transform every industry and aspect of human life
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-2 gap-8">
             {industryTransformations.map((transformation, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20"
               >
@@ -403,7 +379,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                   </span>
                   <span className="text-sm text-gray-400">{transformation.timeline}</span>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -412,10 +388,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* Testimonials Section */}
       <section id="testimonials" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -425,15 +399,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Hear from the visionaries who are shaping the future of technology
             </p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
               >
@@ -455,7 +427,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                     <div className="text-xs text-indigo-400">{testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -464,10 +436,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* CTA Section */}
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -477,22 +447,18 @@ const AdvancedTechTrends2026: React.FC = () => {
               Join us in exploring and implementing these revolutionary technology trends that will define the next decade
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               >
                 Explore All Trends
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </divbutton>
+              <divbutton
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Schedule Consultation
-              </motion.button>
+              </divbutton>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 

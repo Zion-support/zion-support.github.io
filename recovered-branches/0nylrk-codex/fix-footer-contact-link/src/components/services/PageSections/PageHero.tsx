@@ -7,6 +7,7 @@ import {Clock, Map, DollarSign} from "lucide-react";
 
 
 
+=======
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from "lucide-react";
 
@@ -31,6 +32,7 @@ export function PageHero() {
 
 
 
+=======
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>

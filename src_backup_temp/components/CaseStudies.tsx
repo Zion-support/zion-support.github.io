@@ -1,3 +1,4 @@
+=======
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react';
@@ -238,6 +239,7 @@ export default function CaseStudies(props: any) {
           ))}
         </div>
         {/* CTA */}
+=======
 "}
 ;
 </motion>;
@@ -245,6 +247,7 @@ export default function CaseStudies(props: any) {
 </motion>;
 </motion>;
 </motion>;
+=======
         <motion.div 
           className="text-center mt-12"
           initial={{ opacity: 0, y: 2 0 }}

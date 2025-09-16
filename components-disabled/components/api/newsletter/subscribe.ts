@@ -71,6 +71,7 @@ function handler() {
 
 
 
+=======
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'newsletter');
 const FILE_PATH = path.resolve(DATA_DIR, 'subscribers.json');
 

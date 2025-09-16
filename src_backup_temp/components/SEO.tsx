@@ -24,6 +24,7 @@ import React from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
+=======
   keywords?: string;
   image?: string;
   url?: string;
@@ -174,6 +175,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       
+=======
       {/* Twitter */}
       <meta property="twitter: car d" content="summary_large_image"   />
       <meta property="twitter: ur l" content={url}   />
@@ -542,6 +544,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+=======
     </Head>
   )}
 
@@ -565,5 +568,6 @@ export default SEO;"
 </Helmet>
 </SEOProps>
 export default SEO;
+=======
 </script>
 </SEOProps>

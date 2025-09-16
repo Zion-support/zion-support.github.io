@@ -166,6 +166,7 @@ export default function Revolutionary2028Pricing() {
               create your perfect solution.            </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
+=======
       {/* Service Pricing */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,6 +192,7 @@ export default function Revolutionary2028Pricing() {
 
 
 
+=======
                           </div>
                         </div>
                       </div>
@@ -200,6 +202,7 @@ export default function Revolutionary2028Pricing() {
                 ))}
               </div>;
             </div>;
+=======
                 ))}
               </div>
             </div>
@@ -247,6 +250,7 @@ export default function Revolutionary2028Pricing() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
+=======
       {/* Value Proposition */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,6 +310,7 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
                 Our prices are 30% lower than market average while providing
+=======
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -346,6 +351,7 @@ export default function Revolutionary2028Pricing() {
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
 
+=======
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -384,6 +390,7 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">
                 Enterprise-grade technology with premium support and features
+=======
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -477,6 +484,7 @@ export default function Revolutionary2028Pricing() {
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">
+=======
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

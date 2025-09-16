@@ -1,5 +1,6 @@
 
 
+=======
 
 
   }
@@ -8,6 +9,7 @@
 }
 
 
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';
 export default /**
@@ -24,6 +26,7 @@ if ( {) {
   const invoices = store.list_invoices (company_id);
   return res.status (200).json (invoices);
 }
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

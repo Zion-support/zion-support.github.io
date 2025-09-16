@@ -10,6 +10,7 @@ import OpenAI from 'openai';
 
         { role: 'user', content: prompt }];
       temperature: 0.2});
+=======
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [

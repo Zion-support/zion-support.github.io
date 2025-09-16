@@ -6,6 +6,7 @@
   }
   const { prompt, region, service } = req && req.body || {};
   if (!prompt) return res && res.status(400).json({ error: "Missing prompt" });
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
@@ -25,6 +26,7 @@ if ( {) {
   if (return res.status (400).json ({ error: "Missing prompt" })) {
   $2
 }
+=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -42,6 +44,8 @@ Do not include <html>, <body>, or scripts.`;
       temperature: 0.7
     });
     const content = response.choices?.[0]?.message?.content |"";
+=======
+=======
     const user = `Topic: ${prompt}
 
 Region: ${region || 'global'}
@@ -57,6 +61,7 @@ Tone: professional, modern, trustworthy`;
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }
+=======
 
 
     // FAQ generation

@@ -15,6 +15,7 @@ const NotFound = () => {
   }, [location.pathname]),
 
 
+=======
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -47,6 +48,7 @@ const NotFound = () => {
 
 export default NotFound;
 
+=======
   );
 };
 

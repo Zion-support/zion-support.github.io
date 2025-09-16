@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
@@ -724,6 +725,8 @@ export default function HomePage() {
   );
 }
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -804,6 +807,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+<<<<<<< HEAD
       {/* Promo: Latest Article */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
@@ -846,6 +850,8 @@ export default function HomePage() {
       </section>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -867,22 +873,28 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
+<<<<<<< HEAD
               <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
                 📰 New: Agent Safety Red Teaming 2025
+=======
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 See what's new in 2025
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               </a>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Everything You Need to Build the Future
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need to Build the Future</h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
@@ -919,9 +931,7 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Build the Future?
-            </h2>
+            <h2 className="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
@@ -932,6 +942,7 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -952,6 +963,11 @@ export default function HomePage() {
 =======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+=======
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Edge AI Compliance 2025
+              </a>
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
             </div>
           </div>
         </div>
@@ -980,6 +996,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Latest from the Blog */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1009,10 +1026,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     </div>
   );
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1044,3 +1064,5 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
