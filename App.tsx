@@ -118,6 +118,9 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import TrendingTopicsWidget2026 from './src/components/TrendingTopicsWidget2026';
+import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 <<<<<<< HEAD
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
@@ -599,6 +602,9 @@ export default function App(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 py-8">
                   <TrendingTopicsWidget2026 />
                 </div>
+                
+                {/* NEW: Content Showcase 2026 */}
+                <NewContentShowcase2026 />
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2681,6 +2687,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryServicesShowcase2026" element={<RevolutionaryServicesShowcase2026 />} />
           <Route path="/trending-topics" element={<TrendingTopicsWidget2026 />} />
           <Route path="/revolutionary-content-banner" element={<RevolutionaryContentBanner2026 />} />
+          <Route path="/new-content-showcase" element={<NewContentShowcase2026 />} />
 <<<<<<< HEAD
 <<<<<<< HEAD
           <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
