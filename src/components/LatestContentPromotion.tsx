@@ -8,7 +8,7 @@ const LatestContentPromotion: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
             🚀 NEW CONTENT RELEASE • SEPTEMBER 2025
           </div>
-          <h2 className="text-4xl font-bold mb-4">🌟 Fresh Exec Guide + FinServ Case Study</h2>
+          <h2 className="text-4xl font-bold mb-4">🌟 New: Exec Guide, FinServ Case, Scorecards Kit</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Discover breakthrough insights, implementation guides, and success stories that will transform your organization
           </p>
@@ -27,7 +27,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• Shadow tests and traffic slices</li>
               <li>• Rollbacks and kill‑switches</li>
             </ul>
-            <a href="/blog/sep-2025-exec-guide-evals-guardrails" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/exec-guide-eval-gates-ship-tomorrow" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Read Exec Guide →
             </a>
           </div>
@@ -44,7 +44,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• Journey‑level KPIs</li>
               <li>• Anomaly alerts</li>
             </ul>
-            <a href="/blog/sep-2025-finserv-model-routing-case-study" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/finserv-case-study-policy-routing-35-savings" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               Read Case Study →
             </a>
           </div>
@@ -61,7 +61,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• CI gate wiring</li>
               <li>• Reference dashboards</li>
             </ul>
-            <a href="/resources/ai-2026-agent-journey-scorecards-starter" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/journey-scorecards-starter-kpis" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Get Starter Kit →
             </a>
           </div>
@@ -69,13 +69,13 @@ const LatestContentPromotion: React.FC = () => {
         
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
-            <a href="/blog/sep-2025-exec-guide-evals-guardrails" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/exec-guide-eval-gates-ship-tomorrow" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               📚 Read Exec Guide
             </a>
-            <a href="/blog/sep-2025-finserv-model-routing-case-study" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/finserv-case-study-policy-routing-35-savings" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🏆 View Cost Controls Case Study
             </a>
-            <a href="/resources/ai-2026-agent-journey-scorecards-starter" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/journey-scorecards-starter-kpis" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🛠️ Get Scorecards Starter Kit
             </a>
           </div>
