@@ -73,6 +73,12 @@ export default function BlogIndexPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* New: Reliable Real-Time Agents (2026) */}
+          <div key="ai-2026-reliable-real-time-agents" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
+            <h2 className="text-white text-xl font-semibold mb-2">Reliable Real‑Time Agents (2026)</h2>
+            <p className="text-gray-400 mb-4">Design sub‑200ms perceived latency with streaming, speculation, and safe fallbacks.</p>
+            <Link href={`/blog/ai-2026-reliable-real-time-agents`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+          </div>
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
