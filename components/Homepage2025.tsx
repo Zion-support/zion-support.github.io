@@ -16,7 +16,7 @@ import {
   Zap
 } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
@@ -76,6 +76,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
+    {
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
+      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
+      tag: 'RevOps',
+      gradient: 'from-amber-500 to-rose-500'
+    },
     {
       title: 'GenAI for Regulated Industries (2025)',
       href: '/blog/genai-2025-practical-compliance-patterns',

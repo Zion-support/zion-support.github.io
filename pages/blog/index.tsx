@@ -1,8 +1,6 @@
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+import Head from 'next/head';
+import Link from 'next/link';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 
 const posts = [
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
@@ -11,14 +9,11 @@ const posts = [
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
-  // New content
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
   { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
-  { slug: 'cloud-cost-optimization-2025', title: 'Cloud Cost Optimization 2025', excerpt: 'Modern FinOps patterns for resilient, cost-efficient platforms.' }
-]
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+  { slug: 'cloud-cost-optimization-2025', title: 'Cloud Cost Optimization 2025', excerpt: 'Modern FinOps patterns for resilient, cost-efficient platforms.' },
+  { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'How to automate RevOps with agentic pipelines and human-in-the-loop.' }
+];
 
 export default function BlogIndexPage() {
   return (
@@ -37,24 +32,17 @@ export default function BlogIndexPage() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
         </div>
 
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
             </div>
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-=======
-  )
+  );
 }
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 
