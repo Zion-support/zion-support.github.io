@@ -73,6 +73,8 @@ import FutureTechBreakthrough2026 from './src/pages/FutureTechBreakthrough2026.t
 import InterdimensionalComputing2027 from './src/pages/InterdimensionalComputing2027.tsx';
 import AIConsciousnessEvolution2027 from './src/pages/AIConsciousnessEvolution2027.tsx';
 import AIPlaybook2025 from './src/pages/AIPlaybook2025';
+import AdvancedTechShowcase2026 from './src/components/AdvancedTechShowcase2026';
+import RevolutionaryInnovationTimeline from './src/components/RevolutionaryInnovationTimeline';
 
 export default function App(): JSX.Element {
   return (
@@ -224,6 +226,16 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* Advanced Tech Showcase 2026 */}
+                <div className="mb-12">
+                  <AdvancedTechShowcase2026 />
+                </div>
+
+                {/* Revolutionary Innovation Timeline */}
+                <div className="mb-12">
+                  <RevolutionaryInnovationTimeline />
                 </div>
 
                 {/* Innovation Showcase 2026 */}
