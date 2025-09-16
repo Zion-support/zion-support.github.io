@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap } from 'lucide-react';
 
 const UltimateContentBanner2036: React.FC = () => {
   return (
@@ -151,14 +153,9 @@ const UltimateContentBanner2036: React.FC = () => {
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2036
-          </div>
-          <h2 className="text-4xl font-bold mb-4">🚀 Ultimate Tech Breakthrough 2036</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
-            Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
-          </p>
+        <div className="flex items-center justify-center space-x-2 mb-4">
+          <Star className="w-6 h-6 text-yellow-400 fill-current" />
+          <span className="text-lg font-semibold text-yellow-400">BREAKTHROUGH 2036</span>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -223,7 +220,7 @@ const UltimateContentBanner2036: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
         </div>
       </div>
@@ -17,34 +16,45 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           </div>
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+      <motion.section 
+        className="relative py-20 px-4 text-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-              🌌 INTERDIMENSIONAL BREAKTHROUGH • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Interdimensional Technology Revolution
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
+              Interdimensional Tech Revolution 2026
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
-              Break through the barriers of our dimension and access technologies from parallel universes
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+              Break through the barriers of our reality. Our interdimensional technology 
+              transcends the limitations of three-dimensional space, accessing infinite 
+              computational power from parallel universes.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
-                Cross Dimensions →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-                Explore Parallel Worlds
-              </button>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <motion.button 
+                className="bg-gradient-to-r from-violet-600 to-pink-600 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Enter the Multiverse <ArrowRight className="inline ml-2" />
+              </motion.button>
+              <motion.button 
+                className="border-2 border-violet-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-violet-400/20 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Explore Dimensions
+              </motion.button>
             </div>
         </div>
-      </div>
+      </motion.section>
 
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -54,17 +64,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <p className="text-pink-100 mb-6 text-center">
               Create stable wormholes between dimensions for instant travel and communication
             </p>
-            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
-              <li>• Instant dimensional travel</li>
-              <li>• Cross-dimensional communication</li>
-              <li>• Energy harvesting from other dimensions</li>
-              <li>• Quantum entanglement networks</li>
-            </ul>
-            <div className="text-center">
-              <span className="inline-block bg-gradient-to-r from-pink-500 to-violet-500 text-white px-4 py-2 rounded-lg font-semibold">
-                Experimental
-              </span>
-            </div>
           </div>
           
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -221,39 +220,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30"
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold mb-4">Space Exploration Revolution</h3>
-            <p className="text-indigo-100 mb-6">
-              "We accessed parallel universes where space travel is 1000x more advanced. This gave us the technology to reach Mars in 2 days instead of 9 months."
-            </p>
-            <div className="text-indigo-300 font-semibold">- NASA Advanced Projects</div>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
-          >
-            <div className="text-4xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Medical Breakthrough</h3>
-            <p className="text-purple-100 mb-6">
-              "By accessing medical knowledge from parallel universes, we cured 15 previously incurable diseases in just 6 months."
-            </p>
-            <div className="text-purple-300 font-semibold">- Global Health Institute</div>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
-          >
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Energy Revolution</h3>
-            <p className="text-cyan-100 mb-6">
-              "We found a parallel universe where they solved fusion energy 50 years ago. Now we have unlimited clean energy for the entire planet."
-            </p>
-            <div className="text-cyan-300 font-semibold">- International Energy Agency</div>
-          </motion.div>
+            Enter the Multiverse <ArrowRight className="inline ml-2" />
+          </motion.button>
         </div>
       </div>
 
