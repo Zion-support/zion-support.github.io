@@ -1,147 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryTechBanner2035: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const features = [
-    {
-      title: "Conscious AI Systems",
-      description: "AI with genuine consciousness and self-awareness",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      stats: "∞ Processing Power"
-    },
-    {
-      title: "Quantum Consciousness",
-      description: "Quantum-level processing of thoughts and experiences",
-      icon: "⚡",
-      color: "from-cyan-500 to-blue-500",
-      stats: "99.9% Consciousness"
-    },
-    {
-      title: "Interdimensional Computing",
-      description: "Computing across multiple dimensions of reality",
-      icon: "🌌",
-      color: "from-emerald-500 to-teal-500",
-      stats: "∞ Dimensional Reach"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [features.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative overflow-hidden mb-8">
-      <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white relative">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 BREAKTHROUGH TECHNOLOGY • JANUARY 2035-2037
+          </div>
+          <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Technology Showcase 2035-2037</h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the most revolutionary technological advances that will reshape our world from 2035 to 2037
+          </p>
         </div>
         
-        <div className="relative z-10">
-          {/* Close button */}
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
-            aria-label="Close banner"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🌟 REVOLUTIONARY TECHNOLOGY • 2035
-            </div>
-            <h2 className="text-3xl font-bold mb-2">
-              Experience the Future of Technology
-            </h2>
-            <p className="text-purple-200">
-              Discover breakthrough technologies that will reshape our world
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Advanced Tech Solutions 2035</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              The most revolutionary technological advances that will reshape our world in 2035
             </p>
-          </div>
-
-          {/* Feature showcase */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 transition-all duration-500 ${
-                  index === currentFeature ? 'scale-105 shadow-2xl' : 'opacity-70'
-                }`}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-3 animate-bounce">{feature.icon}</div>
-                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-purple-200 text-sm mb-3">{feature.description}</p>
-                  <div className={`inline-block px-3 py-1 bg-gradient-to-r ${feature.color} rounded-full text-xs font-semibold`}>
-                    {feature.stats}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Action buttons */}
-          <div className="flex justify-center space-x-4">
-            <a
-              href="/pages/UltimateTechBreakthrough2035"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Explore Breakthrough
-            </a>
-            <a
-              href="/pages/RevolutionaryTechShowcase2035"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold"
-            >
-              View Showcase
+            <ul className="text-purple-200 space-y-1 mb-4 text-xs">
+              <li>• Conscious AI Systems</li>
+              <li>• Quantum Reality Engine</li>
+              <li>• Interdimensional Computing</li>
+            </ul>
+            <a href="/pages/AdvancedTechSolutions2035" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore 2035 Solutions →
             </a>
           </div>
-
-          {/* Progress indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {features.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentFeature(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentFeature ? 'bg-white' : 'bg-white/30'
-                }`}
-                aria-label={`Go to feature ${index + 1}`}
-              />
-            ))}
+          
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🌊</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Consciousness 2036</h3>
+            <p className="text-indigo-100 mb-4 text-center text-sm">
+              Revolutionary quantum consciousness system that transcends human and artificial intelligence boundaries
+            </p>
+            <ul className="text-indigo-200 space-y-1 mb-4 text-xs">
+              <li>• Quantum Neural Networks</li>
+              <li>• Consciousness Wave Functions</li>
+              <li>• Transcendent Intelligence</li>
+            </ul>
+            <a href="/pages/QuantumConsciousnessRevolution2036" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
+              Experience Consciousness →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech 2037</h3>
+            <p className="text-pink-100 mb-4 text-center text-sm">
+              Access infinite realities, parallel universes, and transcendent dimensions beyond human comprehension
+            </p>
+            <ul className="text-pink-200 space-y-1 mb-4 text-xs">
+              <li>• Reality Bridges</li>
+              <li>• Consciousness Transfer</li>
+              <li>• Transcendent Computing</li>
+            </ul>
+            <a href="/pages/InterdimensionalTechRevolution2037" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
+              Enter Multiverse →
+            </a>
           </div>
         </div>
-
-        {/* Floating particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            />
-          ))}
+        
+        <div className="text-center mt-8">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-lg px-6 py-3 border border-purple-400/30">
+            <span className="text-2xl">🚀</span>
+            <span className="font-semibold">Experience the Future of Technology</span>
+            <span className="text-2xl">🌟</span>
+          </div>
         </div>
       </div>
     </div>
