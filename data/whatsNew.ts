@@ -11,6 +11,7 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
     description:
@@ -164,6 +165,8 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/feature/new-slos-content-and-promo
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
     description:

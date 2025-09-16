@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import React from 'react';
 
 export const metadata = {
@@ -52,6 +53,8 @@ export default function AgentPlatformSLOsPage() {
 }
 
 import Link from 'next/link';
+=======
+>>>>>>> origin/feature/new-slos-content-and-promo
 
 export const metadata = {
   title: 'AI 2026: Agent Platform SLOs That Matter',
