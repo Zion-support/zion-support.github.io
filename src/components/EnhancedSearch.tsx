@@ -120,25 +120,50 @@ const EnhancedSearch: React.FC = () => {
       setRecentSearches(updated);
       localStorage.setItem('recentSearches', JSON.stringify(updated));
     }
-<<<<<<< HEAD
   }, [recentSearches]);
 
   // Search function
-=======
+  const performSearch = async (query: string) => {
+    if (!query.trim()) return;
     
-    // Debounce search
-    if (value.trim()) {
-      searchTimeoutRef.current = setTimeout(() => {
-        performSearch(value);
-      }, 300);
-    } else {
+    setSearchResults([]);
+    setIsSearching(true);
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Mock search results
+      const results = [
+        {
+          id: 1,
+          title: `Search result for "${query}"`,
+          description: `This is a search result for the query "${query}".`,
+          url: `/search?q=${encodeURIComponent(query)}`,
+          type: 'page'
+        }
+      ];
+      
+      setSearchResults(results);
+    } catch (error) {
+      console.error('Search error:', error);
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  // Debounce search
+  if (value.trim()) {
+    searchTimeoutRef.current = setTimeout(() => {
+      performSearch(value);
+    }, 300);
+  } else {
       setResults([]);
       setIsOpen(false);
     }
   }, []);
 
   // Perform search
->>>>>>> cursor/create-and-deploy-new-content-d7eb
   const performSearch = useCallback(async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
@@ -233,7 +258,6 @@ const EnhancedSearch: React.FC = () => {
     return icons[category] || <Cloud className="w-4 h-4" />;
   };
 
-<<<<<<< HEAD
   // Get relevance color
   const getRelevanceColor = (relevance: number) => {
     if (relevance >= 90) return 'text-green-600 bg-green-100';
@@ -284,7 +308,28 @@ const EnhancedSearch: React.FC = () => {
       </form>
 
       {/* Filters Panel */}
-=======
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+          <div className="p-4">
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">Filters</h3>
+            <div className="space-y-2">
+              <label className="flex items-center">
+                <input type="checkbox" className="rounded" />
+                <span className="ml-2 text-sm text-gray-700">Pages</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="rounded" />
+                <span className="ml-2 text-sm text-gray-700">Articles</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="rounded" />
+                <span className="ml-2 text-sm text-gray-700">Products</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      )}
+
   // Close search when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -326,7 +371,6 @@ const EnhancedSearch: React.FC = () => {
       </div>
 
       {/* Search Results Dropdown */}
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       <AnimatePresence>
         {showFilters && (
           <motion.div
@@ -452,7 +496,6 @@ const EnhancedSearch: React.FC = () => {
                   </button>
                 ))}
               </div>
-<<<<<<< HEAD
             </div>
           </motion.div>
         )}
@@ -540,29 +583,11 @@ const EnhancedSearch: React.FC = () => {
           <h3 className="text-lg font-semibold text-gray-900 mb-2">No results found</h3>
           <p className="text-gray-600">Try adjusting your search terms or filters</p>
         </motion.div>
-=======
-            </motion.div>
-          )}
-        </AnimatePresence>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
+        </motion.div>
       )}
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
-// Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
 
->>>>>>> cursor/create-and-deploy-new-content-d7eb
 export default EnhancedSearch;

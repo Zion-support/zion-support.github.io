@@ -220,9 +220,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -284,13 +281,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
-=======
->>>>>>> cursor/create-and-deploy-new-content-d7eb
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
               Explore Insights
             </button>
           </div>
@@ -303,9 +293,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <div className="mb-8">
-=======
             <div className="text-5xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
             <p className="text-purple-100 mb-6 text-center">
@@ -445,9 +432,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -553,9 +537,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   </ul>
                 </motion.div>
               ))}
-=======
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
           </div>
         </section>

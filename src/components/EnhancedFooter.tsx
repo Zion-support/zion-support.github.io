@@ -19,13 +19,14 @@ const EnhancedFooter: React.FC = () => {
     {
       title: 'Resources',
       links: [
-<<<<<<< HEAD
         { name: 'Tech Insights 2026', path: '/pages/ComprehensiveTechInsights2026' },
         { name: 'Revolutionary Blog', path: '/pages/RevolutionaryTechBlog2026' },
         { name: 'AI Transformation', path: '/pages/AdvancedAITransformation2026' },
         { name: 'Next-Gen Showcase', path: '/pages/NextGenTechShowcase2026' },
         { name: 'Ultimate Revolution', path: '/pages/UltimateTechRevolution2026' },
-        { name: 'Revolutionary AI', path: '/pages/RevolutionaryAIBreakthrough2026' }
+        { name: 'Revolutionary AI', path: '/pages/RevolutionaryAIBreakthrough2026' },
+        { name: 'Case Studies', path: '/case-studies' },
+        { name: 'Documentation', path: '/docs' }
       ]
     },
     {
@@ -36,15 +37,9 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Transcendent Consciousness 2029', path: '/pages/TranscendentConsciousness2029' },
         { name: 'Universal Tech 2030', path: '/pages/UniversalTechMastery2030' },
         { name: 'Ultimate Tech 2033', path: '/pages/UltimateTechRevolution2033' },
-        { name: 'Transcendent AI 2033', path: '/pages/TranscendentAI2033' }
-=======
-        { name: 'Tech Blog', path: '/pages/RevolutionaryTechBlog2026' },
-        { name: 'Tech Insights', path: '/pages/ComprehensiveTechInsights2026' },
-        { name: 'Case Studies', path: '/case-studies' },
-        { name: 'Documentation', path: '/docs' },
+        { name: 'Transcendent AI 2033', path: '/pages/TranscendentAI2033' },
         { name: 'Research', path: '/research' },
         { name: 'Pricing', path: '/pricing' }
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       ]
     },
     {
@@ -55,12 +50,10 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Services', path: '/services' },
         { name: 'Blog', path: '/blog' },
         { name: 'Careers', path: '/careers' },
-<<<<<<< HEAD
-        { name: 'Privacy Policy', path: '/privacy' }
-=======
         { name: 'News', path: '/news' },
         { name: 'Partners', path: '/partners' },
-        { name: 'Investors', path: '/investors' }
+        { name: 'Investors', path: '/investors' },
+        { name: 'Privacy Policy', path: '/privacy' }
       ]
     },
     {
@@ -86,7 +79,6 @@ const EnhancedFooter: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
@@ -97,16 +89,6 @@ const EnhancedFooter: React.FC = () => {
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <h3 className="text-2xl font-bold">Zion Tech Group</h3>
-=======
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-3xl">🚀</span>
-              <span className="text-2xl font-bold">Zion Tech Group</span>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Leading the future of technology with revolutionary AI, quantum computing, and next-generation solutions 
@@ -174,7 +156,6 @@ const EnhancedFooter: React.FC = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
@@ -185,12 +166,11 @@ const EnhancedFooter: React.FC = () => {
               <a href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Cookie Policy
               </a>
-=======
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">🌍 English (US)</span>
               <span className="text-gray-400 text-sm">🔒 Secure</span>
               <span className="text-gray-400 text-sm">⚡ Fast</span>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
+            </div>
             </div>
           </div>
         </div>

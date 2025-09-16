@@ -12,18 +12,12 @@ import {
   Infinity,
   Eye,
   Heart,
-<<<<<<< HEAD
   Rocket,
   Zap,
   Shield,
-  Globe
-=======
-  Zap,
-  Rocket,
   Globe,
   Cpu,
   Database,
-  Shield,
   Target,
   TrendingUp,
   Users,
@@ -38,7 +32,6 @@ import {
   Activity,
   Waves,
   Hexagon
->>>>>>> cursor/create-and-deploy-new-content-4f5e
 } from 'lucide-react';
 
 const RevolutionaryContentCarousel: React.FC = () => {
@@ -80,11 +73,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/FutureTechBreakthrough2026",
       status: "Breakthrough",
-<<<<<<< HEAD
-      impact: "Unprecedented"
-=======
       impact: "Revolutionary"
->>>>>>> cursor/create-and-deploy-new-content-4f5e
     },
     {
       id: 3,
@@ -102,11 +91,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
-<<<<<<< HEAD
       impact: "Revolutionary"
-=======
-      impact: "Unprecedented"
->>>>>>> cursor/create-and-deploy-new-content-4f5e
     },
     {
       id: 4,
@@ -129,28 +114,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
-<<<<<<< HEAD
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
-=======
-      subtitle: "Reality Perception & Neural Interfaces",
-      description: "Experience the convergence of quantum computing and neural interfaces that can perceive reality beyond human limitations.",
->>>>>>> cursor/create-and-deploy-new-content-4f5e
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
-<<<<<<< HEAD
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
-=======
-        "Reality Perception AI",
-        "Quantum Field Visualization",
-        "Higher Dimensional Sight",
-        "Universal Perception"
->>>>>>> cursor/create-and-deploy-new-content-4f5e
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -158,41 +131,24 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
-<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
-=======
-      title: "Empathetic Intelligence 2026",
-      subtitle: "Human-AI Emotional Connection",
-      description: "AI systems that can truly understand, feel, and respond to human emotions with genuine empathy and therapeutic support.",
->>>>>>> cursor/create-and-deploy-new-content-4f5e
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
-<<<<<<< HEAD
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
-=======
-        "Genuine Emotional Understanding",
-        "Empathetic Response Systems",
-        "Human-AI Connection",
-        "Therapeutic Support"
-      ],
-      link: "/pages/EmpatheticIntelligence2026",
->>>>>>> cursor/create-and-deploy-new-content-4f5e
       status: "Live Now",
       impact: "Transformative"
     }
   ];
 
-<<<<<<< HEAD
-=======
   const stats = [
     { number: '∞', label: 'Computational Power', icon: Zap },
     { number: '0ms', label: 'Processing Latency', icon: Gauge },
@@ -201,8 +157,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     { number: '∞', label: 'Storage Capacity', icon: Database },
     { number: '∞', label: 'Reality Simulations', icon: Globe }
   ];
-
->>>>>>> cursor/create-and-deploy-new-content-4f5e
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -224,7 +178,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     setCurrentSlide(index);
   };
 
-<<<<<<< HEAD
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
@@ -423,8 +376,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
-=======
-  const currentContent = revolutionaryContent[currentSlide];
 
   return (
     <div className="relative w-full h-[600px] overflow-hidden rounded-3xl">
@@ -620,7 +571,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-4f5e
     </div>
   );
 };

@@ -1,17 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NotificationSystem from './components/NotificationSystem';
 
 const Header: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-=======
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
->>>>>>> cursor/create-and-deploy-new-content-d7eb
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
@@ -23,9 +18,8 @@ const Header: React.FC = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
-<<<<<<< HEAD
             </Link>
             <Link to="/pages/RevolutionaryTechShowcase2026" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">
               Revolutionary Tech
@@ -59,20 +53,6 @@ const Header: React.FC = () => {
               <Link to="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
               <Link to="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
             </div>
-=======
-            </a>
-            <a href="/pages/InnovationLanding2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Innovation
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Services
-            </a>
-            <a href="/pages/RevolutionaryTechBlog2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Blog
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Contact
-            </a>
           </nav>
 
           {/* Right side actions */}
@@ -81,7 +61,6 @@ const Header: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
               Get Started
             </button>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
           </div>
         </div>
       </div>
