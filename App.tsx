@@ -28,6 +28,7 @@ import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import Blog from './src/pages/Blog';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
@@ -1476,14 +1477,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
-          <Route path="/blog" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
-              </div>
-            </main>
-          } />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 1001,
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    excerpt: "Design low-latency, cost-aware retrieval for agent workflows at scale.",
+    content: "A hands-on guide to building retrieval layers for agents: hybrid vector+keyword search, freshness windows, caching tiers, and evaluation harnesses for quality and latency. Includes production topology diagrams and SLO templates.",
+    author: "Nina Park",
+    authorRole: "Principal Architect",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Architecture",
+    tags: ["Retrieval", "RAG", "Latency", "Caching"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-retrieval-architectures-2026.jpg",
+    slug: "ai-2026-real-time-retrieval-architectures"
+  },
+  {
+    id: 1000,
+    title: "AI 2026: Edge Agents Production Guide",
+    excerpt: "Ship resilient edge agents with offline envelopes, eval gates, and rollback.",
+    content: "Reference patterns for edge-deployed agents: local tools, offline-first stores, privacy budgets, evidence logging, and OTA release strategies with eval-gated promotion. Comes with a readiness checklist and troubleshooting matrix.",
+    author: "Ravi Kumar",
+    authorRole: "Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Edge Computing",
+    tags: ["Edge", "Agents", "Reliability", "OTA"],
+    featured: true,
+    imageUrl: "/images/blog/edge-agents-production-guide-2026.jpg",
+    slug: "ai-2026-edge-agents-production-guide"
+  },
+  {
     id: 58,
     title: "AI 2026: Production Evidence Hub — Blueprint",
     excerpt: "Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.",
