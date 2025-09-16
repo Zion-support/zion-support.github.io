@@ -5,31 +5,7 @@ import { getPostById } from '../../../data/blog';
 
 type Params = { params: { id: string } };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -69,22 +45,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -92,30 +52,13 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -533,30 +476,11 @@ export default function BlogPostPage({ params }: Params) {
       </div>
     </article>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 }
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 =======
@@ -564,36 +488,16 @@ export default function BlogPostPage({ params }: Params) {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 }
 
 =======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main

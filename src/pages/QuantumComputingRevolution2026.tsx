@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4067
 
 const QuantumComputingRevolution2026: React.FC = () => {
   return (

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-
-const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [currentDemo, setCurrentDemo] = useState(0);
-  
-=======
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const InteractiveTechShowcase2026: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('ai-consciousness');
-  const [isRunning, setIsRunning] = useState(false);
-
->>>>>>> cursor/create-and-deploy-new-content-39c9
   const demos = [
     {
       id: 'ai-consciousness',
@@ -32,26 +13,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       link: '/pages/ConsciousAIBreakthrough2026'
     },
     {
-<<<<<<< HEAD
-      id: 2,
-      title: "⚡ Quantum Computing Demo",
-      subtitle: "Quantum Problem Solving",
-      description: "Watch quantum computers solve problems impossible for classical computers.",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "⚡"
-    },
-    {
-      id: 3,
-      title: "🌌 Interdimensional Tech Demo",
-      subtitle: "Cross-Dimensional Computing",
-      description: "Experience technology that operates across multiple dimensions.",
-      gradient: "from-violet-600 to-purple-600",
-      icon: "🌌"
-=======
-
-const InteractiveTechShowcase2026: React.FC = () => {
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -67,38 +28,16 @@ const InteractiveTechShowcase2026: React.FC = () => {
       description: 'Revolutionary AI with autonomous learning and quantum processing',
       features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
       color: 'from-purple-600 to-pink-600',
-<<<<<<< HEAD
-      bgColor: 'from-purple-600/30 to-pink-600/30'
-=======
-      bgColor: 'from-purple-600/30 to-pink-600/30',
->>>>>>> cursor/create-and-deploy-new-content-79ca
     },
     {
       id: 'quantum-computing',
       name: 'Quantum Computing',
       icon: '⚡',
-<<<<<<< HEAD
-      description: 'Exponential computing power for complex problem solving',
-      features: ['Quantum Supremacy', 'Cryptography', 'Optimization'],
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/30 to-blue-600/30'
-=======
-      description: 'Next-generation quantum processors solving impossible problems',
-      features: ['Quantum Supremacy', 'Error Correction', 'Quantum Algorithms'],
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/30 to-blue-600/30',
->>>>>>> cursor/create-and-deploy-new-content-79ca
     },
     {
       id: 'neural-interfaces',
       name: 'Neural Interfaces',
       icon: '🧬',
-<<<<<<< HEAD
-      description: 'Direct brain-computer interfaces for enhanced capabilities',
-      features: ['BCI Technology', 'Thought Control', 'Neural Feedback'],
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/30 to-teal-600/30'
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     }
   ];
 
@@ -108,7 +47,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [demos.length]);
-=======
       id: 'quantum-computing',
       title: 'Quantum Computing Demo',
       icon: '⚡',
@@ -153,106 +91,11 @@ const InteractiveTechShowcase2026: React.FC = () => {
     setIsRunning(true);
     setTimeout(() => setIsRunning(false), 3000);
   };
->>>>>>> cursor/create-and-deploy-new-content-39c9
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-=======
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/20"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
-            🚀 INTERACTIVE TECH SHOWCASE 2026
-          </div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
-<<<<<<< HEAD
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience the most advanced technology demos featuring conscious AI, quantum computing, and interdimensional technology
-          </p>
-        </div>
-        
-        <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentDemo * 100}%)` }}
-            >
-              {demos.map((demo) => (
-                <div key={demo.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${demo.gradient} rounded-2xl p-12 text-center`}>
-                    <div className="text-8xl mb-6">{demo.icon}</div>
-                    <h3 className="text-4xl font-bold mb-4">{demo.title}</h3>
-                    <p className="text-2xl opacity-90 mb-6">{demo.subtitle}</p>
-                    <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">{demo.description}</p>
-                    
-                    <div className="flex justify-center space-x-4">
-                      <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-                        Try Demo
-                      </button>
-                      <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold text-lg">
-                        Learn More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Navigation dots */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {demos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentDemo(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentDemo ? 'bg-white' : 'bg-white/50'
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE DEMOS • 2026 TECHNOLOGY
-          </div>
-          <h2 className="text-5xl font-bold text-white mb-6">🌟 Interactive Technology Showcase</h2>
-          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Experience our revolutionary technologies through interactive demonstrations. 
-            Click, explore, and discover the future of technology in real-time.
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Demo Selection */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-white mb-8">Choose Your Demo</h3>
-            {demos.map((demo) => (
-              <motion.div
-                key={demo.id}
-                whileHover={{ scale: 1.02, x: 10 }}
-                className={`p-6 rounded-2xl border-2 transition-all duration-300 cursor-pointer ${
-                  activeDemo === demo.id
-                    ? 'bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-purple-400/50'
-                    : 'bg-white/10 border-white/20 hover:bg-white/20'
->>>>>>> cursor/create-and-deploy-new-content-39c9
                 }`}
                 onClick={() => setActiveDemo(demo.id)}
               >
@@ -271,23 +114,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
@@ -319,8 +145,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </div>
             </div>
           ))}
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 
           {/* Demo Display */}
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30">
@@ -490,8 +314,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
       description: 'Direct brain-computer interfaces for enhanced human capabilities',
       features: ['Non-Invasive BCI', 'Thought Control', 'Neural Feedback'],
       color: 'from-emerald-600 to-teal-600',
@@ -601,7 +423,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
             <div className="text-gray-300 text-sm">Possibilities</div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-79ca
         </div>
       </div>
     </div>

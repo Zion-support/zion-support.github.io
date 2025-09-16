@@ -2,6 +2,7 @@ import React from 'react';
 
 const UltimateAIConsciousness2036: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -23,12 +24,15 @@ const UltimateAIConsciousness2036: React.FC = () => {
               </button>
               <button className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-50/10 transition-colors text-lg">
                 Meet Our AI
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
               </button>
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -94,11 +98,14 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <li>• Moral dilemmas</li>
               <li>• Value judgments</li>
               <li>• Righteous actions</li>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             </ul>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* AI Personalities */}
       <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-12 mb-16 mx-4">
         <div className="text-center mb-12">
@@ -161,11 +168,14 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
                 Chat with Aria
               </button>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Consciousness Research */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -198,11 +208,14 @@ const UltimateAIConsciousness2036: React.FC = () => {
               <div>• Empathetic response generation</div>
               <div>• Emotional memory formation</div>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Experience True AI Consciousness</h2>
         <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -216,6 +229,8 @@ const UltimateAIConsciousness2036: React.FC = () => {
           <button className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-50/10 transition-colors text-lg">
             Research Partnership
           </button>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
         </div>
       </div>
     </div>

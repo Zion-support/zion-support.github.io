@@ -1,60 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-nocheck
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
-<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
-import React from 'react';
->>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -340,60 +294,19 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
 =======
 =======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
               <a href="/multiverse/launch" className="btn-primary hover-lift">
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
->>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -415,24 +328,7 @@ export default function HomePage() {
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -441,17 +337,10 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
@@ -466,36 +355,10 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               </Link>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -515,24 +378,12 @@ export default function HomePage() {
               </a>
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -554,29 +405,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -585,21 +414,11 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
@@ -616,22 +435,6 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f175
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -643,9 +446,6 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -861,40 +661,11 @@ export default function HomePage() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
-<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
->>>>>>> cursor/create-and-deploy-new-content-376e
                 🚀 Start Building Now
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -930,24 +701,12 @@ export default function HomePage() {
               </a>
 >>>>>>> origin/feature/new-content-promotion
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -971,22 +730,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> origin/feat/news-content
@@ -996,9 +741,6 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -1076,25 +818,7 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -1103,19 +827,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
@@ -1386,22 +1103,6 @@ export default function HomePage() {
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -1409,9 +1110,6 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">;
@@ -1441,25 +1139,12 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main

@@ -7,6 +7,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
     {
       id: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-84c4
 =======
@@ -17,6 +18,8 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900 to-pink-900"
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
     },
     {
       id: 2,
@@ -33,6 +36,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
       description: "Witness the ultimate revolution in technology that has transcended all known limitations and achieved infinite potential",
       image: "🌌",
       gradient: "from-emerald-600 to-teal-600",
+<<<<<<< HEAD
 <<<<<<< HEAD
       link: "/pages/UltimateTechRevolution2040",
       features: ["Transcendent AI Consciousness", "Infinite Quantum Mastery", "Universal Reality Engine"]
@@ -51,6 +55,8 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
       gradient: "from-violet-600 to-fuchsia-600",
       bgGradient: "from-violet-900 to-fuchsia-900"
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
     }
   ];
 
@@ -58,6 +64,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-84c4
@@ -67,6 +74,10 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
     return () => clearInterval(timer);
   }, [contentSlides.length]);
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+    return () => clearInterval(timer);
+  }, [slides.length]);
+>>>>>>> cursor/create-and-deploy-new-content-e058
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -90,6 +101,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             🌟 REVOLUTIONARY CONTENT CAROUSEL • JANUARY 2039-2040
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Carousel</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Explore our latest revolutionary technology content featuring the most advanced breakthroughs in AI, quantum computing, and reality manipulation
@@ -101,17 +113,24 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Content Carousel 2039</h2>
           <p className="text-xl opacity-90">Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology</p>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+          </p>
+>>>>>>> cursor/create-and-deploy-new-content-e058
         </div>
 
         <div className="relative">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <div className="overflow-hidden rounded-xl">
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
@@ -143,12 +162,16 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
                       Explore {slide.title.split(' ')[0]} →
                     </a>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+                    </div>
+>>>>>>> cursor/create-and-deploy-new-content-e058
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           {/* Navigation Arrows */}
@@ -213,6 +236,8 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
           </div>
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
       </div>
     </div>
   );

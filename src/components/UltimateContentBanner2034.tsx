@@ -4,6 +4,7 @@ const UltimateContentBanner2034: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -86,6 +87,9 @@ const UltimateContentBanner2034: React.FC = () => {
 =======
   return (
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-e058
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -166,10 +170,13 @@ const UltimateContentBanner2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -236,7 +243,10 @@ const UltimateContentBanner2034: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
   );
 };
 
