@@ -1,5 +1,29 @@
 ---
 title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
+description: "Recipes to build, run, and operationalize eval suites that gate agent lifecycles."
+created: 2025-09-16
+tags:
+  - Evaluations
+  - Reliability
+  - Observability
+  - Policy-as-Code
+  - 2026
+status: published
+url: /blog/ai-2026-evaluation-cookbook
+featured: true
+reading_time: "14 min read"
+---
+
+This cookbook provides practical recipes for building eval suites:
+
+- Retrieval accuracy suites for RAG
+- Tool-use safety and permissioning checks
+- Cost, latency, and quality regression guards
+
+Wire these into CI/CD and production gates to ensure safe and reliable autonomy.
+
+---
+title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
 description: "A practical cookbook to design evaluation suites and policy gates that make agents safer and more reliable in production."
 date: 2025-09-16
 tags: ["Evaluations", "Reliability", "Observability", "Policy-as-Code", "2026"]

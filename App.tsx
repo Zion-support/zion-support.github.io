@@ -52,6 +52,12 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
+import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
 import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
@@ -62,7 +68,7 @@ import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprove
 import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
-// Removed missing import: UltimateAIConsciousness2030
+import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -254,6 +260,9 @@ import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBrea
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -729,6 +738,9 @@ export default function App(): JSX.Element {
                     <a href="/pages/RevolutionaryTechBreakthrough2028" className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 Revolutionary 2028 →
                     </a>
+                    <a href="/pages/UltimateAIConsciousness2030" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 AI Consciousness 2030 →
+                    </a>
                     <a href="/pages/QuantumRealityEngine2032" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       ⚛️ Quantum Reality 2032 →
                     </a>
@@ -884,6 +896,7 @@ export default function App(): JSX.Element {
                   <SocialProofShowcase2034 />
                 </div>
 
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
                 {/* NEW: Ultimate Content Banner 2025 - Revolutionary Technology Showcase */}
                 <div className="mb-12">
                   <UltimateContentBanner2025 />
