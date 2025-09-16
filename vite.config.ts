@@ -179,7 +179,6 @@ export default defineConfig(({ command, mode }) => {
           target: 'es2020',
           platform: 'browser',
         }
-<<<<<<< HEAD
       })
     },
     server: {
@@ -197,19 +196,5 @@ export default defineConfig(({ command, mode }) => {
     css: {
       devSourcemap: true,
     },
-=======
-      }
-    }
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000,
-    host: true
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true
->>>>>>> origin/merge-pr-12271
   }
 })
