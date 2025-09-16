@@ -3,6 +3,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-agent-evidence-bundles-blueprint',
+    title: 'AI 2026: Agent Evidence Bundles — Blueprint',
+    summary:
+      'Design evidence bundles with provenance, policy checks, eval signals, and approvals.'
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-risk-scorecards',
+    title: 'AI 2026: Enterprise Agent Risk Scorecards — Field Guide',
+    summary:
+      'Standardize shared risk metrics, thresholds, and alerts for autonomous agents.'
+  },
+  {
     slug: 'ai-2026-agent-safety-evidence-bundles',
     title: 'AI 2026: Agent Safety Evidence Bundles — Practical Guide',
     summary:
