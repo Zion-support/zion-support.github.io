@@ -168,6 +168,8 @@ import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import InteractiveTechShowcase2035 from './src/components/InteractiveTechShowcase2035';
 import ComprehensiveServices2035 from './src/pages/ComprehensiveServices2035';
+import EmbodiedAI2026Banner from './src/components/EmbodiedAI2026Banner';
+import EmbodiedAIContentShowcase from './src/components/EmbodiedAIContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -225,6 +227,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Ultimate Content Banner 2035 */}
                 <UltimateContentBanner2035 />
+
+                {/* NEW: Embodied AI 2026 Banner */}
+                <EmbodiedAI2026Banner />
 
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
@@ -843,6 +848,11 @@ export default function App(): JSX.Element {
                 {/* Enhanced Content Showcase 2030 */}
                 <div className="mb-12">
                   <EnhancedContentShowcase2030 />
+                </div>
+
+                {/* Embodied AI Content Showcase */}
+                <div className="mb-12">
+                  <EmbodiedAIContentShowcase />
                 </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
