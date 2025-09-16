@@ -21,7 +21,6 @@ const LoadingFallback = () => <LoadingSpinner size="large" text="Loading page...
 function App() {
     return (
       <ErrorBoundary>
-        <NotificationProvider>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
               <AppHeader />
@@ -39,9 +38,9 @@ function App() {
               
               <Footer />
               <ChatAssistant />
+              <NotificationSystem />
             </div>
           </Router>
-        </NotificationProvider>
       </ErrorBoundary>
     );
 }
