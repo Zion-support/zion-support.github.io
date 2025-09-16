@@ -76,6 +76,11 @@ import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomati
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+
+// Import new 2026 content promotional components
+import NewContent2026SyntheticIntelligenceBanner from './components/NewContent2026SyntheticIntelligenceBanner';
+import NewContent2026NeuralInterfaceBanner from './components/NewContent2026NeuralInterfaceBanner';
+import NewContent2026UltimateShowcaseBanner from './components/NewContent2026UltimateShowcaseBanner';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -734,6 +739,11 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content 2026 Promotional Banners - FEATURED */}
+        <NewContent2026UltimateShowcaseBanner />
+        <NewContent2026SyntheticIntelligenceBanner />
+        <NewContent2026NeuralInterfaceBanner />
 
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
