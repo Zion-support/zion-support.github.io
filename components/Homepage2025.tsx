@@ -48,6 +48,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Agent Platform SLO Blueprint (2026)',
+      href: '/blog/ai-2026-agent-slo-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Governed Tool Use — Case Studies (2026)',
+      href: '/blog/ai-2026-governed-tool-use-case-studies',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
       title: '2025-09 Research Brief — Agentic Business Ops',
       href: '/reports/briefs/brief-2025-09-agentic-business-ops',
       tag: 'Brief',
