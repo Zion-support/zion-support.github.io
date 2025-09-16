@@ -203,7 +203,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Evaluation gates, scorecards, rollback contracts, and an audit-ready evidence hub.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-operational-reliability-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
+              <Link href="/blog/ai-2026-operational-reliability-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Blueprint</Link>
             </div>
           </div>
         </div>
