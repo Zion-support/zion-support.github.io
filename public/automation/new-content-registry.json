@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "title": "AI 2026: Operational Guardrails Integration",
+      "href": "/blog/ai-2026-operational-guardrails-integration.md",
+      "desc": "Wire policy checks, eval gates, and rollback into daily delivery.",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agentic Evidence Hubs",
+      "href": "/blog/ai-2026-agentic-evidence-hubs.md",
+      "desc": "Bundle traces, evals, and policy events into portable proof.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Governed Model Routing — Blueprint",
+      "href": "/blog/ai-2026-governed-model-routing-blueprint.md",
+      "desc": "Latency, quality, and cost-aware routing with runtime guardrails.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
       "title": "Executive Brief — Safe Agent Rollouts (2026)",
       "href": "/blog/ai-2026-exec-brief-safe-agent-rollouts.md",
       "desc": "Evidence-first release patterns that keep autonomy safe, fast, and auditable.",
