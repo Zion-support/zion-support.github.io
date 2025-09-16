@@ -77,28 +77,28 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
   const latestInsights = [
     {
-      title: 'GenAI for Regulated Industries (2025)',
+      title: 'GenAI 2025: Practical Compliance Patterns',
       href: '/blog/genai-2025-practical-compliance-patterns',
       tag: 'Compliance',
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
       href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
       tag: 'RevOps',
       gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'AI 2026: Autonomous Ops Playbook',
+      href: '/blog/ai-2026-autonomous-ops-playbook',
+      tag: 'Playbook',
+      gradient: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'AI 2026: Real-Time Retrieval Architectures',
       href: '/blog/ai-2026-real-time-retrieval-architectures',
       tag: 'Article',
       gradient: 'from-purple-500 to-blue-500'
-    },
-    {
-      title: 'AI 2026: Autonomous Ops Playbook',
-      href: '/content/ai-2026-autonomous-ops-playbook',
-      tag: 'Playbook',
-      gradient: 'from-cyan-500 to-blue-600'
     }
   ];
 
