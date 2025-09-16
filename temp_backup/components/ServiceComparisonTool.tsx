@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, Check, X, Star, Brain, Atom, Rocket, Shield, Zap, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 

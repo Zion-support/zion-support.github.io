@@ -5,7 +5,7 @@
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion } from 'framer-motion',;
 import {
   Search, Star, DollarSign, CheckCircle,
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
@@ -113,7 +113,7 @@ export default function Ultimate2026ServicesShowcase() {
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   Search, Star, DollarSign, CheckCircle

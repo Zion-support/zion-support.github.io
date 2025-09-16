@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**;
-
+import { motion, AnimatePresence  } from 'framer-motion';
 ;
  params - Function parameters;
  * @returns {*} Function return value;

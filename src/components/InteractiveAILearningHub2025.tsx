@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen
   Play
@@ -208,7 +208,7 @@ const InteractiveAILearningHub2025 = () => {
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -228,10 +228,10 @@ const InteractiveAILearningHub2025 = () => {
             Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
-        </div>
+        </motion.div>
 
         {/* Search and Filters */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -267,10 +267,10 @@ const InteractiveAILearningHub2025 = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Category Filter */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
@@ -293,18 +293,18 @@ const InteractiveAILearningHub2025 = () => {
               </span>
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Courses Grid */}
-        <div
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          
+          <AnimatePresence>
             {filteredCourses.map((course) => (
-              <div
+              <motion.div
                 key={course.id}
                 variants={itemVariants}
                 layout
@@ -436,13 +436,13 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          
-        </div>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Learning Paths Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -517,10 +517,10 @@ const InteractiveAILearningHub2025 = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
@@ -544,7 +544,7 @@ const InteractiveAILearningHub2025 = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

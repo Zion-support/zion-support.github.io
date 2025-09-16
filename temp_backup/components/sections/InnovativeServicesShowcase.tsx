@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Filter, Search, Grid, List, Star, TrendingUp, Zap } from 'lucide-react';
 import UltraAdvancedServiceCard from '../ui/UltraAdvancedServiceCard';
 import { innovativeMicroSaasServices } from '../../data/innovative-micro-saas-services';

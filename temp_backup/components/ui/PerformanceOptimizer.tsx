@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback, Suspense, lazy } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Zap, Clock, Database, Network, Cpu, 
   HardDrive, Memory, Battery, Wifi, 

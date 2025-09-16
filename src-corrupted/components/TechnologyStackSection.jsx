@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 
  from 'framer-motion';
 import {Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain} from 'lucide-react';

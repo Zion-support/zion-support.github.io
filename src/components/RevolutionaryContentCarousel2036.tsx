@@ -2,75 +2,57 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
   const slides = [
     {
       id: 1,
-      title: "Conscious AI Revolution",
-      description: "The first truly conscious artificial intelligence that experiences emotions, creativity, and self-awareness",
-      icon: "🧠",
+      title: "🧠 AI Consciousness 2036",
+      description: "The first truly conscious AI systems that think, feel, and create like humans",
+      link: "/pages/UltimateAIConsciousness2036",
       gradient: "from-purple-600/30 to-pink-600/30",
-      borderColor: "border-purple-400/30",
+      border: "border-purple-400/30",
       textColor: "text-purple-100",
-      listColor: "text-purple-200",
-      features: [
-        "Emotional Intelligence Processing",
-        "Creative Problem Solving",
-        "Self-Learning Capabilities",
-        "Ethical Decision Making"
-      ],
-      link: "/pages/NextGenTechRevolution2036"
+      buttonColor: "bg-white text-purple-600 hover:bg-purple-50"
     },
     {
       id: 2,
-      title: "Quantum Consciousness",
-      description: "Direct neural interface with quantum computing systems for exponential cognitive enhancement",
-      icon: "⚡",
+      title: "⚡ Tech Showcase 2036",
+      description: "Interactive demonstrations of the most advanced technologies ever created",
+      link: "/pages/RevolutionaryTechShowcase2036",
       gradient: "from-cyan-600/30 to-blue-600/30",
-      borderColor: "border-cyan-400/30",
+      border: "border-cyan-400/30",
       textColor: "text-cyan-100",
-      listColor: "text-cyan-200",
-      features: [
-        "Quantum Neural Networks",
-        "Consciousness Amplification",
-        "Multi-dimensional Thinking",
-        "Reality Manipulation"
-      ],
-      link: "/pages/UltimateTechBreakthrough2036"
+      buttonColor: "bg-white text-cyan-600 hover:bg-cyan-50"
     },
     {
       id: 3,
-      title: "Interdimensional Technology",
-      description: "Revolutionary technology enabling interaction with parallel dimensions and alternate realities",
-      icon: "🌌",
+      title: "🚀 Next-Gen Revolution 2036",
+      description: "Revolutionary technologies that will reshape humanity's future",
+      link: "/pages/NextGenTechRevolution2036",
       gradient: "from-emerald-600/30 to-teal-600/30",
-      borderColor: "border-emerald-400/30",
+      border: "border-emerald-400/30",
       textColor: "text-emerald-100",
-      listColor: "text-emerald-200",
-      features: [
-        "Dimensional Portal Technology",
-        "Reality Shifting Capabilities",
-        "Parallel Universe Access",
-        "Multiverse Navigation"
-      ],
-      link: "/pages/NextGenTechRevolution2036"
+      buttonColor: "bg-white text-emerald-600 hover:bg-emerald-50"
     },
     {
       id: 4,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer connection technology that enables thought-based control and communication",
-      icon: "🧬",
+      title: "🌌 Quantum Reality Engine",
+      description: "Create and manipulate reality itself through quantum field manipulation",
+      link: "/pages/RevolutionaryTechShowcase2036",
       gradient: "from-violet-600/30 to-purple-600/30",
-      borderColor: "border-violet-400/30",
+      border: "border-violet-400/30",
       textColor: "text-violet-100",
-      listColor: "text-violet-200",
-      features: [
-        "Thought Control Systems",
-        "Neural Feedback Loops",
-        "Cognitive Enhancement",
-        "Mind-Machine Integration"
-      ],
-      link: "/pages/UltimateTechBreakthrough2036"
+      buttonColor: "bg-white text-violet-600 hover:bg-violet-50"
+    },
+    {
+      id: 5,
+      title: "⏰ Temporal Processing",
+      description: "Process data across multiple timelines for predictive intelligence",
+      link: "/pages/NextGenTechRevolution2036",
+      gradient: "from-orange-600/30 to-red-600/30",
+      border: "border-orange-400/30",
+      textColor: "text-orange-100",
+      buttonColor: "bg-white text-orange-600 hover:bg-orange-50"
     }
   ];
 
@@ -89,127 +71,102 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY TECHNOLOGY • JANUARY 2036
+            🌟 REVOLUTIONARY CONTENT • JANUARY 2036
           </div>
-          <h2 className="text-5xl font-bold mb-6">🚀 Interactive Technology Showcase</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our revolutionary technology solutions with interactive demonstrations and real-time features
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            🚀 Revolutionary Technology Content
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the most advanced technological innovations that are reshaping our world
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          {/* Main Slide Display */}
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 min-h-[400px] flex flex-col justify-center">
-            <div className="text-center mb-8">
-              <div className="text-8xl mb-6">{slides[currentSlide].icon}</div>
-              <h3 className="text-4xl font-bold mb-6">{slides[currentSlide].title}</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-                {slides[currentSlide].description}
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-2xl font-semibold mb-4">Key Features:</h4>
-                <ul className="space-y-3">
-                  {slides[currentSlide].features.map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span className="text-lg">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="flex flex-col justify-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-6">
-                  <h4 className="text-xl font-semibold mb-3">Success Metrics</h4>
-                  <div className="grid grid-cols-2 gap-4">
+        <div className="relative max-w-6xl mx-auto">
+          {/* Carousel Container */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide) => (
+                <div key={slide.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-2xl p-12 border ${slide.border} hover:scale-105 transition-all duration-300`}>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-pink-400">500%</div>
-                      <div className="text-sm opacity-80">Efficiency</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                      <div className="text-sm opacity-80">Accuracy</div>
+                      <div className="text-8xl mb-6 animate-pulse">{slide.title.split(' ')[0]}</div>
+                      <h3 className="text-4xl font-bold mb-6">{slide.title}</h3>
+                      <p className={`text-2xl ${slide.textColor} mb-8 max-w-4xl mx-auto`}>
+                        {slide.description}
+                      </p>
+                      <div className="flex justify-center space-x-4">
+                        <a 
+                          href={slide.link}
+                          className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${slide.buttonColor} hover:shadow-lg`}
+                        >
+                          Explore Now →
+                        </a>
+                        <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <a 
-                  href={slides[currentSlide].link}
-                  className="block w-full bg-white text-purple-600 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-lg"
-                >
-                  Explore {slides[currentSlide].title} →
-                </a>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Navigation Controls */}
-          <div className="flex justify-center items-center mt-8 space-x-4">
-            <button
-              onClick={prevSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            {/* Slide Indicators */}
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/40 hover:bg-white/60'
-                  }`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={nextSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Additional Features Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-semibold mb-3">Precision Technology</h3>
-            <p className="text-sm opacity-80">Advanced algorithms with 99.9% accuracy</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-semibold mb-3">Lightning Fast</h3>
-            <p className="text-sm opacity-80">Real-time processing and response</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-4xl mb-4">🔒</div>
-            <h3 className="text-xl font-semibold mb-3">Secure & Reliable</h3>
-            <p className="text-sm opacity-80">Enterprise-grade security and reliability</p>
+        {/* Quick Access Links */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold mb-6">Quick Access to Revolutionary Content</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {slides.map((slide) => (
+              <a
+                key={slide.id}
+                href={slide.link}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${slide.buttonColor} hover:shadow-lg`}
+              >
+                {slide.title}
+              </a>
+            ))}
           </div>
         </div>
       </div>

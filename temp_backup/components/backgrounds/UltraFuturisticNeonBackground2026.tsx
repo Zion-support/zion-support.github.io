@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface UltraFuturisticNeonBackground2026Props {
   intensity?: 'low' | 'medium' | 'high';

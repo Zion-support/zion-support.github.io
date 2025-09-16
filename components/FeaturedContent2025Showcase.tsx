@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 const FeaturedContent2025Showcase: React.FC = () => {
   const featuredContent = [

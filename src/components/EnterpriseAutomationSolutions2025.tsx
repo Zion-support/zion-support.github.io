@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   Zap
@@ -293,7 +293,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -309,10 +309,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Transform your enterprise with AI-powered automation solutions. 
             Streamline processesreduce costsand accelerate growth.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Filter */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -331,19 +331,19 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               {category.name} ({category.count})
             </button>
           ))}
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
-            <div
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="grid gap-6"
             >
               {filteredSolutions.map((solutionindex) => (
-                <div
+                <motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -436,14 +436,14 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Demo Panel */}
           <div className="lg:col-span-1">
-            <div
+            <motion.div
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -453,7 +453,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               
               <AnimatePresence mode="wait">
                 {selectedSolutionData ? (
-                  <div
+                  <motion.div
                     key={selectedSolutionData.id}
                     initial={{ opacity: 0scale: 0.95 }}
                     animate={{ opacity: 1scale: 1 }}
@@ -549,9 +549,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         </button>
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 ) : (
-                  <div
+                  <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="text-center py-12"
@@ -563,15 +563,15 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <p className="text-gray-400">
                       Choose an automation solution to see it in action
                     </p>
-                  </div>
+                  </motion.div>
                 )}
-              
-            </div>
+              </AnimatePresence>
+            </motion.div>
           </div>
         </div>
 
         {/* Enterprise Stats */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -591,7 +591,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

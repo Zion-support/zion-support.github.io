@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 import { Button } from '../ui/button';
 const AccessibilityContext = createContext(undefined);

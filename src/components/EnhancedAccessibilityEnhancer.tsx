@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   RotateCcw, Accessibility, CheckCircle, AlertCircle
 } from 'lucide-react';
@@ -127,7 +127,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {/* Accessibility Toggle Button */}
-      <button
+      <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -135,12 +135,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
         aria-label="Accessibility Settings"
       >
         <Accessibility className="w-6 h-6" />
-      </button>
+      </motion.button>
 
       {/* Accessibility Panel */}
-      
+      <AnimatePresence>
         {isOpen && (
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -315,9 +315,9 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 <span>Changes saved automatically</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
-      
+      </AnimatePresence>
     </div>
   );
 };

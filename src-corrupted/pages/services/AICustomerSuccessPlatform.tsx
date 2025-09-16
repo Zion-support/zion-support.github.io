@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   Users, 

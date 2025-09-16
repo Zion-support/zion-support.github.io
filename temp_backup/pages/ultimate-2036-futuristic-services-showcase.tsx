@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, Star, DollarSign, CheckCircle, Rocket, Phone, Mail, MapPin, 
   Grid, List, ChevronDown, Brain, Atom, Shield, Zap, Globe, Users,

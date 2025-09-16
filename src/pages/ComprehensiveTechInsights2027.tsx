@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 const ComprehensiveTechInsights2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState('trends');
@@ -89,7 +89,7 @@ const ComprehensiveTechInsights2027: React.FC = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -105,7 +105,7 @@ const ComprehensiveTechInsights2027: React.FC = () => {
               Explore the most comprehensive analysis of revolutionary technologies that will reshape 
               humanity's relationship with consciousness, reality, and existence itself
             </p>
-          </div>
+          </motion.div>
 
           {/* Navigation Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -127,14 +127,14 @@ const ComprehensiveTechInsights2027: React.FC = () => {
 
           {/* Content Sections */}
           {activeTab === 'trends' && (
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 gap-8"
             >
               {trends.map((trend, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -158,20 +158,20 @@ const ComprehensiveTechInsights2027: React.FC = () => {
                   <p className="text-indigo-100 leading-relaxed">
                     {trend.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           )}
 
           {activeTab === 'breakthroughs' && (
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
             >
               {breakthroughs.map((breakthrough, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -188,13 +188,13 @@ const ComprehensiveTechInsights2027: React.FC = () => {
                       {breakthrough.status}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           )}
 
           {activeTab === 'applications' && (
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -246,11 +246,11 @@ const ComprehensiveTechInsights2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {activeTab === 'impact' && (
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -294,11 +294,11 @@ const ComprehensiveTechInsights2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Call to Action */}
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -318,7 +318,7 @@ const ComprehensiveTechInsights2027: React.FC = () => {
                 🧠 Quantum Consciousness
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

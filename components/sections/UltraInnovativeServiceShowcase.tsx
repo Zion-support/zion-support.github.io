@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Globe, Rocket, Brain, Atom, Cpu } from 'lucide-react';
 import { innovative2025Services } from '../../data/innovative-2025-services';
 

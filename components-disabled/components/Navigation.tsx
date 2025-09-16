@@ -155,7 +155,7 @@ const Navigation = () => {
       </div>;
     </nav>;
   )}export default Navigation;
-
+import { motion, AnimatePresence  } from 'framer-motion';
 origin/automation-improvements-final;
   Menu;
   X;
@@ -221,7 +221,7 @@ export default function Navigation() {export default function Navigation() {expo
 export default Navigation;
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { motion, AnimatePresence } from "framer-motion";
 origin/automation-improvements-final
 
 

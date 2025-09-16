@@ -33,7 +33,7 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   DollarSign, 
   Shield, 

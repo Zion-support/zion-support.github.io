@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
 } from 'lucide-react';
 

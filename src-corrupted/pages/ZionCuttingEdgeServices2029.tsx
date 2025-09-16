@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Search, 
   Filter, 
   Star, 
