@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-evidence-led-governance-blueprint',
+    title: 'AI 2026: Evidence‑Led Governance — From Policy to Runtime Controls',
+    summary:
+      'Translate policy into executable controls, eval gates, and signed evidence for audit‑ready AI.',
+  },
+  {
     slug: 'ai-2026-production-rag-latency-budgets',
     title: 'AI 2026: Production RAG Latency Budgets',
     summary:

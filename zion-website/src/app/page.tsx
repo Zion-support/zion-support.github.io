@@ -34,8 +34,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: E2E AI Change Evidence Playbook —
-            <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            New: Evidence‑Led Governance Blueprint —
+            <a href="/blog/ai-2026-evidence-led-governance-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Case Study: 70% Content Velocity —
             <a href="/updates/ai-content-factory-velocity-70" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">how</a>
@@ -72,8 +72,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: E2E AI Change Evidence Playbook —
-            <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: Evidence‑Led Governance Blueprint —
+            <a href="/blog/ai-2026-evidence-led-governance-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Case Study: 70% Content Velocity —
             <a href="/updates/ai-content-factory-velocity-70" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
