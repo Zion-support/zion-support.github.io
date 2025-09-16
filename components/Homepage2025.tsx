@@ -77,6 +77,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
   const latestInsights = [
     {
+      title: 'Enterprise Automation Strategy 2025',
+      href: '/blog/ai-2025-enterprise-automation-strategy',
+      tag: 'Automation',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
       title: 'Agentic Product Playbooks',
       href: '/blog/agentic-product-playbooks',
       tag: 'Agentic',
