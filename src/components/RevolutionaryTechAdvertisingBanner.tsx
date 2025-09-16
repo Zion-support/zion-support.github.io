@@ -1,134 +1,136 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryTechAdvertisingBanner: React.FC = () => {
-  const features = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const slides = [
     {
-      icon: "🚀",
-      title: "AI-Powered Automation",
-      description: "Transform your business with intelligent automation systems",
-      cta: "Learn More"
+      title: "🚀 NEW: Revolutionary Tech Showcase 2027",
+      description: "Experience the future with our groundbreaking content on Next-Gen AI, Quantum Computing, and Neural Interfaces",
+      cta: "Explore Now →",
+      bg: "from-purple-600 via-pink-600 to-red-600",
+      link: "/pages/RevolutionaryTechShowcase2027"
     },
     {
-      icon: "⚡",
-      title: "Quantum Computing Solutions",
-      description: "Unlock unprecedented computational power for complex problems",
-      cta: "Explore Now"
+      title: "🧠 AI Revolution 2027",
+      description: "Discover how artificial intelligence is reshaping industries and creating new opportunities",
+      cta: "Learn More →",
+      bg: "from-cyan-600 via-blue-600 to-indigo-600",
+      link: "/pages/AIRevolution2025"
     },
     {
-      icon: "🧠",
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer communication for seamless interaction",
-      cta: "Discover"
+      title: "⚡ Quantum Computing Breakthrough",
+      description: "Experience the future of computing with quantum technology solving impossible problems",
+      cta: "Go Quantum →",
+      bg: "from-emerald-600 via-teal-600 to-cyan-600",
+      link: "/pages/QuantumComputingBreakthrough"
     },
     {
-      icon: "🧬",
-      title: "Biotech AI Revolution",
-      description: "Personalized medicine powered by artificial intelligence",
-      cta: "Get Started"
+      title: "🧬 Neural Interface Future",
+      description: "Bridge the gap between mind and machine with direct neural interfaces",
+      cta: "Connect Now →",
+      bg: "from-orange-600 via-red-600 to-pink-600",
+      link: "/pages/NeuralInterfaceFuture"
     }
   ];
 
-  return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        {/* Main Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY TECHNOLOGY SOLUTIONS • 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Transform Your Future Today
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-            Join thousands of forward-thinking companies already leveraging our revolutionary technology solutions. 
-            Experience unprecedented growth, efficiency, and innovation with Zion Tech Group.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation →
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-              View Case Studies
-            </button>
-          </div>
-        </motion.div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-300 mb-4 text-sm">{feature.description}</p>
-              <button className="text-purple-400 hover:text-white transition-colors font-semibold text-sm">
-                {feature.cta} →
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  if (!isVisible) return null;
+
+  const currentSlideData = slides[currentSlide];
+
+  return (
+    <div className="relative overflow-hidden">
+      {/* Main Banner */}
+      <div className={`bg-gradient-to-r ${currentSlideData.bg} text-white py-6 px-4 relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10 container mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 animate-pulse">
+                {currentSlideData.title}
+              </h2>
+              <p className="text-lg opacity-90 max-w-2xl">
+                {currentSlideData.description}
+              </p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a
+                href={currentSlideData.link}
+                className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg transform hover:scale-105 shadow-lg"
+              >
+                {currentSlideData.cta}
+              </a>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white/80 hover:text-white transition-colors text-2xl"
+                aria-label="Close banner"
+              >
+                ×
               </button>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Slide Indicators */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
+      </div>
 
-        {/* Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Join Our Success Stories</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              See how leading companies are transforming their operations with our revolutionary technology solutions
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">500%</div>
-              <div className="text-gray-300">Average ROI Increase</div>
+      {/* Secondary Banner */}
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-4">
+        <div className="container mx-auto text-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🌟</span>
+              <span className="font-semibold">Revolutionary Technology 2027</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">95%</div>
-              <div className="text-gray-300">Client Satisfaction Rate</div>
+            <div className="hidden md:block w-px h-6 bg-white/30"></div>
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🚀</span>
+              <span className="font-semibold">Next-Gen AI Solutions</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-400 mb-2">24/7</div>
-              <div className="text-gray-300">Expert Support Available</div>
+            <div className="hidden md:block w-px h-6 bg-white/30"></div>
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">⚡</span>
+              <span className="font-semibold">Quantum Computing</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-white/30"></div>
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🧬</span>
+              <span className="font-semibold">Neural Interfaces</span>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Urgency Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-6 text-center"
+      {/* Floating Action Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          href="/pages/RevolutionaryTechShowcase2027"
+          className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 animate-bounce"
+          aria-label="Explore Revolutionary Tech"
         >
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-2xl animate-pulse">⚡</span>
-            <h4 className="text-2xl font-bold">Limited Time Offer</h4>
-            <span className="text-2xl animate-pulse">⚡</span>
-          </div>
-          <p className="text-lg mb-4">
-            Get 50% off your first month of revolutionary technology solutions. 
-            Transform your business before your competitors do!
-          </p>
-          <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Claim Your Discount Now
-          </button>
-        </motion.div>
+          <span className="text-2xl">🚀</span>
+        </a>
       </div>
     </div>
   );
