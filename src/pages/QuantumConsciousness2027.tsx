@@ -227,6 +227,11 @@ const QuantumConsciousness2027: React.FC = () => {
               Learn More
             </button>
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-df8e
     </div>
   );
 };

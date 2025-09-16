@@ -1,6 +1,7 @@
 #!/bin/bash
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "🔧 Resolving ALL remaining merge conflicts..."
 
 # Find all files with merge conflicts
@@ -32,6 +33,8 @@ done
 
 echo "🎉 All conflict resolution complete!"
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
@@ -62,5 +65,9 @@ for file in $conflicted_files; do
     git add "$file"
 done
 
+<<<<<<< HEAD
 echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-87a1
+=======
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-df8e
