@@ -1328,6 +1328,52 @@ export const newContent2026 = [
     imageUrl: "/images/blog/agent-platform-slos-practical-2026.jpg",
     slug: "agent-platform-slos-practical-blueprint"
   }
+  ,
+  {
+    id: 9103,
+    title: "Practical RAG Eval Harness: Groundedness You Can Trust",
+    excerpt: "A minimal eval harness for RAG that teams actually run in CI/CD.",
+    content: "Ship retrieval that you can measure. This post includes a compact groundedness harness (dataset schema, prompt templates, judge config) designed to run in CI/CD in under 90 seconds. It shows how to pin corpora by version, detect semantic drift, and gate merges with scorecard thresholds tied to rollback.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["RAG", "Groundedness", "Evaluations"],
+    featured: true,
+    imageUrl: "/images/blog/practical-rag-eval-harness-2025.jpg",
+    slug: "practical-rag-eval-harness-groundedness-trust"
+  },
+  {
+    id: 9104,
+    title: "Agent Guardrails in Prod: Five Checks That Catch 80%",
+    excerpt: "Add these five runtime checks to catch most risky actions before they land.",
+    content: "A pragmatic guardrail starter set: capability scopes, intent classification with fail-closed, IO validation, budget caps, and escalation hooks. Includes reference adapters, example policies, and wiring to incident telemetry so you can see what prevented what, when.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Safety",
+    tags: ["Guardrails", "Runtime", "Policies"],
+    featured: true,
+    imageUrl: "/images/blog/agent-guardrails-five-checks-2025.jpg",
+    slug: "agent-guardrails-prod-five-checks"
+  },
+  {
+    id: 9105,
+    title: "Cost-Aware Model Routing: A Copy-Paste Policy",
+    excerpt: "Drop-in routing policy with confidence thresholds and budget caps.",
+    content: "Cut spend without surprises. We provide a copy-paste routing policy that chooses models by confidence, caps token usage by tenant, and shadows risky changes. Comes with scorecard hooks and dashboards to verify quality stays flat while cost drops.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "4 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Costs"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
+    slug: "cost-aware-model-routing-copy-paste-policy"
+  }
 ];
 
 // Merge new content with existing blog posts
