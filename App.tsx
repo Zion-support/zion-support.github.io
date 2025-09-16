@@ -69,6 +69,8 @@ import ConsciousnessComputing2026 from './src/pages/ConsciousnessComputing2026';
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateContentShowcase from './src/components/UltimateContentShowcase';
 import UltimateTechShowcase2029 from './src/pages/UltimateTechShowcase2029';
+import LatestContentPromotion from './src/components/LatestContentPromotion';
+import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -83,6 +85,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Ad Banner */}
                 <RevolutionaryAdBanner />
+
+                {/* Latest Content Promotion */}
+                <LatestContentPromotion />
 
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -254,6 +259,11 @@ export default function App(): JSX.Element {
                 {/* Ultimate Content Showcase */}
                 <div className="mb-12">
                   <UltimateContentShowcase />
+                </div>
+
+                {/* Featured Content Showcase 2026 */}
+                <div className="mb-12">
+                  <FeaturedContentShowcase2026 />
                 </div>
 
                 {/* Analytics Dashboard */}
