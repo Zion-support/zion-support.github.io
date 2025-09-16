@@ -14,6 +14,9 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -44,6 +47,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +57,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-5863
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -525,7 +531,12 @@ export default function BlogPostPage({ params }: Params) {
 =======
 <<<<<<< HEAD
 }
+
+=======
+<<<<<<< HEAD
+}
 =======
 }
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-5863
