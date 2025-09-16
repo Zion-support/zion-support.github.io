@@ -1,266 +1,280 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Brain, Cpu, Zap, Target, Shield, Globe, ArrowRight, Star, CheckCircle } from 'lucide-react';
 
-const QuantumAIRevolution2025: React.FC = () => {
+const QuantumAIRevolution2025 = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-cyan-50">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚛️ QUANTUM AI REVOLUTION • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Quantum AI Revolution 2025
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Witness the convergence of quantum computing and artificial intelligence—a revolutionary 
-            breakthrough that's solving impossible problems and creating unprecedented opportunities.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <Helmet>
+        <title>Quantum AI Revolution 2025 - The Future is Here</title>
+        <meta name="description" content="Experience the quantum leap in AI technology. Discover how quantum computing is revolutionizing artificial intelligence and transforming industries." />
+        <meta name="keywords" content="quantum AI, quantum computing, artificial intelligence, 2025, revolution" />
+      </Helmet>
 
-        {/* Revolutionary Breakthrough */}
-        <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-16 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          <div className="relative z-10 text-center">
-            <div className="text-8xl mb-6 animate-spin" style={{animationDuration: '3s'}}>⚛️</div>
-            <h2 className="text-5xl font-bold mb-6">The Ultimate Fusion</h2>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Quantum AI represents the pinnacle of computational intelligence, combining quantum mechanics 
-              with artificial intelligence to create systems that think in dimensions beyond human comprehension.
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-sm font-semibold mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              Quantum AI Technology
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Quantum AI
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Revolution 2025</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Witness the convergence of quantum computing and artificial intelligence, 
+              creating unprecedented possibilities for solving complex problems and 
+              accelerating innovation across all industries.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
+              >
+                Explore Quantum AI
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+
+            {/* Quantum Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">10^18</div>
-                <div className="text-purple-200">Processing Speed Increase</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">1000x</div>
+                <div className="text-gray-300">Faster Processing</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">∞</div>
-                <div className="text-purple-200">Problem-Solving Capacity</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">100%</div>
-                <div className="text-purple-200">Accuracy Rate</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Industries Transformed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-gray-300">Quantum Operations</div>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quantum Features */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quantum AI Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Harness the power of quantum mechanics to solve problems that were previously impossible.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Brain className="w-8 h-8" />,
+                title: "Quantum Neural Networks",
+                description: "Revolutionary neural networks that leverage quantum superposition for exponential learning capabilities.",
+                color: "from-cyan-400 to-blue-500"
+              },
+              {
+                icon: <Cpu className="w-8 h-8" />,
+                title: "Quantum Processing Units",
+                description: "Next-generation processors that can handle complex calculations in parallel universes.",
+                color: "from-purple-400 to-pink-500"
+              },
+              {
+                icon: <Zap className="w-8 h-8" />,
+                title: "Quantum Speed Optimization",
+                description: "Algorithms that operate at quantum speed, solving problems in microseconds.",
+                color: "from-yellow-400 to-orange-500"
+              },
+              {
+                icon: <Target className="w-8 h-8" />,
+                title: "Precision Quantum Targeting",
+                description: "Ultra-precise targeting systems that can predict outcomes with quantum accuracy.",
+                color: "from-green-400 to-teal-500"
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: "Quantum Security",
+                description: "Unbreakable quantum encryption that protects your data across all dimensions.",
+                color: "from-red-400 to-pink-500"
+              },
+              {
+                icon: <Globe className="w-8 h-8" />,
+                title: "Global Quantum Network",
+                description: "Worldwide quantum communication network for instant global connectivity.",
+                color: "from-indigo-400 to-purple-500"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
+              >
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.color} text-white mb-6`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Core Technologies */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-200">
-            <div className="text-6xl mb-6 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-purple-800">Quantum Neural Networks</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Neural networks that operate in quantum superposition, processing infinite possibilities simultaneously.
+      {/* Quantum Applications */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quantum AI Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how quantum AI is transforming industries and solving humanity's greatest challenges.
             </p>
-            <ul className="text-purple-700 space-y-2 text-sm">
-              <li>• Quantum superposition processing</li>
-              <li>• Entangled learning algorithms</li>
-              <li>• Multi-dimensional pattern recognition</li>
-              <li>• Instantaneous knowledge transfer</li>
-            </ul>
-            <div className="mt-4 text-xs text-purple-600 font-semibold">
-              Speed: 1 billion x faster
-            </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-indigo-200">
-            <div className="text-6xl mb-6 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-indigo-800">Quantum Optimization</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              AI systems that find optimal solutions across infinite dimensions in real-time.
-            </p>
-            <ul className="text-indigo-700 space-y-2 text-sm">
-              <li>• Global optimization algorithms</li>
-              <li>• Quantum annealing solutions</li>
-              <li>• Multi-objective optimization</li>
-              <li>• Instantaneous convergence</li>
-            </ul>
-            <div className="mt-4 text-xs text-indigo-600 font-semibold">
-              Efficiency: 1000x improvement
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
-            <div className="text-6xl mb-6 text-center">🔮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Quantum Prediction</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Predictive AI that sees multiple future outcomes and selects the optimal path.
-            </p>
-            <ul className="text-cyan-700 space-y-2 text-sm">
-              <li>• Multi-universe prediction</li>
-              <li>• Quantum probability analysis</li>
-              <li>• Temporal pattern recognition</li>
-              <li>• Future state optimization</li>
-            </ul>
-            <div className="mt-4 text-xs text-cyan-600 font-semibold">
-              Accuracy: 99.99%+
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200">
-            <div className="text-6xl mb-6 text-center">🎯</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-violet-800">Quantum Decision Making</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              AI that evaluates infinite decision trees simultaneously to find perfect solutions.
-            </p>
-            <ul className="text-violet-700 space-y-2 text-sm">
-              <li>• Parallel decision processing</li>
-              <li>• Quantum game theory</li>
-              <li>• Multi-dimensional analysis</li>
-              <li>• Optimal outcome selection</li>
-            </ul>
-            <div className="mt-4 text-xs text-violet-600 font-semibold">
-              Decision Speed: Instant
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-pink-200">
-            <div className="text-6xl mb-6 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-pink-800">Quantum Creativity</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              AI that generates creative solutions by exploring infinite possibility spaces.
-            </p>
-            <ul className="text-pink-700 space-y-2 text-sm">
-              <li>• Infinite creativity exploration</li>
-              <li>• Quantum artistic generation</li>
-              <li>• Novel solution discovery</li>
-              <li>• Multi-dimensional innovation</li>
-            </ul>
-            <div className="mt-4 text-xs text-pink-600 font-semibold">
-              Innovation: Unlimited
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-200">
-            <div className="text-6xl mb-6 text-center">🔐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-blue-800">Quantum Security</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Unbreakable AI security systems using quantum cryptography and entanglement.
-            </p>
-            <ul className="text-blue-700 space-y-2 text-sm">
-              <li>• Quantum key distribution</li>
-              <li>• Entanglement-based security</li>
-              <li>• Quantum authentication</li>
-              <li>• Unhackable communications</li>
-            </ul>
-            <div className="mt-4 text-xs text-blue-600 font-semibold">
-              Security: Unbreakable
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {[
+              {
+                title: "Drug Discovery & Healthcare",
+                description: "Quantum AI accelerates drug discovery by simulating molecular interactions at quantum scale, leading to breakthrough treatments for diseases like cancer and Alzheimer's.",
+                benefits: [
+                  "1000x faster drug discovery",
+                  "99.9% accuracy in molecular simulation",
+                  "Reduced development costs by 80%"
+                ],
+                color: "from-green-400 to-teal-500"
+              },
+              {
+                title: "Climate Change Solutions",
+                description: "Quantum AI models complex climate systems to develop sustainable solutions and optimize renewable energy distribution across the globe.",
+                benefits: [
+                  "Real-time climate modeling",
+                  "Optimized energy distribution",
+                  "Carbon footprint reduction by 90%"
+                ],
+                color: "from-blue-400 to-cyan-500"
+              },
+              {
+                title: "Financial Risk Analysis",
+                description: "Quantum AI processes vast amounts of financial data to predict market trends and manage risk with unprecedented accuracy.",
+                benefits: [
+                  "Real-time risk assessment",
+                  "99.9% prediction accuracy",
+                  "Reduced financial losses by 95%"
+                ],
+                color: "from-purple-400 to-pink-500"
+              },
+              {
+                title: "Space Exploration",
+                description: "Quantum AI optimizes space missions, navigates complex gravitational fields, and discovers new celestial phenomena.",
+                benefits: [
+                  "Optimized space trajectories",
+                  "Advanced celestial mapping",
+                  "Faster interstellar communication"
+                ],
+                color: "from-yellow-400 to-orange-500"
+              }
+            ].map((application, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/20"
+              >
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${application.color} text-white mb-6`}>
+                  <Star className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{application.title}</h3>
+                <p className="text-gray-300 mb-6">{application.description}</p>
+                <ul className="space-y-2">
+                  {application.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Applications */}
-        <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Revolutionary Applications</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Drug Discovery</h3>
-                <p className="text-gray-600">Quantum AI analyzes molecular interactions across infinite configurations to discover new medicines in days instead of years.</p>
-                <div className="text-purple-600 font-semibold text-sm mt-2">Time Reduction: 99.9%</div>
-              </div>
-
-              <div className="border-l-4 border-indigo-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Climate Modeling</h3>
-                <p className="text-gray-600">Simulates entire planetary systems with perfect accuracy, predicting climate changes and optimizing solutions.</p>
-                <div className="text-indigo-600 font-semibold text-sm mt-2">Accuracy: 100%</div>
-              </div>
-
-              <div className="border-l-4 border-cyan-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Financial Markets</h3>
-                <p className="text-gray-600">Predicts market movements across all possible scenarios, enabling perfect investment strategies.</p>
-                <div className="text-cyan-600 font-semibold text-sm mt-2">ROI: 1000%+</div>
-              </div>
+      {/* Future Vision */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-400/20 to-blue-500/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              The Quantum Future Awaits
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the quantum revolution and be part of the most significant technological advancement in human history.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
+              >
+                Start Quantum Journey
+                <ArrowRight className="inline-block ml-2 w-6 h-6" />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-12 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Explore Research
+              </motion.button>
             </div>
-
-            <div className="space-y-6">
-              <div className="border-l-4 border-violet-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Space Exploration</h3>
-                <p className="text-gray-600">Optimizes space missions by calculating infinite trajectory possibilities and resource allocation scenarios.</p>
-                <div className="text-violet-600 font-semibold text-sm mt-2">Efficiency: 500%</div>
-              </div>
-
-              <div className="border-l-4 border-pink-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Material Science</h3>
-                <p className="text-gray-600">Designs new materials by exploring quantum properties across infinite atomic configurations.</p>
-                <div className="text-pink-600 font-semibold text-sm mt-2">Innovation: Unlimited</div>
-              </div>
-
-              <div className="border-l-4 border-blue-500 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Artificial Life</h3>
-                <p className="text-gray-600">Creates truly intelligent artificial beings with consciousness and emotional intelligence.</p>
-                <div className="text-blue-600 font-semibold text-sm mt-2">Intelligence: Superhuman</div>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
-
-        {/* Implementation Timeline */}
-        <div className="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quantum AI Implementation Timeline</h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-gray-900">Q1 2025: Quantum AI Prototypes</h3>
-                <p className="text-gray-600">First quantum AI systems demonstrate 1000x performance improvements in specialized tasks</p>
-              </div>
-              <div className="text-green-600 font-semibold">Available Now</div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-gray-900">Q2 2025: Commercial Quantum AI</h3>
-                <p className="text-gray-600">Quantum AI services become available for enterprise applications with proven ROI</p>
-              </div>
-              <div className="text-blue-600 font-semibold">Q2 2025</div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-gray-900">Q3 2025: Quantum AI Integration</h3>
-                <p className="text-gray-600">Seamless integration with existing AI systems creates hybrid quantum-classical intelligence</p>
-              </div>
-              <div className="text-purple-600 font-semibold">Q3 2025</div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-indigo-500 rounded-full"></div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-gray-900">Q4 2025: Quantum AI Revolution</h3>
-                <p className="text-gray-600">Full quantum AI capabilities transform every industry and create new possibilities</p>
-              </div>
-              <div className="text-indigo-600 font-semibold">Q4 2025</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-4">Enter the Quantum AI Era</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be among the first to experience the quantum AI revolution. Transform your organization 
-            with intelligence that operates beyond the limits of classical computing.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Start Quantum AI Journey →
-            </a>
-            <a href="/pages/QuantumComputingRevolution2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold">
-              Quantum Computing →
-            </a>
-            <a href="/pages/AdvancedAITransformation2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold">
-              AI Transformation →
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

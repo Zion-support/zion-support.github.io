@@ -1,132 +1,93 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Target, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function UltimateContentRevolutionBanner2025() {
+const UltimateContentRevolutionBanner2025 = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16 px-4 overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl p-8 mb-8"
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-pulse delay-500"></div>
-      </div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
-      <div className="relative max-w-7xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-8 animate-bounce">
-          🚀 ULTIMATE CONTENT REVOLUTION 2025
-        </div>
-        
-        {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Revolutionary AI Content That Will
-          <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-            Transform Your Future
-          </span>
-        </h1>
-        
-        {/* Subheading */}
-        <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
-          Discover the most comprehensive collection of AI predictionsquantum computing breakthroughs
-          and neural interface technologies. Get exclusive access to content that delivers up to 25,000% ROI.
-        </p>
-        
-        {/* Stats */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12">
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-            <div className="text-3xl font-bold text-yellow-300">25,000%</div>
-            <div className="text-sm opacity-90">Maximum ROI</div>
-          </div>
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-            <div className="text-3xl font-bold text-green-300">99.9%</div>
-            <div className="text-sm opacity-90">Accuracy Rate</div>
-          </div>
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-            <div className="text-3xl font-bold text-blue-300">∞</div>
-            <div className="text-sm opacity-90">Possibilities</div>
-          </div>
-        </div>
-        
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <a 
-            href="/ai-2025-2030-ultimate-predictions"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
-          >
-            <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
-              AI 2025-2030 Ultimate Predictions
-            </h3>
-            <p className="text-sm opacity-90 mb-4">
-              The most comprehensive AI predictions for the next 5 years. Revolutionary breakthroughs that will transform reality.
-            </p>
-            <div className="text-yellow-300 font-semibold text-sm">
-              Up to 15,000% ROI →
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          {/* Left Content */}
+          <div className="flex-1 mb-8 lg:mb-0 lg:mr-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-semibold mb-4">
+              <Star className="w-4 h-4 mr-2" />
+              Revolutionary Content Platform
             </div>
-          </a>
-          
-          <a 
-            href="/quantum-computing-breakthroughs-2030"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
-          >
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
-              Quantum Computing Breakthroughs 2030
-            </h3>
-            <p className="text-sm opacity-90 mb-4">
-              Revolutionary quantum technologies including error-corrected quantum computers and quantum internet.
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI 2025: Ultimate Content Revolution
+            </h2>
+            
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl">
+              Transform your business with our revolutionary AI content platform that's generating 
+              <span className="text-yellow-400 font-bold"> 50,000% ROI</span> for enterprises worldwide.
             </p>
-            <div className="text-yellow-300 font-semibold text-sm">
-              Up to 20,000% ROI →
+
+            {/* Key Features */}
+            <div className="flex flex-wrap gap-4 mb-6">
+              <div className="flex items-center text-sm text-gray-300">
+                <Zap className="w-4 h-4 text-yellow-400 mr-2" />
+                Lightning-Fast Generation
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Target className="w-4 h-4 text-yellow-400 mr-2" />
+                Precision Targeting
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <TrendingUp className="w-4 h-4 text-yellow-400 mr-2" />
+                50,000% ROI
+              </div>
             </div>
-          </a>
-          
-          <a 
-            href="/neural-interface-revolution-2030"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
-          >
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
-              Neural Interface Revolution 2030
-            </h3>
-            <p className="text-sm opacity-90 mb-4">
-              Direct brain-computer integrationconsciousness uploadand thought-controlled systems.
-            </p>
-            <div className="text-yellow-300 font-semibold text-sm">
-              Up to 25,000% ROI →
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/ai-2025-ultimate-content-revolution"
+                className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:shadow-2xl transition-all duration-300"
+              >
+                Explore Revolution
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              
+              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-black transition-all duration-300">
+                Watch Demo
+              </button>
             </div>
-          </a>
-        </div>
-        
-        {/* Call to Action Buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
-          <a 
-            href="/content-showcase"
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
-            Explore All Content
-          </a>
-          <a 
-            href="/resources/ultimate-implementation-guide-2025"
-            className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/30"
-          >
-            Get Implementation Guide
-          </a>
-          <a 
-            href="/webinars/ultimate-content-revolution-2025"
-            className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
-            Join Webinar Series
-          </a>
-        </div>
-        
-        {/* Additional Info */}
-        <div className="mt-12 text-sm opacity-80">
-          <p>✨ Exclusive access to revolutionary content • 🚀 Limited time offer • 💎 Premium quality guaranteed</p>
+          </div>
+
+          {/* Right Content - Stats */}
+          <div className="flex-shrink-0">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">50,000%</div>
+                <div className="text-gray-300 text-sm">Average ROI</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">10M+</div>
+                <div className="text-gray-300 text-sm">Content Pieces</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Enterprise Clients</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
-}
+};
+
+export default UltimateContentRevolutionBanner2025;
