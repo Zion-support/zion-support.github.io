@@ -45,6 +45,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Natural language processing</li>
               <li>• Predictive maintenance</li>
             </ul>
+=======
             <a href="/pages/AIAutonomousRobots2026" className="block w-full bg-gradient-to-r from-slate-600 to-gray-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
               Explore AI Robots →
             </a>

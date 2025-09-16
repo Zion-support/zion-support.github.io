@@ -94,7 +94,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const currentTech = technologies[activeTech];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
+    <div className="space-y-8">
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
       <div className="absolute top-0 left-0 w-full h-full">
         {[...Array(30)].map((_, i) => (
