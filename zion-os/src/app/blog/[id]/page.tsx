@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,36 +12,136 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-  'ai-safety-governance-blueprint-2025': {
-    id: 'ai-safety-governance-blueprint-2025',
-    title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+  'ai-governance-framework-2025': {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
     excerpt:
-      'A step-by-step blueprint to operationalize AI safety with policy, controls, red-teaming, and monitoring that scales.',
-    category: 'AI Solutions',
+      'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
+    category: 'AI Governance',
     author: 'Dr. Emily Watson',
-    date: '2025-09-14',
-    readTime: '11 min read',
+    date: '2025-09-16',
+    readTime: '12 min read',
     content: [
-      'Enterprises are moving from AI experimentation to scaled deployment. This requires a pragmatic safety and governance stack that balances innovation with risk controls.',
-      'This blueprint outlines five pillars: policy and risk taxonomy, gated release process, red‑team and evals, guardrails and runtime policy, and post‑deployment monitoring with feedback loops.',
-      'We include templates for policy definitions, decision matrices for model selection, and reference architectures for integrating safety services into your MLOps/LLMOps pipelines.',
-      'Organizations adopting this approach report faster approvals, fewer incidents, and clearer accountability across legal, security, and product teams.'
+      'AI governance is no longer optional—it\'s essential for building trust and ensuring responsible AI deployment at scale.',
+      'This framework covers policy development, risk assessment, compliance monitoring, and continuous governance across the AI lifecycle.',
+      'We outline practical implementation steps including governance structures, risk frameworks, compliance checklists, and monitoring systems.',
+      'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
+      'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
+      'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  'ai-governance-framework-2025': {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+=======
+  'agentic-safety-patterns-2025': {
+    id: 'agentic-safety-patterns-2025',
+    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+>>>>>>> 1f7620a0edd89cd971bd6e6ace7dea7c2db60693
+    excerpt:
+      'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
+      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
     ]
   },
-  'edge-ai-inference-acceleration': {
-    id: 'edge-ai-inference-acceleration',
-    title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
+  'multi-agent-supply-chains': {
+    id: 'multi-agent-supply-chains',
+    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
     excerpt:
-      'Design patterns to deliver sub‑100ms inference at the edge using quantization, distillation, batching, and caching.',
-    category: 'Infrastructure',
-    author: 'Michael Rodriguez',
-    date: '2025-09-13',
+      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
     readTime: '8 min read',
     content: [
-      'As AI moves closer to users and devices, inference latency and cost become the dominant constraints. Edge strategies must optimize the full stack: model, runtime, and network.',
-      'We cover practical techniques: 8‑bit/4‑bit quantization, operator and KV cache optimizations, request batching, speculative decoding, and distillation to smaller student models.',
-      'Deployment patterns include split inference, regional sharding, and device‑side pre/post‑processing with WASM or CUDA. We provide a reference SLO playbook and cost model.',
-      'The result is consistent sub‑100ms responses and 30–60% cost reduction while preserving accuracy for common product tasks.'
+      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
+      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+    ]
+  },
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+  'agent-safety-red-teaming-2025': {
+    id: 'agent-safety-red-teaming-2025',
+    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+    excerpt:
+      'Scenarios and mitigations to probe and harden multi-agent systems in production.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'Red teaming for AI agents requires scenario-driven probes that chain tools, memory, and coordination under realistic constraints.',
+      'This playbook includes test harnesses for tool-use abuse, prompt-injection chains, identity spoofing, data exfiltration, and policy evasion.',
+      'Mitigations span capability bounding, typed tool adapters, output filters, allow/deny lists, and human approval for high-impact actions.'
+    ]
+  },
+  'ai-automation-case-studies-2025': {
+    id: 'ai-automation-case-studies-2025',
+    title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
+    excerpt:
+      'Five deployments with measurable KPIs and lessons learned across ops, CX, and finance.',
+    category: 'Case Studies',
+    author: 'Michael Rodriguez',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'We summarize five production deployments covering incident response, customer support, finance reconciliations, and supply chain routing.',
+      'Each case breaks down the business objective, design, controls, and the measurable outcome (MTTR, CSAT, margin, error rates).',
+      'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
+    ]
+  },
+  'ai-foundation-models-2025': {
+    id: 'ai-foundation-models-2025',
+    title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
+    excerpt:
+      'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
+    category: 'AI Solutions',
+    author: 'Dr. David Kim',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Foundation models are moving from experimentation to production impact. The winners standardize adaptation recipes, evaluation harnesses, and policy guardrails across teams.',
+      'This guide covers reference patterns: retrieval-augmented generation for knowledge workflows, constrained generation for operations, and tool-use orchestration for complex tasks.',
+      'We include governance checklists: model cards, test sets, bias audits, safety red-teaming, and continuous telemetry to ensure reliable performance at scale.'
+    ]
+  },
+  'enterprise-agent-guardrails': {
+    id: 'enterprise-agent-guardrails',
+    title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
+    excerpt:
+      'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
+      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
+      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -58,6 +159,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
+  },
+  'ai-supply-chain-orchestration-2025': {
+    id: 'ai-supply-chain-orchestration-2025',
+    title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+    excerpt:
+      'A pragmatic roadmap to deploy AI-driven planning, routing, and fulfillment with guardrails and measurable ROI.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Supply chains are data-rich but execution-poor. AI orchestration closes the loop by converting signals into actions across planning, procurement, routing, and fulfillment.',
+      'Start with demand forecasting and inventory positioning. Add dynamic routing with real-time constraints, then automate exception handling with human-in-the-loop approvals for high-risk actions.',
+      'Reference stack: event streaming, optimization engines, policy guardrails, and audit logs. Outcomes include lower stockouts, reduced logistics cost, and faster cycle times.'
+    ]
+  },
+  'responsible-agent-governance': {
+    id: 'responsible-agent-governance',
+    title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
+    excerpt:
+      'Design a governance layer for AI agents with identity, permissions, policy evaluation, and verifiable audit.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '6 min read',
+    content: [
+      'As organizations adopt AI agents, governance must move from guidelines to enforceable controls. The core is identity, permissions, and policy evaluation with contextual risk.',
+      'Implement capabilities-based access, graded trust, and continuous monitoring. Maintain tamper-evident audit trails and require approvals for sensitive actions.',
+      'This framework reduces operational risk and builds stakeholder trust without slowing innovation.'
+    ]
   },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',
@@ -104,34 +235,34 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
-  'edge-ai-compliance-2025': {
-    id: 'edge-ai-compliance-2025',
-    title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
+  'ai-safety-red-teaming-2025': {
+    id: 'ai-safety-red-teaming-2025',
+    title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
     excerpt:
-      'A field guide to deploying edge AI with privacy-by-design, audit trails, and policy controls that satisfy global regulations.',
-    category: 'AI Solutions',
-    author: 'Dr. Maria Garcia',
+      'Hands-on red teaming techniques, tooling, and governance patterns to harden AI systems against prompt injection, data exfiltration, and policy evasion.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
     date: '2025-09-15',
-    readTime: '8 min read',
+    readTime: '9 min read',
     content: [
-      'AI at the edge is now mission-critical across healthcare, finance, and public sectors. But moving models to the edge introduces risks around privacy, drift, and local decision accountability.',
-      'This guide presents a compliance blueprint: capture purpose and lawful basis, implement privacy-by-design (minimization, on-device redaction), enable deterministic overrides, and log verifiable events for audit.',
-      'We include a reference architecture using policy engines, encrypted telemetry, reproducible model manifests, and secure update channels integrated with Zion OS orchestration.'
+      'Enterprises deploying AI at scale face evolving attack surfaces: prompt injection, tool misuse, covert data exfiltration, and model evasion. Red teaming must be continuous and automated.',
+      'This playbook catalogs realistic adversary techniques, safe sandboxes, and CI-integrated evaluations. It includes attack libraries, policy tests, and response runbooks tied to severity levels.',
+      'We outline how to design guardrails with layered defenses: input sanitization, capability routing, authorization boundaries, and human-in-the-loop escalation for sensitive actions.'
     ]
   },
-  'ai-accessibility-2025': {
-    id: 'ai-accessibility-2025',
-    title: 'AI Accessibility 2025: Designing Inclusive Autonomous Experiences',
+  'multi-agent-systems-at-scale': {
+    id: 'multi-agent-systems-at-scale',
+    title: 'Operating Multi‑Agent Systems at Scale: Reliability, Cost, and Policy',
     excerpt:
-      'Practical patterns to ensure AI products are accessible by default—from multimodal inputs to explainable interactions.',
-    category: 'Accessibility',
-    author: 'Dr. Emily Watson',
+      'A field guide to running large multi-agent systems with predictable reliability, bounded cost, and enforceable organizational policy.',
+    category: 'Autonomous Systems',
+    author: 'Michael Rodriguez',
     date: '2025-09-12',
-    readTime: '7 min read',
+    readTime: '11 min read',
     content: [
-      'Inclusive AI requires intentional design that supports assistive tech, multiple modalities, and clear recoveries when autonomy fails.',
-      'We outline patterns: caption-first media, voice+text parity, haptic cues, adjustable autonomy, and explainable steps for every critical action.',
-      'Teams adopting these patterns report higher engagement, reduced abandonment, and improved trust across diverse users.'
+      'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
+      'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
+      'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
     ]
   },
 };
