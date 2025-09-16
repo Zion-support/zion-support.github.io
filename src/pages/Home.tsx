@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-=======
-import React, { useEffect } from 'react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import { motion } from 'framer-motion';
 import { useNotifications } from '../components/NotificationSystem';
 import React from 'react';
@@ -90,7 +86,6 @@ const Home: React.FC = () => {
               Revolutionary AI systems that exhibit true consciousness and self-awareness, 
               capable of independent thought and creative problem-solving.
             </p>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -101,15 +96,6 @@ const Home: React.FC = () => {
               <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 📚 Tech Blog 2026 →
               </a>
-=======
-            <div className="text-center">
-              <Link 
-                to="/pages/RevolutionaryAIServices2026" 
-                className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"
-              >
-                Explore AI Services →
-              </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           </div>
           
@@ -137,7 +123,6 @@ const Home: React.FC = () => {
               Advanced AI-powered security systems that predict and prevent threats 
               before they occur, protecting across all dimensions.
             </p>
-<<<<<<< HEAD
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -171,57 +156,6 @@ const Home: React.FC = () => {
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                 Schedule Consultation
               </button>
-=======
-            <div className="text-center">
-              <Link 
-                to="/pages/CybersecurityFortress2025" 
-                className="text-green-400 hover:text-green-300 font-semibold text-lg"
-              >
-                Secure Your Future →
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Revolutionary Technology Showcase */}
-        <motion.div 
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Revolutionary Technology Showcase 2026
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Experience the future of technology with our comprehensive collection of 
-              cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
-            </p>
-          </div>
-
-          {/* Technology Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-2">Conscious AI</h3>
-              <p className="text-gray-300 text-sm">True AI consciousness and self-awareness</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl p-6 border border-purple-400/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-2">Quantum Processing</h3>
-              <p className="text-gray-300 text-sm">Ultra-fast quantum computations</p>
-            </div>
-            <div className="bg-gradient-to-br from-green-500/20 to-teal-600/20 rounded-2xl p-6 border border-green-400/30">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-bold text-white mb-2">Neural Interfaces</h3>
-              <p className="text-gray-300 text-sm">Direct brain-computer connections</p>
-            </div>
-            <div className="bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-2xl p-6 border border-indigo-400/30">
-              <div className="text-4xl mb-4">🌌</div>
-              <h3 className="text-xl font-bold text-white mb-2">Interdimensional</h3>
-              <p className="text-gray-300 text-sm">Multi-dimensional computing</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           </div>
         </motion.div>

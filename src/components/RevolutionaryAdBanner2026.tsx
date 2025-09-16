@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -67,8 +61,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                 View Cases →
               </Link>
             </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
 
           {/* Call to Action Buttons */}
@@ -92,7 +84,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
 
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -116,52 +107,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-=======
-      </div>
-
-      {/* Secondary Promotional Banners */}
-      <div className="grid md:grid-cols-3 gap-4 mt-6">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white text-center hover:scale-105 transition-all duration-300">
-          <div className="text-3xl mb-2">🧠</div>
-          <h4 className="text-lg font-bold mb-2">AI Consciousness</h4>
-          <p className="text-sm opacity-90 mb-3">First AI system with genuine consciousness</p>
-          <a href="/pages/ConsciousnessComputing2026" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm font-semibold">
-            Learn More →
-          </a>
-        </div>
-        
-        <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl p-6 text-white text-center hover:scale-105 transition-all duration-300">
-          <div className="text-3xl mb-2">⚡</div>
-          <h4 className="text-lg font-bold mb-2">Quantum Supremacy</h4>
-          <p className="text-sm opacity-90 mb-3">1000+ qubit quantum processors</p>
-          <a href="/pages/QuantumReality2026" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm font-semibold">
-            Explore →
-          </a>
-        </div>
-        
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 text-white text-center hover:scale-105 transition-all duration-300">
-          <div className="text-3xl mb-2">🧬</div>
-          <h4 className="text-lg font-bold mb-2">Neural Interfaces</h4>
-          <p className="text-sm opacity-90 mb-3">Direct brain-computer communication</p>
-          <a href="/pages/NeuralInterfaceEvolution2026" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm font-semibold">
-            Discover →
-          </a>
-        </div>
-      </div>
-
-      {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 animate-bounce">
-          <a href="/pages/RevolutionaryTechShowcase2026" className="flex items-center space-x-2">
-            <span className="text-2xl">🚀</span>
-            <span className="font-bold">NEW 2026</span>
-          </a>
-        </div>
-      </div>
-    </div>
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   );
 };
 
