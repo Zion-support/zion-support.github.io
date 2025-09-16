@@ -89,7 +89,7 @@ const DynamicContentCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              currentSlide === index ? 'bg-gray-800' : 'bg-gray-300'
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
             }`}
           />
         ))}

@@ -91,33 +91,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-hydrogen production</li>
               <li>• Self-repairing energy infrastructure</li>
             </ul>
-<<<<<<< HEAD
-            <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
-              Start Bio-Manufacturing →
-            </button>
-<<<<<<< HEAD
-          </div>
-
-          <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-3xl p-10 border border-lime-400/40 hover:scale-105 transition-all duration-500">
-            <div className="text-9xl mb-8 text-center animate-pulse">🔬</div>
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Bio-Manufacturing</h3>
-            <p className="text-lime-200 mb-8 text-center text-xl">
-              Revolutionary manufacturing using living systems to produce complex materials and chemicals
-            </p>
-            <ul className="text-lime-300 space-y-4 mb-10 text-lg">
-              <li className="flex items-center"><span className="mr-3">🏗️</span>Living factories</li>
-              <li className="flex items-center"><span className="mr-3">🧪</span>Bio-synthesis</li>
-              <li className="flex items-center"><span className="mr-3">♻️</span>Sustainable production</li>
-              <li className="flex items-center"><span className="mr-3">🎯</span>Precision engineering</li>
-            </ul>
-<<<<<<< HEAD
-            <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
-              Start Bio-Manufacturing →
-            </button>
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-=======
->>>>>>> cursor/create-and-deploy-new-content-56ca
-=======
             <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Explore Bio-Energy →
             </a>
@@ -182,34 +155,14 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <div className="text-lg text-cyan-200 mb-2">Environmental Impact</div>
               <div className="text-sm text-gray-400">Carbon-neutral bio-systems</div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-8799
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-4f5e
-=======
->>>>>>> cursor/create-and-deploy-new-content-36c0
->>>>>>> cursor/create-and-deploy-new-content-56ca
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
-          <h2 className="text-6xl font-bold text-white mb-8">
-            Ready for the Bio Revolution?
-          </h2>
-          <p className="text-3xl text-gray-300 mb-16 max-w-6xl mx-auto">
-            Join the transformation that's redefining life itself through synthetic biology
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Join the Bio Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto text-gray-300">
             Experience the future where synthetic biology transforms life itself and creates infinite possibilities
->>>>>>> cursor/create-and-deploy-new-content-8799
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-4f5e
-=======
->>>>>>> cursor/create-and-deploy-new-content-36c0
->>>>>>> cursor/create-and-deploy-new-content-56ca
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
