@@ -14,6 +14,20 @@ export interface NewBlogPostMeta2029 {
 
 export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
   {
+    id: 9961,
+    title: "AI 2026: Reliable Agent Deployments — Canary, Rollback, Scorecards",
+    excerpt:
+      "Ship agent features safely with canaries, deterministic rollback, and journey scorecards.",
+    author: "Jordan Lee",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Reliability",
+    tags: ["Canary", "Rollback", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/reliable-agent-deployments-2026.jpg",
+    slug: "ai-2026-reliable-agent-deployments",
+  },
+  {
     id: 9950,
     title: "AI 2026: Runtime Eval Gates — Minimal Set to Ship Fast",
     excerpt:
@@ -194,6 +208,20 @@ export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
     featured: true,
     imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
     slug: "journey-scorecards-starter-kpis",
+  },
+  {
+    id: 9960,
+    title: "AI 2026: Governed Tool Use — Starter You Can Ship Today",
+    excerpt:
+      "Risk-tiered permissions, audit trails, and policy gates to keep tool use safe.",
+    author: "Avery Scott",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Governance",
+    tags: ["Policy", "Permissions", "Audit"],
+    featured: true,
+    imageUrl: "/images/blog/governed-tool-use-starter-2026.jpg",
+    slug: "ai-2026-governed-tool-use-starter",
   },
   {
     id: 9907,

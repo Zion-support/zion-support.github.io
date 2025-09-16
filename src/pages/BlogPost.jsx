@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const content = {
   'ai-2026-runtime-eval-gates-starter': {
@@ -36,6 +35,18 @@ Blueprint ships with policy examples, test harness ideas, and a 30/60/90 rollout
  - Incident response patterns for LLM systems
 
 This blueprint includes architecture diagrams, rollout checklists, and KPI templates.`,
+    date: '2025-09-16',
+  },
+  'ai-2026-reliable-agent-deployments': {
+    title: 'AI 2026: Reliable Agent Deployments — Canary, Rollback, Scorecards',
+    body: `Ship agent features confidently with a minimal reliability playbook:
+
+- Preflight checks: offline evals on top tasks and sensitive flows
+- Canary strategy: 1% traffic with auto-abort on SLO violation
+- Rollback: deterministic, reversible releases with kill-switch
+- Journey scorecards: Quality, Safety, Reliability, Cost in one view
+
+Includes copy‑paste canary configs, alert policies, and a 30/60/90 rollout plan.`,
     date: '2025-09-16',
   },
   'exec-guide-eval-gates-ship-tomorrow': {
@@ -84,6 +95,18 @@ Adopt in under a day with minimal integration.`,
  - Safety triage and attribution
 
 Includes example configs and test harness ideas.`,
+    date: '2025-09-16',
+  },
+  'ai-2026-governed-tool-use-starter': {
+    title: 'AI 2026: Governed Tool Use — Starter You Can Ship Today',
+    body: `Adopt safe tool use patterns without slowing teams down:
+
+- Risk tiers: map tools and actions to permission levels
+- Policy gates: enforce approvals for sensitive operations
+- Audit trails: structured logs with user, intent, and evidence
+- Sandboxes: constrained execution with budget and time caps
+
+Starter includes example policies, audit schemas, and enforcement hooks.`,
     date: '2025-09-16',
   },
 };
