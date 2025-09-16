@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -9,6 +10,9 @@ import {
   LightBulbIcon,
   ShieldCheckIcon,
 =======
+=======
+import React from 'react'
+>>>>>>> origin/feat/news-and-fixes
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -56,6 +60,7 @@ const features = [
   },
   {
     name: 'Quantum Computing',
+<<<<<<< HEAD
     description:
       'Next-generation quantum neural networks for solving complex computational problems.',
     icon: CpuChipIcon
@@ -71,6 +76,20 @@ const features = [
     description:
       'Military-grade security protocols protecting your most valuable digital assets.',
     icon: ShieldCheckIcon
+=======
+    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+    icon: CpuChipIcon,
+  },
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Enterprise Security',
+    description: 'Military-grade security protocols protecting your most valuable digital assets.',
+    icon: ShieldCheckIcon,
+>>>>>>> origin/feat/news-and-fixes
   },
   {
     name: 'Data Analytics',
@@ -118,11 +137,16 @@ const solutions = [
   {
     name: 'Autonomous Business Operations',
     description: 'AI-powered automation for enterprise efficiency.',
+<<<<<<< HEAD
     href: '/solutions/autonomous-business'
+=======
+    href: '/solutions/autonomous-business',
+>>>>>>> origin/feat/news-and-fixes
   },
   {
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
+<<<<<<< HEAD
     href: '/solutions/it-asset-management'
   }
 <<<<<<< HEAD
@@ -139,6 +163,10 @@ const solutions = [
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+    href: '/solutions/it-asset-management',
+  },
+>>>>>>> origin/feat/news-and-fixes
 ]
 
 export default function HomePage() {
@@ -188,6 +216,7 @@ export default function HomePage() {
               >
                 Get Started
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
               <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
@@ -211,6 +240,8 @@ export default function HomePage() {
               >
                 Launch: Agentic Ops Dashboard
                 <span aria-hidden>→</span>
+=======
+>>>>>>> origin/feat/news-and-fixes
               </a>
               <a
                 href="/updates/autonomous-sales-copilot-1-0"
@@ -222,6 +253,7 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/content-promo
               </a>
+<<<<<<< HEAD
               <a
                 href="/blog/ai-2026-real-time-retrieval-architectures"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
@@ -427,10 +459,13 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
 >>>>>>> origin/feat/content-sept15-1757928952
+=======
+>>>>>>> origin/feat/news-and-fixes
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,6 +669,8 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+=======
+>>>>>>> origin/feat/news-and-fixes
 
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -708,8 +745,64 @@ export default function HomePage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* CTA section */}
 =======
+=======
+      {/* News teaser */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">News</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Latest announcements
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Product updates and partnerships from Zion.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {[{
+              title: 'Zion launches Autonomous Research Assistant 2.0',
+              href: '/news/ara-2-0',
+              excerpt: '3x faster insights with explainable AI and enterprise connectors.',
+            }, {
+              title: 'Partnership with QuantumCore',
+              href: '/news/quantumcore-partnership',
+              excerpt: 'Accelerating quantum neural network training for complex workloads.',
+            }, {
+              title: 'Autonomous IT Operations suite',
+              href: '/news/autonomous-it-suite',
+              excerpt: 'Self-healing automation reduces MTTR by up to 65%.',
+            }].map((n) => (
+              <article key={n.href} className="flex flex-col items-start bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <div className="group relative">
+                  <h3 className="mt-1 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <a href={n.href}>
+                      <span className="absolute inset-0" />
+                      {n.title}
+                    </a>
+                  </h3>
+                  <p className="mt-4 line-clamp-3 text-sm leading-6 text-gray-300">{n.excerpt}</p>
+                </div>
+                <div className="mt-6">
+                  <a href={n.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                    Read more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a href="/news" className="text-sm font-semibold leading-6 text-white hover:text-blue-400">
+              View all News <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Solutions showcase */}
+>>>>>>> origin/feat/news-and-fixes
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
@@ -726,7 +819,14 @@ export default function HomePage() {
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+<<<<<<< HEAD
                     <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
+=======
+                    <a href={solution.href}>
+                      <span className="absolute inset-0" />
+                      {solution.name}
+                    </a>
+>>>>>>> origin/feat/news-and-fixes
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
                 </div>
@@ -772,12 +872,15 @@ export default function HomePage() {
               View Solutions <span aria-hidden="true">→</span>
             </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/news-and-fixes
           </div>
         </div>
       </div>
@@ -785,6 +888,7 @@ export default function HomePage() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -1043,3 +1147,6 @@ export default function HomePage() {
 	)
 }
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+
+>>>>>>> origin/feat/news-and-fixes

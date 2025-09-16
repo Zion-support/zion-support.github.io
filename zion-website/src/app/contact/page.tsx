@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 =======
@@ -57,10 +58,15 @@ import {
   ClockIcon,
   ChatBubbleLeftRightIcon,
 } from '@heroicons/react/24/outline'
+=======
+import React from 'react'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
+>>>>>>> origin/feat/news-and-fixes
 
 const contactMethods = [
   { name: 'Email', description: 'Get in touch with our team', value: 'contact@ziontechgroup.com', href: 'mailto:contact@ziontechgroup.com', icon: EnvelopeIcon },
   { name: 'Phone', description: 'Speak with an expert', value: '+1 (555) 123-4567', href: 'tel:+15551234567', icon: PhoneIcon },
+<<<<<<< HEAD
   { name: 'Office', description: 'Visit our headquarters', value: '1234 Innovation Drive, Silicon Valley, CA 94025', href: '#', icon: MapPinIcon },
 >>>>>>> origin/feat/content-promo
 ]
@@ -113,11 +119,29 @@ const contactMethods = [
   { question: 'Do you provide ongoing support?', answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.' },
   { question: 'What security measures do you have?', answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.' },
 >>>>>>> origin/feat/content-promo
+=======
+  { name: 'Office', description: 'Visit our headquarters', value: '500 Innovation Way, San Francisco, CA 94107', href: '#', icon: MapPinIcon },
+  { name: 'Hours', description: 'When we are available', value: 'Mon–Fri, 9am–6pm PT', href: '#', icon: ClockIcon },
+]
+
+const officeLocations = [
+  { name: 'San Francisco', address: '500 Innovation Way, San Francisco, CA 94107', phone: '+1 (555) 123-4567', email: 'sf@ziontechgroup.com', hours: 'Mon–Fri: 9:00 AM – 6:00 PM PT' },
+  { name: 'London', address: '456 Tech Square, London, UK EC2A 4BX', phone: '+44 20 1234 5678', email: 'london@ziontechgroup.com', hours: 'Mon–Fri: 9:00 AM – 6:00 PM GMT' },
+  { name: 'Tokyo', address: '789 Innovation Tower, Tokyo, Japan 100-0001', phone: '+81 3 1234 5678', email: 'tokyo@ziontechgroup.com', hours: 'Mon–Fri: 9:00 AM – 6:00 PM JST' },
+]
+
+const faqs = [
+  { question: 'What industries do you serve?', answer: 'We serve healthcare, finance, manufacturing, retail, and technology, with adaptable AI solutions.' },
+  { question: 'How long does implementation take?', answer: 'Simple integrations: 2–4 weeks. Complex enterprise solutions: typically 3–6 months.' },
+  { question: 'Do you provide ongoing support?', answer: 'Yes. We offer technical assistance, updates, training, and optimization to keep delivering value.' },
+  { question: 'What security measures do you have?', answer: 'Enterprise-grade security: end-to-end encryption, SOC 2, regular audits, strict access controls.' },
+>>>>>>> origin/feat/news-and-fixes
 ]
 
 export default function ContactPage() {
   return (
     <div className="bg-black">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,9 +152,12 @@ export default function ContactPage() {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/news-and-fixes
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-24 sm:py-40">
           <div className="text-center">
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,10 +184,15 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">Ready to transform your business with AI? Let\'s discuss how our technology can accelerate your growth and innovation.</p>
 >>>>>>> origin/feat/case-studies-content
+=======
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">We'd love to hear from you. Reach out and let's start a conversation.</p>
+>>>>>>> origin/feat/news-and-fixes
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,15 +221,22 @@ export default function ContactPage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Multiple ways to reach us</p>
 >>>>>>> origin/feat/content-promo
+=======
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Get in Touch</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">We're here to help</p>
+>>>>>>> origin/feat/news-and-fixes
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {contactMethods.map((method) => (
-              <div key={method.name} className="flex flex-col group">
+              <div key={method.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
+<<<<<<< HEAD
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
 <<<<<<< HEAD
@@ -220,6 +259,13 @@ export default function ContactPage() {
 =======
                   <p className="mt-6"><a href={method.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">{method.value} <span aria-hidden="true">→</span></a></p>
 >>>>>>> origin/feat/case-studies-content
+=======
+                <dd className="mt-1 text-sm text-gray-400">{method.description}</dd>
+                <dd className="mt-3 text-base leading-7 text-gray-300">
+                  <a href={method.href} className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                    {method.value}
+                  </a>
+>>>>>>> origin/feat/news-and-fixes
                 </dd>
               </div>
             ))}
@@ -227,6 +273,7 @@ export default function ContactPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,12 +298,19 @@ export default function ContactPage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Let's start a conversation</p>
 >>>>>>> origin/feat/content-promo
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Let's start a conversation</p>
+>>>>>>> origin/feat/news-and-fixes
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">First name</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="mt-2.5"><input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6" /></div>
               </div>
@@ -276,6 +330,8 @@ export default function ContactPage() {
                 <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">Message</label>
                 <div className="mt-2.5"><textarea name="message" id="message" rows={4} className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6" defaultValue={''} /></div>
 =======
+=======
+>>>>>>> origin/feat/news-and-fixes
                 <div className="mt-2.5">
                   <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6" />
                 </div>
@@ -293,6 +349,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="sm:col-span-2">
+<<<<<<< HEAD
                 <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">Company</label>
                 <div className="mt-2.5">
                   <input type="text" name="company" id="company" autoComplete="organization" className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6" />
@@ -301,6 +358,10 @@ export default function ContactPage() {
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text sm font-semibold leading-6 text-white">Message</label>
                 <div className="mt-2.5">
+=======
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">Message</label>
+                <div className="mt-2.5">
+>>>>>>> origin/feat/news-and-fixes
                   <textarea name="message" id="message" rows={4} className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6" defaultValue={''} />
                 </div>
 >>>>>>> origin/feat/content-promo
@@ -315,12 +376,16 @@ export default function ContactPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Office locations */}
 =======
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+>>>>>>> origin/feat/news-and-fixes
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Global Presence</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Visit our offices worldwide</p>
@@ -334,6 +399,7 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-white">{office.name}</h3>
                 </div>
                 <div className="space-y-3 text-gray-300">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <p className="flex items-start gap-2">
@@ -363,6 +429,12 @@ export default function ContactPage() {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+                  <p>{office.address}</p>
+                  <p>{office.phone}</p>
+                  <p>{office.email}</p>
+                  <p>{office.hours}</p>
+>>>>>>> origin/feat/news-and-fixes
                 </div>
               </div>
             ))}
@@ -370,6 +442,7 @@ export default function ContactPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* FAQ */}
@@ -443,12 +516,22 @@ export default function ContactPage() {
             <a href="/solutions" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Explore Solutions</a>
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/content-promo
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Our team is ready to help you explore the possibilities of AI and transform your business.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/solutions" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Explore Solutions</a>
+            <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
+>>>>>>> origin/feat/news-and-fixes
           </div>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1012,3 +1095,5 @@ export default function ContactPage() {
 	)
 }
 >>>>>>> origin/feat/new-updates-ads
+=======
+>>>>>>> origin/feat/news-and-fixes

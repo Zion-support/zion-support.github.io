@@ -76,6 +76,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
+<<<<<<< HEAD
 	{ name: 'Home', href: '/' },
 	{ name: 'About', href: '/about' },
 	{ name: 'Services', href: '/services' },
@@ -83,12 +84,24 @@ const navigation = [
 	{ name: 'Research', href: '/research' },
 	{ name: 'Contact', href: '/contact' },
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research' },
+  { name: 'News', href: '/news' },
+  { name: 'Contact', href: '/contact' },
+>>>>>>> origin/feat/news-and-fixes
 ]
 
 export default function Navigation() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/news-and-fixes
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -259,6 +272,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -382,3 +396,6 @@ export default function Navigation() {
 >>>>>>> origin/feat/new-content-home-20250915
 =======
 >>>>>>> origin/feat/new-updates-ads
+=======
+
+>>>>>>> origin/feat/news-and-fixes

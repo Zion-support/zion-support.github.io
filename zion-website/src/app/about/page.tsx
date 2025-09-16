@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 =======
@@ -104,12 +105,25 @@ const team = [
 >>>>>>> origin/feat/content-promo
 ]
 
+=======
+import React from 'react'
+import { LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
+
+const values = [
+  { name: 'Innovation First', description: "We push the boundaries of what's possible, constantly exploring new frontiers.", icon: LightBulbIcon },
+  { name: 'Global Impact', description: 'Our solutions transform industries worldwide.', icon: GlobeAltIcon },
+  { name: 'Trust & Security', description: 'We uphold the highest standards of security and ethics.', icon: ShieldCheckIcon },
+  { name: 'Research Excellence', description: 'Breakthrough discoveries from a world-class team.', icon: AcademicCapIcon },
+]
+
+>>>>>>> origin/feat/news-and-fixes
 export default function AboutPage() {
   return (
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-24 sm:py-40">
           <div className="text-center">
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
 <<<<<<< HEAD
               About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
@@ -129,10 +143,15 @@ export default function AboutPage() {
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
 >>>>>>> origin/feat/content-promo
             </p>
+=======
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About Zion Tech Group</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">We build AI and autonomous systems that advance human potential.</p>
+>>>>>>> origin/feat/news-and-fixes
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Mission & Vision */}
@@ -233,23 +252,28 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Core Values</p>
+=======
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Core Values</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">What drives us</p>
+>>>>>>> origin/feat/news-and-fixes
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {values.map((value) => (
-              <div key={value.name} className="flex flex-col group">
+            {values.map((v) => (
+              <div key={v.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <value.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {value.name}
+                  <v.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {v.name}
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{value.description}</p>
-                </dd>
+                <dd className="mt-4 text-base leading-7 text-gray-300">{v.description}</dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -762,3 +786,8 @@ export default function AboutPage() {
 >>>>>>> origin/feat/new-content-home-20250915
 =======
 >>>>>>> origin/feat/new-updates-ads
+=======
+    </div>
+  )
+}
+>>>>>>> origin/feat/news-and-fixes
