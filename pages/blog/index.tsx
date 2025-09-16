@@ -70,6 +70,12 @@ posts.unshift(
   { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
 )
 
+// Even newer content (Sept 16, 2025) — Secure RAG + Exec Metrics
+posts.unshift(
+  { slug: 'ai-2026-secure-rag-blueprint', title: 'Secure RAG Blueprint (2026)', excerpt: 'Governed, auditable RAG with eval gates and policy‑as‑code.' },
+  { slug: 'ai-2026-exec-metrics-for-agentic-systems', title: 'Executive Metrics for Agentic Systems (2026)', excerpt: 'Leadership metrics from traces and evals for accountable autonomy.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
