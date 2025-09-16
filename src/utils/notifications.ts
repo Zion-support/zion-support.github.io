@@ -1,6 +1,7 @@
 // Notification utilities
 interface NotificationOptions {
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
@@ -33,6 +34,11 @@ export interface NotificationOptions {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 // Notification utilities
 interface NotificationOptions {
   title: string;
@@ -75,6 +81,7 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +173,8 @@ class NotificationManager {
     if (this.permission !== 'granted') {
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     }
 
     try {
@@ -174,11 +183,19 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
+=======
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        timestamp: options.timestamp || Date.now(),
+        actions: options.actions
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -186,6 +203,8 @@ class NotificationManager {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
@@ -216,6 +235,7 @@ class NotificationManager {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -259,10 +279,13 @@ class NotificationManager {
     }
   }
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
       requireInteraction: true,
     });
   }
@@ -295,6 +318,8 @@ export default notificationManager;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       requireInteraction: true
     });
   },
@@ -326,6 +351,7 @@ export default notificationManager;
 
 export default notifications;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -334,6 +360,8 @@ export default notifications;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       requireInteraction: true,
     });
   }

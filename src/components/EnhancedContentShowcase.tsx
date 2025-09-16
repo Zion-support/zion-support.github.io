@@ -4,6 +4,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
   const contentCategories = {
     breakthroughs: {
       title: "Revolutionary Breakthroughs",
@@ -136,6 +137,12 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
+=======
+      link: "/pages/AdvancedAITransformation2026",
+      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
+      category: "AI & Machine Learning",
+      year: "2026"
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     },
     {
       id: 2,
@@ -148,6 +155,7 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     {
       id: 3,
+<<<<<<< HEAD
     },
     {
       id: 4,
@@ -376,6 +384,8 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -413,6 +423,7 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -777,6 +788,8 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       </div>
     </div>
   );

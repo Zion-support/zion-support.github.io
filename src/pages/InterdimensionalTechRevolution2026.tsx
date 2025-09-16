@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
@@ -20,6 +21,12 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             Experience the convergence of quantum mechanics, consciousness computing, and interdimensional technology
           </p>
 =======
+=======
+import { motion } from 'framer-motion';
+
+const InterdimensionalTechRevolution2026: React.FC = () => {
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

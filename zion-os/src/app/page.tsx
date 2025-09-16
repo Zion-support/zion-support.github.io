@@ -1055,6 +1055,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -1086,6 +1087,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -1424,6 +1427,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -1446,3 +1450,5 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

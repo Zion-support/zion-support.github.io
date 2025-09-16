@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -135,6 +136,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
                 </div>
               </motion.div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -350,6 +353,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             </a>
           </div>
         </motion.div>
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 
@@ -406,6 +410,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             }`}
           />
         ))}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       </div>
 
 <<<<<<< HEAD

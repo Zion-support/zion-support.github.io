@@ -154,6 +154,10 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -429,7 +433,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Multidimensional existence</li>
                 <li>• Universal creation abilities</li>
               </ul>
+<<<<<<< HEAD
             </div>
+=======
+            </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
           </div>
         </div>
 
@@ -450,6 +458,10 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+        <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}

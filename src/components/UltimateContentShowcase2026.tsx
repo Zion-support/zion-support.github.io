@@ -7,6 +7,7 @@ const UltimateContentShowcase2026: React.FC = () => {
 
   const showcaseItems = [
     {
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
           transition={{ duration: 0.8 }}
@@ -181,6 +182,8 @@ const UltimateContentShowcase2026: React.FC = () => {
               📞 Schedule Demo
             </button>
           </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -437,6 +440,7 @@ const UltimateContentShowcase2026: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
+<<<<<<< HEAD
           </div>
         </div>
         
@@ -445,6 +449,8 @@ const UltimateContentShowcase2026: React.FC = () => {
             🌟 Experience the Ultimate Revolution →
           </a>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
           </div>
         </div>
 

@@ -612,9 +612,12 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Learn More
             </button>
           </div>
+<<<<<<< HEAD
           <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
             Join the Revolution
           </button>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         </div>
         </div>
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244

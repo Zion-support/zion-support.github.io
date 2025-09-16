@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           </p>
 =======
 
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (

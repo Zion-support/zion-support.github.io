@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -264,6 +265,9 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </section>
 
         {/* Call to Action */}
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -491,6 +495,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
+<<<<<<< HEAD
             </button>
         <section className="text-center">
           <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
@@ -507,6 +512,8 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Learn More
               </a>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             </button>
           </div>
         </section>

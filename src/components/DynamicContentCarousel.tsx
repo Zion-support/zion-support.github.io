@@ -22,4 +22,8 @@ const DynamicContentCarousel: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default DynamicContentCarousel;
+=======
+export default DynamicContentCarousel;
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

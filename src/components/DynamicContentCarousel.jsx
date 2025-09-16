@@ -50,6 +50,7 @@ const DynamicContentCarousel = () => {
                 <p className="text-lg opacity-90">{item.description}</p>
               </div>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
         
@@ -65,6 +66,23 @@ const DynamicContentCarousel = () => {
             />
           ))}
         </div>
+=======
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {carouselItems.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       </div>
     </div>
   );

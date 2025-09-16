@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
 const AdvancedSpaceTech2026: React.FC = () => {
   return (

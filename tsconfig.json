@@ -38,4 +38,8 @@
     "**/*.spec.tsx",
     "coverage"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

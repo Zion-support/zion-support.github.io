@@ -413,7 +413,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
             <div
+=======
+            <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -426,11 +430,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
+<<<<<<< HEAD
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
                 <div
+=======
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              {revolutionaryApplications.map((application, index) => (
+                <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -467,6 +479,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
+<<<<<<< HEAD
                 </div>
               ))}
             </div>
@@ -520,11 +533,69 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
+=======
+                </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* Testimonials Section */}
+        <section id="testimonials" className="relative z-10 py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Visionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Testimonials</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                >
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold">
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                      <div className="text-xs text-indigo-400">{testimonial.company}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
@@ -587,8 +658,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 };
 
 export default RevolutionaryTechInsights2026;
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
+<<<<<<< HEAD
   const [currentDemo, setCurrentDemo] = useState(0);
   
   const demos = [
@@ -38,6 +39,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
     return () => clearInterval(timer);
   }, [demos.length]);
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -90,6 +93,21 @@ const InteractiveTechShowcase2026: React.FC = () => {
               />
             ))}
           </div>
+<<<<<<< HEAD
+=======
+          
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive technology solutions for modern challenges
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
+            </ul>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         </div>
       </div>
     </div>

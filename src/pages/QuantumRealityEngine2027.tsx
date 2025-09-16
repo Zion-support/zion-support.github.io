@@ -1,12 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -45,6 +49,8 @@ import React from 'react';
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -54,6 +60,7 @@ import React from 'react';
           </div>
         </div>
 
+<<<<<<< HEAD
             </ul>
           </div>
 
@@ -231,14 +238,19 @@ import React from 'react';
                     <span className="text-gray-300">Emergency Shutdown:</span>
                     <span className="text-cyan-400 font-bold">Instant</span>
                   </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Manipulate Reality →
             </button>
           </div>
 
+<<<<<<< HEAD
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Control Space-Time →
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             </button>
           </div>
 
@@ -263,6 +275,7 @@ import React from 'react';
             </div>
             
             <div className="space-y-6">
+<<<<<<< HEAD
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-emerald-400">Probability Engines</h3>
                 <p className="text-gray-200 mb-4">
@@ -282,12 +295,15 @@ import React from 'react';
                 <div className="flex items-center space-x-2 text-sm text-rose-300">
                   <span className="w-2 h-2 bg-rose-400 rounded-full"></span>
                   <span>Mind-Reality Bridge</span>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Applications */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
@@ -348,10 +364,13 @@ import React from 'react';
               </p>
               <div className="text-emerald-400 font-semibold">Quantum Healing</div>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
@@ -371,6 +390,8 @@ import React from 'react';
         <div className="text-center">
         <div className="text-center">
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="text-center">
               Schedule Demo
             </button>

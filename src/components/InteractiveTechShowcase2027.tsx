@@ -134,7 +134,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
           link: "/pages/QuantumRealityEngine2027"
         }
       ]
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     }
   ];
 
@@ -145,6 +148,25 @@ const InteractiveTechShowcase2027: React.FC = () => {
   }, [activeTab]);
 
   return (
+<<<<<<< HEAD
+=======
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
+      <Helmet>
+        <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
+        <meta name="description" content="Explore our interactive technology showcase featuring quantum technologies, AI evolution, and reality manipulation systems." />
+      </Helmet>
+      
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
@@ -211,7 +233,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
               key={index}
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}

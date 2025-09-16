@@ -107,11 +107,16 @@ import Link from 'next/link';
 import Link from 'next/link';
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+<<<<<<< HEAD
 
 // Import new revolutionary content promotional banners
 import AI2030RevolutionBanner from './components/AI2030RevolutionBanner';
 import QuantumConsciousnessBanner from './components/QuantumConsciousnessBanner';
 import InterdimensionalTechBanner from './components/InterdimensionalTechBanner';
+=======
+>>>>>>> 49147c29baec (feat(content): add AI 2026 Autonomous Revenue Agents post and homepage promo; fix tsconfig and build setup conflicts)
+>>>>>>> origin/feat/new-content-ads-sept15
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -1009,6 +1014,7 @@ export default function HomePage() {
 >>>>>>> origin/feature/new-content-and-promotions
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 <<<<<<< HEAD
@@ -1022,6 +1028,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

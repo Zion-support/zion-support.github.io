@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -71,6 +75,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -213,6 +218,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
               🚀 Get Early Access
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}

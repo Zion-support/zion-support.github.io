@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -70,6 +73,7 @@ const Home: React.FC = () => {
               Advanced artificial intelligence solutions for modern businesses. 
               From machine learning to autonomous systems.
             </p>
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -81,6 +85,8 @@ const Home: React.FC = () => {
             >
               Learn More →
             </Link>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -125,8 +131,11 @@ const Home: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Revolutionary Content Banner */}
         <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />

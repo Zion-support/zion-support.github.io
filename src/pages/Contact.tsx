@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -17,16 +18,21 @@ import Link from 'next/link';
 
 export default function Contact() {
   const { showToast: toast } = useToast();
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React, { useState } from 'react';
 
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
+<<<<<<< HEAD
 
 const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -325,6 +331,13 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -335,6 +348,10 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
+<<<<<<< HEAD
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

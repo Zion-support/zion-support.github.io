@@ -13,6 +13,11 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 <<<<<<< HEAD
 =======
@@ -41,6 +46,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
     title: 'Guide: Agent Platform Operations (2026)',
@@ -190,6 +196,8 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     title: 'Guide: Agent Platform Operations (2026)',
 =======
     title: 'Launch: Autonomous Ops and SRE for Agents',
@@ -319,10 +327,13 @@ export const siteUpdates: SiteUpdate[] = [
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -367,6 +378,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -378,6 +390,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -423,6 +437,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -435,6 +450,8 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -495,6 +512,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -507,6 +525,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -514,6 +534,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -525,6 +546,8 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -598,6 +621,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
 =======
@@ -620,6 +644,13 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+  },
+  {
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
@@ -688,6 +719,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+<<<<<<< HEAD
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -1749,9 +1781,10 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
   },
   {
 <<<<<<< HEAD
@@ -2804,6 +2837,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -3057,6 +3091,8 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -3327,7 +3363,10 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3525,6 +3564,7 @@ export const getLatestUpdates = (limit = 6) => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ]
 
@@ -3536,12 +3576,15 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3555,3 +3598,5 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
