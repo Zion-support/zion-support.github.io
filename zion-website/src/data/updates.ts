@@ -25,11 +25,11 @@ export const updates: UpdateItem[] = [
 		tag: 'Guide',
 	},
 	{
-		title: 'Report: Autonomous Failure Analysis Toolkit v1.0',
-		summary: 'Root‑cause analysis for agent incidents with trace diffs and evidence bundles.',
-		href: '/updates/autonomous-failure-analysis-toolkit-1-0',
+		title: 'Guide: Zero‑Downtime Agent Deployments (2026 Preview)',
+		summary: 'Release management patterns with shadow traffic, phased rollout, and auto‑rollback.',
+		href: '/updates/zero-downtime-agent-deployments-2026',
 		date: '2025-09-16',
-		tag: 'Report',
+		tag: 'Guide',
 	},
 	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
