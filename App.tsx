@@ -43,6 +43,14 @@ import InterdimensionalComputing2027 from './src/pages/InterdimensionalComputing
 import RevolutionaryTech2027Banner from './src/components/RevolutionaryTech2027Banner';
 import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
 
+// Import NEW 2025 CONTENT
+import AdvancedAIConsciousness2025 from './src/pages/AdvancedAIConsciousness2025';
+import QuantumComputingBreakthrough2025 from './src/pages/QuantumComputingBreakthrough2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import NewContentPromoBanner2025 from './src/components/NewContentPromoBanner2025';
+import EnhancedContentShowcase2025 from './src/components/EnhancedContentShowcase2025';
+import EnhancedContentSearch2025 from './src/components/EnhancedContentSearch2025';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -56,6 +64,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Tech 2027 Banner */}
                 <RevolutionaryTech2027Banner />
+
+                {/* NEW: 2025 Content Promotional Banner */}
+                <NewContentPromoBanner2025 />
 
                 {/* NEW: Ultimate 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -271,6 +282,16 @@ export default function App(): JSX.Element {
                   <EnhancedContentShowcase />
                 </div>
 
+                {/* Enhanced Content Showcase 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase2025 />
+                </div>
+
+                {/* Enhanced Content Search 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentSearch2025 />
+                </div>
+
                 {/* Ultimate Content Showcase */}
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
@@ -480,22 +501,23 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryInnovationHub2026" element={<RevolutionaryInnovationHub2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/UltimateInnovationHub2026" element={<UltimateInnovationHub2026 />} />
-<<<<<<< HEAD
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/OmniversalAI2030" element={<OmniversalAI2030 />} />
-=======
           
           {/* NEW ULTIMATE 2026 CONTENT ROUTES */}
           <Route path="/pages/UltimateAIConsciousness2026" element={<UltimateAIConsciousness2026 />} />
           <Route path="/pages/QuantumRealityEngine2026" element={<QuantumRealityEngine2026 />} />
-          <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
 
           {/* NEW REVOLUTIONARY 2027 CONTENT ROUTES */}
           <Route path="/pages/AIConsciousnessEvolution2027" element={<AIConsciousnessEvolution2027 />} />
           <Route path="/pages/QuantumRealityControl2027" element={<QuantumRealityControl2027 />} />
           <Route path="/pages/InterdimensionalComputing2027" element={<InterdimensionalComputing2027 />} />
->>>>>>> origin/cursor/create-and-deploy-new-content-0d00
+
+          {/* NEW 2025 CONTENT ROUTES */}
+          <Route path="/pages/AdvancedAIConsciousness2025" element={<AdvancedAIConsciousness2025 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2025" element={<QuantumComputingBreakthrough2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
 
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
