@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
+import ContentSpotlight from './components/ContentSpotlight';
 import Footer from './Footer';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
@@ -32,6 +33,7 @@ import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub2026';
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
@@ -99,6 +101,11 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
               
+              {/* New Content Promo Banner */}
+              <div className="mb-12">
+                <NewContentPromoBannerClean />
+              </div>
+
               {/* NEW: Advanced Tech Breakthrough Banner */}
               <div className="mb-12">
                 <AdvancedTechBreakthroughBanner />
@@ -111,6 +118,9 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
+
+              {/* Latest Content Spotlight */}
+              <ContentSpotlight />
               
               {/* Dynamic Content Carousel */}
               <DynamicContentCarousel />

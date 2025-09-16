@@ -16,6 +16,27 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Blueprint: Production Evidence Hub (2026)',
+    summary: 'Centralize evals, traces, policy events, and incidents for audits and incident response.',
+    href: '/blog/ai-2026-production-evidence-hub-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Secure Tooling Permissions (2026)',
+    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions in production.',
+    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
+    date: '2025-09-16',
+    tag: 'Security'
+  },
+  {
+    title: 'Guide: Operational Risk Metrics for Agents (2026)',
+    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
+    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
     href: '/updates/ai-risk-mitigation-guide-2026',
@@ -30,11 +51,54 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Release'
   },
   {
+    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
+    summary: 'From datasets to live canaries with objective rubrics and automated rollbacks.',
+    href: '/updates/eval-ready-ai-pipelines-guide',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Deep Dive: Enterprise Retrieval Observability (2026)',
+    summary: 'Tracing, SLIs, and evals for reliable retrieval‑augmented systems in production.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
+  {
     title: 'Launch: Agent Reliability Scorecards v1.0',
     summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability at scale.',
     href: '/updates/agent-reliability-scorecards-1-0',
     date: '2025-09-16',
     tag: 'Release'
+  },
+  // Additional fresh content 2025-09-16
+  {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary: 'Reference designs and trade-offs for building low-latency retrieval in production.',
+    href: '/updates/real-time-retrieval-architectures-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot 1.1',
+    summary: 'Improved handoffs, escalation policies, and grounded responses for enterprise support.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Operational Evals for FinOps',
+    summary: 'Use evals to enforce cost, latency, and quality budgets across AI pipelines.',
+    href: '/updates/evaluation-driven-finops',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: Hybrid Retrieval Latency',
+    summary: 'Empirical results comparing hybrid search latency patterns across real workloads.',
+    href: '/updates/hybrid-retrieval-latency-case-study',
+    date: '2025-09-16',
+    tag: 'Case Study'
   },
 
   // Existing content

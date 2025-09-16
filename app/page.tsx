@@ -121,40 +121,39 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
-      {/* New Promo: Operational Evals Blueprint + Checklist (Sept 16, 2025) */}
+      {/* New Promos: Sept 16, 2025 */}
+      <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
+            <div>
+              <p className="text-sm font-semibold text-indigo-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Safe Rollouts + Evidence‑Led Operations</h2>
+              <p className="text-gray-600 mt-2">Eval‑gated releases, automated rollback, and an audit‑ready evidence hub.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-safe-rollouts-in-production" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Safe Rollouts</Link>
+              <Link href="/blog/ai-2026-autonomous-evidence-led-operations" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Evidence‑Led Ops</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Reliable Upgrades + Release Scorecards (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Operational Evals — Blueprint + Checklist</h2>
-              <p className="text-gray-600 mt-2">Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Reliable Agent Upgrades + Release Scorecards</h2>
+              <p className="text-gray-600 mt-2">Gate‑driven releases with canary scorecards, rollback contracts, and audit‑ready evidence.</p>
             </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-operational-evals-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
-              <Link href="/resources/ai-2026-operational-evals-checklist" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Get Checklist</Link>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-reliable-agent-upgrades-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Reliable Upgrades</Link>
+              <Link href="/resources/ai-2026-release-scorecards-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Scorecards Kit</Link>
             </div>
           </div>
         </div>
       </section>
 <<<<<<< HEAD
-      {/* What's New (Sept 2025) */}
-      <section className="py-8 bg-gradient-to-r from-purple-50 to-indigo-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Fresh on the blog</h2>
-              <p className="text-gray-600 mt-2">Enterprise AI Agents 2025, Security Blueprint 2026, and Agents vs. Copilots 2025.</p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Agents 2025</Link>
-              <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Security 2026</Link>
-              <Link href="/blog/ai-2025-enterprise-agents-vs-autonomous-copilots" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agents vs Copilots</Link>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,6 +198,21 @@ export default function HomePage() {
               <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Guardrails</Link>
               <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
               <Link href="/blog/ai-2026-cost-optimization-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Cost Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Promo: Evaluation-Driven Release Engineering (New Article) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Evaluation‑Driven Release Engineering</h2>
+              <p className="text-gray-600 mt-2">Eval‑gated rollouts, canary scorecards, and automated rollback for safer autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-evaluation-driven-release-engineering" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Article</Link>
             </div>
           </div>
         </div>
