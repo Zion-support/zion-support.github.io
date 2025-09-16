@@ -56,6 +56,9 @@ import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
+import NextGenTechRevolution2026 from './src/pages/NextGenTechRevolution2026';
+import AIRevolutionaryBreakthrough2026 from './src/pages/AIRevolutionaryBreakthrough2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
