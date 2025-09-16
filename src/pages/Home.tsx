@@ -5,9 +5,32 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-5863
+import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
+>>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
+>>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+import React from 'react';
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-7e07
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -23,9 +46,32 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
+>>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
+>>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-7e07
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -112,7 +158,21 @@ const Home: React.FC = () => {
               </a>
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
+>>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-7e07
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -154,9 +214,29 @@ const Home: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join the revolution and discover how our cutting-edge technologies can transform your business and unlock unprecedented possibilities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Start Your Journey →
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                Schedule Consultation
+              </button>
+            </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7e07
+<<<<<<< HEAD
         {/* Revolutionary Content Banner */}
         <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
 =======
+<<<<<<< HEAD
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -226,6 +306,11 @@ const Home: React.FC = () => {
               </div>
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-7e07
           </div>
         </div>
       </div>
