@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 
 async function psi(url, strategy = 'mobile', key) {
@@ -11,6 +12,33 @@ async function psi(url, strategy = 'mobile', key) {
 }
 
 exports.handler = async function() {
+=======
+
+;
+const endpoint = new URL(async function psi() {const endpoint = new URL(ursor/expand-services-advertise-and-build-project-4b36;
+    'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed';
+  )endpoint && endpoint.searchParams.set('url', url)endpoint && endpoint.searchParams.set('strategy', strategy)if (key) endpoint && endpoint.searchParams.set('key', key)const resp = await fetch(endpoint && endpoint.toString())if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`)return resp && resp.json()exports && exports.handler = async function () {try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const key  = process && process.env.PSI_API_KEY || '';ursor/expand-services-advertise-and-build-project-4b36;
+    const pages = ['/', '/learn', '/dao', '/certifications'];
+    const results = [];
+    ${p}`;
+      try {const mobile = await psi(url, 'mobile', key)const desktop = await psi(url, 'desktop', key)results && results.push({ url, mobile, desktop })} catch (e) {}
+      } catch (e) {} catch (e) {ursor/expand-services-advertise-and-build-project-4b36;
+const { upsert_file }  = require ('./_lib / github')async /**;
+ * psi - Function description;
+ */;
+function psi() {const endpoint = new URL ('https://www.googleapis.com / pagespeedonline / v5 / run_pagespeed')endpoint.search_params.set ('url', url)endpoint.search_params.set ('strategy', strategy)if (endpoint.search_params.set ('key', key)) {$2;
+const endpoint = new URL(
+    'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
+  );
+  endpoint && endpoint.searchParams.set('url', url);
+  endpoint && endpoint.searchParams.set('strategy', strategy);
+  if (key) endpoint && endpoint.searchParams.set('key', key);
+  const resp = await fetch(endpoint && endpoint.toString());
+  if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);
+  return resp && resp.json();
+exports && exports.handler = async function () {
+>>>>>>> origin/merge-pr-12271
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '';
     const key = process.env.PSI_API_KEY || '';

@@ -6,6 +6,7 @@ export const generateCSRFToken = () => {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 };
 
+<<<<<<< HEAD
 export const validateCSRFToken = (token, sessionToken) => {
   return token && sessionToken && token === sessionToken;
 };
@@ -21,3 +22,14 @@ export const getCSRFTokenFromCookie = (cookieHeader) => {
   
   return cookies.csrfToken;
 };
+=======
+;
+;
+},;
+,;
+;
+}}}
+}};
+},,;
+},,
+>>>>>>> origin/merge-pr-12271

@@ -43,20 +43,36 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<<<<<<< HEAD
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluations in Production</h3>
             <p className="text-gray-600 mb-4">
               Operationalize LLM and agent evals with live metrics and rollbacks.
             </p>
             <Link 
+<<<<<<< HEAD
               href="/blog/ai-2026-evaluations-in-production"
+=======
+              href="/content/hyperautomation-blueprint-2026"
+>>>>>>> origin/feature/new-content-and-promotions
+=======
+            <div className="text-4xl mb-4">💸</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Cost Optimization 2026</h3>
+            <p className="text-gray-600 mb-4">
+              Right-size compute, optimize inference, and automate savings with safe guardrails.
+            </p>
+            <Link 
+              href="/content/ai-2026-autonomous-cost-optimization-blueprint"
+>>>>>>> origin/feature/new-content-2026
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Article →
+              Read Blueprint →
             </Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div className="text-4xl mb-4">📏</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
             <p className="text-gray-600 mb-4">
@@ -67,6 +83,30 @@ export default function LatestContentShowcase2025() {
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Playbook →
+=======
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Edge AI Agents</h3>
+            <p className="text-gray-600 mb-4">
+              Real-time autonomy with on-device intelligence and sub-50ms control loops.
+            </p>
+            <Link 
+              href="/content/edge-ai-agents-2026"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read the Article →
+>>>>>>> origin/feature/new-content-and-promotions
+=======
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Agentic Sales Acceleration 2026</h3>
+            <p className="text-gray-600 mb-4">
+              Deploy revenue agents for enrichment, outreach, and scheduling with compliance.
+            </p>
+            <Link 
+              href="/content/ai-2026-agentic-sales-acceleration-playbook"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read Playbook →
+>>>>>>> origin/feature/new-content-2026
             </Link>
           </div>
         </div>

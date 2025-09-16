@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
+=======
+
+;
+import React, { useState } from 'react';
+:src/components/profile/HireNowCTA.jsx;
+>>>>>>> origin/merge-pr-12271
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";

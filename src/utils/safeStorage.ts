@@ -1,133 +1,349 @@
-interface StorageOptions {
-  encrypt?: boolean;
-  compress?: boolean;
-  ttl?: number; // Time to live in milliseconds
-}
-
-class SafeStorage {
-  private isAvailable(): boolean {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-be96
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
     try {
-      const test = '__storage_test__';
-      localStorage.setItem(test, test);
-      localStorage.removeItem(test);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  setItem(key: string, value: any, options: StorageOptions = {}): boolean {
-    if (!this.isAvailable()) {
-      console.warn('localStorage is not available');
-      return false;
-    }
-
-    try {
-      let data = value;
-      
-      // Add timestamp if TTL is specified
-      if (options.ttl) {
-        data = {
-          value,
-          timestamp: Date.now(),
-          ttl: options.ttl
-        };
+<<<<<<< HEAD
+      if (typeof window !== 'undefined' && window.localStorage) {
+        return localStorage.getItem(key);
       }
-
-      // Compress if requested
-      if (options.compress) {
-        // Simple compression placeholder - in real implementation, use a compression library
-        data = JSON.stringify(data);
-      }
-
-      // Encrypt if requested
-      if (options.encrypt) {
-        // Simple encryption placeholder - in real implementation, use proper encryption
-        data = btoa(JSON.stringify(data));
-      }
-
-      localStorage.setItem(key, JSON.stringify(data));
-      return true;
+      return null;
+=======
+      return localStorage.getItem(key);
+>>>>>>> cursor/create-and-deploy-new-content-c934
     } catch (error) {
-      console.error('Error storing data:', error);
-      return false;
-    }
-  }
-
-  getItem(key: string, options: StorageOptions = {}): any {
-    if (!this.isAvailable()) {
+      console.warn('localStorage not available:', error);
       return null;
     }
+  },
+<<<<<<< HEAD
 
+  setItem: (key: string, value: string): void => {
     try {
-      const item = localStorage.getItem(key);
-      if (!item) return null;
-
-      let data = JSON.parse(item);
-
-      // Decrypt if encrypted
-      if (options.encrypt) {
-        data = JSON.parse(atob(data));
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem(key, value);
       }
+=======
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
 
-      // Check TTL
-      if (data.timestamp && data.ttl) {
-        const now = Date.now();
-        if (now - data.timestamp > data.ttl) {
-          this.removeItem(key);
-          return null;
+  removeItem: (key: string): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.removeItem(key);
+      }
+=======
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+
+  clear: (): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.clear();
+      }
+=======
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+=======
+<<<<<<< HEAD
+=======
+=======
+// Safe storage utility for handling localStorage and sessionStorage
+// with error handling and fallbacks
+
+export const safeStorage = {
+  // Safe localStorage operations
+  localStorage: {
+    getItem: (key: string): string | null => {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          return window.localStorage.getItem(key);
         }
-        data = data.value;
+        return null;
+      } catch (error) {
+        console.warn('localStorage.getItem failed:', error);
+        return null;
       }
+    },
 
-      return data;
+    setItem: (key: string, value: string): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem(key, value);
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('localStorage.setItem failed:', error);
+        return false;
+      }
+    },
+
+    removeItem: (key: string): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.removeItem(key);
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('localStorage.removeItem failed:', error);
+        return false;
+      }
+    },
+
+    clear: (): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.clear();
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('localStorage.clear failed:', error);
+        return false;
+      }
+    }
+  },
+
+  // Safe sessionStorage operations
+  sessionStorage: {
+    getItem: (key: string): string | null => {
+      try {
+        if (typeof window !== 'undefined' && window.sessionStorage) {
+          return window.sessionStorage.getItem(key);
+        }
+        return null;
+      } catch (error) {
+        console.warn('sessionStorage.getItem failed:', error);
+        return null;
+      }
+    },
+
+    setItem: (key: string, value: string): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.sessionStorage) {
+          window.sessionStorage.setItem(key, value);
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('sessionStorage.setItem failed:', error);
+        return false;
+      }
+    },
+
+    removeItem: (key: string): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.sessionStorage) {
+          window.sessionStorage.removeItem(key);
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('sessionStorage.removeItem failed:', error);
+        return false;
+      }
+    },
+
+    clear: (): boolean => {
+      try {
+        if (typeof window !== 'undefined' && window.sessionStorage) {
+          window.sessionStorage.clear();
+          return true;
+        }
+        return false;
+      } catch (error) {
+        console.warn('sessionStorage.clear failed:', error);
+        return false;
+      }
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+/**
+ * Safe storage utility for handling localStorage and sessionStorage
+ * with error handling and fallbacks
+ */
+
+export const safeStorage = {
+  /**
+   * Safely get item from localStorage
+   */
+  getItem: (key: string): string | null => {
+    try {
+      if (typeof window === 'undefined') return null;
+      return localStorage.getItem(key);
     } catch (error) {
-      console.error('Error retrieving data:', error);
+      console.warn('Failed to get item from localStorage:', error);
       return null;
     }
-  }
+  },
 
-  removeItem(key: string): boolean {
-    if (!this.isAvailable()) {
+  /**
+   * Safely set item in localStorage
+   */
+  setItem: (key: string, value: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('Failed to set item in localStorage:', error);
       return false;
     }
+  },
 
+  /**
+   * Safely remove item from localStorage
+   */
+  removeItem: (key: string): boolean => {
     try {
+      if (typeof window === 'undefined') return false;
       localStorage.removeItem(key);
       return true;
     } catch (error) {
-      console.error('Error removing data:', error);
+      console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
-  }
+  },
 
-  clear(): boolean {
-    if (!this.isAvailable()) {
-      return false;
-    }
-
+  /**
+   * Safely get item from sessionStorage
+   */
+  getSessionItem: (key: string): string | null => {
     try {
+      if (typeof window === 'undefined') return null;
+      return sessionStorage.getItem(key);
+    } catch (error) {
+      console.warn('Failed to get item from sessionStorage:', error);
+      return null;
+    }
+  },
+
+  /**
+   * Safely set item in sessionStorage
+   */
+  setSessionItem: (key: string, value: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('Failed to set item in sessionStorage:', error);
+      return false;
+    }
+  },
+
+  /**
+   * Safely remove item from sessionStorage
+   */
+  removeSessionItem: (key: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('Failed to remove item from sessionStorage:', error);
+      return false;
+    }
+  },
+
+  /**
+   * Clear all localStorage
+   */
+  clear: (): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
       localStorage.clear();
       return true;
     } catch (error) {
-      console.error('Error clearing storage:', error);
+      console.warn('Failed to clear localStorage:', error);
       return false;
     }
-  }
+  },
 
-  keys(): string[] {
-    if (!this.isAvailable()) {
-      return [];
-    }
-
+  /**
+   * Clear all sessionStorage
+   */
+  clearSession: (): boolean => {
     try {
-      return Object.keys(localStorage);
+      if (typeof window === 'undefined') return false;
+      sessionStorage.clear();
+      return true;
     } catch (error) {
-      console.error('Error getting keys:', error);
-      return [];
+      console.warn('Failed to clear sessionStorage:', error);
+      return false;
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+=======
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
     }
   }
-}
+};
 
-const safeStorage = new SafeStorage();
 export default safeStorage;

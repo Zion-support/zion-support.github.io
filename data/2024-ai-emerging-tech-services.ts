@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
+=======
+
+// Placeholder content - file was empty after conflict resolution;
+import { ServiceVariant  } from '../types/service-variants';
+export interface AIEmergingTechService  {id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string,description: string;
+import { ServiceVariant } from "../types/service-variants";
+
+>>>>>>> origin/merge-pr-12271
 export interface AIEmergingTechService {
   id: string;
   name: string;

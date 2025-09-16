@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+;
+  id: string;
+export interface VerifiedRealService2025Batch2  {export interface VerifiedRealService2025Batch2  {id: string;
+id: string;name: string;
+>>>>>>> origin/merge-pr-12271
 export interface VerifiedRealService2025Batch2 {
   id: string;
   name: string;

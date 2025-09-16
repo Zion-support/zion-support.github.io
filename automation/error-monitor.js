@@ -42,6 +42,16 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+
+
+
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     // Initial health check
     await this.performHealthCheck();
 
@@ -84,7 +94,22 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
         timestamp: new Date().toISOString(),
+=======
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+>>>>>>> origin/merge-pr-12271
       });
     }
   }
@@ -164,6 +189,7 @@ class ErrorMonitor {
       'src/pages/index.tsx',
     ];
 
+<<<<<<< HEAD
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
@@ -200,6 +226,17 @@ class ErrorMonitor {
       }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+            timestamp: new Date().toISOString()
+          });
+        }
+      }
+    }ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     return errors;
   }
 
@@ -216,11 +253,42 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
           timestamp: new Date().toISOString(),
+=======
+          timestamp: new Date().toISOString()
+>>>>>>> origin/merge-pr-12271
         });
       }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+
+
+    );
+      }
+    }
+<;
+          timestamp: new Date().toISOString()})}
+    })}
+    }
+          timestamp: new Date().toISOString()})}
+    }
+=;
+
+
+
+
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     return errors;
   }
 
@@ -245,6 +313,31 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -263,6 +356,13 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD
+=======
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+
+
+>>>>>>> origin/merge-pr-12271
 
       console.log('✅ Error fixer completed');
     } catch (error) {
@@ -270,7 +370,22 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
         timestamp: new Date().toISOString(),
+=======
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+>>>>>>> origin/merge-pr-12271
       });
     }
   }
@@ -300,6 +415,16 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+
+
+
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 
@@ -346,7 +471,19 @@ class ErrorMonitor {
     process.exit(0);
   }
 }
+<<<<<<< HEAD
 
+=======
+// Run the monitor;
+if (require.main === module) {const monitor = new ErrorMonitor()monitor.start().catch(console.error)}
+module.exports = ErrorMonitor;
+ursor/automate-test-improve-and-merge-code-646c;
+module.exports = ErrorMonitor;}
+module.exports = ErrorMonitor;ursor/automate-test-improve-and-merge-code-646c;
+}
+module.exports = ErrorMonitor;
+}
+>>>>>>> origin/merge-pr-12271
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
@@ -354,3 +491,8 @@ if (require.main === module) {
 }
 
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
+=======
+}
+module.exports = ErrorMonitor;
+>>>>>>> origin/merge-pr-12271

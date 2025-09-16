@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+
+;
+export type SyncScope = "full" | "dao" | "marketplace",export interface Peer  {id: string,base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,paused?: boolean;
+}
+export interface InstanceConfig  {instance_id: string,opt_in: boolean,paused: boolean,scope: SyncScope,peers: Peer[],secret_configured: boolean;}}export type SyncEventType =;
+  | "proposal";
+  | "token_transfer";
+  | "talent_mobility";
+  | "dao_endorsement";| "leaderboard_entry",export interface BaseEventPayload  {id: string;export type SyncScope = "full" | "dao" | "marketplace",export interface Peer  {id: string,baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope;
+  paused?: boolean;
+  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+export interface InstanceConfig {instanceId: string;
+>>>>>>> origin/merge-pr-12271
   optIn: boolean;
   paused: boolean;
   scope: SyncScope;
@@ -11,12 +29,17 @@ export interface ProposalVoteEntry {
   amount: number;
   fromSubnet: string;
   toSubnet: string;
+<<<<<<< HEAD
   timestamp: number;
   fromNation: string;
+=======
+  timestamp: number;fromNation: string;
+>>>>>>> origin/merge-pr-12271
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
   toDAO: string;
   resolutionId: string;
   decision: "endorse" | "reject";
@@ -27,6 +50,10 @@ export interface ProposalVoteEntry {
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
   fromDAO: string;
+=======
+  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}export interface DaoEndorsementPayload extends BaseEventPayload  {fromDAO: string;
+>>>>>>> origin/merge-pr-12271
   toDAO: string;
   resolutionId: string;
   decision: "endorse" | "reject",;

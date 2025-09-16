@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 interface FeatureCardProps {
   icon: string;
+=======
+
+;
+interface FeatureCardProps  {icon: string,title: string,description: string,features: string[],gradient: string,className?: string;
+}className?: string;
+  className?: string;
+}
+export default function FeatureCard({
+  icon
+  title
+  description
+  features
+  gradient
+  className = ''
+}: FeatureCardProps) {
+interface FeatureCardProps {icon: string;
+>>>>>>> origin/merge-pr-12271
   title: string;
   description: string;
   features: string[];

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -10,6 +11,21 @@ function runNode(relPath, args = []) {
 exports.config = { schedule: '0 3 * * 0' };
 
 exports.handler = async () => {
+=======
+
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
+  });
+  return {
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || ''
+  };
+exports && exports.config = { schedule: '0 3 * * 0' };
+exports && exports.handler = async () => {
+>>>>>>> origin/merge-pr-12271
   const logs = [];
   const step = (name, fn) => {
     logs.push(`\n=== ${name} ===`);
