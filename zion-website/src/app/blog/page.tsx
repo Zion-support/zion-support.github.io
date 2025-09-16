@@ -3,6 +3,16 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-grounded-generation-guardrails-2026',
+    title: 'AI 2026: Grounded Generation Guardrails — Blueprint',
+    summary: 'Reduce hallucinations with retrieval, constraints, and eval gates in production.'
+  },
+  {
+    slug: 'ai-2026-evidence-driven-routing-case-studies-2026',
+    title: 'AI 2026: Evidence‑Driven Routing — Case Studies',
+    summary: 'Real‑world wins from eval‑ and cost‑aware model routing under latency budgets.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:

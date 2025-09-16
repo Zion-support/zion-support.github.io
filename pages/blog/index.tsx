@@ -3,6 +3,8 @@ import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-2026-grounded-generation-guardrails', title: 'Grounded Generation Guardrails (2026)', excerpt: 'Reduce hallucinations with retrieval, constraints, and eval gates.' },
+  { slug: 'ai-2026-evidence-driven-routing-case-studies', title: 'Evidence‑Driven Routing — Case Studies (2026)', excerpt: 'Quality, latency, and cost wins from policy‑as‑code routing.' },
   { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
