@@ -33,6 +33,7 @@ import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
 import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
+import NewBlogContentBanner2025 from './src/components/NewBlogContentBanner2025';
 import NotificationSystem from './src/components/NotificationSystem';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import PerformanceEnhancer from './src/components/PerformanceEnhancer';
@@ -244,6 +245,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Blog Content Banner - showcases latest blog articles */}
+                <NewBlogContentBanner2025 />
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
