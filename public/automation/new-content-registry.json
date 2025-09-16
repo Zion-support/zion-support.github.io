@@ -1,6 +1,34 @@
 {
   "items": [
     {
+      "title": "Agentic Evidence Graphs (2026)",
+      "href": "/blog/ai-2026-agentic-evidence-graphs",
+      "desc": "Connect evals, traces, policy events, and incidents into an auditable graph.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Runtime Observability (2026)",
+      "href": "/blog/ai-2026-governed-runtime-observability",
+      "desc": "Streaming metrics, governed traces, and evidence bundles for reliable autonomy.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Governed Runtime Observability (2026)",
+      "href": "/reports/guides/guide-2025-09-governed-runtime-observability.md",
+      "desc": "Policy-aware traces and eval hooks tied to incidents and SLOs.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Evidence Graphs",
+      "href": "/reports/briefs/brief-2025-09-agent-evidence-graphs.md",
+      "desc": "Connect operational signals into audit-ready narratives and scorecards.",
+      "createdAt": "2025-09-16T23:59:59.996Z",
+      "source": "ai-research-scout"
+    },
+    {
       "title": "AI 2026: Next‑Gen Real‑Time Guardrails",
       "href": "/blog/ai-2026-next-gen-realtime-guardrails",
       "desc": "Runtime checks, approvals, and eval gates that keep autonomy fast and safe.",
