@@ -271,6 +271,5 @@ const AbsoluteTechShowcase2031: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AbsoluteTechShowcase2031;
