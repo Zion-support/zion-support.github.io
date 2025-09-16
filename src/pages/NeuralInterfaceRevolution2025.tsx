@@ -584,8 +584,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Latency Performance</h3>
               <p className="text-indigo-200 mb-4">Ultra-low latency for real-time neural control</p>
               <ul className="text-indigo-300 space-y-1 text-sm text-left">
-                <li>• < 10ms signal processing</li>
-                <li>• < 5ms command execution</li>
+                <li>• &lt; 10ms signal processing</li>
+                <li>• &lt; 5ms command execution</li>
                 <li>• Real-time feedback loops</li>
                 <li>• Sub-millisecond precision</li>
               </ul>

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   ArrowRight
@@ -19,8 +18,6 @@ import {
   Network,
   Cloud
 } from 'lucide-react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-45eb
 
 const InteractiveContentShowcase2026 = () => {
   const [activeTabsetActiveTab] = useState(0);
@@ -229,7 +226,6 @@ const InteractiveContentShowcase2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Features Grid */}
         <div className="mb-16">
@@ -289,8 +285,6 @@ const InteractiveContentShowcase2026 = () => {
             </div>
           </div>
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-45eb
       </div>
     </div>
   );
