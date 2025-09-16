@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Simple git operations
+# Quick git operations
 cd /workspace
 
-echo "Starting simple git operations..."
+echo "Starting quick git operations..."
 
 # Check status
-git status --short
+git status
 
 # Switch to main
 git checkout main
