@@ -40,6 +40,12 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import RevolutionaryContentCarousel2026 from './src/components/RevolutionaryContentCarousel2026';
+import TrendingTopicsWidget2026 from './src/components/TrendingTopicsWidget2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryAIConsciousness2026 from './src/pages/RevolutionaryAIConsciousness2026';
+import QuantumComputingBreakthrough2026 from './src/pages/QuantumComputingBreakthrough2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -678,6 +684,21 @@ export default function App(): JSX.Element {
                 
                 {/* Dynamic Content Carousel */}
                 <DynamicContentCarousel />
+                
+                {/* Revolutionary Content Carousel 2026 */}
+                <div className="my-16">
+                  <RevolutionaryContentCarousel2026 />
+                </div>
+                
+                {/* Trending Topics Widget 2026 */}
+                <div className="my-16">
+                  <TrendingTopicsWidget2026 />
+                </div>
+                
+                {/* Interactive Tech Showcase 2026 */}
+                <div className="my-16">
+                  <InteractiveTechShowcase2026 />
+                </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2783,6 +2804,12 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+          <Route path="/revolutionary-content-carousel-2026" element={<RevolutionaryContentCarousel2026 />} />
+          <Route path="/trending-topics-2026" element={<TrendingTopicsWidget2026 />} />
+          <Route path="/interactive-tech-showcase-2026" element={<InteractiveTechShowcase2026 />} />
+          <Route path="/revolutionary-ai-consciousness-2026" element={<RevolutionaryAIConsciousness2026 />} />
+          <Route path="/quantum-computing-breakthrough-2026" element={<QuantumComputingBreakthrough2026 />} />
+          <Route path="/neural-interface-revolution-2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
