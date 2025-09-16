@@ -6,8 +6,8 @@ export type SiteUpdate = {
   tag?: string
 }
 
+// Final resolved list (newest first); we also sort on read for safety
 export const siteUpdates: SiteUpdate[] = [
-  // Fresh content added 2025-09-16
   {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
