@@ -1,4 +1,28 @@
 ---
+title: "AI 2026: Production Evidence Hub — Blueprint"
+description: "Centralize evals, traces, policy events, and incidents to make AI ops auditable."
+date: 2025-09-16
+tags: [Observability, Governance, Evidence, 2026]
+status: published
+---
+
+# AI 2026: Production Evidence Hub — Blueprint
+
+Aggregate operational evidence for every agent action:
+
+- Evals: offline suites, canaries, and live gates with scores and drift
+- Traces: spans with inputs, outputs, and tool calls
+- Policy: decisions, denials, approvals, and attestations
+- Incidents: timelines, remediations, and linked root causes
+
+Benefits: faster audits, safer rollouts, and provable compliance.
+
+Read next:
+
+- /blog/ai-2026-enterprise-agent-observability-deep-dive
+- /blog/ai-2026-eval-driven-release-engineering-deep-dive
+
+---
 title: "AI 2026: Production Evidence Hub — Blueprint for Eval‑Gated Operations"
 date: 2025-09-16
 slug: ai-2026-production-evidence-hub-blueprint
