@@ -53,12 +53,17 @@ import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
+import RevolutionaryContentShowcase2025 from './components/RevolutionaryContentShowcase2025';
+import UltimateTechAdvertisingBanner2025 from './components/UltimateTechAdvertisingBanner2025';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
+import AIRevolutionaryBreakthrough2025 from './pages/AIRevolutionaryBreakthrough2025';
+import QuantumComputingBreakthrough2025 from './pages/QuantumComputingBreakthrough2025';
+import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
 import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
@@ -119,6 +124,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* NEW: Ultimate Tech Advertising Banner 2025 */}
+              <div className="mb-12">
+                <UltimateTechAdvertisingBanner2025 />
+              </div>
+
+              {/* NEW: Revolutionary Content Showcase 2025 */}
+              <div className="mb-12">
+                <RevolutionaryContentShowcase2025 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -429,6 +444,11 @@ const App: React.FC = () => {
           {/* NEW: Revolutionary Content Routes 2026 */}
           <Route path="/ai-revolutionary-breakthrough-2026" element={<AIRevolutionaryBreakthrough2026 />} />
           <Route path="/quantum-computing-revolution-2026" element={<QuantumComputingRevolution2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2025 */}
+          <Route path="/ai-revolutionary-breakthrough-2025" element={<AIRevolutionaryBreakthrough2025 />} />
+          <Route path="/quantum-computing-breakthrough-2025" element={<QuantumComputingBreakthrough2025 />} />
+          <Route path="/neural-interface-revolution-2025" element={<NeuralInterfaceRevolution2025 />} />
           
           {/* New Featured Content Routes 2026 */}
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
