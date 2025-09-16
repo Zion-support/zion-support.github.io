@@ -14,6 +14,34 @@ export interface NewBlogPostMeta2029 {
 
 export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
   {
+    id: 9950,
+    title: "AI 2026: Runtime Eval Gates — Minimal Set to Ship Fast",
+    excerpt:
+      "Embed low‑friction, high‑impact eval gates for quality, safety, and cost in under a sprint.",
+    author: "Jordan Lee",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Evals", "Quality", "Safety", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/runtime-eval-gates-starter-2026.jpg",
+    slug: "ai-2026-runtime-eval-gates-starter",
+  },
+  {
+    id: 9949,
+    title: "Cost-Aware Routing 2026: Practical Blueprint You Can Adopt Today",
+    excerpt:
+      "Route by task profile with budgets, SLOs, and safe fallbacks — keep quality, cut spend.",
+    author: "Avery Scott",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Reliability"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-routing-blueprint-2026.jpg",
+    slug: "ai-2026-cost-aware-routing-blueprint",
+  },
+  {
     id: 9803,
     title: "AI 2026: Journey Scorecards — KPIs You Can Ship Today",
     excerpt:
