@@ -18,6 +18,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
@@ -54,6 +55,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Get exclusive access to our revolutionary technology breakthroughs, 
             AI consciousness updates, and quantum computing innovations.
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </p>
         </div>
 
@@ -114,6 +117,10 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           </divdiv>
         </div>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
         {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">

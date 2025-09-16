@@ -51,6 +51,10 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     </div>
   );
 };

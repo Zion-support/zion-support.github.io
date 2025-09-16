@@ -5,6 +5,7 @@ const UltimateContentBanner2038: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -23,6 +24,8 @@ const UltimateContentBanner2038: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
         <div className="text-center">
           <motion.div
             initial={{ scale: 0.8 }}
@@ -97,6 +100,7 @@ const UltimateContentBanner2038: React.FC = () => {
             >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               Transcendent Showcase 2040 →
             </a>
           </div>
@@ -134,6 +138,8 @@ const UltimateContentBanner2038: React.FC = () => {
             </div>
           </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 =======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>

@@ -169,6 +169,13 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
 import { motion } from 'framer-motion';
@@ -507,23 +514,49 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
             </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+<<<<<<< HEAD
+            </motion.div>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+            </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+            </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+>>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience Consciousness Computing?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Join the Consciousness Revolution</h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
-            Join the consciousness revolution and unlock the full potential of human-AI collaboration. 
-            Experience enhanced cognitive abilities and digital immortality.
+            Experience the future of human-AI integration. Enhance your consciousness, 
+            connect with others, and unlock unlimited potential.
           </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="border-2 border-indigo-400 text-indigo-400 px-8 py-3 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-              Explore All Services
-            </a>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Enhance Your Consciousness →
+            </button>
+            <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg hover:bg-indigo-400/20 transition-colors font-semibold text-lg">
+              Learn More
+            </button>
           </div>
         </div>
       </div>
@@ -542,6 +575,13 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+        <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
         <motion.div
@@ -590,7 +630,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3887
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-eb8d
+>>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
     </div>
   );
 };

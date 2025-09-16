@@ -170,6 +170,11 @@ const RevolutionaryTechShowcase2035: React.FC = () => {
             </div>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Explore →
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>
@@ -208,6 +213,11 @@ const RevolutionaryTechShowcase2035: React.FC = () => {
                 <div className="bg-white h-full w-3/4 rounded-full animate-pulse"></div>
               </div>
               <div className="text-sm text-gray-400">Global consciousness network</div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
           </div>
         </div>
@@ -274,6 +284,11 @@ const RevolutionaryTechShowcase2035: React.FC = () => {
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-indigo-300 mb-2">∞</div>
             <div className="text-sm text-indigo-200">Innovation</div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
 
@@ -287,6 +302,12 @@ const RevolutionaryTechShowcase2035: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400/10 transition-colors">
               Learn More
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-600 to-pink-600 py-16">
         <div className="container mx-auto px-4 text-center">

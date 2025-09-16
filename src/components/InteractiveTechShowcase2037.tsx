@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
@@ -37,6 +31,7 @@ const InteractiveTechShowcase2037: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       bgColor: "bg-purple-500"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     cosmic: {
       title: 'Cosmic Evolution',
@@ -112,6 +107,8 @@ const InteractiveTechShowcase2037: React.FC = () => {
     },
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     {
 <<<<<<< HEAD
       id: 3,
@@ -120,8 +117,6 @@ const InteractiveTechShowcase2037: React.FC = () => {
       status: "Neural Link: Established. Thought-to-action translation active.",
       color: "from-pink-600 to-rose-600",
       bgColor: "bg-pink-500"
-<<<<<<< HEAD
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
@@ -178,6 +173,7 @@ const InteractiveTechShowcase2037: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Showcase 2037</h2>
@@ -195,6 +191,8 @@ const InteractiveTechShowcase2037: React.FC = () => {
           Experience the future of technology through our interactive demonstrations. 
           Select a technology below to explore its capabilities and potential applications.
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
         </p>
       </div>
 
@@ -275,34 +273,6 @@ const InteractiveTechShowcase2037: React.FC = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Active Technology Display */}
-      <div className="grid lg:grid-cols-2 gap-12">
-        <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-          <div className="text-center mb-8">
-            <div className="text-8xl mb-4">{technologies[activeTech as keyof typeof technologies].icon}</div>
-            <h3 className="text-3xl font-bold mb-4">{technologies[activeTech as keyof typeof technologies].title}</h3>
-            <p className="text-purple-100 text-lg">
-              {technologies[activeTech as keyof typeof technologies].description}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-<<<<<<< HEAD
-            <h4 className="text-xl font-bold mb-4 text-purple-300">Key Features</h4>
-            {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-purple-100">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-29a8
           </div>
         </div>
       </div>

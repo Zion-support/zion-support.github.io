@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -184,6 +191,12 @@ const QuantumRealityEngine2026: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 export default QuantumRealityEngine2026;
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -384,3 +397,21 @@ export default QuantumRealityEngine2026;
               Learn About AI Consciousness
             </a>
 export default QuantumRealityEngine2026;
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf

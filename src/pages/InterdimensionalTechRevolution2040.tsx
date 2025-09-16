@@ -261,6 +261,10 @@ const InterdimensionalTechRevolution2040: React.FC = () => {
           </div>
 
             </button>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           {/* Interdimensional Capabilities */}
           <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-12 mb-20">
             <div className="text-center mb-12">
