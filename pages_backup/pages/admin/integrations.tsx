@@ -37,7 +37,6 @@ import { useEffect, useMemo, useState } from 'react';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -329,7 +328,6 @@ export default function AdminIntegrationsPage() {
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
@@ -662,11 +660,9 @@ function ManualOverrideForm() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

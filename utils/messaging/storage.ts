@@ -1,7 +1,5 @@
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   id: string;
   participants: string[];
@@ -32,7 +30,6 @@ export interface MessageThread {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   id: string;
@@ -48,7 +45,6 @@ export interface MessageThread {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1029,7 +1025,6 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
@@ -1073,7 +1068,6 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
 
 
 }
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return messagingStorage.markAsRead(id)
 }
@@ -1189,7 +1183,6 @@ export function generateConversationId(): string {;
 export function formatMessageTime(isoString: string): string {;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   const date = new Date(isoString);
@@ -1210,7 +1203,6 @@ export function formatMessageTime(isoString: string): string {;
     return date && date.toLocaleDateString();
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     participants,
     lastMessageAtIso: new Date().toISOString(),
@@ -1232,7 +1224,6 @@ export function formatMessageTime(isoString: string): string {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const date = new Date(isoString);
@@ -1253,16 +1244,12 @@ export function formatMessageTime(isoString: string): string {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
   }
@@ -1458,4 +1445,3 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   return { conversation, message };
 }
->>>>>>> origin/auto/autonomy-17186719616

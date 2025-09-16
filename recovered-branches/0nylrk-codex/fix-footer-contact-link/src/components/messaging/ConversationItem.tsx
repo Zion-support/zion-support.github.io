@@ -20,15 +20,11 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     <div 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -50,7 +46,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
       className={cn(
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
->>>>>>> origin/auto/autonomy-17186719616
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

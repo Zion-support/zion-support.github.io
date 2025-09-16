@@ -9,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return;
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   const { username, password } = req.body || {};
@@ -25,4 +24,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Invalid credentials' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

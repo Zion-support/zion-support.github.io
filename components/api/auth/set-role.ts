@@ -3,7 +3,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -132,4 +131,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.writeHead(302, { ...headers, Location: '/' });
   res.end();
 }
->>>>>>> origin/auto/autonomy-17186719616

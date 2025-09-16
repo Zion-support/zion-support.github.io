@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -31,7 +28,6 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
 
       title: "Sample Code"
@@ -72,7 +68,6 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500",
     },
     {
->>>>>>> origin/auto/autonomy-17186719616
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
       icon: Zap,

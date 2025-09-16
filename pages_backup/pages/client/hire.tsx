@@ -3,7 +3,6 @@ import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 
 import {useState} from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -165,13 +164,9 @@ export default function ClientHirePage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -215,13 +210,9 @@ export default function ClientHirePage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -282,7 +273,6 @@ export default function ClientHirePage() {
           <div className='font-medium'>Offer sent</div>;
           <div className='text-sm'>Offer ID: {result && result.id}</div>        </div>;
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       )}
       <FeedbackModal
@@ -486,11 +476,9 @@ export default function ClientHirePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

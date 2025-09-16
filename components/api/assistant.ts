@@ -14,12 +14,9 @@ Context about Zion AI Marketplace:
 - Vendors can list their AI models/services with pricing, usage tiers, and documentation
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -64,4 +61,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Assistant request failed' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

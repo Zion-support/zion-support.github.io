@@ -17,7 +17,6 @@ export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

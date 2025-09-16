@@ -21,7 +21,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       fs.writeFileSync (file_path, content, 'utf8'),
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
@@ -106,7 +105,6 @@ function getAllFiles() {
 }
         files.push (full_path);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
     }

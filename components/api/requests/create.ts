@@ -16,9 +16,7 @@ export const Create = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 };
 
 {
@@ -60,7 +58,6 @@ async function loadRequests(): Promise<any[]> {
 async function saveRequests(requests: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 async function summarizeWithOpenAI(description: string) {

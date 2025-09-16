@@ -1,6 +1,5 @@
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
@@ -84,7 +83,6 @@ export default function UltraFuturistic2029InnovationsPage() {
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
 
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <>
       <Head>
         <title>2029 Ultra-Futuristic Innovations | Zion Tech Group</title>
@@ -103,7 +101,6 @@ export default function UltraFuturistic2029InnovationsPage() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -528,16 +525,11 @@ export default function UltraFuturistic2029InnovationsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
 =======
@@ -787,4 +779,3 @@ export default function UltraFuturistic2029InnovationsPage() {
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

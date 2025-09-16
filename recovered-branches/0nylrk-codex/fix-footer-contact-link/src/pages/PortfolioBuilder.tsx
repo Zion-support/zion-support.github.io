@@ -29,7 +29,6 @@ function PortfolioBuilderContent() {
       <SEO 
         title="Portfolio Builder | Zion AI Marketplace" 
         description="Create and customize your resume and portfolio to showcase your skills and experience." 
->>>>>>> origin/auto/autonomy-17186719616
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -52,7 +51,6 @@ export default function PortfolioBuilder() {
   return (
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -62,4 +60,3 @@ export default function PortfolioBuilder() {
     </ProtectedRoute>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,11 +1,9 @@
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const industries = [;
   {}
     name: 'Healthcare,',

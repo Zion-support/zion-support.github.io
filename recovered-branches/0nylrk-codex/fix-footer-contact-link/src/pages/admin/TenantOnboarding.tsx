@@ -94,7 +94,6 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 
->>>>>>> origin/auto/autonomy-17186719616
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -265,7 +264,6 @@ function TenantOnboarding() {
   const [form_data, setFormData] = useState ({
 =======
   const [formData, setFormData] = useState({
->>>>>>> origin/auto/autonomy-17186719616
     brand_name: "",
     subdomain: "",
     logo_url: "",
