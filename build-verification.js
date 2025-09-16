@@ -17,7 +17,19 @@ try {
     Brain,
     Cloud,
     Shield,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> cursor/create-and-deploy-new-content-376e
     Zap} = require('lucide-react');
+=======
+
+
+
+    Zap
+  } = require('lucide-react');
+>>>>>>> origin/merge-pr-12271
   console.log('✅ Lucide React icons import successful', {
     "ArrowRight": typeof ArrowRight,
     "CheckCircle": typeof CheckCircle,

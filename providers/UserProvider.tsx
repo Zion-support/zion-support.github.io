@@ -1,5 +1,15 @@
 
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent'
+=======
+import React, {createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+  createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';createContext,useContext,useEffect,useMemo,useState} from 'react';
+export type UserRole = 'client' | 'talent';export type User = {id: string;
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+
+export type UserRole = 'client' | 'talent';
+>>>>>>> origin/merge-pr-12271
 
 export type User = {
   id: string

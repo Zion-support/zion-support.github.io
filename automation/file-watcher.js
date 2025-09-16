@@ -51,6 +51,10 @@ class FileWatcher {
         issues.push('Unmatched parentheses detected');
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-pr-12271
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
@@ -209,7 +213,13 @@ class FileWatcher {
 try {
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
+<<<<<<< HEAD
   execSync('yarn add chokidar', { "stdio": 'inherit' })}
+=======
+  execSync('yarn add chokidar', { stdio: 'inherit' });
+}
+}
+>>>>>>> origin/merge-pr-12271
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();

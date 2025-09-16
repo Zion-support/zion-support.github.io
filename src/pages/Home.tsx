@@ -1,6 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { useNotifications } from '../components/NotificationSystem';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
+import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from '../components/NeuralRealityBanner';
+import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
+import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -60,6 +70,7 @@ const Home: React.FC = () => {
               Advanced artificial intelligence solutions for modern businesses. 
               From machine learning to autonomous systems.
             </p>
+<<<<<<< HEAD
             <Link 
               to="/pages/AIInnovationHub2026" 
               className="text-cyan-400 hover:text-cyan-300 font-semibold"
@@ -98,6 +109,27 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
+
+        {/* Content Showcases */}
+        <div className="container mx-auto px-4 py-20">
+          <EnhancedContentShowcase />
+        </div>
+
+        <div className="container mx-auto px-4 py-20">
+          <RevolutionaryContentShowcase />
+        </div>
+
+        {/* Enhanced Content Advertising */}
+        <EnhancedContentAdvertising />
+
+        {/* Revolutionary Tech Advertising Banner */}
+        <RevolutionaryTechAdvertisingBanner />
+
+        {/* Interactive Tech Showcase */}
+        <InteractiveTechShowcase />
+
+        {/* Ultimate Tech Advertising Banner */}
+        <UltimateTechAdvertisingBanner />
 
         {/* Revolutionary Content Banner */}
         <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 
+=======
+>>>>>>> origin/feat/news-updates-home-teaser
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">

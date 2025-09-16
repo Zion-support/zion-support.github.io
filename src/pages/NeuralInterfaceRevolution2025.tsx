@@ -142,7 +142,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
       </div>
 
->>>>>>> cursor/create-and-deploy-new-content-a12c
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
@@ -292,7 +291,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-a12c
       </div>
     </div>
   );

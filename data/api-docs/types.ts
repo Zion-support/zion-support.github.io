@@ -7,6 +7,22 @@ export interface CodeSample {
   code: string;
 }
 
+<<<<<<< HEAD
+=======
+;
+export type HttpMethod = any;
+export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
+  limitPerMinute: number;
+  burst?: number;;;export interface ErrorCode  {code: string;
+  http_status: number;
+  message: string;;export interface EndpointSpec  {export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
+  limitPerMinute: number;
+  burst?: number;export interface ErrorCode  {code: string;
+  httpStatus: number;
+  message: string;export interface EndpointSpec  {ursor/fix-website-loading-errors-and-merge-6662;
+>>>>>>> origin/merge-pr-12271
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;

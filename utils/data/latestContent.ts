@@ -45,18 +45,32 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
+<<<<<<< HEAD
+=======
     tag: "Guide",
     date: "2025-09-15",
   },
   {
-    id: "agent-platform-slos-2026",
-    title: "AI 2026: Agent Platform SLOs That Matter",
-    summary: "Safety, quality, reliability, and economics SLOs for agent platforms.",
-    href: "/content/ai-2026-agent-platform-slos",
-    tag: "SLOs",
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+    tag: "Guide",
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+=======
+<<<<<<< HEAD
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
@@ -149,6 +163,16 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
+=======
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+    id: "evaluation-harness-blueprint-2026",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
     tag: "Blueprint",
     date: "2025-09-15",
   },
@@ -159,38 +183,6 @@ export const latestContent: ContentItem[] = [
     href: "/resources/ai-governance-2025",
     tag: "Guide",
     date: "2025-09-10",
-  },
-  {
-    id: "autonomous-support-agents-2026",
-    title: "AI 2026: Autonomous Customer Support Agents",
-    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
-    href: "/blog/ai-2026-autonomous-customer-support-agents",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
-  {
-    id: "secure-agent-architecture-2026",
-    title: "AI 2026: Secure Agent Architecture",
-    summary: "Zero-trust agent design with isolation domains, runtime guards, and policy-as-code.",
-    href: "/blog/ai-2026-secure-agent-architecture",
-    tag: "Architecture",
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-agents-red-team-scenarios-2026",
-    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
-    summary: "Adversarial scenarios, pass criteria, and CI/CD gates to harden agents.",
-    href: "/blog/ai-2026-autonomous-agents-red-team-scenarios",
-    tag: "Safety",
-    date: "2025-09-15",
-  },
-  {
-    id: "evaluation-harness-blueprint-2026",
-    title: "AI 2026: Evaluation Harness Blueprint",
-    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
-    href: "/content/ai-2026-evaluation-harness-blueprint",
-    tag: "Blueprint",
-    date: "2025-09-15",
   },
   {
     id: "quantum-edge-report",
@@ -207,38 +199,5 @@ export const latestContent: ContentItem[] = [
     href: "/resources/ai-security-blueprint",
     tag: "Blueprint",
     date: "2025-09-14",
-  },
-  {
-    id: "agentic-risk-safety-2026",
-    title: "AI 2026: Agentic Risk and Safety Playbook",
-    summary: "Safeguards, monitoring, and governance patterns for production agent systems.",
-    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
-    tag: "Playbook",
-    date: "2025-09-15",
-  },
-  {
-    id: "production-guardrails-2026",
-    title: "AI 2026: Production Guardrails for Autonomous Agents",
-    summary: "Isolation domains, policy-as-code, eval gates, and telemetry to ship safely.",
-    href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
-  {
-    id: "genai-risk-register-2026",
-    title: "AI 2026: Generative AI Risk Register",
-    summary: "A living catalog of GenAI risks tied to owners, mitigations, and eval gates.",
-    href: "/blog/ai-2026-generative-ai-risk-register",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
-  {
-    id: "agent-cost-optimization-2026",
-    title: "AI 2026: Agent Cost Optimization Guide",
-    summary: "Reduce agent TCO via routing, caching, batching, and benchmark-driven choices.",
-    href: "/blog/ai-2026-agent-cost-optimization",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
+  }
 ];
-

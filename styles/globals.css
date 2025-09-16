@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+/* Custom CSS variables */
+:root {
+  --zion-blue: #3b82f6;
+  --zion-purple: #8b5cf6;
+  --zion-indigo: #6366f1;
+}
+
+/* Base styles */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.text-high-contrast-secondary {
+  color: var(--text-secondary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.text-high-contrast-tertiary {
+  color: var(--text-tertiary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-high-contrast-muted {
+  color: var(--text-muted);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
 /* Enhanced Futuristic Design System with Superior Contrast */
 :root {
   --background: #000000;
@@ -69,6 +104,47 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+=======
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+
+  .card {
+    @apply p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105;
+  }
+
+  .hero {
+    @apply min-h-screen flex items-center justify-center px-4 py-20;
+  }
+
+  .cta-buttons {
+    @apply flex flex-col sm:flex-row gap-4 justify-center;
+  }
+}
+
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+@layer utilities {
+  .focus-visible:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+>>>>>>> origin/merge-pr-12271
 }
 
 html,
@@ -78,6 +154,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
 }
+<<<<<<< HEAD
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -1217,3 +1294,9 @@ pre code {
 /* Improve link contrast on dark bg */
 .prose a { color: #67e8f9; }
 .prose a:hover { color: #a5f3fc; }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> cursor/create-and-deploy-new-content-376e

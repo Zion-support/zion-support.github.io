@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
+=======
+
+;
+export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {ursor/fix-website-loading-errors-and-merge-6662;
+export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {export interface CuttingEdge2029Service  {import { ServiceVariant  } from '../types/service-variants';
+export interface CuttingEdgeInnovation2029V2  {import { ServiceVariant   } from '../types/service-variants';
+export interface CuttingEdge2029Service  {id: string;
+export interface CuttingEdge2029Service {
+
+export interface CuttingEdge2029Service {;
+
+export interface CuttingEdge2029Service {
+
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

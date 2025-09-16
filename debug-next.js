@@ -76,10 +76,18 @@ for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
 
+<<<<<<< HEAD
     if (content.includes('') || content.includes('
 }
 }
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+=======
+
+
+    if (content.includes('') || content.includes('
+}
+}
+>>>>>>> origin/merge-pr-12271
       problematicFiles.push(file);
     }
   } catch (error) {;
@@ -111,6 +119,11 @@ function getAllFiles(dir, extensions) {;
   }
   return files;
 }
+<<<<<<< HEAD
 ;
 console.log('✅ Debug completed'),;
 
+=======
+
+console.log('✅ Debug completed');
+>>>>>>> origin/merge-pr-12271

@@ -51,9 +51,15 @@ try {
                     } catch (e) {
                         exec_sync (`git checkout --theirs "${file}"`);
 
+<<<<<<< HEAD
 
 
 
+=======
+#!/usr/bin/env node;
+
+#!/usr/bin/env node;
+>>>>>>> origin/merge-pr-12271
 
 
 console.log('🚀 Starting merge process for all open PRs...'),;
@@ -65,7 +71,13 @@ try {;
     console.error('❌ Not in a git repository'),;
     process.exit(1);
 }
+<<<<<<< HEAD
 try {// Ensure clean working directory;
+=======
+;
+try {;
+    // Ensure clean working directory;
+>>>>>>> origin/merge-pr-12271
     const status = execSync('git status --porcelain', { encoding: 'utf8' });
     if (status.trim()) {console.log('  Working directory has changes. Stashing...');
         execSync('git stash push -m "Auto-stash before merge process"');
@@ -85,6 +97,11 @@ try {// Ensure clean working directory;
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
 
+<<<<<<< HEAD
+=======
+            // Resolve conflicts by accepting our version;
+            // Resolve conflicts by accepting our version;
+>>>>>>> origin/merge-pr-12271
 
 
 
@@ -97,9 +114,17 @@ try {// Ensure clean working directory;
 
             for (const file of files) {;
                 if (file.trim()) {;
+<<<<<<< HEAD
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
+
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+
+>>>>>>> origin/merge-pr-12271
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
                         execSync(`git checkout --ours "${file}"`);
@@ -140,10 +165,42 @@ try {// Ensure clean working directory;
         } catch (error) {
             console.log (`⚠️  Error merging ${branch}: ${error.message}`),
 
+<<<<<<< HEAD
+=======
+            for (const file of files) {;
+                if (file.trim()) {;
+                    }
+                    execSync(`git add "${file}"`);
+                }
+            }
+            // Commit the merge;
+            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
+    }
+    // Get all branches;
+    console.log('🌿 Getting all branches...');
+    const branches = execSync('git branch -r', { encoding: 'utf8' });
+    const branchList = branches.split('\n');
+        .map(branch => branch.trim());
+        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+    console.log(`Found ${branchList.length} branches to merge: `);
+    branchList.forEach(branch => console.log(`  - ${branch}`));
+    // Merge each branch;
+    for (const branch of branchList) {try {;
+            const branchName = branch.replace('origin/', '');
+            console.log(`\n🔄 Merging branch: ${branchName}`);
+            // Checkout the branch;
+            execSync(`git checkout ${branchName}`);
+            // Merge into main;
+            execSync('git checkout main');
+            execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
+            console.log(`✅ Successfully merged ${branchName}`);
+        } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
+>>>>>>> origin/merge-pr-12271
             // Continue with other branches;
         }
     }
     // Push all changes;
+<<<<<<< HEAD
     console.log('📤 Pushing all changes to main...');
     execSync('git push origin main');
     console.log('🎉 All merge operations completed successfully!');
@@ -151,6 +208,12 @@ try {// Ensure clean working directory;
     console.log('✅ All merge conflicts have been resolved');
     console.log('✅ Repository is now clean and up to date');
 } catch (error) {console.error('❌ Error during merge process:', error.message);
+=======
+
+
+
+
+>>>>>>> origin/merge-pr-12271
 ;
     // Get all branches;
     console.log('🌿 Getting all branches...'),;
@@ -194,7 +257,10 @@ try {// Ensure clean working directory;
 
     process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merge-pr-12271
     console.log ('📤 Pushing all changes to main...'),
     exec_sync ('git push origin main'),
     console.log ('🎉 All merge operations completed successfully!'),
@@ -205,4 +271,9 @@ try {// Ensure clean working directory;
     console.error ('❌ Error during merge process:', error.message),
     process.exit (1);
 }
+<<<<<<< HEAD
 
+=======
+    process.exit(1);
+}
+>>>>>>> origin/merge-pr-12271

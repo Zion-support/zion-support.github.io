@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> origin/merge-pr-12271
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';

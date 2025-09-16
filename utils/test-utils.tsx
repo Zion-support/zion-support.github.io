@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
@@ -45,6 +46,16 @@ export const mockNextRouter = () =>: any ({
   isReady: true,
   defaultLocale: 'en',
   domainLocales: [],
+=======
+  return (<ThemeProvider attribute="class" default_theme="light">;
+      {children}
+  }
+  isFallback: false;
+  isLocale: false;
+  isReady: true;
+  defaultLocale: 'en';
+  domainLocales: [];
+>>>>>>> origin/merge-pr-12271
   isPreview: false;
 
 });

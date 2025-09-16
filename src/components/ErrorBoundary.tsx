@@ -23,8 +23,23 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to monitoring service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
   }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
@@ -33,28 +48,68 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
             <div className="text-red-500 text-6xl mb-4">⚠️</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Oops! Something went wrong
+            </h1>
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-            >
-              Refresh Page
-            </button>
+            
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">Error Details</summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
+              <details className="mb-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
+                  <div className="text-red-600 font-bold">Error:</div>
+                  <div className="mb-2">{this.state.error.message}</div>
+                  <div className="text-red-600 font-bold">Stack Trace:</div>
+                  <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
+                  {this.state.errorInfo && (
+                    <>
+                      <div className="text-red-600 font-bold mt-2">Component Stack:</div>
+                      <div className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</div>
+                    </>
+                  )}
+                </div>
               </details>
             )}
+            
+            <div className="space-y-3">
+              <button
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                Go Home
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Reload Page
+              </button>
+            </div>
+            
+            <div className="mt-6 text-sm text-gray-500">
+              <p>If this problem persists, please contact our support team.</p>
+              <p className="mt-2">
+                <a 
+                  href="mailto:support@ziontechgroup.com" 
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  support@ziontechgroup.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       );

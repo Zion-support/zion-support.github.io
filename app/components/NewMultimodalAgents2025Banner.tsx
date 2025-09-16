@@ -17,7 +17,7 @@ export default function NewMultimodalAgents2025Banner(): JSX.Element {
 					</div>
 					<div className="flex items-center gap-3">
 						<Link
-							href="/blog/ai-2025-multimodal-agents-enterprise-guide"
+							href="/blog/ai-2025-multimodal-agents-practical-guide"
 							className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 						>
 							Read the guide →

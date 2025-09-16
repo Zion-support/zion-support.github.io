@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface EmergingTechnologyService {
+=======
+
+;
+  id: string;
+export interface EmergingTechnologyService  {id: string;name: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;
