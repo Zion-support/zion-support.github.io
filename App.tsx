@@ -36,6 +36,8 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
+import AIConsciousnessRevolution2025 from './src/components/AIConsciousnessRevolution2025';
+import QuantumBusinessAutomation2025 from './src/components/QuantumBusinessAutomation2025';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import RevolutionaryContentBanner2035_2037 from './src/components/RevolutionaryContentBanner2035-2037';
@@ -1298,6 +1300,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIRevolutionaryBreakthrough2035" element={<AIRevolutionaryBreakthrough2035 />} />
           <Route path="/pages/QuantumConsciousness2036" element={<QuantumConsciousness2036 />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037 />} />
+          
+          {/* Revolutionary Content 2025 Routes */}
+          <Route path="/ai-consciousness-revolution-2025" element={<AIConsciousnessRevolution2025 />} />
+          <Route path="/quantum-business-automation-2025" element={<QuantumBusinessAutomation2025 />} />
           
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
