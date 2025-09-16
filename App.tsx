@@ -142,6 +142,11 @@ import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
 import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
 import ComprehensiveServices2036 from './src/pages/ComprehensiveServices2036';
+import NextGenContentBanner2025 from './src/components/NextGenContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import ConsciousAI2025 from './src/pages/ConsciousAI2025';
+import QuantumConsciousness2025 from './src/pages/QuantumConsciousness2025';
 
 export default function App(): JSX.Element {
   return (
@@ -166,6 +171,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Next-Gen Content Banner 2025 */}
+                <NextGenContentBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -256,6 +264,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Next-Gen Tech →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Innovation Hub 2025 →
+                    </a>
+                    <a href="/pages/ConsciousAI2025" className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Conscious AI 2025 →
+                    </a>
+                    <a href="/pages/QuantumConsciousness2025" className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Consciousness →
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -820,6 +837,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2026 />
@@ -958,6 +980,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveServices2036" element={<ComprehensiveServices2036 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2037" element={<RevolutionaryTechBreakthrough2037 />} />
           <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/ConsciousAI2025" element={<ConsciousAI2025 />} />
+          <Route path="/pages/QuantumConsciousness2025" element={<QuantumConsciousness2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
