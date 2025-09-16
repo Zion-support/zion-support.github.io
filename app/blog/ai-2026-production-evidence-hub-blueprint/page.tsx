@@ -1,5 +1,54 @@
 import React from 'react';
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 2026: Production Evidence Hub — Blueprint',
+  description:
+    'Centralize evals, traces, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.',
+};
+
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        AI 2026: Production Evidence Hub — Blueprint
+      </h1>
+      <p className="text-gray-600 mt-3">
+        A practical blueprint to consolidate evaluation evidence across your agent platform — enabling safer releases, faster incident response, and regulatory compliance.
+      </p>
+
+      <div className="prose prose-purple mt-8">
+        <h2>Core capabilities</h2>
+        <ul>
+          <li>Unified evidence model: eval runs, traces, incidents, approvals, KPIs</li>
+          <li>APIs and adapters to ingest from CI, runtime, and observability tools</li>
+          <li>Searchable audit trails and policy‑as‑code evaluation gates</li>
+          <li>Dashboards for SLOs, cost, and risk with release readiness views</li>
+        </ul>
+
+        <h3>Adoption path</h3>
+        <ol>
+          <li>Start with a minimal schema and a single golden workflow</li>
+          <li>Automate ingestion from CI and canary stages</li>
+          <li>Roll out policy gates and rollback automation</li>
+          <li>Scale to cross‑team evidence and executive KPIs</li>
+        </ol>
+      </div>
+
+      <div className="mt-10 flex gap-3">
+        <Link href="/content/ai-2026-safe-evaluation-hub" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">
+          Evaluation Hub
+        </Link>
+        <Link href="/blog/ai-2026-operational-evals-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">
+          Operational Evals
+        </Link>
+      </div>
+    </main>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
