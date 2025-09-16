@@ -144,7 +144,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
                       <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                       <span className="text-gray-300">{feature}</span>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-29a8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc0d
+>>>>>>> cursor/create-and-deploy-new-content-0ed6
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -263,7 +267,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c6de
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-29a8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc0d
+>>>>>>> cursor/create-and-deploy-new-content-0ed6
                     </li>
                   ))}
                 </ul>
@@ -337,7 +345,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
               Contact Sales
             </button>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-29a8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc0d
+>>>>>>> cursor/create-and-deploy-new-content-0ed6
               
               <div className="text-center">
                 <div className="bg-gradient-to-r from-white/20 to-white/10 rounded-lg p-6 mb-4">
@@ -373,7 +385,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c6de
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-29a8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc0d
+>>>>>>> cursor/create-and-deploy-new-content-0ed6
           </div>
         </div>
       </div>
