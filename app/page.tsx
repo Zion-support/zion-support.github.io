@@ -151,9 +151,9 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Zero‑Downtime Agent Rollouts</h3>
               <p className="text-gray-600">Eval‑gated releases, rollback contracts, and guardrails to ship without outages.</p>
             </Link>
-            <Link href="/blog/ai-2026-agentic-cost-controls" className="bg-white rounded-xl shadow p-6 border border-green-100 hover:shadow-md transition">
+            <Link href="/blog/ai-2026-agentic-cost-controls-deep-dive" className="bg-white rounded-xl shadow p-6 border border-green-100 hover:shadow-md transition">
               <div className="text-sm font-semibold text-green-700 mb-2">New</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Cost Controls</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Cost Controls — Deep Dive</h3>
               <p className="text-gray-600">Policy‑aware budgets, approvals, and cost scorecards for predictable spend.</p>
             </Link>
           </div>
