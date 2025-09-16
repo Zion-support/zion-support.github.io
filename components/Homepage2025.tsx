@@ -51,6 +51,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Secure RAG Blueprint (2026)',
+      href: '/blog/ai-2026-secure-rag-blueprint',
+      tag: 'New',
+      gradient: 'from-cyan-600 to-blue-600'
+    },
+    {
+      title: 'Executive Metrics for Agentic Systems (2026)',
+      href: '/blog/ai-2026-exec-metrics-for-agentic-systems',
+      tag: 'New',
+      gradient: 'from-amber-600 to-rose-600'
+    },
+    {
       title: 'Exec Guide — Agent SLO Scorecards (2026)',
       href: '/blog/ai-2026-exec-guide-to-agent-slo-scorecards',
       tag: 'New',
@@ -509,9 +521,17 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
+                <p className="opacity-90">Secure RAG, exec metrics, evals, observability, and customer agents.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <a href="/blog/ai-2026-secure-rag-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Secure RAG Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">7 min • RAG</div>
+                </a>
+                <a href="/blog/ai-2026-exec-metrics-for-agentic-systems" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Executive Metrics for Agentic Systems (2026)</div>
+                  <div className="text-xs opacity-90">5 min • Strategy</div>
+                </a>
                 <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
                   <div className="text-xs opacity-90">8 min • Evals</div>
