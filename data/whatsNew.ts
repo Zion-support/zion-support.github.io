@@ -11,6 +11,8 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "zero-trust-agent-architecture-2026",
+    title: "AI 2026: Zero‑Trust Agent Architecture",
     description:
       "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
     ctaLabel: "Read Architecture",
@@ -48,14 +50,30 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
       "Pre‑wired SLOs, evals, incident, and cost views with example queries and JSON dashboards.",
     ctaLabel: "Get Starter Kit",
     href: "/resources/ai-2026-agent-platform-health-dashboard-starter",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-platform-operations-2026-blog",
     title: "AI 2026: Agent Platform Operations",
     description:
       "SLOs, incidents, change management, and eval‑gated releases for agent platforms.",
     ctaLabel: "Read Guide",
     href: "/blog/ai-2026-agent-platform-operations",
-    emoji: "📊",
+    emoji: "🏗️",
     highlight: true,
     date: "2025-09-15",
+  },
+  {
+    id: "safe-change-management-blueprint-2026",
+    title: "AI 2026: Safe Change Management — Blueprint",
+    description:
+      "Progressive delivery, eval gates, and audit‑ready approvals for agent changes in prod.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-safe-change-management-blueprint",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-16",
   },
   {
