@@ -65,8 +65,7 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
-    summary:
-      'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
+    summary: 'Predictive insights, anomaly detection, and performance visualization for AI systems.',
     href: '/updates/real-time-ai-analytics-dashboard-v3-0',
     date: '2025-09-15',
     tag: 'Launch'
