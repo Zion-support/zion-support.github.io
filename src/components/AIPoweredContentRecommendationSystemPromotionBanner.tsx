@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -113,7 +114,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
@@ -145,10 +149,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* AI Stats */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           {stats.map((statindex) => (
@@ -160,10 +167,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* AI Capabilities */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {aiCapabilities.map((capabilityindex) => (
@@ -180,10 +190,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <p className="text-blue-100 text-sm">{capability.description}</p>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Features Grid */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {features.map((featureindex) => (
@@ -199,10 +212,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Content Types Showcase */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -221,10 +237,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* AI Demo Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -294,10 +313,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -321,7 +343,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

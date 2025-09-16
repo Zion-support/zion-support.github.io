@@ -1,5 +1,4 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-=======
 ;
 export const "EnhancedAccessibility": React.FC<EnhancedAccessibilityProps> = ({;
   enabled = true",;: "any;
@@ -25,7 +24,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     focusIndicator: tru e,;
     colorBlindness: 'normal',;
     fontSize: 'medium';
-=======
   "colorBlindness": 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   "fontSize": 'small' | 'medium' | 'large' | 'xlarge'}
 export const "EnhancedAccessibility": "React.FC = () => {;
@@ -118,7 +116,6 @@ export const EnhancedAccessibility: React.FC = () => {
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {;
       root.style.setProperty('--focus-visible',none')}
     // Color blindness simulation';
-=======
     if(settings.focusIndicator) {
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {
       root.style.setProperty('--focus-visible',none')}
@@ -149,7 +146,6 @@ export const EnhancedAccessibility: React.FC = () => {
     if(settings.reducedMotion) {;
       document.documentElement.classList.add('reduced-motion')} else {;
       document.documentElement.classList.remove('reduced-motion')}
-=======
 
       [key]: !prev[key]}) ) };
   // Screen reader announcements'
@@ -169,7 +165,6 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
-=======
     if(!settings.keyboardNavigation) return;
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 
@@ -191,7 +186,6 @@ export const EnhancedAccessibility: React.FC = () => {
             target.click();
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
 ;
-=======
 
           break;
         case 'Escape': ";
@@ -232,12 +226,10 @@ modals.forEach(modal:  > {;
 ;
       // Skip to navigation';
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {;
-=======
         e.preventDefault();
         if(navigation) {
           (navigation as HTMLElement).focus()}
       }
-=======
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
@@ -270,7 +262,6 @@ modals.forEach(modal:  > {;
 </any>;
 </any>;
 </EnhancedAccessibilityProps>;
-=======
 </any>
 </any>
 </EnhancedAccessibilityProps>

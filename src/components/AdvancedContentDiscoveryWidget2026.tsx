@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -289,12 +290,16 @@ const AdvancedContentDiscoveryWidget2026 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div>
+          <AnimatePresence>
             {sortedContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
-                <divdiv
+                <motion.div
                   key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`relative group cursor-pointer ${
                     item.featured ? 'lg:col-span-2' : ''
                   }`}
@@ -409,10 +414,10 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
-          </div>
+          </AnimatePresence>
         </div>
 
         {/* Load More */}

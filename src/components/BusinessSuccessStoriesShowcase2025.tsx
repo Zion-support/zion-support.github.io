@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -155,7 +156,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-green-900 to-blue-900 bg-clip-text text-transparent mb-6">
@@ -164,10 +168,13 @@ const BusinessSuccessStoriesShowcase2025 = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Overall Stats */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -179,10 +186,13 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               <div className="text-sm text-slate-600">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Success Stories Navigation */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {successStories.map((storyindex) => (
@@ -198,11 +208,16 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               {story.company}
             </button>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Active Success Story */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activeStory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
             <div className="grid lg:grid-cols-2 gap-8">
@@ -258,11 +273,14 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Results Summary */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
         >
           <div className="text-center mb-8">
@@ -290,10 +308,13 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               <div className="text-green-100">Success Rate</div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* CTA Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold text-slate-900 mb-4">Ready to Write Your Success Story?</h3>
@@ -310,7 +331,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               Start Your Journey
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

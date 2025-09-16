@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,7 +64,10 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -76,13 +80,18 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             Discover our latest breakthrough content featuring cutting-edge AI, quantum computing, 
             neural interfaces, and revolutionary technologies that are reshaping our world.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
-              <divdiv
+            <AnimatePresence mode="wait">
+              <motion.div
                 key={currentSlide}
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -300 }}
+                transition={{ duration: 0.5 }}
                 className="relative"
               >
                 <div className={`bg-gradient-to-br ${newContent[currentSlide].gradient} p-12 rounded-2xl`}>
@@ -138,8 +147,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           {/* Navigation Controls */}
@@ -196,9 +205,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All New Content</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {newContent.map((item, index) => (
-              <divdiv
+              <motion.div
                 key={item.title}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -211,14 +222,16 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 >
                   Explore →
                 </a>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mt-12"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
@@ -238,7 +251,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

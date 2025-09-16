@@ -8,7 +8,6 @@
         </div>
 
 
-=======
         
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">

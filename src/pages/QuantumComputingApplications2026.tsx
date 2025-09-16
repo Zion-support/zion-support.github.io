@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const QuantumComputingApplications2026: React.FC = () => {
   return (
@@ -7,7 +8,10 @@ const QuantumComputingApplications2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -27,23 +31,29 @@ const QuantumComputingApplications2026: React.FC = () => {
                 View Quantum Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Quantum Advantage Section */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-6">⚡ Quantum Advantage</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Quantum computers offer exponential speedup for specific problem classes that would take classical computers millennia to solve
           </p>
-        </divdiv>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🔬</div>
@@ -62,9 +72,12 @@ const QuantumComputingApplications2026: React.FC = () => {
                 1000x Faster
               </span>
             </div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🔐</div>
@@ -83,9 +96,12 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Unbreakable
               </span>
             </div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">📊</div>
@@ -104,9 +120,12 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Real-time
               </span>
             </div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🌡️</div>
@@ -125,9 +144,12 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Ultra-Precise
               </span>
             </div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
             className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🚀</div>
@@ -146,9 +168,12 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Mission Critical
               </span>
             </div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-6 text-center">🧠</div>
@@ -167,11 +192,14 @@ const QuantumComputingApplications2026: React.FC = () => {
                 Enhanced AI
               </span>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
 
         {/* Quantum Performance Metrics */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
         >
           <div className="text-center mb-12">
@@ -203,10 +231,13 @@ const QuantumComputingApplications2026: React.FC = () => {
               <div className="text-sm text-orange-200">Quantum algorithms</div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Quantum Algorithms */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16"
         >
           <div className="text-center mb-12">
@@ -289,10 +320,13 @@ const QuantumComputingApplications2026: React.FC = () => {
               </ul>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Implementation Timeline */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
           className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-cyan-400/30"
         >
           <div className="text-center mb-12">
@@ -324,10 +358,13 @@ const QuantumComputingApplications2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Global quantum communication networks and distributed quantum computing</p>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Go Quantum?</h2>
@@ -342,7 +379,7 @@ const QuantumComputingApplications2026: React.FC = () => {
               Quantum Assessment
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

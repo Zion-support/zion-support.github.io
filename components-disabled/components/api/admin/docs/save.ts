@@ -28,7 +28,6 @@ function ensureDir(dir: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
 ;
@@ -48,11 +47,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ;
 
 
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
 ;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';

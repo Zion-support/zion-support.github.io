@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Play
   ArrowRight
@@ -34,7 +35,10 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -54,11 +58,13 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Zap className="w-3 h-3" />
-                </divdiv>
+                </motion.div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
                   NEW: Interactive Content Showcase 2025
                 </span>
@@ -70,12 +76,15 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
               
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Featuring:</span>
-                <divspan
+                <motion.span
                   key={currentFeature}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full"
                 >
                   {features[currentFeature]}
-                </divspan>
+                </motion.span>
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
@@ -96,40 +105,49 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
 
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
               >
                 <Play className="w-4 h-4" />
                 Watch Demo
                 <ArrowRight className="w-4 h-4" />
-              </divbutton>
+              </motion.button>
               
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Brain className="w-4 h-4" />
                 Explore Features
-              </divbutton>
+              </motion.button>
             </div>
 
             {/* Close Button */}
-            <divbutton
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
             >
               <X className="w-5 h-5" />
-            </divbutton>
+            </motion.button>
           </div>
         </div>
 
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
-          <divdiv
+          <motion.div
             className="h-full bg-white"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

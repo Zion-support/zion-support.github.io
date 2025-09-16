@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -125,16 +126,18 @@ const AITrendsPredictions2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-cyan-900/30" />
         <div className="absolute inset-0">
           {[...Array(30)].map((_i) => (
-            <divdiv
+            <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
+              animate={{
                 y: [0-50],
                 opacity: [0.40.80.4],
               }}
+              transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -146,15 +149,21 @@ const AITrendsPredictions2026 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <divdiv
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={isVisible ? { scale: 1 } : {}}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             AI Trends & Predictions 2026
-          </divdiv>
+          </motion.div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future of
@@ -167,27 +176,34 @@ const AITrendsPredictions2026 = () => {
             Discover the groundbreaking AI trends and predictions that will shape 2026 and beyond. 
             From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Market Insights */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {marketInsights.map((insightindex) => (
-            <divdiv
+            <motion.div
               key={index}
+              whileHover={{ scale: 1.05 }}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
               <BarChart3 className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white mb-1">{insight.value}</div>
               <div className="text-cyan-400 font-semibold mb-1">{insight.growth}</div>
               <div className="text-gray-300 text-sm">{insight.category}</div>
-            </divdiv>
+            </motion.div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Predictions Grid */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -196,8 +212,9 @@ const AITrendsPredictions2026 = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {predictions.map((predictionindex) => (
-              <divdiv
+              <motion.div
                 key={prediction.id}
+                whileHover={{ scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer"
                 onClick={() => setActivePrediction(index)}
               >
@@ -242,14 +259,19 @@ const AITrendsPredictions2026 = () => {
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400" />
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Detailed Prediction View */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activePrediction}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -290,11 +312,14 @@ const AITrendsPredictions2026 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Timeline */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -306,8 +331,11 @@ const AITrendsPredictions2026 = () => {
             
             <div className="space-y-8">
               {timeline.map((itemindex) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.6delay: 1.0 + index * 0.2 }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
@@ -334,14 +362,17 @@ const AITrendsPredictions2026 = () => {
                   </div>
                   
                   <div className="w-1/2"></div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* CTA Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
@@ -362,7 +393,7 @@ const AITrendsPredictions2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

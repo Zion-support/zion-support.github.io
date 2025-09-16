@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Sparkles
   ArrowRight
@@ -30,10 +31,13 @@ const UltimateContentRevolution2026Banner = () => {
   if (isDismissed) return null;
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ 
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
+      transition={{ 
         duration: 0.8
         ease: "easeOut",
         type: "spring",
@@ -154,7 +158,7 @@ const UltimateContentRevolution2026Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
         <div className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 animate-pulse"></div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

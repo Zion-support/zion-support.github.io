@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -106,7 +107,10 @@ const NextGenAIInnovationShowcase2025 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-20"></div>
         
         <div className="relative z-10 container mx-auto px-6 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full text-sm font-medium mb-6">
@@ -128,22 +132,26 @@ const NextGenAIInnovationShowcase2025 = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Play className="w-5 h-5" />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
-              </divbutton>
+              </motion.button>
               
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 Explore Innovations
                 <ArrowRight className="w-5 h-5" />
-              </divbutton>
+              </motion.button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -152,9 +160,11 @@ const NextGenAIInnovationShowcase2025 = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((statindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -162,7 +172,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -171,7 +181,8 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Innovation Showcase */}
       <div className="py-20">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -181,15 +192,17 @@ const NextGenAIInnovationShowcase2025 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
               {innovations.map((innovationindex) => (
-                <divdiv
+                <motion.div
                   key={innovation.id}
+                  initial={{ opacity: 0x: -30 }}
                   whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     activeFeature === index
                       ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/50 shadow-2xl'
@@ -216,14 +229,19 @@ const NextGenAIInnovationShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
 
             {/* Interactive Demo Area */}
             <div className="relative">
-                <divdiv
+              <AnimatePresence mode="wait">
+                <motion.div
                   key={activeFeature}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className={`bg-gradient-to-br ${innovations[activeFeature].color} p-8 rounded-3xl h-96 flex flex-col justify-center items-center text-center relative overflow-hidden`}
                 >
                   <div className="absolute inset-0 bg-black/20"></div>
@@ -233,27 +251,32 @@ const NextGenAIInnovationShowcase2025 = () => {
                     <p className="text-lg opacity-90 mb-6">{innovations[activeFeature].description}</p>
                     
                     {isPlaying && (
-                      <divdiv
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="space-y-3"
                       >
                         {innovations[activeFeature].features.map((featureidx) => (
-                          <divdiv
+                          <motion.div
                             key={idx}
+                            initial={{ opacity: 0x: -20 }}
+                            animate={{ opacity: 1x: 0 }}
+                            transition={{ delay: idx * 0.2 }}
                             className="flex items-center gap-3 text-left"
                           >
                             <CheckCircle className="w-5 h-5 text-green-400" />
                             <span>{feature}</span>
-                          </divdiv>
+                          </motion.div>
                         ))}
-                      </divdiv>
+                      </motion.div>
                     )}
                   </div>
                   
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-1000"></div>
-                </divdiv>
-              </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
@@ -262,19 +285,22 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Testimonials */}
       <div className="py-20 bg-black/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
               >
                 <div className="flex mb-4">
@@ -287,7 +313,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -296,7 +322,8 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
@@ -308,19 +335,23 @@ const NextGenAIInnovationShowcase2025 = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Rocket className="w-5 h-5" />
                 Start Your Transformation
-              </divbutton>
+              </motion.button>
               
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Users className="w-5 h-5" />
                 Schedule Consultation
-              </divbutton>
+              </motion.button>
             </div>
 
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
@@ -337,7 +368,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                 24/7 Support
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
 
 interface ServicescomparisonProps {
@@ -10,7 +5,6 @@ interface ServicescomparisonProps {
 }
 
 export default function Servicescomparison({ }: ServicescomparisonProps) {
-=======
 
 ;
 ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -68,7 +62,6 @@ export default function Servicescomparison() {return (<div>;
 }
 }
 export default function Servicescomparison({}: ServicescomparisonProps) {
->>>>>>> origin/merge-pr-12271
   return (
     <div>
       <h1>Servicescomparison</h1>

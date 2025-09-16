@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Play
   Zap
@@ -57,8 +58,11 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   }[]);
 
   return (
-    <divdiv
+    <motion.div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -72,15 +76,21 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <divdiv
+            <motion.div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30"
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.6delay: 0.2 }}
             >
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-yellow-400 font-semibold">Interactive AI Demo</span>
-            </divdiv>
+            </motion.div>
 
             {/* Main Headline */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.3 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Try AI Tools{' '}
@@ -92,18 +102,25 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 Experience the power of AI firsthand. Generate contentcreate visualswrite codeand analyze data with our interactive demo. 
                 No signup required - just click and create!
               </p>
-            </divdiv>
+            </motion.div>
 
             {/* Rotating Tool Showcase */}
-            <divdiv
+            <motion.div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
             >
               <div className="flex items-center mb-4">
                 <Brain className="w-6 h-6 text-yellow-400 mr-3" />
                 <span className="text-white font-semibold">Featured Tool:</span>
               </div>
-              <divdiv
+              <motion.div
                 key={currentTool}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
                 className="flex items-center"
               >
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${tools[currentTool].color} mr-4`}>
@@ -117,12 +134,15 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                     Click to try it now
                   </div>
                 </div>
-              </divdiv>
-            </divdiv>
+              </motion.div>
+            </motion.div>
 
             {/* Benefits Grid */}
-            <divdiv
+            <motion.div
               className="grid grid-cols-2 gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.5 }}
             >
               {benefits.map((benefitindex) => (
                 <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
@@ -130,11 +150,14 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-white font-medium text-sm">{benefit}</span>
                 </div>
               ))}
-            </divdiv>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <motion.div
               className="flex flex-col sm:flex-row gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.6 }}
             >
               <button className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -145,13 +168,16 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 <Users className="w-5 h-5 mr-2" />
                 View All Tools
               </button>
-            </divdiv>
+            </motion.div>
           </div>
 
           {/* Right Content - Interactive Preview */}
           <div className="relative">
-            <divdiv
+            <motion.div
               className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/20 shadow-2xl"
+              initial={{ opacity: 0scale: 0.9 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.8delay: 0.4 }}
             >
               {/* Demo Interface */}
               <div className="space-y-6">
@@ -169,19 +195,21 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">Select AI Tool</h3>
                   <div className="grid grid-cols-3 gap-2">
                     {tools.slice(06).map((toolindex) => (
-                      <divdiv
+                      <motion.div
                         key={index}
                         className={`p-3 rounded-lg text-center cursor-pointer transition-all duration-300 ${
                           index === currentTool
                             ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                             : 'bg-white/5 text-gray-300 hover:bg-white/10'
                         }`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         <div className="flex justify-center mb-1">
                           {tool.icon}
                         </div>
                         <div className="text-xs font-medium">{tool.name}</div>
-                      </divdiv>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -235,40 +263,47 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
 
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 rounded-2xl pointer-events-none" />
-            </divdiv>
+            </motion.div>
 
             {/* Floating Elements */}
-            <divdiv
+            <motion.div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
+              animate={{ 
                 y: [0-10],
                 rotate: [050]
               }}
+              transition={{ 
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
               <Zap className="w-6 h-6 text-black" />
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
+              animate={{ 
                 y: [010],
                 rotate: [0-50]
               }}
+              transition={{ 
                 duration: 2.5,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
               <Sparkles className="w-5 h-5 text-white" />
-            </divdiv>
+            </motion.div>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <divdiv
+        <motion.div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
         >
           {stats.map((statindex) => (
             <div key={index}>
@@ -276,9 +311,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

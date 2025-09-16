@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -42,9 +43,11 @@ const InteractiveTechShowcase: React.FC = () => {
       {/* Technology Selector */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {technologies.map((tech, index) => (
-          <divbutton
+          <motion.button
             key={tech.id}
             onClick={() => setActiveTech(index)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTech === index
                 ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
@@ -53,15 +56,18 @@ const InteractiveTechShowcase: React.FC = () => {
           >
             <span className="text-2xl mr-2">{tech.icon}</span>
             {tech.name}
-          </divbutton>
+          </motion.button>
         ))}
       </div>
 
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
-        <divdiv
+        <motion.div
           key={activeTech}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
           className="space-y-8"
         >
           <div className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl text-white`}>
@@ -118,13 +124,14 @@ const InteractiveTechShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
-            <divdiv
+            <motion.div
               key={tech.id}
+              whileHover={{ scale: 1.05, y: -5 }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
@@ -137,7 +144,9 @@ const InteractiveTechShowcase: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
               
               {hoveredCard === index && (
-                <divdiv
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="space-y-2"
                 >
                   {tech.features.slice(0, 2).map((feature, featureIndex) => (
@@ -146,9 +155,9 @@ const InteractiveTechShowcase: React.FC = () => {
                       {feature}
                     </div>
                   ))}
-                </divdiv>
+                </motion.div>
               )}
-            </divdiv>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -201,6 +210,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -323,13 +333,15 @@ const InteractiveTechShowcase: React.FC = () => {
 
               {/* Demo Button */}
               <div className="text-center">
-                <diva
+                <motion.a
                   href={currentTech.link}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentTech.color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
                 >
                   <span className="mr-2">{currentTech.demo}</span>
                   <span>→</span>
-                </diva>
+                </motion.a>
               </div>
             </div>
           </div>
@@ -339,28 +351,33 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="relative h-full min-h-[400px]">
               <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
               <div className="relative z-10 flex items-center justify-center h-full">
-                <divdiv
+                <motion.div
                   key={activeTech}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-9xl"
                 >
                   {currentTech.icon}
-                </divdiv>
+                </motion.div>
               </div>
               
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
-                  <divdiv
+                  <motion.div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+                    animate={{
                       y: [0, -100, 0],
                       opacity: [0.3, 1, 0.3],
                       scale: [1, 2, 1],
                     }}
+                    transition={{
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 2,
@@ -501,8 +518,13 @@ export default InteractiveTechShowcase;
 
           {/* Technology Display */}
           <div className="relative">
-              <divdiv
+            <AnimatePresence mode="wait">
+              <motion.div
                 key={activeTech}
+                initial={{ opacity: 0, x: 50, rotateY: 90 }}
+                animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                exit={{ opacity: 0, x: -50, rotateY: -90 }}
+                transition={{ duration: 0.5 }}
                 className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl shadow-2xl`}
               >
                 <div className="text-center mb-8">
@@ -514,12 +536,15 @@ export default InteractiveTechShowcase;
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
-                    <divdiv
+                    <motion.div
                       key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
                       className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
                     >
                       <span className="text-sm font-semibold">{feature}</span>
-                    </divdiv>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -538,14 +563,15 @@ export default InteractiveTechShowcase;
                     <div className="text-xs opacity-90">Speed</div>
                   </div>
                 </div>
-              </divdiv>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         {/* Interactive Demo Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <divdiv
+            <motion.div
+              whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🎮</div>
@@ -554,9 +580,10 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Launch VR Demo
               </button>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🧪</div>
@@ -565,9 +592,10 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Simulation
               </button>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">📊</div>
@@ -576,5 +604,5 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Analytics
               </button>
-            </divdiv>
+            </motion.div>
 export default InteractiveTechShowcase;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,7 +49,15 @@ const DynamicContentCarousel = () => {
   return (
     <div className="relative max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl">
-        <div className="relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
             <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
               <div className="flex items-center justify-between">
                 <div className="flex-1">
@@ -69,7 +78,8 @@ const DynamicContentCarousel = () => {
                 </div>
               </div>
             </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {/* Navigation Dots */}

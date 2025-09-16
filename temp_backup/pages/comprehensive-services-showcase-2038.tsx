@@ -302,7 +302,6 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
                 99.9%
               </div>
               <div className="text-gray-400 text-sm">Success Rate</div>
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -793,7 +792,6 @@ export default function ComprehensiveServicesShowcase2038() {
             <button className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10">
               Schedule Demo
             </button>
-=======
       {/* Market Statistics */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

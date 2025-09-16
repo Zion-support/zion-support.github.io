@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity
   Zap
@@ -177,10 +178,14 @@ const EnhancedPerformanceMonitor2026 = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div>
+        <AnimatePresence>
           {metrics.map((metricindex) => (
-            <divdiv
+            <motion.div
               key={metric.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-3">
@@ -207,13 +212,16 @@ const EnhancedPerformanceMonitor2026 = () => {
               </div>
               
               <div className="w-full bg-gray-700 rounded-full h-2">
-                <divdiv
+                <motion.div
                   className={`h-2 rounded-full bg-gradient-to-r ${metric.color}`}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${metric.value}%` }}
+                  transition={{ duration: 1delay: index * 0.1 }}
                 />
               </div>
-            </divdiv>
+            </motion.div>
           ))}
-        </div>
+        </AnimatePresence>
       </div>
 
       {/* System Status */}

@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Settings
   BarChart3
@@ -158,7 +159,10 @@ const AdvancedContentManagementSystem = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -181,10 +185,13 @@ const AdvancedContentManagementSystem = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Stats Overview */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {[
@@ -205,10 +212,13 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Navigation Tabs */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
@@ -233,10 +243,13 @@ const AdvancedContentManagementSystem = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Content Types Overview */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-8"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>
@@ -253,10 +266,13 @@ const AdvancedContentManagementSystem = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Recent Content */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white rounded-xl shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-6">
@@ -346,10 +362,13 @@ const AdvancedContentManagementSystem = () => {
               </tbody>
             </table>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Analytics Charts Placeholder */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <div className="bg-white rounded-xl shadow-lg p-6">
@@ -371,7 +390,7 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

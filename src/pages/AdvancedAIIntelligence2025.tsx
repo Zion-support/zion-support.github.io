@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedAIIntelligence2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -16,7 +17,10 @@ const AdvancedAIIntelligence2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -37,7 +41,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 Try AI Assistant
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -66,7 +70,10 @@ const AdvancedAIIntelligence2025: React.FC = () => {
       {/* Tab Content */}
       <div className="container mx-auto px-4 py-12">
         {activeTab === 'overview' && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-12"
           >
             <div>
@@ -135,11 +142,14 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         )}
 
         {activeTab === 'capabilities' && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
@@ -225,11 +235,14 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 <li>• Skill refinement</li>
               </ul>
             </div>
-          </divdiv>
+          </motion.div>
         )}
 
         {activeTab === 'applications' && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -282,11 +295,14 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         )}
 
         {activeTab === 'future' && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-8">Future Vision of AI Intelligence</h2>
@@ -318,7 +334,7 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         )}
       </div>
 

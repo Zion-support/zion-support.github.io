@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -139,7 +140,10 @@ const AI2025UltimateTechnologyShowcase = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -165,10 +169,13 @@ const AI2025UltimateTechnologyShowcase = () => {
               Future-Ready Solutions
             </span>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Technology Tabs */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -190,11 +197,14 @@ const AI2025UltimateTechnologyShowcase = () => {
               );
             })}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Active Technology Display */}
-        <divdiv
+        <motion.div
           key={activeTab}
+          initial={{ opacity: 0x: 20 }}
+          animate={{ opacity: 1x: 0 }}
+          transition={{ duration: 0.5 }}
           className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 mb-16 border border-white/10"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -241,10 +251,13 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Success Stories */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -261,10 +274,13 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -287,7 +303,7 @@ const AI2025UltimateTechnologyShowcase = () => {
               Explore All Technologies
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

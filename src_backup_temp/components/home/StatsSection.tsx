@@ -14,7 +14,6 @@ icon: React.ComponentType<{ className?: string}>;
   useEffect(() => {;
     if (isInView) {;
       const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
-=======
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
   stats: Sta t[]}
@@ -93,7 +92,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 "y": "-8",;
   "transition": "{ "duration": 0.3;
 "}
-=======
 
   return (
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
@@ -121,7 +119,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           whileInView = {;
   { opacity: 1,;
   y: 0;
-=======
 
 }}
           transition={{ duration: 0.8 }}
@@ -172,7 +169,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               whileHover={{;
                 y: -8,;
   transition: { duration: 0.3;
-=======
 
 }
               }}
@@ -201,7 +197,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 viewport={{ once: tru e }}
 ;
                 {counts[stat.label] || 0}
-=======
 
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
@@ -226,7 +221,6 @@ export default StatsSection;}}}}};
 </motion>;
 </any>;
 </StatsSectionProps>;
-=======
 </motion>
 </motion>
 </motion>

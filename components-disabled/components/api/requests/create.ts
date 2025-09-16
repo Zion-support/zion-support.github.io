@@ -39,7 +39,6 @@ const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';

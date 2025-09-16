@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, 
@@ -15,6 +16,7 @@ import {
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,
   Brain as BrainIcon, Play as PlayIcon
 } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
 const contactInfo = {
@@ -171,7 +173,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -188,8 +193,11 @@ export default function UltimateFuturisticServicesShowcase2025() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />
@@ -197,10 +205,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
@@ -280,12 +288,16 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {sortedServices.map((service, index) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                variants={itemVariants}
                 className={`group relative ${
                   viewMode === 'grid' 
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
@@ -409,9 +421,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
-          </divdiv>
+          </motion.div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
@@ -436,8 +448,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -461,7 +475,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 View Pricing
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </Layout>

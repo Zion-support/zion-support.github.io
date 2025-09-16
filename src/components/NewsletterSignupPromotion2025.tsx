@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 MailArrowRightCheckCircleStarZapTrendingUpUsersAward
 
 const NewsletterSignupPromotion2025 = () => {
@@ -41,7 +42,10 @@ const NewsletterSignupPromotion2025 = () => {
     return (
       <div className="py-16 bg-gradient-to-r from-green-500 to-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: 1scale: 1 }}
+            transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl p-12 shadow-2xl"
           >
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -61,7 +65,7 @@ const NewsletterSignupPromotion2025 = () => {
                 Follow Us on Social
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
     );
@@ -80,7 +84,10 @@ const NewsletterSignupPromotion2025 = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0x: -30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
             className="text-white"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-6">
@@ -102,21 +109,27 @@ const NewsletterSignupPromotion2025 = () => {
             {/* Benefits List */}
             <div className="space-y-4 mb-8">
               {benefits.map((benefitindex) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="w-5 h-5 text-green-300" />
                   <span className="text-lg">{benefit}</span>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((statindex) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-white mb-2 flex justify-center">
@@ -124,13 +137,16 @@ const NewsletterSignupPromotion2025 = () => {
                   </div>
                   <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-sm opacity-80">{stat.label}</div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
-          </divdiv>
+          </motion.div>
 
           {/* Right Column - Signup Form */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0x: 30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-center mb-8">
@@ -187,7 +203,7 @@ const NewsletterSignupPromotion2025 = () => {
                 ))}
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
     </div>

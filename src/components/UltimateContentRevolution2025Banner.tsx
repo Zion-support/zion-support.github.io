@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   ArrowRight
@@ -38,8 +39,11 @@ const UltimateContentRevolution2025Banner = () => {
   if (!isVisible) return null;
 
   return (
-    <div>
-      <divdiv
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 overflow-hidden"
       >
         {/* Animated Background */}
@@ -58,11 +62,13 @@ const UltimateContentRevolution2025Banner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
-                <divdiv
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                </divdiv>
+                </motion.div>
                 <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wider">
                   New Content Available
                 </span>
@@ -78,16 +84,21 @@ const UltimateContentRevolution2025Banner = () => {
               </h2>
               
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">
-                  <divdiv
+                <AnimatePresence mode="wait">
+                  <motion.div
                     key={currentFeature}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -20 }}
+                    transition={{ duration: 0.5 }}
                     className="flex items-center gap-2"
                   >
                     <features[currentFeature].icon className={`w-5 h-5 ${features[currentFeature].color}`} />
                     <span className="text-gray-300 font-medium">
                       {features[currentFeature].text}
                     </span>
-                  </divdiv>
-                </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
               <p className="text-gray-300 text-sm md:text-base max-w-2xl">
@@ -128,8 +139,11 @@ const UltimateContentRevolution2025Banner = () => {
 
           {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-            <divdiv
+            <motion.div
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 8ease: "linear" }}
             />
           </div>
 
@@ -156,8 +170,8 @@ const UltimateContentRevolution2025Banner = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
-      </divdiv>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

@@ -34,7 +34,6 @@ const iconMap = {
 
 export default ForumCategories;
 
-=======
         );
       })}
     </div>

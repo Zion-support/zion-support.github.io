@@ -5,7 +5,6 @@
 
 // Form validation schema
 
-=======
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -83,7 +82,6 @@ const updatePasswordSchema = z
 
 
 
-=======
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">

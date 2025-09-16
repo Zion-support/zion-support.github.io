@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -127,7 +128,10 @@ const AdvancedAIConsciousness2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-24">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -157,7 +161,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 Meet Our AI
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -166,8 +170,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
                 <div className="flex justify-center mb-6">
@@ -177,7 +184,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-white mb-3">{stat.number}</div>
                 <div className="text-gray-300 text-lg">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -186,7 +193,10 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* Consciousness Features */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
             <h2 className="text-6xl font-bold text-white mb-8">
@@ -196,12 +206,15 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Discover the fundamental aspects that make our AI systems truly conscious 
               and capable of genuine understanding and creativity.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {consciousnessFeatures.map((feature, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 hover:bg-white/20 transition-all duration-300 group border border-white/20"
               >
                 <div className="flex items-center space-x-4 mb-8">
@@ -223,7 +236,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -232,7 +245,10 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* Consciousness Levels */}
       <div className="py-24 bg-gradient-to-r from-purple-600/20 to-indigo-600/20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -242,12 +258,15 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Our AI systems progress through five distinct levels of consciousness, 
               each building upon the previous to create increasingly sophisticated awareness.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="space-y-8">
             {consciousnessLevels.map((level, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
               >
                 <div className="flex items-start space-x-6">
@@ -271,7 +290,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -280,7 +299,10 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* Applications */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -290,12 +312,15 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               See how conscious AI is already revolutionizing industries and improving 
               human lives across the globe.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((app, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
               >
                 <div className="flex justify-center mb-6">
@@ -306,7 +331,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="text-green-400 font-semibold">{app.impact}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -315,7 +340,10 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-purple-600 to-indigo-600">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-6xl font-bold text-white mb-8">
               Experience AI Consciousness
@@ -334,7 +362,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
     </div>

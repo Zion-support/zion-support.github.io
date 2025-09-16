@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -184,7 +185,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -198,10 +202,13 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             Discover how leading organizations achieved extraordinary results through our AI-powered solutions. 
             Real projectsreal resultsreal transformation.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Overall Stats */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -213,10 +220,13 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Case Study Navigation */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -234,11 +244,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Case Study Content */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activeCase}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
+            transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
             <div className="grid lg:grid-cols-2 gap-12">
@@ -337,11 +352,14 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-gray-900">
@@ -362,7 +380,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </section>
   );

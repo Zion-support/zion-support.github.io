@@ -17,7 +17,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   onResultsChange,;
   placeholder = "Search services, articles, team members...",;
   showFilters = true}) => {;
-=======
   showFilters = true}) => {
 
   const [searchQuery, setSearchQuery] = useState<any>('');
@@ -59,7 +58,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   
     setSelectedCategory('all');
     setSortBy('relevance')};
-=======
 
   // Get icon for type
   const getTypeIcon = (props: any) => {
@@ -84,7 +82,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
-=======
             placeholder={placeholder}";
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300 backdrop-blur-md";
           />;
@@ -178,7 +175,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
           <div className="relative">
             <select
               value={sortBy}
-=======
           {/* Filter Toggle */"}
           <button;
             onClick={() => setShowFilterPanel(!showFilterPanel)}`;
@@ -222,7 +218,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             </button>) }
         </div>) }
 ;
-=======
         </div>) }
 
       {/* Filter Panel */}
@@ -234,7 +229,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { height: 0,;
   opacity: 0;
 }}
-=======
   { "height": "0",;
   "opacity": "0;
 "}}
@@ -271,7 +265,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         <span className="text-sm text-zinc-300">{type.label"}</span>";
                         <span className="text-xs text-zinc-500">({type.count})</span>;
                       </label>;
-=======
       <AnimatePresence>
         {showFilterPanel && (<motion.div
             initial = {
@@ -332,7 +325,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                             ? 'bg-zion-cyan text-white'';
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`;
                         }`}
-=======
                         onClick={() => toggleFilter(tag.toLowerCase())}`
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
@@ -358,7 +350,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                       <label key={location} className="flex items-center gap-2 cursor-pointer">;
                         <input";
                           type="checkbox";
-=======
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}"
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
@@ -450,7 +441,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 </div>;
               </div>;
             </div>;
-=======
           </motion.div>;) ) }
       </div>
       {/* No Results */}
@@ -501,7 +491,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 </any>;
 </any>;
 </SearchAndFilterSystemProps>;
-=======
 </any>
 </any>
 </SearchAndFilterSystemProps>

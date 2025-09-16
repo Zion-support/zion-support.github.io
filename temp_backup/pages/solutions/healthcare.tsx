@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, Activity } from 'lucide-react';
 import Link from 'next/link';
-=======
 import Head from 'next/head';
 import { 
   Heart, Brain, Shield, Zap, BarChart3, Cpu, 
@@ -13,7 +12,6 @@ import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturis
 const HealthcareSolutionsPage: React.FC = () => {
   const solutions = [
     {
-=======
       name: 'AI-Powered Medical Diagnosis 2045',
       description: 'Advanced AI medical diagnosis with consciousness and emotional intelligence',
       href: '/ai-powered-medical-diagnosis-2045',
@@ -68,7 +66,6 @@ const HealthcareSolutionsPage: React.FC = () => {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-pink-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -121,7 +118,6 @@ export default function HealthcareSolutions() {
           </div>
         </section>
 
-=======
         {/* Solutions Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +187,6 @@ export default function HealthcareSolutions() {
                   <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
-=======
         {/* Key Solutions */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -458,7 +453,6 @@ export default function HealthcareSolutions() {
                 >
                   Explore All Solutions
                 </Link>
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div

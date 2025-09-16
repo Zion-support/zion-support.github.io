@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -220,6 +224,7 @@ export default function ComprehensiveServicesLanding2027() {
     }
     return `$${price}`;
   };
+>>>>>>> cursor/create-and-deploy-new-content-5863
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -233,7 +238,10 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <divh1 
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -241,17 +249,23 @@ export default function ComprehensiveServicesLanding2027() {
             </span>
             <br />
             <span className="text-white">Landing 2027</span>
-          </divh1>
+          </motion.h1>
           
-          <divp 
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology services designed to 
             transform your business and drive innovation across every industry.
-          </divp>
+          </motion.p>
 
           {/* Search Bar */}
-          <divdiv 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="relative">
@@ -264,10 +278,13 @@ export default function ComprehensiveServicesLanding2027() {
                 className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
             </div>
-          </divdiv>
+          </motion.div>
 
           {/* Quick Stats */}
-          <divdiv 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -290,15 +307,17 @@ export default function ComprehensiveServicesLanding2027() {
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-purple-400 text-sm">Support</div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Category Navigation */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
@@ -309,14 +328,16 @@ export default function ComprehensiveServicesLanding2027() {
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <divbutton
+              <motion.button
                 key={category.id}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 onClick={() => setActiveCategory(category.id)}
                 className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
@@ -328,7 +349,7 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
-              </divbutton>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -337,8 +358,10 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
@@ -351,14 +374,16 @@ export default function ComprehensiveServicesLanding2027() {
                 : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* Services Grid */}
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden"
               >
@@ -437,9 +462,13 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
 
                 {/* Expanded Details */}
-                <div>
+                <AnimatePresence>
                   {expandedService === service.id && (
-                    <divdiv
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
                       className="border-t border-white/20 bg-white/5"
                     >
                       <div className="p-6">
@@ -498,21 +527,23 @@ export default function ComprehensiveServicesLanding2027() {
                           </div>
                         </div>
                       </div>
-                    </divdiv>
+                    </motion.div>
                   )}
-                </div>
-              </divdiv>
+                </AnimatePresence>
+              </motion.div>
             ))}
 
             {/* No Results Message */}
             {filteredServices.length === 0 && (
-              <divdiv 
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
-              </divdiv>
+              </motion.div>
             )}
           </div>
         </div>
@@ -521,8 +552,10 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20"
           >
@@ -574,7 +607,7 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </div>

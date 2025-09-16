@@ -1,5 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
   Rocket, Lock, Palette, Factory, Database, Cloud, 
@@ -57,16 +59,22 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="space-y-6"
           >
             {/* Enhanced Company Badge */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
               <Star className="w-5 h-5" />
               <span>Innovation Leader 2025</span>
-            </divdiv>
+            </motion.div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2025 Innovative Services
@@ -76,7 +84,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </p>
             
             {/* Enhanced Stats */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
@@ -95,8 +106,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>
                 <div className="text-gray-300 text-sm">Future Possibilities</div>
               </div>
-            </divdiv>
-          </divdiv>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -104,8 +115,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -115,15 +128,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore our comprehensive range of innovative services across cutting-edge technology domains
             </p>
-          </divdiv>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
               const IconComponent = category.icon;
               return (
-                <divdiv
+                <motion.div
                   key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -138,7 +153,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
           </div>
@@ -148,8 +163,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       {/* Featured Services */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -159,15 +176,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Our most popular and innovative services that are transforming industries
             </p>
-          </divdiv>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
               return (
-                <divdiv
+                <motion.div
                   key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -209,7 +228,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
           </div>
@@ -220,8 +239,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -231,15 +252,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore our entire collection of innovative services designed for the future
             </p>
-          </divdiv>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
               return (
-                <divdiv
+                <motion.div
                   key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -260,7 +283,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
           </div>
@@ -270,8 +293,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       {/* Contact CTA */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -302,7 +327,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </Layout>

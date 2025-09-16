@@ -24,7 +24,6 @@ title:  "Data Analytics Dashboard",;
       "borderWidth": "2;
     "}];
   }) ;
-=======
 ;
   const [metrics, setMetrics] = useState<any> ([{;
       "title": 'Total Revenue',;
@@ -139,7 +138,6 @@ setChartData(prev:  > ({;
       ],;
       borderColor[;
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1);
-=======
       ],
       borderColor[;
         'rgba(34, 221, 210, 1),rgba(140, 21, 233, 1),rgba(239, 68, 68, 1),rgba(16, 185, 129, 1),rgba(245, 158, 11, 1)
@@ -148,8 +146,6 @@ setChartData(prev:  > ({;
   ;
   "borderWidth": "2;
     ;
-=======
-=======
 }]};
   // Generate line chart data
   const lineChartData = {

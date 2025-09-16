@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -210,7 +211,10 @@ export default function ComprehensiveServicesAdvertising() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -240,7 +244,7 @@ export default function ComprehensiveServicesAdvertising() {
                 View Pricing
               </Link>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -276,7 +280,10 @@ export default function ComprehensiveServicesAdvertising() {
 
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -288,7 +295,7 @@ export default function ComprehensiveServicesAdvertising() {
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Category Filter */}
         <div className="mb-12">
@@ -336,10 +343,14 @@ export default function ComprehensiveServicesAdvertising() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div>
+          <AnimatePresence>
             {sortedServices.map((service, index) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-blue-500"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -425,13 +436,16 @@ export default function ComprehensiveServicesAdvertising() {
                     <Globe className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
-          </div>
+          </AnimatePresence>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-12">
@@ -459,7 +473,7 @@ export default function ComprehensiveServicesAdvertising() {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
 
       {/* Footer Contact Section */}

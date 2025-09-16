@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Calendar
@@ -183,7 +184,10 @@ const AITrendsPredictions2025 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -197,10 +201,13 @@ const AITrendsPredictions2025 = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive predictions for the future of artificial intelligencefrom quantum breakthroughs to synthetic consciousness.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Year Selector */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center gap-4 mb-12"
         >
           {years.map((year) => (
@@ -216,11 +223,16 @@ const AITrendsPredictions2025 = () => {
               {year}
             </button>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Content */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activeYear}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -20 }}
+            transition={{ duration: 0.5 }}
           >
             {/* Year Header */}
             <div className="text-center mb-12">
@@ -237,8 +249,11 @@ const AITrendsPredictions2025 = () => {
               {trendsData[activeYear].trends.map((trendindex) => {
                 const Icon = trend.icon;
                 return (
-                  <divdiv
+                  <motion.div
                     key={trend.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group"
                   >
                     <div className="flex items-start gap-4">
@@ -264,13 +279,16 @@ const AITrendsPredictions2025 = () => {
                         </div>
                       </div>
                     </div>
-                  </divdiv>
+                  </motion.div>
                 );
               })}
             </div>
 
             {/* Predictions */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -278,21 +296,27 @@ const AITrendsPredictions2025 = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {trendsData[activeYear].predictions.map((predictionindex) => (
-                  <divdiv
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: 0.5 + index * 0.1 }}
                     className="flex items-start gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <p className="text-gray-300">{prediction}</p>
-                  </divdiv>
+                  </motion.div>
                 ))}
               </div>
-            </divdiv>
-          </divdiv>
-        </div>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -319,7 +343,7 @@ const AITrendsPredictions2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

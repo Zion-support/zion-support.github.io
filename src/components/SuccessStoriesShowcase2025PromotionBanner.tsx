@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Award
   TrendingUp
@@ -35,7 +36,10 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
       className="relative bg-gradient-to-r from-green-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -55,11 +59,13 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Award className="w-3 h-3" />
-                </divdiv>
+                </motion.div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
                   NEW: Success Stories Showcase 2025
                 </span>
@@ -71,15 +77,18 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
               
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Featuring:</span>
-                <divdiv
+                <motion.div
                   key={currentStat}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <stats[currentStat].icon className="w-4 h-4" />
                   <span className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full">
                     {stats[currentStat].value} {stats[currentStat].label}
                   </span>
-                </divdiv>
+                </motion.div>
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
@@ -103,57 +112,68 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
               {stats.map((statindex) => {
                 const Icon = stat.icon;
                 return (
-                  <divdiv
+                  <motion.div
                     key={index}
+                    animate={{
                       scale: currentStat === index ? 1.1 : 1,
                       opacity: currentStat === index ? 1 : 0.7
                     }}
+                    transition={{ duration: 0.3 }}
                     className="text-center"
                   >
                     <Icon className="w-8 h-8 mx-auto mb-2" />
                     <div className="text-2xl font-bold">{stat.value}</div>
                     <div className="text-xs opacity-80">{stat.label}</div>
-                  </divdiv>
+                  </motion.div>
                 );
               })}
             </div>
 
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
               >
                 <BarChart3 className="w-4 h-4" />
                 View Stories
                 <ArrowRight className="w-4 h-4" />
-              </divbutton>
+              </motion.button>
               
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
               >
                 <Award className="w-4 h-4" />
                 Join Success
-              </divbutton>
+              </motion.button>
             </div>
 
             {/* Close Button */}
-            <divbutton
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
             >
               <X className="w-5 h-5" />
-            </divbutton>
+            </motion.button>
           </div>
         </div>
 
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
-          <divdiv
+          <motion.div
             className="h-full bg-white"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 12ease: "linear" }}
           />
         </div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

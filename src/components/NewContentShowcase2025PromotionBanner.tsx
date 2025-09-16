@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -77,38 +78,53 @@ const NewContentShowcase2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
-            </divdiv>
+            </motion.div>
 
             {/* Main Heading */}
-            <divh2
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
               Discover Our Latest{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
                 Innovations
               </span>
-            </divh2>
+            </motion.h2>
 
             {/* Subheading */}
-            <divp
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
-            </divp>
+            </motion.p>
 
             {/* Rotating Feature */}
-            <divdiv
+            <motion.div
               key={currentFeature}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="mb-8"
             >
               <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
@@ -124,10 +140,13 @@ const NewContentShowcase2025PromotionBanner = () => {
                   </p>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
             {/* Stats */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
               {stats.map((statindex) => (
@@ -136,10 +155,13 @@ const NewContentShowcase2025PromotionBanner = () => {
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
-            </divdiv>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -157,11 +179,14 @@ const NewContentShowcase2025PromotionBanner = () => {
                 <PlayCircle className="w-5 h-5 mr-2" />
                 Watch Demo
               </a>
-            </divdiv>
-          </divdiv>
+            </motion.div>
+          </motion.div>
 
           {/* Right Content - Visual */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Main Visual Card */}
@@ -179,8 +204,11 @@ const NewContentShowcase2025PromotionBanner = () => {
               {/* Feature Cards */}
               <div className="space-y-4">
                 {features.map((featureindex) => (
-                  <divdiv
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                     className={`p-4 rounded-xl border transition-all duration-300 ${
                       index === currentFeature
                         ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50'
@@ -196,14 +224,16 @@ const NewContentShowcase2025PromotionBanner = () => {
                         <p className="text-gray-300 text-sm">{feature.description}</p>
                       </div>
                       {index === currentFeature && (
-                        <divdiv
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
                           className="ml-auto"
                         >
                           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        </divdiv>
+                        </motion.div>
                       )}
                     </div>
-                  </divdiv>
+                  </motion.div>
                 ))}
               </div>
 
@@ -214,25 +244,32 @@ const NewContentShowcase2025PromotionBanner = () => {
                   <span>100%</span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
-                  <divdiv
+                  <motion.div
                     className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 2delay: 1 }}
                   />
                 </div>
               </div>
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <motion.div
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
-            </divdiv>
-            <divdiv
+            </motion.div>
+            <motion.div
+              animate={{ y: [010] }}
+              transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />
-            </divdiv>
-          </divdiv>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

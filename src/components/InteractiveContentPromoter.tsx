@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentPromoter: React.FC = () => {
   const [activePromotion, setActivePromotion] = useState(0);
@@ -63,8 +64,12 @@ const InteractiveContentPromoter: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div>
-      <divdiv
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: -50, scale: 0.9 }}
+        transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
         className="fixed bottom-6 right-6 z-50 max-w-sm"
       >
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
@@ -125,8 +130,8 @@ const InteractiveContentPromoter: React.FC = () => {
             </div>
           </div>
         </div>
-      </divdiv>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

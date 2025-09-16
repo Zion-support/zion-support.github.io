@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import { 
   Brain, Building, Target, Cpu, Shield, 
   Check, Phone, Mail, MapPin,
@@ -86,7 +87,10 @@ const allServices = [
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -106,7 +110,7 @@ const allServices = [
                 Enterprise Ready
               </span>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
@@ -163,8 +167,11 @@ const allServices = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -256,19 +263,26 @@ const allServices = [
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
 
           {/* Services Display */}
+          <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
-              <divdiv 
+              <motion.div 
                 key="grid"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
-                  <divdiv
+                  <motion.div
                     key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                   >
                     {/* Service Header */}
@@ -395,11 +409,11 @@ const allServices = [
                         </div>
                       </div>
                     </div>
-                  </divdiv>
+                  </motion.div>
                 ))}
-              </divdiv>
+              </motion.div>
             )}
-          </div>
+          </AnimatePresence>
 
           {/* No Results */}
           {filteredServices.length === 0 && (
@@ -427,8 +441,10 @@ const allServices = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -438,10 +454,12 @@ const allServices = [
               <p className="text-gray-600">
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -451,10 +469,12 @@ const allServices = [
               <p className="text-gray-600">
                 Bank-grade security and compliance for mission-critical business applications
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -464,7 +484,7 @@ const allServices = [
               <p className="text-gray-600">
                 Cloud-native solutions that scale globally with enterprise-grade reliability
               </p>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>

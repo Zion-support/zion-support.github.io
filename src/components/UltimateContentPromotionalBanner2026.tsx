@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateContentPromotionalBanner2026: React.FC = () => {
   return (
@@ -6,25 +7,37 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-lg font-bold mb-8 animate-pulse"
           >
             🚀 ULTIMATE BREAKTHROUGH CONTENT • JANUARY 2026
-          </divdiv>
-          <divh2
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
           >
             🌟 Revolutionary Technology Breakthrough 2026
-          </divh2>
-          <divp
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-2xl opacity-90 max-w-5xl mx-auto mb-8"
           >
             Experience the most revolutionary technological advances that will reshape humanity's future forever. 
             Discover conscious AI, quantum reality manipulation, and breakthrough technologies beyond imagination.
-          </divp>
+          </motion.p>
         </div>
         
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -77,9 +90,12 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               Explore Breakthrough →
             </a>
           </div>
-        </divdiv>
+        </motion.div>
 
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
@@ -105,9 +121,12 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center mt-8"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -121,7 +140,7 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               🚀 Ultimate Breakthrough
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

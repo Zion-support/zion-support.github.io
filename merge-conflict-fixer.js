@@ -13,7 +13,6 @@ function resolveMergeConflicts() {try {console.log(`🔧 Processing: ${filePath}
     }
 }// Function to find all files with merge conflicts;
 function findConflictFiles() {const conflictFiles = [];
-    const searchDirs  = ['.'];function searchDirectory() {try {const items = fs.readdirSync(dir)for (const item of items) {const itemPath = path.join(dir, item)const stat  = fs.statSync(itemPath)if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {searchDirectory(itemPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {try {const content = fs.readFileSync(itemPath, 'utf8')if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {conflictFiles.push(itemPath)if (content.includes('                            conflictFiles.push(itemPath)}
                     } catch (error) {// Skip files that can't be read;
 #!/usr/bin/env node
 const fs = require('fs');

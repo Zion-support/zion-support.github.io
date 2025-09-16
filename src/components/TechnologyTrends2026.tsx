@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -247,7 +248,10 @@ const TechnologyTrends2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -295,13 +299,16 @@ const TechnologyTrends2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Featured Trends */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
@@ -312,8 +319,11 @@ const TechnologyTrends2026: React.FC = () => {
             {featuredTrends.map((trendindex) => {
               const CategoryIcon = getCategoryIcon(trend.category);
               return (
-                <divdiv
+                <motion.div
                   key={trend.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
                 >
@@ -368,14 +378,17 @@ const TechnologyTrends2026: React.FC = () => {
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-indigo-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Category Filter */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8">Browse by Category</h2>
@@ -401,17 +414,23 @@ const TechnologyTrends2026: React.FC = () => {
               );
             })}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Trends Grid */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredTrends.map((trendindex) => {
               const CategoryIcon = getCategoryIcon(trend.category);
               return (
-                <divdiv
+                <motion.div
                   key={trend.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.05 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
                 >
@@ -461,21 +480,27 @@ const TechnologyTrends2026: React.FC = () => {
                       <ChevronRight className="h-4 w-4 group-hover:text-indigo-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
           </div>
-        </divdiv>
+        </motion.div>
       </div>
 
       {/* Trend Detail Modal */}
-      <div>
+      <AnimatePresence>
         {selectedTrend && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedTrend(null)}
           >
-            <divdiv
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -605,10 +630,10 @@ const TechnologyTrends2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </motion.div>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </div>
   );
 };

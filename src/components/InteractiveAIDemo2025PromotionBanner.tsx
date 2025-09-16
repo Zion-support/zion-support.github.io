@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Bot
   MessageCircle
@@ -70,8 +71,11 @@ const InteractiveAIDemo2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    <div>
-      <divdiv
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-blue-900 via-slate-900 to-purple-900 border-b border-blue-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -84,8 +88,9 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <motion.div
                 className="flex items-center gap-3"
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -104,14 +109,18 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     Chat with the Future of AI Technology
                   </p>
                 </div>
-              </divdiv>
+              </motion.div>
 
               {/* Rotating Demo Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                  <AnimatePresence mode="wait">
+                    <motion.div
                       key={currentDemo}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       className="flex items-center gap-2"
                     >
                       <div className={`w-8 h-8 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
@@ -125,8 +134,8 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                           {demos[currentDemo].description}
                         </div>
                       </div>
-                    </divdiv>
-                  </div>
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
               </div>
             </div>
@@ -152,27 +161,33 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
-                <divbutton
+                <motion.button
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm font-medium">Chat Now</span>
-                </divbutton>
+                </motion.button>
 
-                <divbutton
+                <motion.button
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-blue-500/25"
+                  whileHover={{ scale: 1.05y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <Play className="w-4 h-4" />
                   <span>Try Demo</span>
                   <ChevronRight className="w-4 h-4" />
-                </divbutton>
+                </motion.button>
 
-                <divbutton
+                <motion.button
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
                   <X className="w-5 h-5 text-gray-400 hover:text-white" />
-                </divbutton>
+                </motion.button>
               </div>
             </div>
           </div>
@@ -180,8 +195,12 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           {/* Mobile Demo Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+              <AnimatePresence mode="wait">
+                <motion.div
                   key={currentDemo}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <div className={`w-6 h-6 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
@@ -195,19 +214,22 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                       {demos[currentDemo].description}
                     </div>
                   </div>
-                </divdiv>
-              </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <divdiv
+        <motion.div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
-    </div>
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 4repeat: Infinityease: "linear" }}
+        ></motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

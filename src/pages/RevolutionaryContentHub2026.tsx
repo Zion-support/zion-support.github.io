@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -273,17 +274,19 @@ const RevolutionaryContentHub2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
-            <divdiv
+            <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
+              animate={{
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
               }}
+              transition={{
                 duration: 5 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -319,15 +322,21 @@ const RevolutionaryContentHub2026: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="mb-8">
-            <divdiv
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: isVisible ? 1 : 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300">Revolutionary Content Hub</span>
-            </divdiv>
+            </motion.div>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -340,40 +349,49 @@ const RevolutionaryContentHub2026: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <divbutton
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
               <span>Explore Content</span>
-            </divbutton>
-            <divbutton
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
             >
               View Categories
-            </divbutton>
+            </motion.button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-indigo-400/20"
               >
                 <stat.icon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
       </section>
 
       {/* Featured Content Section */}
       <section id="featured" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -383,13 +401,15 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Our most popular and revolutionary content pieces that are shaping the future of technology
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredContent.map((content, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
               >
@@ -433,7 +453,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -442,8 +462,10 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* Categories Section */}
       <section id="categories" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -453,13 +475,15 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore our comprehensive content organized by categories and topics
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contentCategories.map((category, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
               >
@@ -480,7 +504,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                   <span>Explore Category</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -489,8 +513,10 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* Latest Content Section */}
       <section id="latest" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -500,13 +526,15 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Stay updated with our latest revolutionary content and insights
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {latestContent.map((content, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
               >
@@ -535,7 +563,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -544,8 +572,10 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* CTA Section */}
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -556,18 +586,22 @@ const RevolutionaryContentHub2026: React.FC = () => {
               Experience the future of technology today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               >
                 Browse All Content
-              </divbutton>
-              <divbutton
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Subscribe to Updates
-              </divbutton>
+              </motion.button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
 const UltimateContentCarousel2025 = () => {
@@ -77,20 +78,29 @@ const UltimateContentCarousel2025 = () => {
   };
 
   return (
-    <divsection
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
       className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divdiv
+          <motion.div
+            initial={{ scale: 0.9 }}
+            animate={isVisible ? { scale: 1 } : {}}
+            transition={{ delay: 0.2duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
             Ultimate Content Carousel 2025
-          </divdiv>
+          </motion.div>
           
-          <divh2
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.3duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
           >
             Revolutionary Technology
@@ -98,21 +108,29 @@ const UltimateContentCarousel2025 = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               Showcase
             </span>
-          </divh2>
+          </motion.h2>
           
-          <divp
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4duration: 0.6 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Discover the most advanced AI and technology solutions that are reshaping 
             industries and transforming businesses worldwide.
-          </divp>
+          </motion.p>
         </div>
 
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl shadow-2xl">
-              <divdiv
+            <AnimatePresence mode="wait">
+              <motion.div
                 key={currentSlide}
+                initial={{ opacity: 0x: 300 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -300 }}
+                transition={{ duration: 0.5 }}
                 className="relative h-[600px] md:h-[700px]"
               >
                 {/* Background Image */}
@@ -126,31 +144,43 @@ const UltimateContentCarousel2025 = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="max-w-4xl px-8 md:px-12 text-white">
-                    <divdiv
+                    <motion.div
                       key={`badge-${currentSlide}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2duration: 0.5 }}
                       className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-lg text-sm font-medium mb-6"
                     >
                       <TrendingUp className="w-4 h-4 mr-2" />
                       {slides[currentSlide].subtitle}
-                    </divdiv>
+                    </motion.div>
 
-                    <divh3
+                    <motion.h3
                       key={`title-${currentSlide}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3duration: 0.5 }}
                       className="text-4xl md:text-6xl font-bold mb-6"
                     >
                       {slides[currentSlide].title}
-                    </divh3>
+                    </motion.h3>
 
-                    <divp
+                    <motion.p
                       key={`desc-${currentSlide}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4duration: 0.5 }}
                       className="text-xl text-gray-200 mb-8 max-w-2xl"
                     >
                       {slides[currentSlide].description}
-                    </divp>
+                    </motion.p>
 
                     {/* Features */}
-                    <divdiv
+                    <motion.div
                       key={`features-${currentSlide}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5duration: 0.5 }}
                       className="flex flex-wrap gap-4 mb-8"
                     >
                       {slides[currentSlide].features.map((featureindex) => (
@@ -161,11 +191,14 @@ const UltimateContentCarousel2025 = () => {
                           {feature}
                         </span>
                       ))}
-                    </divdiv>
+                    </motion.div>
 
                     {/* Stats and CTA */}
-                    <divdiv
+                    <motion.div
                       key={`cta-${currentSlide}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6duration: 0.5 }}
                       className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
                     >
                       <div className="flex items-center">
@@ -184,11 +217,11 @@ const UltimateContentCarousel2025 = () => {
                         {slides[currentSlide].cta}
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
-                    </divdiv>
+                    </motion.div>
                   </div>
                 </div>
-              </divdiv>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           {/* Navigation Arrows */}
@@ -223,7 +256,10 @@ const UltimateContentCarousel2025 = () => {
         </div>
 
         {/* Additional Info */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.8duration: 0.6 }}
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -240,9 +276,9 @@ const UltimateContentCarousel2025 = () => {
               <span>Free Resources & Guides</span>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
-    </divsection>
+    </motion.section>
   );
 };
 

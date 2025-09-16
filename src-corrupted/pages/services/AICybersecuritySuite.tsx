@@ -166,7 +166,6 @@
       features['Automated containment',Forensic analysis',Recovery procedures',Post-incident review']};
   ]};
   ] { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
-=======
     { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },'
     { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },'
     { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },'

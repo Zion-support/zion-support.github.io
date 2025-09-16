@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -238,7 +239,9 @@ export default function ComprehensiveServiceShowcase2025() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -267,10 +270,13 @@ export default function ComprehensiveServiceShowcase2025() {
               <div className="text-sm text-gray-400">Success Rate</div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Filters and Search */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
           className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10"
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
@@ -331,19 +337,25 @@ export default function ComprehensiveServiceShowcase2025() {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Services Grid/List */}
-        <divdiv
+        <motion.div
+          layout
           className={viewMode === 'grid' 
             ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
             : 'space-y-4'
           }
         >
-          <div>
+          <AnimatePresence>
             {filteredServices.map((serviceindex) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group cursor-pointer ${
                   viewMode === 'grid' 
                     ? 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105'
@@ -456,20 +468,26 @@ export default function ComprehensiveServiceShowcase2025() {
                     </div>
                   </div>
                 )}
-              </divdiv>
+              </motion.div>
             ))}
-          </div>
-        </divdiv>
+          </AnimatePresence>
+        </motion.div>
       </div>
 
       {/* Service Detail Modal */}
-      <div>
+      <AnimatePresence>
         {selectedService && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
-            <divdiv
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
               onClick={(e) => e.stopPropagation()}
             >
@@ -595,10 +613,10 @@ export default function ComprehensiveServiceShowcase2025() {
                   </div>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </motion.div>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </div>
   );
 }

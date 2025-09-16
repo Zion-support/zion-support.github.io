@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
   const metrics = [
@@ -76,7 +77,10 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -89,15 +93,21 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             Real-time insights and analytics for AI systems, quantum computing, neural interfaces, 
             and advanced technologies. Monitor performance, track trends, and optimize operations.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Key Metrics */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {metrics.map((metric, index) => (
-            <divdiv
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
             >
               <div className="flex items-center justify-between mb-4">
@@ -110,12 +120,15 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               </div>
               <div className="text-3xl font-bold mb-2">{metric.value}</div>
               <div className="text-blue-200 text-sm">{metric.title}</div>
-            </divdiv>
+            </motion.div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Performance Charts */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
           {/* AI Performance Chart */}
@@ -167,10 +180,13 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* System Status and Activities */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
           {/* System Status */}
@@ -226,10 +242,13 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Advanced Analytics Features */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Analytics Features</h2>
@@ -250,10 +269,13 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               <p className="text-blue-200">Get predictive insights and recommendations for system optimization and improvement.</p>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Access Advanced Analytics</h2>
@@ -275,7 +297,7 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               View All Insights
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

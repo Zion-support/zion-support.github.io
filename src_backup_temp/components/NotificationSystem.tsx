@@ -4,7 +4,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page(props: any) {;
 > {;
   maxNotifications?: number;
-=======
 ;
 export default function Page("props": "any) {;
 > {;
@@ -32,7 +31,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({;
   maxNotifications = 5,;
   position = 'top-right',;
-=======
 enableSound: tru e,;
   enableVibration = true,;
   autoDismiss = true,;
@@ -42,7 +40,6 @@ enableSound: tru e,;
 // Initialize audio for notification sounds;
 default:';
 // Initialize audio for notification sounds      default:';
-=======
 ;
 // Initialize audio for notification sounds;
 "default":';
@@ -81,7 +78,6 @@ return 'top-4 right-4'}
       <div className = {`fixed ${getPositionClasses()} z-50`}>;
               animate={{ scale: 1 }}";
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
-=======
               initial={{ "scale": "0 "}}
               animate={{ "scale": "1 "}}";
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
@@ -102,7 +98,6 @@ return 'top-4 right-4'}
             </motion.div>) }
         </button>
         {/* Settings button */}
-=======
 ";
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings;
 ";
@@ -345,7 +340,6 @@ return 'top-4 right-4'}
   `p-4 rounded-xl ${getNotificationStyles(notification.type,;
   notification.priority);
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;
-=======
   notification.priority)
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
                       }`}
@@ -387,7 +381,6 @@ return 'top-4 right-4'}
 `;
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;
                           }`}>;
-=======
                             {notification.message}
                           </p>
 "
@@ -428,7 +421,6 @@ export
       (window as any).addNotification(notification)}
   }, []) ;
   return { addNotification }};
-=======
 ;
 // Utility functions for common notification types;
 export;
@@ -497,7 +489,6 @@ export;
 </NotificationSettings>;
 </Notification>;
 </NotificationSystemProps>;
-=======
 
 // Utility functions for common notification types
 export 

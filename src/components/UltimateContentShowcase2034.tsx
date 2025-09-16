@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateContentShowcase2034: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -34,8 +35,10 @@ const UltimateContentShowcase2034: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center space-x-4 mb-6">
@@ -48,11 +51,13 @@ const UltimateContentShowcase2034: React.FC = () => {
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
             Experience the most revolutionary technology content ever created - featuring technologies that transcend reality itself
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Tab Navigation */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center mb-12"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
@@ -70,11 +75,14 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Content Display */}
-        <divdiv
+        <motion.div
           key={activeTab}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
           {/* Left Side - Content Info */}
@@ -139,13 +147,16 @@ const UltimateContentShowcase2034: React.FC = () => {
 
                 <div className="space-y-4">
                   {contentPages[activeTab].features.map((feature, index) => (
-                    <divdiv
+                    <motion.div
                       key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
                       className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                     >
                       <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                       <span className="font-semibold">{feature}</span>
-                    </divdiv>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -157,11 +168,13 @@ const UltimateContentShowcase2034: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/20 to-pink-500/20 rounded-3xl p-8 border border-cyan-500/30">
@@ -180,7 +193,7 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

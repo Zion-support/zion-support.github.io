@@ -65,7 +65,6 @@ const NewsPage: React.FC = () => {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-=======
 import React, { useState } from 'react';
                 }`}
               >
@@ -147,7 +146,6 @@ import React, { useState } from 'react';
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -317,7 +315,6 @@ import React, { useState } from 'react';
               <p className="text-xl text-gray-300 mb-8">
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
-=======
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -332,7 +329,6 @@ import React, { useState } from 'react';
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-=======
                 </a>
               </div>
             </motion.div>
@@ -374,11 +370,9 @@ import React, { useState } from 'react';
         </div>
       </section>
     </div>
-=======
     </UltraAdvancedFuturisticBackground>
   );
 }
-=======
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

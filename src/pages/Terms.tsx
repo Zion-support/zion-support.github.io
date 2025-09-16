@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import {
   FileText,
   Shield,
@@ -38,7 +39,10 @@ const Terms: React.FC = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
@@ -52,15 +56,17 @@ const Terms: React.FC = () => {
               These terms govern your use of our services. Please read them carefully
               before using our technology solutions.
             </p>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Key Terms Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -70,13 +76,15 @@ const Terms: React.FC = () => {
               Understanding these fundamental terms helps ensure a smooth
               relationship between you and Zion Tech Group.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -84,7 +92,7 @@ const Terms: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
                 <p className="text-gray-300">{section.description}</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -93,8 +101,10 @@ const Terms: React.FC = () => {
       {/* User Obligations */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -104,18 +114,20 @@ const Terms: React.FC = () => {
               As a user of our services, you have certain responsibilities
               that help ensure a secure and productive environment.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userObligations.map((obligation, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -125,8 +137,10 @@ const Terms: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -146,10 +160,12 @@ const Terms: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -173,7 +189,7 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -181,8 +197,10 @@ const Terms: React.FC = () => {
       {/* Service Levels */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -192,14 +210,16 @@ const Terms: React.FC = () => {
               We provide different levels of support to meet your business needs
               and ensure optimal service delivery.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceLevels.map((level, index) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
                     level.included ? 'border-blue-400/50' : 'border-slate-700/50'
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
@@ -217,7 +237,7 @@ const Terms: React.FC = () => {
                     <span className="text-sm text-gray-400">Response Time:</span>
                     <div className="text-lg font-semibold text-white">{level.response}</div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -228,8 +248,10 @@ const Terms: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Intellectual Property Rights
@@ -247,10 +269,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -291,10 +315,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -332,10 +358,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -366,10 +394,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -401,10 +431,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -435,10 +467,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -469,10 +503,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -497,10 +533,12 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
@@ -525,7 +563,7 @@ const Terms: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -533,8 +571,10 @@ const Terms: React.FC = () => {
       {/* Limitation of Liability */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -544,7 +584,7 @@ const Terms: React.FC = () => {
               We strive to provide reliable services, but it's important to understand
               the scope of our liability and your responsibilities.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
@@ -592,8 +632,10 @@ const Terms: React.FC = () => {
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -603,7 +645,7 @@ const Terms: React.FC = () => {
               Understanding the terms for ending our service relationship
               helps ensure a smooth transition for all parties.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -649,8 +691,10 @@ const Terms: React.FC = () => {
       {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -660,7 +704,7 @@ const Terms: React.FC = () => {
               If you have questions about these terms or need clarification,
               please contact our legal team.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -687,8 +731,10 @@ const Terms: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -711,7 +757,7 @@ const Terms: React.FC = () => {
                 Privacy Policy
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </div>

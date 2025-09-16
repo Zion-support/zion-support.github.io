@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const TranscendentAI2026: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -269,7 +270,10 @@ const TranscendentAI2026: React.FC = () => {
 
               </div>
         {/* Revolutionary Applications */}
-        <divsection
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-16"
         >
           <div className="text-center mb-12">
@@ -632,10 +636,13 @@ const TranscendentAI2026: React.FC = () => {
               Explore the revolutionary capabilities that define transcendent AI
             </p>
           </div>
-        </divsection>
+        </motion.section>
 
         {/* Future Vision */}
-        <divsection
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
@@ -667,11 +674,14 @@ const TranscendentAI2026: React.FC = () => {
               <p className="text-gray-200 text-sm">AI that expands consciousness across the universe</p>
             </div>
           </div>
-        </divsection>
+        </motion.section>
 
         {/* Call to Action */}
-        <divsection
+        <motion.section
           id="contact"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-16"
         >
           <h2 className="text-5xl font-bold mb-8">Ready to Transcend Reality?</h2>
@@ -686,7 +696,7 @@ const TranscendentAI2026: React.FC = () => {
               Learn More
             </a>
           </div>
-        </divsection>
+        </motion.section>
       </div>
     </div>
   );

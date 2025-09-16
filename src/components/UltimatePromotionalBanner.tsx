@@ -1,10 +1,14 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 
 export default function UltimatePromotionalBanner() {
   return (
-    <divsection
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
       className="py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden"
     >
       {/* Animated background elements */}
@@ -17,32 +21,44 @@ export default function UltimatePromotionalBanner() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
-          <divdiv
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
             <span className="text-sm font-semibold">LIMITED TIME OFFER - ENDS SOON</span>
-          </divdiv>
+          </motion.div>
 
           {/* Main heading */}
-          <divh2
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
             className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
           >
             🚀 Transform Your Business with AI Automation
             <br />
             <span className="text-yellow-300">Get 50% Off Your First 3 Months!</span>
-          </divh2>
+          </motion.h2>
 
           {/* Subheading */}
-          <divp
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Join 10,000+ businesses already saving 60% on costs and increasing productivity by 300%. 
             'Don', 't miss this exclusive offer - limited time only!
-          </divp>
+          </motion.p>
 
           {/* Benefits Grid */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
             <div className="text-center">
@@ -61,10 +77,13 @@ export default function UltimatePromotionalBanner() {
               <div className="text-3xl md:text-4xl font-bold text-pink-300 mb-2">24/7</div>
               <div className="text-sm text-blue-100">Support</div>
             </div>
-          </divdiv>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             <a
@@ -83,10 +102,13 @@ export default function UltimatePromotionalBanner() {
               <TrendingUp className="w-5 h-5 mr-2" />
               Learn More
             </a>
-          </divdiv>
+          </motion.div>
 
           {/* Trust indicators */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
             className="flex flex-wrap justify-center items-center gap-8 text-sm text-blue-100"
           >
             <div className="flex items-center">
@@ -105,10 +127,13 @@ export default function UltimatePromotionalBanner() {
               <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
               Cancel Anytime
             </div>
-          </divdiv>
+          </motion.div>
 
           {/* Countdown Timer */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4 }}
             className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto"
           >
             <div className="text-center">
@@ -128,9 +153,9 @@ export default function UltimatePromotionalBanner() {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
-    </divsection>
+    </motion.section>
   );
 }

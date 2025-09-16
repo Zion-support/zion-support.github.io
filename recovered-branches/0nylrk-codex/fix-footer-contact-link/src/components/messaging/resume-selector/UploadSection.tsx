@@ -19,7 +19,6 @@
 
 
 
-=======
       
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
@@ -31,7 +30,6 @@
 
 
 
-=======
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>

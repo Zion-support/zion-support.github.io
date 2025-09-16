@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp, Users,
@@ -96,21 +97,30 @@ export default function ComprehensiveServicesShowcase2025V2() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <divh1 
+          <motion.h1 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             2025 V2 Comprehensive
             <br />
             Services Showcase
-          </divh1>
-          <divp 
+          </motion.h1>
+          <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
-          </divp>
-          <divdiv 
+          </motion.p>
+          <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a 
               href="#services" 
@@ -124,24 +134,28 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Get Started
             </a>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
-          <divh2 
+          <motion.h2 
             className="text-3xl md:text-4xl font-bold text-white mb-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             Ready to Transform Your Business?
-          </divh2>
-          <divdiv 
+          </motion.h2>
+          <motion.div 
             className="grid md:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -158,27 +172,32 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Services by Category */}
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <divh2 
+          <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             Our Comprehensive Service Portfolio
-          </divh2>
+          </motion.h2>
           
-          <divdiv 
+          <motion.div 
             className="space-y-20"
+            variants={staggerContainer}
+            initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
             {serviceCategories.map((category) => (
+              <motion.div key={category.id} variants={fadeInUp}>
                 <div className="text-center mb-12">
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
                     {category.icon}
@@ -193,9 +212,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
-                    <divdiv
+                    <motion.div
                       key={service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      whileHover={{ y: -5 }}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
                         {service.title}
@@ -233,30 +253,34 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
-                    </divdiv>
+                    </motion.div>
                   ))}
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
-          <divh2 
+          <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             Market Impact & Growth
-          </divh2>
+          </motion.h2>
           
-          <divdiv 
+          <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
@@ -274,31 +298,37 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
               <div className="text-white text-lg">Service Categories</div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <divh2 
+          <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             Ready to Lead the Future?
-          </divh2>
-          <divp 
+          </motion.h2>
+          <motion.p 
             className="text-xl text-gray-300 mb-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
-          </divp>
-          <divdiv 
+          </motion.p>
+          <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             <a 
               href={`mailto:${contactInfo.email}`}
@@ -312,7 +342,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Visit Website
             </a>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </div>

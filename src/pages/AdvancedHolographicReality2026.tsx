@@ -1,213 +1,205 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedHolographicReality2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Advanced Holographic Reality 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Experience the future of immersive technology with our revolutionary holographic reality solutions that blur the line between digital and physical worlds.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Holographic Solutions
+              </button>
+              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 HOLOGRAPHIC REALITY 2026 • IMMERSIVE TECHNOLOGY
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Advanced Holographic Reality 2026
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
-            Step into the future with revolutionary holographic technology that blurs the line between digital and physical reality
-          </p>
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Holographic Features</h2>
+          <p className="text-xl opacity-80">Experience technology that was once considered science fiction</p>
         </div>
-
-        {/* Key Features */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white shadow-2xl">
-            <div className="text-6xl mb-6 text-center">👁️</div>
-            <h2 className="text-3xl font-bold mb-4 text-center">True 3D Holograms</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Experience photorealistic holographic projections that exist in real 3D space without the need for special glasses or headsets.
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">👁️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">True 3D Holograms</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Project realistic 3D holograms that can be viewed from any angle without special glasses
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">360° viewing angles</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Tactile feedback integration</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Real-time interaction</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl">
-            <div className="text-6xl mb-6 text-center">🏢</div>
-            <h2 className="text-3xl font-bold mb-4 text-center">Holographic Workspaces</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Transform any space into an immersive holographic environment for collaboration, design, and entertainment.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Virtual meeting rooms</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">3D data visualization</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Gesture-based controls</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl">
-            <div className="text-6xl mb-6 text-center">🎭</div>
-            <h2 className="text-3xl font-bold mb-4 text-center">Holographic Entertainment</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Revolutionary entertainment experiences with holographic characters, environments, and interactive storytelling.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Immersive gaming</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Virtual concerts</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span className="text-sm">Interactive movies</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technology Deep Dive */}
-        <div className="bg-white rounded-3xl p-12 shadow-2xl mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-            Revolutionary Holographic Technology
-          </h2>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• 360-degree viewing angles</li>
+              <li>• Real-time rendering</li>
+              <li>• Haptic feedback integration</li>
+            </ul>
+          </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Mixed Reality Integration</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Seamlessly blend holographic content with the real world for unprecedented experiences
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Real-world object recognition</li>
+              <li>• Spatial mapping</li>
+              <li>• Contextual overlays</li>
+            </ul>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Control holographic content directly with your thoughts using advanced neural interfaces
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Thought-based control</li>
+              <li>• Emotion recognition</li>
+              <li>• Predictive interaction</li>
+            </ul>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Applications Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Applications</h2>
+          <p className="text-xl opacity-80">Transform industries with holographic technology</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🏥</div>
+            <h3 className="text-xl font-semibold mb-2">Medical Visualization</h3>
+            <p className="text-sm opacity-80">3D holographic models for surgical planning and medical education</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🎓</div>
+            <h3 className="text-xl font-semibold mb-2">Education</h3>
+            <p className="text-sm opacity-80">Immersive learning experiences with interactive 3D content</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🏢</div>
+            <h3 className="text-xl font-semibold mb-2">Architecture</h3>
+            <p className="text-sm opacity-80">Walk through building designs before construction begins</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🎮</div>
+            <h3 className="text-xl font-semibold mb-2">Entertainment</h3>
+            <p className="text-sm opacity-80">Next-generation gaming and entertainment experiences</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Specifications */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Technical Specifications</h2>
+            <p className="text-xl opacity-80">Cutting-edge technology powering the future</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-purple-600">Advanced Light Field Technology</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Our proprietary light field technology creates true 3D holographic projections by precisely controlling light particles in space. This breakthrough eliminates the need for screens or special viewing equipment.
-              </p>
+              <h3 className="text-2xl font-semibold mb-4">Display Technology</h3>
               <ul className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <span className="text-purple-600 font-bold">•</span>
-                  <span className="text-gray-700">Quantum light manipulation for perfect 3D rendering</span>
+                <li className="flex justify-between">
+                  <span>Resolution:</span>
+                  <span className="font-semibold">8K per eye</span>
                 </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-purple-600 font-bold">•</span>
-                  <span className="text-gray-700">Real-time depth mapping and occlusion</span>
+                <li className="flex justify-between">
+                  <span>Refresh Rate:</span>
+                  <span className="font-semibold">120Hz</span>
                 </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-purple-600 font-bold">•</span>
-                  <span className="text-gray-700">Ultra-high resolution holographic displays</span>
+                <li className="flex justify-between">
+                  <span>Field of View:</span>
+                  <span className="font-semibold">180°</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Latency:</span>
+                  <span className="font-semibold">&lt;5ms</span>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-cyan-600">Spatial Computing Integration</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Seamlessly integrate holographic content with physical environments using advanced spatial computing and AI-powered environment understanding.
-              </p>
+              <h3 className="text-2xl font-semibold mb-4">Neural Interface</h3>
               <ul className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <span className="text-cyan-600 font-bold">•</span>
-                  <span className="text-gray-700">AI-powered spatial mapping</span>
+                <li className="flex justify-between">
+                  <span>Channels:</span>
+                  <span className="font-semibold">1024</span>
                 </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-cyan-600 font-bold">•</span>
-                  <span className="text-gray-700">Real-time object occlusion</span>
+                <li className="flex justify-between">
+                  <span>Sampling Rate:</span>
+                  <span className="font-semibold">10kHz</span>
                 </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-cyan-600 font-bold">•</span>
-                  <span className="text-gray-700">Gesture and voice recognition</span>
+                <li className="flex justify-between">
+                  <span>Accuracy:</span>
+                  <span className="font-semibold">99.7%</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Response Time:</span>
+                  <span className="font-semibold">&lt;10ms</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Applications Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-            Revolutionary Applications
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold mb-3">Medical Visualization</h3>
-              <p className="text-sm opacity-90">
-                Holographic 3D models for surgical planning, medical training, and patient education with unprecedented detail and interactivity.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🎓</div>
-              <h3 className="text-xl font-bold mb-3">Education & Training</h3>
-              <p className="text-sm opacity-90">
-                Immersive learning experiences with holographic historical recreations, scientific simulations, and hands-on training modules.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold mb-3">Industrial Design</h3>
-              <p className="text-sm opacity-90">
-                Collaborative design environments where teams can interact with 3D models in real-time, making design iterations faster and more intuitive.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🛍️</div>
-              <h3 className="text-xl font-bold mb-3">Retail & E-commerce</h3>
-              <p className="text-sm opacity-90">
-                Virtual showrooms and product demonstrations that allow customers to interact with products before purchase in their own space.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-xl font-bold mb-3">Architecture & Real Estate</h3>
-              <p className="text-sm opacity-90">
-                Walk through holographic building models, explore virtual properties, and visualize architectural designs in full scale.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl p-6 text-white">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-3">Art & Creative Expression</h3>
-              <p className="text-sm opacity-90">
-                Create and display holographic art installations, interactive sculptures, and immersive artistic experiences that defy physical limitations.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-6">
-            Experience the Future of Holographic Reality
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join the holographic revolution and transform how you work, learn, and interact with digital content.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
+          <p className="text-xl opacity-80 mb-8">Join the holographic revolution and transform your business</p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
-              Learn More
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
+              Download Brochure
             </button>
           </div>
         </div>

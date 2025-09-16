@@ -58,7 +58,6 @@ export default function GithubPulsePage() {
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
           <Metric label="Forks" value={repo.forks} />
@@ -97,14 +96,10 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

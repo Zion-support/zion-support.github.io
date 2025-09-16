@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -216,9 +217,12 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${showFilters ? 'rotate-180' : ''}`} />
               </button>
 
-              <div>
+              <AnimatePresence>
                 {showFilters && (
-                  <divdiv
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"
                   >
                     <div className="p-2">
@@ -243,9 +247,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         </button>
                       ))}
                     </div>
-                  </divdiv>
+                  </motion.div>
                 )}
-              </div>
+              </AnimatePresence>
             </div>
 
             {/* Sort Options */}
@@ -270,12 +274,16 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div>
+          <AnimatePresence>
             {filteredContent.map((itemindex) => {
               const TypeIcon = getContentTypeIcon(item.type);
               return (
-                <divdiv
+                <motion.div
                   key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 ${
                     item.featured ? 'ring-2 ring-blue-500/30' : ''
                   }`}
@@ -354,10 +362,10 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                     </a>
                   </div>
-                </divdiv>
+                </motion.div>
               );
             })}
-          </div>
+          </AnimatePresence>
         </div>
 
         {/* Load More */}

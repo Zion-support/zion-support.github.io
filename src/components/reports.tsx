@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   FileText, 
   Download, 
@@ -126,15 +127,21 @@ const ReportsPage: React.FC = () => {
               className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
             >
               Research Reports
-            </divh1>
-            <divp 
+            </motion.h1>
+            <motion.p 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
-            </divp>
+            </motion.p>
             
-            <divdiv
+            <motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <span className="flex items-center space-x-2">
                 <FileText className="w-5 h-5" />
@@ -148,28 +155,32 @@ const ReportsPage: React.FC = () => {
                 <Eye className="w-5 h-5" />
                 <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
               </span>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Report
               </h2>
-            </divdiv>
+            </motion.div>
 
             {reports.filter(report => report.featured).map((report, index) => (
-              <divdiv
+              <motion.div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
@@ -228,7 +239,7 @@ const ReportsPage: React.FC = () => {
                     <span>Preview Report</span>
                   </button>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -236,9 +247,11 @@ const ReportsPage: React.FC = () => {
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -247,12 +260,14 @@ const ReportsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive research across different technology domains
               </p>
-            </divdiv>
+            </motion.div>
 
             {/* Category Pills */}
-            <divdiv 
+            <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
               {categories.map((category, index) => (
@@ -267,15 +282,17 @@ const ReportsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
-            </divdiv>
+            </motion.div>
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
-                <divarticle
+                <motion.article
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
@@ -316,7 +333,7 @@ const ReportsPage: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-                </divarticle>
+                </motion.article>
               ))}
             </div>
           </div>
@@ -325,9 +342,11 @@ const ReportsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <motion.div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -351,7 +370,7 @@ const ReportsPage: React.FC = () => {
                   View Research Services
                 </a>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
       </div>

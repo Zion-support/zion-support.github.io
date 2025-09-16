@@ -44,7 +44,6 @@ import InteractiveTechDemo2026 from './src/components/InteractiveTechDemo2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenAIConsciousness2026 from './src/pages/NextGenAIConsciousness2026';
 import QuantumReality2026 from './src/pages/QuantumReality2026';
-=======
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
@@ -97,7 +96,6 @@ export default function App(): JSX.Element {
           <ScrollToTop />
           <Header />
         
-=======
 import './src/index.css';
 
 // Import only the pages that exist
@@ -160,7 +158,6 @@ export default function App(): JSX.Element {
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
                     🚀 NEW: Innovation 2025 Showcase
-=======
                 {/* Ultimate Content Showcase 2028 */}
                 <div className="mb-12">
                   <UltimateContentShowcase2028 />
@@ -307,7 +304,6 @@ export default function App(): JSX.Element {
                   </div>
                 </section>
 
-=======
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -322,7 +318,6 @@ export default function App(): JSX.Element {
                   
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                       Explore Blockchain →
-=======
                     <div className="text-4xl mb-4">⚡</div>
                     <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
                     <p className="text-gray-600 mb-4">
@@ -471,7 +466,6 @@ export default function App(): JSX.Element {
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
-=======
           
           {/* Routes for all the new pages */}
           <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />

@@ -112,7 +112,6 @@ const ITServicesPage: React.FC = () => {
       duration: "8-16 weeks",
       expertise: "Senior Cloud Architects",
       technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -159,7 +158,6 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "IT Operations Specialists",
       technologies: ["Monitoring Tools", "Automation", "Cloud Platforms", "Security Tools"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -206,7 +204,6 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "Network Engineers",
       technologies: ["Cisco", "Juniper", "Aruba", "SD-WAN", "WiFi 6", "5G"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -257,7 +254,6 @@ const ITServicesPage: React.FC = () => {
       duration: "2-4 weeks",
       expertise: "Security Analysts",
       technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -304,7 +300,6 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "Security Engineers",
       technologies: ["SIEM", "EDR", "SOAR", "Threat Intel", "Analytics"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -355,7 +350,6 @@ const ITServicesPage: React.FC = () => {
       duration: "12-24 weeks",
       expertise: "AI Specialists",
       technologies: ["TensorFlow", "PyTorch", "Azure ML", "AWS SageMaker", "Python"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -435,7 +429,6 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "DevOps Engineers",
       technologies: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -580,7 +573,6 @@ const ITServicesPage: React.FC = () => {
       duration: "16-32 weeks",
       expertise: "Digital Transformation Consultants",
       technologies: ["Cloud", "AI/ML", "IoT", "Automation", "Analytics"],
-=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -651,14 +643,11 @@ const ITServicesPage: React.FC = () => {
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
 export default ITServicesPage;
-=======
 import React from 'react';
-=======
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
-=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -1258,7 +1247,6 @@ export default function ITServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
               <Settings className="h-5 w-5 mr-2" />
               Get IT Consultation
-=======
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Comprehensive IT services to modernize your infrastructure, enhance security, 
             and drive business growth through technology innovation.
@@ -1291,7 +1279,6 @@ export default function ITServicesPage() {
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
-=======
         </div>
       </div>
 
@@ -1312,7 +1299,6 @@ export default function ITServicesPage() {
               >
                 {category}
               </Button>
-=======
       {/* Service Benefits */}
       <div className="py-16 bg-zion-slate/50">
         <div className="container mx-auto px-4">
@@ -1414,7 +1400,6 @@ export default function ITServicesPage() {
                 </CardContent>
               </Card>
             ))}
-=======
                 </div>
               </div>
               
@@ -1886,11 +1871,8 @@ export default function ITServicesPage() {
     </>
   );
 }
-=======
 }
-=======
 }
-=======
 };
 
 export default ITServicesPage;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
@@ -105,7 +106,9 @@ const EnhancedContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <divdiv
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -193,12 +196,14 @@ const EnhancedContactForm: React.FC = () => {
                   placeholder="Enter your full name"
                 />
                 {errors.name && (
-                  <divp
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
                     {errors.name}
-                  </divp>
+                  </motion.p>
                 )}
               </div>
 
@@ -221,12 +226,14 @@ const EnhancedContactForm: React.FC = () => {
                   placeholder="Enter your email address"
                 />
                 {errors.email && (
-                  <divp
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
                     {errors.email}
-                  </divp>
+                  </motion.p>
                 )}
               </div>
             </div>
@@ -287,12 +294,14 @@ const EnhancedContactForm: React.FC = () => {
                 placeholder="Tell us about your project and requirements..."
               />
               {errors.message && (
-                <divp
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />
                   {errors.message}
-                </divp>
+                </motion.p>
               )}
             </div>
 

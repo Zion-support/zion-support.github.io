@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ContentType {
   id: string;
@@ -510,8 +511,10 @@ MIT License - see LICENSE file for details.`,
           
           <div className="space-y-3 mb-6">
             {contentTypes.map((type) => (
-              <divdiv
+              <motion.div
                 key={type.id}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedType(type.id)}
                 className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
                   selectedType === type.id
@@ -540,7 +543,7 @@ MIT License - see LICENSE file for details.`,
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
 
@@ -575,8 +578,11 @@ MIT License - see LICENSE file for details.`,
                 <span>{Math.round(generationProgress)}%</span>
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <divdiv
+                <motion.div
                   className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${generationProgress}%` }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
             </div>
@@ -602,8 +608,10 @@ MIT License - see LICENSE file for details.`,
           ) : (
             <div className="space-y-4">
               {generatedContent.map((content) => (
-                <divdiv
+                <motion.div
                   key={content.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
                 >
                   <div className="p-4 bg-gray-50 dark:bg-gray-700">
@@ -663,7 +671,7 @@ MIT License - see LICENSE file for details.`,
                       </div>
                     </div>
                   )}
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           )}

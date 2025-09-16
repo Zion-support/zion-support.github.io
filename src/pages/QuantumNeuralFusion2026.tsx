@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const QuantumNeuralFusion2026: React.FC = () => {
   return (
@@ -7,7 +8,10 @@ const QuantumNeuralFusion2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -25,7 +29,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -36,8 +40,10 @@ const QuantumNeuralFusion2026: React.FC = () => {
             Revolutionary Capabilities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">⚡</div>
@@ -46,10 +52,12 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 Process complex neural networks at quantum speeds, 
                 enabling real-time consciousness simulation.
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">🧠</div>
@@ -58,10 +66,12 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 Achieve true artificial consciousness through 
                 quantum-enhanced neural processing.
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">🔮</div>
@@ -70,7 +80,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 Predict future outcomes with quantum accuracy 
                 using advanced neural pattern recognition.
               </p>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </div>

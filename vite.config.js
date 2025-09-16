@@ -10,6 +10,9 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
+  optimizeDeps: {
+    include: ['framer-motion']
+  },
   plugins: [
     react()
   ],
@@ -19,10 +22,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['lucide-react', 'react-helmet-async'],
+          ui: ['framer-motion', 'lucide-react', 'react-helmet-async'],
           router: ['react-router-dom']
         }
       }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
     }
   },
   server: {

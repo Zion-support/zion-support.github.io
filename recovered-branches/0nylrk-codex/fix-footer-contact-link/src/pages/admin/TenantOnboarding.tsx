@@ -77,7 +77,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
-=======
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -262,7 +261,6 @@ function TenantOnboarding() {
   const [active_tab, setActiveTab] = useState ("company");
   const [is_submitting, setIsSubmitting] = useState (false);
   const [form_data, setFormData] = useState ({
-=======
   const [formData, setFormData] = useState({
     brand_name: "",
     subdomain: "",

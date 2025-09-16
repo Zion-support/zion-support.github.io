@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-=======
       title: "Manufacturing AI & Machine Learning",
       description: "AI-powered manufacturing optimization with predictive maintenance and quality control",
       icon: <Brain className="w-8 h-8" />,
@@ -35,7 +34,6 @@ import {
       description="Advanced technology solutions for manufacturing. AI, cybersecurity, cloud infrastructure, and analytics designed for the manufacturing sector."
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
       <UltraFuturisticBackground>
         <div className="min-h-screen bg-black text-white relative z-10">
         {/* Hero Section */}
@@ -67,7 +65,6 @@ import {
                   View Case Studies
                 </a>
               </div>
-=======
   Cpu, Zap, Brain, Shield, Globe, Cog, 
   TrendingUp, CheckCircle, ArrowRight, BarChart3, Settings
 } from 'lucide-react';
@@ -148,7 +145,6 @@ export default function ManufacturingSolutions() {
           </div>
         </section>
 
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -183,7 +179,6 @@ export default function ManufacturingSolutions() {
                   <p className="text-gray-400">{benefit.description}</p>
                 </motion.div>
               ))}
-=======
         {/* Key Solutions */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -444,7 +439,6 @@ export default function ManufacturingSolutions() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div

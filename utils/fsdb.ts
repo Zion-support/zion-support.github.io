@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
->>>>>>> cursor/create-and-deploy-new-content-376e
 
-=======
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Mock file system database utility;
@@ -42,7 +36,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
->>>>>>> origin/merge-pr-12271
 
   } catch (error) {
 
@@ -87,7 +80,6 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
   const all = await readAllDisputes();
   all && all.push(dispute);
-=======
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -173,5 +165,4 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 
 
 
-=======
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const TechTrendsBlog2026: React.FC = () => {
   return (
@@ -6,7 +7,10 @@ const TechTrendsBlog2026: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-6">
@@ -26,7 +30,7 @@ const TechTrendsBlog2026: React.FC = () => {
               <span>•</span>
               <span>15 min read</span>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -34,7 +38,10 @@ const TechTrendsBlog2026: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Introduction */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="prose prose-lg max-w-none mb-12"
           >
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -43,10 +50,13 @@ const TechTrendsBlog2026: React.FC = () => {
               new possibilities that were once considered science fiction. In this comprehensive analysis, 
               we explore the key trends that will shape our digital future.
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* Table of Contents */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-blue-50 rounded-xl p-8 mb-12"
           >
             <h2 className="text-2xl font-bold mb-6 text-blue-900">Table of Contents</h2>
@@ -59,10 +69,13 @@ const TechTrendsBlog2026: React.FC = () => {
               <li><a href="#edge-computing" className="text-blue-600 hover:text-blue-800 font-medium">6. Edge AI Computing: Intelligence at the Periphery</a></li>
               <li><a href="#future-implications" className="text-blue-600 hover:text-blue-800 font-medium">7. Future Implications and Predictions</a></li>
             </ul>
-          </divdiv>
+          </motion.div>
 
           {/* Section 1: Synthetic Intelligence */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             id="synthetic-intelligence"
             className="mb-16"
           >
@@ -131,10 +144,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 in pharmaceuticals, where AI-generated drug compounds are accelerating discovery timelines.
               </p>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 2: Quantum-Neural Fusion */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             id="quantum-neural-fusion"
             className="mb-16"
           >
@@ -190,10 +206,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 3: Neural Interfaces */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             id="neural-interfaces"
             className="mb-16"
           >
@@ -267,10 +286,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 4: Autonomous AI Systems */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             id="autonomous-systems"
             className="mb-16"
           >
@@ -353,10 +375,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 5: Metaverse Integration */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             id="metaverse-integration"
             className="mb-16"
           >
@@ -422,10 +447,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 6: Edge AI Computing */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             id="edge-computing"
             className="mb-16"
           >
@@ -519,10 +547,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Section 7: Future Implications */}
-          <divsection
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
             id="future-implications"
             className="mb-16"
           >
@@ -609,10 +640,13 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divsection>
+          </motion.section>
 
           {/* Conclusion */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
             className="bg-gradient-to-r from-gray-900 to-blue-900 text-white rounded-xl p-8 mb-16"
           >
             <h2 className="text-3xl font-bold mb-6">Conclusion</h2>
@@ -631,10 +665,13 @@ const TechTrendsBlog2026: React.FC = () => {
               and preparing for their impact, we can ensure that the technological revolution of 2026 benefits 
               all of humanity.
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* Author Bio */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
             className="bg-gray-50 rounded-xl p-8"
           >
             <div className="flex items-start space-x-6">
@@ -655,7 +692,7 @@ const TechTrendsBlog2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 

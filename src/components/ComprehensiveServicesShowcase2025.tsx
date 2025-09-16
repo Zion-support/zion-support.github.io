@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -201,23 +202,29 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divh2
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Comprehensive Services Showcase
-          </divh2>
-          <divp
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
             Discover our full range of cutting-edge technology solutions designed to 
             transform your business and drive unprecedented growth.
-          </divp>
+          </motion.p>
           
           {/* Stats */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -236,12 +243,14 @@ const ComprehensiveServicesShowcase2025 = () => {
               <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
               <div className="text-gray-600">Customer Rating</div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
 
         {/* Service Navigation */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {services.map((serviceindex) => (
@@ -261,11 +270,16 @@ const ComprehensiveServicesShowcase2025 = () => {
               }`} />
             </button>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Featured Service */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activeService}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -363,18 +377,22 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* All Services Grid */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((serviceindex) => (
-            <divdiv
+            <motion.div
               key={service.id}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
@@ -421,13 +439,15 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </divdiv>
+            </motion.div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
@@ -454,7 +474,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

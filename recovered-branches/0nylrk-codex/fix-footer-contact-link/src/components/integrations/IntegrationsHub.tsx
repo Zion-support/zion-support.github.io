@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 
 
 } from "@/components/ui/card";
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -22,7 +21,6 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
@@ -51,7 +49,6 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-=======
         
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
@@ -88,7 +85,6 @@ import { Badge } from "@/components/ui/badge";
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
-=======
             <Button variant="outline" className="w-full">View All Activity</Button>
           </CardFooter>
         </Card>
@@ -104,7 +100,6 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-=======
         
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
@@ -119,7 +114,6 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-=======
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -135,7 +129,6 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-=======
             
             <Card className="mt-6">
               <CardHeader>
@@ -160,6 +153,5 @@ import { Badge } from "@/components/ui/badge";
 }
 ;
 
-=======
   );
 }

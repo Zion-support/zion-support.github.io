@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2036 from './ui/UltraFuturisticServiceCard2036';
+import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
@@ -71,17 +73,19 @@ export default function Homepage2036() {
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
-              <divdiv
+              <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
+                animate={{
                   y: [0, -100, 0],
                   opacity: [0.3, 1, 0.3],
                   scale: [1, 1.5, 1],
                 }}
+                transition={{
                   duration: 4 + Math.random() * 3,
                   repeat: Infinity,
                   delay: Math.random() * 2,
@@ -91,30 +95,42 @@ export default function Homepage2036() {
           </div>
 
           <div className="relative z-10 text-center max-w-6xl mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="mb-6"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-sm text-cyan-400 mb-6">
                 <Sparkles className="w-4 h-4" />
                 Pioneering the Future of Technology
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divh1 
+            <motion.h1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               Zion Tech Group
-            </divh1>
+            </motion.h1>
             
-            <divp 
+            <motion.p 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               Experience the future of technology with our cutting-edge micro SAAS services, 
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.
-            </divp>
+            </motion.p>
             
-            <divdiv 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <a
                 href="/2036-innovative-services-showcase"
@@ -130,11 +146,14 @@ export default function Homepage2036() {
                 Get Started
                 <ChevronRight className="w-5 h-5" />
               </a>
-            </divdiv>
+            </motion.div>
 
             {/* Stats */}
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center p-4 bg-gray-800/30 rounded-lg border border-gray-700/50">
@@ -145,16 +164,18 @@ export default function Homepage2036() {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 group">
@@ -183,16 +204,18 @@ export default function Homepage2036() {
                 <p className="text-gray-300 text-sm leading-relaxed">{contactInfo.address}</p>
                 <p className="text-gray-500 text-sm mt-2">Global operations</p>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -202,16 +225,19 @@ export default function Homepage2036() {
                 Explore our comprehensive range of cutting-edge technology solutions 
                 across multiple domains and industries.
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {categories.map((category, index) => (
-                <divdiv
+                <motion.div
                   key={category.name}
+                  variants={itemVariants}
                   className="group cursor-pointer"
                   onClick={() => setActiveCategory(category.name.toLowerCase().replace(/\s+/g, '-'))}
                 >
@@ -228,18 +254,20 @@ export default function Homepage2036() {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -249,16 +277,19 @@ export default function Homepage2036() {
                 Discover our most innovative and cutting-edge services that are 
                 transforming industries and driving the future of technology.
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {featuredServices.map((service, index) => (
-                <divdiv
+                <motion.div
                   key={service.id}
+                  variants={itemVariants}
                   className="h-full"
                 >
                   <UltraFuturisticServiceCard2036
@@ -286,13 +317,15 @@ export default function Homepage2036() {
                       'default'
                     }
                   />
-                </divdiv>
+                </motion.div>
               ))}
-            </divdiv>
+            </motion.div>
 
-            <divdiv 
+            <motion.div 
               className="text-center mt-12"
+              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <a
@@ -302,16 +335,18 @@ export default function Homepage2036() {
                 View All Services
                 <ArrowRight className="w-5 h-5" />
               </a>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -321,10 +356,12 @@ export default function Homepage2036() {
                 We combine cutting-edge technology with proven expertise to deliver 
                 solutions that drive real business transformation.
               </p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
@@ -366,8 +403,9 @@ export default function Homepage2036() {
                   color: 'from-red-500 to-pink-600'
                 }
               ].map((feature, index) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  variants={itemVariants}
                   className="p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl hover:border-cyan-400 transition-all duration-300 group"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -375,17 +413,19 @@ export default function Homepage2036() {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-                </divdiv>
+                </motion.div>
               ))}
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -411,7 +451,7 @@ export default function Homepage2036() {
                   Call Us Now
                 </a>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
       </main>

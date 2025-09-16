@@ -1,12 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2
 } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
@@ -88,7 +91,10 @@ export default function ServicesShowcase2028() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -145,7 +151,7 @@ export default function ServicesShowcase2028() {
                 <div className="text-cyan-300">Support Available</div>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
@@ -164,9 +170,11 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <divdiv
+              <motion.div
                 key={category.title}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -199,7 +207,7 @@ export default function ServicesShowcase2028() {
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -219,9 +227,11 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futuristic2028Services.slice(0, 6).map((service, index) => (
-              <divdiv
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -268,7 +278,7 @@ export default function ServicesShowcase2028() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -287,8 +297,10 @@ export default function ServicesShowcase2028() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
@@ -300,10 +312,12 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
@@ -315,10 +329,12 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-blue-400">$500B+</div>
               <div className="text-blue-300">Total Addressable Market</div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
@@ -330,7 +346,7 @@ export default function ServicesShowcase2028() {
               </p>
               <div className="text-3xl font-bold text-pink-400">90%</div>
               <div className="text-pink-300">Market Share in Niche</div>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -338,8 +354,10 @@ export default function ServicesShowcase2028() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -382,7 +400,7 @@ export default function ServicesShowcase2028() {
                 <span>Money-Back Guarantee</span>
               </div>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 

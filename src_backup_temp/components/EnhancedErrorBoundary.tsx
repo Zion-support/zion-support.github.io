@@ -98,7 +98,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
-=======
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -204,7 +203,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       localStorage.setItem('error_reports', JSON.stringify(existingErrors.slice(-10))); // Keep last 10
     } catch (e) {
     }
-=======
   };
   handleReload = () => {
     window.location.reload();
@@ -343,7 +341,6 @@ export const useErrorReporting = () => {;
 };
 ;
 export default EnhancedErrorBoundary;
-=======
         return this.props.fallback}
       return ()
         <motion.div
@@ -623,7 +620,6 @@ export const useErrorReporting = () => {
   return { reportError };
 };
 export default EnhancedErrorBoundary;
-=======
 </motion>
 </motion>
 </motion>

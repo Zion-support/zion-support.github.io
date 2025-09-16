@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const NeuralInterfaceBreakthrough2026: React.FC = () => {
   return (
@@ -7,7 +8,10 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -20,18 +24,22 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               Direct brain-computer communication enabling thought-controlled technology and enhanced cognitive abilities
             </p>
             <div className="flex justify-center space-x-4">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
                 Experience Neural Interface →
-              </divbutton>
-              <divbutton
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300"
               >
                 View Technology
-              </divbutton>
+              </motion.button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -43,8 +51,10 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -58,10 +68,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• 99.5% accuracy rate</li>
               <li>• Zero surgical intervention</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🎮</div>
@@ -75,10 +87,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Smart home automation</li>
               <li>• Gaming and entertainment</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">💭</div>
@@ -92,7 +106,7 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Focus and attention boost</li>
               <li>• Learning acceleration</li>
             </ul>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -104,8 +118,10 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">Medical & Healthcare</h3>
@@ -116,10 +132,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Cognitive therapy enhancement</li>
               <li>• Pain management systems</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">Education & Learning</h3>
@@ -130,10 +148,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Memory training programs</li>
               <li>• Focus improvement tools</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">Entertainment & Gaming</h3>
@@ -144,10 +164,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Augmented reality interfaces</li>
               <li>• Interactive storytelling</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">Professional & Productivity</h3>
@@ -158,7 +180,7 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               <li>• Communication assistance</li>
               <li>• Decision support systems</li>
             </ul>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -209,11 +231,12 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Try our neural interface technology and experience the future of brain-computer interaction
           </p>
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             🧬 Start Neural Demo →
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -225,37 +248,45 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-4 gap-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-emerald-400 mb-2">99.5%</div>
             <div className="text-lg opacity-80">Accuracy Rate</div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-purple-400 mb-2">10ms</div>
             <div className="text-lg opacity-80">Response Time</div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-cyan-400 mb-2">256</div>
             <div className="text-lg opacity-80">EEG Channels</div>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-rose-400 mb-2">24/7</div>
             <div className="text-lg opacity-80">Continuous Use</div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -267,16 +298,20 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
             Join the neural interface revolution and experience the future of human-computer interaction
           </p>
           <div className="flex justify-center space-x-4">
-            <divbutton
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
             >
               Start Neural Journey
-            </divbutton>
-            <divbutton
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-12 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-emerald-600 transition-all duration-300"
             >
               Contact Neural Team
-            </divbutton>
+            </motion.button>
           </div>
         </div>
       </div>

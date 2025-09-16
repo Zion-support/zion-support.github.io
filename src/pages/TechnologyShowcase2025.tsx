@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const TechnologyShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -142,7 +143,10 @@ const TechnologyShowcase2025: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6">
@@ -162,7 +166,7 @@ const TechnologyShowcase2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -171,15 +175,17 @@ const TechnologyShowcase2025: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -188,8 +194,10 @@ const TechnologyShowcase2025: React.FC = () => {
       {/* Technology Tabs */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -198,7 +206,7 @@ const TechnologyShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Dive deep into the technologies that are defining the future of business and society.
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
@@ -221,8 +229,11 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <divdiv
+          <motion.div
             key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
             <div className="text-center mb-8">
@@ -237,9 +248,11 @@ const TechnologyShowcase2025: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -262,18 +275,20 @@ const TechnologyShowcase2025: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Interactive Demos Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -282,13 +297,15 @@ const TechnologyShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience our technologies in action through interactive demonstrations and real-world applications.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
@@ -311,7 +328,7 @@ const TechnologyShowcase2025: React.FC = () => {
                 <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">
                   Watch Demo
                 </button>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -320,8 +337,10 @@ const TechnologyShowcase2025: React.FC = () => {
       {/* Innovation Timeline */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -330,7 +349,7 @@ const TechnologyShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Track the evolution of breakthrough technologies and their impact on society.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500"></div>
@@ -342,9 +361,11 @@ const TechnologyShowcase2025: React.FC = () => {
               { year: "2027", title: "AGI Emergence", description: "Artificial General Intelligence reaches human-level capabilities" },
               { year: "2028", title: "Consciousness AI", description: "AI systems exhibit consciousness-like behaviors" }
             ].map((milestone, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative flex items-center mb-12 ${
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}
@@ -358,7 +379,7 @@ const TechnologyShowcase2025: React.FC = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
                 <div className="w-1/2"></div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -367,8 +388,10 @@ const TechnologyShowcase2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">
               Ready to Build the Future?
@@ -384,7 +407,7 @@ const TechnologyShowcase2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </div>

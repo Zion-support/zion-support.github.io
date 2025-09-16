@@ -3,7 +3,6 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Star, Users, Target } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -74,7 +73,6 @@ export default function AIConsciousnessEvolution() {
         </section>
 
         {/* Contact Section */}
-=======
         {/* Key Features */}
         <section className="py-20 px-4 bg-black/30">
           <div className="container mx-auto max-w-6xl">

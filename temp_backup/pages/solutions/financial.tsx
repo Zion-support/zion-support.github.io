@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-=======
       title: "Financial AI & Machine Learning",
       description: "Advanced AI solutions for financial institutions with predictive analytics and risk assessment",
       icon: <Brain className="w-8 h-8" />,
@@ -57,7 +56,6 @@ import {
 
   return (
     <Layout 
-=======
       title="Financial Solutions - Zion Tech Group"
       description="Advanced technology solutions for financial institutions. AI, cybersecurity, cloud infrastructure, and analytics designed for the financial sector."
     >
@@ -91,7 +89,6 @@ import {
                   View Case Studies
                 </a>
               </div>
-=======
   DollarSign, Shield, Zap, Brain, Cpu, Globe, 
   TrendingUp, CheckCircle, ArrowRight, BarChart3, Lock
 } from 'lucide-react';
@@ -172,7 +169,6 @@ export default function FinancialSolutions() {
           </div>
         </section>
 
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -206,7 +202,6 @@ export default function FinancialSolutions() {
                   <p className="text-gray-400">{benefit.description}</p>
                 </motion.div>
               ))}
-=======
         {/* Key Solutions */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -467,7 +462,6 @@ export default function FinancialSolutions() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-yellow-900/20 to-orange-900/20">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div

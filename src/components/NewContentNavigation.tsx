@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -136,7 +137,10 @@ const NewContentNavigation = () => {
   ];
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6 }}
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -163,8 +167,11 @@ const NewContentNavigation = () => {
         {/* Featured Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {featuredContent.map((itemindex) => (
-            <divdiv
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
@@ -193,7 +200,7 @@ const NewContentNavigation = () => {
                 Explore Now
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>
-            </divdiv>
+            </motion.div>
           ))}
         </div>
 
@@ -209,14 +216,21 @@ const NewContentNavigation = () => {
         </div>
 
         {/* Categories Grid */}
-        <div>
+        <AnimatePresence>
           {isExpanded && (
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
+              exit={{ opacity: 0height: 0 }}
+              transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {contentCategories.map((categoryindex) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-4 mb-4">
@@ -245,14 +259,17 @@ const NewContentNavigation = () => {
                     Explore {category.title}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
-                </divdiv>
+                </motion.div>
               ))}
-            </divdiv>
+            </motion.div>
           )}
-        </div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
@@ -282,9 +299,9 @@ const NewContentNavigation = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

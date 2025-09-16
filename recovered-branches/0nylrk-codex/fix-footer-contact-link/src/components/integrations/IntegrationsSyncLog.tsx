@@ -84,7 +84,6 @@ export function IntegrationsSyncLog() {
   },
   
 
-=======
 import React from "react";
 import { Card } from "@/components/ui/card";
 import {
@@ -250,6 +249,5 @@ const sync_logs = [;
 ;
 
 
-=======
   );
 }

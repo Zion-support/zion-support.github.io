@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -25,7 +26,11 @@ export default function InteractiveCaseStudies2025PromotionBanner() {
   if (isDismissed) return null;
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.6ease: "easeOut" }}
       className="relative bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 border-b border-blue-500/20 overflow-hidden"
     >
       {/* Animated Background */}
@@ -147,6 +152,6 @@ export default function InteractiveCaseStudies2025PromotionBanner() {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-pulse" />
-    </divdiv>
+    </motion.div>
   );
 }

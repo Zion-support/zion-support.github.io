@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -131,7 +132,10 @@ const BusinessSuccessStories2025 = () => {
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -140,10 +144,13 @@ const BusinessSuccessStories2025 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Overall Stats */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -155,13 +162,16 @@ const BusinessSuccessStories2025 = () => {
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {successStories.map((storyindex) => (
-            <divdiv
+            <motion.div
               key={story.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               {/* Company Header */}
@@ -220,12 +230,15 @@ const BusinessSuccessStories2025 = () => {
                 Read Full Case Study
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>
-            </divdiv>
+            </motion.div>
           ))}
         </div>
 
         {/* Industries Served */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -233,8 +246,11 @@ const BusinessSuccessStories2025 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.5delay: 0.9 + index * 0.1 }}
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">
@@ -243,13 +259,16 @@ const BusinessSuccessStories2025 = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">{industry.name}</h4>
                 <p className="text-2xl font-bold text-green-600">{industry.count}+</p>
                 <p className="text-sm text-gray-600">Projects</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* CTA Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
@@ -274,7 +293,7 @@ const BusinessSuccessStories2025 = () => {
               View All Stories
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

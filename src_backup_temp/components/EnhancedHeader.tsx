@@ -1,4 +1,3 @@
-=======
 ;
  params - Function parameters;
  * @returns {*} Function return value;
@@ -22,7 +21,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   };
 }, []);, []);
 ;
-=======
     
     };
     window.addEventListener('scroll', handleScroll);
@@ -48,7 +46,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled';
             ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl'';
             : 'bg-transparent'`;
-=======
       <div  className="matrix -rain"></div>
       {/* Enhanced Header */}
       <motion.header`
@@ -109,7 +106,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   className={`nav-link font-medium transition-all duration-300 ${item.current';
                       ? 'text-cyan-400 border-b-2 border-cyan-400'';
                       : 'text-gray-300 hover: tex t-cyan-400'`;
-=======
                   key={item.name}
                   to={item.href}`
                   className={`nav-link font-medium transition-all duration-300 ${item.current'
@@ -150,7 +146,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                             .map(service => (
                               <Link
                                 key={service.name}
-=======
                                 <p className="text-sm text-gray-400 group-"hover": "tex t-gray-300 transition-colors mb-3">;
                                   {service.description"}
                                 </p>;
@@ -186,7 +181,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                           : service.badge === 'Featured''
                                             ? 'bg-purple-500/20 text-purple-400''
                                             : 'bg-cyan-500/20 text-cyan-400'`
-=======
                                     }`}
                                   >
                                     {service.badge}
@@ -376,7 +370,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   </div>;
                 )}
               </div>;
-=======
                   </div>
                 )}
               </div>
@@ -509,8 +502,6 @@ export function EnhancedHeader(props: any) {}"""""""
                   </div>;
                 )}
               </div>;
-=======
-=======
   const handleSearch = async (e: React.FormEvent) =>  {,
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
@@ -965,12 +956,10 @@ export default Component;
 </any>;
 </any>;
 </any>;
-=======
 </any>
 </any>
 </any>
 </any>
-=======
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import { useRouter } from 'next/router';,

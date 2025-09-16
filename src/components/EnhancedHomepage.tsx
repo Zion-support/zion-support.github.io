@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   ArrowRight, 
@@ -17,6 +18,7 @@ import {
 import Head from 'next/head';
 
 // Import our enhanced components
+import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -182,50 +184,61 @@ const EnhancedHomepage: React.FC = () => {
 
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
-        <divsection 
+        <motion.section 
           className="relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20"
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="relative z-10 text-center max-w-6xl mx-auto">
             {/* Main Heading */}
-            <divh1 
+            <motion.h1 
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              variants={itemVariants}
             >
               Zion Tech Group
-            </divh1>
+            </motion.h1>
             
-            <divp 
+            <motion.p 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness, 
               Quantum Computing, and Autonomous Solutions
-            </divp>
+            </motion.p>
 
             {/* CTA Buttons */}
-            <divdiv 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+              variants={itemVariants}
             >
               <a href="/services">
-                <divbutton
+                <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Explore Services
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </divbutton>
+                </motion.button>
               </a>
               
               <a href="/quote">
-                <divbutton
+                <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Get Quote
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
-                </divbutton>
+                </motion.button>
               </a>
-            </divdiv>
+            </motion.div>
 
             {/* Contact Information */}
-            <divdiv 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
+              variants={itemVariants}
             >
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
@@ -239,47 +252,58 @@ const EnhancedHomepage: React.FC = () => {
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
 
           {/* Floating Elements */}
-          <divdiv
+          <motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
+            variants={floatingVariants}
+            animate="animate"
           >
             <Atom className="w-8 h-8" />
-          </divdiv>
+          </motion.div>
           
-          <divdiv
+          <motion.div
             className="absolute top-40 right-20 text-blue-400/20"
+            variants={floatingVariants}
+            animate="animate"
             style={{ animationDelay: '1s' }}
           >
             <Brain className="w-6 h-6" />
-          </divdiv>
+          </motion.div>
           
-          <divdiv
+          <motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
+            variants={floatingVariants}
+            animate="animate"
             style={{ animationDelay: '2s' }}
           >
             <Rocket className="w-7 h-7" />
-          </divdiv>
-        </divsection>
+          </motion.div>
+        </motion.section>
 
         {/* Category Filter */}
-        <divsection 
+        <motion.section 
           className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="max-w-6xl mx-auto">
-            <divh2 
+            <motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              variants={itemVariants}
             >
               Explore Our Revolutionary Services
-            </divh2>
+            </motion.h2>
             
-            <divdiv 
+            <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
+              variants={itemVariants}
             >
               {categories.map((category) => (
-                <divbutton
+                <motion.button
                   key={category.id}
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
@@ -287,22 +311,28 @@ const EnhancedHomepage: React.FC = () => {
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
                   }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <category.icon className="inline-block w-5 h-5 mr-2" />
                   {category.name}
-                </divbutton>
+                </motion.button>
               ))}
-            </divdiv>
+            </motion.div>
           </div>
-        </divsection>
+        </motion.section>
 
         {/* Services Grid */}
-        <divsection 
+        <motion.section 
           className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
             >
               {getFilteredServices().slice(0, 12).map((service, index) => (
                 <EnhancedServiceCard
@@ -323,41 +353,54 @@ const EnhancedHomepage: React.FC = () => {
                   technologies={['AI', 'Cloud', 'Security', 'Automation']}
                 />
               ))}
-            </divdiv>
+            </motion.div>
             
             {getFilteredServices().length > 12 && (
-              <divdiv 
+              <motion.div 
                 className="text-center mt-12"
+                variants={itemVariants}
               >
                 <a href="/services">
-                  <divbutton
+                  <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     View All Services
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                  </divbutton>
+                  </motion.button>
                 </a>
-              </divdiv>
+              </motion.div>
             )}
           </div>
-        </divsection>
+        </motion.section>
 
         {/* Featured Service Showcase */}
-        <divsection 
+        <motion.section 
           className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="max-w-6xl mx-auto">
-            <divh2 
+            <motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              variants={itemVariants}
             >
               Featured Revolutionary Services
-            </divh2>
+            </motion.h2>
             
-            <divdiv 
+            <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+              variants={itemVariants}
             >
-                <divdiv
+              <AnimatePresence mode="wait">
+                <motion.div
                   key={currentServiceIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5 }}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
                 >
                   <div>
@@ -378,12 +421,14 @@ const EnhancedHomepage: React.FC = () => {
                     </div>
                     
                     <a href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
-                      <divbutton
+                      <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
-                      </divbutton>
+                      </motion.button>
                     </a>
                   </div>
                   
@@ -397,61 +442,71 @@ const EnhancedHomepage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
-              </div>
-            </divdiv>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
           </div>
-        </divsection>
+        </motion.section>
 
         {/* Call to Action */}
-        <divsection 
+        <motion.section 
           className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <divh2 
+            <motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
+              variants={itemVariants}
             >
               Ready to Transform Your Business?
-            </divh2>
+            </motion.h2>
             
-            <divp 
+            <motion.p 
               className="text-xl text-gray-300 mb-8"
+              variants={itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
-            </divp>
+            </motion.p>
             
-            <divdiv 
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              variants={itemVariants}
             >
               <a href="/quote">
-                <divbutton
+                <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </divbutton>
+                </motion.button>
               </a>
               
               <a href="/contact">
-                <divbutton
+                <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Contact Us
                   <Phone className="inline-block ml-2 w-5 h-5" />
-                </divbutton>
+                </motion.button>
               </a>
-            </divdiv>
+            </motion.div>
           </div>
-        </divsection>
+        </motion.section>
       </UltraFuturisticBackground>
 
       {/* Performance Monitor */}
-      <div>
+      <AnimatePresence>
         {showPerformanceMonitor && (
           <PerformanceMonitor />
         )}
-      </div>
+      </AnimatePresence>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedHolographicTechnology2026: React.FC = () => {
@@ -139,7 +140,10 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
           <div className="container mx-auto relative z-10">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
@@ -159,28 +163,32 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
                   View Applications
                 </button>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
 
         {/* Holographic Technologies */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-purple-300">🌟 Holographic Technologies</h2>
               <p className="text-xl text-purple-100 max-w-3xl mx-auto">
                 Revolutionary holographic technologies that are transforming how we interact with digital content
               </p>
-            </divdiv>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {Object.entries(holographicTechnologies).map(([key, tech], index) => (
-                <divdiv
+                <motion.div
                   key={key}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
                     activeHologram === key ? 'ring-2 ring-purple-400' : ''
                   }`}
@@ -193,13 +201,18 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
                     <div className="text-sm text-purple-200 mb-2">Applications:</div>
                     <div className="text-xs text-purple-300">{tech.applications.join(', ')}</div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
 
             {/* Active Technology Details */}
-              <divdiv
+            <AnimatePresence mode="wait">
+              <motion.div
                 key={activeHologram}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
                 className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
               >
                 <div className="flex items-center mb-6">
@@ -238,29 +251,33 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </divdiv>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </section>
 
         {/* Industry Use Cases */}
         <section className="py-20 px-4 bg-gradient-to-br from-pink-900/50 to-purple-900/50">
           <div className="container mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-pink-300">🚀 Industry Applications</h2>
               <p className="text-xl text-pink-100 max-w-3xl mx-auto">
                 Holographic technology is revolutionizing industries across the globe
               </p>
-            </divdiv>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industryUseCases.map((useCase, index) => (
-                <divdiv
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30"
                 >
                   <div className="text-5xl mb-6 text-center">{useCase.icon}</div>
@@ -277,7 +294,7 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
                     <div className="text-sm text-pink-200 mb-2">Impact:</div>
                     <div className="text-sm font-bold text-pink-300">{useCase.impact}</div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -286,15 +303,17 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
         {/* Holographic Demo */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-cyan-300">🎮 Interactive Holographic Demo</h2>
               <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
                 Experience the power of holographic technology with our interactive demonstration
               </p>
-            </divdiv>
+            </motion.div>
 
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
               <div className="text-center mb-8">
@@ -354,8 +373,10 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
           <div className="container mx-auto text-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">Ready to Experience the Holographic Future?</h2>
               <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -369,7 +390,7 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
       </div>

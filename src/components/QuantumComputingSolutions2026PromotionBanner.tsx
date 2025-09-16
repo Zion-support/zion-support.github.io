@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Atom
   Zap
@@ -38,9 +39,13 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
   ];
 
   return (
-    <div>
+    <AnimatePresence>
       {isVisible && (
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white overflow-hidden"
         >
           {/* Animated Background */}
@@ -48,17 +53,19 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-indigo-600/20" />
             <div className="absolute inset-0">
               {[...Array(25)].map((_i) => (
-                <divdiv
+                <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
+                  animate={{
                     y: [0-40],
                     x: [0Math.random() * 10 - 50],
                     opacity: [0.40.80.4],
                   }}
+                  transition={{
                     duration: 4 + Math.random() * 2,
                     repeat: Infinity,
                     delay: Math.random() * 2,
@@ -72,7 +79,10 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <motion.div
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.2 }}
                   className="flex items-center justify-center lg:justify-start mb-3"
                 >
                   <div className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full text-sm font-semibold mr-4">
@@ -84,22 +94,31 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                </divdiv>
+                </motion.div>
 
-                <divh2
+                <motion.h2
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 }}
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   ⚛️ Quantum Computing Solutions 2026
-                </divh2>
+                </motion.h2>
 
-                <divp
+                <motion.p
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.4 }}
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Harness quantum power: OptimizationEncryptionSimulationand AI/ML solutions
-                </divp>
+                </motion.p>
 
                 {/* Solution Icons */}
-                <divdiv
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.5 }}
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
                 >
                   {solutions.map((solutionindex) => (
@@ -108,11 +127,14 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
                       <span className="text-sm font-medium">{solution.label}</span>
                     </div>
                   ))}
-                </divdiv>
+                </motion.div>
               </div>
 
               {/* Right Content - CTA */}
-              <divdiv
+              <motion.div
+                initial={{ opacity: 0x: 20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.6 }}
                 className="flex flex-col sm:flex-row items-center gap-4"
               >
                 <div className="text-center sm:text-right">
@@ -125,26 +147,32 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
                   Explore Quantum
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
+              </motion.div>
 
               {/* Dismiss Button */}
-              <divbutton
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6delay: 0.8 }}
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
-              </divbutton>
+              </motion.button>
             </div>
           </div>
 
           {/* Progress Bar */}
-          <divdiv
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 5ease: "easeOut" }}
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 origin-left"
             style={{ width: '100%' }}
           />
-        </divdiv>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 };
 

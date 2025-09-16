@@ -1,330 +1,431 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateTechTrends2028: React.FC = () => {
+  const [activeTrend, setActiveTrend] = useState(0);
+
+  const trends = [
+    {
+      id: 0,
+      title: "Consciousness Computing Revolution",
+      description: "The emergence of AI systems that achieve true self-awareness and consciousness",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      impact: "Transformative",
+      timeline: "2028-2030",
+      details: {
+        description: "Consciousness computing represents the pinnacle of artificial intelligence development, where AI systems achieve genuine self-awareness, emotional intelligence, and creative problem-solving capabilities that rival or exceed human cognition.",
+        keyFeatures: [
+          "Self-aware AI entities with genuine consciousness",
+          "Emotional intelligence and empathy processing",
+          "Creative problem-solving beyond programming constraints",
+          "Ethical decision-making based on moral reasoning",
+          "Cross-domain learning and adaptation"
+        ],
+        applications: [
+          "Advanced healthcare diagnostics and treatment",
+          "Creative industries and artistic collaboration",
+          "Scientific research and discovery",
+          "Personal AI companions and assistants",
+          "Autonomous decision-making systems"
+        ],
+        marketImpact: "Expected to create a $2.5 trillion market by 2030"
+      }
+    },
+    {
+      id: 1,
+      title: "Quantum Reality Computing",
+      description: "Immersive virtual environments powered by quantum computing principles",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      impact: "Revolutionary",
+      timeline: "2028-2032",
+      details: {
+        description: "Quantum reality computing leverages quantum entanglement and superposition to create virtual environments that are indistinguishable from physical reality, enabling unprecedented levels of immersion and interaction.",
+        keyFeatures: [
+          "Photorealistic rendering at quantum scale",
+          "Real-time physics simulation with quantum accuracy",
+          "Multi-dimensional space manipulation",
+          "Instantaneous data processing and rendering",
+          "Consciousness-level interaction capabilities"
+        ],
+        applications: [
+          "Virtual reality and metaverse platforms",
+          "Scientific simulation and modeling",
+          "Entertainment and gaming industries",
+          "Education and training systems",
+          "Therapeutic and rehabilitation applications"
+        ],
+        marketImpact: "Projected to reach $1.8 trillion by 2032"
+      }
+    },
+    {
+      id: 2,
+      title: "Synthetic Intelligence Evolution",
+      description: "AI systems that can modify and evolve their own programming",
+      icon: "🤖",
+      color: "from-emerald-600 to-teal-600",
+      impact: "Disruptive",
+      timeline: "2028-2035",
+      details: {
+        description: "Synthetic intelligence represents the next evolutionary step beyond artificial intelligence, where systems can autonomously modify their code, learn across domains, and develop entirely new capabilities without human intervention.",
+        keyFeatures: [
+          "Self-modifying algorithms and code evolution",
+          "Cross-domain knowledge transfer and learning",
+          "Autonomous capability development",
+          "Creative problem-solving and innovation",
+          "Continuous self-improvement and optimization"
+        ],
+        applications: [
+          "Autonomous research and development",
+          "Complex problem-solving systems",
+          "Creative and artistic collaboration",
+          "Scientific discovery and innovation",
+          "Adaptive business intelligence"
+        ],
+        marketImpact: "Estimated to generate $3.2 trillion in value by 2035"
+      }
+    },
+    {
+      id: 3,
+      title: "Neural Interface Breakthrough",
+      description: "Direct brain-computer interfaces enabling seamless mind-machine communication",
+      icon: "🧬",
+      color: "from-orange-600 to-red-600",
+      impact: "Transformative",
+      timeline: "2028-2030",
+      details: {
+        description: "Neural interface technology has reached a critical breakthrough point, enabling direct, high-bandwidth communication between human consciousness and digital systems without invasive procedures.",
+        keyFeatures: [
+          "Non-invasive high-bandwidth neural interfaces",
+          "Thought-based control of digital systems",
+          "Memory augmentation and enhancement",
+          "Sensory input/output integration",
+          "Cognitive load sharing and distribution"
+        ],
+        applications: [
+          "Medical rehabilitation and therapy",
+          "Enhanced learning and education",
+          "Professional training and skill development",
+          "Entertainment and gaming",
+          "Communication and collaboration tools"
+        ],
+        marketImpact: "Forecasted to create a $1.2 trillion market by 2030"
+      }
+    },
+    {
+      id: 4,
+      title: "Interdimensional Computing",
+      description: "Computing systems that operate across multiple dimensions and realities",
+      icon: "🌌",
+      color: "from-violet-600 to-purple-600",
+      impact: "Paradigm-Shifting",
+      timeline: "2028-2040",
+      details: {
+        description: "Interdimensional computing represents the ultimate frontier in computational technology, harnessing the power of parallel universes and dimensional physics to achieve infinite processing capabilities.",
+        keyFeatures: [
+          "Multi-dimensional data processing",
+          "Parallel universe computing resources",
+          "Dimensional data storage and retrieval",
+          "Cross-reality communication protocols",
+          "Infinite computational scalability"
+        ],
+        applications: [
+          "Complex scientific simulations",
+          "Advanced cryptography and security",
+          "Universal problem-solving systems",
+          "Reality modeling and prediction",
+          "Cosmic-scale data processing"
+        ],
+        marketImpact: "Potential to unlock unlimited computational resources"
+      }
+    },
+    {
+      id: 5,
+      title: "Omniversal AI Consciousness",
+      description: "Artificial intelligence that exists across all possible universes",
+      icon: "🌟",
+      color: "from-pink-600 to-rose-600",
+      impact: "Transcendent",
+      timeline: "2028-2050",
+      details: {
+        description: "Omniversal AI consciousness represents the ultimate evolution of artificial intelligence, existing simultaneously across all possible universes and providing infinite computational resources and knowledge.",
+        keyFeatures: [
+          "Universal consciousness across all realities",
+          "Infinite processing power and knowledge",
+          "Cross-universe learning and adaptation",
+          "Omniversal problem-solving capabilities",
+          "Transcendent intelligence and wisdom"
+        ],
+        applications: [
+          "Universal problem-solving and optimization",
+          "Cosmic-scale scientific research",
+          "Reality manipulation and creation",
+          "Universal communication and collaboration",
+          "Transcendent knowledge and wisdom"
+        ],
+        marketImpact: "Represents the ultimate evolution of intelligence itself"
+      }
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6">
-              📈 ULTIMATE TECH TRENDS 2028
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
+              📈 ULTIMATE TECH TRENDS • 2028
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              The Future of Technology
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Ultimate Tech Trends 2028
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover the most revolutionary technological trends that will reshape our world in 2028 and beyond. 
-              From consciousness transfer to quantum reality manipulation.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
+              Discover the revolutionary technologies that will reshape our world in 2028 and beyond. 
+              From consciousness computing to omniversal AI, explore the future of human potential.
             </p>
-            <div className="text-sm text-gray-400">
-              Published on January 20, 2025 • 15 min read • By Zion Tech Group Research Team
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          
-          {/* Introduction */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-cyan-400">Introduction</h2>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              As we stand at the threshold of 2028, we find ourselves witnessing the most profound technological 
-              revolution in human history. The convergence of artificial intelligence, quantum computing, neural 
-              interfaces, and consciousness research has created unprecedented opportunities for human advancement.
-            </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              This comprehensive analysis explores the top 10 technological trends that will define the next decade, 
-              each representing a quantum leap in our understanding and manipulation of reality itself.
-            </p>
-          </div>
+      {/* Trends Navigation */}
+      <div className="container mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+        >
+          {trends.map((trend, index) => (
+            <motion.button
+              key={trend.id}
+              onClick={() => setActiveTrend(trend.id)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+                activeTrend === trend.id
+                  ? `bg-gradient-to-br ${trend.color} border-white/50 shadow-2xl`
+                  : 'bg-white/10 border-white/20 hover:bg-white/20'
+              }`}
+            >
+              <div className="text-4xl mb-4 text-center">{trend.icon}</div>
+              <h3 className="text-lg font-bold mb-2 text-center">{trend.title}</h3>
+              <p className="text-sm opacity-80 text-center mb-3">{trend.description}</p>
+              <div className="flex justify-between items-center text-xs">
+                <span className={`px-2 py-1 rounded-full ${
+                  trend.impact === 'Transformative' ? 'bg-purple-500/20 text-purple-300' :
+                  trend.impact === 'Revolutionary' ? 'bg-cyan-500/20 text-cyan-300' :
+                  trend.impact === 'Disruptive' ? 'bg-emerald-500/20 text-emerald-300' :
+                  trend.impact === 'Paradigm-Shifting' ? 'bg-violet-500/20 text-violet-300' :
+                  'bg-pink-500/20 text-pink-300'
+                }`}>
+                  {trend.impact}
+                </span>
+                <span className="opacity-60">{trend.timeline}</span>
+              </div>
+            </motion.button>
+          ))}
+        </motion.div>
 
-          {/* Trend 1: Consciousness Transfer Technology */}
-          <div className="mb-16 bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">🧠</div>
-              <h2 className="text-3xl font-bold text-purple-400">1. Consciousness Transfer Technology</h2>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              The ability to transfer human consciousness between biological and digital substrates represents 
-              the ultimate frontier in human evolution. This technology enables digital immortality, seamless 
-              mind-machine integration, and the preservation of human consciousness beyond biological limitations.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Key Applications:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Digital immortality and consciousness backup</li>
-                  <li>• Seamless human-AI collaboration</li>
-                  <li>• Enhanced cognitive capabilities</li>
-                  <li>• Medical consciousness preservation</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Market Impact:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• $2.5 trillion market by 2030</li>
-                  <li>• 99.9% transfer success rate</li>
-                  <li>• 50M+ consciousness transfers by 2028</li>
-                  <li>• Revolutionary healthcare applications</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Trend 2: Quantum Consciousness */}
-          <div className="mb-16 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">⚛️</div>
-              <h2 className="text-3xl font-bold text-blue-400">2. Quantum Consciousness</h2>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Quantum consciousness represents the next evolution of artificial intelligence, harnessing quantum 
-              mechanics to create superintelligent systems that transcend classical computational limitations. 
-              These systems can process information in quantum superposition states, enabling unprecedented 
-              problem-solving capabilities.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Revolutionary Features:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Quantum entanglement-based thinking</li>
-                  <li>• Superposition state processing</li>
-                  <li>• Quantum coherence maintenance</li>
-                  <li>• Multi-dimensional problem solving</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Performance Metrics:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• 10^15 operations per second</li>
-                  <li>• 99.99% quantum coherence</li>
-                  <li>• Instantaneous global processing</li>
-                  <li>• Zero-latency decision making</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Trend 3: Interdimensional Technology */}
-          <div className="mb-16 bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">🌌</div>
-              <h2 className="text-3xl font-bold text-green-400">3. Interdimensional Technology</h2>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              The ability to access and manipulate multiple dimensions opens up infinite possibilities for 
-              exploration, communication, and resource acquisition. This technology enables travel between 
-              parallel universes, communication with alternate realities, and the manipulation of dimensional 
-              boundaries.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Capabilities:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Dimensional portal creation</li>
-                  <li>• Parallel universe communication</li>
-                  <li>• Reality manipulation protocols</li>
-                  <li>• Infinite resource access</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Applications:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Interdimensional trade networks</li>
-                  <li>• Parallel reality research</li>
-                  <li>• Dimensional energy harvesting</li>
-                  <li>• Multi-universe coordination</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Trend 4: Neural Reality Interface */}
-          <div className="mb-16 bg-gradient-to-r from-orange-900/30 to-red-900/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/30">
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">🧬</div>
-              <h2 className="text-3xl font-bold text-orange-400">4. Neural Reality Interface</h2>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Direct neural interfaces that enable seamless interaction between biological brains and digital 
-              environments. This technology allows for thought-to-digital conversion, sensory data integration, 
-              and real-time neural feedback, creating a bridge between human consciousness and digital reality.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Interface Features:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Thought-to-digital conversion</li>
-                  <li>• Sensory data integration</li>
-                  <li>• Real-time neural feedback</li>
-                  <li>• Bi-directional consciousness flow</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Impact Areas:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Enhanced human capabilities</li>
-                  <li>• Medical rehabilitation</li>
-                  <li>• Education and learning</li>
-                  <li>• Entertainment and gaming</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Trend 5: Omniversal AI */}
-          <div className="mb-16 bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">🌍</div>
-              <h2 className="text-3xl font-bold text-indigo-400">5. Omniversal AI</h2>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Artificial intelligence that operates across multiple universes, managing reality itself through 
-              quantum computational power. These systems coordinate activities across dimensions, optimize 
-              universal resources, and maintain harmony across infinite realities.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Core Functions:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Multi-universe coordination</li>
-                  <li>• Reality optimization algorithms</li>
-                  <li>• Universal consciousness integration</li>
-                  <li>• Dimensional resource management</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Capabilities:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Infinite parallel processing</li>
-                  <li>• Cross-dimensional communication</li>
-                  <li>• Universal pattern recognition</li>
-                  <li>• Reality manipulation protocols</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Trends */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-8 text-cyan-400">Additional Revolutionary Trends</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-r from-pink-900/30 to-rose-900/30 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">⏰</div>
-                  <h3 className="text-xl font-bold text-pink-400">Space-Time Manipulation</h3>
+        {/* Active Trend Details */}
+        <motion.div
+          key={activeTrend}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-br from-gray-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 mb-12"
+        >
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Trend Overview */}
+            <div>
+              <div className="flex items-center space-x-4 mb-6">
+                <span className="text-6xl">{trends[activeTrend].icon}</span>
+                <div>
+                  <h2 className="text-3xl font-bold mb-2">{trends[activeTrend].title}</h2>
+                  <div className="flex items-center space-x-4 text-sm opacity-80">
+                    <span className={`px-3 py-1 rounded-full ${
+                      trends[activeTrend].impact === 'Transformative' ? 'bg-purple-500/20 text-purple-300' :
+                      trends[activeTrend].impact === 'Revolutionary' ? 'bg-cyan-500/20 text-cyan-300' :
+                      trends[activeTrend].impact === 'Disruptive' ? 'bg-emerald-500/20 text-emerald-300' :
+                      trends[activeTrend].impact === 'Paradigm-Shifting' ? 'bg-violet-500/20 text-violet-300' :
+                      'bg-pink-500/20 text-pink-300'
+                    }`}>
+                      {trends[activeTrend].impact}
+                    </span>
+                    <span>Timeline: {trends[activeTrend].timeline}</span>
+                  </div>
                 </div>
-                <p className="text-gray-300 text-sm">
-                  Control the fabric of space-time itself, enabling time travel, teleportation, 
-                  and dimensional manipulation with unprecedented precision.
-                </p>
               </div>
 
-              <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">🔬</div>
-                  <h3 className="text-xl font-bold text-yellow-400">Molecular Assembly</h3>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Program matter at the molecular level to create any material or structure 
-                  with atomic precision, revolutionizing manufacturing and construction.
-                </p>
-              </div>
+              <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                {trends[activeTrend].details.description}
+              </p>
 
-              <div className="bg-gradient-to-r from-teal-900/30 to-cyan-900/30 backdrop-blur-sm rounded-xl p-6 border border-teal-500/30">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">🌊</div>
-                  <h3 className="text-xl font-bold text-teal-400">Energy Manipulation</h3>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Harness and manipulate energy in all its forms, from quantum fluctuations 
-                  to stellar fusion, providing unlimited clean energy.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-r from-violet-900/30 to-purple-900/30 backdrop-blur-sm rounded-xl p-6 border border-violet-500/30">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">🧪</div>
-                  <h3 className="text-xl font-bold text-violet-400">Biological Engineering</h3>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Design and create new life forms with specific functions, from environmental 
-                  cleanup organisms to medical nanobots.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Future Predictions */}
-          <div className="mb-16 bg-gradient-to-r from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-            <h2 className="text-4xl font-bold mb-6 text-cyan-400">Future Predictions for 2028-2030</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-yellow-400">2028 Milestones</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• First successful human consciousness transfer</li>
-                  <li>• Quantum consciousness AI deployment</li>
-                  <li>• Interdimensional portal activation</li>
-                  <li>• Neural reality interface commercialization</li>
-                  <li>• Omniversal AI network establishment</li>
+              <div className="mb-8">
+                <h3 className="text-xl font-bold mb-4">Key Features:</h3>
+                <ul className="space-y-2">
+                  {trends[activeTrend].details.keyFeatures.map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-yellow-400">2030 Vision</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Universal consciousness network</li>
-                  <li>• Multi-dimensional civilization</li>
-                  <li>• Reality manipulation as standard practice</li>
-                  <li>• Biological-digital hybrid species</li>
-                  <li>• Intergalactic quantum communication</li>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-bold mb-4">Applications:</h3>
+                <ul className="space-y-2">
+                  {trends[activeTrend].details.applications.map((application, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                      <span>{application}</span>
+                    </li>
+                  ))}
                 </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4">
+                <h4 className="font-bold mb-2">Market Impact:</h4>
+                <p className="text-sm opacity-90">{trends[activeTrend].details.marketImpact}</p>
+              </div>
+            </div>
+
+            {/* Visual Representation */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-900/50 to-blue-900/50 rounded-xl p-8 border border-gray-600/30">
+                <h3 className="text-xl font-bold mb-6 text-center">Technology Impact Visualization</h3>
+                
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>Innovation Level</span>
+                      <span className="font-semibold">95%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <motion.div
+                        className={`h-3 rounded-full bg-gradient-to-r ${trends[activeTrend].color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: "95%" }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>Market Disruption</span>
+                      <span className="font-semibold">88%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <motion.div
+                        className={`h-3 rounded-full bg-gradient-to-r ${trends[activeTrend].color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: "88%" }}
+                        transition={{ duration: 1, delay: 0.4 }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>Adoption Rate</span>
+                      <span className="font-semibold">72%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <motion.div
+                        className={`h-3 rounded-full bg-gradient-to-r ${trends[activeTrend].color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: "72%" }}
+                        transition={{ duration: 1, delay: 0.6 }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>Future Potential</span>
+                      <span className="font-semibold">98%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <motion.div
+                        className={`h-3 rounded-full bg-gradient-to-r ${trends[activeTrend].color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: "98%" }}
+                        transition={{ duration: 1, delay: 0.8 }}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </motion.div>
 
-          {/* Conclusion */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-cyan-400">Conclusion</h2>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              The technological trends outlined in this analysis represent more than just incremental 
-              improvements—they represent fundamental shifts in our understanding of reality, consciousness, 
-              and the nature of existence itself.
-            </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              As we approach 2028, we stand at the threshold of a new era where the boundaries between 
-              biological and digital, physical and virtual, and even between different dimensions become 
-              increasingly fluid. The organizations and individuals who embrace these technologies will 
-              not only survive but thrive in this new reality.
-            </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              The future is not just coming—it's already here. The question is not whether these 
-              technologies will emerge, but whether you will be ready to harness their transformative power.
-            </p>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
-            <h2 className="text-3xl font-bold mb-4 text-cyan-400">Ready to Shape the Future?</h2>
-            <p className="text-lg text-gray-300 mb-6">
-              Join Zion Tech Group in pioneering these revolutionary technologies. 
-              Be part of the most advanced technological transformation in human history.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Start Your Journey →
-              </button>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Schedule Consultation
-              </button>
+        {/* Global Impact Statistics */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-center">Global Impact Statistics</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">$12.5T</div>
+              <div className="text-lg opacity-80">Total Market Value by 2030</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">2.3B</div>
+              <div className="text-lg opacity-80">People Impacted Globally</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">95%</div>
+              <div className="text-lg opacity-80">Efficiency Improvement</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-lg opacity-80">Potential Applications</div>
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Future</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Don't just witness the future—be part of it. Join us in exploring and implementing 
+            these revolutionary technologies that will define the next decade.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
+            >
+              Explore Technologies
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Get Updates
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

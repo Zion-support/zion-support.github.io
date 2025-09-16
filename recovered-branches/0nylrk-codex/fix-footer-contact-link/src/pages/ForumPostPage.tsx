@@ -82,7 +82,6 @@ export default function ForumPostPage() {
 
 
 
-=======
                       {post.authorRole}
                     </Badge>
                   )}

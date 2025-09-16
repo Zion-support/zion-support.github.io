@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
 
 interface ServiceWorkerRegistrationProps {
@@ -101,11 +102,15 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   }
 
   return (
-    <div>
+    <AnimatePresence>
       {/* Update Available Notification */}
       {isUpdateAvailable && (
-        <divdiv
+        <motion.div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -152,13 +157,17 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       )}
 
       {/* Update Installed Notification */}
       {isUpdateInstalled && (
-        <divdiv
+        <motion.div
           className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -188,13 +197,17 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               <XCircle className="w-4 h-4" />
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       )}
 
       {/* Error Notification */}
       {error && (
-        <divdiv
+        <motion.div
           className="fixed bottom-4 right-4 bg-red-900 border border-red-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -217,9 +230,9 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 };
 

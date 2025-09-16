@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -102,8 +103,10 @@ const EnhancedContentShowcase2025: React.FC = () => {
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -113,11 +116,13 @@ const EnhancedContentShowcase2025: React.FC = () => {
             Explore our comprehensive collection of cutting-edge technology content, 
             featuring the latest breakthroughs in AI, Quantum Computing, Neural Interfaces, and more.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Category Filter */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(contentCategories).map(([key, label]) => (
@@ -133,16 +138,25 @@ const EnhancedContentShowcase2025: React.FC = () => {
               {label}
             </button>
           ))}
-        </divdiv>
+        </motion.div>
 
         {/* Content Grid */}
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
-              <divdiv
+              <motion.div
                 key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
                 {/* Image Header */}
@@ -183,21 +197,25 @@ const EnhancedContentShowcase2025: React.FC = () => {
                   </div>
 
                   {/* Action Button */}
-                  <diva
+                  <motion.a
                     href={item.link}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className={`inline-block w-full text-center py-3 px-6 bg-gradient-to-r ${item.gradient} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Explore {item.title.split(' ')[0]} →
-                  </diva>
+                  </motion.a>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
-          </divdiv>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Stats Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="mt-16 bg-white rounded-2xl p-8 shadow-lg"
         >
           <div className="text-center mb-8">
@@ -212,21 +230,25 @@ const EnhancedContentShowcase2025: React.FC = () => {
               { number: '12+', label: 'Quantum Breakthroughs', color: 'text-cyan-600' },
               { number: '8+', label: 'Neural Interfaces', color: 'text-emerald-600' }
             ].map((stat, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.number}</div>
                 <div className="text-gray-600 font-semibold">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl p-8 text-white">
@@ -243,7 +265,7 @@ const EnhancedContentShowcase2025: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

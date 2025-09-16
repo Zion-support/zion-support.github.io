@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -208,7 +209,10 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
@@ -227,10 +231,13 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             AI-powered content discovery that learns your preferences and recommends the most relevant 
             articlestutorialsand insights tailored to your interests.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Search and Filters */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
         >
           <div className="flex flex-col lg:flex-row gap-4">
@@ -298,20 +305,27 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Content Grid */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
         >
-          <div>
+          <AnimatePresence>
             {filteredContent.map((itemindex) => (
-              <divdiv
+              <motion.div
                 key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -408,14 +422,16 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
-          </div>
-        </divdiv>
+          </AnimatePresence>
+        </motion.div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -432,11 +448,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             >
               Clear Filters
             </button>
-          </divdiv>
+          </motion.div>
         )}
 
         {/* Bottom CTA */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -464,7 +483,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

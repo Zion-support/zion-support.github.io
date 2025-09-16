@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const TechTrendsBlog2027 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -109,7 +110,10 @@ const TechTrendsBlog2027 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -130,7 +134,7 @@ const TechTrendsBlog2027 = () => {
                 Subscribe to Updates
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -170,9 +174,11 @@ const TechTrendsBlog2027 = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
-              <divarticle
+              <motion.article
                 key={post.id}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
                 <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
@@ -221,7 +227,7 @@ const TechTrendsBlog2027 = () => {
                     Read More →
                   </button>
                 </div>
-              </divarticle>
+              </motion.article>
             ))}
           </div>
         </div>

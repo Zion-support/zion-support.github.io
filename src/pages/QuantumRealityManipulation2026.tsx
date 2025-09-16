@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const QuantumRealityManipulation2026: React.FC = () => {
   const [activeReality, setActiveReality] = useState('quantum');
@@ -9,7 +10,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -29,7 +33,7 @@ const QuantumRealityManipulation2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -150,7 +154,8 @@ const QuantumRealityManipulation2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🌍</div>
@@ -164,9 +169,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Spatial compression</li>
               <li>• Wormhole creation</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -180,9 +186,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Matter phase control</li>
               <li>• Quantum tunneling</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🔮</div>
@@ -196,9 +203,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Physical law modification</li>
               <li>• Dimensional manipulation</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -212,9 +220,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Collective reality shaping</li>
               <li>• Intention manifestation</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:border-orange-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🚀</div>
@@ -228,9 +237,10 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Dimensional portals</li>
               <li>• Parallel universe access</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🌟</div>
@@ -244,7 +254,7 @@ const QuantumRealityManipulation2026: React.FC = () => {
               <li>• Reality simulation</li>
               <li>• Universe engineering</li>
             </ul>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 

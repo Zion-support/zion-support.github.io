@@ -16,7 +16,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
   label: string;
   action: () => void;
-=======
 
   label: string;
   action: () => void;

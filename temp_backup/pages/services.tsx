@@ -77,7 +77,6 @@ export default function ServicesPage() {
     ...innovativeAIServices,
     ...emergingTechAdvancedServices,
     ...itInfrastructureServices
-=======
     ...newOperationalServices2025,
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
@@ -111,7 +110,6 @@ export default function ServicesPage() {
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ];
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';

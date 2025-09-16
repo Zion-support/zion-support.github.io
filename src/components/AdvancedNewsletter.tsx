@@ -2,6 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
+import { motion } from 'framer-motion';
 MailSendCheckCircle
 
 export default function AdvancedNewsletter() {
@@ -24,8 +25,10 @@ export default function AdvancedNewsletter() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center mb-6">
             <Mail className="h-12 w-12 text-purple-400 mr-4" />
@@ -50,10 +53,12 @@ export default function AdvancedNewsletter() {
                   className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-purple-400 focus:bg-white/20 transition-all duration-200"
                   required
                 />
-                <divbutton
+                <motion.button
                   type="submit"
                   disabled={isLoading}
                   className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center disabled:opacity-50"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {isLoading ? (
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -63,11 +68,14 @@ export default function AdvancedNewsletter() {
                       Subscribe
                     </>
                   )}
-                </divbutton>
+                </motion.button>
               </div>
             </form>
           ) : (
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.5 }}
               className="bg-green-500/20 border border-green-500/50 rounded-lg p-6 max-w-md mx-auto"
             >
               <CheckCircle className="h-12 w-12 text-green-400 mx-auto mb-4" />
@@ -77,7 +85,7 @@ export default function AdvancedNewsletter() {
               <p className="text-white/80">
                 Thank you for subscribing. 'You', 'll receive our latest updates soon.
               </p>
-            </divdiv>
+            </motion.div>
           )}
 
           <div className="mt-8 text-white/60 text-sm">
@@ -85,7 +93,7 @@ export default function AdvancedNewsletter() {
               By subscribingyou agree to our privacy policy. Unsubscribe at any time.
             </p>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </section>
   );

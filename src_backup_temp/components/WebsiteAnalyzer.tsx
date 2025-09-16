@@ -47,7 +47,6 @@ export default function Page(props: any) {
         missingPages;
       }) } catch(error) {;
       // console.error('Analysis failed:', error)} finally {;
-=======
       setIsAnalyzing(false);
       setProgress(100);
       setCurrentPage('')}
@@ -65,7 +64,6 @@ export default function Page(props: any) {
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
       default:"
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
-=======
   };
       case 'broken':'
         return 'text-red-600 bg-red-100';
@@ -88,7 +86,6 @@ export default function Page(props: any) {
           <div className="flex space-x-3">
             <button
               onClick={analyzeWebsite}
-=======
               disabled={isAnalyzing}";
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed";
             >;
@@ -196,7 +193,6 @@ export default function Page(props: any) {
                 <div  className="flex items -center">;
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
                   <div>;
-=======
                     <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
@@ -241,7 +237,6 @@ export default function Page(props: any) {
                 </div>;
               </div>) }
 ;
-=======
                 </div>
               </div>) }
 
@@ -264,7 +259,6 @@ export default function Page(props: any) {
                 </div>;
                 </div>
               </div>) }
-=======
 
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
@@ -302,7 +296,6 @@ export default function Page(props: any) {
                 ))}
               </div>;
             </div>;
-=======
           </div>) }
       </div>
     </div>) };

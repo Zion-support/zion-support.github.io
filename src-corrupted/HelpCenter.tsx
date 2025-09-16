@@ -5,12 +5,10 @@ import {
 import React from 'react';
 import { 
   HelpCircle, 
-=======
   Search, 
   BookOpen, 
   MessageCircle, 
   Phone, 
-=======
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -36,7 +34,6 @@ import {
   ChevronRight,
   ExternalLink,
 import { Helmet } from 'react-helmet-async';
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -104,7 +101,6 @@ import {
   CreditCard
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
   Zap, 
   Brain, 
   Cloud, 
@@ -124,12 +120,9 @@ import SEOHead from '../components/SEOHead';
   Building,
   CreditCard
 } from 'lucide-react';
-=======
-=======
 import React, { useState } from 'react';
 import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -137,16 +130,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
 import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Phone, Mail, ArrowRight } from 'lucide-react';
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-=======
 import { motion } from 'framer-motion';
-=======
 import { motion } from 'framer-motion';
 import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
@@ -161,7 +151,6 @@ import { SEO } from '@/components/SEO';
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-=======
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   const toggleCategory = (category: string) => {
@@ -171,7 +160,6 @@ const HelpCenter = () => {
         : [...prev, category]
     );
   };
-=======
   HelpCircle,
   Lightbulb,
   Clock,
@@ -220,7 +208,6 @@ export default function HelpCenter() {
         { title: 'API Documentation', views: '3.8k', time: '20 min read' },
         { title: 'System Requirements', views: '2.6k', time: '5 min read' },
         { title: 'Performance Optimization', views: '1.8k', time: '13 min read' }
-=======
       icon: Brain,
       articles: [
         { title: 'AI Business Intelligence Guide', path: '/help/ai-bi-guide', description: 'Understanding AI-powered analytics' },
@@ -315,7 +302,6 @@ export default function HelpCenter() {
       readTime: '6 min read'
     }
   ];
-=======
 
   const helpCategories = [
     {
@@ -479,7 +465,6 @@ const HelpCenter = () => {
         { title: 'Performance Optimization', path: '/help/performance', description: 'Improving system performance' },
         { title: 'Backup & Recovery', path: '/help/backup-recovery', description: 'Data protection strategies' }
       ]
-=======
         'Emergency Contacts',
         'Support Hours'
       ],
@@ -514,7 +499,6 @@ const HelpCenter = () => {
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
-=======
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -599,8 +583,6 @@ const HelpCenter = () => {
         { title: "Payment Methods", path: "/help/payment-methods" },
         { title: "Support Plans", path: "/help/support-plans" },
         { title: "Refund Policy", path: "/help/refund-policy" }
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -713,7 +695,6 @@ const HelpCenter = () => {
     { id: 'cloud', name: 'Cloud & DevOps', icon: Network, count: 9 },
     { id: '5g', name: '5G Solutions', icon: Network, count: 6 },
     { id: 'general', name: 'General Support', icon: Users, count: 20 }
-=======
       name: 'Getting Started',
       description: 'Learn the basics and set up your account',
       icon: BookOpen,
@@ -804,7 +785,6 @@ const HelpCenter = () => {
   const faqs = [
     {
       icon: Phone,
-=======
       description: "Speak directly with our technical experts",
       icon: Phone,
       responseTime: "< 15 min",
@@ -897,7 +877,6 @@ const HelpCenter = () => {
       availability: "Mon-Fri 9AM-6PM EST",
       responseTime: "Scheduled",
       color: "from-orange-500 to-red-500"
-=======
       id: 'faq-1',
       question: 'How do I reset my password?',
       answer: 'To reset your password, go to the login page and click "Forgot Password". Enter your email address and we\'ll send you a secure link to reset your password. The link expires in 1 hour for security reasons.',
@@ -969,7 +948,6 @@ const HelpCenter = () => {
       color: 'from-orange-500 to-red-500'
     }
   ];
-=======
   CheckCircle,
   ArrowRight,
   ChevronDown,
@@ -1030,7 +1008,6 @@ export default function HelpCenter() {
       icon: Network,
       color: 'from-indigo-500 to-purple-500',
       description: 'Third-party integrations and APIs'
-=======
   Mail, 
   FileText,
   Video,
@@ -1311,7 +1288,6 @@ const HelpCenter = () => {
 
       id: 'getting-started',
       title: 'Getting Started',
-=======
       icon: BookOpen,
       description: 'Essential information to begin using our services',
       articles: [
@@ -1459,7 +1435,6 @@ const HelpCenter = () => {
       description: 'Best practices for optimal system performance',
       views: '1.2k',
       category: 'Performance'
-=======
     }
   ];
 
@@ -1508,7 +1483,6 @@ const HelpCenter = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Find answers to your questions, learn how to use our platform, and get the support you need.
-=======
 
 
       <div className="relative overflow-hidden">
@@ -1550,7 +1524,6 @@ const HelpCenter = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Find answers to your questions, get technical support, and access comprehensive 
               resources to make the most of our AI-powered solutions.
-=======
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -1567,7 +1540,6 @@ const HelpCenter = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, get technical support, and learn how to make the most of Zion Tech Group's innovative solutions.
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -1577,7 +1549,6 @@ const HelpCenter = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Find answers, get support, and learn how to make the most of our innovative solutions
-=======
       title: "Documentation",
       description: "Comprehensive guides and API references",
       icon: BookOpen,
@@ -1617,7 +1588,6 @@ const HelpCenter = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Find answers to your questions, access helpful resources, and get the support you need 
               to make the most of Zion Tech Group's innovative solutions.
-=======
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
@@ -1633,24 +1603,20 @@ const HelpCenter = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-=======
                   placeholder="Search for help articles, tutorials, or solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-12 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 backdrop-blur-sm text-lg"
-=======
                   placeholder="Search for help articles, FAQs, or topics..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-=======
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-=======
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: MessageCircle,
@@ -1702,7 +1668,6 @@ const HelpCenter = () => {
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-12">
-=======
   const filteredCategories = Object.entries(helpCategories).filter(([key, category]) =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article => 
@@ -1852,7 +1817,6 @@ export default function HelpCenter() {
       contact: 'Available on website',
       availability: 'Business hours',
       color: 'from-purple-500 to-pink-500'
-=======
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -1946,9 +1910,7 @@ export default function HelpCenter() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
-=======
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -2088,7 +2050,6 @@ export default function HelpCenter() {
                 </div>
               </div>
             ))}
-=======
       {/* Support Options */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2165,7 +2126,6 @@ export default function HelpCenter() {
               </div>
             </div>
           </motion.div>
-=======
       {/* Categories Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="text-center mb-16">
@@ -2390,9 +2350,6 @@ export default function HelpCenter() {
                   <p className="text-sm text-gray-500">Available: {channel.availability}</p>
                 </div>
               </div>
-=======
-=======
-=======
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
@@ -2446,7 +2403,6 @@ export default function HelpCenter() {
                 Explore Services
               </Link>
             </div>
-=======
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -2462,7 +2418,6 @@ export default function HelpCenter() {
       </section>
 
       {/* Support Channels Section */}
-=======
 
             {/* Quick Stats */}
             <div className="flex flex-wrap justify-center gap-6">
@@ -2518,7 +2473,6 @@ export default function HelpCenter() {
                 </button>
               </div>
             ))}
-=======
         {/* Categories Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2590,7 +2544,6 @@ export default function HelpCenter() {
                 </div>
               </motion.div>
             ))}
-=======
       {/* Additional Resources */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
@@ -2641,7 +2594,6 @@ export default function HelpCenter() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{article.title}</h3>
                   <p className="text-gray-300">{article.description}</p>
-=======
                   )}
                 </div>
               ))}
@@ -2666,7 +2618,6 @@ export default function HelpCenter() {
               </div>
             ))}
           </div>
-=======
       {/* Quick Support Channels */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Get Help Fast</h2>
@@ -2770,7 +2721,6 @@ export default function HelpCenter() {
                 </div>
               </Link>
             ))}
-=======
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -2808,7 +2758,6 @@ export default function HelpCenter() {
                 </button>
               </motion.div>
             ))}
-=======
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <Users className="w-8 h-8 text-white" />
@@ -2847,7 +2796,6 @@ export default function HelpCenter() {
                 )}
               </div>
             ))}
-=======
         {/* Categories Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2896,7 +2844,6 @@ export default function HelpCenter() {
                 );
               })}
             </div>
-=======
       {/* Categories */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2982,7 +2929,6 @@ export default function HelpCenter() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Can't find what you're looking for? Our expert support team is here to help you succeed.
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -2990,7 +2936,6 @@ export default function HelpCenter() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Our expert support team is here to help you succeed with our technologies.
-=======
         </div>
       </section>
 
@@ -3002,7 +2947,6 @@ export default function HelpCenter() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Our expert team is here to help you succeed. Get in touch for personalized assistance.
-=======
       {/* FAQs */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
@@ -3086,9 +3030,7 @@ export default function HelpCenter() {
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Find answers to common questions, access helpful resources, and get the support you need. 
@@ -3109,12 +3051,10 @@ export default function HelpCenter() {
             >
               <BookOpen className="w-5 h-5 mr-2" />
               View Documentation
-=======
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
             >
               Explore Our Services
             </Link>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -3133,13 +3073,11 @@ export default function HelpCenter() {
               <Mail className="w-5 h-5" />
               <span>Email Support</span>
             </button>
-=======
       {/* Popular Articles */}
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-3xl font-bold text-white text-center mb-12"
-=======
             ))}
           </div>
         </div>
@@ -3179,7 +3117,6 @@ export default function HelpCenter() {
               </button>
             </div>
           </motion.div>
-=======
             <h2 className="text-3xl font-bold text-white mb-4">
               Still Need Help?
             </h2>
@@ -3199,7 +3136,6 @@ export default function HelpCenter() {
       </section>
 
       {/* Contact Support CTA */}
-=======
       {/* Help Categories */}
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -3287,7 +3223,6 @@ export default function HelpCenter() {
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 Explore Services
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -3311,7 +3246,6 @@ export default function HelpCenter() {
         { title: 'Cybersecurity Solutions', path: '/help/cybersecurity' },
         { title: 'Cloud & Infrastructure', path: '/help/cloud-infrastructure' },
         { title: 'Digital Transformation', path: '/help/digital-transformation' }
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -3412,13 +3346,9 @@ export default function HelpCenter() {
 };
 
 export default HelpCenter;
-=======
 }
-=======
 }
-=======
 }
-=======
     </div>
   );
         </div>
@@ -3502,7 +3432,6 @@ export default HelpCenter;
             </div>
           </div>
         </div>
-=======
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -3601,8 +3530,6 @@ export default HelpCenter;
     </>
   );
 }
-=======
-=======
           {/* Help Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {helpCategories.map((category) => {
@@ -3686,11 +3613,9 @@ export default HelpCenter;
     </>
   );
 }
-=======
 };
 
 export default HelpCenter;
-=======
 // CreditCard icon component since it's not in lucide-react
 function CreditCard(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -3711,7 +3636,6 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-=======
   const quickLinks = [
     { title: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Get in touch with our support team' },
     { title: 'API Documentation', href: '/api-docs', icon: FileText, description: 'Developer resources and API guides' },

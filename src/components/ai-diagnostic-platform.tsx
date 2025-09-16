@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Zap, Target, Stethoscope, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -72,7 +74,10 @@ export default function AIDiagnosticPlatform() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
@@ -89,10 +94,13 @@ export default function AIDiagnosticPlatform() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.
             </p>
-          </divdiv>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -109,15 +117,17 @@ export default function AIDiagnosticPlatform() {
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
             </a>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -127,13 +137,15 @@ export default function AIDiagnosticPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
@@ -141,7 +153,7 @@ export default function AIDiagnosticPlatform() {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -150,8 +162,10 @@ export default function AIDiagnosticPlatform() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -161,13 +175,15 @@ export default function AIDiagnosticPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${
                   plan.popular 
@@ -203,7 +219,7 @@ export default function AIDiagnosticPlatform() {
                 <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
                   Get Started
                 </button>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -212,8 +228,10 @@ export default function AIDiagnosticPlatform() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -223,11 +241,13 @@ export default function AIDiagnosticPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -236,10 +256,12 @@ export default function AIDiagnosticPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -248,10 +270,12 @@ export default function AIDiagnosticPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -260,7 +284,7 @@ export default function AIDiagnosticPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>

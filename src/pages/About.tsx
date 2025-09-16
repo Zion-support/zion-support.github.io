@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   Rocket, 
@@ -96,22 +97,28 @@ export default function About() {
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           
           <div className="relative max-w-7xl mx-auto text-center">
-            <divh1
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
               Pioneering the Future of
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Technology
               </span>
-            </divh1>
+            </motion.h1>
             
-            <divp
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-slate-300 max-w-4xl mx-auto mb-8"
             >
               At Zion Tech Group, we're not just building technology – we're building the future. 
               Our mission is to democratize AI and cutting-edge technology, making it accessible 
               to businesses of all sizes.
-            </divp>
+            </motion.p>
           </div>
         </section>
 
@@ -120,8 +127,11 @@ export default function About() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <divdiv
+                <motion.div
                   key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center`}>
@@ -129,7 +139,7 @@ export default function About() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-slate-300">{stat.label}</div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -139,7 +149,10 @@ export default function About() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <divdiv
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-slate-300 mb-6">
@@ -160,9 +173,12 @@ export default function About() {
                     <p className="text-slate-300">Every solution we build is designed to deliver measurable business outcomes.</p>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
 
-              <divdiv
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-lg rounded-2xl border border-white/10 p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
@@ -184,7 +200,7 @@ export default function About() {
                     <span className="text-slate-300">Creating sustainable technology</span>
                   </div>
                 </div>
-              </divdiv>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -192,19 +208,25 @@ export default function About() {
         {/* Values Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 These principles guide everything we do, from developing solutions to serving our clients.
               </p>
-            </divdiv>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <divdiv
+                <motion.div
                   key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center`}>
@@ -212,7 +234,7 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-slate-300">{value.description}</p>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -221,22 +243,28 @@ export default function About() {
         {/* Timeline Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Journey</h2>
               <p className="text-xl text-slate-300">
                 From humble beginnings to industry leadership, here's how we've grown and evolved.
               </p>
-            </divdiv>
+            </motion.div>
 
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
               
               {timeline.map((item, index) => (
-                <divdiv
+                <motion.div
                   key={item.year}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative flex items-center mb-12 ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                   }`}
@@ -252,7 +280,7 @@ export default function About() {
                       <p className="text-slate-300">{item.description}</p>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -261,7 +289,10 @@ export default function About() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-lg rounded-2xl border border.white/10 p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -279,7 +310,7 @@ export default function About() {
                   View Careers
                 </button>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </section>
       </div>

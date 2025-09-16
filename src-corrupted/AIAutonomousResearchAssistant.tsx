@@ -1,7 +1,5 @@
 import React from 'react';
-=======
 import { Helmet } from 'react-helmet-async';
-=======
 import { 
   Brain, 
   Search, 
@@ -16,7 +14,6 @@ import {
   Star,
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
   FileText, 
   Database, 
   Globe, 
@@ -86,7 +83,6 @@ import {
   TestTube,
   Beaker
 } from 'lucide-react';
-=======
   Users,
   TrendingUp,
   Award,
@@ -122,7 +118,6 @@ import {
   TestTube
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
 import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } from 'lucide-react';
 
   Database,
@@ -131,7 +126,6 @@ import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } f
   BookOpen as BookOpenIcon,
   Search as SearchIcon,
   Brain as BrainIcon
-=======
   Globe, 
   BarChart3, 
   Cpu, 
@@ -146,7 +140,6 @@ import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } f
   Target,
   Shield
 } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
 
@@ -181,7 +174,6 @@ const AIAutonomousResearchAssistant = () => {
       icon: Search,
       title: "Intelligent Discovery",
       description: "Advanced algorithms that find relevant information across multiple data sources"
-=======
       title: "Autonomous Research",
       description: "AI-powered research that operates independently to discover new insights and connections."
     },
@@ -201,7 +193,6 @@ const AIAutonomousResearchAssistant = () => {
       title: "Real-time Analysis",
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
-=======
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
@@ -215,7 +206,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       title: "Global Knowledge Access",
       description: "Access to international research databases and cross-cultural insights"
       title: "AI-Powered Research",
-=======
       description: "Advanced artificial intelligence that autonomously conducts comprehensive research"
     },
     {
@@ -242,7 +232,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       icon: Globe,
       title: "Multi-Source Research",
       description: "Research across academic databases, industry reports, and web sources"
-=======
   BarChart3, 
   Globe, 
   Users, 
@@ -283,7 +272,6 @@ export default function AIAutonomousResearchAssistant() {
       icon: Globe,
       title: 'Global Knowledge',
       description: 'Access to worldwide research databases and academic resources'
-=======
       description: "Instant processing and analysis of research data with continuous learning and adaptation capabilities."
     },
     {
@@ -305,7 +293,6 @@ export default function AIAutonomousResearchAssistant() {
       icon: Globe,
       title: "Multi-Domain Expertise",
       description: "Comprehensive research capabilities across scientific, academic, business, and technical domains."
-=======
     }
   ];
 
@@ -318,7 +305,6 @@ export default function AIAutonomousResearchAssistant() {
       title: 'Data Mining',
       description: 'Intelligent extraction and processing of research data',
       features: ['Pattern recognition', 'Statistical analysis', 'Data validation', 'Insight generation']
-=======
       title: "Intelligent Literature Review",
       description: "AI-powered analysis of research papers, journals, and scientific literature",
       icon: BookOpen,
@@ -379,7 +365,6 @@ export default function AIAutonomousResearchAssistant() {
     {
       industry: 'Scientific Discovery',
       useCases: ['Experimental design', 'Data analysis', 'Hypothesis testing', 'Publication analysis']
-=======
       icon: Microscope,
       title: "Scientific Research",
       description: "Laboratory research, experimental design, data analysis, and scientific literature review."
@@ -453,7 +438,6 @@ export default function AIAutonomousResearchAssistant() {
       title: "Insight Generation",
       description: "AI-generated insights and recommendations based on comprehensive research analysis."
     }
-=======
       description: "AI-powered drug discovery and medical breakthrough research",
       icon: TestTube,
       impact: "50% faster trials"
@@ -469,7 +453,6 @@ export default function AIAutonomousResearchAssistant() {
       description: "Automated market analysis and competitive intelligence gathering",
       icon: Search,
       impact: "90% time savings"
-=======
     "Reduce research time by 70%",
     "Access to 100M+ research sources",
     "Real-time trend analysis",
@@ -593,7 +576,6 @@ export default function AIAutonomousResearchAssistant() {
     {
       title: "Legal Teams",
       description: "Comprehensive case research and precedent analysis"
-=======
     "Automated literature review and synthesis",
     "Intelligent hypothesis generation",
     "Research methodology optimization",
@@ -608,7 +590,6 @@ export default function AIAutonomousResearchAssistant() {
 
   const useCases = [
     {
-=======
       industry: "Academic Research",
       description: "Accelerate PhD research, streamline literature reviews, and enhance publication quality",
       benefits: ["50% faster research completion", "Improved citation accuracy", "Enhanced collaboration"]
@@ -673,11 +654,8 @@ export default function AIAutonomousResearchAssistant() {
       metric: '100+',
       label: 'Data Sources',
       description: 'Access to extensive research databases'
-=======
-=======
     }
   ];
-=======
 import { SEOHead } from '../components/SEOHead';
 import { HeroSection } from '../components/HeroSection';
 import { Link } from 'react-router-dom';
@@ -685,7 +663,6 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
 
 const AIAutonomousResearchAssistant = () => {
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
         <title>AI Autonomous Research Assistant - Zion Tech Group</title>
@@ -713,7 +690,6 @@ const AIAutonomousResearchAssistant = () => {
               Revolutionize your research process with our AI-powered autonomous research assistant. 
               Discover insights faster, analyze deeper, and stay ahead of the competition with 
               intelligent research automation.
-=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -728,7 +704,6 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionize your research with AI-powered autonomous research capabilities. 
               Discover insights faster, analyze data intelligently, and accelerate breakthroughs.
-=======
     <>
       <SEOHead 
         title="AI Autonomous Research Assistant - Zion Tech Group"
@@ -770,7 +745,6 @@ const AIAutonomousResearchAssistant = () => {
                   Request Demo
                 </Link>
               </div>
-=======
     <>
       <SEOHead 
         customData={{
@@ -822,7 +796,6 @@ const AIAutonomousResearchAssistant = () => {
                   <div className="text-xs text-gray-400">{stat.description}</div>
                 </div>
               ))}
-=======
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -948,7 +921,6 @@ const AIAutonomousResearchAssistant = () => {
               Experience the future of research with our revolutionary AI autonomous research assistant. 
               Conduct comprehensive research across multiple domains with unprecedented speed, accuracy, 
               and intelligence.
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -962,7 +934,6 @@ const AIAutonomousResearchAssistant = () => {
               <div className="p-3 bg-purple-500/20 rounded-full">
                 <Brain className="h-12 w-12 text-purple-300" />
               </div>
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg text-white font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
@@ -974,7 +945,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 Try Demo
               </Link>
-=======
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
@@ -985,14 +955,12 @@ const AIAutonomousResearchAssistant = () => {
               >
                 Schedule Demo
               </Link>
-=======
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/25">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 font-semibold rounded-xl transition-all duration-300">
                 Schedule Demo
               </button>
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -1018,7 +986,6 @@ const AIAutonomousResearchAssistant = () => {
               <button className="border-2 border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Watch Demo
               </Link>
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
@@ -1030,7 +997,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 View All Services
               </Link>
-=======
     "Scientific Research",
     "Market Analysis",
     "Academic Studies",
@@ -1040,7 +1006,6 @@ const AIAutonomousResearchAssistant = () => {
   ];
 
   return (
-=======
         </div>
         
         {/* Floating Elements */}
@@ -1052,7 +1017,6 @@ const AIAutonomousResearchAssistant = () => {
         </div>
         <div className="absolute bottom-20 left-1/4 animate-float">
           <div className="w-3 h-3 bg-indigo-400 rounded-full opacity-60"></div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -1121,7 +1085,6 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Our AI research assistant combines cutting-edge technology with intuitive design to 
               transform how research is conducted across industries.
-=======
         </div>
       </section>
 
@@ -1139,7 +1102,6 @@ const AIAutonomousResearchAssistant = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-=======
               <div key={index} className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
@@ -1150,7 +1112,6 @@ const AIAutonomousResearchAssistant = () => {
                 <p className="text-gray-600">
                   {feature.description}
                 </p>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1162,7 +1123,6 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </p>
           </motion.div>
           
@@ -1222,7 +1182,6 @@ const AIAutonomousResearchAssistant = () => {
                 <p className="text-gray-400 text-sm">
                   {benefit.description}
                 </p>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1232,16 +1191,12 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI research assistant combines cutting-edge artificial intelligence with 
               comprehensive data access to deliver unprecedented research capabilities.
-=======
-=======
-=======
             ))}
           </div>
         </div>
       </section>
 
       {/* Capabilities Section */}
-=======
       <section className="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1269,7 +1224,6 @@ const AIAutonomousResearchAssistant = () => {
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
                 <p className="text-gray-300 text-lg">{capability.description}</p>
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -1289,7 +1243,6 @@ const AIAutonomousResearchAssistant = () => {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -1336,7 +1289,6 @@ const AIAutonomousResearchAssistant = () => {
                     </li>
                   ))}
                 </ul>
-=======
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1356,7 +1308,6 @@ const AIAutonomousResearchAssistant = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-=======
       {/* Applications Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
@@ -1381,7 +1332,6 @@ const AIAutonomousResearchAssistant = () => {
                     </li>
                   ))}
                 </ul>
-=======
         {/* Features Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1533,7 +1483,6 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl border border-purple-100 hover:shadow-lg transition-all duration-300">
@@ -1552,7 +1501,6 @@ const AIAutonomousResearchAssistant = () => {
                     </div>
                   ))}
                 </div>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -1684,7 +1632,6 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-=======
       {/* Research Areas Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1707,7 +1654,6 @@ const AIAutonomousResearchAssistant = () => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Our AI research assistant is transforming research across diverse industries and applications.
-=======
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive research coverage across all major industries and domains
             </p>
@@ -1720,7 +1666,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1764,7 +1709,6 @@ const AIAutonomousResearchAssistant = () => {
                   <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
                 </div>
                 <p className="text-white font-medium">{tech.name}</p>
-=======
       {/* Research Areas Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1777,7 +1721,6 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           
-=======
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {researchAreas.map((area, index) => (
               <div key={index} className="text-center">
@@ -1787,7 +1730,6 @@ const AIAutonomousResearchAssistant = () => {
                 <h3 className="font-semibold text-gray-900 text-sm mb-2">{area.title}</h3>
                 <p className="text-gray-600 text-xs">{area.description}</p>
               </div>
-=======
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -1808,7 +1750,6 @@ const AIAutonomousResearchAssistant = () => {
                   ))}
                 </div>
               </motion.div>
-=======
             ))}
           </div>
         </div>
@@ -1822,7 +1763,6 @@ const AIAutonomousResearchAssistant = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join the research revolution with AI-powered autonomous research capabilities. 
             Our expert team is ready to help you implement cutting-edge research automation.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -1830,7 +1770,6 @@ const AIAutonomousResearchAssistant = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join the AI-powered research revolution and transform your research capabilities.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1853,7 +1792,6 @@ const AIAutonomousResearchAssistant = () => {
             >
               Schedule Demo
               <ArrowRight className="ml-2 w-5 h-5" />
-=======
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200"
             >
               View Pricing
@@ -1863,7 +1801,6 @@ const AIAutonomousResearchAssistant = () => {
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore All Services
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Schedule a Demo
@@ -1875,8 +1812,6 @@ const AIAutonomousResearchAssistant = () => {
             >
               Explore AI Services
             </Link>
-=======
-=======
       {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1915,7 +1850,6 @@ const AIAutonomousResearchAssistant = () => {
               <h3 className="font-semibold text-gray-900">Deep Learning</h3>
             </div>
           </div>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1941,7 +1875,6 @@ const AIAutonomousResearchAssistant = () => {
               </button>
             </div>
           </motion.div>
-=======
         </div>
       </section>
 
@@ -1960,7 +1893,6 @@ const AIAutonomousResearchAssistant = () => {
             </button>
             <button className="border-2 border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Schedule Demo
-=======
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Research?</h2>
@@ -1978,7 +1910,6 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-=======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -2002,7 +1933,6 @@ const AIAutonomousResearchAssistant = () => {
               </div>
             </div>
           </div>
-=======
         </section>
       </div>
     </>
@@ -2062,7 +1992,6 @@ const AIAutonomousResearchAssistant = () => {
         }
       `}</style>
     </div>
-=======
         </section>
       </div>
     </>

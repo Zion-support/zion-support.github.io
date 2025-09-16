@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const AbsoluteTechShowcase2031: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -118,7 +119,10 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 1.2 }}
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -130,19 +134,21 @@ const AbsoluteTechShowcase2031: React.FC = () => {
         
         {/* Absolute Particles */}
         {[...Array(60)].map((_, i) => (
-          <divdiv
+          <motion.div
             key={i}
             className="absolute w-6 h-6 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-60"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
+            animate={{
               scale: [0, 4, 0],
               opacity: [0, 1, 0],
               rotate: [0, 720],
               x: [0, Math.random() * 500 - 250, 0],
               y: [0, Math.random() * 500 - 250, 0],
             }}
+            transition={{
               duration: 12 + Math.random() * 6,
               repeat: Infinity,
               delay: Math.random() * 6,
@@ -154,30 +160,43 @@ const AbsoluteTechShowcase2031: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: isVisible ? 1 : 0 }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             🔮 ABSOLUTE TECH 2031
-          </divdiv>
-          <divh2
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ delay: 0.6 }}
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </divh2>
-          <divp
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ delay: 0.8 }}
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >
             Experience technologies that transcend the very concept of existence itself, 
             enabling creation of absolute realities, manipulation of all timelines, and achievement of true absolute existence
-          </divp>
+          </motion.p>
         </div>
 
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <motion.div
               key={currentTech}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ duration: 1 }}
               className="space-y-10"
             >
               <div className="flex items-center space-x-6">
@@ -200,31 +219,40 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {absoluteTechs[currentTech].features.map((feature, index) => (
-                  <divdiv
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1.2 + index * 0.1 }}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </divdiv>
+                  </motion.div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(absoluteTechs[currentTech].stats).map(([key, value], index) => (
-                  <divdiv
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.6 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </motion.div>
                 ))}
               </div>
-            </divdiv>
+            </motion.div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2 }}
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${absoluteTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -248,18 +276,20 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 
                 {/* Absolute Energy Effects */}
                 {[...Array(70)].map((_, i) => (
-                  <divdiv
+                  <motion.div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-80"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+                    animate={{
                       scale: [0, 5, 0],
                       opacity: [0, 1, 0],
                       x: [0, Math.random() * 500 - 250, 0],
                       y: [0, Math.random() * 500 - 250, 0],
                     }}
+                    transition={{
                       duration: 6 + Math.random() * 5,
                       repeat: Infinity,
                       delay: Math.random() * 7,
@@ -267,7 +297,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   />
                 ))}
               </div>
-            </divdiv>
+            </motion.div>
           </div>
 
           {/* Navigation Dots */}
@@ -286,7 +316,10 @@ const AbsoluteTechShowcase2031: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ delay: 2 }}
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -303,10 +336,10 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

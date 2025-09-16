@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryContentShowcase = () => {
   const [activeContent, setActiveContent] = useState(0);
@@ -67,8 +68,11 @@ const RevolutionaryContentShowcase = () => {
         </div>
 
         {/* Active Content Display */}
-        <divdiv
+        <motion.div
           key={activeContent}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -117,7 +121,7 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

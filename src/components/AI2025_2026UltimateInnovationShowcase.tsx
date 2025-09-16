@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -132,7 +133,10 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -147,26 +151,32 @@ const AI2025_2026UltimateInnovationShowcase = () => {
               Experience the future of artificial intelligence today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <divbutton
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
               >
                 Explore Innovations
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </divbutton>
-              <divbutton
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-400/10 transition-all duration-300"
               >
                 Watch Demo
-              </divbutton>
+              </motion.button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Innovation Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -175,14 +185,16 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the most advanced AI innovations that will define the next decade
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Innovation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <divdiv
+            <motion.div
               key={innovation.id}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
             >
               <div className="absolute inset-0 bg-black/20 rounded-2xl" />
@@ -204,42 +216,50 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                   <p className="text-white font-semibold">Impact: {innovation.impact}</p>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Breakthrough Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {breakthroughStats.map((statindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0scale: 0.8 }}
                 whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <stat.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Use Cases Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-4xl font-bold text-center mb-12">Real-World Applications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCaseindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
@@ -258,14 +278,16 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -275,19 +297,23 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             Join thousands of innovators who are already transforming their industries with our AI solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <divbutton
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
             >
               Start Your Innovation Journey
               <Rocket className="w-5 h-5 ml-2 inline" />
-            </divbutton>
-            <divbutton
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
             >
               Schedule Demo
-            </divbutton>
+            </motion.button>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

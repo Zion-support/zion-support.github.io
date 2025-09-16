@@ -7,10 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useState } from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices';
-=======
 import React, { useState } from 'react';
 import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService } from '@/data/enhancedServices';
-=======
 import React, { useState } from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices';
 import { ProductListing } from '@/types/listings';
@@ -20,8 +18,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-=======
-=======
 import { 
   ENHANCED_SERVICES, 
   getServicesByCategory, 
@@ -119,11 +115,9 @@ const EnhancedServicesPage: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricingModel === 'all' || service.pricingModel === selectedPricingModel;
     const matchesSupport = selectedSupportLevel === 'all' || service.supportLevel === selectedSupportLevel;
-=======
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricing === 'all' || 
                           (selectedPricing === 'budget' && service.price < 1000) ||
@@ -396,7 +390,6 @@ const EnhancedServicesPage: React.FC = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-=======
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI Automation': <Brain className="w-5 h-5" />,
@@ -449,7 +442,6 @@ const EnhancedServicesPage: React.FC = () => {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               View Case Studies
-=======
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -487,7 +479,6 @@ const EnhancedServicesPage: React.FC = () => {
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
-=======
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -541,7 +532,6 @@ const EnhancedServicesPage: React.FC = () => {
         return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' };
       default:
         return { text: 'Standard', color: 'bg-gray-100 text-gray-800' };
-=======
   Users, 
   Zap, 
   TrendingUp, 
@@ -1014,7 +1004,6 @@ function ServiceCard({ service }: ServiceCardProps) {
               <p className="text-zion-slate">Certified professionals with deep industry expertise</p>
             </div>
           </div>
-=======
 
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -1043,7 +1032,6 @@ function ServiceCard({ service }: ServiceCardProps) {
             }}>
               Clear Filters
             </Button>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1284,7 +1272,6 @@ function ServiceCard({ service }: ServiceCardProps) {
               Call +1 302 464 0950
             </Button>
           </div>
-=======
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -1343,15 +1330,11 @@ function ServiceCard({ service }: ServiceCardProps) {
     </div>
   );
 }
-=======
 }
-=======
 }
-=======
 };
 
 export default EnhancedServicesPage;
-=======
     <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
       <div className="relative">
         <img 

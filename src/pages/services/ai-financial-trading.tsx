@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
   DollarSign, 
@@ -146,7 +147,10 @@ export default function AIFinancialTrading() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Financial Trading Platform
@@ -170,7 +174,7 @@ export default function AIFinancialTrading() {
                 Watch Demo
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 
@@ -188,14 +192,16 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
                 <p className="text-white text-lg font-medium">{benefit}</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -215,9 +221,11 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 group"
               >
                 <div className="text-yellow-400 mb-4 group-hover:text-yellow-300 transition-colors duration-300">
@@ -225,7 +233,7 @@ export default function AIFinancialTrading() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -245,9 +253,11 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {tradingStrategies.map((strategy, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{strategy.strategy}</h3>
@@ -256,7 +266,7 @@ export default function AIFinancialTrading() {
                   <TrendingUp className="w-5 h-5 text-yellow-400 mr-2" />
                   <span className="text-yellow-400 font-semibold">{strategy.performance}</span>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -276,9 +286,11 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-yellow-500 ring-2 ring-yellow-500/20' 
@@ -320,7 +332,7 @@ export default function AIFinancialTrading() {
                 >
                   Get Started
                 </a>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -330,8 +342,10 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Trading Solution
@@ -366,10 +380,12 @@ export default function AIFinancialTrading() {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
             
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Performance Metrics</h3>
@@ -391,7 +407,7 @@ export default function AIFinancialTrading() {
                   <span className="text-green-400 font-semibold">80%</span>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -399,8 +415,10 @@ export default function AIFinancialTrading() {
       {/* Contact CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 border border-yellow-500/30"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -425,7 +443,7 @@ export default function AIFinancialTrading() {
                 Call Now
               </a>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentSearch2025: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -142,7 +143,10 @@ const EnhancedContentSearch2025: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
       {/* Search Form */}
-      <divform
+      <motion.form
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
         onSubmit={handleSearch}
         className="bg-white rounded-2xl shadow-lg p-8 mb-8"
       >
@@ -189,12 +193,16 @@ const EnhancedContentSearch2025: React.FC = () => {
             ))}
           </div>
         </div>
-      </divform>
+      </motion.form>
 
       {/* Search Results */}
-      <div>
+      <AnimatePresence>
         {showResults && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
             className="space-y-4"
           >
             <div className="flex items-center justify-between mb-6">
@@ -220,8 +228,11 @@ const EnhancedContentSearch2025: React.FC = () => {
             ) : (
               <div className="grid gap-4">
                 {filteredResults.map((item, index) => (
-                  <divdiv
+                  <motion.div
                     key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
                   >
                     <div className="flex items-start justify-between mb-4">
@@ -253,16 +264,19 @@ const EnhancedContentSearch2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </divdiv>
+                  </motion.div>
                 ))}
               </div>
             )}
-          </divdiv>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
 
       {/* Quick Access */}
-      <divdiv
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6"
       >
         <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Access</h3>
@@ -285,7 +299,7 @@ const EnhancedContentSearch2025: React.FC = () => {
             </a>
           ))}
         </div>
-      </divdiv>
+      </motion.div>
     </div>
   );
 };

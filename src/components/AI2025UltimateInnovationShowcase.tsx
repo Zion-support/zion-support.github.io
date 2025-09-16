@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -53,7 +54,10 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
   ];
 
   return (
-    <divdiv
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
     >
       {/* Background Effects */}
@@ -61,7 +65,10 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.2duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -74,13 +81,16 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <divdiv
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+              transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl"
@@ -93,32 +103,41 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{innovation.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{innovation.metrics}</div>
               </div>
-            </divdiv>
+            </motion.div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.8duration: 0.8 }}
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Proven Results & Impact</h2>
           <div className="grid md:grid-cols-5 gap-6">
             {benefits.map((benefitindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+                transition={{ delay: 1 + index * 0.1duration: 0.5 }}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gray-700 rounded-xl mb-4">
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
                 </div>
                 <p className="text-white font-semibold text-sm">{benefit.text}</p>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 1.2duration: 0.8 }}
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -139,9 +158,9 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join thousands of enterprises already transforming with our AI innovations
           </p>
-        </divdiv>
+        </motion.div>
       </div>
-    </divdiv>
+    </motion.div>
   );
 };
 

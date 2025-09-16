@@ -51,7 +51,6 @@ export default function HelpCenter() {
               
 
 
-=======
               
               {selectedCategory && !selectedArticle && (
                 <>
@@ -107,7 +106,6 @@ export default function HelpCenter() {
                       the bottom right of any page, by emailing
                       support@ziontechgroup.com, or by scheduling a call with
                       our team through the Contact tab.
-=======
                     ← All Categories
                   </Button>
                   <HelpArticleList 
@@ -192,6 +190,5 @@ export default function HelpCenter() {
     </AppLayout>
 
 
-=======
   );
 }

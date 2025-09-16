@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -15,9 +16,11 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 import React, { useState } from './react';
 import Link from './next / link';
+import { motion, AnimatePresence  } from './framer-motion';
 
 import {
   Menu,
@@ -62,6 +65,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
 
@@ -563,9 +567,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isServicesOpen && (;
-                    <motion&& divdiv
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -591,9 +598,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isServicesOpen && (
-                    <divdiv;
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: 10 }}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -605,7 +615,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <a;
                               key={index}
 
-                </div>;
+                </AnimatePresence>;
               </div>;
 
 
@@ -619,9 +629,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isSolutionsOpen && (;
-                    <motion&& divdiv
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -653,8 +666,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
-                </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
               </div>;
               {/* Solutions Dropdown */}
               <div className="relative group">;
@@ -666,9 +679,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isSolutionsOpen && (
-                    <divdiv;
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: 10 }}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -680,7 +696,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <a;
                               key={index}
 
-                </div>;
+                </AnimatePresence>;
               </div>;
 
 
@@ -694,9 +710,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Industries;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isIndustriesOpen && (;
-                    <motion&& divdiv
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -716,10 +735,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && motion.div>;
                   )}
 
-                </div>;
+                </AnimatePresence>;
               </div>;
 
 
@@ -733,9 +752,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Resources;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isResourcesOpen && (;
-                    <motion&& divdiv
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -755,10 +777,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && motion.div>;
                   )}
 
-                </div>
+                </AnimatePresence>
               </div>
               <a
                 href="/pricing"
@@ -767,7 +789,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </a>
             </div>
-                </div>;
+                </AnimatePresence>;
               </div>;
 
 
@@ -830,9 +852,12 @@ origin/automation-improvements-final
 
 
           {/* Mobile Menu */}
-          <div>;
+          <AnimatePresence>;
             {isMenuOpen && (;
-              <motion&& divdiv
+              <motion&& motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <a
@@ -974,8 +999,8 @@ origin/automation-improvements-final
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
-                </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
               </div>;
               {/* Industries Dropdown */}
               <div className="relative group">;
@@ -987,9 +1012,12 @@ origin/automation-improvements-final
                   Industries;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isIndustriesOpen && (
-                    <divdiv;
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: 10 }}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -1009,8 +1037,8 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
-                </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
               </div>;
               {/* Resources Dropdown */}
               <div className="relative group">;
@@ -1022,9 +1050,12 @@ origin/automation-improvements-final
                   Resources;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <div>;
+                <AnimatePresence>;
                   {isResourcesOpen && (
-                    <divdiv;
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: 10 }}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -1044,8 +1075,8 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
-                </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
               </div>;
               <a;
                 href="/pricing";
@@ -1087,9 +1118,12 @@ origin/automation-improvements-final
             </button>;
           </div>;
           {/* Mobile Menu */}
-          <div>;
+          <AnimatePresence>;
             {isMenuOpen && (
-              <divdiv;
+              <motion.div;
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -1193,7 +1227,7 @@ origin/automation-improvements-final
                   </div>;
                 </div>;
 
-          </div>;
+          </AnimatePresence>;
         </div>;
       </nav>;
 
@@ -1205,8 +1239,8 @@ origin/automation-improvements-final
       />;
     </>;
   );
-              </divdiv>)}
-          </div>;
+              </motion.div>)}
+          </AnimatePresence>;
         </div>;
       </nav>;
       {/* Search Modal */}

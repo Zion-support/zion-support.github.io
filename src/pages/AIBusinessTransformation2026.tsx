@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AIBusinessTransformation2026: React.FC = () => {
   return (
@@ -7,7 +8,10 @@ const AIBusinessTransformation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -27,23 +31,29 @@ const AIBusinessTransformation2026: React.FC = () => {
                 View Case Studies
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* AI Transformation Pillars */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-6">🚀 AI Transformation Pillars</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our comprehensive AI transformation framework addresses every aspect of your business operations
           </p>
-        </divdiv>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-6 text-center">🧠</div>
@@ -57,9 +67,12 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Smart routing</li>
               <li>• Exception handling</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-6 text-center">📊</div>
@@ -73,9 +86,12 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Risk assessment</li>
               <li>• Demand planning</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-6 text-center">💬</div>
@@ -89,9 +105,12 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Sentiment analysis</li>
               <li>• Proactive support</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-6 text-center">🛡️</div>
@@ -105,11 +124,14 @@ const AIBusinessTransformation2026: React.FC = () => {
               <li>• Fraud prevention</li>
               <li>• Compliance automation</li>
             </ul>
-          </divdiv>
+          </motion.div>
         </div>
 
         {/* Success Metrics */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30"
         >
           <div className="text-center mb-12">
@@ -141,10 +163,13 @@ const AIBusinessTransformation2026: React.FC = () => {
               <div className="text-sm text-orange-200">AI-powered support</div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Industry Solutions */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
           <div className="text-center mb-12">
@@ -227,10 +252,13 @@ const AIBusinessTransformation2026: React.FC = () => {
               </ul>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Implementation Roadmap */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
         >
           <div className="text-center mb-12">
@@ -262,10 +290,13 @@ const AIBusinessTransformation2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Continuous improvement and scaling of AI capabilities</p>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -281,7 +312,7 @@ const AIBusinessTransformation2026: React.FC = () => {
               Download AI Guide
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

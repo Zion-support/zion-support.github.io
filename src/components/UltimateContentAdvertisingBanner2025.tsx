@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
   ArrowRight
@@ -88,39 +89,59 @@ const UltimateContentAdvertisingBanner2025 = () => {
       <div className="absolute bottom-20 left-32 w-12 h-12 bg-pink-500/30 rounded-full animate-bounce delay-2000" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <divdiv
+        <AnimatePresence mode="wait">
+          <motion.div
             key={currentSlide}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
             {/* Main Content */}
             <div className="mb-8">
-              <divdiv
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2type: "spring"stiffness: 200 }}
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
-              </divdiv>
+              </motion.div>
               
-              <divh2
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
               >
                 {currentContent.title}
-              </divh2>
+              </motion.h2>
               
-              <divp
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-blue-100 mb-6"
               >
                 {currentContent.subtitle}
-              </divp>
+              </motion.p>
               
-              <divp
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto"
               >
                 {currentContent.description}
-              </divp>
+              </motion.p>
             </div>
 
             {/* Stats and CTA */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
             >
               <div className="flex items-center gap-2 text-yellow-400">
@@ -142,10 +163,13 @@ const UltimateContentAdvertisingBanner2025 = () => {
                   Watch Demo
                 </button>
               </div>
-            </divdiv>
+            </motion.div>
 
             {/* Additional CTAs */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
               className="flex flex-wrap justify-center gap-4"
             >
               <a
@@ -171,9 +195,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
                 <Users className="w-4 h-4" />
                 Join Webinar
               </a>
-            </divdiv>
-          </divdiv>
-        </div>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">

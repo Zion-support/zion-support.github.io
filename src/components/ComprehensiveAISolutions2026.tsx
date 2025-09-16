@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -177,7 +178,10 @@ const ComprehensiveAISolutions2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -198,10 +202,13 @@ const ComprehensiveAISolutions2026 = () => {
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
-        </divdiv>
+        </motion.div>
 
         {/* Solutions Navigation */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -224,8 +231,13 @@ const ComprehensiveAISolutions2026 = () => {
           </div>
 
           {/* Solution Details */}
-            <divdiv
+          <AnimatePresence mode="wait">
+            <motion.div
               key={activeSolution}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
+              transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
               <div className="grid lg:grid-cols-2 gap-12">
@@ -300,12 +312,15 @@ const ComprehensiveAISolutions2026 = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
-          </div>
-        </divdiv>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Industries Section */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -313,8 +328,11 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                 className="text-center group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -322,13 +340,16 @@ const ComprehensiveAISolutions2026 = () => {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
                 <div className="text-gray-400 text-sm">{industry.name}</div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Testimonials */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -336,8 +357,11 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-1 mb-4">
@@ -351,13 +375,16 @@ const ComprehensiveAISolutions2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-blue-400 text-sm">{testimonial.company}</div>
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -382,7 +409,7 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

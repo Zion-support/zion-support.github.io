@@ -38,7 +38,6 @@ export default function AffiliateTracking(...args: unknow n[]): unknown {  const
         'Custom data retention + warehouse sync',;
         'Dedicated CSM and 99.9% SLA';
       ]};
-=======
       bullets: [;'
         'Unlimited partners and campaigns',;'
         'SAML SSO and audit trails',;'

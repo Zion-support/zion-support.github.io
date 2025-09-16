@@ -181,7 +181,6 @@ export default function TalentPage() {
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-=======
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div

@@ -1,109 +1,113 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryContentBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const contentSlides = [
+  const [currentBanner, setCurrentBanner] = useState(0);
+  
+  const banners = [
     {
-      title: "🚀 Ultimate Tech Breakthrough 2025",
-      subtitle: "Revolutionary Innovation",
-      description: "Experience the most groundbreaking technological breakthroughs that are reshaping our world",
-      link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🚀"
+      title: "🚀 Revolutionary Tech Breakthrough 2025",
+      description: "Discover the most groundbreaking technological innovations reshaping our digital future",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      gradient: "from-purple-600 to-pink-600",
+      textColor: "text-white"
     },
     {
-      title: "🌟 Innovation Showcase 2025",
-      subtitle: "Cutting-Edge Technology",
-      description: "Discover the most innovative technologies that are transforming industries and creating new possibilities",
-      link: "/pages/InnovationShowcase2025",
-      color: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "🌟"
+      title: "🌟 Ultimate Tech Showcase 2026",
+      description: "Experience the ultimate showcase of cutting-edge technology innovations for 2026",
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-cyan-600 to-blue-600",
+      textColor: "text-white"
     },
     {
-      title: "⚡ Revolutionary Services 2025",
-      subtitle: "Next-Gen Solutions",
-      description: "Transform your business with our groundbreaking services that are reshaping industries",
-      link: "/pages/RevolutionaryServices2025",
-      color: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "⚡"
+      title: "🧪 Next-Gen Innovation Hub 2026",
+      description: "Welcome to the world's most advanced innovation hub where the future is being created",
+      link: "/pages/NextGenInnovationHub2026",
+      gradient: "from-green-600 to-teal-600",
+      textColor: "text-white"
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
+    return () => clearInterval(interval);
+  }, [banners.length]);
 
   return (
-    <>
-      <Helmet>
-        <title>Revolutionary Content 2025 - Latest Innovations</title>
-        <meta name="description" content="Discover our revolutionary new content featuring the latest technological breakthroughs and innovations of 2025." />
-      </Helmet>
-      
-      <div className="relative overflow-hidden mb-12">
-        {/* Main Banner */}
-        <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-              <h2 className="text-3xl font-bold">{contentSlides[currentSlide].title}</h2>
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+    <div className="relative overflow-hidden mb-12">
+      <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 text-white relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 NEW REVOLUTIONARY CONTENT • JANUARY 2025
             </div>
-            <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-              {contentSlides[currentSlide].description}
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Experience the Future of Technology
+            </h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Discover our latest revolutionary content showcasing the most advanced technological innovations 
+              that are reshaping industries and creating new possibilities for humanity.
             </p>
-            <div className="flex justify-center space-x-4 mb-6">
-              <a 
-                href={contentSlides[currentSlide].link}
-                className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold border border-white/30"
+          </div>
+          
+          {/* Banner Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden rounded-xl">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentBanner * 100}%)` }}
               >
-                Explore {contentSlides[currentSlide].subtitle} →
-              </a>
-              <button className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
-                Watch Demo
-              </button>
+                {banners.map((banner, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className={`bg-gradient-to-r ${banner.gradient} p-8 rounded-xl`}>
+                      <div className="text-center">
+                        <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
+                        <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
+                        <a 
+                          href={banner.link}
+                          className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                        >
+                          Explore Now →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2">
-              {contentSlides.map((_, index) => (
+            {/* Banner Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {banners.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => setCurrentBanner(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    index === currentBanner ? 'bg-white' : 'bg-white/50'
                   }`}
                 />
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Quick Access Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          {contentSlides.map((slide, index) => (
-            <a
-              key={index}
-              href={slide.link}
-              className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 border border-white/20 group`}
-            >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{slide.icon}</div>
-              <h3 className="text-lg font-bold text-white mb-2">{slide.title}</h3>
-              <p className="text-white/80 text-sm mb-4">{slide.subtitle}</p>
-              <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
-                Explore Now →
-              </div>
-            </a>
-          ))}
+          
+          {/* Quick Access Links */}
+          <div className="mt-8 grid md:grid-cols-3 gap-4">
+            {banners.map((banner, index) => (
+              <a
+                key={index}
+                href={banner.link}
+                className={`bg-gradient-to-r ${banner.gradient} p-4 rounded-lg hover:shadow-lg transition-all duration-300 text-center`}
+              >
+                <div className="text-white font-semibold text-lg">{banner.title}</div>
+                <div className="text-white/80 text-sm mt-1">Click to explore</div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

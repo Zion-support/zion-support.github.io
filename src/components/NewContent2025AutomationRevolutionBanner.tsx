@@ -1,9 +1,13 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion } from 'framer-motion';
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
-    <divsection
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden"
     >
       {/* Background Pattern */}
@@ -13,29 +17,41 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
-          <divdiv
+          <motion.div
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
-          </divdiv>
+          </motion.div>
           
-          <divh2
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             AI 2025 Automation Revolution
-          </divh2>
+          </motion.h2>
           
-          <divp
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Discover the complete guide to enterprise automation transformation. 
             Learn how leading companies achieve 1200% ROI with AI-powered solutions.
-          </divp>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Content Card */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -67,10 +83,13 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Read Complete Guide
               <span className="ml-2">→</span>
             </a>
-          </divdiv>
+          </motion.div>
 
           {/* Case Study Card */}
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -107,11 +126,14 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               View Case Study
               <span className="ml-2">→</span>
             </a>
-          </divdiv>
+          </motion.div>
         </div>
 
         {/* Key Statistics */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           <div className="text-center">
@@ -130,10 +152,13 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Call to Action */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,9 +175,9 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Get Implementation Consultation
             </a>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
-    </divsection>
+    </motion.section>
   );
 };
 

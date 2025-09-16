@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedAIRevolution2027: React.FC = () => {
   return (
@@ -9,7 +10,10 @@ const AdvancedAIRevolution2027: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -33,14 +37,16 @@ const AdvancedAIRevolution2027: React.FC = () => {
                 🌟 Consciousness AI
               </span>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -49,7 +55,7 @@ const AdvancedAIRevolution2027: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are transforming every aspect of human existence
           </p>
-        </divdiv>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
@@ -90,9 +96,11 @@ const AdvancedAIRevolution2027: React.FC = () => {
               features: ["Interstellar navigation", "Civilization management", "Resource optimization", "Universal communication"]
             }
           ].map((feature, index) => (
-            <divdiv
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300"
             >
               <div className="text-6xl mb-6 text-center">{feature.icon}</div>
@@ -106,7 +114,7 @@ const AdvancedAIRevolution2027: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </divdiv>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -114,18 +122,22 @@ const AdvancedAIRevolution2027: React.FC = () => {
       {/* Technology Showcase */}
       <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Revolutionary Technology Stack
             </h2>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
             >
               <h3 className="text-3xl font-bold mb-6 text-purple-300">Advanced AI Architecture</h3>
               <div className="space-y-4">
@@ -143,10 +155,12 @@ const AdvancedAIRevolution2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold mb-6 text-center text-purple-300">Performance Metrics</h3>
@@ -170,15 +184,17 @@ const AdvancedAIRevolution2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-3xl p-12"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -195,7 +211,7 @@ const AdvancedAIRevolution2027: React.FC = () => {
               Learn More
             </button>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </div>
   );

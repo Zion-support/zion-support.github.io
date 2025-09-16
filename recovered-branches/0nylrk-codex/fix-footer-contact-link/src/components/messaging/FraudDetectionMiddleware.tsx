@@ -14,7 +14,6 @@ interface FraudDetectionContextType {;
     userEmail?: string;
   ) => Promise<{;
     isSafe: boolean,;
-=======
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent } from '@/services/fraud';
 import { toast } from '@/hooks/use-toast';
@@ -73,7 +72,6 @@ export const useFraudDetection = () => {
 export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
   if (context === undefined) {;
-=======
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AITrendsInsights2025: React.FC = () => {
   const trends = [
@@ -162,7 +163,10 @@ const AITrendsInsights2025: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6">
@@ -182,15 +186,17 @@ const AITrendsInsights2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Key Trends Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -199,13 +205,15 @@ const AITrendsInsights2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore the most significant AI trends that will define the next decade of technological innovation.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="text-4xl mb-4">{trend.icon}</div>
@@ -232,7 +240,7 @@ const AITrendsInsights2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -241,8 +249,10 @@ const AITrendsInsights2025: React.FC = () => {
       {/* Case Studies Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -251,13 +261,15 @@ const AITrendsInsights2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Real-world implementations of AI technologies delivering measurable business value.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{study.company}</h3>
@@ -283,7 +295,7 @@ const AITrendsInsights2025: React.FC = () => {
                 <div className="text-sm text-purple-600 font-semibold">
                   Implementation: {study.timeline}
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -292,8 +304,10 @@ const AITrendsInsights2025: React.FC = () => {
       {/* Insights Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -302,13 +316,15 @@ const AITrendsInsights2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Data-driven insights into the AI market, technology adoption, and industry impact.
             </p>
-          </divdiv>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {insights.map((insight, index) => (
-              <divdiv
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -326,7 +342,7 @@ const AITrendsInsights2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -335,8 +351,10 @@ const AITrendsInsights2025: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?
@@ -352,7 +370,7 @@ const AITrendsInsights2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </section>
     </div>

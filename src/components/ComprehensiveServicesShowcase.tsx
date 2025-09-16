@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
@@ -74,8 +75,10 @@ export default function ComprehensiveServicesShowcase() {
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -119,11 +122,13 @@ export default function ComprehensiveServicesShowcase() {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Search and Filters */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="mb-12"
         >
@@ -173,11 +178,13 @@ export default function ComprehensiveServicesShowcase() {
               </div>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Category Filter */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="mb-12"
         >
@@ -198,15 +205,19 @@ export default function ComprehensiveServicesShowcase() {
               </button>
             ))}
           </div>
-        </divdiv>
+        </motion.div>
 
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div>
+            <AnimatePresence>
               {filteredServices.map((service, index) => (
-                <divdiv
+                <motion.div
                   key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Popular Badge */}
@@ -267,16 +278,20 @@ export default function ComprehensiveServicesShowcase() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
-            </div>
+            </AnimatePresence>
           </div>
         ) : (
           <div className="space-y-6">
-            <div>
+            <AnimatePresence>
               {filteredServices.map((service, index) => (
-                <divdiv
+                <motion.div
                   key={service.id}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 30 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                 >
                   <div className="flex flex-col lg:flex-row gap-6">
@@ -352,26 +367,30 @@ export default function ComprehensiveServicesShowcase() {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </motion.div>
               ))}
-            </div>
+            </AnimatePresence>
           </div>
         )}
 
         {/* No Results */}
         {filteredServices.length === 0 && (
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="text-center py-20"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
-          </divdiv>
+          </motion.div>
         )}
 
         {/* Contact CTA */}
-        <divdiv
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
@@ -398,7 +417,7 @@ export default function ComprehensiveServicesShowcase() {
               </a>
             </div>
           </div>
-        </divdiv>
+        </motion.div>
       </div>
     </section>
   );

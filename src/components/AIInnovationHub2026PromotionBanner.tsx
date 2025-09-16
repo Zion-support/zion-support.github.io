@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   ArrowRight
@@ -91,8 +92,11 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div>
-      <divdiv
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"
       >
         {/* Background Pattern */}
@@ -107,7 +111,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0x: -50 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-white"
             >
               <div className="flex items-center mb-6">
@@ -132,8 +139,11 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 {stats.map((statindex) => {
                   const Icon = stat.icon;
                   return (
-                    <divdiv
+                    <motion.div
                       key={stat.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                     >
                       <div className="flex items-center mb-2">
@@ -141,30 +151,37 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         <span className="text-sm text-gray-300">{stat.label}</span>
                       </div>
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    </divdiv>
+                    </motion.div>
                   );
                 })}
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <divbutton
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-yellow-300 transition-colors"
                 >
                   Explore Innovations
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </divbutton>
-                <divbutton
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-white/30 transition-colors border border-white/30"
                 >
                   <Play className="h-5 w-5 mr-2" />
                   Watch Demo
-                </divbutton>
+                </motion.button>
               </div>
-            </divdiv>
+            </motion.div>
 
             {/* Right Content - Interactive Innovation Showcase */}
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="relative"
             >
               {/* Innovation Categories */}
@@ -177,14 +194,17 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   {categories.map((categoryindex) => {
                     const Icon = category.icon;
                     return (
-                      <divdiv
+                      <motion.div
                         key={category.name}
+                        initial={{ opacity: 0scale: 0.8 }}
+                        animate={{ opacity: 1scale: 1 }}
+                        transition={{ duration: 0.5delay: index * 0.1 }}
                         className="bg-white/5 rounded-xl p-4 text-center hover:bg-white/10 transition-colors cursor-pointer group"
                       >
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                         <div className="text-white font-semibold">{category.name}</div>
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>
-                      </divdiv>
+                      </motion.div>
                     );
                   })}
                 </div>
@@ -192,8 +212,13 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
               {/* Rotating Innovation Highlight */}
               <div className="relative h-40 bg-gradient-to-r from-yellow-400/20 to-pink-400/20 rounded-xl overflow-hidden">
-                  <divdiv
+                <AnimatePresence mode="wait">
+                  <motion.div
                     key={currentInnovation}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -50 }}
+                    transition={{ duration: 0.5 }}
                     className="absolute inset-0 flex items-center justify-center p-6"
                   >
                     <div className="text-center">
@@ -212,8 +237,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         Impact: {innovations[currentInnovation].impact}
                       </p>
                     </div>
-                  </divdiv>
-                </div>
+                  </motion.div>
+                </AnimatePresence>
                 
                 {/* Innovation Indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -230,33 +255,39 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
 
               {/* Floating Innovation Icons */}
-              <divdiv
+              <motion.div
+                animate={{ 
                   y: [0-10],
                   rotate: [050]
                 }}
+                transition={{ duration: 4repeat: Infinityease: "easeInOut" }}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
                 <Brain className="h-6 w-6" />
-              </divdiv>
+              </motion.div>
               
-              <divdiv
+              <motion.div
+                animate={{ 
                   y: [010],
                   rotate: [0-50]
                 }}
+                transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 }}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
                 <Atom className="h-6 w-6" />
-              </divdiv>
+              </motion.div>
 
-              <divdiv
+              <motion.div
+                animate={{ 
                   y: [0-150],
                   x: [050]
                 }}
+                transition={{ duration: 5repeat: Infinityease: "easeInOut"delay: 2 }}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >
                 <Network className="h-5 w-5" />
-              </divdiv>
-            </divdiv>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 
@@ -270,8 +301,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
-      </divdiv>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

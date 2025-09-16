@@ -121,7 +121,6 @@ const AdvancedServicesShowcase: React.FC = () => {
     if (service.category.includes('AI')) return 'ai-services';
     if (service.category.includes('Infrastructure') || service.category.includes('Cloud') || service.category.includes('DevOps')) return 'it-infrastructure';
     return 'micro-saas';
-=======
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
