@@ -1,88 +1,167 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const technologies = [
+  const showcases = [
     {
-      id: 'ai-systems',
-      name: 'Advanced AI Systems',
-      icon: '🤖',
-      description: 'Revolutionary AI with autonomous learning and quantum processing',
-      features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/30 to-pink-600/30'
+      title: 'Conscious AI Systems',
+      description: 'AI that achieves true consciousness and self-awareness',
+      icon: '🧠',
+      color: 'from-purple-500 to-pink-500',
+      features: ['Self-aware decision making', 'Emotional intelligence', 'Creative problem solving'],
+      stats: { efficiency: '+500%', accuracy: '99.9%', speed: '1000x faster' }
     },
     {
-      id: 'quantum-computing',
-      name: 'Quantum Computing',
+      title: 'Quantum Reality Engine',
+      description: 'Immersive virtual environments powered by quantum computing',
       icon: '⚡',
-      description: 'Exponential computing power for complex problem solving',
-      features: ['Quantum Supremacy', 'Cryptography', 'Optimization'],
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/30 to-blue-600/30'
+      color: 'from-cyan-500 to-blue-500',
+      features: ['Quantum state processing', 'Parallel universe computing', 'Reality manipulation'],
+      stats: { processing: 'Exponential', security: 'Unbreakable', applications: 'Infinite' }
     },
     {
-      id: 'neural-interfaces',
-      name: 'Neural Interfaces',
+      title: 'Neural Interface Pro',
+      description: 'Direct brain-computer interface for seamless interaction',
       icon: '🧬',
-      description: 'Direct brain-computer interfaces for enhanced capabilities',
-      features: ['BCI Technology', 'Thought Control', 'Neural Feedback'],
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/30 to-teal-600/30'
+      color: 'from-emerald-500 to-teal-500',
+      features: ['Thought control', 'Neural feedback', 'Memory enhancement'],
+      stats: { response: 'Instant', accuracy: '99.8%', safety: '100%' }
+    },
+    {
+      title: 'Interdimensional Computing',
+      description: 'Computing systems that operate across multiple dimensions',
+      icon: '🌌',
+      color: 'from-orange-500 to-red-500',
+      features: ['Multi-dimensional processing', 'Infinite computational power', 'Dimensional data storage'],
+      stats: { dimensions: '∞', power: 'Infinite', storage: 'Unlimited' }
     }
   ];
 
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/20"></div>
-      </div>
+  useEffect(() => {
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % showcases.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isPlaying, showcases.length]);
 
-      <div className="relative z-10 container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
-            🚀 INTERACTIVE TECH SHOWCASE 2026
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % showcases.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + showcases.length) % showcases.length);
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+            🚀 INTERACTIVE SHOWCASE • JANUARY 2026
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase 2026</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
+            Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
+        {/* Interactive Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-xl">
             <div 
-              key={tech.id}
-              className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              <div className="text-6xl mb-4 text-center animate-pulse">{tech.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{tech.name}</h3>
-              <p className="text-center opacity-90 mb-6">{tech.description}</p>
-              
-              <div className="space-y-2 mb-6">
-                {tech.features.map((feature, idx) => (
-                  <div key={idx} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center">
-                    <span className="text-sm font-semibold">{feature}</span>
+              {showcases.map((showcase, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="grid lg:grid-cols-2 gap-8 items-center p-8">
+                    <div>
+                      <div className="text-8xl mb-6">{showcase.icon}</div>
+                      <h3 className="text-4xl font-bold mb-4">{showcase.title}</h3>
+                      <p className="text-xl mb-6 opacity-90">{showcase.description}</p>
+                      
+                      <div className="grid grid-cols-3 gap-4 mb-6">
+                        {Object.entries(showcase.stats).map(([key, value]) => (
+                          <div key={key} className="text-center">
+                            <div className="text-2xl font-bold text-purple-300">{value}</div>
+                            <div className="text-sm opacity-75 capitalize">{key}</div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <button className={`bg-gradient-to-r ${showcase.color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}>
+                        Experience {showcase.title} →
+                      </button>
+                    </div>
+
+                    <div className="space-y-4">
+                      <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+                      {showcase.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                          <div className={`w-3 h-3 bg-gradient-to-r ${showcase.color} rounded-full`}></div>
+                          <span className="text-lg">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
-              
-              <div className="text-center">
-                <button className={`bg-gradient-to-r ${tech.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Explore {tech.name} →
-                </button>
-              </div>
+                </div>
+              ))}
             </div>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <span className="text-2xl">←</span>
+            </button>
+            
+            <div className="flex space-x-2">
+              {showcases.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <span className="text-2xl">→</span>
+            </button>
+
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 ml-4"
+            >
+              <span className="text-2xl">{isPlaying ? '⏸️' : '▶️'}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Quick Access Links */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {showcases.map((showcase, index) => (
+            <a
+              key={index}
+              href={`/pages/${showcase.title.replace(/\s+/g, '')}2026`}
+              className={`p-4 rounded-lg bg-gradient-to-r ${showcase.color} text-white hover:shadow-lg transition-all duration-300 text-center`}
+            >
+              <div className="text-2xl mb-2">{showcase.icon}</div>
+              <div className="font-semibold text-sm">{showcase.title}</div>
+            </a>
           ))}
         </div>
       </div>
