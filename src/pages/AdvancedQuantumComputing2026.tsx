@@ -28,7 +28,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -44,8 +44,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+              <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
               <li>• Neural interface technology</li>
