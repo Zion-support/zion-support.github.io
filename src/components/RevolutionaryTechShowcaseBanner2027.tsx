@@ -1,223 +1,187 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, Rocket, Target, Award, Users, TrendingUp } from 'lucide-react';
 
 const RevolutionaryTechShowcaseBanner2027: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    {
-      title: "Consciousness Transfer Technology",
-      description: "Revolutionary technology enabling the transfer of human consciousness to digital substrates",
-      icon: "🧠",
-      color: "from-purple-500 to-indigo-500",
-      status: "Prototype Available"
-    },
-    {
-      title: "Quantum Consciousness Engine",
-      description: "Quantum-powered AI systems that exhibit consciousness-like behaviors and decision-making",
-      icon: "⚡",
-      color: "from-indigo-500 to-cyan-500",
-      status: "Research Phase"
-    },
-    {
-      title: "Interdimensional Computing",
-      description: "Computing systems that operate across multiple dimensions for unprecedented processing power",
-      icon: "🌌",
-      color: "from-cyan-500 to-teal-500",
-      status: "Theoretical"
-    },
-    {
-      title: "Synthetic Reality Generator",
-      description: "AI system capable of generating completely synthetic realities indistinguishable from physical reality",
-      icon: "🌐",
-      color: "from-teal-500 to-emerald-500",
-      status: "Development"
-    }
-  ];
-
-  const stats = [
-    { label: "Breakthrough Technologies", value: "25+", icon: "🔬" },
-    { label: "Research Projects", value: "150+", icon: "📊" },
-    { label: "Patents Filed", value: "300+", icon: "📋" },
-    { label: "Investment Raised", value: "$2B+", icon: "💰" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-20">
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.2),transparent_50%)]"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-500/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-cyan-500/20 rounded-full animate-pulse delay-500"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECH SHOWCASE • 2027
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-lg font-bold mb-8">
+            <Sparkles className="w-5 h-5 mr-2" />
+            REVOLUTIONARY TECH SHOWCASE 2027
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Next-Generation Technology
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology innovations that are reshaping reality and defining the future of human civilization.
+          <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
+            The Future of Technology
+            <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Starts Here
+            </span>
+          </h1>
+          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Experience groundbreaking innovations, cutting-edge solutions, and revolutionary technologies 
+            that are reshaping industries and transforming the way we live, work, and connect.
           </p>
-        </motion.div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
+              to="/ai-innovation-hub-2027" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-cyan-500/25"
             >
-              <div className="text-4xl mb-4">{stat.icon}</div>
-              <div className="text-3xl font-bold mb-2 text-purple-400">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Feature Showcase */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Feature Details */}
-            <motion.div
-              key={currentFeature}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-6"
+              <Rocket className="w-6 h-6" />
+              Explore AI Innovations
+            </Link>
+            <Link 
+              to="/advanced-tech-solutions-2027" 
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-purple-500/25"
             >
-              <div className="flex items-center mb-6">
-                <div className="text-6xl mr-6">{features[currentFeature].icon}</div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
-                    {features[currentFeature].title}
-                  </h3>
-                  <span className={`px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r ${features[currentFeature].color} text-white`}>
-                    {features[currentFeature].status}
-                  </span>
-                </div>
-              </div>
-
-              <p className="text-gray-300 text-lg leading-relaxed">
-                {features[currentFeature].description}
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/pages/AdvancedTechInnovationHub2027"
-                  className={`bg-gradient-to-r ${features[currentFeature].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 text-center`}
-                >
-                  Explore Innovation Hub →
-                </a>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-
-            {/* Right Side - Visual */}
-            <motion.div
-              key={`visual-${currentFeature}`}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="relative"
-            >
-              <div className={`bg-gradient-to-br ${features[currentFeature].color.replace('from-', 'from-').replace('to-', 'to-')} p-8 rounded-2xl border border-white/10`}>
-                <div className="text-center">
-                  <div className="text-8xl mb-6 animate-pulse">
-                    {features[currentFeature].icon}
-                  </div>
-                  <h4 className="text-2xl font-bold text-white mb-4">
-                    {features[currentFeature].title}
-                  </h4>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-white/20 rounded-lg p-3">
-                      <div className="font-semibold text-white">Status</div>
-                      <div className="text-white/80">{features[currentFeature].status}</div>
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-3">
-                      <div className="font-semibold text-white">Category</div>
-                      <div className="text-white/80">Advanced Tech</div>
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-3">
-                      <div className="font-semibold text-white">Year</div>
-                      <div className="text-white/80">2027</div>
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-3">
-                      <div className="font-semibold text-white">Impact</div>
-                      <div className="text-white/80">Revolutionary</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Feature Navigation */}
-          <div className="flex justify-center mt-12 space-x-4">
-            {features.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentFeature(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  currentFeature === index
-                    ? 'bg-purple-400 scale-125'
-                    : 'bg-gray-600 hover:bg-gray-500'
-                }`}
-              />
-            ))}
+              <Target className="w-6 h-6" />
+              View Tech Solutions
+            </Link>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12">
-            <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join thousands of innovators already exploring our revolutionary technology showcase. 
-              Discover what's possible when technology transcends current limitations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/pages/AdvancedTechInnovationHub2027"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Explore Innovation Hub
-              </a>
-              <a
-                href="/pages/NextGenConsciousnessComputing2027"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Consciousness Computing
-              </a>
+        {/* Feature Highlights */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="text-center group">
+            <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl p-6 mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Award className="w-12 h-12 text-white mx-auto" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Award-Winning</h3>
+            <p className="text-gray-300 text-sm">Recognized by industry leaders for innovation excellence</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-6 mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Users className="w-12 h-12 text-white mx-auto" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">10M+ Users</h3>
+            <p className="text-gray-300 text-sm">Trusted by millions worldwide for cutting-edge solutions</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-6 mb-4 group-hover:scale-110 transition-transform duration-300">
+              <TrendingUp className="w-12 h-12 text-white mx-auto" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">500% ROI</h3>
+            <p className="text-gray-300 text-sm">Average return on investment for our clients</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-6 mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Sparkles className="w-12 h-12 text-white mx-auto" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Future-Ready</h3>
+            <p className="text-gray-300 text-sm">Built for tomorrow's technology challenges</p>
+          </div>
+        </div>
+
+        {/* Technology Preview */}
+        <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10 mb-16">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            What's Inside Our Revolutionary Tech Stack
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-cyan-400">AI & Machine Learning</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-cyan-400 mr-2" />
+                  Neural Networks 2.0
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-cyan-400 mr-2" />
+                  Quantum AI Processing
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-cyan-400 mr-2" />
+                  Predictive Analytics
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-cyan-400 mr-2" />
+                  Natural Language Processing
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-purple-400">Cloud & Infrastructure</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                  Auto-scaling Cloud Solutions
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                  Edge Computing
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                  Microservices Architecture
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                  Container Orchestration
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-pink-400">Security & Compliance</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-pink-400 mr-2" />
+                  Zero-Trust Architecture
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-pink-400 mr-2" />
+                  Advanced Threat Detection
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-pink-400 mr-2" />
+                  Compliance Automation
+                </li>
+                <li className="flex items-center">
+                  <ArrowRight className="w-4 h-4 text-pink-400 mr-2" />
+                  Identity Management
+                </li>
+              </ul>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Final Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-3xl p-12">
+            <h2 className="text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+              Join the technological revolution and discover how our cutting-edge solutions 
+              can transform your business and accelerate your success.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link 
+                to="/contact" 
+                className="bg-white text-cyan-600 hover:bg-gray-100 px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl hover:shadow-white/25"
+              >
+                Start Your Journey
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
