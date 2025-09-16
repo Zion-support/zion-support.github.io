@@ -96,7 +96,6 @@ export function AuthButtons(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             </svg>
@@ -136,7 +135,6 @@ export function AuthButtons(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             </svg>
@@ -291,7 +289,6 @@ export function AuthButtons(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           ) : (
             <>Email Login</>
@@ -302,7 +299,6 @@ export function AuthButtons(): any ({;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

@@ -5,7 +5,6 @@ import path from 'path';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
@@ -16,7 +15,6 @@ import path from 'path';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
     fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');const DATA_DIR = path.resolve (process.cwd (), 'datanewsletter');
@@ -65,7 +63,6 @@ function handler() {
   res.status (200).json ({ ok: true });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -93,4 +90,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
   res.status(200).json({ ok: true });
 }
->>>>>>> origin/auto/autonomy-17186719616

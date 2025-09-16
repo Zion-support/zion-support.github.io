@@ -6,7 +6,6 @@
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 =======
@@ -17,7 +16,6 @@
           </p>
         )}
         
->>>>>>> origin/auto/autonomy-17186719616
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (

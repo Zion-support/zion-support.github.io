@@ -23,4 +23,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Allow', 'GET, PUT');
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/auto/autonomy-17186719616

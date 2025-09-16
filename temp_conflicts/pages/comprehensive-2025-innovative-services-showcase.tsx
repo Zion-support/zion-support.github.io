@@ -39,7 +39,6 @@ const allServices = [
     const cat = categories.find(c => c.name === category);
     return cat ? cat.color : 'from-gray-500 to-gray-600';
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Layout>
@@ -48,7 +47,6 @@ const allServices = [
         description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology."
         keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
         ogImage="https://ziontechgroup.com/og-innovative-services-2025.jpg"
->>>>>>> origin/auto/autonomy-17186719616
       />
       
       {/* Hero Section */}
@@ -242,7 +240,6 @@ const allServices = [
                       Key Features
                     </h4>
                     <div className="flex flex-wrap gap-2">
->>>>>>> origin/auto/autonomy-17186719616
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

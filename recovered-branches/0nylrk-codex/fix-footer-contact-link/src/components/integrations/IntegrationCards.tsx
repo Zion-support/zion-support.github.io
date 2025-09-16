@@ -23,11 +23,9 @@ interface IntegrationCardProps {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -60,7 +58,6 @@ export function IntegrationCard({
   onConnect,
 }: IntegrationCardProps) {
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -101,14 +98,11 @@ export function IntegrationCard({
           </Button>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         )}
@@ -118,7 +112,6 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
->>>>>>> origin/auto/autonomy-17186719616
   );
 }
 
@@ -131,7 +124,6 @@ export function IntegrationCards() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -141,4 +133,3 @@ export function IntegrationCards() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

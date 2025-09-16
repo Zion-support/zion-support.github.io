@@ -48,16 +48,12 @@
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
                 
->>>>>>> origin/auto/autonomy-17186719616
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -192,16 +188,12 @@
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
->>>>>>> origin/auto/autonomy-17186719616
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                       }}
                     />
@@ -256,7 +248,6 @@
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}
->>>>>>> origin/auto/autonomy-17186719616
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
@@ -335,4 +326,3 @@
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

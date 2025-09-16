@@ -151,5 +151,4 @@ export async function register() {
   } catch (error) {
     console.error("instrumentation.ts: Failed to initialize Sentry:", error);
   }
->>>>>>> origin/codex/reactivate-features-gradually
 }

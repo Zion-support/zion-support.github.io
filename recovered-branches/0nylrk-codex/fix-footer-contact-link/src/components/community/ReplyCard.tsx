@@ -45,7 +45,6 @@
             )}
           </div>
           <div className="text-xs text-muted-foreground">
->>>>>>> origin/auto/autonomy-17186719616
             {timeAgo}
           </div>
         </div>
@@ -79,4 +78,3 @@ export default ReplyCard;
 };
 
 export default ReplyCard;
->>>>>>> origin/auto/autonomy-17186719616

@@ -16,8 +16,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: Cloud,
@@ -168,10 +166,8 @@ export default function CloudDevOpsPage() {;
 
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   },
   {
     icon: GitBranch,
@@ -216,8 +212,6 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -261,9 +255,7 @@ export default function CloudDevOpsPage() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </motion.div>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -381,8 +373,6 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -408,8 +398,6 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

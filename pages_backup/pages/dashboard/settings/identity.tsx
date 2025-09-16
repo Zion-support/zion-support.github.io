@@ -13,10 +13,8 @@ export default function IdentitySettingsPage() {
   const [error, setError] = useState(''),
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 import React, { useEffect, useState } from 'react';
@@ -78,7 +76,6 @@ export default function IdentitySettingsPage(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -171,7 +168,6 @@ export default function IdentitySettingsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

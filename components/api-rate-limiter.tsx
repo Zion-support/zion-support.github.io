@@ -394,7 +394,6 @@ const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
->>>>>>> origin/auto/autonomy-17186719616
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',

@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function Unauthorized() {
   return (

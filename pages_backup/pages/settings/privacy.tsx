@@ -7,7 +7,6 @@ export default function PrivacySettingsPage() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React, { useEffect, useState } from 'react',
 

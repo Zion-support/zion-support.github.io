@@ -5,9 +5,7 @@
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -206,7 +204,6 @@ export function ZionGPTModelManager() {
     }
   };
 
->>>>>>> origin/auto/autonomy-17186719616
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose
@@ -220,9 +217,7 @@ export function ZionGPTModelManager() {
         .update({ active: !currentActive })
         .eq('id', modelId);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -403,7 +398,6 @@ export function ZionGPTModelManager() {
                         )}
                       </Button>
                     ) : (
->>>>>>> origin/auto/autonomy-17186719616
                       <Button
                         variant="ghost"
                         size="sm"
@@ -425,7 +419,6 @@ export function ZionGPTModelManager() {
   );
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 =======
@@ -444,4 +437,3 @@ export function ZionGPTModelManager() {
     </Card>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

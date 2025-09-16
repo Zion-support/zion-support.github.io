@@ -40,4 +40,3 @@ export default ApiGettingStarted;
 }
 
 export default ApiGettingStarted;
->>>>>>> origin/auto/autonomy-17186719616

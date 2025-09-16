@@ -192,18 +192,14 @@
             />
             
             <Button type="submit" disabled={isSubmitting}>
->>>>>>> origin/auto/autonomy-17186719616
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -211,4 +207,3 @@
 };
 
 export default PostForm;
->>>>>>> origin/auto/autonomy-17186719616

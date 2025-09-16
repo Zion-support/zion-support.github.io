@@ -8,7 +8,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -36,4 +35,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status(200).json({ jobDescription: text });
 }
->>>>>>> origin/auto/autonomy-17186719616

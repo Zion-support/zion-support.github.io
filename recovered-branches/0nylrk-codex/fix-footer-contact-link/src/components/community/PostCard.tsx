@@ -23,11 +23,8 @@
           </div>
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -36,7 +33,6 @@
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
->>>>>>> origin/auto/autonomy-17186719616
                 {tag}
               </Badge>
             ))}
@@ -82,4 +78,3 @@ export default PostCard;
 };
 
 export default PostCard;
->>>>>>> origin/auto/autonomy-17186719616

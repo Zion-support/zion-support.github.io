@@ -27,7 +27,6 @@ import {
   Code,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -47,7 +46,6 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -173,7 +171,6 @@ import {
     github: "https://github.com / davidkim",
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
     image: "/api / placeholder / 300 / 300",
@@ -186,7 +183,6 @@ import {
 =======
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
 =======
     name: 'Dr. Sarah Johnson',
@@ -217,7 +213,6 @@ import {
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 
   }
->>>>>>> origin/automation-improvements-final
 =======
     id: 6
     name: "Lisa Wang"
@@ -260,9 +255,7 @@ import {
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -425,7 +418,6 @@ const teamMembers = [;
 ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -944,7 +936,6 @@ function TeamPage() {
       </div>
     </>
 
->>>>>>> origin/automation-improvements-final
 =======
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
@@ -996,7 +987,6 @@ function TeamPage() {
             <div className="flex items - center justify - center">;
               <MapPin className="w - 6 h - 6 mr - 2" />;
               <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -1048,7 +1038,6 @@ export default function TeamPage() {;
 =======
 
     <>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
@@ -1065,9 +1054,7 @@ export default function TeamPage() {;
 
 
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
   );
   return (
@@ -1102,7 +1089,6 @@ export default function TeamPage() {
 	)
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </Layout>);
 }
@@ -1179,7 +1165,6 @@ function TeamPage() {
     </>);
 ;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
@@ -1187,5 +1172,3 @@ function TeamPage() {
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

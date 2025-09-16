@@ -78,12 +78,9 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         }`}
                       >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -200,19 +197,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                             <span className="text-zion-slate-light">{feature}</span>
                           </li>
                         ))}
->>>>>>> origin/auto/autonomy-17186719616
                       </ul>
                     </div>
                   </TabsContent>
                 </Tabs>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -242,12 +235,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 {/* Rating */}
@@ -368,7 +359,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                   )}
                 </div>
                 
->>>>>>> origin/auto/autonomy-17186719616
                 {/* Quantity */}
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>

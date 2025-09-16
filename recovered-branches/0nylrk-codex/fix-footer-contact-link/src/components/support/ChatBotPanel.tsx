@@ -16,7 +16,6 @@ export function ChatBotPanel() {
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const handleSendMessage = async (text: string = inputValue) => {
@@ -86,7 +85,6 @@ export function ChatBotPanel() {
     try {
       // Call the OpenAI-powered support function
       const response = await sendToAIAssistant(text);
->>>>>>> origin/auto/autonomy-17186719616
       
       const botMessage: Message = {
         id: `bot-${Date.now()}`,
@@ -126,18 +124,14 @@ export function ChatBotPanel() {
       setIsLoading(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -189,7 +183,6 @@ export function ChatBotPanel() {
       };
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
@@ -214,7 +207,6 @@ export function ChatBotPanel() {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}

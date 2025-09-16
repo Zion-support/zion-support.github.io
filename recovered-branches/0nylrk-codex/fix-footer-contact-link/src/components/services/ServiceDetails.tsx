@@ -36,11 +36,8 @@
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {dc}
@@ -80,7 +77,6 @@
             </p>
           </div>
           
->>>>>>> origin/auto/autonomy-17186719616
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">

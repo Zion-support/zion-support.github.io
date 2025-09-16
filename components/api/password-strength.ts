@@ -165,7 +165,6 @@ export default async function handler(
     let score = 0;
     score += Math.min(length * 2, 20); // Length contribution (max 20)
     score += hasUppercase ? 10 : 0;
->>>>>>> origin/auto/autonomy-17186719616
     score += hasLowercase ? 10 : 0;
     score += hasNumbers ? 10 : 0;
     score += hasSymbols ? 15 : 0;
@@ -188,9 +187,7 @@ export default async function handler(
         hasNumbers,
         hasSymbols,
         hasCommonPatterns,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     if (!password |typeof password !== 'string') {
@@ -308,7 +305,6 @@ export default async function handler(
       suggestions,
     };
 
->>>>>>> origin/auto/autonomy-17186719616
     res.status(200).json(result);
   } catch (error) {
     console.error('Password strength check error:', error);

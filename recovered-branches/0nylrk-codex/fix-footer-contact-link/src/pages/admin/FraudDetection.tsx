@@ -24,11 +24,8 @@ import {
       const query = searchQuery.toLowerCase();
       result = result.filter(
         (flag) =>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     }
@@ -93,7 +90,6 @@ import {
           status,
           action_taken: actionTaken,
           reviewed_at: new Date().toISOString(),
->>>>>>> origin/auto/autonomy-17186719616
           // In a real app, you'd get the current user's ID
           reviewed_by: 'admin'
         })

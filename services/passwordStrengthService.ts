@@ -15,12 +15,9 @@
     if (score >= 90) return 'very-strong';
     if (score >= 80) return 'strong';
     if (score >= 60) return 'medium';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -30,7 +27,6 @@
     return 'very-weak';
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   /**
    * Check if password contains common words
    */
@@ -58,7 +54,6 @@
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -67,7 +62,6 @@
     return `${Math.ceil(seconds / 31536000)} years`;
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   /**
    * Generate feedback based on password analysis
    */
@@ -80,12 +74,9 @@
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -94,7 +85,6 @@
     return suggestions;
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   /**
    * Generate security warnings
    */
@@ -103,12 +93,9 @@
    * Generate a strong password
    */
   generateStrongPassword(length: number = 16): string {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -142,18 +129,14 @@
     return password.split('').sort(() => Math.random() - 0.5).join('');
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   /**
    * Generate a memorable passphrase
    */
   generatePassphrase(wordCount: number = 4): string {
     const words = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -176,7 +159,6 @@
     return passphrase;
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   /**
    * Add custom common password
    */
@@ -211,4 +193,3 @@ export const passwordStrengthService = new PasswordStrengthService();
 
 // Export the class for custom instances
 export { PasswordStrengthService };
->>>>>>> origin/auto/autonomy-17186719616

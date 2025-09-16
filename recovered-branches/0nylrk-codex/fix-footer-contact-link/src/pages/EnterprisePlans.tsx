@@ -23,4 +23,3 @@ export default function EnterprisePlans() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

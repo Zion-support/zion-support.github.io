@@ -71,7 +71,6 @@
 
   return (
     <div className="flex-1 flex flex-col h-full">
->>>>>>> origin/auto/autonomy-17186719616
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
@@ -100,7 +99,6 @@
       </div>
     </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -109,4 +107,3 @@
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

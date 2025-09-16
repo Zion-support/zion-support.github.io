@@ -159,7 +159,6 @@ const contactInfo = {
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 const serviceCategories = [
   {
@@ -483,8 +482,6 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -541,7 +538,6 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -628,7 +624,6 @@ export default function AdvancedAIAutomationServices() {;
           </div>
         </div>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 key={index}
@@ -639,9 +634,7 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
@@ -743,12 +736,8 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -804,12 +793,8 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     >
@@ -868,12 +853,8 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                           </div>
@@ -1015,8 +996,6 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1099,8 +1078,6 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1142,12 +1119,8 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -1186,15 +1159,10 @@ export default function AdvancedAIAutomationServices() {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 

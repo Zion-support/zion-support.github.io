@@ -60,4 +60,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ message: 'Server error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

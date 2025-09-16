@@ -3,7 +3,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -33,4 +32,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   return true;
 }
->>>>>>> origin/auto/autonomy-17186719616

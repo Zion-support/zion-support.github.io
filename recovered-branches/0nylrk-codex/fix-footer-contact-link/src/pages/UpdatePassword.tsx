@@ -30,7 +30,6 @@ import { Footer } from "@/components/Footer";
 import { cleanupAuthState } from "@/utils/authUtils";
 
 // Form validation schema
->>>>>>> origin/auto/autonomy-17186719616
 const updatePasswordSchema = z
   .object({
     password: z
@@ -85,7 +84,6 @@ const updatePasswordSchema = z
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">

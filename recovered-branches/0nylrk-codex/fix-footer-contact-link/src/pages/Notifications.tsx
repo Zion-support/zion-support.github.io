@@ -44,7 +44,6 @@ import { cn } from "@/lib/utils",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -69,7 +68,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { SEO } from "@/components/SEO";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
->>>>>>> origin/auto/autonomy-17186719616
 
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
@@ -102,7 +100,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -189,7 +186,6 @@ const NotificationCard: React.FC<{
             
             <div className="flex items-center gap-2">
               {!notification.read && (
->>>>>>> origin/auto/autonomy-17186719616
                 <Button
                   variant="ghost"
                   size="sm"

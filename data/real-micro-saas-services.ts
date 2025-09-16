@@ -726,19 +726,15 @@ export const serviceCategories = [
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
   'Enterprise IT'
 ];
->>>>>>> origin/auto/autonomy-17186719616
