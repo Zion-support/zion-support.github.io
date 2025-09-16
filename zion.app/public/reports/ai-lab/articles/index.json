@@ -86,5 +86,19 @@
       "production"
     ],
     "source": "Zion AI Lab"
+  },
+  {
+    "title": "The Agentic Observability Blueprint: Tracing, Auditing, and Debugging Live AI Systems",
+    "url": "/reports/ai-lab/articles/agentic-observability-blueprint-1758042000000.md",
+    "createdAt": "2025-09-16T09:00:00.000Z",
+    "tags": ["agents", "observability", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Enterprise Agent Safety Playbook: Policies, Guardrails, and Runtime Controls",
+    "url": "/reports/ai-lab/articles/enterprise-agent-safety-playbook-1758045600000.md",
+    "createdAt": "2025-09-16T10:00:00.000Z",
+    "tags": ["governance", "safety", "policy"],
+    "source": "Zion AI Lab"
   }
 ]

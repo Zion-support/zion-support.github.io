@@ -32,6 +32,15 @@ const BlogPage = () => {
       image: "/images/safe-rollouts-2026.jpg"
     },
     {
+      title: "AI 2026: Causal Evals for Autonomous Agents",
+      description: "Design causality‑aware evaluation harnesses to validate safety and alignment.",
+      slug: "ai-2026-causal-evals-for-autonomous-agents",
+      category: "Evaluation",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/causal-evals-autonomous-agents-2026.jpg"
+    },
+    {
       title: "AI 2026: Autonomous Evidence‑Led Operations",
       description: "Operate with auditable evaluation evidence driving safe, compliant decisions.",
       slug: "ai-2026-autonomous-evidence-led-operations",
