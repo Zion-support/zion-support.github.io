@@ -1,205 +1,255 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+    {
+      title: "🚀 Revolutionary Tech Showcase 2025",
+      description: "Experience the most advanced technologies reshaping our world",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
+    },
+    {
+      title: "🤖 AI Solutions Comprehensive 2025",
+      description: "Transform your business with our comprehensive AI solutions",
+      link: "/pages/AISolutionsComprehensive2025",
+      color: "from-blue-600 to-cyan-600",
+      bgColor: "from-blue-900/90 to-cyan-900/90"
+    },
+    {
+      title: "🌟 Ultimate Tech Breakthrough 2025",
+      description: "Witness the most revolutionary technological breakthroughs in history",
+      link: "/pages/UltimateTechBreakthrough2025",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
 <<<<<<< HEAD
-      className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white mb-12"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden mb-12"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2025
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            Ultimate Tech Breakthrough 2025
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl opacity-90 max-w-3xl mx-auto mb-8"
-          >
-            The most revolutionary technological breakthrough that will change everything we know about technology
-          </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30"
-          >
-            <div className="text-4xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-3 text-center">Conscious AI Revolution</h3>
-            <p className="text-indigo-100 mb-4 text-center">
-              The first truly conscious AI system that can think, feel, and create independently
-            </p>
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-indigo-200 text-sm">Self-aware decision making</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-indigo-200 text-sm">Emotional intelligence and empathy</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                <span className="text-indigo-200 text-sm">Creative problem solving</span>
-              </div>
-            </div>
-            <a
-              href="/pages/UltimateTechBreakthrough2025"
-              className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center"
+      <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 rounded-2xl p-8 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div className="relative z-10">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: isVisible ? 1 : 0.8, opacity: isVisible ? 1 : 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse"
             >
-              Experience the Breakthrough →
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30"
-          >
-            <div className="text-4xl mb-4 text-center">⚛️</div>
-            <h3 className="text-2xl font-bold mb-3 text-center">Quantum Consciousness Bridge</h3>
-            <p className="text-purple-100 mb-4 text-center">
-              Revolutionary quantum technology that enables direct consciousness transfer
-            </p>
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                <span className="text-purple-200 text-sm">Quantum neural networks</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                <span className="text-purple-200 text-sm">Consciousness transfer protocols</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                <span className="text-purple-200 text-sm">Mind-machine synchronization</span>
-              </div>
-            </div>
-            <a
-              href="/pages/RevolutionaryTechShowcase2025"
-              className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
+              🚀 ULTIMATE TECHNOLOGY • JANUARY 2025
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
             >
-              Explore Quantum Tech →
-            </a>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-center"
-        >
-          <a
-            href="/pages/UltimateTechBreakthrough2025"
-            className="inline-block bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-          >
-            Discover the Ultimate Breakthrough →
-          </a>
-        </motion.div>
+              Ultimate Technology Showcase
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-xl text-white/80 max-w-4xl mx-auto"
+            >
+              Discover the most advanced technologies ever created, pushing the boundaries of what's possible
+            </motion.p>
+          </div>
 =======
-      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12"
+      className="relative mb-12 overflow-hidden"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center">
+      {/* Background with animated gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
           <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            🌟 ULTIMATE CONTENT 2025 • REVOLUTIONARY TECHNOLOGY
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            Experience the Ultimate Technology Revolution
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            Discover groundbreaking technologies that will reshape our world in 2025
-          </motion.p>
+            key={i}
+            className="absolute w-2 h-2 bg-white/20 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6"
-          >
-            <a
-              href="/pages/UltimateTechRevolution2025"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              🚀 Explore Ultimate Revolution →
-            </a>
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              ⚡ Revolutionary Breakthrough →
-            </a>
-            <a
-              href="/pages/NextGenInnovationHub2025"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              🧠 Innovation Hub →
-            </a>
-          </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12"
+          variants={itemVariants}
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 NEW: ULTIMATE CONTENT 2025
+          </div>
+          <h2 className="text-5xl font-bold text-white mb-4">
+            Revolutionary Technology Content
+          </h2>
+          <p className="text-2xl text-purple-200 max-w-4xl mx-auto">
+            Discover our latest groundbreaking content featuring the most advanced technologies of 2025
+          </p>
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-e495
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="mt-8 flex justify-center space-x-8 text-sm opacity-80"
-          >
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span>Live Demo Available</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-              <span>Interactive Experience</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
-              <span>Free Trial</span>
-            </div>
+        {/* Carousel */}
+        <motion.div
+          className="relative"
+          variants={itemVariants}
+        >
+          <div className="overflow-hidden rounded-2xl">
+            <motion.div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0"
+                >
+                  <div className={`bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm p-12 text-white`}>
+                    <div className="max-w-4xl mx-auto text-center">
+                      <h3 className="text-4xl font-bold mb-6">{slide.title}</h3>
+                      <p className="text-xl mb-8 text-purple-100">{slide.description}</p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                          href={slide.link}
+                          className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105`}
+                        >
+                          Explore Now →
+                        </a>
+                        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/50'
+                }`}
+              />
+            ))}
+<<<<<<< HEAD
           </motion.div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-db2e
+=======
+          </div>
+        </motion.div>
+
+        {/* Quick Access Grid */}
+        <motion.div
+          className="mt-12 grid md:grid-cols-3 gap-6"
+          variants={containerVariants}
+        >
+          {slides.map((slide, index) => (
+            <motion.a
+              key={index}
+              href={slide.link}
+              className={`bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 border border-white/20`}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+            >
+              <h4 className="text-xl font-bold mb-3">{slide.title}</h4>
+              <p className="text-purple-100 mb-4">{slide.description}</p>
+              <div className="flex items-center text-sm font-semibold">
+                <span>Explore →</span>
+              </div>
+            </motion.a>
+          ))}
+        </motion.div>
+
+        {/* Additional Promotional Content */}
+        <motion.div
+          className="mt-12 text-center"
+          variants={itemVariants}
+        >
+          <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              🚀 Don't Miss Out on the Future
+            </h3>
+            <p className="text-xl text-purple-100 mb-6">
+              Join thousands of innovators already exploring these revolutionary technologies
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Get Early Access
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
+                Subscribe to Updates
+              </button>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-e495
       </div>
     </motion.div>
   );
