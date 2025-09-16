@@ -118,6 +118,9 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import LatestContent2026 from './pages/LatestContent2026';
+import NewContentShowcase2026Banner from './components/NewContentShowcase2026Banner';
+import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
 
 const App: React.FC = () => {
   return (
@@ -225,6 +228,16 @@ const App: React.FC = () => {
               {/* Latest Insights Promo (new blog content) */}
               <div className="mb-12">
                 <LatestInsightsPromo />
+              </div>
+
+              {/* NEW: Fresh Content 2026 Showcase Banner */}
+              <div className="mb-12">
+                <NewContentShowcase2026Banner />
+              </div>
+
+              {/* NEW: Revolutionary Content 2026 Banner */}
+              <div className="mb-12">
+                <RevolutionaryContent2026Banner />
               </div>
 
               {/* New: Recent Blog Posts Promo */}
@@ -418,6 +431,7 @@ const App: React.FC = () => {
           
           {/* Routes for all pages */}
           <Route path="/blog" element={<Blog />} />
+          <Route path="/latest-content-2026" element={<LatestContent2026 />} />
           <Route path="/blog/sep-2025-exec-guide-evals-guardrails" element={<BlogPost_Sep2025_AIExecGuide />} />
           <Route path="/blog/sep-2025-finserv-model-routing-case-study" element={<BlogPost_Sep2025_CaseStudy />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
