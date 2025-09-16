@@ -9,6 +9,27 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Launch: Agent Reliability Scorecards v1.1',
+    summary: 'Improved incident heatmaps, failure taxonomies, and SLA drift detection.',
+    href: '/updates/agent-reliability-scorecards-1-1',
+    date: '2025-09-16',
+    tag: 'Release'
+  },
+  {
+    title: 'Playbook: AI Risk Mitigation in Production (2026)',
+    summary: 'Step-by-step rollout with eval gates, policy-as-code, and evidence capture.',
+    href: '/updates/ai-risk-mitigation-guide-2026',
+    date: '2025-09-16',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Production RAG Latency Budgets (2026) — Deep Dive',
+    summary: 'How to choose budgets, wire gating, and monitor regressions with real data.',
+    href: '/blog/ai-2026-production-rag-latency-budgets',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',
