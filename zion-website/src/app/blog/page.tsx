@@ -16,6 +16,18 @@ const posts = [
       'Reference architecture, safety gates, and rollout checklist for AI commerce.'
   },
   {
+    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
+    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
+  },
+  {
+    slug: 'ai-2026-autonomous-ops-sre-for-agents',
+    title: 'AI 2026: Autonomous Ops and SRE for Agents',
+    summary:
+      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
+  },
+  {
     slug: 'ai-2026-realtime-evals-at-scale',
     title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
     summary:
