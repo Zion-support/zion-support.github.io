@@ -42,6 +42,7 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import UltimateContentShowcase2025 from './src/pages/UltimateContentShowcase2025';
 import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
@@ -230,6 +231,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Enhanced Content Carousel 2025 - Interactive Content Showcase */}
+                <EnhancedContentCarousel2025 />
                 
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
@@ -1282,6 +1286,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/ultimate-content-showcase-2025" element={<UltimateContentShowcase2025 />} />
           <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
