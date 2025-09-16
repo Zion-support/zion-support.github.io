@@ -17,6 +17,14 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-16",
   },
   {
+    id: "ai-2026-safe-agent-actions-blueprint",
+    title: "AI 2026: Safe Agent Actions — Blueprint",
+    summary: "Risk‑tiered adapters, approvals, budgets, and policy‑as‑code for safe actions.",
+    href: "/blog/ai-2026-safe-agent-actions-blueprint",
+    tag: "Security",
+    date: "2025-09-16",
+  },
+  {
     id: "evals-and-guardrails",
     title: "Evals, Guardrails, and Safety",
     summary: "Stand up eval suites and policy guardrails for production agents.",
