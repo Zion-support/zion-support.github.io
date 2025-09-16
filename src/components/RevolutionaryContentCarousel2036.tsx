@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
   
   const slides = [
     {
@@ -13,6 +14,8 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       border: "border-purple-400/30",
       textColor: "text-purple-100",
       link: "/pages/NextGenTechRevolution2036"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
     },
     {
       id: 2,
@@ -29,10 +32,13 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       title: "Revolutionary Tech Showcase 2036",
       description: "Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing",
       image: "🌌",
+<<<<<<< HEAD
       gradient: "from-emerald-600/30 to-teal-600/30",
       border: "border-emerald-400/30",
       textColor: "text-emerald-100",
       link: "/pages/RevolutionaryTechShowcase2036"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
     }
   ];
 
@@ -44,6 +50,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
   }, [slides.length]);
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -57,6 +64,8 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
           </p>
         </div>
         
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
             <div 
@@ -65,6 +74,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             >
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-xl p-8 border ${slide.border} hover:scale-105 transition-all duration-300`}>
                     <div className="text-center">
                       <div className="text-6xl mb-6">{slide.image}</div>
@@ -78,13 +88,18 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                       >
                         Explore Technology →
                       </a>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -103,7 +118,10 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
           >
+<<<<<<< HEAD
             ←
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
           </button>
           <button
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
@@ -112,12 +130,15 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             →
           </button>
         </div>
+<<<<<<< HEAD
         
         <div className="text-center mt-8">
           <a href="/pages/NextGenTechRevolution2036" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Explore All Revolutionary Technologies →
           </a>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
       </div>
     </div>
   );

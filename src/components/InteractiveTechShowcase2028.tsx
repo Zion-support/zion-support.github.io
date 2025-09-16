@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2028: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
       ],
       color: 'from-purple-600 to-pink-600'
     },
@@ -10,6 +15,10 @@ const InteractiveTechShowcase2028: React.FC = () => {
       color: 'from-emerald-600 to-teal-600'
     }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -95,13 +104,25 @@ const InteractiveTechShowcase2028: React.FC = () => {
       setActiveTech(index);
       setIsAnimating(false);
     }, 300);
+<<<<<<< HEAD
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
   };
 
   const currentTech = technologies[activeTech];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
               </div>
               <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 Try Interactive Demo →
@@ -110,6 +131,10 @@ const InteractiveTechShowcase2028: React.FC = () => {
           </div>
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -281,7 +306,14 @@ const InteractiveTechShowcase2028: React.FC = () => {
             <a href="/contact" className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400/10 transition-all">
               🚀 Get Started Today
             </a>
+<<<<<<< HEAD
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> 910fa72b4c98055c38516632277b6f8c2858b994
           </div>
         </div>
       </div>

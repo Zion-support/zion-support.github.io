@@ -2,17 +2,6 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-39c9
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -30,47 +19,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
-=======
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
       <div className="container mx-auto px-4 py-16">
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-6f93
       <div className="container mx-auto px-4 py-16">
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
-=======
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <div className="text-center mb-20">
-          <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-xl font-bold mb-10 animate-pulse">
-            🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
-          </div>
-          <h1 className="text-8xl font-bold text-white mb-10 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Synthetic Biology Revolution
-          </h1>
-          <p className="text-3xl text-gray-300 max-w-7xl mx-auto mb-16 leading-relaxed">
-            Revolutionary biotechnology merging synthetic biology with AI, creating programmable living systems, 
-            bio-computers, and engineered organisms that transform medicine, agriculture, and life itself
-          </p>
-<<<<<<< HEAD
-          <div className="flex justify-center space-x-8">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-16 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl transform hover:scale-105">
-              🧬 Explore Bio Revolution →
-            </button>
-            <button className="border-2 border-green-400 text-green-400 px-16 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
-              Watch Demo
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -88,27 +40,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
@@ -124,15 +59,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/SyntheticDNA" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
               Explore DNA Tech →
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
         {/* Revolutionary Applications */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
@@ -166,27 +92,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/SyntheticMedicine2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Medicine →
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
             </a>
           </div>
 
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
             <div className="text-6xl mb-6 text-center">💊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Manufacturing</h3>
             <p className="text-teal-100 mb-6 text-center">
@@ -200,37 +109,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Start Manufacturing →
             </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
-            <p className="text-lime-100 mb-6 text-center">
-              Engineering biological systems for sustainable solutions
-            </p>
-            <ul className="text-lime-200 space-y-2 mb-6 text-sm">
-              <li>• Environmental Cleanup</li>
-              <li>• Carbon Capture</li>
-              <li>• Renewable Energy</li>
-            </ul>
-<<<<<<< HEAD
-=======
-            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
-              Engineer Life →
-=======
-            <div className="text-6xl mb-4 text-center">🌱</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Bio-Agriculture</h3>
-=======
-            <div className="text-6xl mb-6 text-center">💊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Manufacturing</h3>
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-39c9
             <p className="text-teal-100 mb-6 text-center">
               Production of pharmaceuticals and materials using living cells
             </p>
@@ -242,10 +124,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Start Manufacturing →
             </a>
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -255,14 +133,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
-<<<<<<< HEAD
-            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
-              Engineer Life →
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
             <p className="text-purple-100 mb-6 text-center">
               Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
             </p>
@@ -274,125 +144,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Restoration →
-<<<<<<< HEAD
-            </a>
-            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Bio-Energy →
-            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
-              Engineer Life →
-            </a>
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 SYNTHETIC BIOLOGY • 2027
-=======
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
-            🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
->>>>>>> cursor/create-and-deploy-new-content-d9c7
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-            Synthetic Biology Revolution 2027
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the future of life itself with revolutionary synthetic biology 
-            that creates new life forms and transforms human existence.
-          </p>
-<<<<<<< HEAD
-=======
-          <div className="flex justify-center space-x-8">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
-              🧬 Begin Bio Journey
-            </button>
-            <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
-              📞 Bio Consultation
-            </button>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-        </div>
-
-        {/* Revolutionary Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic DNA</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Create custom life forms with programmable DNA sequences
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Custom genetic codes</li>
-              <li>• Designer organisms</li>
-              <li>• Bio-manufacturing</li>
-              <li>• Therapeutic applications</li>
-            </ul>
-<<<<<<< HEAD
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Design Life →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Engineer biological systems for enhanced human capabilities
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Enhanced organs</li>
-              <li>• Disease resistance</li>
-              <li>• Longevity treatments</li>
-              <li>• Cognitive enhancement</li>
-            </ul>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Enhance Biology →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌱</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Living Materials</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Create self-healing, self-replicating materials from living cells
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Self-healing structures</li>
-              <li>• Living buildings</li>
-              <li>• Bio-computers</li>
-              <li>• Environmental repair</li>
-            </ul>
-            <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Restoration →
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-<<<<<<< HEAD
-=======
-            <a href="/pages/SyntheticDNA" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
-              Explore DNA Tech →
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Bio-Energy →
-            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
-              Engineer Life →
->>>>>>> cursor/create-and-deploy-new-content-6f93
-            </a>
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 SYNTHETIC BIOLOGY • 2027
-          </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Synthetic Biology Revolution 2027
           </h1>
@@ -416,51 +168,18 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-manufacturing</li>
               <li>• Therapeutic applications</li>
             </ul>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Design Life →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Engineer biological systems for enhanced human capabilities
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Enhanced organs</li>
-              <li>• Disease resistance</li>
-              <li>• Longevity treatments</li>
-              <li>• Cognitive enhancement</li>
-=======
-
-          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">💊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Manufacturing</h3>
-            <p className="text-teal-100 mb-6 text-center">
-              Production of pharmaceuticals and materials using living cells
-            </p>
-            <ul className="text-teal-200 space-y-2 mb-6 text-sm">
-              <li>• Drug Production</li>
-              <li>• Bio-Materials</li>
-              <li>• Enzyme Engineering</li>
-            </ul>
-            <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
-              Start Manufacturing →
+            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+              Explore Bio-Energy →
+            <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
+              Engineer Life →
             </a>
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧬 SYNTHETIC BIOLOGY • 2027
           </div>
-
-          <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🌱</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
-            <p className="text-lime-100 mb-6 text-center">
-              Engineering biological systems for sustainable solutions
-            </p>
-            <ul className="text-lime-200 space-y-2 mb-6 text-sm">
-              <li>• Environmental Cleanup</li>
-              <li>• Carbon Capture</li>
-              <li>• Renewable Energy</li>
->>>>>>> cursor/create-and-deploy-new-content-d9c7
             </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Enhance Biology →
@@ -481,22 +200,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Restoration →
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-
-          </div>
-        </div>
-
-        {/* Call to Action */}
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -509,24 +212,11 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
             </a>
           </div>
         </div>
 
         {/* Call to Action */}
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -540,14 +230,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
               Learn More
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
         {/* Technology Impact Stats */}
         <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-white">Revolutionary Impact Statistics</h2>
@@ -572,28 +254,12 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <div className="text-lg text-cyan-200 mb-2">Environmental Impact</div>
               <div className="text-sm text-gray-400">Carbon-neutral bio-systems</div>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
             </a>
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
-=======
             </a>
->>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -606,14 +272,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <div className="text-center">
->>>>>>> main
-=======
-        <div className="text-center">
->>>>>>> cursor/create-and-deploy-new-content-6f93
           <h2 className="text-4xl font-bold mb-6">Ready to Redesign Life?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join the synthetic biology revolution and help create the future of life itself
@@ -623,25 +282,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Start Your Journey →
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-39c9
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
               Learn More
               Learn More
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
               Learn More
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
             </button>
           </div>
         </div>

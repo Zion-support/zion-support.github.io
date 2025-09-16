@@ -1,47 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const featuredContent = [
-    {
-      title: "Revolutionary Tech Breakthrough 2025",
-      description: "Discover the most revolutionary technology breakthroughs reshaping our digital future",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🌟",
-      badge: "NEW"
-    },
-    {
-      title: "Next-Gen Innovation Hub 2026",
-      description: "Explore cutting-edge technologies converging to create unprecedented possibilities",
-      link: "/pages/NextGenInnovationHub2026",
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🚀",
-      badge: "BREAKTHROUGH"
-    },
-    {
-      title: "Ultimate Tech Showcase 2026",
-      description: "Experience the most advanced technologies that will revolutionize industries",
-      link: "/pages/UltimateTechShowcase2026",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "🎯",
-      badge: "FEATURED"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
->>>>>>> cursor/create-and-deploy-new-content-6f93
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       {/* Animated Background */}
@@ -130,13 +89,6 @@ const RevolutionaryContentBanner: React.FC = () => {
                 Learn More →
               </div>
             </a>
-<<<<<<< HEAD
-            <a href="/pages/QuantumComputingBreakthrough" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold text-lg">
-              Learn More
-            </a>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-0cca
   const [currentBanner, setCurrentBanner] = useState(0);
   
   const banners = [
@@ -240,11 +192,8 @@ const RevolutionaryContentBanner: React.FC = () => {
                 <div className="text-white/80 text-sm mt-1">Click to explore</div>
               </a>
             ))}
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
-=======
           ))}
->>>>>>> cursor/create-and-deploy-new-content-6f93
         </div>
       </div>
     </div>

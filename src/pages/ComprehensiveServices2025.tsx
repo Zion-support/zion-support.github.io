@@ -1,5 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2025: React.FC = () => {
@@ -123,11 +125,15 @@ const ComprehensiveServices2025: React.FC = () => {
       </Helmet>
       
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 
 const ComprehensiveServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+<<<<<<< HEAD
+=======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6">Comprehensive Services2025</h1>
@@ -148,6 +154,8 @@ const ComprehensiveServices2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Future</h3>
             <p className="text-blue-100">Next-generation solutions</p>
           </div>
+<<<<<<< HEAD
+=======
         </div>
 <<<<<<< HEAD
 
@@ -167,9 +175,8 @@ const ComprehensiveServices2025: React.FC = () => {
               </button>
             </div>
           </div>
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
       </div>
     </div>
   );

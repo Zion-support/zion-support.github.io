@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -88,6 +90,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
         </div>
       </div>
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 import React, { useState, useEffect } from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -226,7 +229,10 @@ const NewContentPromotionBanner2025: React.FC = () => {
 
       {/* Animated Border */}
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
+<<<<<<< HEAD
+=======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
     </div>
   );
 };

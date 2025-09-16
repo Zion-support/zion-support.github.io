@@ -3,6 +3,8 @@ import React from 'react';
 const UltimateContentBanner2026: React.FC = () => {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -37,6 +39,7 @@ const UltimateContentBanner2026: React.FC = () => {
               🧠 Innovation Hub →
             </a>
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -167,7 +170,10 @@ const UltimateContentBanner2026: React.FC = () => {
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Schedule Demo
             </button>
+<<<<<<< HEAD
+=======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
       </div>
