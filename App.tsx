@@ -43,6 +43,7 @@ import RevolutionaryTechInsights2025 from './src/pages/RevolutionaryTechInsights
 import UltimateTechShowcase2025 from './src/pages/UltimateTechShowcase2025';
 import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
 import AdvancedTechTrends2027 from './src/pages/AdvancedTechTrends2027';
+import ConsciousnessComputingRevolution2034 from './src/pages/ConsciousnessComputingRevolution2034';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import AIAutonomousResearchAssistant from './src/pages/AIAutonomousResearchAssistant';
@@ -216,6 +217,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AdvancedTechTrends2027" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🔮 NEW: Tech Trends 2027
+                    </a>
+                    <a href="/pages/ConsciousnessComputingRevolution2034" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Consciousness 2034
                     </a>
                     <a href="/pages/RevolutionaryTechBlog2026" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📚 Tech Blog 2026
@@ -844,6 +848,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechShowcase2025" element={<UltimateTechShowcase2025 />} />
           <Route path="/pages/NextGenSpaceTech2026" element={<NextGenSpaceTech2026 />} />
           <Route path="/pages/AdvancedTechTrends2027" element={<AdvancedTechTrends2027 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2034" element={<ConsciousnessComputingRevolution2034 />} />
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
