@@ -2753,12 +2753,7 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-f34e
-=======
 // Additional content for enhanced engagement
 export const additionalContent2026 = [
   {
@@ -3337,7 +3332,6 @@ export const additionalContent2026 = [
 ];
 
 // Additional fresh content (2029 preview)
->>>>>>> bb6d824a5e7e83351983fdb432aa9f870d0b1dba
 export const extraContent2029 = [
   {
     id: 9901,
@@ -3615,5 +3609,4 @@ const newBlogPosts = [
   }
 ];
 
->>>>>>> 7a46bf6786a558df1ac43d8a02ad5dd9fe984f92
 // Helpers for UI components

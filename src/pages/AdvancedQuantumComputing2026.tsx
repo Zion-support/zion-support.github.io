@@ -28,7 +28,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Advanced Quantum Computing2026
+            Advanced Quantum Computing 2026
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Revolutionary technology solutions and insights for the future
@@ -44,12 +44,22 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Quantum Supremacy</h3>
+            <p className="text-blue-100">Breakthrough quantum computing capabilities</p>
+            <ul className="text-sm text-gray-400 space-y-2 mt-4">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
               <li>• Neural interface technology</li>
             </ul>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Quantum Applications</h3>
+            <p className="text-blue-100">Revolutionary quantum applications</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future Technology</h3>
+            <p className="text-blue-100">Next-generation quantum solutions</p>
           </div>
         </div>
       </div>
