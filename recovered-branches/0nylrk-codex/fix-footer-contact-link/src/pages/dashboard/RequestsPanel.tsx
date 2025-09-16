@@ -19,15 +19,11 @@
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -51,11 +47,8 @@
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           }}
@@ -162,4 +155,3 @@ if ( {) {
     </ProtectedRoute>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

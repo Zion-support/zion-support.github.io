@@ -35,7 +35,6 @@ function TalentDashboardContent() {
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
         description="Your personalized talent dashboard with job matches and professional opportunities." 
->>>>>>> origin/auto/autonomy-17186719616
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -99,11 +98,8 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* New Onboarding Progress Tracker */}
@@ -113,7 +109,6 @@ function TalentDashboardContent() {
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             
->>>>>>> origin/auto/autonomy-17186719616
             {/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
@@ -191,11 +186,9 @@ export default function TalentDashboard() {
     </ProtectedRoute>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

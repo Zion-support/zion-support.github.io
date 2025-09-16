@@ -21,7 +21,6 @@ const QuantumComputingAsAService: Reac t.FC = (): JSX.Element => {
         'Custom integrations',;'
         'On-premise deployment options',;'        'Research partnerships';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: fals e};
   ]}, {;

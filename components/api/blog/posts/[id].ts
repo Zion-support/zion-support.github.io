@@ -2,14 +2,12 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -37,4 +35,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
->>>>>>> origin/auto/autonomy-17186719616

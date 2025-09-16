@@ -17,7 +17,6 @@
 }
 
 module.exports = withErrorLogging(handler);
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
     const apiKey = process.env.EASYPOST_API_KEY;
     if (!apiKey) {
@@ -55,4 +54,3 @@ module.exports = withErrorLogging(handler);
     res.json({ error: err.message });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

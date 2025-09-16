@@ -20,7 +20,6 @@ const allServices = [
       ...advancedCloudDevOpsServices2025,
   ...industrySpecificSolutions,
   ...emergingTechnologyServices
->>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
@@ -384,7 +383,6 @@ const allServices = [
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>
             </div>
           )}
->>>>>>> origin/auto/autonomy-17186719616
         </div>
       </section>
 
@@ -495,4 +493,3 @@ const allServices = [
         </div>
       </section>
     </div>
->>>>>>> origin/auto/autonomy-17186719616

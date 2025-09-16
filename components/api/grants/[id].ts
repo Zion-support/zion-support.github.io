@@ -11,7 +11,6 @@ function ensureDir() {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 function writeGrant(record: GrantApplication) {
@@ -166,4 +165,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

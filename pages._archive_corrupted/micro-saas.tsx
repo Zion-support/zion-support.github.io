@@ -57,8 +57,6 @@ export default function MicroSaaS() {
         'CRM and helpdesk integration',
         'Multi-language support and compliance',
         'Analytics and performance tracking'
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       ],
       \"pricing\": \'$199 - $799/month\',
       \"delivery\": \'1-3 weeks\',
@@ -331,8 +329,6 @@ export default function MicroSaaS() {
       "pricing": '$299 - $1,200/month',
       "delivery": '3-5 weeks',
       "category": 'Development SaaS';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 },
     {
       \"title\": \'Affiliate Marketing Tracking Platform\',
@@ -356,8 +352,6 @@ export default function MicroSaaS() {
       "pricing": '$99 - $499/month',
       "delivery": '2-3 weeks',
       "category": 'Analytics SaaS'
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     },
     {
       \"title\": \'AI-Powered Password Manager\',
@@ -672,8 +666,6 @@ export default function MicroSaaS() {
       "delivery": '3-5 weeks',
       "category": 'Translation SaaS'
       category: 'LegalTech SaaS'
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     },
     {
       \"title\": \'Intelligent Inventory Forecasting System\',
@@ -773,8 +765,6 @@ export default function MicroSaaS() {
     }
   ];
       "category": 'Education SaaS';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 },
     {
       \"title\": \'Smart Fitness & Wellness Coach\',
@@ -819,8 +809,6 @@ export default function MicroSaaS() {
     { "name": 'Cloud', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },
     { "name": 'Security', "icon": Shiel d, "description": 'OAuth, JWT, SSL, Encryption' },
     { "name": 'Mobile', "icon": Smartphon e, "description": 'React Native, Flutter, PWA' }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ];
   const benefits = [{
       \"title\": \'Faster Development\',
@@ -1076,5 +1064,3 @@ export default function MicroSaaS() {
     </PageTransition>
   )
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

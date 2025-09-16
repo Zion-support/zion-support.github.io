@@ -33,9 +33,7 @@
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     ];
 
@@ -406,4 +404,3 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     reviews: 112
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

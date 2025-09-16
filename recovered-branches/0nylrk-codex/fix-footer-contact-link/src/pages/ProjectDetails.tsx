@@ -76,7 +76,6 @@ function ProjectDetailsContent() {
     loadProject();
   }, [projectId]);
   
->>>>>>> origin/auto/autonomy-17186719616
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -397,10 +396,8 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

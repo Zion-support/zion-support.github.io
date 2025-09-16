@@ -1,7 +1,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 import {useAuth} from "@/hooks/useAuth";
@@ -32,7 +31,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,

@@ -8,14 +8,11 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
     return res.status(401).json({ error: "Unauthorized" });
   }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -39,4 +36,3 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
 }
->>>>>>> origin/auto/autonomy-17186719616

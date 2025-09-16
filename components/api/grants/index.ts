@@ -29,17 +29,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -176,7 +176,6 @@ import Link from 'next/link',
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {
@@ -690,8 +689,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1151,7 +1148,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                           <span className="text-gray-300">{benefit}</span>
                         </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                       ))}
                     </div>;
@@ -1458,7 +1454,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 <p className="text-gray-300 text-sm">{integration.description}</p>
               </motion.div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             ))}
 
@@ -1518,12 +1513,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 Schedule Demo
@@ -1547,12 +1538,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

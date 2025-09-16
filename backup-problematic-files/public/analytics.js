@@ -54,10 +54,8 @@ origin/automation-improvements-final
 
 
 
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
@@ -66,9 +64,7 @@ const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: 'document.title'; page_location: 'window.location.href'; page_path: 'page;',})} }; trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: 'category'; event_label: 'label;',})} }; trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)}; init: () => { this.trackPageView(window.location.pathname); const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name |"unnamed_form")})})} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name |"unnamed_form")})})} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
@@ -97,6 +93,4 @@ const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document && document.title,page_location: window && window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this && this.trackInteraction("form_submit","engagement",formName)},init: () => { this && this.trackPageView(window && window.location.pathname); ; const forms = document && document.querySelectorAll("form"); forms && forms.forEach(form => { form && form.addEventListener("submit",() => { this && this.trackFormSubmission(form && form.name || "unnamed_form")})})} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",analyticsEnhancements && analyticsEnhancements.init)} else { analyticsEnhancements && analyticsEnhancements.init()}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

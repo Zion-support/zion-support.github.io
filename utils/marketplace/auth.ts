@@ -46,13 +46,10 @@ if ( {) {
   return user;
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -92,4 +89,3 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   err.statusCode = 403;
   throw err;
 }
->>>>>>> origin/auto/autonomy-17186719616

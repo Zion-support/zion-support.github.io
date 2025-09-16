@@ -78,15 +78,11 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
                       {post.authorRole}
                     </Badge>
                   )}

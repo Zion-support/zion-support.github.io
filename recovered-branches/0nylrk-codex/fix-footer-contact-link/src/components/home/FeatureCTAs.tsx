@@ -24,7 +24,6 @@ import {
   Building,
   Clock
 } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function FeatureCTAs() {
   const features = [
@@ -109,7 +108,6 @@ export function FeatureCTAs() {
                 <div className="flex justify-between items-start">
                   {feature.icon}
                   {feature.badge && (
->>>>>>> origin/auto/autonomy-17186719616
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

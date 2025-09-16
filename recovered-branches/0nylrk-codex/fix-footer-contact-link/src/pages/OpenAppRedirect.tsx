@@ -8,13 +8,10 @@
         // Not on mobile, redirect to mobile launch page
         setStatus('failed');
         setTimeout(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       }
@@ -60,7 +57,6 @@
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO 
         title="Opening Zion App" 
->>>>>>> origin/auto/autonomy-17186719616
         description="Redirecting to the Zion AI Marketplace mobile app"
         noindex={true}
       />
@@ -95,11 +91,8 @@
             </Link>
           </>
         )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default OpenAppRedirect;
 
@@ -110,4 +103,3 @@ export default OpenAppRedirect;
 };
 
 export default OpenAppRedirect;
->>>>>>> origin/auto/autonomy-17186719616

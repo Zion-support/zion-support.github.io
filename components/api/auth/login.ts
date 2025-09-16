@@ -24,4 +24,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Set-Cookie', cookie);
   return res.status(200).json({ ok: true });
 }
->>>>>>> origin/auto/autonomy-17186719616

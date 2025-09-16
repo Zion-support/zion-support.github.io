@@ -44,8 +44,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: Building2,
@@ -162,8 +160,6 @@ export default function GovernmentSolutions() {
 ];
 
 export default function GovernmentSolutionsPage() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -205,10 +201,8 @@ export default function GovernmentSolutionsPage() {
                 Comprehensive solutions designed to modernize government operations
                 and improve citizen services.
               </p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -351,8 +345,6 @@ export default function GovernmentSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -378,8 +370,6 @@ export default function GovernmentSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

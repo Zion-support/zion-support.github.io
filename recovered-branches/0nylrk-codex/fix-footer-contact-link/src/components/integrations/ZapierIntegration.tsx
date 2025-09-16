@@ -38,7 +38,6 @@ export function ZapierIntegration() {
     toast.success("API key copied to clipboard");
   };
   
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -50,18 +49,14 @@ export function ZapierIntegration() {
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
             </p>
             
->>>>>>> origin/auto/autonomy-17186719616
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
@@ -85,16 +80,12 @@ export function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
         
->>>>>>> origin/auto/autonomy-17186719616
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -127,27 +118,20 @@ export function ZapierIntegration() {
           </CardFooter>
         </Card>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
       
->>>>>>> origin/auto/autonomy-17186719616
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground mb-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           <div className="grid md: grid-cols-3 gap-4">
@@ -156,41 +140,32 @@ export function ZapierIntegration() {
           </p>
           
           <div className="grid md:grid-cols-3 gap-4">
->>>>>>> origin/auto/autonomy-17186719616
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a new job is published on your account.
               </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
             
->>>>>>> origin/auto/autonomy-17186719616
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a talent applies to your job.
               </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
             
->>>>>>> origin/auto/autonomy-17186719616
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -201,12 +176,9 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   );
@@ -216,4 +188,3 @@ export function ZapierIntegration() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

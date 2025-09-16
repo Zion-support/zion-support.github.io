@@ -12,7 +12,6 @@ import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function DemosPage() {
   const [activeDemosetActiveDemo] = useState<string>('email-validator');
 =======
@@ -20,7 +19,6 @@ import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } f
 
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
->>>>>>> origin/auto/autonomy-17186719616
 
   const demos = [
     {

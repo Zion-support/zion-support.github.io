@@ -104,7 +104,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Megaphone"
   }
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
@@ -307,4 +306,3 @@ const iconMap = {
     </AppLayout>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

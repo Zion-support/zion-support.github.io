@@ -246,8 +246,6 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
 
 
 export default function ServicesIndex() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <>
       <Head>
@@ -509,8 +507,6 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     Learn More
                   </Link>
                 </div>
@@ -536,9 +532,7 @@ export default function ServicesIndex() {
     </div>
   );
 };
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       </div>
     </>
   );
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

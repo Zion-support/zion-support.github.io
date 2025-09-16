@@ -36,7 +36,6 @@ export default function AdminDashboard() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
     '@type': 'WebPage',;
     name: 'Admin Dashboard',;
@@ -56,7 +55,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 import { Button } from "@/components/ui/button";

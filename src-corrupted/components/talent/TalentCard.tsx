@@ -81,9 +81,7 @@ const TalentCardComponent = ({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

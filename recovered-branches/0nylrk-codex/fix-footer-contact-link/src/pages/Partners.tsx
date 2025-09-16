@@ -119,7 +119,6 @@
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -251,7 +250,6 @@
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -276,7 +274,6 @@
     );
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">

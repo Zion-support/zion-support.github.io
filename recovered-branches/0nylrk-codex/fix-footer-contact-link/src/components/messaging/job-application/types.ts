@@ -14,11 +14,9 @@ export interface ApplyToJobModalProps {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
->>>>>>> origin/auto/autonomy-17186719616

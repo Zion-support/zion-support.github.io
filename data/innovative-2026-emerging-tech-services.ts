@@ -80,4 +80,3 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> origin/auto/autonomy-17186719616
