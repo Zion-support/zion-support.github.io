@@ -111,6 +111,11 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import AI2026UltimateContentHub from './pages/AI2026UltimateContentHub';
+import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
+import NextGenInnovationShowcase2026 from './pages/NextGenInnovationShowcase2026';
+import UltimateContentShowcaseBanner2026 from './components/UltimateContentShowcaseBanner2026';
+import RevolutionaryContentPromotionBanner2026 from './components/RevolutionaryContentPromotionBanner2026';
 
 const App: React.FC = () => {
   return (
@@ -223,6 +228,11 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Content Promotion Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentPromotionBanner2026 />
+              </div>
+
+              {/* NEW: Ultimate Content Showcase Banner 2026 */}
+              <div className="mb-12">
+                <UltimateContentShowcaseBanner2026 />
               </div>
 
               {/* NEW: New Content Breakthrough Banner 2026 */}
@@ -458,6 +468,11 @@ const App: React.FC = () => {
           {/* NEW: Ultimate Content Routes 2026 */}
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
+          
+          {/* NEW: Content Hub Routes 2026 */}
+          <Route path="/ai-2026-ultimate-content-hub" element={<AI2026UltimateContentHub />} />
+          <Route path="/revolutionary-tech-insights-2026" element={<RevolutionaryTechInsights2026 />} />
+          <Route path="/next-gen-innovation-showcase-2026" element={<NextGenInnovationShowcase2026 />} />
         </Routes>
         
         <Footer />
