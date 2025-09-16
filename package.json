@@ -89,7 +89,10 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
