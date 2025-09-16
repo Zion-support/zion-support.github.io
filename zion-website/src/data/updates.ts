@@ -12,6 +12,20 @@ export interface UpdateItem {
 export const updates: UpdateItem[] = [
     // Newly added updates (2025-09-16)
     {
+        title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
+        summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
+        href: '/updates/real-time-agent-finops-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Zero‑Downtime Agent Releases',
+        summary: 'Canary and shadow releases with eval gates, rollback plans, and signed evidence.',
+        href: '/updates/zero-downtime-agent-releases-1758081600000',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Launch: Zero‑Trust Agent Controllers v1.0',
         summary: 'Scoped permissions, runtime enforcement, and evidence capture for tool use.',
         href: '/updates/zero-trust-agent-controllers-1-0',
